@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "fetched_at": "2026-09-30T13:37:45Z",
+ "fetched_at": "2026-09-30T13:50:46Z",
  "sources": {
   "github_trending": {
    "status": "ok",
@@ -29,7 +29,7 @@
   },
   "rss": {
    "status": "ok",
-   "count": 40,
+   "count": 41,
    "error": null
   }
  },
@@ -43,7 +43,7 @@
    "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
    "published_at": null,
    "metrics": {
-    "stars": 49816,
+    "stars": 49830,
     "stars_today": 3481,
     "stars_delta": null
    },
@@ -60,7 +60,7 @@
    "summary": "OpenShell is the safe, private runtime for autonomous AI agents.",
    "published_at": null,
    "metrics": {
-    "stars": 11438,
+    "stars": 11471,
     "stars_today": 1280,
     "stars_delta": null
    },
@@ -77,7 +77,7 @@
    "summary": "Learn it. Build it. Ship it for others.",
    "published_at": null,
    "metrics": {
-    "stars": 62002,
+    "stars": 62007,
     "stars_today": 1203,
     "stars_delta": null
    },
@@ -94,7 +94,7 @@
    "summary": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
    "published_at": null,
    "metrics": {
-    "stars": 22842,
+    "stars": 22855,
     "stars_today": 1133,
     "stars_delta": null
    },
@@ -111,7 +111,7 @@
    "summary": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
    "published_at": null,
    "metrics": {
-    "stars": 66157,
+    "stars": 66165,
     "stars_today": 1102,
     "stars_delta": null
    },
@@ -128,7 +128,7 @@
    "summary": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
    "published_at": null,
    "metrics": {
-    "stars": 37865,
+    "stars": 37874,
     "stars_today": 1095,
     "stars_delta": null
    },
@@ -145,7 +145,7 @@
    "summary": "Skills for Real Engineers. Straight from my .agents directory.",
    "published_at": null,
    "metrics": {
-    "stars": 272608,
+    "stars": 272625,
     "stars_today": 736,
     "stars_delta": null
    },
@@ -162,7 +162,7 @@
    "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
    "published_at": null,
    "metrics": {
-    "stars": 148674,
+    "stars": 148680,
     "stars_today": 675,
     "stars_delta": null
    },
@@ -179,7 +179,7 @@
    "summary": "Multi-agent harness that runs Claude Code and Codex together as one system",
    "published_at": null,
    "metrics": {
-    "stars": 2735,
+    "stars": 2744,
     "stars_today": 622,
     "stars_delta": null
    },
@@ -196,7 +196,7 @@
    "summary": "Useful tool to track location or mobile number",
    "published_at": null,
    "metrics": {
-    "stars": 15792,
+    "stars": 15802,
     "stars_today": 579,
     "stars_delta": null
    },
@@ -213,7 +213,7 @@
    "summary": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
    "published_at": null,
    "metrics": {
-    "stars": 26310,
+    "stars": 26313,
     "stars_today": 466,
     "stars_delta": null
    },
@@ -230,7 +230,7 @@
    "summary": "Write HTML. Render video. Built for agents.",
    "published_at": null,
    "metrics": {
-    "stars": 54439,
+    "stars": 54452,
     "stars_today": 352,
     "stars_delta": null
    },
@@ -247,7 +247,7 @@
    "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
    "published_at": null,
    "metrics": {
-    "stars": 127285,
+    "stars": 127291,
     "stars_today": 338,
     "stars_delta": null
    },
@@ -264,7 +264,7 @@
    "summary": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
    "published_at": null,
    "metrics": {
-    "stars": 5995,
+    "stars": 5998,
     "stars_today": 278,
     "stars_delta": null
    },
@@ -281,7 +281,7 @@
    "summary": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
    "published_at": null,
    "metrics": {
-    "stars": 16757,
+    "stars": 16758,
     "stars_today": 250,
     "stars_delta": null
    },
@@ -315,7 +315,7 @@
    "summary": "💫 Toolkit to help you get started with SDD or any other process!",
    "published_at": null,
    "metrics": {
-    "stars": 139512,
+    "stars": 139513,
     "stars_today": 170,
     "stars_delta": null
    },
@@ -349,7 +349,7 @@
    "summary": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
    "published_at": null,
    "metrics": {
-    "stars": 390844,
+    "stars": 390847,
     "stars_today": 136,
     "stars_delta": null
    },
@@ -366,7 +366,7 @@
    "summary": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
    "published_at": null,
    "metrics": {
-    "stars": 75973,
+    "stars": 75976,
     "stars_today": 118,
     "stars_delta": null
    },
@@ -383,7 +383,7 @@
    "summary": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
    "published_at": null,
    "metrics": {
-    "stars": 72463,
+    "stars": 72468,
     "stars_today": 116,
     "stars_delta": null
    },
@@ -400,7 +400,7 @@
    "summary": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
    "published_at": null,
    "metrics": {
-    "stars": 24319,
+    "stars": 24323,
     "stars_today": 88,
     "stars_delta": null
    },
@@ -451,7 +451,7 @@
    "summary": "Model Context Protocol Servers",
    "published_at": null,
    "metrics": {
-    "stars": 90715,
+    "stars": 90718,
     "stars_today": 48,
     "stars_delta": null
    },
@@ -485,7 +485,7 @@
    "summary": "Breakthrough Method for Agile Ai Driven Development",
    "published_at": null,
    "metrics": {
-    "stars": 53660,
+    "stars": 53661,
     "stars_today": 45,
     "stars_delta": null
    },
@@ -536,7 +536,7 @@
    "summary": "ARES - authorized red-team engagement automation with dashboard, campaign scope, module orchestration, OPSEC controls, encrypted vault, and reporting.",
    "published_at": null,
    "metrics": {
-    "stars": 553,
+    "stars": 554,
     "stars_today": 23,
     "stars_delta": null
    },
@@ -570,7 +570,7 @@
    "summary": "Firebase SDK for Apple App Development",
    "published_at": null,
    "metrics": {
-    "stars": 6711,
+    "stars": 6712,
     "stars_today": 4,
     "stars_delta": null
    },
@@ -587,7 +587,7 @@
    "summary": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
    "published_at": "2026-09-20T12:01:16Z",
    "metrics": {
-    "stars": 7233,
+    "stars": 7234,
     "forks": 2193,
     "stars_delta": null
    },
@@ -634,7 +634,7 @@
    "summary": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
    "published_at": "2026-09-28T23:40:05Z",
    "metrics": {
-    "stars": 3893,
+    "stars": 3902,
     "forks": 1114,
     "stars_delta": null
    },
@@ -662,8 +662,8 @@
    "summary": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
    "published_at": "2026-09-23T16:22:35Z",
    "metrics": {
-    "stars": 3529,
-    "forks": 206,
+    "stars": 3543,
+    "forks": 209,
     "stars_delta": null
    },
    "extra": {
@@ -707,7 +707,7 @@
    "summary": "A curated list of public projects, integrations, and discussions built on Jev — TypeSafe AI's System One model for typed decisions.",
    "published_at": "2026-09-17T14:23:21Z",
    "metrics": {
-    "stars": 2010,
+    "stars": 2011,
     "forks": 300,
     "stars_delta": null
    },
@@ -763,8 +763,8 @@
    "summary": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.",
    "published_at": "2026-09-29T23:06:00Z",
    "metrics": {
-    "stars": 1233,
-    "forks": 165,
+    "stars": 1269,
+    "forks": 173,
     "stars_delta": null
    },
    "extra": {
@@ -803,7 +803,7 @@
    "summary": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, backend or telemetry.",
    "published_at": "2026-09-23T13:37:26Z",
    "metrics": {
-    "stars": 1138,
+    "stars": 1139,
     "forks": 84,
     "stars_delta": null
    },
@@ -864,6 +864,34 @@
   },
   {
    "source": "github_search",
+   "id": "kaankiziltug/logo-design-skill",
+   "title": "kaankiziltug/logo-design-skill",
+   "url": "https://github.com/kaankiziltug/logo-design-skill",
+   "summary": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
+   "published_at": "2026-09-26T08:23:34Z",
+   "metrics": {
+    "stars": 982,
+    "forks": 49,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "HTML",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "branding",
+     "claude",
+     "claude-skills",
+     "codex",
+     "gemini-cli",
+     "logo-design",
+     "svg"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "nokia-applied-research/AnyJev",
    "title": "nokia-applied-research/AnyJev",
    "url": "https://github.com/nokia-applied-research/AnyJev",
@@ -886,34 +914,6 @@
      "system-one",
      "transformers",
      "vllm"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "kaankiziltug/logo-design-skill",
-   "title": "kaankiziltug/logo-design-skill",
-   "url": "https://github.com/kaankiziltug/logo-design-skill",
-   "summary": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
-   "published_at": "2026-09-26T08:23:34Z",
-   "metrics": {
-    "stars": 978,
-    "forks": 49,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "HTML",
-    "license": "MIT",
-    "topics": [
-     "agent-skills",
-     "branding",
-     "claude",
-     "claude-skills",
-     "codex",
-     "gemini-cli",
-     "logo-design",
-     "svg"
     ]
    },
    "also_in": []
@@ -996,7 +996,7 @@
    "summary": "The open, local take on Jev: typed decisions from an LLM, without generating a single token",
    "published_at": "2026-09-21T00:00:02Z",
    "metrics": {
-    "stars": 764,
+    "stars": 765,
     "forks": 52,
     "stars_delta": null
    },
@@ -1087,7 +1087,7 @@
    "summary": "JevChat-Windows：聊天窗口旁挂的回复辅助。窗口截图 + 本地离线 OCR 读对方消息 → Jev 判断意图 → 3 条候选一键填入，发送永远手动",
    "published_at": "2026-09-21T14:37:14Z",
    "metrics": {
-    "stars": 702,
+    "stars": 703,
     "forks": 154,
     "stars_delta": null
    },
@@ -1140,7 +1140,7 @@
    "summary": "43 film styles, each a reusable style prompt plus a short film made entirely in code by Claude Opus 5.5. Pick a style, bring your own story, and let your agent direct. | Opus5.5 x 43 种影片风格：风格提示词 + 纯代码样片 + 导演与技术指南",
    "published_at": "2026-09-26T10:10:41Z",
    "metrics": {
-    "stars": 653,
+    "stars": 654,
     "forks": 86,
     "stars_delta": null
    },
@@ -1194,7 +1194,7 @@
    "summary": "Agent-Native multi-platform reverse engineering and CWE-602 client-side authorization audit workbench.",
    "published_at": "2026-09-23T18:05:31Z",
    "metrics": {
-    "stars": 596,
+    "stars": 597,
     "forks": 173,
     "stars_delta": null
    },
@@ -1420,7 +1420,7 @@
    "summary": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 Muse Spark 1.3、MiMo V2.6 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, Muse Spark 1.3 and MiMo V2.6 among them. Completely free, with no usage cap.",
    "published_at": "2026-09-24T16:17:19Z",
    "metrics": {
-    "stars": 482,
+    "stars": 483,
     "forks": 22,
     "stars_delta": null
    },
@@ -1588,7 +1588,7 @@
    "published_at": "2026-09-23T08:04:42Z",
    "metrics": {
     "stars": 450,
-    "forks": 83,
+    "forks": 84,
     "stars_delta": null
    },
    "extra": {
@@ -1671,32 +1671,13 @@
   },
   {
    "source": "github_search",
-   "id": "TianyuCodings/JevHarness",
-   "title": "TianyuCodings/JevHarness",
-   "url": "https://github.com/TianyuCodings/JevHarness",
-   "summary": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
-   "published_at": "2026-09-21T08:59:46Z",
-   "metrics": {
-    "stars": 403,
-    "forks": 17,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": null,
-    "topics": []
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
    "id": "angel291592/Intent-Router",
    "title": "angel291592/Intent-Router",
    "url": "https://github.com/angel291592/Intent-Router",
    "summary": "Intent compiler for AI agents — converges vague requests into typed IntentSpec contracts (probe, ask, or halt before routing), the input layer for routers and typed-decision models like Jev & Laya",
    "published_at": "2026-09-22T06:00:27Z",
    "metrics": {
-    "stars": 402,
+    "stars": 404,
     "forks": 44,
     "stars_delta": null
    },
@@ -1719,6 +1700,25 @@
      "system-one",
      "typed-decisions"
     ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TianyuCodings/JevHarness",
+   "title": "TianyuCodings/JevHarness",
+   "url": "https://github.com/TianyuCodings/JevHarness",
+   "summary": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
+   "published_at": "2026-09-21T08:59:46Z",
+   "metrics": {
+    "stars": 403,
+    "forks": 17,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": null,
+    "topics": []
    },
    "also_in": []
   },
@@ -1818,7 +1818,7 @@
    "summary": "Build plugins that feel like native, first-class features of ChatGPT.",
    "published_at": "2026-09-29T00:45:42Z",
    "metrics": {
-    "stars": 369,
+    "stars": 371,
     "forks": 16,
     "stars_delta": null
    },
@@ -1837,7 +1837,7 @@
    "summary": "Awesome list of TypeSafe AI Jev use cases: 74 demos ranked by likes, 150+ GitHub repos, limits, cost and API examples. CC0",
    "published_at": "2026-09-19T18:01:10Z",
    "metrics": {
-    "stars": 349,
+    "stars": 350,
     "forks": 49,
     "stars_delta": null
    },
@@ -1959,6 +1959,36 @@
   },
   {
    "source": "github_search",
+   "id": "rehan-remade/universal-modder",
+   "title": "rehan-remade/universal-modder",
+   "url": "https://github.com/rehan-remade/universal-modder",
+   "summary": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+   "published_at": "2026-09-30T05:00:35Z",
+   "metrics": {
+    "stars": 336,
+    "forks": 14,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "age-of-empires",
+     "claude-code",
+     "claude-code-plugin",
+     "fal",
+     "game-assets",
+     "game-modding",
+     "mcp",
+     "modding",
+     "reverse-engineering",
+     "tmodloader"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "ekzhang/openjev-sglang",
    "title": "ekzhang/openjev-sglang",
    "url": "https://github.com/ekzhang/openjev-sglang",
@@ -1977,36 +2007,6 @@
      "llm",
      "structured-generation",
      "systemone"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "rehan-remade/universal-modder",
-   "title": "rehan-remade/universal-modder",
-   "url": "https://github.com/rehan-remade/universal-modder",
-   "summary": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
-   "published_at": "2026-09-30T05:00:35Z",
-   "metrics": {
-    "stars": 326,
-    "forks": 14,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": "MIT",
-    "topics": [
-     "age-of-empires",
-     "claude-code",
-     "claude-code-plugin",
-     "fal",
-     "game-assets",
-     "game-modding",
-     "mcp",
-     "modding",
-     "reverse-engineering",
-     "tmodloader"
     ]
    },
    "also_in": []
@@ -2733,7 +2733,7 @@
    "summary": "Free Rust SEO and GEO toolkit powered by TypeSafe Jev: 58-rule audits, site crawls, AI citation checks, rank drift, CI gates, 15-tool MCP. Zero cost.",
    "published_at": "2026-09-18T13:02:32Z",
    "metrics": {
-    "stars": 86,
+    "stars": 87,
     "forks": 9,
     "stars_delta": null
    },
@@ -2908,9 +2908,9 @@
    "summary": "",
    "published_at": "2026-08-14T06:15:03Z",
    "metrics": {
-    "likes": 977,
+    "likes": 979,
     "downloads": 30383,
-    "trending_score": 839,
+    "trending_score": 841,
     "likes_delta": null
    },
    "extra": {
@@ -2927,9 +2927,9 @@
    "summary": "",
    "published_at": "2026-09-21T20:09:04Z",
    "metrics": {
-    "likes": 550,
+    "likes": 551,
     "downloads": 2392,
-    "trending_score": 541,
+    "trending_score": 542,
     "likes_delta": null
    },
    "extra": {
@@ -2986,7 +2986,7 @@
    "metrics": {
     "likes": 2291,
     "downloads": 3676692,
-    "trending_score": 345,
+    "trending_score": 344,
     "likes_delta": null
    },
    "extra": {
@@ -3024,7 +3024,7 @@
    "metrics": {
     "likes": 780,
     "downloads": 8524,
-    "trending_score": 240,
+    "trending_score": 239,
     "likes_delta": null
    },
    "extra": {
@@ -3041,9 +3041,9 @@
    "summary": "",
    "published_at": "2026-09-04T02:55:48Z",
    "metrics": {
-    "likes": 2153,
+    "likes": 2158,
     "downloads": 12139,
-    "trending_score": 238,
+    "trending_score": 228,
     "likes_delta": null
    },
    "extra": {
@@ -3062,7 +3062,7 @@
    "metrics": {
     "likes": 1846,
     "downloads": 1679903,
-    "trending_score": 225,
+    "trending_score": 224,
     "likes_delta": null
    },
    "extra": {
@@ -3149,25 +3149,6 @@
   },
   {
    "source": "hf_models",
-   "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-   "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-   "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
-   "summary": "",
-   "published_at": "2026-09-01T07:01:09Z",
-   "metrics": {
-    "likes": 1292,
-    "downloads": 1777756,
-    "trending_score": 155,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "image-text-to-text",
-    "library": null
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
    "id": "ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF",
    "title": "ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF",
    "url": "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF",
@@ -3201,6 +3182,25 @@
    "extra": {
     "pipeline_tag": "text-generation",
     "library": "llama.cpp"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-09-01T07:01:09Z",
+   "metrics": {
+    "likes": 1292,
+    "downloads": 1777756,
+    "trending_score": 154,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
    },
    "also_in": []
   },
@@ -3347,7 +3347,7 @@
    "metrics": {
     "likes": 1544,
     "downloads": 2047605,
-    "trending_score": 108,
+    "trending_score": 107,
     "likes_delta": null
    },
    "extra": {
@@ -3415,14 +3415,14 @@
   },
   {
    "source": "hf_models",
-   "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
-   "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
-   "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "id": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "title": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
    "summary": "",
-   "published_at": "2026-07-19T04:33:55Z",
+   "published_at": "2026-09-21T22:09:46Z",
    "metrics": {
-    "likes": 885,
-    "downloads": 1852689,
+    "likes": 111,
+    "downloads": 205179,
     "trending_score": 81,
     "likes_delta": null
    },
@@ -3434,15 +3434,15 @@
   },
   {
    "source": "hf_models",
-   "id": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "title": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
    "summary": "",
-   "published_at": "2026-09-21T22:09:46Z",
+   "published_at": "2026-07-19T04:33:55Z",
    "metrics": {
-    "likes": 111,
-    "downloads": 205179,
-    "trending_score": 81,
+    "likes": 885,
+    "downloads": 1852689,
+    "trending_score": 80,
     "likes_delta": null
    },
    "extra": {
@@ -4323,7 +4323,7 @@
    "summary": "",
    "published_at": "2026-09-29T17:06:45Z",
    "metrics": {
-    "points": 995,
+    "points": 996,
     "comments": 870
    },
    "extra": {
@@ -4345,8 +4345,8 @@
    "summary": "",
    "published_at": "2026-09-29T17:07:57Z",
    "metrics": {
-    "points": 676,
-    "comments": 532
+    "points": 683,
+    "comments": 536
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896604"
@@ -4377,8 +4377,8 @@
    "summary": "",
    "published_at": "2026-09-30T09:55:23Z",
    "metrics": {
-    "points": 244,
-    "comments": 113
+    "points": 258,
+    "comments": 124
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49906637"
@@ -4426,7 +4426,7 @@
    "published_at": "2026-09-29T17:26:27Z",
    "metrics": {
     "points": 210,
-    "comments": 247
+    "comments": 248
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896975"
@@ -4441,8 +4441,8 @@
    "summary": "",
    "published_at": "2026-09-30T07:32:40Z",
    "metrics": {
-    "points": 185,
-    "comments": 164
+    "points": 188,
+    "comments": 166
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49905633"
@@ -4505,7 +4505,7 @@
    "summary": "",
    "published_at": "2026-09-29T11:06:25Z",
    "metrics": {
-    "points": 155,
+    "points": 157,
     "comments": 7
    },
    "extra": {
@@ -4521,7 +4521,7 @@
    "summary": "",
    "published_at": "2026-09-30T03:00:05Z",
    "metrics": {
-    "points": 97,
+    "points": 99,
     "comments": 29
    },
    "extra": {
@@ -4538,7 +4538,7 @@
    "published_at": "2026-09-29T17:07:45Z",
    "metrics": {
     "points": 94,
-    "comments": 46
+    "comments": 47
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896600"
@@ -4564,6 +4564,22 @@
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49903993"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "49896757",
+   "title": "Show HN: A working 3D model of an Enigma machine",
+   "url": "https://enigma.design",
+   "summary": "",
+   "published_at": "2026-09-29T17:15:56Z",
+   "metrics": {
+    "points": 77,
+    "comments": 25
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49896757"
    },
    "also_in": []
   },
@@ -4601,30 +4617,14 @@
   },
   {
    "source": "hn",
-   "id": "49896757",
-   "title": "Show HN: A working 3D model of an Enigma machine",
-   "url": "https://enigma.design",
-   "summary": "",
-   "published_at": "2026-09-29T17:15:56Z",
-   "metrics": {
-    "points": 76,
-    "comments": 25
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49896757"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
    "id": "49902019",
    "title": "NRC issues first U.S. construction permit for a BWRX-300 small modular reactor",
    "url": "https://www.gevernova.com/news/press-releases/nrc-issues-first-us-construction-permit-bwrx-300-small-modular-reactor-tva-clinch-river",
    "summary": "",
    "published_at": "2026-09-29T23:03:38Z",
    "metrics": {
-    "points": 69,
-    "comments": 32
+    "points": 75,
+    "comments": 33
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49902019"
@@ -4703,7 +4703,7 @@
    "summary": "",
    "published_at": "2026-09-29T08:06:40Z",
    "metrics": {
-    "points": 43,
+    "points": 47,
     "comments": 0
    },
    "extra": {
@@ -4764,7 +4764,7 @@
    "id": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
    "title": "Here’s how tech leaders will self-police AI safety under Trump’s deal",
    "url": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
-   "summary": "We now have the full details of the \"morally binding\" AI safety deal announced by President Trump yesterday, in which top executives agreed to self-regulate their artificial intelligence technology. The accord, officially titled the Joint Commitment on Frontier Responsibilities, was shared online by tech founder and presidential adviser David Sacks, and has been signed by [&#8230;]",
+   "summary": "We now have the full details of the \"morally binding\" AI safety deal announced by President Trump yesterday, in which top executives agreed to self-regulate their artificial intelligence technology. The accord, officially titled the Joint Commitment On Frontier Responsibilities, was shared online by tech founder and presidential advisor David Sacks, and has been signed by [&#8230;]",
    "published_at": "2026-09-30T12:24:32Z",
    "metrics": {},
    "extra": {
@@ -5094,6 +5094,19 @@
    "metrics": {},
    "extra": {
     "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Sep/29/photo-scrubber/",
+   "title": "Photo Scrubber — local face blur & metadata removal",
+   "url": "https://simonwillison.net/2026/Sep/29/photo-scrubber/",
+   "summary": "Tool: Photo Scrubber — local face blur &amp; metadata removal I took a photograph of some protesters, then thought about how I don't like sharing photographs of strangers with identifiable faces. I had GPT-6 Astra build this experimental tool that would identify faces and automatically blur them out. It uses Google's MediaPipe C++ library, compiled to WebAssembly via @mediapipe/tasks-vision , plus the BlazeFace face detection model. Tags: photography , tools",
+   "published_at": "2026-09-29T16:45:27Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
    },
    "also_in": []
   },
