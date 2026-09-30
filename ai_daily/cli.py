@@ -20,7 +20,22 @@ def build_parser():
     f.add_argument("--date", help="YYYY-MM-DD，預設為台北時間今天")
     f.add_argument("--config", default=str(config_mod.DEFAULT_PATH), help="設定檔（預設 sources.toml）")
     f.add_argument("--out", default="data", help="輸出根目錄（預設 data）")
+    d = sub.add_parser("digest", help="用 Gemini 篩選並撰寫早報內容，輸出 data/digest/<日期>.json")
+    d.add_argument("--date", help="YYYY-MM-DD，預設為台北時間今天")
+    d.add_argument("--root", default=".", help="專案根目錄（預設目前目錄）")
+    d.add_argument("--dry-run", action="store_true", help="只顯示候選數與提示長度，不呼叫 API")
     return p
+
+
+def cmd_digest(args, now_utc=None, make_llm=None):
+    from .digest import run as digest_run
+    now_utc = now_utc or datetime.now(timezone.utc)
+    try:
+        run_date = Date.fromisoformat(args.date) if args.date else taipei_today(now_utc)
+    except ValueError:
+        print(f"日期格式錯誤：{args.date}，請用 YYYY-MM-DD", file=sys.stderr)
+        return 2
+    return digest_run.run(run_date, args.root, args.dry_run, make_llm=make_llm, now=now_utc)
 
 
 def cmd_fetch(args, now_utc=None):
@@ -44,11 +59,13 @@ def cmd_fetch(args, now_utc=None):
     return code
 
 
-def main(argv=None, now_utc=None):
+def main(argv=None, now_utc=None, make_llm=None):
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
         sys.stderr.reconfigure(encoding="utf-8")
     args = build_parser().parse_args(argv)
     if args.command == "fetch":
         return cmd_fetch(args, now_utc)
+    if args.command == "digest":
+        return cmd_digest(args, now_utc, make_llm)
     return 2

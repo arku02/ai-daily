@@ -3,7 +3,8 @@
   "openspecVersion": "1.13.1",
   "testRunner": "python-unittest",
   "testFiles": [
-    "tests/test_fetch.py"
+    "tests/test_fetch.py",
+    "tests/test_digest.py"
   ],
   "pythonExecutable": ".venv/Scripts/python.exe"
 }

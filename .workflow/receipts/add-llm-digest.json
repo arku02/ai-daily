@@ -1,0 +1,48 @@
+{
+  "change": "add-llm-digest",
+  "archivedAt": "2026-09-30T10:29:41.742Z",
+  "archive": "openspec/changes/archive/2026-09-30-add-llm-digest",
+  "verifiedDigest": "f04a618507ac78bb0c520776488e96c2adc72e99788f0b9ad1879c3e7475192c",
+  "specs": {
+    "openspec/specs/llm-digest/spec.md": "81da905e0a0a30a0e6d11f997a7dc31bede7a2684ab95ef3487b81cb90aecb69",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  },
+  "validation": {
+    "items": [
+      {
+        "id": "llm-digest",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 6
+      },
+      {
+        "id": "source-fetch",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 1
+      }
+    ],
+    "summary": {
+      "totals": {
+        "items": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "byType": {
+        "spec": {
+          "items": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      }
+    },
+    "version": "1.0",
+    "root": {
+      "path": "<PROJECT_ROOT>",
+      "source": "nearest"
+    }
+  },
+  "output": "{\n  \"archive\": {\n    \"change\": \"add-llm-digest\",\n    \"archivedAs\": \"2026-09-30-add-llm-digest\",\n    \"path\": \"<PROJECT_ROOT><NETWORK_PATH>\",\n    \"specsUpdated\": true,\n    \"totals\": {\n      \"added\": 7,\n      \"modified\": 0,\n      \"removed\": 0,\n      \"renamed\": 0\n    }\n  },\n  \"root\": {\n    \"path\": \"<PROJECT_ROOT>\",\n    \"source\": \"nearest\"\n  }\n}\n"
+}

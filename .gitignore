@@ -14,3 +14,6 @@ config.ini
 .venv/
 venv/
 __pycache__/
+
+# AI 早報：個人背景不公開
+profile.toml

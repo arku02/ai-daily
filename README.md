@@ -9,7 +9,7 @@
 | 步驟 | 內容 | 狀態 |
 |---|---|---|
 | 1 | 多來源抓取、去重、星數快照 | ✅ 已實作 |
-| 2 | LLM 篩選、分類、寫摘要與「你可以怎麼用」 | ⬜ |
+| 2 | LLM 篩選、分類、寫摘要與「你可以怎麼用」 | ✅ 已實作 |
 | 3 | 產生網頁、Telegram 推送、回饋按鈕（回饋存私人 repo） | ⬜ |
 | 4 | GitHub Actions 每日排程、GitHub Pages 發布 | ⬜ |
 
@@ -28,7 +28,12 @@ python -m venv .venv
 .venv\Scripts\python.exe -m ai_daily fetch --date 2026-09-30  # 指定日期
 ```
 
-輸出：
+```bash
+.venv\Scripts\python.exe -m ai_daily digest                  # 用 Gemini 篩選並撰寫今天的早報內容
+.venv\Scripts\python.exe -m ai_daily digest --dry-run        # 只看候選數與提示長度，不呼叫 API
+```
+
+fetch 的輸出：
 
 - `data/raw/<日期>.json`：當天所有候選項目，已跨來源去重
 - `data/snapshots/<日期>.json`：GitHub 星數與 HF 模型讚數，用來算隔天的成長量
@@ -36,6 +41,17 @@ python -m venv .venv
 第一次執行時沒有前一天的快照，所以 `stars_delta` 是 `null`，第二天起才會有數字。GitHub Trending 頁面本身提供的「今天 +N 星」存在 `stars_today`，第一天就有。
 
 設定 `GITHUB_TOKEN` 環境變數可以提高 GitHub Search API 的查詢額度（未設定時每分鐘 10 次，目前 3 個查詢夠用）。
+
+digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個章節（新聞、模型、架構與論文、GitHub）的深度項目與快速瀏覽、今天試一個。來源連結一律由程式從原始資料帶入，不採用模型寫的網址。
+
+### Gemini 設定
+
+1. 到 [Google AI Studio](https://aistudio.google.com/apikey) 建立 key（選免費方案）
+2. 在專案根目錄的 `.env` 寫入 `GEMINI_API_KEY=你的key`（`.env` 不會被上傳）
+3. 模型清單與各章節篇數在 [digest.toml](digest.toml)；額度用完時會自動換下一個模型
+4. 讀者背景在 [profile.example.toml](profile.example.toml)；想改成自己的，複製成 `profile.toml` 再修改（不會被上傳）
+
+免費方案的輸入可能被 Google 用於改進產品；送出的內容只有公開資料與 profile 的背景描述。每天約 6～7 次呼叫、80 秒左右。
 
 ## 資料來源
 

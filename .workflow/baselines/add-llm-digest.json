@@ -1,0 +1,7 @@
+{
+  "change": "add-llm-digest",
+  "capturedAt": "2026-09-30T10:15:23.456Z",
+  "specs": {
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  }
+}

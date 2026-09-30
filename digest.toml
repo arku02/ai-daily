@@ -1,0 +1,29 @@
+# AI 早報的篩選與寫作設定
+
+[llm]
+# 依序嘗試；遇到額度用完（429）、伺服器錯誤或模型不存在就換下一個
+models = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-2.5-flash"]
+temperature = 0.4
+timeout = 180
+
+[candidates]
+# 每個來源最多取幾筆給 AI 選題
+hn = 25
+github_trending = 25
+github_search = 30
+hf_models = 20
+hf_papers = 25
+rss = 50
+summary_chars = 220
+
+[sections]
+# 每個章節的深度項目上限 / 快速瀏覽上限
+news = { items = 5, brief = 3 }
+models = { items = 3, brief = 4 }
+arch = { items = 3, brief = 3 }
+github = { items = 4, brief = 5 }
+
+[enrich]
+max_chars = 3000
+# 「今天試一個」需要完整的安裝步驟，給比較多的 README 內容
+try_one_max_chars = 8000
