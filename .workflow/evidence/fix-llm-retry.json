@@ -1,7 +1,7 @@
 {
-  "change": "add-daily-schedule",
+  "change": "fix-llm-retry",
   "passed": true,
-  "finishedAt": "2026-09-30T13:36:35.236Z",
+  "finishedAt": "2026-09-30T13:36:37.970Z",
   "node": "v24.18.0",
   "openspec": "1.13.1",
   "command": [
@@ -9,9 +9,9 @@
     "-B",
     "<PROJECT_ROOT>\\.integration\\scripts\\unittest_runner.py",
     "--report",
-    "<PROJECT_ROOT>\\.workflow\\python-f0382972-0be6-4690-8b29-a788fefbea46.json",
+    "<PROJECT_ROOT>\\.workflow\\python-4186c5d0-6c18-4793-b568-d59a14a7bd9f.json",
     "--token",
-    "f0382972-0be6-4690-8b29-a788fefbea46",
+    "4186c5d0-6c18-4793-b568-d59a14a7bd9f",
     "tests/test_fetch.py",
     "tests/test_digest.py",
     "tests/test_publish.py",
@@ -19,7 +19,7 @@
   ],
   "testRunner": "python-unittest",
   "runnerReport": {
-    "token": "f0382972-0be6-4690-8b29-a788fefbea46",
+    "token": "4186c5d0-6c18-4793-b568-d59a14a7bd9f",
     "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
     "tests": 106,
     "passed": 106,
@@ -162,20 +162,14 @@
     "R7"
   ],
   "summary": {
-    "mode": "full",
-    "tasks": 7,
-    "requirements": 6,
+    "mode": "lite",
+    "tasks": 1,
+    "requirements": 1,
     "requiredTestIds": [
-      "R1",
-      "R2",
-      "R3",
-      "R4",
-      "R5",
-      "R6",
-      "D1"
+      "R5"
     ]
   },
-  "digest": "563351d940174696fb801bca96db13cf9247f6270d6528f7255837e663a1c216",
+  "digest": "0c6c48ddf1bf315b20af02c8bb97b55bea85a5953f315e9c6f64f1132b3fc1a1",
   "manifest": {
     ".gitattributes": "7984b7d55efaec8a6af91f8894ab921160aa954d3183a630950dcd95cf282101",
     ".github/workflows/collect.yml": "42cc5cc31c22a3403d45a7688954ec7ea3740d425e1fd2fb699586b41f17f357",
@@ -225,12 +219,12 @@
     "digest.toml": "941d4ac40903443d9b4bf1a4cc73112b920385759f0a223839f488ec3e1a4988",
     "feedback/feedback.jsonl": "65bc88b0dc3ef02321e58dd0668595124cb8507eeb491c2d78ddce259725f1a2",
     "feedback/state.json": "02875a2c9e984c5642cca4625d90e3bddc65a71684be53ceadc17ff5ced2b67a",
-    "openspec/changes/add-daily-schedule/.openspec.yaml": "3735449ac42f1b66f3601d9f1488fa6dc88d211c667c6a753a0b03daa5e8f71f",
-    "openspec/changes/add-daily-schedule/design.md": "060d4a09bcf82c9864955514d95bc1b47792d6058c3375820e9754683c335136",
-    "openspec/changes/add-daily-schedule/proposal.md": "4135af9d0da8ae292c683f5302d73f2d8f10073efecc11824c31e7b401963251",
-    "openspec/changes/add-daily-schedule/review.md": "af788ed5f128bcdd5ed6a3dae7096cbf46cfc64a2b80e1f5af95424a3891c9ee",
-    "openspec/changes/add-daily-schedule/specs/daily-schedule/spec.md": "9206b671677087dfd34d5b511c4bb286d12c03b777d19f77b186ffe7ecbbd514",
-    "openspec/changes/add-daily-schedule/tasks.md": "e51a4a17ced94790028317e9c05675f68a4c9a8ea6eb8ba5c6eae408a122d35f",
+    "openspec/changes/fix-llm-retry/.openspec.yaml": "3735449ac42f1b66f3601d9f1488fa6dc88d211c667c6a753a0b03daa5e8f71f",
+    "openspec/changes/fix-llm-retry/design.md": "328cd16de22fe4ba20feaaac54c10bc64efb49e8488b2fa352c3bb06796ad4eb",
+    "openspec/changes/fix-llm-retry/proposal.md": "9b4d1fb948e649979a59794556814041e8905437ca7c006b6cf327e2fe6e24bb",
+    "openspec/changes/fix-llm-retry/review.md": "8cb95ccd843bbb1d9ee61d6567f81833f6e3cbcb65dfac3613def5187b0df164",
+    "openspec/changes/fix-llm-retry/specs/llm-digest/spec.md": "f2f5f0c64c745aa5e3746b0e516a537eb4e10b677ac7aae87ae451495bc491ef",
+    "openspec/changes/fix-llm-retry/tasks.md": "eb0ba7efb78e2061db8b5ad18922d440199a3b08b511a3657d8bae7f3b3960c2",
     "openspec/config.yaml": "905c5324771f623bfe97771c7bf0e58a0d2a4bc920297cf593a72fd1407868d5",
     "openspec/schemas/integrated/schema.yaml": "0ff4c974a83f0030b9b43d63b24a46c96630dae9ef1592e6c9c78ee1b0f28fb8",
     "openspec/schemas/integrated/templates/design.md": "6dcda53d518dcdb7ceeb221d9351f5e6001d02046c51521e1c8c9341ceae3ad9",
@@ -260,8 +254,8 @@
     "workflow.config.json": "2e6b5d9cbb22e6ce35661a4c670483b4e46204a9d36c210f0721a23b3e98f4b6"
   },
   "runtimeHash": "9d46fbfa5d8a7fb3e2f68c03a959ce852fb1b402435f56d749906dd5b5b7556b",
-  "log": ".workflow/evidence/add-daily-schedule.log",
-  "logHash": "e0c61ecf8d5a3e9447b8d5093cd29b21389637d3ec59b5a550a6e03e1cc39810",
+  "log": ".workflow/evidence/fix-llm-retry.log",
+  "logHash": "44176fa176e7e25637557c01abd18571818933a62569124a51e3337e13998e9c",
   "privacy": {
     "format": 1,
     "log": "path-redacted-before-hashing",

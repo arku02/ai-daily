@@ -24,6 +24,7 @@
 - 需求來源：使用者 2026-09-30 的決定（9 點、週末照發、免費、GitHub Pages、回饋私人 repo ai-daily-feedback）。
 - 設計區分已知事實（兩個 repo 的可見性與空狀態、沒有 gh CLI）、假設（排程延遲、Pages 來源設定）與方案。
 - 不需要 ADR；取捨記在 design.md。
+- 2026-09-30 第一次手動執行（run 36719629687）：fetch、提交原始資料、失敗通知都成功；digest 失敗，日誌顯示 gemini-3.8-flash 與 3.5-flash 回應 503 壅塞、2.5-flash 回應 404（新使用者停用）。以 fix-llm-retry 變更加入程式內重試與新模型清單，並在本變更的 R1 加入 workflow 層級「等 5 分鐘重跑一次」。
 
 ## 實際驗證
 尚未執行。執行 verify 後讀取 .workflow/evidence/add-daily-schedule.json 與對應測試輸出。

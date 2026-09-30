@@ -106,6 +106,6 @@ test_R5_every_job_notifies (workflow_test_3.TestR5FailureNotice.test_R5_every_jo
 test_R6_commit_steps (workflow_test_3.TestR6SafeCommits.test_R6_commit_steps) ... ok
 
 ----------------------------------------------------------------------
-Ran 106 tests in 0.601s
+Ran 106 tests in 0.582s
 
 OK

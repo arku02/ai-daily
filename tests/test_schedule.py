@@ -34,6 +34,12 @@ class TestR1DailyOrder(unittest.TestCase):
             "git add data", "upload-pages-artifact")]
         self.assertEqual(order, sorted(order))
 
+    def test_R1_digest_retried_once(self):
+        build = job_block(DAILY, "build")
+        seg = build[step_index(build, "name: Digest"):step_index(build, "name: Render")]
+        self.assertIn("python -m ai_daily digest || {", seg)
+        self.assertIn("sleep 300; python -m ai_daily digest; }", seg)
+
     def test_R1_deploy_before_push(self):
         self.assertIn("needs: build", job_block(DAILY, "deploy"))
         notify = job_block(DAILY, "notify")

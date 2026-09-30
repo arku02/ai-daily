@@ -4,14 +4,18 @@
 ## ADDED Requirements
 
 ### Requirement: R1 - Daily pipeline order
-daily workflow SHALL 在 cron `45 0 * * *`（UTC，台北 08:45）與手動觸發時執行，順序為：fetch → digest → render → 提交 data/ → 部署 Pages → push → 提交 data/push/。push SHALL 只在 Pages 部署成功後執行，確保訊息中的網址可開啟。digest 失敗時 SHALL 仍提交已抓到的原始資料，且 SHALL 不部署、不推送。
+daily workflow SHALL 在 cron `45 0 * * *`（UTC，台北 08:45）與手動觸發時執行，順序為：fetch → digest → render → 提交 data/ → 部署 Pages → push → 提交 data/push/。push SHALL 只在 Pages 部署成功後執行，確保訊息中的網址可開啟。digest 第一次失敗時 SHALL 等待 5 分鐘後重跑一次；重跑仍失敗時 SHALL 仍提交已抓到的原始資料，且 SHALL 不部署、不推送。
 
 #### Scenario: Deploy before push
 - **WHEN** daily workflow 執行
 - **THEN** push 所在的工作依賴 Pages 部署工作完成
 
+#### Scenario: Digest retried once
+- **WHEN** digest 第一次以非零退出碼結束
+- **THEN** 等待 300 秒後再執行一次 digest
+
 #### Scenario: Digest fails
-- **WHEN** digest 步驟失敗
+- **WHEN** digest 重跑後仍失敗
 - **THEN** data/raw 與 data/snapshots 仍被提交，之後的部署與推送不執行
 
 ### Requirement: R2 - Feedback collection schedule

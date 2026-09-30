@@ -310,11 +310,44 @@ class TestR5Client(Base):
     def test_R5_all_models_fail(self):
         post, _ = self.post_seq([(429, "q"), (503, "down")])
         with self.assertRaises(LLMError):
-            Gemini("k", ["m1", "m2"], post=post).generate_json("hi")
+            Gemini("k", ["m1", "m2"], post=post, retry_waits=[]).generate_json("hi")
+
+    def test_R5_busy_then_retry(self):
+        waits = []
+        post, calls = self.post_seq([(503, "busy"), (503, "busy"), self.ok({"ok": 1})])
+        g = Gemini("k", ["m1", "m2"], post=post, retry_waits=[20, 60], sleep=waits.append)
+        self.assertEqual(g.generate_json("hi"), {"ok": 1})
+        self.assertEqual(waits, [20])
+        self.assertEqual(g.calls, 3)
+        self.assertIn("models/m1:", calls[2])
+
+    def test_R5_retired_model_not_retried(self):
+        waits = []
+        post, calls = self.post_seq([(503, "busy"), (404, "gone"), (503, "busy"), (503, "busy")])
+        g = Gemini("k", ["m1", "m2"], post=post, retry_waits=[20, 60], sleep=waits.append)
+        with self.assertRaises(LLMError) as ctx:
+            g.generate_json("hi")
+        self.assertEqual(waits, [20, 60])
+        self.assertEqual([c.split("models/")[1].split(":")[0] for c in calls], ["m1", "m2", "m1", "m1"])
+        self.assertIn("第 3 輪", str(ctx.exception))
+
+    def test_R5_non_retryable_does_not_wait(self):
+        waits = []
+        post, calls = self.post_seq([(403, "forbidden")])
+        with self.assertRaises(LLMError):
+            Gemini("k", ["m1", "m2"], post=post, retry_waits=[20], sleep=waits.append).generate_json("hi")
+        self.assertEqual(waits, [])
+        self.assertEqual(len(calls), 1)
+
+    def test_R5_model_list_has_no_retired_model(self):
+        import tomllib
+        cfg = tomllib.loads((ROOT / "digest.toml").read_text(encoding="utf-8"))["llm"]
+        self.assertNotIn("gemini-2.5-flash", cfg["models"])
+        self.assertEqual(cfg["retry_waits"], [20, 60])
 
     def test_R5_key_masked(self):
         key = "SECRETKEY123"
-        post, _ = self.post_seq([(400, f"API key {key} not valid")])
+        post, _ = self.post_seq([(400, f"API key {key} not valid")])  # 400 不重試
         with self.assertRaises(LLMError) as ctx:
             Gemini(key, ["m1", "m2"], post=post).generate_json("hi")
         self.assertNotIn(key, str(ctx.exception))

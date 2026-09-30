@@ -1,8 +1,11 @@
 # AI 早報的篩選與寫作設定
 
 [llm]
-# 依序嘗試；遇到額度用完（429）、伺服器錯誤或模型不存在就換下一個
-models = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-2.5-flash"]
+# 依序嘗試；遇到額度用完（429）、伺服器忙碌（503）或模型不存在（404）就換下一個
+# 2026-09-30：gemini-2.5-flash 已不開放給新使用者（404），改用 3.x 的免費模型
+models = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
+# 整份清單都忙碌時，依序等待幾秒再試一輪；[] 表示不重試
+retry_waits = [20, 60]
 temperature = 0.4
 timeout = 180
 

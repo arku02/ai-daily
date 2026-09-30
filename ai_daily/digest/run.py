@@ -57,7 +57,7 @@ def run(date, root=".", dry_run=False, make_llm=None, now=None, out=None):
             out("找不到 GEMINI_API_KEY：請在專案根目錄的 .env 寫入 GEMINI_API_KEY=你的key")
             return 2
         llm = Gemini(key, llm_cfg.get("models", []), float(llm_cfg.get("temperature", 0.4)),
-                     int(llm_cfg.get("timeout", 180)))
+                     int(llm_cfg.get("timeout", 180)), retry_waits=llm_cfg.get("retry_waits", [20, 60]))
     else:
         llm = make_llm(llm_cfg)
 

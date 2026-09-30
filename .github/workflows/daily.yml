@@ -42,7 +42,9 @@ jobs:
         id: digest
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m ai_daily digest
+        # Gemini 免費方案偶爾 503 壅塞：程式內已會重試兩輪，仍失敗就等 5 分鐘整個重跑一次
+        run: |
+          python -m ai_daily digest || { echo "digest 失敗，5 分鐘後重試"; sleep 300; python -m ai_daily digest; }
 
       - name: Render
         if: steps.digest.outcome == 'success'

@@ -1,0 +1,62 @@
+{
+  "change": "fix-llm-retry",
+  "archivedAt": "2026-09-30T13:36:38.813Z",
+  "archive": "openspec/changes/archive/2026-09-30-fix-llm-retry",
+  "verifiedDigest": "0c6c48ddf1bf315b20af02c8bb97b55bea85a5953f315e9c6f64f1132b3fc1a1",
+  "specs": {
+    "openspec/specs/llm-digest/spec.md": "01aee5da1de1438e72b05ddf990fd8eb37786f27d54ed2d095f6d92e7c0404b5",
+    "openspec/specs/publish-feedback/spec.md": "ad476fccbb55f6a92988ff1caf0060a769303fdd1e1227667a8db78102c84377",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  },
+  "validation": {
+    "items": [
+      {
+        "id": "llm-digest",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 6
+      },
+      {
+        "id": "publish-feedback",
+        "type": "spec",
+        "valid": true,
+        "issues": [
+          {
+            "level": "INFO",
+            "path": "requirements[5]",
+            "message": "Requirement text is very long (>500 characters). Consider breaking it down."
+          }
+        ],
+        "durationMs": 1
+      },
+      {
+        "id": "source-fetch",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 0
+      }
+    ],
+    "summary": {
+      "totals": {
+        "items": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "byType": {
+        "spec": {
+          "items": 3,
+          "passed": 3,
+          "failed": 0
+        }
+      }
+    },
+    "version": "1.0",
+    "root": {
+      "path": "<PROJECT_ROOT>",
+      "source": "nearest"
+    }
+  },
+  "output": "{\n  \"archive\": {\n    \"change\": \"fix-llm-retry\",\n    \"archivedAs\": \"2026-09-30-fix-llm-retry\",\n    \"path\": \"<PROJECT_ROOT><NETWORK_PATH>\",\n    \"specsUpdated\": true,\n    \"totals\": {\n      \"added\": 0,\n      \"modified\": 1,\n      \"removed\": 0,\n      \"renamed\": 0\n    }\n  },\n  \"root\": {\n    \"path\": \"<PROJECT_ROOT>\",\n    \"source\": \"nearest\"\n  }\n}\n"
+}
