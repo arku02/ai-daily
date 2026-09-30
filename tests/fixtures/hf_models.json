@@ -1,0 +1,75 @@
+[
+ {
+  "_id": "6aa76e4e82b01847860c8406",
+  "id": "Qwen/Qwen-Image-2.1",
+  "likes": 2681,
+  "trendingScore": 656,
+  "private": false,
+  "downloads": 64362,
+  "tags": [
+   "diffusers",
+   "safetensors",
+   "qwen",
+   "image-generation",
+   "image-editing",
+   "rgba",
+   "text-to-image",
+   "license:other",
+   "diffusers:QwenImage21Pipeline",
+   "region:us"
+  ],
+  "pipeline_tag": "text-to-image",
+  "library_name": "diffusers",
+  "createdAt": "2026-09-14T03:47:26.000Z",
+  "modelId": "Qwen/Qwen-Image-2.1"
+ },
+ {
+  "_id": "6aaa3ad8ceedd411a4fa2255",
+  "id": "XingChen-AGI/Xing4.0-29B-A4B",
+  "likes": 1810,
+  "trendingScore": 355,
+  "private": false,
+  "downloads": 46557,
+  "tags": [
+   "transformers",
+   "safetensors",
+   "xing4_0",
+   "text-generation",
+   "conversational",
+   "custom_code",
+   "arxiv:2512.24157",
+   "arxiv:2507.18013",
+   "license:apache-2.0",
+   "region:us"
+  ],
+  "pipeline_tag": "text-generation",
+  "library_name": "transformers",
+  "createdAt": "2026-09-16T06:44:40.000Z",
+  "modelId": "XingChen-AGI/Xing4.0-29B-A4B"
+ },
+ {
+  "_id": "6aa213563d5b3527359d1af2",
+  "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "likes": 3909,
+  "trendingScore": 178,
+  "private": false,
+  "downloads": 690388,
+  "tags": [
+   "transformers",
+   "safetensors",
+   "deepseek_v41",
+   "text-generation",
+   "image-text-to-text",
+   "license:mit",
+   "eval-results",
+   "endpoints_compatible",
+   "8-bit",
+   "fp8",
+   "region:us"
+  ],
+  "pipeline_tag": "image-text-to-text",
+  "library_name": "transformers",
+  "createdAt": "2026-09-10T02:17:58.000Z",
+  "modelId": "deepseek-ai/DeepSeek-V4.1-Flash"
+ }
+]

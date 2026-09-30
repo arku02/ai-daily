@@ -1,0 +1,16 @@
+
+# Integrated workflow 0.2.0
+.integration/node_modules/
+.workflow/lock
+.workflow/onboarding.lock
+.workflow/private/
+.workflow/imports/
+.workflow/python-*.json
+workflow.local.json
+.env
+.env.*
+!.env.example
+config.ini
+.venv/
+venv/
+__pycache__/

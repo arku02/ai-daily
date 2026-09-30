@@ -1,0 +1,32 @@
+test_D1_full_run_without_network (workflow_test_0.TestD1Offline.test_D1_full_run_without_network) ... ok
+test_D1_test_file_registered (workflow_test_0.TestD1Offline.test_D1_test_file_registered) ... ok
+test_R1_every_source_uses_unified_fields (workflow_test_0.TestR1UnifiedFormat.test_R1_every_source_uses_unified_fields) ... ok
+test_R1_hn_story_becomes_item (workflow_test_0.TestR1UnifiedFormat.test_R1_hn_story_becomes_item) ... ok
+test_R1_hn_story_without_url (workflow_test_0.TestR1UnifiedFormat.test_R1_hn_story_without_url) ... ok
+test_R1_trending_parsed_from_real_page (workflow_test_0.TestR1UnifiedFormat.test_R1_trending_parsed_from_real_page) ... ok
+test_R2_disabled_source_makes_no_request (workflow_test_0.TestR2Filters.test_R2_disabled_source_makes_no_request) ... ok
+test_R2_github_search_created_window (workflow_test_0.TestR2Filters.test_R2_github_search_created_window) ... ok
+test_R2_hf_pipeline_filter (workflow_test_0.TestR2Filters.test_R2_hf_pipeline_filter) ... ok
+test_R2_hn_points_threshold (workflow_test_0.TestR2Filters.test_R2_hn_points_threshold) ... ok
+test_R2_papers_date_and_min_upvotes (workflow_test_0.TestR2Filters.test_R2_papers_date_and_min_upvotes) ... ok
+test_R2_rss_window (workflow_test_0.TestR2Filters.test_R2_rss_window) ... ok
+test_R3_delta_from_previous_snapshot (workflow_test_0.TestR3Growth.test_R3_delta_from_previous_snapshot) ... ok
+test_R3_first_time_seen_is_null (workflow_test_0.TestR3Growth.test_R3_first_time_seen_is_null) ... ok
+test_R3_no_snapshot_at_all_is_null (workflow_test_0.TestR3Growth.test_R3_no_snapshot_at_all_is_null) ... ok
+test_R3_same_day_rerun_compares_with_earlier (workflow_test_0.TestR3Growth.test_R3_same_day_rerun_compares_with_earlier) ... ok
+test_R4_hn_links_trending_repo (workflow_test_0.TestR4Dedupe.test_R4_hn_links_trending_repo) ... ok
+test_R4_normalize_url (workflow_test_0.TestR4Dedupe.test_R4_normalize_url) ... ok
+test_R5_all_sources_down (workflow_test_0.TestR5FailureIsolation.test_R5_all_sources_down) ... ok
+test_R5_one_source_down (workflow_test_0.TestR5FailureIsolation.test_R5_one_source_down) ... ok
+test_R5_partial_rss_failure_is_warning (workflow_test_0.TestR5FailureIsolation.test_R5_partial_rss_failure_is_warning) ... ok
+test_R5_token_masked (workflow_test_0.TestR5FailureIsolation.test_R5_token_masked) ... ok
+test_R5_unrequested_gzip_body_is_decoded (workflow_test_0.TestR5FailureIsolation.test_R5_unrequested_gzip_body_is_decoded) ... ok
+test_R6_default_date_is_taipei (workflow_test_0.TestR6Output.test_R6_default_date_is_taipei) ... ok
+test_R6_explicit_date_and_file_shape (workflow_test_0.TestR6Output.test_R6_explicit_date_and_file_shape) ... ok
+test_R6_rerun_overwrites (workflow_test_0.TestR6Output.test_R6_rerun_overwrites) ... ok
+test_R6_summary_printed (workflow_test_0.TestR6Output.test_R6_summary_printed) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.180s
+
+OK

@@ -1,0 +1,40 @@
+{
+  "change": "add-source-fetch",
+  "archivedAt": "2026-09-30T10:07:07.388Z",
+  "archive": "openspec/changes/archive/2026-09-30-add-source-fetch",
+  "verifiedDigest": "fdee15148627709eeb40ff881a570e8d7dde817f478a5ad9979642c46aa0379c",
+  "specs": {
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  },
+  "validation": {
+    "items": [
+      {
+        "id": "source-fetch",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 5
+      }
+    ],
+    "summary": {
+      "totals": {
+        "items": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "byType": {
+        "spec": {
+          "items": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      }
+    },
+    "version": "1.0",
+    "root": {
+      "path": "<PROJECT_ROOT>",
+      "source": "nearest"
+    }
+  },
+  "output": "{\n  \"archive\": {\n    \"change\": \"add-source-fetch\",\n    \"archivedAs\": \"2026-09-30-add-source-fetch\",\n    \"path\": \"<PROJECT_ROOT><NETWORK_PATH>\",\n    \"specsUpdated\": true,\n    \"totals\": {\n      \"added\": 6,\n      \"modified\": 0,\n      \"removed\": 0,\n      \"renamed\": 0\n    }\n  },\n  \"root\": {\n    \"path\": \"<PROJECT_ROOT>\",\n    \"source\": \"nearest\"\n  }\n}\n"
+}

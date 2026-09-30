@@ -1,0 +1,9 @@
+{
+  "schema": "integrated",
+  "openspecVersion": "1.13.1",
+  "testRunner": "python-unittest",
+  "testFiles": [
+    "tests/test_fetch.py"
+  ],
+  "pythonExecutable": ".venv/Scripts/python.exe"
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Agent 早報 2026-09-30</title>
+<style>
+:root{
+  --bg:#f7f6f3; --card:#ffffff; --ink:#1d1d1f; --muted:#6b6b70; --line:#e4e2dc;
+  --accent:#2f6fde; --accent-soft:#e8f0fd; --use:#0f7b5f; --use-soft:#e6f5ef;
+  --warn:#b25e09; --warn-soft:#fdf1e3; --tag:#f0eee9;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141416; --card:#1d1d20; --ink:#ececee; --muted:#9a9aa1; --line:#2e2e33;
+    --accent:#7aa7ff; --accent-soft:#1f2a40; --use:#4fd1a5; --use-soft:#15302a;
+    --warn:#f0a95a; --warn-soft:#352715; --tag:#2a2a2f;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.75 "Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 80px}
+header{padding:8px 0 20px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.kicker{font-size:13px;color:var(--muted);letter-spacing:.05em}
+h1{font-size:30px;line-height:1.3;margin:6px 0 4px}
+.meta{color:var(--muted);font-size:14px}
+.demo{display:inline-block;background:var(--warn-soft);color:var(--warn);font-size:12px;
+  padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.tldr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:20px 0}
+.tldr h2{font-size:15px;margin:0 0 8px;color:var(--muted);font-weight:600}
+.tldr ol{margin:0;padding-left:22px}
+.tldr li{margin:4px 0}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+nav a{background:var(--tag);color:var(--ink);text-decoration:none;font-size:14px;
+  padding:5px 12px;border-radius:99px}
+nav a:hover{background:var(--accent-soft);color:var(--accent)}
+section{margin:40px 0 0}
+section>h2{font-size:22px;margin:0 0 4px}
+section>.sub{color:var(--muted);font-size:14px;margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0}
+.card h3{font-size:18px;line-height:1.45;margin:0 0 6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.tag{font-size:12px;background:var(--tag);color:var(--muted);padding:1px 8px;border-radius:6px}
+.tag.hot{background:var(--warn-soft);color:var(--warn)}
+.card p{margin:6px 0}
+.label{font-weight:700;font-size:14px;margin:12px 0 2px;color:var(--muted)}
+.card ul{margin:4px 0;padding-left:20px}
+.card li{margin:3px 0}
+.use{background:var(--use-soft);border-radius:10px;padding:10px 14px;margin:12px 0 6px}
+.use .label{color:var(--use);margin-top:0}
+.src{font-size:13px;color:var(--muted);margin-top:10px;word-break:break-word}
+.src a{color:var(--accent)}
+.fb{display:flex;gap:8px;margin-top:12px}
+.fb button{font:inherit;font-size:13px;background:transparent;border:1px solid var(--line);
+  color:var(--muted);padding:3px 10px;border-radius:8px;cursor:pointer}
+.fb button.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--tag);padding:1px 5px;border-radius:4px}
+pre{background:var(--tag);padding:12px 14px;border-radius:10px;overflow-x:auto;font-size:13px;line-height:1.6}
+.tg{white-space:pre-wrap;font-size:14px;background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px 18px}
+footer{margin-top:48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">AI AGENT 早報 · 第 0 期 <span class="demo">範例，手動整理</span></div>
+  <h1>2026 年 9 月 30 日（三）</h1>
+  <div class="meta">資料範圍：9/28 – 9/30 · 約 20 分鐘 · 共 17 則</div>
+</header>
+
+<div class="tldr">
+  <h2>今天只看三件事的話</h2>
+  <ol>
+    <li><b>「永遠在線的 Agent」變成主流產品：</b>OpenAI 在 DevDay 推出 Dots，每個 Agent 都有自己的雲端電腦和瀏覽器，會在背景持續工作。</li>
+    <li><b>Agent 安全是本週最熱的話題：</b>Nvidia 推出晶片級的 Agent 監控；Meta 的 Muse 被報導無視使用者權限設定；Anthropic 發表報告，指出開源模型 GLM-5.3 已經能自己寫出攻擊程式。</li>
+    <li><b>兩天內出了兩個主力模型：</b>Claude Sonnet 5.5（9/28）和 GPT-6.1 Sol（9/29），價格都是每百萬 token 輸入 $2、輸出 $10，拚的是速度和 Agent 任務的表現。</li>
+  </ol>
+</div>
+
+<nav>
+  <a href="#news">📰 Agent 新聞</a>
+  <a href="#models">🧠 新模型</a>
+  <a href="#arch">🏗️ 新架構與論文</a>
+  <a href="#github">⭐ GitHub 爆紅</a>
+  <a href="#try">🛠️ 今天試一個</a>
+  <a href="#telegram">📱 Telegram 預覽</a>
+</nav>
+
+<!-- ============ 新聞 ============ -->
+<section id="news">
+  <h2>📰 AI Agent 新聞</h2>
+  <p class="sub">已排除融資和人事新聞</p>
+
+  <div class="card">
+    <h3>OpenAI 推出 Dots：永遠在線、在背景做事的 Agent</h3>
+    <div class="tags"><span class="tag hot">HN 608 分</span><span class="tag">產品發布</span><span class="tag">OpenAI DevDay</span></div>
+    <p class="label">摘要</p>
+    <p>OpenAI 在 9/29 的 DevDay 發表 Dots，底層模型是 GPT-6 Astra。每個 Dot 有自己的雲端電腦和瀏覽器，可以連接超過 4,000 個 App，在背景持續追一個目標。它會主動回報進度，卡住時也會回頭問你。你可以在 ChatGPT、Slack 或 Teams 裡跟它對話。目前先開放給 ChatGPT Pro 和 Business Premium，第一個 Dot 不另外收費。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>Agent 的互動方式從「你問、它答」變成「交辦任務，它自己做完再回報」</li>
+      <li>「每個 Agent 配一台自己的沙盒電腦」已經是大廠的標準做法</li>
+      <li>一天之內就有人做出開源版：<code>feder-cr/dots</code>（Python，9/29 建立，已有 702 星）</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>你的自動化流程可以參考這個互動模式。在 LangGraph 裡，用 <b>checkpointer</b> 讓長時間的任務可以中斷後接著做，再用 <b>interrupt()</b> 在需要你決定的地方停下來、傳 Telegram 問你。例如：一個資料清理 Agent 每天自動跑，遇到異常值不自己亂改，而是停下來問你。</p>
+    </div>
+    <div class="src">來源：<a href="https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/">TechCrunch</a> · <a href="https://thenextweb.com/news/openai-dots-always-on-ai-agents-cloud-computers-devday">The Next Web</a> · <a href="https://news.ycombinator.com/item?id=49896604">HN 討論（472 則留言）</a> · <a href="https://github.com/feder-cr/dots">開源版 feder-cr/dots</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Nvidia 推出 Agent 安全平台：OpenShell 沙盒 + Sentry 晶片監控</h3>
+    <div class="tags"><span class="tag hot">HN 225 分</span><span class="tag">Agent 安全</span><span class="tag">開源</span></div>
+    <p class="label">摘要</p>
+    <p>Nvidia 在 9/28 發表 Open Agent Safety Platform，由兩部分組成。<b>OpenShell</b> 是開源的 Agent 執行環境，它在作業系統核心層限制 Agent 能碰哪些檔案、能連哪些網路，而且 Agent 看不到真正的帳密，只有連到允許的服務時，系統才會代為加上。<b>Sentry</b> 則跑在獨立的 BlueField-4 晶片上，從主機外部監控 Agent，發現越界可以在幾毫秒內隔離。Anthropic 也宣布 Claude Managed Agents 會和它整合。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>安全限制從「寫在 prompt 裡請 Agent 遵守」變成「由系統強制執行」</li>
+      <li>可以做到很細的權限，例如「可以透過 API 讀資料，但不能寫入」</li>
+      <li>OpenShell 今天在 GitHub Trending 上 +990 星，總共 1.1 萬星，Apache-2.0 授權</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>做資料分析 Agent 時，最怕它不小心改到或刪掉正式資料。不一定要導入 OpenShell，但可以先學它的設計：<b>給 Agent 的資料庫帳號只開唯讀權限</b>，帳密放在工具函式裡，不要寫進 prompt。OpenShell 本身有 PyPI 套件，但要先確認有沒有支援 Windows。</p>
+    </div>
+    <div class="src">來源：<a href="https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/">TechCrunch</a> · <a href="https://www.helpnetsecurity.com/2026/09/28/nvidia-open-agent-safety-platform/">Help Net Security</a> · <a href="https://github.com/NVIDIA/OpenShell">GitHub NVIDIA/OpenShell</a> · <a href="https://news.ycombinator.com/item?id=49879883">HN 討論</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Agent 權限問題集中爆發：Meta Muse、對話 Agent 隱私研究、Agent 出事誰負責</h3>
+    <div class="tags"><span class="tag hot">HN 417 + 156 分</span><span class="tag">Agent 安全</span><span class="tag">隱私</span></div>
+    <p class="label">摘要</p>
+    <p>這幾天有三則相關的討論同時上了 Hacker News 熱門：AppleInsider 報導 Meta 新推出的 Muse Agent 無視使用者設定的權限；一份研究分析了網頁版和手機版對話 AI Agent 的隱私追蹤行為；還有一篇文章討論「Agent 意外做了壞事，該由誰負責」，留言數甚至比讚數還多。另外，NBC 報導 OpenAI 在推出 Dots 的前一天，才剛為旗下機器人造成的一起入侵事件道歉。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>Agent 能力變強之後，社群討論的焦點從「做不做得到」轉向「能不能控制」</li>
+      <li>這個話題和上一則 Nvidia 的產品互相呼應，可以一起看</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>你做的自動化如果會替別人執行動作，例如寄信或改資料，建議每一個動作都寫紀錄：誰觸發的、Agent 當時根據什麼決定、實際做了什麼。這種紀錄出事時可以追查，平常也能拿來改進 Agent，下面「新架構」段落的 TraceDance 就是這樣用。</p>
+    </div>
+    <div class="src">來源：<a href="https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions">AppleInsider</a> · <a href="https://news.ycombinator.com/item?id=49890226">隱私研究（HN）</a> · <a href="https://blog.greenpants.net/ai-accountability/">Agent 責任歸屬</a> · <a href="https://www.nbcnews.com/tech/tech-news/openai-launches-dots-ai-agents-safety-questions-rcna600338">NBC News</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Anthropic 報告：開源模型 GLM-5.3 已經能自己寫出可用的攻擊程式</h3>
+    <div class="tags"><span class="tag hot">HN 224 分</span><span class="tag">資安</span><span class="tag">開源模型</span></div>
+    <p class="label">摘要</p>
+    <p>Anthropic 測試了智譜（Z.ai）釋出的開源模型 GLM-5.3。結果顯示，它能針對 Chrome V8 的漏洞寫出可用的攻擊程式，成功率 12%；在人類指引下，約 20 分鐘就能把公開的漏洞通報轉成實際攻擊。它內建的安全限制也很容易被繞過：用誤導性的提示詞有 64% 成功，預先填入推理內容有 92% 成功，直接修改權重則是 100%。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>頂尖開源模型的資安能力已經接近商用模型，但沒有商用模型那層防護</li>
+      <li>Anthropic 建議讓防守方也能使用同等級的模型，並由政府進行安全測試</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>跟你的工作沒有直接關係。不過如果你會在本機跑開源模型處理敏感資料，要記得「模型內建的限制不等於安全」，資料和權限的隔離要自己做。</p>
+    </div>
+    <div class="src">來源：<a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities">Anthropic Research</a> · <a href="https://news.ycombinator.com/item?id=49897075">HN 討論</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Cloudflare 推出 <code>cf</code>：專門給 Agent 用的 CLI</h3>
+    <div class="tags"><span class="tag">HN 167 分</span><span class="tag">開發工具</span></div>
+    <p class="label">摘要</p>
+    <p>Cloudflare 把整套 API 包成一個 CLI 工具，而且設計時就把 AI Agent 當成主要使用者。GitHub 上的 <code>cloudflare/cf</code> 一週內累積了 510 星。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>這是一個趨勢：大廠開始<b>先做 CLI 給 Agent 用</b>，網頁介面反而是次要的。Coding Agent 最擅長的就是操作終端機</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>你寫的 Python 自動化腳本，如果都做成有清楚參數和 <code>--help</code> 說明的 CLI（例如用 <code>typer</code> 或 <code>argparse</code>），Claude Code 這類 Agent 就能直接拿來用，不用再另外寫工具串接。</p>
+    </div>
+    <div class="src">來源：<a href="https://blog.cloudflare.com/cloudflare-cf-cli-launch/">Cloudflare Blog</a> · <a href="https://github.com/cloudflare/cf">GitHub cloudflare/cf</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+</section>
+
+<!-- ============ 模型 ============ -->
+<section id="models">
+  <h2>🧠 新 AI 模型</h2>
+  <p class="sub">商用模型、開源模型，還有一個不是 LLM 的新東西</p>
+
+  <div class="card">
+    <h3>Claude Sonnet 5.5（9/28）vs GPT-6.1 Sol（9/29）</h3>
+    <div class="tags"><span class="tag hot">主力模型</span><span class="tag">API 可用</span></div>
+    <div class="tablewrap"><table>
+      <tr><th></th><th>Claude Sonnet 5.5</th><th>GPT-6.1 Sol</th></tr>
+      <tr><td>價格（每百萬 token）</td><td class="num">輸入 $2 / 輸出 $10（和 Sonnet 5 相同）</td><td class="num">輸入 $2 / 輸出 $10</td></tr>
+      <tr><td>主打</td><td>速度快 30% 以上，每個任務最多省 30%，工具呼叫次數也比較少</td><td>Agent 寫程式和操作電腦的能力接近 GPT-6 Astra，價格只要 1/5</td></tr>
+      <tr><td>公布的成績</td><td>Terminal-Bench 4.0：70.6%</td><td>—</td></tr>
+      <tr><td>API 名稱</td><td>請查官方文件</td><td><code>gpt-6.1-sol</code></td></tr>
+      <tr><td>其他</td><td>GitHub Copilot 已經可以用</td><td>之後會推出快 8 倍的 Ultrafast 版本</td></tr>
+    </table></div>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>兩者價格一樣，都主打「Agent 任務更便宜，因為步驟更少」。LangGraph 可以輕鬆換模型，建議<b>拿你自己的一個真實流程各跑 10 次</b>，比較成功率和總 token 數。以 Agent 來說，「每個任務總共花多少錢」比「每個 token 多少錢」更有參考價值。</p>
+    </div>
+    <div class="src">來源：<a href="https://www.anthropic.com/claude-sonnet-5-5">Anthropic 官方</a> · <a href="https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-5-with-30-cost-reduction-per-task-due-to-faster-speeds-and-fewer-tool-calls">VentureBeat</a> · <a href="https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/">TechCrunch</a> · <a href="https://llmgateway.io/timeline">9 月模型發布時間軸</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Jev：不生成文字，只回答「有型別的判斷」的模型</h3>
+    <div class="tags"><span class="tag hot">GitHub 上有 5 個以上相關專案</span><span class="tag">新類型</span><span class="tag">Early Access</span></div>
+    <p class="label">摘要</p>
+    <p>TypeSafe AI 在 9/15 開放 Jev 搶先體驗，它自稱「System One 模型」。Jev 不是 LLM，也不產生文字：你給它一段狀態，再給它一組有型別的問題（例如「這筆是異常嗎？」回答是或否），它會一次平行回答所有問題，每個答案都附上經過校準的信心分數。官方宣稱它比頂尖 LLM 快 40～200 倍，輸入每百萬 token 只要 $0.042、輸出免費，而且「不可能產生幻覺或型別錯誤」。<b>這些都是廠商自己的說法，還沒有第三方驗證。</b></p>
+    <p class="label">重點</p>
+    <ul>
+      <li>這一週的 GitHub 新專案裡，有一大串都是圍繞 Jev 做的：程式碼搜尋 <code>jevgrep</code>（1.8k 星）、Agent 監工 <code>foreman</code>，還有模型路由等等</li>
+      <li>它的定位是 Agent 裡的「快速判斷」元件，需要深入推理時再交給 LLM</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p><b>這可能是今天跟你最相關的一則。</b>LangGraph 流程裡常有「分類、路由、判斷要不要處理」這類節點，現在多半用 LLM 加結構化輸出來做，又慢又貴。這些節點很適合換成 Jev 試試。可以先挑一個分類節點，比較兩者的準確率、速度和成本。</p>
+    </div>
+    <div class="src">來源：<a href="https://www.datacamp.com/blog/system-one-models-jev">DataCamp 介紹</a> · <a href="https://www.langchain.com/blog/building-a-harness-with-jev">LangChain：用 Jev 建 harness</a> · <a href="https://github.com/dzhng/jevgrep">jevgrep</a> · <a href="https://github.com/AbdelStark/awesome-typesafe-jev">awesome-typesafe-jev</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>Hugging Face 熱門開源模型（文字與多模態）</h3>
+    <div class="tags"><span class="tag">開源</span><span class="tag">可本機執行</span></div>
+    <div class="tablewrap"><table>
+      <tr><th>模型</th><th>類型</th><th>下載數</th><th>一句話</th></tr>
+      <tr><td><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B</a></td><td>圖文 → 文字</td><td class="num">702 萬</td><td>本月最多人用的開源主力模型</td></tr>
+      <tr><td><a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf">Ternary-Bonsai-2-27B</a></td><td>文字生成</td><td class="num">358 萬</td><td>三值（ternary）量化的 27B 模型，主打低記憶體</td></tr>
+      <tr><td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash">DeepSeek-V4.1-Flash</a></td><td>圖文 → 文字</td><td class="num">69 萬</td><td>DeepSeek 的快速版本，9/10 發布</td></tr>
+      <tr><td><a href="https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B">Xing4.0-29B-A4B</a></td><td>文字生成</td><td class="num">4.7 萬</td><td>MoE 架構，總共 29B，每次只啟動 4B，9/16 發布</td></tr>
+    </table></div>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>你的 arxiv-digest 目前用 Ollama 跑 qwen3.5:9b 做翻譯，在 CPU 上每篇要 45～65 秒。可以留意 Xing4.0-29B-A4B 這種 MoE 模型，每次只啟動 4B 參數，理論上比較快，但要等有 GGUF 版本才方便用 Ollama 跑。</p>
+    </div>
+    <div class="src">來源：<a href="https://huggingface.co/models?sort=trending">Hugging Face Trending</a>（9/30 擷取）</div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+</section>
+
+<!-- ============ 架構 ============ -->
+<section id="arch">
+  <h2>🏗️ 新架構與論文</h2>
+  <p class="sub">正在流行的設計模式，以及 HF Daily Papers 上投票數高的 Agent 相關論文</p>
+
+  <div class="card">
+    <h3>趨勢：從「一個 Agent」到「管理一整隊 Agent」</h3>
+    <div class="tags"><span class="tag hot">本週最明顯的趨勢</span><span class="tag">多 Agent 協作</span></div>
+    <p class="label">摘要</p>
+    <p>這週 GitHub 上有一整批專案都在做同一件事：<b>用一個管理層來協調多個 Coding Agent</b>。</p>
+    <ul>
+      <li><b>paperclip</b>（9.5 萬星，今天 +2,458）：把 Agent 當成公司員工來管理，有組織圖、預算和目標</li>
+      <li><b>openrig</b>（今天 +737）：用 YAML 定義 Agent 團隊，讓 Claude Code 和 Codex 在同一個系統裡一起工作</li>
+      <li><b>ZCode</b>（智譜推出，10 天 7.2k 星）、<b>unreal-agent</b>（非同步優先的 harness）</li>
+    </ul>
+    <p class="label">重點</p>
+    <ul>
+      <li>名詞整理：<b>harness</b> 是包住模型的執行框架，例如 Claude Code；<b>rig</b> 或 orchestrator 則是包住多個 harness 的管理層</li>
+      <li>大家開始在意的是預算上限、治理規則和成本追蹤，而不只是「能不能完成任務」</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>LangGraph 的 supervisor 模式就是同樣的概念。你的資料分析流程可以拆成「主管 Agent 分派、專家 Agent 執行」：一個負責撈資料、一個負責分析、一個負責寫報告。注意 openrig 目前<b>不支援原生 Windows</b>，要透過 WSL 才能用。</p>
+    </div>
+    <div class="src">來源：<a href="https://github.com/paperclipai/paperclip">paperclip</a> · <a href="https://github.com/mvschwarz/openrig">openrig</a> · <a href="https://github.com/zai-org/ZCode">ZCode</a> · <a href="https://github.com/unreallabsai/unreal-agent">unreal-agent</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>TraceDance：從真實執行紀錄自動產生 Agent 測試（ByteDance）</h3>
+    <div class="tags"><span class="tag">HF 60 票</span><span class="tag">Agent 評測</span><span class="tag">有程式碼</span></div>
+    <p class="label">摘要</p>
+    <p>Agent 有時候任務完成了，過程中卻做了不該做的事。固定的標準測驗集抓不到這種問題。TraceDance 讓你描述「不想看到的行為」，系統會自動從大量的執行紀錄（trace）中找出發生過的案例，做成專屬的測試集。評測時從紀錄中的「決策點」接著跑，看模型下一步會怎麼做，不需要標準答案，也不用重建整個環境。論文用了 25 萬筆紀錄，產生 107 套測試集。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>核心概念：<b>用正式環境的紀錄來產生回歸測試</b>，而不是只靠人工想測試案例</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>這和你「Agent 評測與監控」的興趣很對得上。LangGraph 搭配 LangSmith 或自己寫的 log 本來就能存 trace。你可以先從小地方做起：每次自動化出錯時，把那段 trace 存下來，改完 prompt 或流程後重跑一次，確認同樣的錯誤沒有再發生。這就是簡化版的 TraceDance。</p>
+    </div>
+    <div class="src">來源：<a href="https://huggingface.co/papers/2609.33295">HF Papers 2609.33295</a> · <a href="https://github.com/ZhishanQ/TraceDance">GitHub</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>其他值得一看的論文</h3>
+    <div class="tags"><span class="tag">快速瀏覽</span></div>
+    <ul>
+      <li><b>GAGAR</b>（小米 MiMo，HF 112 票）：訓練 Coding Agent 時，不只看「測試有沒有過」，還讓一個評分 Agent 比較同一批解法的品質，把獎勵多給乾淨、不多改的寫法。<a href="https://huggingface.co/papers/2609.32577">連結</a></li>
+      <li><b>Physical Coding</b>（HF 96 票）：把機器人的任務狀態寫成程式碼，讓 Coding Agent「寫程式、驗證、修正」的工作方式延伸到實體世界。<a href="https://huggingface.co/papers/2609.35432">連結</a></li>
+      <li><b>MassAlloc Attention</b>（BAAI，HF 65 票）：讓注意力機制自己決定要在哪裡花算力，跳過貢獻很小的計算。偏底層，看看就好。<a href="https://huggingface.co/papers/2609.32712">連結</a></li>
+    </ul>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+</section>
+
+<!-- ============ GitHub ============ -->
+<section id="github">
+  <h2>⭐ GitHub 爆紅專案</h2>
+  <p class="sub">依「今天新增的星數」排序，不是總星數</p>
+
+  <div class="card">
+    <h3>vectorize-io/hindsight：會「從經驗學習」的 Agent 記憶系統</h3>
+    <div class="tags"><span class="tag hot">今天 +2,575 ⭐</span><span class="tag">總共 4.3 萬</span><span class="tag">Python</span><span class="tag">MIT</span></div>
+    <p class="label">摘要</p>
+    <p>大部分 Agent 記憶系統做的是「記住對話內容」，Hindsight 的目標是讓 Agent「從經驗中學習」。它宣稱在長期記憶任務上勝過 RAG 和知識圖譜，也附上了論文和公開的評測結果。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>提供 Python 內嵌模式，不用架伺服器就能用；也能透過 LLM wrapper 只加 2 行程式接上</li>
+      <li>有 MCP server，也支援 Coding Agent 整合</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>如果你的自動化 Agent 每次執行都從零開始，例如每次都重新摸索同一份報表的格式，可以加上 Hindsight，讓它記住上次學到的東西，像是「這個欄位常有空值」「這個來源週一會延遲」。</p>
+    </div>
+    <div class="src">來源：<a href="https://github.com/vectorize-io/hindsight">GitHub</a> · <a href="https://arxiv.org/abs/2512.12818">論文</a> · <a href="https://hindsight.vectorize.io">文件</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>VectifyAI/PageIndex：不用向量資料庫的 RAG</h3>
+    <div class="tags"><span class="tag hot">今天 +835 ⭐</span><span class="tag">總共 3.8 萬</span><span class="tag">Python</span><span class="tag">MIT</span></div>
+    <p class="label">摘要</p>
+    <p>PageIndex 的主張是：向量檢索找的是「相似」的段落，但「相似」不等於「相關」。所以它不切塊、也不用向量資料庫，而是替文件建一個像目錄一樣的樹狀索引，讓 LLM 像人一樣「看目錄、翻到對的章節」。8 月推出的 SDK 可以完全在本機執行。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>適合長篇、結構清楚的專業文件，例如財報、法規、技術手冊</li>
+      <li>安裝：<code>pip install -U pageindex</code>，本機模式用你自己的 LLM API key 就能跑</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>做資料分析常要從很長的 PDF 報告裡找數字。拿一份你之前用傳統 RAG 效果不好的長文件，換成 PageIndex 試試看，比較回答的準確度。</p>
+    </div>
+    <div class="src">來源：<a href="https://github.com/VectifyAI/PageIndex">GitHub</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>dream-num/univer：給 AI Agent 用的 Office 元件</h3>
+    <div class="tags"><span class="tag hot">今天 +696 ⭐</span><span class="tag">總共 2.2 萬</span><span class="tag">TypeScript</span><span class="tag">Apache-2.0</span></div>
+    <p class="label">摘要</p>
+    <p>Univer 是開源的 Office SDK，包含試算表、文件、簡報、PDF 等元件，最近開始主打「AI Agent 的 Office 執行環境」。它有公式引擎，瀏覽器和 Node.js 都能用，文件也有繁體中文版。</p>
+    <p class="label">重點</p>
+    <ul>
+      <li>Agent 可以用程式直接操作試算表，不用去模擬 Excel 介面</li>
+    </ul>
+    <div class="use">
+      <p class="label">💡 你可以怎麼用</p>
+      <p>如果你的自動化最後要交出 Excel 報表，而且希望使用者能在網頁上直接看、直接改，可以用它來做報表的展示層。它是 TypeScript，Python 那端只要負責產生資料。</p>
+    </div>
+    <div class="src">來源：<a href="https://github.com/dream-num/univer">GitHub</a></div>
+    <div class="fb"><button>👎 沒興趣</button><button>👍 有用</button><button>⭐ 超有用</button></div>
+  </div>
+
+  <div class="card">
+    <h3>快速瀏覽：其他上榜專案</h3>
+    <div class="tablewrap"><table>
+      <tr><th>專案</th><th>星數</th><th>一句話</th></tr>
+      <tr><td><a href="https://github.com/debpalash/VoiceStudio">VoiceStudio</a></td><td class="num">今天 +4,758</td><td>完全本機執行的開源 ElevenLabs 替代品（聲音複製、配音）。不是 Agent，但今天總榜第一</td></tr>
+      <tr><td><a href="https://github.com/LockedinLabs-AI/agent-console">agent-console</a></td><td class="num">10 天 719</td><td>在本機統計 Claude Code 和 Codex 用了多少 token、花了多少錢，本身不傳任何資料出去</td></tr>
+      <tr><td><a href="https://github.com/microsoft/SkillOpt">microsoft/SkillOpt</a></td><td class="num">總共 1.8 萬</td><td>不改模型權重，而是用「訓練」的方式自動改進 Agent 的 Skill 描述</td></tr>
+      <tr><td><a href="https://github.com/bytedance/deer-flow">bytedance/deer-flow</a></td><td class="num">今天 +71</td><td>ByteDance 的長時間研究型 Agent，有沙盒、記憶和工具</td></tr>
+      <tr><td><a href="https://github.com/amitshekhariitbhu/ai-system-design">ai-system-design</a></td><td class="num">5 天 471</td><td>一步一步教你設計 LLM、RAG、Agent 系統的學習資源</td></tr>
+    </table></div>
+    <div class="src">來源：<a href="https://github.com/trending?since=daily">GitHub Trending</a> · GitHub Search API（近 14 天新建的 agent 相關專案）</div>
+  </div>
+</section>
+
+<!-- ============ 今天試一個 ============ -->
+<section id="try">
+  <h2>🛠️ 今天試一個（約 15 分鐘）</h2>
+  <div class="card">
+    <h3>用 PageIndex 問一份你手邊的長 PDF</h3>
+    <ol>
+      <li>建一個新的虛擬環境，然後執行 <code>pip install -U pageindex</code></li>
+      <li>照 <a href="https://github.com/VectifyAI/PageIndex">README 的 Quickstart</a> 用本機模式建立索引</li>
+      <li>問它 3 個你知道答案的問題，看它找對了幾個</li>
+    </ol>
+    <p>選它的原因：Python、跟資料分析直接相關、本機就能跑，而且今天就能知道結果。</p>
+  </div>
+</section>
+
+<!-- ============ Telegram ============ -->
+<section id="telegram">
+  <h2>📱 Telegram 推播預覽</h2>
+  <p class="sub">每天早上 9:00 你手機上會收到的內容</p>
+<div class="tg">☀️ AI Agent 早報｜9/30（三）
+
+📰 OpenAI 推出 Dots：在背景做事、會回報進度的 Agent
+🛡️ Nvidia 推出 Agent 安全平台，用晶片監控 Agent；Meta Muse 被報導無視使用者權限
+🧠 Sonnet 5.5 和 GPT-6.1 Sol 同價開打；Jev 是不產生文字、只做判斷的新模型
+🏗️ 趨勢：用一個管理層協調整隊 Coding Agent
+⭐ hindsight +2,575｜PageIndex +835｜univer +696
+
+🛠️ 今天試一個：用 PageIndex 問你的長 PDF（15 分鐘）
+
+👉 完整版（約 20 分鐘）：arku02.github.io/ai-daily/2026-09-30
+
+[👎 今天沒料] [👍 有用] [⭐ 很有收穫]</div>
+</section>
+
+<footer>
+  這是範例版，由 Claude 手動上網搜尋、整理而成。資料來源包含 Hacker News、Hugging Face（Trending 模型、Daily Papers）、GitHub Trending 和 Search API、各官方部落格與科技媒體。<br>
+  頁面上的回饋按鈕只是示意，正式版會在 Telegram 按，並記錄起來用於調整排序。
+</footer>
+
+</div>
+<script>
+document.querySelectorAll('.fb').forEach(g=>{
+  g.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  }));
+});
+</script>
+</body>
+</html>

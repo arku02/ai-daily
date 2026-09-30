@@ -1,0 +1,10 @@
+schema: integrated
+context: |
+  Follow the local workflow guide. Distinguish verified facts, assumptions, and proposals.
+  Use one tasks.md per change. Never claim tests passed without running them.
+  BMAD and Spec Kit methods are adapted here; their native workflows are not installed.
+rules:
+  specs:
+    - Use requirement IDs and concrete WHEN/THEN scenarios.
+    - Changes to existing requirements must preserve their full updated content.
+

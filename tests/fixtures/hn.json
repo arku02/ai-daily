@@ -1,0 +1,49 @@
+{
+ "hits": [
+  {
+   "objectID": "49896604",
+   "title": "Dots: Always-on agents",
+   "url": "https://openai.com/index/introducing-dots/",
+   "points": 608,
+   "num_comments": 472,
+   "created_at_i": 1790701677,
+   "author": "alvis"
+  },
+  {
+   "objectID": "49879883",
+   "title": "Nvidia wants to put a watchdog chip next to every AI agent",
+   "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
+   "points": 225,
+   "num_comments": 296,
+   "created_at_i": 1790610396,
+   "author": "jonbaer"
+  },
+  {
+   "objectID": "49900001",
+   "title": "Ask HN: How do you test your agents?",
+   "url": null,
+   "points": 45,
+   "num_comments": 60,
+   "created_at_i": 1790701677,
+   "author": "x"
+  },
+  {
+   "objectID": "49900002",
+   "title": "Low score story",
+   "url": "https://example.com/low",
+   "points": 12,
+   "num_comments": 1,
+   "created_at_i": 1790701677,
+   "author": "y"
+  },
+  {
+   "objectID": "49900003",
+   "title": "OpenShell discussion",
+   "url": "http://www.github.com/NVIDIA/OpenShell/?utm_source=hn",
+   "points": 88,
+   "num_comments": 20,
+   "created_at_i": 1790701677,
+   "author": "z"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+
+# Public evidence hashes refer to exact saved bytes, independent of core.autocrlf.
+.workflow/evidence/** -text
+.workflow/receipts/** -text

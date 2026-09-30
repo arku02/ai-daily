@@ -1,0 +1,58 @@
+# AI 早報的資料來源設定。每個區段可用 enabled = false 關閉。
+# 修改後執行 python -m ai_daily fetch 看結果。
+
+[github_trending]
+enabled = true
+# GitHub Trending 沒有官方 API，這裡解析網頁；頁面改版時此來源會顯示 error
+urls = [
+  "https://github.com/trending?since=daily",
+  "https://github.com/trending/python?since=daily",
+]
+
+[github_search]
+enabled = true
+# 找最近 N 天內新建、依星數排序的 repo。未設定 GITHUB_TOKEN 時每分鐘限 10 次查詢
+created_within_days = 14
+per_page = 30
+queries = ["agent", "mcp", "llm"]
+
+[hf_models]
+enabled = true
+limit = 60
+# 只保留這些類型的模型；留空陣列代表全部保留
+pipelines = [
+  "text-generation",
+  "image-text-to-text",
+  "any-to-any",
+  "text-ranking",
+  "feature-extraction",
+]
+
+[hf_papers]
+enabled = true
+# 台北早上執行時，美國當天還沒結束，所以預設抓前一天
+days_back = 1
+min_upvotes = 10
+
+[hn]
+enabled = true
+window_hours = 36
+min_points = 30
+per_keyword = 30
+keywords = ["agent", "agentic", "LLM", "MCP", "Claude", "OpenAI", "Gemini", "model"]
+
+[rss]
+enabled = true
+window_hours = 36
+# 2026-09-30 實測可用；Anthropic 沒有提供 RSS，VentureBeat 會回 429，故未列入
+feeds = [
+  { name = "OpenAI News", url = "https://openai.com/news/rss.xml" },
+  { name = "Google DeepMind", url = "https://deepmind.google/blog/rss.xml" },
+  { name = "Google AI Blog", url = "https://blog.google/technology/ai/rss/" },
+  { name = "Hugging Face Blog", url = "https://huggingface.co/blog/feed.xml" },
+  { name = "LangChain Blog", url = "https://www.langchain.com/blog/rss.xml" },
+  { name = "GitHub Changelog", url = "https://github.blog/changelog/feed/" },
+  { name = "Simon Willison", url = "https://simonwillison.net/atom/everything/" },
+  { name = "TechCrunch AI", url = "https://techcrunch.com/category/artificial-intelligence/feed/" },
+  { name = "The Verge AI", url = "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" },
+]

@@ -1,0 +1,106 @@
+[
+ {
+  "paper": {
+   "id": "2609.32577",
+   "publishedAt": "2026-09-26T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-09-29T00:00:00.000Z",
+   "title": "Groupwise Agentic Grading and Advantage Redistribution for Code Agent RL",
+   "submittedOnDailyBy": {
+    "_id": "6470390f850a938d6c571cd8",
+    "avatarUrl": "/avatars/8d6eab491315e1938b2c2a52b44889f8.svg",
+    "isPro": false,
+    "fullname": "Jinhao Dong",
+    "user": "whatseeker",
+    "type": "user",
+    "name": "whatseeker"
+   },
+   "summary": "Reinforcement learning (RL) for code agents often uses executable tests to provide binary rewards. With these rewards, Group Relative Policy Optimization (GRPO) assigns identical advantages to test-passing trajectories within each rollout group, overlooking differences in implementation quality and adherence to task requirements. This leaves the policy without a learning signal that favors clean, targeted implementations over those containing unnecessary or out-of-scope changes. We introduce GAGAR, a framework for quality-aware credit redistribution in code agent RL. Built on dynamic sampling that retains groups containing both passing and failing trajectories, GAGAR places all trajectories from each group in a shared workspace, where an SFT-trained agentic grader jointly inspects them and ranks the test-passing candidates. Based on this ranking, we downweight lower-ranked trajectories and proportionally rescale the advantages of all test-passing trajectories to restore their original sum. This sum-preserving redistribution retains the relative weights established by quality-based downweighting while shifting credit toward higher-quality implementations. We evaluate GAGAR at industrial scale using pre-RL SFT checkpoints of MiMo-V2.6-Flash (310B total parameters) and MiMo-V2.6-Pro (1.02T total parameters). Controlled code-only Flash experiments show improved code agent performance, reduced trajectory-length growth, and more stable training. We further apply GAGAR in large-scale mixed-task RL with both Flash and Pro. Our results support combining test-based verification with groupwise agentic grading to improve the quality and stability of code agent RL.",
+   "upvotes": 112,
+   "discussionId": "6abb7aa39e8c2556a1025c44",
+   "organization": {
+    "_id": "680cb4c37f289defb2210940",
+    "name": "XiaomiMiMo",
+    "fullname": "Xiaomi MiMo",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/680cb7d1233834890a64acee/5w_4aLfF-7MAyaIPOV498.jpeg"
+   }
+  },
+  "publishedAt": "2026-09-25T20:00:00.000Z",
+  "title": "Groupwise Agentic Grading and Advantage Redistribution for Code Agent RL",
+  "summary": "Reinforcement learning (RL) for code agents often uses executable tests to provide binary rewards. With these rewards, Group Relative Policy Optimization (GRPO) assigns identical advantages to test-passing trajectories within each rollout group, overlooking differences in implementation quality and adherence to task requirements. This leaves the policy without a learning signal that favors clean, targeted implementations over those containing unnecessary or out-of-scope changes. We introduce GAGAR, a framework for quality-aware credit redistribution in code agent RL. Built on dynamic sampling that retains groups containing both passing and failing trajectories, GAGAR places all trajectories from each group in a shared workspace, where an SFT-trained agentic grader jointly inspects them and ranks the test-passing candidates. Based on this ranking, we downweight lower-ranked trajectories and proportionally rescale the advantages of all test-passing trajectories to restore their original sum. This sum-preserving redistribution retains the relative weights established by quality-based downweighting while shifting credit toward higher-quality implementations. We evaluate GAGAR at industrial scale using pre-RL SFT checkpoints of MiMo-V2.6-Flash (310B total parameters) and MiMo-V2.6-Pro (1.02T total parameters). Controlled code-only Flash experiments show improved code agent performance, reduced trajectory-length growth, and more stable training. We further apply GAGAR in large-scale mixed-task RL with both Flash and Pro. Our results support combining test-based verification with groupwise agentic grading to improve the quality and stability of code agent RL.",
+  "numComments": 2,
+  "submittedBy": {
+   "_id": "6470390f850a938d6c571cd8",
+   "avatarUrl": "/avatars/8d6eab491315e1938b2c2a52b44889f8.svg",
+   "fullname": "Jinhao Dong",
+   "name": "whatseeker",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 2,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "680cb4c37f289defb2210940",
+   "name": "XiaomiMiMo",
+   "fullname": "Xiaomi MiMo",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/680cb7d1233834890a64acee/5w_4aLfF-7MAyaIPOV498.jpeg"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2609.33295",
+   "publishedAt": "2026-09-27T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-09-29T00:00:00.000Z",
+   "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+   "submittedOnDailyBy": {
+    "_id": "629c6ee73a3221bb210afc2d",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/629c6ee73a3221bb210afc2d/Mg-VymVvHQn_pDrTgks0s.jpeg",
+    "isPro": false,
+    "fullname": "Dehai Min",
+    "user": "ZhishanQ",
+    "type": "user",
+    "name": "ZhishanQ"
+   },
+   "summary": "An agent can complete a task while exhibiting undesirable behavior during execution. Developers need tests for the specific behaviors encountered in deployment, beyond fixed benchmark suites. We present TraceDance, an agent system that constructs targeted benchmarks from deployment traces for user-specified undesirable behaviors. For efficient construction, Anchor-and-Confirm combines programmable retrieval with candidate-level confirmation by a Flash large language model (LLM), while the Anchor Synthesis Loop generates and revises specifications for custom behaviors. The benchmarks use decision-point continuation to evaluate an LLM's next turn at a recorded decision point with a behavior-specific rubric, without a reference answer or environment replay. Experiments in coding and general tool use draw on 252,557 sessions and produce 107 benchmarks with 4,125 instances, fulfilling 95.3% of build-target requests. Both human annotators confirm the requested behavior in 84% of sampled instances, and the automated grader's agreement with human pass/fail judgments is comparable to that between the annotators. Nine frontier LLMs achieve a mean pass rate of only 26.7%, showing that they still struggle to respond appropriately at the evaluated decision points. Analysis across behavior-specific benchmarks further reveals weaknesses in how current LLMs behave as agents. By turning deployment problems into targeted benchmarks, TraceDance could serve as a key component of the recursive self-improvement (RSI) loop.",
+   "upvotes": 60,
+   "discussionId": "6abb27819e8c2556a10256fc",
+   "projectPage": "https://zhishanq.github.io/TraceDance/",
+   "githubRepo": "https://github.com/ZhishanQ/TraceDance",
+   "githubRepoAddedBy": "user",
+   "githubStars": 6,
+   "organization": {
+    "_id": "653b817d32c97d0655575872",
+    "name": "ByteDance",
+    "fullname": "ByteDance",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/6535c9e88bde2fae19b6fb25/0clr54wj5Ly-RkYU9OXPp.png"
+   }
+  },
+  "publishedAt": "2026-09-26T20:00:00.000Z",
+  "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+  "summary": "An agent can complete a task while exhibiting undesirable behavior during execution. Developers need tests for the specific behaviors encountered in deployment, beyond fixed benchmark suites. We present TraceDance, an agent system that constructs targeted benchmarks from deployment traces for user-specified undesirable behaviors. For efficient construction, Anchor-and-Confirm combines programmable retrieval with candidate-level confirmation by a Flash large language model (LLM), while the Anchor Synthesis Loop generates and revises specifications for custom behaviors. The benchmarks use decision-point continuation to evaluate an LLM's next turn at a recorded decision point with a behavior-specific rubric, without a reference answer or environment replay. Experiments in coding and general tool use draw on 252,557 sessions and produce 107 benchmarks with 4,125 instances, fulfilling 95.3% of build-target requests. Both human annotators confirm the requested behavior in 84% of sampled instances, and the automated grader's agreement with human pass/fail judgments is comparable to that between the annotators. Nine frontier LLMs achieve a mean pass rate of only 26.7%, showing that they still struggle to respond appropriately at the evaluated decision points. Analysis across behavior-specific benchmarks further reveals weaknesses in how current LLMs behave as agents. By turning deployment problems into targeted benchmarks, TraceDance could serve as a key component of the recursive self-improvement (RSI) loop.",
+  "numComments": 2,
+  "submittedBy": {
+   "_id": "629c6ee73a3221bb210afc2d",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/629c6ee73a3221bb210afc2d/Mg-VymVvHQn_pDrTgks0s.jpeg",
+   "fullname": "Dehai Min",
+   "name": "ZhishanQ",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 6,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "653b817d32c97d0655575872",
+   "name": "ByteDance",
+   "fullname": "ByteDance",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/6535c9e88bde2fae19b6fb25/0clr54wj5Ly-RkYU9OXPp.png"
+  },
+  "isAuthorParticipating": false
+ }
+]
