@@ -1,10 +1,10 @@
 {
  "date": "2026-09-30",
- "fetched_at": "2026-09-30T10:06:16Z",
+ "fetched_at": "2026-09-30T13:09:44Z",
  "sources": {
   "github_trending": {
    "status": "ok",
-   "count": 23,
+   "count": 32,
    "error": null
   },
   "github_search": {
@@ -14,7 +14,7 @@
   },
   "hf_models": {
    "status": "ok",
-   "count": 30,
+   "count": 29,
    "error": null
   },
   "hf_papers": {
@@ -24,12 +24,12 @@
   },
   "hn": {
    "status": "ok",
-   "count": 29,
+   "count": 27,
    "error": null
   },
   "rss": {
    "status": "ok",
-   "count": 43,
+   "count": 40,
    "error": null
   }
  },
@@ -43,46 +43,12 @@
    "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
    "published_at": null,
    "metrics": {
-    "stars": 49469,
-    "stars_today": 4758,
+    "stars": 49786,
+    "stars_today": 3481,
     "stars_delta": null
    },
    "extra": {
     "language": "Python"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "vectorize-io/hindsight",
-   "title": "vectorize-io/hindsight",
-   "url": "https://github.com/vectorize-io/hindsight",
-   "summary": "Hindsight: Agent Memory That Learns",
-   "published_at": null,
-   "metrics": {
-    "stars": 43422,
-    "stars_today": 2575,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "paperclipai/paperclip",
-   "title": "paperclipai/paperclip",
-   "url": "https://github.com/paperclipai/paperclip",
-   "summary": "The open-source app everyone uses to manage agents at work",
-   "published_at": null,
-   "metrics": {
-    "stars": 94930,
-    "stars_today": 2458,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "TypeScript"
    },
    "also_in": []
   },
@@ -94,29 +60,12 @@
    "summary": "OpenShell is the safe, private runtime for autonomous AI agents.",
    "published_at": null,
    "metrics": {
-    "stars": 11093,
-    "stars_today": 990,
+    "stars": 11363,
+    "stars_today": 1280,
     "stars_delta": null
    },
    "extra": {
     "language": "Rust"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "VectifyAI/PageIndex",
-   "title": "VectifyAI/PageIndex",
-   "url": "https://github.com/VectifyAI/PageIndex",
-   "summary": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
-   "published_at": null,
-   "metrics": {
-    "stars": 37759,
-    "stars_today": 835,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python"
    },
    "also_in": []
   },
@@ -128,110 +77,8 @@
    "summary": "Learn it. Build it. Ship it for others.",
    "published_at": null,
    "metrics": {
-    "stars": 61897,
-    "stars_today": 786,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "mvschwarz/openrig",
-   "title": "mvschwarz/openrig",
-   "url": "https://github.com/mvschwarz/openrig",
-   "summary": "Multi-agent harness that runs Claude Code and Codex together as one system",
-   "published_at": null,
-   "metrics": {
-    "stars": 2639,
-    "stars_today": 737,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "TypeScript"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "dream-num/univer",
-   "title": "dream-num/univer",
-   "url": "https://github.com/dream-num/univer",
-   "summary": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
-   "published_at": null,
-   "metrics": {
-    "stars": 22049,
-    "stars_today": 696,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "TypeScript"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "cs341-illinois/coursebook",
-   "title": "cs341-illinois/coursebook",
-   "url": "https://github.com/cs341-illinois/coursebook",
-   "summary": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
-   "published_at": null,
-   "metrics": {
-    "stars": 3267,
-    "stars_today": 572,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "TeX"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "oblien/openship",
-   "title": "oblien/openship",
-   "url": "https://github.com/oblien/openship",
-   "summary": "Self-hosted deployment platform",
-   "published_at": null,
-   "metrics": {
-    "stars": 14096,
-    "stars_today": 437,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "TypeScript"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "harry0703/MoneyPrinterTurbo",
-   "title": "harry0703/MoneyPrinterTurbo",
-   "url": "https://github.com/harry0703/MoneyPrinterTurbo",
-   "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-   "published_at": null,
-   "metrics": {
-    "stars": 127217,
-    "stars_today": 338,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "TencentCloud/Octop",
-   "title": "TencentCloud/Octop",
-   "url": "https://github.com/TencentCloud/Octop",
-   "summary": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
-   "published_at": null,
-   "metrics": {
-    "stars": 5968,
-    "stars_today": 278,
+    "stars": 61994,
+    "stars_today": 1203,
     "stars_delta": null
    },
    "extra": {
@@ -247,8 +94,8 @@
    "summary": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
    "published_at": null,
    "metrics": {
-    "stars": 22703,
-    "stars_today": 232,
+    "stars": 22821,
+    "stars_today": 1133,
     "stars_delta": null
    },
    "extra": {
@@ -258,14 +105,31 @@
   },
   {
    "source": "github_trending",
-   "id": "MadsLorentzen/ai-job-search",
-   "title": "MadsLorentzen/ai-job-search",
-   "url": "https://github.com/MadsLorentzen/ai-job-search",
-   "summary": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+   "id": "byoungd/up",
+   "title": "byoungd/up",
+   "url": "https://github.com/byoungd/up",
+   "summary": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
    "published_at": null,
    "metrics": {
-    "stars": 44535,
-    "stars_today": 119,
+    "stars": 66142,
+    "stars_today": 1102,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "VectifyAI/PageIndex",
+   "title": "VectifyAI/PageIndex",
+   "url": "https://github.com/VectifyAI/PageIndex",
+   "summary": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+   "published_at": null,
+   "metrics": {
+    "stars": 37833,
+    "stars_today": 1095,
     "stars_delta": null
    },
    "extra": {
@@ -275,31 +139,65 @@
   },
   {
    "source": "github_trending",
-   "id": "averygan/reclip",
-   "title": "averygan/reclip",
-   "url": "https://github.com/averygan/reclip",
-   "summary": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
+   "id": "mattpocock/skills",
+   "title": "mattpocock/skills",
+   "url": "https://github.com/mattpocock/skills",
+   "summary": "Skills for Real Engineers. Straight from my .agents directory.",
    "published_at": null,
    "metrics": {
-    "stars": 10477,
-    "stars_today": 113,
+    "stars": 272592,
+    "stars_today": 736,
     "stars_delta": null
    },
    "extra": {
-    "language": "HTML"
+    "language": "Shell"
    },
    "also_in": []
   },
   {
    "source": "github_trending",
-   "id": "mem0ai/mem0",
-   "title": "mem0ai/mem0",
-   "url": "https://github.com/mem0ai/mem0",
-   "summary": "The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
+   "id": "DietrichGebert/ponytail",
+   "title": "DietrichGebert/ponytail",
+   "url": "https://github.com/DietrichGebert/ponytail",
+   "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
    "published_at": null,
    "metrics": {
-    "stars": 66356,
-    "stars_today": 101,
+    "stars": 148646,
+    "stars_today": 675,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "mvschwarz/openrig",
+   "title": "mvschwarz/openrig",
+   "url": "https://github.com/mvschwarz/openrig",
+   "summary": "Multi-agent harness that runs Claude Code and Codex together as one system",
+   "published_at": null,
+   "metrics": {
+    "stars": 2721,
+    "stars_today": 622,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "HunxByts/GhostTrack",
+   "title": "HunxByts/GhostTrack",
+   "url": "https://github.com/HunxByts/GhostTrack",
+   "summary": "Useful tool to track location or mobile number",
+   "published_at": null,
+   "metrics": {
+    "stars": 15789,
+    "stars_today": 579,
     "stars_delta": null
    },
    "extra": {
@@ -309,14 +207,31 @@
   },
   {
    "source": "github_trending",
-   "id": "microsoft/SkillOpt",
-   "title": "microsoft/SkillOpt",
-   "url": "https://github.com/microsoft/SkillOpt",
-   "summary": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
+   "id": "NawfalMotii79/PLFM_RADAR",
+   "title": "NawfalMotii79/PLFM_RADAR",
+   "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+   "summary": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
    "published_at": null,
    "metrics": {
-    "stars": 17890,
-    "stars_today": 85,
+    "stars": 26302,
+    "stars_today": 466,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "PLSQL"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "harry0703/MoneyPrinterTurbo",
+   "title": "harry0703/MoneyPrinterTurbo",
+   "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+   "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+   "published_at": null,
+   "metrics": {
+    "stars": 127273,
+    "stars_today": 338,
     "stars_delta": null
    },
    "extra": {
@@ -326,14 +241,150 @@
   },
   {
    "source": "github_trending",
-   "id": "willfaust/Madeira",
-   "title": "willfaust/Madeira",
-   "url": "https://github.com/willfaust/Madeira",
-   "summary": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+   "id": "heygen-com/hyperframes",
+   "title": "heygen-com/hyperframes",
+   "url": "https://github.com/heygen-com/hyperframes",
+   "summary": "Write HTML. Render video. Built for agents.",
    "published_at": null,
    "metrics": {
-    "stars": 1165,
-    "stars_today": 81,
+    "stars": 54429,
+    "stars_today": 324,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "TencentCloud/Octop",
+   "title": "TencentCloud/Octop",
+   "url": "https://github.com/TencentCloud/Octop",
+   "summary": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+   "published_at": null,
+   "metrics": {
+    "stars": 5992,
+    "stars_today": 278,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "ifixai-ai/iFixAi",
+   "title": "ifixai-ai/iFixAi",
+   "url": "https://github.com/ifixai-ai/iFixAi",
+   "summary": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+   "published_at": null,
+   "metrics": {
+    "stars": 16753,
+    "stars_today": 250,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "qbittorrent/search-plugins",
+   "title": "qbittorrent/search-plugins",
+   "url": "https://github.com/qbittorrent/search-plugins",
+   "summary": "Search plugins for qBittorrent search feature",
+   "published_at": null,
+   "metrics": {
+    "stars": 7033,
+    "stars_today": 174,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "github/spec-kit",
+   "title": "github/spec-kit",
+   "url": "https://github.com/github/spec-kit",
+   "summary": "💫 Toolkit to help you get started with SDD or any other process!",
+   "published_at": null,
+   "metrics": {
+    "stars": 139506,
+    "stars_today": 170,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "alirezarezvani/claude-skills",
+   "title": "alirezarezvani/claude-skills",
+   "url": "https://github.com/alirezarezvani/claude-skills",
+   "summary": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
+   "published_at": null,
+   "metrics": {
+    "stars": 26978,
+    "stars_today": 154,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "openclaw/openclaw",
+   "title": "openclaw/openclaw",
+   "url": "https://github.com/openclaw/openclaw",
+   "summary": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
+   "published_at": null,
+   "metrics": {
+    "stars": 390843,
+    "stars_today": 136,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "ComposioHQ/awesome-claude-skills",
+   "title": "ComposioHQ/awesome-claude-skills",
+   "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+   "summary": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+   "published_at": null,
+   "metrics": {
+    "stars": 75965,
+    "stars_today": 118,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "colbymchenry/codegraph",
+   "title": "colbymchenry/codegraph",
+   "url": "https://github.com/colbymchenry/codegraph",
+   "summary": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+   "published_at": null,
+   "metrics": {
+    "stars": 72455,
+    "stars_today": 116,
     "stars_delta": null
    },
    "extra": {
@@ -343,14 +394,31 @@
   },
   {
    "source": "github_trending",
-   "id": "bytedance/deer-flow",
-   "title": "bytedance/deer-flow",
-   "url": "https://github.com/bytedance/deer-flow",
-   "summary": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+   "id": "mksglu/context-mode",
+   "title": "mksglu/context-mode",
+   "url": "https://github.com/mksglu/context-mode",
+   "summary": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
    "published_at": null,
    "metrics": {
-    "stars": 83256,
-    "stars_today": 71,
+    "stars": 24309,
+    "stars_today": 88,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "AgriciDaniel/claude-seo",
+   "title": "AgriciDaniel/claude-seo",
+   "url": "https://github.com/AgriciDaniel/claude-seo",
+   "summary": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions, including DataForSEO, Firecrawl, Ahrefs and Matomo.",
+   "published_at": null,
+   "metrics": {
+    "stars": 18001,
+    "stars_today": 72,
     "stars_delta": null
    },
    "extra": {
@@ -360,13 +428,64 @@
   },
   {
    "source": "github_trending",
-   "id": "harvard-edge/cs249r_book",
-   "title": "harvard-edge/cs249r_book",
-   "url": "https://github.com/harvard-edge/cs249r_book",
-   "summary": "Machine Learning Systems: Foundations, Scaling, Agentic AI, and Physical AI (Vols I–IV) • Harvard CS249r | https://mlsysbook.ai",
+   "id": "LibreTranslate/LibreTranslate",
+   "title": "LibreTranslate/LibreTranslate",
+   "url": "https://github.com/LibreTranslate/LibreTranslate",
+   "summary": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
    "published_at": null,
    "metrics": {
-    "stars": 28732,
+    "stars": 16950,
+    "stars_today": 49,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "modelcontextprotocol/servers",
+   "title": "modelcontextprotocol/servers",
+   "url": "https://github.com/modelcontextprotocol/servers",
+   "summary": "Model Context Protocol Servers",
+   "published_at": null,
+   "metrics": {
+    "stars": 90712,
+    "stars_today": 48,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "VectifyAI/OpenKB",
+   "title": "VectifyAI/OpenKB",
+   "url": "https://github.com/VectifyAI/OpenKB",
+   "summary": "OpenKB: Open LLM Knowledge Base",
+   "published_at": null,
+   "metrics": {
+    "stars": 4669,
+    "stars_today": 46,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "bmad-code-org/BMAD-METHOD",
+   "title": "bmad-code-org/BMAD-METHOD",
+   "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+   "summary": "Breakthrough Method for Agile Ai Driven Development",
+   "published_at": null,
+   "metrics": {
+    "stars": 53659,
     "stars_today": 45,
     "stars_delta": null
    },
@@ -377,31 +496,14 @@
   },
   {
    "source": "github_trending",
-   "id": "rakyll/hey",
-   "title": "rakyll/hey",
-   "url": "https://github.com/rakyll/hey",
-   "summary": "HTTP load generator, ApacheBench (ab) replacement",
+   "id": "smicallef/spiderfoot",
+   "title": "smicallef/spiderfoot",
+   "url": "https://github.com/smicallef/spiderfoot",
+   "summary": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
    "published_at": null,
    "metrics": {
-    "stars": 20574,
-    "stars_today": 34,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Go"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "Q00/ouroboros",
-   "title": "Q00/ouroboros",
-   "url": "https://github.com/Q00/ouroboros",
-   "summary": "Agent OS: the agent gets smarter on its own. We just hold the line: Interview-gated, staged evaluation, budgeted evolution loop. MCP server, 14 runtimes: Claude Code, Codex CLI, Gemini CLI, OpenCode, Copilot, Kiro and more.",
-   "published_at": null,
-   "metrics": {
-    "stars": 6151,
-    "stars_today": 12,
+    "stars": 22687,
+    "stars_today": 33,
     "stars_delta": null
    },
    "extra": {
@@ -411,18 +513,69 @@
   },
   {
    "source": "github_trending",
-   "id": "SemiAnalysisAI/InferenceX",
-   "title": "SemiAnalysisAI/InferenceX",
-   "url": "https://github.com/SemiAnalysisAI/InferenceX",
-   "summary": "Open Source Inference Research Platform Standard / 开源推理研究平台",
+   "id": "pydantic/pydantic-ai",
+   "title": "pydantic/pydantic-ai",
+   "url": "https://github.com/pydantic/pydantic-ai",
+   "summary": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
    "published_at": null,
    "metrics": {
-    "stars": 1790,
-    "stars_today": 11,
+    "stars": 20282,
+    "stars_today": 24,
     "stars_delta": null
    },
    "extra": {
     "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "Mafifrizi/ARES",
+   "title": "Mafifrizi/ARES",
+   "url": "https://github.com/Mafifrizi/ARES",
+   "summary": "ARES - authorized red-team engagement automation with dashboard, campaign scope, module orchestration, OPSEC controls, encrypted vault, and reporting.",
+   "published_at": null,
+   "metrics": {
+    "stars": 553,
+    "stars_today": 23,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "aws/agent-toolkit-for-aws",
+   "title": "aws/agent-toolkit-for-aws",
+   "url": "https://github.com/aws/agent-toolkit-for-aws",
+   "summary": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+   "published_at": null,
+   "metrics": {
+    "stars": 2758,
+    "stars_today": 10,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "firebase/firebase-ios-sdk",
+   "title": "firebase/firebase-ios-sdk",
+   "url": "https://github.com/firebase/firebase-ios-sdk",
+   "summary": "Firebase SDK for Apple App Development",
+   "published_at": null,
+   "metrics": {
+    "stars": 6709,
+    "stars_today": 4,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "C++"
    },
    "also_in": []
   },
@@ -434,8 +587,8 @@
    "summary": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
    "published_at": "2026-09-20T12:01:16Z",
    "metrics": {
-    "stars": 7222,
-    "forks": 2192,
+    "stars": 7233,
+    "forks": 2194,
     "stars_delta": null
    },
    "extra": {
@@ -453,7 +606,7 @@
    "summary": "装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
    "published_at": "2026-09-21T11:12:53Z",
    "metrics": {
-    "stars": 7162,
+    "stars": 7169,
     "forks": 1212,
     "stars_delta": null
    },
@@ -481,8 +634,8 @@
    "summary": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
    "published_at": "2026-09-28T23:40:05Z",
    "metrics": {
-    "stars": 3798,
-    "forks": 1089,
+    "stars": 3878,
+    "forks": 1112,
     "stars_delta": null
    },
    "extra": {
@@ -509,8 +662,8 @@
    "summary": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
    "published_at": "2026-09-23T16:22:35Z",
    "metrics": {
-    "stars": 3419,
-    "forks": 200,
+    "stars": 3517,
+    "forks": 205,
     "stars_delta": null
    },
    "extra": {
@@ -554,8 +707,8 @@
    "summary": "A curated list of public projects, integrations, and discussions built on Jev — TypeSafe AI's System One model for typed decisions.",
    "published_at": "2026-09-17T14:23:21Z",
    "metrics": {
-    "stars": 2005,
-    "forks": 299,
+    "stars": 2010,
+    "forks": 300,
     "stars_delta": null
    },
    "extra": {
@@ -578,8 +731,8 @@
    "summary": "Find code by asking what it does. A CLI for coding agents that uses Jev to discover relevant files and source context.",
    "published_at": "2026-09-26T04:06:56Z",
    "metrics": {
-    "stars": 1837,
-    "forks": 119,
+    "stars": 1857,
+    "forks": 123,
     "stars_delta": null
    },
    "extra": {
@@ -604,13 +757,53 @@
   },
   {
    "source": "github_search",
+   "id": "feder-cr/dots",
+   "title": "feder-cr/dots",
+   "url": "https://github.com/feder-cr/dots",
+   "summary": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.",
+   "published_at": "2026-09-29T23:06:00Z",
+   "metrics": {
+    "stars": 1160,
+    "forks": 151,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "ai-agents",
+     "ai-browser",
+     "anti-detect-browser",
+     "browser-agent",
+     "browser-automation",
+     "chatgpt",
+     "dotfiles",
+     "dots",
+     "firefox",
+     "llm-agent",
+     "mcp",
+     "open-source-alternative",
+     "openai",
+     "openai-dots",
+     "openrouter",
+     "playwright",
+     "stealth-browser",
+     "web-agent",
+     "web-automation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "mikehasa/golive-skill",
    "title": "mikehasa/golive-skill",
    "url": "https://github.com/mikehasa/golive-skill",
    "summary": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, backend or telemetry.",
    "published_at": "2026-09-23T13:37:26Z",
    "metrics": {
-    "stars": 1130,
+    "stars": 1137,
     "forks": 84,
     "stars_delta": null
    },
@@ -650,8 +843,8 @@
    "summary": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. A Claude Agent Skill for product launch films and feature demos.",
    "published_at": "2026-09-26T05:35:17Z",
    "metrics": {
-    "stars": 1017,
-    "forks": 64,
+    "stars": 1032,
+    "forks": 65,
     "stars_delta": null
    },
    "extra": {
@@ -677,7 +870,7 @@
    "summary": "Turn any LLM into a Jev-style decision model: typed decisions, real probabilities, no training. (continue updating, welcome any issue and PR request)",
    "published_at": "2026-09-21T05:55:40Z",
    "metrics": {
-    "stars": 978,
+    "stars": 980,
     "forks": 126,
     "stars_delta": null
    },
@@ -705,8 +898,8 @@
    "summary": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
    "published_at": "2026-09-26T08:23:34Z",
    "metrics": {
-    "stars": 945,
-    "forks": 47,
+    "stars": 973,
+    "forks": 48,
     "stars_delta": null
    },
    "extra": {
@@ -733,7 +926,7 @@
    "summary": "微信聊天记录一键转发到 AI Agent 与 Obsidian 的原生 macOS 工具",
    "published_at": "2026-09-21T02:54:51Z",
    "metrics": {
-    "stars": 927,
+    "stars": 930,
     "forks": 328,
     "stars_delta": null
    },
@@ -760,7 +953,7 @@
    "summary": "Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents (also Claude Code and Codex)",
    "published_at": "2026-09-18T20:01:29Z",
    "metrics": {
-    "stars": 918,
+    "stars": 917,
     "forks": 88,
     "stars_delta": null
    },
@@ -779,7 +972,7 @@
    "summary": "TypeLLM: LLMs with type-safe generation",
    "published_at": "2026-09-17T12:41:27Z",
    "metrics": {
-    "stars": 883,
+    "stars": 886,
     "forks": 58,
     "stars_delta": null
    },
@@ -791,46 +984,6 @@
      "jev",
      "llms",
      "types"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "feder-cr/dots",
-   "title": "feder-cr/dots",
-   "url": "https://github.com/feder-cr/dots",
-   "summary": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.",
-   "published_at": "2026-09-29T23:06:00Z",
-   "metrics": {
-    "stars": 788,
-    "forks": 78,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": "MIT",
-    "topics": [
-     "ai-agent",
-     "ai-agents",
-     "ai-browser",
-     "anti-detect-browser",
-     "browser-agent",
-     "browser-automation",
-     "chatgpt",
-     "dotfiles",
-     "dots",
-     "firefox",
-     "llm-agent",
-     "mcp",
-     "open-source-alternative",
-     "openai",
-     "openai-dots",
-     "openrouter",
-     "playwright",
-     "stealth-browser",
-     "web-agent",
-     "web-automation"
     ]
    },
    "also_in": []
@@ -856,13 +1009,45 @@
   },
   {
    "source": "github_search",
+   "id": "LockedinLabs-AI/agent-console",
+   "title": "LockedinLabs-AI/agent-console",
+   "url": "https://github.com/LockedinLabs-AI/agent-console",
+   "summary": "Local-first observability for AI coding agents. Every Claude Code and Codex session's tokens, cache, models and cost, on this machine and every machine you connect through a self-hosted team hub. Presenting mode, policy hooks, Apple-signed and notarized macOS builds, attested releases. MIT.",
+   "published_at": "2026-09-20T17:55:58Z",
+   "metrics": {
+    "stars": 739,
+    "forks": 132,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "anthropic",
+     "claude-code",
+     "codex",
+     "developer-tools",
+     "finops",
+     "llm-observability",
+     "local-first",
+     "observability",
+     "openai",
+     "self-hosted",
+     "token-usage"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "v-modal/awesome-jev-tools",
    "title": "v-modal/awesome-jev-tools",
    "url": "https://github.com/v-modal/awesome-jev-tools",
    "summary": "A curated list of tools  built for Jev — TypeSafe AI's System One model for typed decisions.",
    "published_at": "2026-09-19T16:48:59Z",
    "metrics": {
-    "stars": 738,
+    "stars": 737,
     "forks": 41,
     "stars_delta": null
    },
@@ -896,68 +1081,13 @@
   },
   {
    "source": "github_search",
-   "id": "LockedinLabs-AI/agent-console",
-   "title": "LockedinLabs-AI/agent-console",
-   "url": "https://github.com/LockedinLabs-AI/agent-console",
-   "summary": "Local-first observability for AI coding agents. Every Claude Code and Codex session's tokens, cache, models and cost, on this machine and every machine you connect through a self-hosted team hub. Presenting mode, policy hooks, Apple-signed and notarized macOS builds, attested releases. MIT.",
-   "published_at": "2026-09-20T17:55:58Z",
-   "metrics": {
-    "stars": 720,
-    "forks": 132,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "JavaScript",
-    "license": "MIT",
-    "topics": [
-     "ai-agents",
-     "anthropic",
-     "claude-code",
-     "codex",
-     "developer-tools",
-     "finops",
-     "llm-observability",
-     "local-first",
-     "observability",
-     "openai",
-     "self-hosted",
-     "token-usage"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "Alex314618-create/JevRev",
-   "title": "Alex314618-create/JevRev",
-   "url": "https://github.com/Alex314618-create/JevRev",
-   "summary": "An LLM + Jev workflow that changes EVERYTHING. Boost your vertebrate brain with a spine inside. ",
-   "published_at": "2026-09-21T01:53:13Z",
-   "metrics": {
-    "stars": 700,
-    "forks": 28,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "TypeScript",
-    "license": "MIT",
-    "topics": [
-     "jev",
-     "llm",
-     "workflow"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
    "id": "jev-chat/jev-chat-windows",
    "title": "jev-chat/jev-chat-windows",
    "url": "https://github.com/jev-chat/jev-chat-windows",
    "summary": "JevChat-Windows：聊天窗口旁挂的回复辅助。窗口截图 + 本地离线 OCR 读对方消息 → Jev 判断意图 → 3 条候选一键填入，发送永远手动",
    "published_at": "2026-09-21T14:37:14Z",
    "metrics": {
-    "stars": 700,
+    "stars": 702,
     "forks": 154,
     "stars_delta": null
    },
@@ -981,14 +1111,37 @@
   },
   {
    "source": "github_search",
+   "id": "Alex314618-create/JevRev",
+   "title": "Alex314618-create/JevRev",
+   "url": "https://github.com/Alex314618-create/JevRev",
+   "summary": "An LLM + Jev workflow that changes EVERYTHING. Boost your vertebrate brain with a spine inside. ",
+   "published_at": "2026-09-21T01:53:13Z",
+   "metrics": {
+    "stars": 699,
+    "forks": 28,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "jev",
+     "llm",
+     "workflow"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "lemomo-ai/lemo-opuscar",
    "title": "lemomo-ai/lemo-opuscar",
    "url": "https://github.com/lemomo-ai/lemo-opuscar",
    "summary": "43 film styles, each a reusable style prompt plus a short film made entirely in code by Claude Opus 5.5. Pick a style, bring your own story, and let your agent direct. | Opus5.5 x 43 种影片风格：风格提示词 + 纯代码样片 + 导演与技术指南",
    "published_at": "2026-09-26T10:10:41Z",
    "metrics": {
-    "stars": 645,
-    "forks": 84,
+    "stars": 651,
+    "forks": 86,
     "stars_delta": null
    },
    "extra": {
@@ -1022,7 +1175,7 @@
    "summary": "An agent supervisor and software factory foreman powered by TypeSafe’s Jev model",
    "published_at": "2026-09-17T11:46:13Z",
    "metrics": {
-    "stars": 619,
+    "stars": 617,
     "forks": 47,
     "stars_delta": null
    },
@@ -1041,7 +1194,7 @@
    "summary": "Agent-Native multi-platform reverse engineering and CWE-602 client-side authorization audit workbench.",
    "published_at": "2026-09-23T18:05:31Z",
    "metrics": {
-    "stars": 592,
+    "stars": 595,
     "forks": 173,
     "stars_delta": null
    },
@@ -1060,7 +1213,7 @@
    "summary": "1207 public resources for Jev, TypeSafe AI's System One decision model, indexed by decision pattern. Source citations, dated link checks and scheduled call-site text checks; runtime and performance are not independently tested here. EN/中文, JSON schema and platform compatibility.",
    "published_at": "2026-09-22T02:22:54Z",
    "metrics": {
-    "stars": 587,
+    "stars": 586,
     "forks": 15,
     "stars_delta": null
    },
@@ -1095,7 +1248,7 @@
    "summary": "Astra planner and JEV controller for Minecraft, with native recording, tested routes, and run verification.",
    "published_at": "2026-09-20T05:05:12Z",
    "metrics": {
-    "stars": 569,
+    "stars": 568,
     "forks": 59,
     "stars_delta": null
    },
@@ -1114,7 +1267,7 @@
    "summary": "Runtime behavioral ablation for compressed LLMs. First target: Ternary Bonsai 2 27B — no weight modification or re-quantization. by OrcaRouter team",
    "published_at": "2026-09-18T06:45:54Z",
    "metrics": {
-    "stars": 555,
+    "stars": 556,
     "forks": 63,
     "stars_delta": null
    },
@@ -1152,7 +1305,7 @@
    "summary": "Awesome Jev: a source-backed field guide to TypeSafe's System One model, with SDKs, live demos, agent tools, and independent evaluations.",
    "published_at": "2026-09-17T06:56:37Z",
    "metrics": {
-    "stars": 549,
+    "stars": 548,
     "forks": 136,
     "stars_delta": null
    },
@@ -1191,8 +1344,8 @@
    "summary": "An agent skill that finds where a photo was taken — OpenStreetMap geometry, elevation skylines, satellite imagery and street view — and shows its work. Works with Claude Code, Codex, Cursor, Gemini CLI, OpenCode and GitHub Copilot.",
    "published_at": "2026-09-18T08:51:34Z",
    "metrics": {
-    "stars": 529,
-    "forks": 63,
+    "stars": 531,
+    "forks": 64,
     "stars_delta": null
    },
    "extra": {
@@ -1229,8 +1382,8 @@
    "summary": "The agentic CLI for the entire Cloudflare API",
    "published_at": "2026-09-21T15:16:36Z",
    "metrics": {
-    "stars": 514,
-    "forks": 16,
+    "stars": 520,
+    "forks": 17,
     "stars_delta": null
    },
    "extra": {
@@ -1248,7 +1401,7 @@
    "summary": "Personal or team knowledge base, supports MCP API calls.",
    "published_at": "2026-09-22T04:28:59Z",
    "metrics": {
-    "stars": 498,
+    "stars": 497,
     "forks": 6,
     "stars_delta": null
    },
@@ -1261,13 +1414,43 @@
   },
   {
    "source": "github_search",
+   "id": "zouyuxuan122/dsh-our-free-model",
+   "title": "zouyuxuan122/dsh-our-free-model",
+   "url": "https://github.com/zouyuxuan122/dsh-our-free-model",
+   "summary": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 Muse Spark 1.3、MiMo V2.6 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, Muse Spark 1.3 and MiMo V2.6 among them. Completely free, with no usage cap.",
+   "published_at": "2026-09-24T16:17:19Z",
+   "metrics": {
+    "stars": 481,
+    "forks": 22,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "deepseek",
+     "deepseek-harness",
+     "developer-tools",
+     "dsh",
+     "dsh-plugin",
+     "free-model",
+     "llm",
+     "model-provider",
+     "openai-compatible"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "OmniJev/awesome-jev-gallery",
    "title": "OmniJev/awesome-jev-gallery",
    "url": "https://github.com/OmniJev/awesome-jev-gallery",
    "summary": "🔥🔥 Awesome Jev:  open-source models, projects, benchmarks, and independent evaluations for Jev and System One models.",
    "published_at": "2026-09-17T20:16:57Z",
    "metrics": {
-    "stars": 479,
+    "stars": 480,
     "forks": 28,
     "stars_delta": null
    },
@@ -1305,7 +1488,7 @@
    "summary": "AI System Design - Learn how to design AI systems built on LLMs, RAG, and AI Agents step by step.",
    "published_at": "2026-09-25T04:50:06Z",
    "metrics": {
-    "stars": 472,
+    "stars": 471,
     "forks": 57,
     "stars_delta": null
    },
@@ -1335,7 +1518,7 @@
    "summary": "Agent skill: turn a topic into a 30s vertical film drawn and scored entirely in JavaScript. Reference film: the life of a monarch butterfly.",
    "published_at": "2026-09-17T17:15:34Z",
    "metrics": {
-    "stars": 469,
+    "stars": 470,
     "forks": 52,
     "stars_delta": null
    },
@@ -1348,43 +1531,13 @@
   },
   {
    "source": "github_search",
-   "id": "zouyuxuan122/dsh-our-free-model",
-   "title": "zouyuxuan122/dsh-our-free-model",
-   "url": "https://github.com/zouyuxuan122/dsh-our-free-model",
-   "summary": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 Muse Spark 1.3、MiMo V2.6 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, Muse Spark 1.3 and MiMo V2.6 among them. Completely free, with no usage cap.",
-   "published_at": "2026-09-24T16:17:19Z",
-   "metrics": {
-    "stars": 466,
-    "forks": 22,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "JavaScript",
-    "license": "MIT",
-    "topics": [
-     "ai-agents",
-     "deepseek",
-     "deepseek-harness",
-     "developer-tools",
-     "dsh",
-     "dsh-plugin",
-     "free-model",
-     "llm",
-     "model-provider",
-     "openai-compatible"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
    "id": "jkudish/jev-mcp",
    "title": "jkudish/jev-mcp",
    "url": "https://github.com/jkudish/jev-mcp",
    "summary": "Fast, cheap, typed judgments from TypeSafe's Jev model, as MCP tools.",
    "published_at": "2026-09-17T02:25:38Z",
    "metrics": {
-    "stars": 463,
+    "stars": 466,
     "forks": 53,
     "stars_delta": null
    },
@@ -1403,7 +1556,7 @@
    "summary": "Make your coding agent abide by all your project rules ",
    "published_at": "2026-09-18T10:41:48Z",
    "metrics": {
-    "stars": 457,
+    "stars": 458,
     "forks": 37,
     "stars_delta": null
    },
@@ -1459,7 +1612,7 @@
    "summary": "聊天悬浮窗助手（macOS）：屏幕感知 + 本地小模型判断意图与风险，按话术生成回复候选。纯只读。",
    "published_at": "2026-09-21T11:39:32Z",
    "metrics": {
-    "stars": 447,
+    "stars": 446,
     "forks": 128,
     "stars_delta": null
    },
@@ -1486,7 +1639,7 @@
    "summary": "An Agent Skill for building interactive, self-assembling 3D architecture with Three.js.  一个用 Three.js 生成可交互、可动态建造 3D 建筑的 Agent Skill。",
    "published_at": "2026-09-22T03:01:05Z",
    "metrics": {
-    "stars": 425,
+    "stars": 427,
     "forks": 59,
     "stars_delta": null
    },
@@ -1505,61 +1658,13 @@
    "summary": "A cartoon 3D office where your team hires Claude Code workers at desks, shares live terminals, talks over voice, and tracks GitHub issues and PRs.",
    "published_at": "2026-09-26T00:32:48Z",
    "metrics": {
-    "stars": 412,
-    "forks": 94,
+    "stars": 419,
+    "forks": 98,
     "stars_delta": null
    },
    "extra": {
     "language": "TypeScript",
     "license": "MIT",
-    "topics": []
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "penso/herdr-gpui",
-   "title": "penso/herdr-gpui",
-   "url": "https://github.com/penso/herdr-gpui",
-   "summary": "Native macOS client for Herdr, built with Rust and GPUI. View terminal sessions, workspaces, Git worktrees, and agent activity through your local Herdr daemon.",
-   "published_at": "2026-09-20T05:22:39Z",
-   "metrics": {
-    "stars": 396,
-    "forks": 31,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Rust",
-    "license": "Apache-2.0",
-    "topics": [
-     "ai-agents",
-     "desktop-app",
-     "developer-tools",
-     "git-worktrees",
-     "gpui",
-     "herdr",
-     "macos",
-     "rust",
-     "terminal"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "TianyuCodings/JevHarness",
-   "title": "TianyuCodings/JevHarness",
-   "url": "https://github.com/TianyuCodings/JevHarness",
-   "summary": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
-   "published_at": "2026-09-21T08:59:46Z",
-   "metrics": {
-    "stars": 396,
-    "forks": 17,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": null,
     "topics": []
    },
    "also_in": []
@@ -1572,8 +1677,8 @@
    "summary": "Intent compiler for AI agents — converges vague requests into typed IntentSpec contracts (probe, ask, or halt before routing), the input layer for routers and typed-decision models like Jev & Laya",
    "published_at": "2026-09-22T06:00:27Z",
    "metrics": {
-    "stars": 381,
-    "forks": 40,
+    "stars": 402,
+    "forks": 43,
     "stars_delta": null
    },
    "extra": {
@@ -1600,13 +1705,61 @@
   },
   {
    "source": "github_search",
+   "id": "TianyuCodings/JevHarness",
+   "title": "TianyuCodings/JevHarness",
+   "url": "https://github.com/TianyuCodings/JevHarness",
+   "summary": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
+   "published_at": "2026-09-21T08:59:46Z",
+   "metrics": {
+    "stars": 402,
+    "forks": 17,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": null,
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "penso/herdr-gpui",
+   "title": "penso/herdr-gpui",
+   "url": "https://github.com/penso/herdr-gpui",
+   "summary": "Native macOS client for Herdr, built with Rust and GPUI. View terminal sessions, workspaces, Git worktrees, and agent activity through your local Herdr daemon.",
+   "published_at": "2026-09-20T05:22:39Z",
+   "metrics": {
+    "stars": 398,
+    "forks": 31,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai-agents",
+     "desktop-app",
+     "developer-tools",
+     "git-worktrees",
+     "gpui",
+     "herdr",
+     "macos",
+     "rust",
+     "terminal"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "CaptureGrubEnchant/SolidWorks",
    "title": "CaptureGrubEnchant/SolidWorks",
    "url": "https://github.com/CaptureGrubEnchant/SolidWorks",
    "summary": "SolidWorks MCP Server connects an AI assistant to a running SolidWorks instance. Sketch, extrude, fillet, export STEP/STL, generate macros.",
    "published_at": "2026-09-25T10:42:51Z",
    "metrics": {
-    "stars": 378,
+    "stars": 379,
     "forks": 0,
     "stars_delta": null
    },
@@ -1642,7 +1795,7 @@
    "summary": "Turn local language models into Jev-style structured decision models. Get results from text and images with prefill alone—no token-by-token decoding required.",
    "published_at": "2026-09-19T10:59:33Z",
    "metrics": {
-    "stars": 377,
+    "stars": 376,
     "forks": 38,
     "stars_delta": null
    },
@@ -1659,6 +1812,25 @@
   },
   {
    "source": "github_search",
+   "id": "openai/mcp-extensions",
+   "title": "openai/mcp-extensions",
+   "url": "https://github.com/openai/mcp-extensions",
+   "summary": "Build plugins that feel like native, first-class features of ChatGPT.",
+   "published_at": "2026-09-29T00:45:42Z",
+   "metrics": {
+    "stars": 364,
+    "forks": 16,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
    "id": "walidboulanouar/awesome-jev-use-cases",
    "title": "walidboulanouar/awesome-jev-use-cases",
    "url": "https://github.com/walidboulanouar/awesome-jev-use-cases",
@@ -1666,7 +1838,7 @@
    "published_at": "2026-09-19T18:01:10Z",
    "metrics": {
     "stars": 349,
-    "forks": 48,
+    "forks": 49,
     "stars_delta": null
    },
    "extra": {
@@ -1705,8 +1877,8 @@
    "summary": "PiG (Pi in Go) is a faithful Go port of upstream Pi, the TypeScript codebase behind the Pi coding agent. It is a parity-bound translation, not a rewrite: upstream behavior is the contract, and Go is the implementation language.",
    "published_at": "2026-09-17T15:52:38Z",
    "metrics": {
-    "stars": 338,
-    "forks": 19,
+    "stars": 340,
+    "forks": 20,
     "stars_delta": null
    },
    "extra": {
@@ -1747,38 +1919,14 @@
   },
   {
    "source": "github_search",
-   "id": "ekzhang/openjev-sglang",
-   "title": "ekzhang/openjev-sglang",
-   "url": "https://github.com/ekzhang/openjev-sglang",
-   "summary": "Jev-compatible API endpoint based on open models (prefill-only)",
-   "published_at": "2026-09-17T18:11:49Z",
-   "metrics": {
-    "stars": 336,
-    "forks": 45,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": null,
-    "topics": [
-     "jev",
-     "llm",
-     "structured-generation",
-     "systemone"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
    "id": "Devin-AXIS/jev-dsh-decision",
    "title": "Devin-AXIS/jev-dsh-decision",
    "url": "https://github.com/Devin-AXIS/jev-dsh-decision",
    "summary": "Jev DSH 决策引擎｜面向 Agent Harness 的结构化决策插件。原生支持 DeepSeek Harness，通过 iPolloWork 支持 OpenCode、Codex Harness。",
    "published_at": "2026-09-20T04:39:05Z",
    "metrics": {
-    "stars": 335,
-    "forks": 107,
+    "stars": 336,
+    "forks": 108,
     "stars_delta": null
    },
    "extra": {
@@ -1811,20 +1959,55 @@
   },
   {
    "source": "github_search",
-   "id": "openai/mcp-extensions",
-   "title": "openai/mcp-extensions",
-   "url": "https://github.com/openai/mcp-extensions",
-   "summary": "Build plugins that feel like native, first-class features of ChatGPT.",
-   "published_at": "2026-09-29T00:45:42Z",
+   "id": "ekzhang/openjev-sglang",
+   "title": "ekzhang/openjev-sglang",
+   "url": "https://github.com/ekzhang/openjev-sglang",
+   "summary": "Jev-compatible API endpoint based on open models (prefill-only)",
+   "published_at": "2026-09-17T18:11:49Z",
    "metrics": {
-    "stars": 329,
-    "forks": 16,
+    "stars": 335,
+    "forks": 45,
     "stars_delta": null
    },
    "extra": {
-    "language": "TypeScript",
-    "license": "Apache-2.0",
-    "topics": []
+    "language": "Python",
+    "license": null,
+    "topics": [
+     "jev",
+     "llm",
+     "structured-generation",
+     "systemone"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "rehan-remade/universal-modder",
+   "title": "rehan-remade/universal-modder",
+   "url": "https://github.com/rehan-remade/universal-modder",
+   "summary": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+   "published_at": "2026-09-30T05:00:35Z",
+   "metrics": {
+    "stars": 287,
+    "forks": 10,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "age-of-empires",
+     "claude-code",
+     "claude-code-plugin",
+     "fal",
+     "game-assets",
+     "game-modding",
+     "mcp",
+     "modding",
+     "reverse-engineering",
+     "tmodloader"
+    ]
    },
    "also_in": []
   },
@@ -1836,7 +2019,7 @@
    "summary": "Per-turn model & reasoning routing for Codex, driven by Jev (TypeSafe System One): picks the model, thinking depth and speed mode for every turn.",
    "published_at": "2026-09-17T04:14:19Z",
    "metrics": {
-    "stars": 278,
+    "stars": 277,
     "forks": 40,
     "stars_delta": null
    },
@@ -1863,7 +2046,7 @@
    "summary": "Self-hosted, versioned skills library for AI agents. MCP, scoped clients, and optional Jev recommendations.",
    "published_at": "2026-09-17T17:23:37Z",
    "metrics": {
-    "stars": 255,
+    "stars": 254,
     "forks": 22,
     "stars_delta": null
    },
@@ -1922,7 +2105,7 @@
    "summary": "Turn ChatGPT into a local agent runtime. Operate your computer, use local tools, discover MCP servers, and delegate work to your own models through one MCP connection.",
    "published_at": "2026-09-23T14:25:56Z",
    "metrics": {
-    "stars": 234,
+    "stars": 235,
     "forks": 16,
     "stars_delta": null
    },
@@ -1950,7 +2133,7 @@
    "summary": "Local-first MCP plugin for continuous software-quality review by AI coding agents, powered by Jev.",
    "published_at": "2026-09-17T05:24:51Z",
    "metrics": {
-    "stars": 231,
+    "stars": 230,
     "forks": 20,
     "stars_delta": null
    },
@@ -1985,7 +2168,7 @@
    "summary": "Jev demos, projects, SDKs and skills, with source links and a curated X gallery.",
    "published_at": "2026-09-18T12:09:59Z",
    "metrics": {
-    "stars": 220,
+    "stars": 221,
     "forks": 17,
     "stars_delta": null
    },
@@ -2018,8 +2201,8 @@
    "summary": "[Public preview] Externally scored agentic ML research benchmark: 60 tasks, real competition ground truth. Open protocol, operated evaluation.",
    "published_at": "2026-09-21T11:29:47Z",
    "metrics": {
-    "stars": 207,
-    "forks": 26,
+    "stars": 212,
+    "forks": 27,
     "stars_delta": null
    },
    "extra": {
@@ -2052,7 +2235,7 @@
    "summary": "AI 大模型世界，把 556 个大模型拟人化成像素小人的可视化站点。进来就能看到此刻谁最聪明、谁最会写代码、谁最便宜、谁刚发布，往下是国内与国外分区的厂商广场、完整的发布时间线和多维排行榜。搜索认模型名、厂商和能力，输入「多模态」会直接列出全部多模态模型。数据取自 Epoch AI、models.dev、LiveBench 与 Hugging Face，每小时自动同步，所有文案由真实数据生成，不调用任何 LLM。Next.js 静态导出，零后端。",
    "published_at": "2026-09-17T03:12:17Z",
    "metrics": {
-    "stars": 207,
+    "stars": 208,
     "forks": 30,
     "stars_delta": null
    },
@@ -2116,7 +2299,7 @@
    "summary": "A fast browser-use skill powered by local LLMs via single-token reflexes. Fast, local-first, zero hallucinations.",
    "published_at": "2026-09-19T10:17:17Z",
    "metrics": {
-    "stars": 201,
+    "stars": 200,
     "forks": 20,
     "stars_delta": null
    },
@@ -2251,7 +2434,7 @@
    "summary": "Semrush SEO AI-powered analysis tool MCP server & CLI for keyword research, domain analytics, backlink analysis",
    "published_at": "2026-09-25T04:00:09Z",
    "metrics": {
-    "stars": 121,
+    "stars": 125,
     "forks": 0,
     "stars_delta": null
    },
@@ -2277,6 +2460,85 @@
      "serp-analysis",
      "serp-api",
      "serp-scraper"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "breakstageaxe61/genspark-claw",
+   "title": "breakstageaxe61/genspark-claw",
+   "url": "https://github.com/breakstageaxe61/genspark-claw",
+   "summary": "🦀⚡ Community skill pack & CLI for Genspark Claw, OpenClaw & Hermes agents — 5 production-ready SKILL.md skills (deep research, reports, slides, browser automation, AI call prep), zero-dependency Node.js installer, MCP server, one-line install",
+   "published_at": "2026-09-26T02:18:05Z",
+   "metrics": {
+    "stars": 120,
+    "forks": 1,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-agent",
+     "ai-assistants",
+     "ai-tools",
+     "awesome-genspark",
+     "genspark-agent",
+     "genspark-claw",
+     "genspark-mcp",
+     "genspark-skills",
+     "hermes-agent",
+     "hermes-skill",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol",
+     "open-genspark",
+     "openclaw",
+     "openclaw-skill",
+     "openclaw-skills",
+     "skills",
+     "zero-dependency"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "graygnatconsole/mcp-audit-tool",
+   "title": "graygnatconsole/mcp-audit-tool",
+   "url": "https://github.com/graygnatconsole/mcp-audit-tool",
+   "summary": "🛡️ Security audit CLI for Model Context Protocol (MCP) servers — scan AI agent configs for tool poisoning, rug pulls, hardcoded secrets, command injection & supply-chain risks. Pure Python, SARIF + CI ready.",
+   "published_at": "2026-09-26T02:42:57Z",
+   "metrics": {
+    "stars": 118,
+    "forks": 1,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-security",
+     "agentic-ai",
+     "ai-security",
+     "cursor",
+     "llm-guardrails",
+     "llm-security",
+     "mcp",
+     "mcp-audit",
+     "mcp-scanner",
+     "mcp-security",
+     "mcp-server",
+     "mcp-server-python",
+     "model-context-protocol",
+     "prompt-injection",
+     "security-scanner",
+     "supply-chain",
+     "supply-chain-security",
+     "tool-poisoning",
+     "vulnerability-scanner"
     ]
    },
    "also_in": []
@@ -2313,122 +2575,13 @@
   },
   {
    "source": "github_search",
-   "id": "breakstageaxe61/genspark-claw",
-   "title": "breakstageaxe61/genspark-claw",
-   "url": "https://github.com/breakstageaxe61/genspark-claw",
-   "summary": "🦀⚡ Community skill pack & CLI for Genspark Claw, OpenClaw & Hermes agents — 5 production-ready SKILL.md skills (deep research, reports, slides, browser automation, AI call prep), zero-dependency Node.js installer, MCP server, one-line install",
-   "published_at": "2026-09-26T02:18:05Z",
-   "metrics": {
-    "stars": 117,
-    "forks": 1,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "JavaScript",
-    "license": "MIT",
-    "topics": [
-     "agent-skills",
-     "ai-agent",
-     "ai-assistants",
-     "ai-tools",
-     "awesome-genspark",
-     "genspark-agent",
-     "genspark-claw",
-     "genspark-mcp",
-     "genspark-skills",
-     "hermes-agent",
-     "hermes-skill",
-     "mcp",
-     "mcp-server",
-     "model-context-protocol",
-     "open-genspark",
-     "openclaw",
-     "openclaw-skill",
-     "openclaw-skills",
-     "skills",
-     "zero-dependency"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "rehan-remade/universal-modder",
-   "title": "rehan-remade/universal-modder",
-   "url": "https://github.com/rehan-remade/universal-modder",
-   "summary": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
-   "published_at": "2026-09-30T05:00:35Z",
-   "metrics": {
-    "stars": 115,
-    "forks": 7,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": "MIT",
-    "topics": [
-     "age-of-empires",
-     "claude-code",
-     "claude-code-plugin",
-     "fal",
-     "game-assets",
-     "game-modding",
-     "mcp",
-     "modding",
-     "reverse-engineering",
-     "tmodloader"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "graygnatconsole/mcp-audit-tool",
-   "title": "graygnatconsole/mcp-audit-tool",
-   "url": "https://github.com/graygnatconsole/mcp-audit-tool",
-   "summary": "🛡️ Security audit CLI for Model Context Protocol (MCP) servers — scan AI agent configs for tool poisoning, rug pulls, hardcoded secrets, command injection & supply-chain risks. Pure Python, SARIF + CI ready.",
-   "published_at": "2026-09-26T02:42:57Z",
-   "metrics": {
-    "stars": 113,
-    "forks": 1,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": "MIT",
-    "topics": [
-     "agent-security",
-     "agentic-ai",
-     "ai-security",
-     "cursor",
-     "llm-guardrails",
-     "llm-security",
-     "mcp",
-     "mcp-audit",
-     "mcp-scanner",
-     "mcp-security",
-     "mcp-server",
-     "mcp-server-python",
-     "model-context-protocol",
-     "prompt-injection",
-     "security-scanner",
-     "supply-chain",
-     "supply-chain-security",
-     "tool-poisoning",
-     "vulnerability-scanner"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
    "id": "Avinash-jetwani/jevmem",
    "title": "Avinash-jetwani/jevmem",
    "url": "https://github.com/Avinash-jetwani/jevmem",
    "summary": "Automatic project memory for Claude Code. Also works with Cursor and Codex. Now in Anthropic's Claude plugin directory.",
    "published_at": "2026-09-22T11:47:24Z",
    "metrics": {
-    "stars": 99,
+    "stars": 100,
     "forks": 6,
     "stars_delta": null
    },
@@ -2497,7 +2650,7 @@
    "summary": "OpenCLI reborn as an MCP-native browser runtime: Chrome-spawned host, object API + code mode, site capabilities, recon",
    "published_at": "2026-09-17T18:09:25Z",
    "metrics": {
-    "stars": 97,
+    "stars": 98,
     "forks": 11,
     "stars_delta": null
    },
@@ -2547,7 +2700,7 @@
    "summary": "Jev-powered semantic code search for coding agents — find behavior across repositories via CLI or MCP, with exact source excerpts and line numbers.",
    "published_at": "2026-09-20T00:27:29Z",
    "metrics": {
-    "stars": 91,
+    "stars": 90,
     "forks": 11,
     "stars_delta": null
    },
@@ -2645,7 +2798,7 @@
    "summary": "OpenTelemetry plugins for every coding agent, in the Agent Plugins format — a marketplace that runs itself: open an issue, the repository validates, reviews, lists and follows your plugin.",
    "published_at": "2026-09-19T11:22:20Z",
    "metrics": {
-    "stars": 81,
+    "stars": 82,
     "forks": 0,
     "stars_delta": null
    },
@@ -2679,47 +2832,13 @@
   },
   {
    "source": "github_search",
-   "id": "wh000wh000/awesome-jev-live",
-   "title": "wh000wh000/awesome-jev-live",
-   "url": "https://github.com/wh000wh000/awesome-jev-live",
-   "summary": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
-   "published_at": "2026-09-18T13:37:03Z",
-   "metrics": {
-    "stars": 79,
-    "forks": 4,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": "NOASSERTION",
-    "topics": [
-     "ai-agents",
-     "artificial-intelligence",
-     "awesome",
-     "awesome-jev",
-     "awesome-list",
-     "calibration",
-     "curated-list",
-     "decision-making",
-     "developer-tools",
-     "jev",
-     "llm-tools",
-     "mcp",
-     "system-one",
-     "typesafe"
-    ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
    "id": "PerryLink/jevcore",
    "title": "PerryLink/jevcore",
    "url": "https://github.com/PerryLink/jevcore",
    "summary": "TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plain Node: typed judgments instead of prose, offline by default.",
    "published_at": "2026-09-20T04:11:31Z",
    "metrics": {
-    "stars": 78,
+    "stars": 79,
     "forks": 0,
     "stars_delta": null
    },
@@ -2748,6 +2867,40 @@
    "also_in": []
   },
   {
+   "source": "github_search",
+   "id": "wh000wh000/awesome-jev-live",
+   "title": "wh000wh000/awesome-jev-live",
+   "url": "https://github.com/wh000wh000/awesome-jev-live",
+   "summary": "Awesome Jev — evidence-graded index of TypeSafe System One: SDKs, MCP tools, agents, apps and open models. 20 languages, rebuilt every 2 hours.",
+   "published_at": "2026-09-18T13:37:03Z",
+   "metrics": {
+    "stars": 78,
+    "forks": 4,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "NOASSERTION",
+    "topics": [
+     "ai-agents",
+     "artificial-intelligence",
+     "awesome",
+     "awesome-jev",
+     "awesome-list",
+     "calibration",
+     "curated-list",
+     "decision-making",
+     "developer-tools",
+     "jev",
+     "llm-tools",
+     "mcp",
+     "system-one",
+     "typesafe"
+    ]
+   },
+   "also_in": []
+  },
+  {
    "source": "hf_models",
    "id": "XingChen-AGI/TeleOCR",
    "title": "XingChen-AGI/TeleOCR",
@@ -2755,9 +2908,9 @@
    "summary": "",
    "published_at": "2026-08-14T06:15:03Z",
    "metrics": {
-    "likes": 938,
+    "likes": 971,
     "downloads": 30383,
-    "trending_score": 801,
+    "trending_score": 833,
     "likes_delta": null
    },
    "extra": {
@@ -2774,33 +2927,14 @@
    "summary": "",
    "published_at": "2026-09-21T20:09:04Z",
    "metrics": {
-    "likes": 544,
+    "likes": 549,
     "downloads": 2392,
-    "trending_score": 535,
+    "trending_score": 540,
     "likes_delta": null
    },
    "extra": {
     "pipeline_tag": "text-ranking",
     "library": "contrastive-lm"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
-   "id": "TaichuAI/ZDTaichu5.0-9B",
-   "title": "TaichuAI/ZDTaichu5.0-9B",
-   "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
-   "summary": "",
-   "published_at": "2026-09-04T02:55:48Z",
-   "metrics": {
-    "likes": 2081,
-    "downloads": 12139,
-    "trending_score": 377,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "image-text-to-text",
-    "library": null
    },
    "also_in": []
   },
@@ -2812,7 +2946,7 @@
    "summary": "",
    "published_at": "2026-08-05T08:22:59Z",
    "metrics": {
-    "likes": 16598,
+    "likes": 16609,
     "downloads": 7038259,
     "trending_score": 355,
     "likes_delta": null
@@ -2831,9 +2965,9 @@
    "summary": "",
    "published_at": "2026-09-16T06:44:40Z",
    "metrics": {
-    "likes": 1810,
+    "likes": 1811,
     "downloads": 47613,
-    "trending_score": 354,
+    "trending_score": 353,
     "likes_delta": null
    },
    "extra": {
@@ -2850,14 +2984,33 @@
    "summary": "",
    "published_at": "2026-09-16T23:40:56Z",
    "metrics": {
-    "likes": 2279,
+    "likes": 2288,
     "downloads": 3676692,
-    "trending_score": 341,
+    "trending_score": 345,
     "likes_delta": null
    },
    "extra": {
     "pipeline_tag": "text-generation",
     "library": "llama.cpp"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "TaichuAI/ZDTaichu5.0-9B",
+   "title": "TaichuAI/ZDTaichu5.0-9B",
+   "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+   "summary": "",
+   "published_at": "2026-09-04T02:55:48Z",
+   "metrics": {
+    "likes": 2145,
+    "downloads": 12139,
+    "trending_score": 257,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
    },
    "also_in": []
   },
@@ -2869,9 +3022,9 @@
    "summary": "",
    "published_at": "2026-09-21T18:18:20Z",
    "metrics": {
-    "likes": 269,
+    "likes": 274,
     "downloads": 2103,
-    "trending_score": 250,
+    "trending_score": 254,
     "likes_delta": null
    },
    "extra": {
@@ -2888,9 +3041,9 @@
    "summary": "",
    "published_at": "2026-09-20T12:10:31Z",
    "metrics": {
-    "likes": 777,
+    "likes": 780,
     "downloads": 8524,
-    "trending_score": 244,
+    "trending_score": 242,
     "likes_delta": null
    },
    "extra": {
@@ -2907,9 +3060,9 @@
    "summary": "",
    "published_at": "2026-08-28T18:38:03Z",
    "metrics": {
-    "likes": 1838,
+    "likes": 1843,
     "downloads": 1679903,
-    "trending_score": 222,
+    "trending_score": 224,
     "likes_delta": null
    },
    "extra": {
@@ -2926,9 +3079,9 @@
    "summary": "",
    "published_at": "2026-09-24T03:44:51Z",
    "metrics": {
-    "likes": 213,
+    "likes": 216,
     "downloads": 2456,
-    "trending_score": 212,
+    "trending_score": 214,
     "likes_delta": null
    },
    "extra": {
@@ -2945,9 +3098,9 @@
    "summary": "",
    "published_at": "2026-09-21T18:18:40Z",
    "metrics": {
-    "likes": 575,
+    "likes": 577,
     "downloads": 12085,
-    "trending_score": 197,
+    "trending_score": 189,
     "likes_delta": null
    },
    "extra": {
@@ -2964,9 +3117,9 @@
    "summary": "",
    "published_at": "2026-09-10T02:17:58Z",
    "metrics": {
-    "likes": 3909,
+    "likes": 3916,
     "downloads": 721211,
-    "trending_score": 176,
+    "trending_score": 179,
     "likes_delta": null
    },
    "extra": {
@@ -2985,7 +3138,7 @@
    "metrics": {
     "likes": 604,
     "downloads": 80958,
-    "trending_score": 176,
+    "trending_score": 166,
     "likes_delta": null
    },
    "extra": {
@@ -3002,9 +3155,9 @@
    "summary": "",
    "published_at": "2026-09-01T07:01:09Z",
    "metrics": {
-    "likes": 1288,
+    "likes": 1291,
     "downloads": 1777756,
-    "trending_score": 155,
+    "trending_score": 154,
     "likes_delta": null
    },
    "extra": {
@@ -3021,9 +3174,9 @@
    "summary": "",
    "published_at": "2026-09-24T13:13:45Z",
    "metrics": {
-    "likes": 159,
+    "likes": 161,
     "downloads": 175005,
-    "trending_score": 152,
+    "trending_score": 154,
     "likes_delta": null
    },
    "extra": {
@@ -3040,9 +3193,9 @@
    "summary": "",
    "published_at": "2026-09-26T03:37:50Z",
    "metrics": {
-    "likes": 168,
+    "likes": 171,
     "downloads": 7186,
-    "trending_score": 151,
+    "trending_score": 154,
     "likes_delta": null
    },
    "extra": {
@@ -3059,9 +3212,9 @@
    "summary": "",
    "published_at": "2026-08-24T08:24:59Z",
    "metrics": {
-    "likes": 5783,
+    "likes": 5785,
     "downloads": 1206728,
-    "trending_score": 141,
+    "trending_score": 142,
     "likes_delta": null
    },
    "extra": {
@@ -3078,9 +3231,9 @@
    "summary": "",
    "published_at": "2026-09-07T09:41:37Z",
    "metrics": {
-    "likes": 387,
+    "likes": 388,
     "downloads": 754993,
-    "trending_score": 140,
+    "trending_score": 138,
     "likes_delta": null
    },
    "extra": {
@@ -3097,9 +3250,9 @@
    "summary": "",
    "published_at": "2026-09-26T09:42:51Z",
    "metrics": {
-    "likes": 137,
+    "likes": 139,
     "downloads": 33259,
-    "trending_score": 136,
+    "trending_score": 138,
     "likes_delta": null
    },
    "extra": {
@@ -3135,33 +3288,14 @@
    "summary": "",
    "published_at": "2026-09-21T21:24:24Z",
    "metrics": {
-    "likes": 119,
+    "likes": 121,
     "downloads": 85102,
-    "trending_score": 112,
+    "trending_score": 114,
     "likes_delta": null
    },
    "extra": {
     "pipeline_tag": "image-text-to-text",
     "library": "gguf"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
-   "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
-   "title": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
-   "url": "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
-   "summary": "",
-   "published_at": "2026-08-17T15:15:19Z",
-   "metrics": {
-    "likes": 1541,
-    "downloads": 2047605,
-    "trending_score": 110,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "image-text-to-text",
-    "library": null
    },
    "also_in": []
   },
@@ -3173,7 +3307,7 @@
    "summary": "",
    "published_at": "2026-09-21T15:39:51Z",
    "metrics": {
-    "likes": 521,
+    "likes": 522,
     "downloads": 43038,
     "trending_score": 110,
     "likes_delta": null
@@ -3205,39 +3339,39 @@
   },
   {
    "source": "hf_models",
+   "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+   "title": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+   "url": "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-08-17T15:15:19Z",
+   "metrics": {
+    "likes": 1544,
+    "downloads": 2047605,
+    "trending_score": 108,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
    "id": "ukisai/Swift-1.5-Qwen3.8-27b",
    "title": "ukisai/Swift-1.5-Qwen3.8-27b",
    "url": "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27b",
    "summary": "",
    "published_at": "2026-09-16T14:25:01Z",
    "metrics": {
-    "likes": 87,
+    "likes": 88,
     "downloads": 2741,
-    "trending_score": 86,
+    "trending_score": 87,
     "likes_delta": null
    },
    "extra": {
     "pipeline_tag": "image-text-to-text",
     "library": "transformers"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
-   "id": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "title": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "summary": "",
-   "published_at": "2026-09-21T22:09:46Z",
-   "metrics": {
-    "likes": 110,
-    "downloads": 205179,
-    "trending_score": 83,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "image-text-to-text",
-    "library": null
    },
    "also_in": []
   },
@@ -3262,13 +3396,51 @@
   },
   {
    "source": "hf_models",
+   "id": "Hikari07jp/Ternary-Bonsai-2-27B-Abliterated-GGUF",
+   "title": "Hikari07jp/Ternary-Bonsai-2-27B-Abliterated-GGUF",
+   "url": "https://huggingface.co/Hikari07jp/Ternary-Bonsai-2-27B-Abliterated-GGUF",
+   "summary": "",
+   "published_at": "2026-09-18T10:38:41Z",
+   "metrics": {
+    "likes": 112,
+    "downloads": 35451,
+    "trending_score": 82,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "llama.cpp"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "title": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "summary": "",
+   "published_at": "2026-09-21T22:09:46Z",
+   "metrics": {
+    "likes": 111,
+    "downloads": 205179,
+    "trending_score": 82,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
    "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
    "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
    "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
    "summary": "",
    "published_at": "2026-07-19T04:33:55Z",
    "metrics": {
-    "likes": 884,
+    "likes": 885,
     "downloads": 1852689,
     "trending_score": 81,
     "likes_delta": null
@@ -3280,44 +3452,6 @@
    "also_in": []
   },
   {
-   "source": "hf_models",
-   "id": "Hikari07jp/Ternary-Bonsai-2-27B-Abliterated-GGUF",
-   "title": "Hikari07jp/Ternary-Bonsai-2-27B-Abliterated-GGUF",
-   "url": "https://huggingface.co/Hikari07jp/Ternary-Bonsai-2-27B-Abliterated-GGUF",
-   "summary": "",
-   "published_at": "2026-09-18T10:38:41Z",
-   "metrics": {
-    "likes": 111,
-    "downloads": 35451,
-    "trending_score": 81,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "text-generation",
-    "library": "llama.cpp"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
-   "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
-   "title": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
-   "url": "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
-   "summary": "",
-   "published_at": "2026-08-14T03:43:36Z",
-   "metrics": {
-    "likes": 1340,
-    "downloads": 2240994,
-    "trending_score": 76,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "text-generation",
-    "library": "llama.cpp"
-   },
-   "also_in": []
-  },
-  {
    "source": "hf_papers",
    "id": "2609.29233",
    "title": "Post-Training Leaves Behavioral Shadows on Unrelated Decisions",
@@ -3325,7 +3459,7 @@
    "summary": "We find that language models can transfer capabilities through task-unrelated text. Post-training typically improves language models using task-specific data. Prior work on subliminal learning shows that information about these updates can pass through unrelated generations, but has largely focused on traits or preferences using extensive teacher outputs. We introduce Active Taskless Distillation (ATD), which achieves capability transfer using only a single word from the teacher per prompt. ATD probes the behavioral shadow of post-training by selecting prompts where the teacher and student's shared public ancestor is nearly indifferent between two ordinary words. A student initialized from this ancestor learns solely from the resulting prompt-word pairs, without target-task examples, teacher logits, or teacher parameters. In the primary coding experiment with Qwen2.5-1.5B, 5,664nses yield a 5.34 pp gain on HumanEval+ over an exact nuisance-matched control thadisrupts prompt-resperiments showtransfer in scientific knowledge, commonsense reasoning, and reading comprehensins across additional model generations, sizes, and families. Functional analyses show that the learned sid composable, andthat its strength tracks the teacher's update strength.",
    "published_at": "2026-09-24T00:00:00Z",
    "metrics": {
-    "upvotes": 255,
+    "upvotes": 256,
     "github_stars": 14
    },
    "extra": {
@@ -3343,7 +3477,7 @@
    "summary": "Symbolic models make melody, harmony, rhythm, and form explicit but typically stop before a finished recording; audio models produce complete songs while leaving composition implicit. We introduce YuE2, which unifies symbolic and audio music generation at frontier quality through symbolic planning. A single AR-NAR Mixture-of-Transformers (MoT) first writes a readable score specifying melody and harmony, expands it into semantic music tokens, and realizes it as full-song audio. In comparisons using the same checkpoint, experts prefer symbolic planning for overall quality and musicality, with 49.3% of overall preferences versus 34.6% without planning. Experts also favor the unified model over a separate language model and diffusion Transformer. On WildSongBench, YuE2 scores 6.73 on SongBench Global Avg, exceeding all evaluated public baselines. Selecting from eight candidates (best-of-8), YuE2 reaches 6.96, the highest observed mean among all evaluated systems. Expert listening further establishes its competitiveness with proprietary song generators, favoring best-of-8 over Suno v4.5 and yielding nearly balanced preferences against Suno v5. To learn this generation process from recordings without aligned scores, we introduce MERT2 and SheetSage2 to supply semantic and symbolic supervision. MERT2 sets a new state of the art in music representation learning, surpassing previous best results on 14 of 15 MARBLE metrics; SheetSage2 leads 12 of 15 benchmark-metric pairs in our lead-sheet transcription comparison. The same checkpoint follows score edits while largely preserving unedited musical content and generates zero-shot covers without cover-specific training. Its readable score also enables agentic music editing, with external language models translating user feedback into revisions of the composition.",
    "published_at": "2026-09-27T00:00:00Z",
    "metrics": {
-    "upvotes": 214,
+    "upvotes": 216,
     "github_stars": 10598
    },
    "extra": {
@@ -3361,7 +3495,7 @@
    "summary": "Reinforcement learning can turn one language model into several specialists, each excellent at a single skill such as mathematics, coding or following instructions, but users need one model with all of these skills. Multi-teacher on-policy distillation (MOPD) merges them by letting the specialists teach one student: the student answers each prompt, and the specialist for that prompt's domain gives feedback on every token. This routing decides which specialist teaches, but not how strongly its feedback moves the shared student. In Qwen3.5 models at three sizes, we find that MOPD's student does not beat one taught by the best single specialist and gains little of the mathematics specialist's advantage. The feedback is unbalanced: instruction-following feedback is several times more spread out than mathematics feedback and dominates the student's updates. We propose Domain-Normalized MOPD (DN-MOPD), which keeps the routing and rescales each domain's feedback by its measured spread. On six public benchmarks, DN-MOPD improves the average score over MOPD at every size, across three random seeds and under two answer-length limits, and recovers most of the lost mathematics gain. Controls with fixed domain weights show that the gain comes mainly from turning down instruction-following feedback rather than turning up mathematics alone, and that fixed weights close to those DN-MOPD measures perform comparably. Combining specialists therefore requires deciding not only which one teaches, but also how strongly its feedback counts.",
    "published_at": "2026-09-28T00:00:00Z",
    "metrics": {
-    "upvotes": 141,
+    "upvotes": 140,
     "github_stars": 10
    },
    "extra": {
@@ -3397,7 +3531,7 @@
    "summary": "Vision-language-action (VLA) and world-action (WAM) models map observations and instructions directly to robot actions. This directness ties a policy to training: minor layout or viewpoint changes cause failure, and instructions generalize poorly. The root cause lies in representation: task requirements, conditions, progress, and failure recovery are implicitly encoded in action sequences, making them difficult to inspect or revise. Digital coding agents offer a precedent: LLMs call tools, verify results, and revise from feedback as executable code. The same working pattern of explicit state, manageable execution, and revisable procedures underlies generalization and long-horizon execution in the physical world, letting physical experience return as reusable programs, memory, or evidence. We propose Physical Coding, representing task state and execution as code. Code as World records objects, relations, constraints, and progress; Code as Policy organizes planning, verification, recovery, and execution. We build HexaAnything, which calls perception, planning, and control tools, including VLA/WAM policies, and makes in-the-loop decisions from external feedback. Verified traces become data and memory, enabling evolution from tools and Harness to model weights, architectures, and ultimately hardware and task design. On RoboCasa365, HexaAnything improves Composite-Unseen and overall success over XR-1 VLA, and its Harness-trained HexaModel beats the base on every split, indicating code traces internalize physical execution. On PhyBench and a dual-arm AgileX robot, the agent autonomously completes physics experiments and most tabletop tasks, often faster than published results. We observe data, model, and tool self-evolution; future work targets weight internalization, autonomous redesign of architectures, languages, representations, and tasks, and deployment in manufacturing and science.",
    "published_at": "2026-09-28T00:00:00Z",
    "metrics": {
-    "upvotes": 97,
+    "upvotes": 98,
     "github_stars": 40
    },
    "extra": {
@@ -3505,7 +3639,7 @@
    "summary": "Looped transformers have demonstrated promising parameter efficiency by reusing layers for latent computation. Prior studies compare looped and non-looped models at matched parameters or per-token FLOPs. However, to the best of our knowledge, whether looping improves test-time scaling as outputs grow longer remains underexplored. Through post-training looped transformers, we study the accuracy-compute slope, measured as the accuracy gain per doubling of test-time decoding FLOPs. We find that existing looped transformers often yield steeper slopes than their non-looped baseline, yet underperform it at matched compute. While fixed-depth looping spends extra iterations on every token, our analysis shows that many tokens do not benefit from extra iterations. We therefore propose TaH2, which enables the model to focus extra iterations on the tokens that benefit from looping. It jointly post-trains the backbone and an iteration decider through lookahead depth supervision, which uses online labels indicating whether further iteration improves the prediction. TaH2 improves both the efficiency and attainable accuracy of test-time scaling. On challenging AIME benchmarks, TaH2 improves the accuracy-compute slope by 53% (2.74 vs. 1.79) over the non-looped baseline, exceeding the baseline's peak accuracy by about 3.4 points at matched test-time compute. As the maximum iteration depth increases, existing looped models largely plateau, while TaH2's gain over the non-looped baseline continues to grow from +2.8 points at depth 2 to +3.9 points at depth 8. Our code is available at https://github.com/thu-nics/TaH.",
    "published_at": "2026-09-28T00:00:00Z",
    "metrics": {
-    "upvotes": 48,
+    "upvotes": 49,
     "github_stars": 91
    },
    "extra": {
@@ -3577,7 +3711,7 @@
    "summary": "Large language model (LLM) agents increasingly undertake extreme-long (xlong) horizon tasks, where a single execution can span hours, hundreds of model--environment interactions, and nearly 1M tokens per rollout. Applying online reinforcement learning (RL) to such executions poses two fundamental challenges: (1) severe execution variance and prolonged rollout delays cause massive GPU idling; and (2) complex non-linear branching generates massive trajectory redundancy, crippling training efficiency. To address these, we presents QwenGyre, an end-to-end framework for xlong-horizon online RL. QwenGyre elastically reallocates GPUs between rollout and training without interrupting live executions, while its trajectory processor reconstructs branching histories, scores partial progress, and deduplicates redundant paths to bound training costs. Scaled to our flagship model, Qwen~3.8 2.4T, with 700K tokens per rollout, QwenGyre yields a 6.0% absolute gain on NL2RepoBench (52.5% to 58.5%) in 48 steps. Across our evaluations on diverse domains of training datasets, QwenGyre delivers up to 1.85times and 1.78times speedups over Colocate and Async, respectively.",
    "published_at": "2026-09-27T00:00:00Z",
    "metrics": {
-    "upvotes": 31,
+    "upvotes": 32,
     "github_stars": null
    },
    "extra": {
@@ -3667,7 +3801,7 @@
    "summary": "Reward models underpin the alignment of large language models, yet the dominant designs reduce each prompt--response pair to a point estimate or to a distribution from a fixed parametric family. This is at odds with human preference, which is inherently multimodal: the same response can be reasonably judged in many ways, and no single family covers all of them. To better fit this structure, we introduce DRM, a Diffusion Reward Model that recasts reward modeling as conditional density estimation over p(rmid x,y). Conditioned on a frozen LLM encoder, a lightweight Diffusion Transformer denoises Gaussian noise into a reward vector, placing no parametric assumption on the output distribution and naturally representing its multimodal structure. A single architecture handles both multi-attribute regression and pairwise preference data, and at inference N samples form an empirical reward distribution that can be aggregated into a scalar, a variance, or quantiles. Across five benchmarks, DRM matches or surpasses baselines under matched data and backbone, stays competitive with much larger discriminative, distributional, and generative RMs despite its modest training scale, and recovers multimodal reward structure where conventional heads collapse to a point. Uncertainty-aware rejection and lower-confidence-bound (LCB) aggregation further demonstrate that DRM can exploit distributional information beyond a scalar reward to improve reward-model decisions. Downstream RLHF experiments additionally show that using DRM as the training-time reward leads to improved policy performance, directly validating the practical benefit of diffusion-based reward modeling for RLHF training.",
    "published_at": "2026-09-27T00:00:00Z",
    "metrics": {
-    "upvotes": 26,
+    "upvotes": 27,
     "github_stars": 22
    },
    "extra": {
@@ -3805,6 +3939,42 @@
   },
   {
    "source": "hf_papers",
+   "id": "2609.32862",
+   "title": "RoboFoundry: System-as-Policy Evolution for Self-Learning Embodied Agents",
+   "url": "https://huggingface.co/papers/2609.32862",
+   "summary": "A foundation model should not act in isolation as an embodied agent. Yet, existing methods often optimize individual components of the agent stack, such as memory, context, skills, or action interfaces, rather than treating the supporting system itself as a unified policy. Moreover, interaction alone does not yield self-improvement unless execution experience is converted into persistent, validated system changes. We therefore propose RoboFoundry, the first embodied agentic framework that formulates this process as Self-Evolving System-as-Policy. RoboFoundry diagnoses capability gaps in decision-making and memory management, converts execution traces into validated task-specific system updates, and promotes recurring improvements to the general system. Evolution operates over two complementary surfaces: a context system that manages active internal context and persistent file-system memory, and a hierarchical skill system that organizes atomic skills, reusable compositions, and failure-conditioned recovery. A shared semantic interface separates embodiment-invariant decisions from embodiment-specific execution, allowing evolved system capabilities to transfer across heterogeneous robots. On EmbodiedBench, RoboFoundry achieves state-of-the-art performance, notably improving GPT-5.5 by 27.8%. It also brings Qwen3.7-Plus to near parity with GPT-5.5 (70.3% vs. 72.7%), showing consistent gains from system-as-policy evolution across foundation models. For long-horizon memory, RoboFoundry outperforms all baselines on RoboMemArena by at least 39.0%, even against methods assisted by external foundation models. On LIBERO-PRO, it further outperforms Cap-Agent0 by 243.8%-679.7% across all perturbation types. In real-world deployments, RoboFoundry demonstrates zero-shot transfer and online evolution across robots and tasks, highlighting its potential for fully autonomous embodied agents.",
+   "published_at": "2026-09-26T00:00:00Z",
+   "metrics": {
+    "upvotes": 20,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.32862",
+    "github": null,
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.34972",
+   "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+   "url": "https://huggingface.co/papers/2609.34972",
+   "summary": "Long visual token sequences often account for a substantial fraction of the computational overhead in multimodal large language models~(MLLMs). Existing approaches reduce this cost by pruning redundant visual tokens, but permanently discard visual evidence that may become useful in subsequent layers. We instead ask whether all visual tokens can be preserved while reducing the cost of repeatedly evolving the representations through the Transformer. To answer this question, we perform low-rank interventions on visual-to-text information flow. We find that, after visual-to-text attention is blocked, restoring only a few directions recovers most of the lost accuracy, suggesting the relevant visual influence is concentrated in a low-dimensional subspace. We further observe strong predictability in layer-specific visual states: lightweight MLPs approximate them with high cosine similarity and low reconstruction error. Motivated by these findings, we propose δ-Vision, which replaces repeated Transformer evolution of visual tokens with lightweight low-rank adapters that construct layer-wise visual memories while preserving all visual tokens for text retrieval. Across image and video benchmarks, δ-Vision achieves higher accuracy than visual token pruning baselines at comparable or lower computation, while delivering competitive inference efficiency without discarding visual tokens.",
+   "published_at": "2026-09-28T00:00:00Z",
+   "metrics": {
+    "upvotes": 20,
+    "github_stars": 5
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.34972",
+    "github": "https://github.com/declare-lab/delta-Vision",
+    "organization": "Tencent"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
    "id": "2609.32814",
    "title": "Change the Product, Keep the Parameters: Associative Algebra Layers for Transformers",
    "url": "https://huggingface.co/papers/2609.32814",
@@ -3816,24 +3986,6 @@
    },
    "extra": {
     "arxiv": "https://arxiv.org/abs/2609.32814",
-    "github": null,
-    "organization": null
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_papers",
-   "id": "2609.32862",
-   "title": "RoboFoundry: System-as-Policy Evolution for Self-Learning Embodied Agents",
-   "url": "https://huggingface.co/papers/2609.32862",
-   "summary": "A foundation model should not act in isolation as an embodied agent. Yet, existing methods often optimize individual components of the agent stack, such as memory, context, skills, or action interfaces, rather than treating the supporting system itself as a unified policy. Moreover, interaction alone does not yield self-improvement unless execution experience is converted into persistent, validated system changes. We therefore propose RoboFoundry, the first embodied agentic framework that formulates this process as Self-Evolving System-as-Policy. RoboFoundry diagnoses capability gaps in decision-making and memory management, converts execution traces into validated task-specific system updates, and promotes recurring improvements to the general system. Evolution operates over two complementary surfaces: a context system that manages active internal context and persistent file-system memory, and a hierarchical skill system that organizes atomic skills, reusable compositions, and failure-conditioned recovery. A shared semantic interface separates embodiment-invariant decisions from embodiment-specific execution, allowing evolved system capabilities to transfer across heterogeneous robots. On EmbodiedBench, RoboFoundry achieves state-of-the-art performance, notably improving GPT-5.5 by 27.8%. It also brings Qwen3.7-Plus to near parity with GPT-5.5 (70.3% vs. 72.7%), showing consistent gains from system-as-policy evolution across foundation models. For long-horizon memory, RoboFoundry outperforms all baselines on RoboMemArena by at least 39.0%, even against methods assisted by external foundation models. On LIBERO-PRO, it further outperforms Cap-Agent0 by 243.8%-679.7% across all perturbation types. In real-world deployments, RoboFoundry demonstrates zero-shot transfer and online evolution across robots and tasks, highlighting its potential for fully autonomous embodied agents.",
-   "published_at": "2026-09-26T00:00:00Z",
-   "metrics": {
-    "upvotes": 19,
-    "github_stars": null
-   },
-   "extra": {
-    "arxiv": "https://arxiv.org/abs/2609.32862",
     "github": null,
     "organization": null
    },
@@ -3859,24 +4011,6 @@
   },
   {
    "source": "hf_papers",
-   "id": "2609.34972",
-   "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
-   "url": "https://huggingface.co/papers/2609.34972",
-   "summary": "Long visual token sequences often account for a substantial fraction of the computational overhead in multimodal large language models~(MLLMs). Existing approaches reduce this cost by pruning redundant visual tokens, but permanently discard visual evidence that may become useful in subsequent layers. We instead ask whether all visual tokens can be preserved while reducing the cost of repeatedly evolving the representations through the Transformer. To answer this question, we perform low-rank interventions on visual-to-text information flow. We find that, after visual-to-text attention is blocked, restoring only a few directions recovers most of the lost accuracy, suggesting the relevant visual influence is concentrated in a low-dimensional subspace. We further observe strong predictability in layer-specific visual states: lightweight MLPs approximate them with high cosine similarity and low reconstruction error. Motivated by these findings, we propose δ-Vision, which replaces repeated Transformer evolution of visual tokens with lightweight low-rank adapters that construct layer-wise visual memories while preserving all visual tokens for text retrieval. Across image and video benchmarks, δ-Vision achieves higher accuracy than visual token pruning baselines at comparable or lower computation, while delivering competitive inference efficiency without discarding visual tokens.",
-   "published_at": "2026-09-28T00:00:00Z",
-   "metrics": {
-    "upvotes": 18,
-    "github_stars": 5
-   },
-   "extra": {
-    "arxiv": "https://arxiv.org/abs/2609.34972",
-    "github": "https://github.com/declare-lab/delta-Vision",
-    "organization": "Tencent"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_papers",
    "id": "2609.33616",
    "title": "SpatialSpeak: QA-Native Reconstruction with Local and Global Context for Spatial Chain-of-Thought Reasoning",
    "url": "https://huggingface.co/papers/2609.33616",
@@ -3890,6 +4024,24 @@
     "arxiv": "https://arxiv.org/abs/2609.33616",
     "github": "https://github.com/yangcaoai/SpatialSpeak-VLM",
     "organization": "The Hong Kong University of Science and Technology"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.32444",
+   "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It",
+   "url": "https://huggingface.co/papers/2609.32444",
+   "summary": "We study training-inference mismatch in reinforcement learning with verifiable rewards (RLVR) for large language models, where rollouts are sampled by an inference engine while gradients are computed by a training engine, and the two engines assign different probabilities to the same tokens. To account for this discrepancy in policy updates, we introduce calibrated importance sampling (CIS). CIS is motivated by an empirically supported logit-displacement characterization that expresses the mismatch as an additive displacement varepsilon_t in log-odds, determined by the per-logit perturbation before the softmax, whose distribution is approximately invariant to token confidence. This characterization motivates a confidence-aware truncation: large positive displacements are truncated at a single constant threshold, which maps back to an importance-ratio cap that tightens as token confidence increases. Theoretically, we show that CIS replaces the unbounded second moment that governs the error of exact importance sampling with a term bounded by a constant, at the cost of a bias controlled by the truncated excess. In evaluation across three mixture-of-experts models and five mathematical reasoning benchmarks, CIS achieves the highest five-benchmark average on all three models among the evaluated baselines. Diagnostic analyses show that CIS places less truncation bias on low-confidence tokens than truncated importance sampling, while upward clipping of small importance weights reduces held-out accuracy.",
+   "published_at": "2026-09-26T00:00:00Z",
+   "metrics": {
+    "upvotes": 18,
+    "github_stars": 4
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.32444",
+    "github": "https://github.com/kzhao5/CIS-RL",
+    "organization": null
    },
    "also_in": []
   },
@@ -3913,19 +4065,19 @@
   },
   {
    "source": "hf_papers",
-   "id": "2609.32444",
-   "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It",
-   "url": "https://huggingface.co/papers/2609.32444",
-   "summary": "We study training-inference mismatch in reinforcement learning with verifiable rewards (RLVR) for large language models, where rollouts are sampled by an inference engine while gradients are computed by a training engine, and the two engines assign different probabilities to the same tokens. To account for this discrepancy in policy updates, we introduce calibrated importance sampling (CIS). CIS is motivated by an empirically supported logit-displacement characterization that expresses the mismatch as an additive displacement varepsilon_t in log-odds, determined by the per-logit perturbation before the softmax, whose distribution is approximately invariant to token confidence. This characterization motivates a confidence-aware truncation: large positive displacements are truncated at a single constant threshold, which maps back to an importance-ratio cap that tightens as token confidence increases. Theoretically, we show that CIS replaces the unbounded second moment that governs the error of exact importance sampling with a term bounded by a constant, at the cost of a bias controlled by the truncated excess. In evaluation across three mixture-of-experts models and five mathematical reasoning benchmarks, CIS achieves the highest five-benchmark average on all three models among the evaluated baselines. Diagnostic analyses show that CIS places less truncation bias on low-confidence tokens than truncated importance sampling, while upward clipping of small importance weights reduces held-out accuracy.",
-   "published_at": "2026-09-26T00:00:00Z",
+   "id": "2609.35718",
+   "title": "Hard Vision, Easy Vision: What GPT-6 Astra Reveals Across Computer Vision",
+   "url": "https://huggingface.co/papers/2609.35718",
+   "summary": "Frontier general-purpose systems are rapidly expanding beyond visual understanding into capabilities traditionally handled by dedicated computer-vision models. As these capabilities expand, a central question for the computer-vision community is how far this reach extends, and what remains hard. We evaluate GPT-6 Astra alongside five frontier general-purpose AI systems across 34 capabilities and 55 benchmarks spanning nine areas of computer vision. We compare their performance with dedicated models and humans where suitable references are available. Astra demonstrates broad visual capability, with substantial gains over other frontier systems in visual and spatial reasoning and several forms of structured prediction. Across the state-of-the-art systems, a consistent pattern emerges. Capabilities involving semantic interpretation, reasoning, and object-centric prediction increasingly approach or reach available reference levels. In contrast, larger gaps remain when tasks require metric geometric accuracy, faithful reconstruction, temporally consistent dense prediction, or specialized fine-grained visual knowledge. Additional reasoning and specialist tools close selected gaps, but their benefits vary across capabilities. These results map a changing landscape of computer vision in which increasingly sophisticated visual tasks are accessible through a general-purpose interface, while precise and fidelity-sensitive perception remains an important frontier.",
+   "published_at": "2026-09-28T00:00:00Z",
    "metrics": {
-    "upvotes": 17,
-    "github_stars": 4
+    "upvotes": 16,
+    "github_stars": 13
    },
    "extra": {
-    "arxiv": "https://arxiv.org/abs/2609.32444",
-    "github": "https://github.com/kzhao5/CIS-RL",
-    "organization": null
+    "arxiv": "https://arxiv.org/abs/2609.35718",
+    "github": "https://github.com/mbzuai-oryx/frontier-vision",
+    "organization": "Mohamed Bin Zayed University of Artificial Intelligence"
    },
    "also_in": []
   },
@@ -3944,24 +4096,6 @@
     "arxiv": "https://arxiv.org/abs/2609.33382",
     "github": "https://github.com/ZJU-ACES-ISE/WideSWE",
     "organization": null
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_papers",
-   "id": "2609.35718",
-   "title": "Hard Vision, Easy Vision: What GPT-6 Astra Reveals Across Computer Vision",
-   "url": "https://huggingface.co/papers/2609.35718",
-   "summary": "Frontier general-purpose systems are rapidly expanding beyond visual understanding into capabilities traditionally handled by dedicated computer-vision models. As these capabilities expand, a central question for the computer-vision community is how far this reach extends, and what remains hard. We evaluate GPT-6 Astra alongside five frontier general-purpose AI systems across 34 capabilities and 55 benchmarks spanning nine areas of computer vision. We compare their performance with dedicated models and humans where suitable references are available. Astra demonstrates broad visual capability, with substantial gains over other frontier systems in visual and spatial reasoning and several forms of structured prediction. Across the state-of-the-art systems, a consistent pattern emerges. Capabilities involving semantic interpretation, reasoning, and object-centric prediction increasingly approach or reach available reference levels. In contrast, larger gaps remain when tasks require metric geometric accuracy, faithful reconstruction, temporally consistent dense prediction, or specialized fine-grained visual knowledge. Additional reasoning and specialist tools close selected gaps, but their benefits vary across capabilities. These results map a changing landscape of computer vision in which increasingly sophisticated visual tasks are accessible through a general-purpose interface, while precise and fidelity-sensitive perception remains an important frontier.",
-   "published_at": "2026-09-28T00:00:00Z",
-   "metrics": {
-    "upvotes": 15,
-    "github_stars": 6
-   },
-   "extra": {
-    "arxiv": "https://arxiv.org/abs/2609.35718",
-    "github": "https://github.com/mbzuai-oryx/frontier-vision",
-    "organization": "Mohamed Bin Zayed University of Artificial Intelligence"
    },
    "also_in": []
   },
@@ -4009,7 +4143,7 @@
    "summary": "Visual backbones have evolved from Convolutional Neural Networks (CNNs) with local aggregation to Vision Transformers (ViTs) with global interactions, State-Space Models (SSMs) with input-dependent state transitions, and Test-Time Training (TTT) layers that adapt an inner learner while processing an image. Across this progression, visual computation has become increasingly adaptive to each input, yet the rules governing that adaptation remain largely prescribed by the trained backbone. We introduce VisionHOPE, the first generic visual backbone formulated as a self-modifying learning system, in which what the model remembers and how it learns co-evolve within an image. Building on the self-referential construction of Nested Learning (NL), VisionHOPE realizes this co-evolution through five coupled memories that store content, generate key and value representations, and govern learning rate and retention. These memories evolve jointly as visual context accumulates along each scan. However, directly applying the unconstrained self-referential update to a visual backbone leads to instability. We therefore derive a stability-matched step-size control scheme that combines a soft cap on self-referential injection with a spectral clamp on the retained memory transition, and prove that the resulting memory dynamics are non-expansive along each scan. For two-dimensional feature maps, we adapt NL's chunk formulation by aligning chunks with image rows and columns across four directional scans. The proposed VisionHOPE achieves competitive results on ImageNet-1K, COCO, and ADE20K, establishing self-modifying learning systems as a practical foundation for general-purpose visual backbones. The code is available at https://github.com/PSRben/VisionHOPE.",
    "published_at": "2026-09-27T00:00:00Z",
    "metrics": {
-    "upvotes": 13,
+    "upvotes": 14,
     "github_stars": 73
    },
    "extra": {
@@ -4118,7 +4252,7 @@
    "published_at": "2026-09-28T00:00:00Z",
    "metrics": {
     "upvotes": 10,
-    "github_stars": 1
+    "github_stars": 9
    },
    "extra": {
     "arxiv": "https://arxiv.org/abs/2609.35134",
@@ -4189,8 +4323,8 @@
    "summary": "",
    "published_at": "2026-09-29T17:06:45Z",
    "metrics": {
-    "points": 945,
-    "comments": 830
+    "points": 990,
+    "comments": 865
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896586"
@@ -4211,19 +4345,13 @@
    "summary": "",
    "published_at": "2026-09-29T17:07:57Z",
    "metrics": {
-    "points": 624,
-    "comments": 482
+    "points": 667,
+    "comments": 525
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896604"
    },
-   "also_in": [
-    {
-     "source": "rss",
-     "id": "https://openai.com/index/introducing-dots",
-     "metrics": {}
-    }
-   ]
+   "also_in": []
   },
   {
    "source": "hn",
@@ -4233,8 +4361,8 @@
    "summary": "",
    "published_at": "2026-09-29T09:03:41Z",
    "metrics": {
-    "points": 417,
-    "comments": 133
+    "points": 419,
+    "comments": 136
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49890226"
@@ -4249,8 +4377,8 @@
    "summary": "",
    "published_at": "2026-09-29T11:13:54Z",
    "metrics": {
-    "points": 235,
-    "comments": 91
+    "points": 236,
+    "comments": 92
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49891290"
@@ -4265,11 +4393,27 @@
    "summary": "",
    "published_at": "2026-09-29T17:31:26Z",
    "metrics": {
-    "points": 225,
-    "comments": 216
+    "points": 233,
+    "comments": 223
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49897075"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "49906637",
+   "title": "Pi.dev: You Said No MCP",
+   "url": "https://earendil.com/posts/you-said-no-mcp/",
+   "summary": "",
+   "published_at": "2026-09-30T09:55:23Z",
+   "metrics": {
+    "points": 219,
+    "comments": 96
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49906637"
    },
    "also_in": []
   },
@@ -4281,11 +4425,27 @@
    "summary": "",
    "published_at": "2026-09-29T17:26:27Z",
    "metrics": {
-    "points": 205,
-    "comments": 236
+    "points": 210,
+    "comments": 245
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896975"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "49905633",
+   "title": "Why Is Sam Altman a Free Man?",
+   "url": "https://prospect.org/2026/09/29/artificial-intelligence-agents-openai-microsoft-sam-altman-greg-brockman-ah-nice/",
+   "summary": "",
+   "published_at": "2026-09-30T07:32:40Z",
+   "metrics": {
+    "points": 182,
+    "comments": 159
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49905633"
    },
    "also_in": []
   },
@@ -4298,7 +4458,7 @@
    "published_at": "2026-09-29T14:25:41Z",
    "metrics": {
     "points": 171,
-    "comments": 143
+    "comments": 144
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49893876"
@@ -4313,8 +4473,8 @@
    "summary": "",
    "published_at": "2026-09-29T08:40:37Z",
    "metrics": {
-    "points": 165,
-    "comments": 62
+    "points": 166,
+    "comments": 64
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49890051"
@@ -4329,7 +4489,7 @@
    "summary": "",
    "published_at": "2026-09-29T14:15:24Z",
    "metrics": {
-    "points": 157,
+    "points": 158,
     "comments": 41
    },
    "extra": {
@@ -4345,11 +4505,27 @@
    "summary": "",
    "published_at": "2026-09-29T11:06:25Z",
    "metrics": {
-    "points": 125,
-    "comments": 5
+    "points": 148,
+    "comments": 7
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49891203"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "49903862",
+   "title": "RSS Feeds for Last.fm",
+   "url": "https://lfm.xiffy.nl/",
+   "summary": "",
+   "published_at": "2026-09-30T03:00:05Z",
+   "metrics": {
+    "points": 97,
+    "comments": 29
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49903862"
    },
    "also_in": []
   },
@@ -4377,46 +4553,14 @@
   },
   {
    "source": "hn",
-   "id": "49905633",
-   "title": "Why Is Sam Altman a Free Man?",
-   "url": "https://prospect.org/2026/09/29/artificial-intelligence-agents-openai-microsoft-sam-altman-greg-brockman-ah-nice/",
-   "summary": "",
-   "published_at": "2026-09-30T07:32:40Z",
-   "metrics": {
-    "points": 92,
-    "comments": 51
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49905633"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
-   "id": "49885493",
-   "title": "Show HN: Pac-Bench – How well can models one-shot a Pac-Man game?",
-   "url": "https://jonclegg.github.io/pacman-bakeoff/",
-   "summary": "",
-   "published_at": "2026-09-28T22:43:12Z",
-   "metrics": {
-    "points": 78,
-    "comments": 50
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49885493"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
    "id": "49903993",
    "title": "PSSA: A non-transformer language model written from scratch in Rust",
    "url": "https://github.com/Sparticle62ops/pssa",
    "summary": "",
    "published_at": "2026-09-30T03:19:54Z",
    "metrics": {
-    "points": 77,
-    "comments": 32
+    "points": 80,
+    "comments": 33
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49903993"
@@ -4448,26 +4592,10 @@
    "published_at": "2026-09-29T07:04:26Z",
    "metrics": {
     "points": 76,
-    "comments": 126
+    "comments": 129
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49889275"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
-   "id": "49903862",
-   "title": "RSS Feeds for Last.fm",
-   "url": "https://lfm.xiffy.nl/",
-   "summary": "",
-   "published_at": "2026-09-30T03:00:05Z",
-   "metrics": {
-    "points": 73,
-    "comments": 14
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49903862"
    },
    "also_in": []
   },
@@ -4479,11 +4607,27 @@
    "summary": "",
    "published_at": "2026-09-29T17:15:56Z",
    "metrics": {
-    "points": 72,
-    "comments": 23
+    "points": 76,
+    "comments": 24
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896757"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "49902019",
+   "title": "NRC issues first U.S. construction permit for a BWRX-300 small modular reactor",
+   "url": "https://www.gevernova.com/news/press-releases/nrc-issues-first-us-construction-permit-bwrx-300-small-modular-reactor-tva-clinch-river",
+   "summary": "",
+   "published_at": "2026-09-29T23:03:38Z",
+   "metrics": {
+    "points": 64,
+    "comments": 30
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49902019"
    },
    "also_in": []
   },
@@ -4505,22 +4649,6 @@
   },
   {
    "source": "hn",
-   "id": "49886416",
-   "title": "OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns",
-   "url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
-   "summary": "",
-   "published_at": "2026-09-29T00:34:27Z",
-   "metrics": {
-    "points": 62,
-    "comments": 100
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49886416"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
    "id": "49899453",
    "title": "McDonald's push to have AI price your Big Mac",
    "url": "https://www.cnbc.com/2026/09/29/inside-mcdonalds-push-ai-price-big-mac.html",
@@ -4528,7 +4656,7 @@
    "published_at": "2026-09-29T19:58:50Z",
    "metrics": {
     "points": 55,
-    "comments": 29
+    "comments": 30
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49899453"
@@ -4559,7 +4687,7 @@
    "summary": "",
    "published_at": "2026-09-29T12:01:07Z",
    "metrics": {
-    "points": 48,
+    "points": 49,
     "comments": 2
    },
    "extra": {
@@ -4585,22 +4713,6 @@
   },
   {
    "source": "hn",
-   "id": "49902019",
-   "title": "NRC issues first U.S. construction permit for a BWRX-300 small modular reactor",
-   "url": "https://www.gevernova.com/news/press-releases/nrc-issues-first-us-construction-permit-bwrx-300-small-modular-reactor-tva-clinch-river",
-   "summary": "",
-   "published_at": "2026-09-29T23:03:38Z",
-   "metrics": {
-    "points": 38,
-    "comments": 12
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49902019"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
    "id": "49888937",
    "title": "Uncensored and Offensive Security AI Models Benchmark",
    "url": "https://github.com/JoasASantos/Offensive-Security-AI-Models",
@@ -4617,17 +4729,17 @@
   },
   {
    "source": "hn",
-   "id": "49886228",
-   "title": "GPT-6 Astra is the best vision model we have tested",
-   "url": "https://blog.roboflow.com/gpt-6-astra-vision/",
+   "id": "49889780",
+   "title": "Meta's new AI agent built lists of people in vulnerable groups on request",
+   "url": "https://hntrbrk.com/breaking-news/muse-doxxing",
    "summary": "",
-   "published_at": "2026-09-29T00:10:30Z",
+   "published_at": "2026-09-29T08:06:40Z",
    "metrics": {
-    "points": 34,
+    "points": 32,
     "comments": 0
    },
    "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49886228"
+    "discussion": "https://news.ycombinator.com/item?id=49889780"
    },
    "also_in": []
   },
@@ -4639,7 +4751,7 @@
    "summary": "",
    "published_at": "2026-09-29T22:52:30Z",
    "metrics": {
-    "points": 30,
+    "points": 32,
     "comments": 20
    },
    "extra": {
@@ -4648,18 +4760,28 @@
    "also_in": []
   },
   {
-   "source": "hn",
-   "id": "49885133",
-   "title": "OpenAI Scraps Release of New AI Model over Safety Concerns",
-   "url": "https://www.wsj.com/tech/ai/openai-chatgpt-model-release-cancel-safety-5a2f9f42",
-   "summary": "",
-   "published_at": "2026-09-28T22:07:59Z",
-   "metrics": {
-    "points": 30,
-    "comments": 5
-   },
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
+   "title": "Here’s how tech leaders will self-police AI safety under Trump’s deal",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
+   "summary": "We now have the full details of the \"morally binding\" AI safety deal announced by President Trump yesterday, in which top executives agreed to self-regulate their artificial intelligence technology. The accord, officially titled the Joint Commitment On Frontier Responsibilities, was shared online by tech founder and presidential advisor David Sacks, and has been signed by [&#8230;]",
+   "published_at": "2026-09-30T12:24:32Z",
+   "metrics": {},
    "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49885133"
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/09/30/airbnb-adds-ai-search-more-social-features/",
+   "title": "Airbnb adds AI search, more social features",
+   "url": "https://techcrunch.com/2026/09/30/airbnb-adds-ai-search-more-social-features/",
+   "summary": "Airbnb is also launching new services such as meal delivery and laundry in select locations.",
+   "published_at": "2026-09-30T12:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
    },
    "also_in": []
   },
@@ -5120,19 +5242,6 @@
   },
   {
    "source": "rss",
-   "id": "https://www.theverge.com/ai-artificial-intelligence/1001838/anthropic-ipo-prospectus-ai-safety-threat",
-   "title": "Anthropic warns of ‘catastrophic’ AI risks in its own IPO filing",
-   "url": "https://www.theverge.com/ai-artificial-intelligence/1001838/anthropic-ipo-prospectus-ai-safety-threat",
-   "summary": "As Anthropic gears up for its greatly anticipated public debut, a preview of the company's IPO filing reportedly details its mounting losses, leadership proposals to retain power, and how its AI development plans could \"further increase the risk that our models cause harm.\" These disclosures come as Anthropic eyes a $2 trillion valuation, more than [&#8230;]",
-   "published_at": "2026-09-29T11:48:27Z",
-   "metrics": {},
-   "extra": {
-    "feed": "The Verge AI"
-   },
-   "also_in": []
-  },
-  {
-   "source": "rss",
    "id": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
    "title": "Anthropic’s prospectus details losses, growth, and, yes, a warning that its AI could end humanity",
    "url": "https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/",
@@ -5141,45 +5250,6 @@
    "metrics": {},
    "extra": {
     "feed": "TechCrunch AI"
-   },
-   "also_in": []
-  },
-  {
-   "source": "rss",
-   "id": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
-   "title": "Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort",
-   "url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
-   "summary": "Thirteen of the 18 startups in Peak XV’s latest Surge cohort are targeting global markets, while more than half are based in India.",
-   "published_at": "2026-09-29T00:30:00Z",
-   "metrics": {},
-   "extra": {
-    "feed": "TechCrunch AI"
-   },
-   "also_in": []
-  },
-  {
-   "source": "rss",
-   "id": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
-   "title": "OpenAI reportedly ditches model over safety concerns",
-   "url": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
-   "summary": "A top executive at the AI lab told the Wall Street Journal that the model in question had displayed a poor aptitude for following orders.",
-   "published_at": "2026-09-28T23:39:20Z",
-   "metrics": {},
-   "extra": {
-    "feed": "TechCrunch AI"
-   },
-   "also_in": []
-  },
-  {
-   "source": "rss",
-   "id": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
-   "title": "Claude Sonnet 5.5",
-   "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
-   "summary": "Claude Sonnet 5.5 New Sonnet model from Anthropic today. They say it \"runs 30%+ faster, and costs up to 30% less for most work\" - it's priced the same as Sonnet 5 but appears to beat it on every benchmark, and should be cheaper to run as well. Here are some pelicans riding bicycles . Sonnet 5.5 suffered from the same bug as Opus 5.5 : the \"max\" thinking effort pelican thought for 128,000 tokens (at a cost of $1.28) before running out of tokens and failing to produce an SVG. Here's the pelican it gave me for thinking effort \"xhigh\", at a cost of 5.74 cents and taking 41 seconds: Sonnet 5.5 appe",
-   "published_at": "2026-09-28T22:07:38Z",
-   "metrics": {},
-   "extra": {
-    "feed": "Simon Willison"
    },
    "also_in": []
   }
