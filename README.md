@@ -105,3 +105,15 @@ digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個
 ```bash
 node .integration/scripts/run-tests.mjs   # 離線測試，不連網
 ```
+
+## 授權
+
+程式碼、設定檔、測試與文件（包含 `.integration/` 與 `openspec/` 的開發流程工具）以 [MIT License](LICENSE) 釋出。
+
+以下內容**不在** MIT 授權範圍內：
+
+- `data/`：從 Hacker News、Hugging Face、GitHub、各 RSS 來源抓取的標題、摘要與指標，著作權屬於原作者與原網站
+- `data/digest/` 與 GitHub Pages 上的早報內容：由 Gemini 依上述資料改寫，引用的原始內容仍屬原作者；每則都附有來源連結
+- `samples/`：手動整理的範例早報，同樣包含第三方內容的摘要
+
+使用這些內容時，請以各來源自身的授權與使用條款為準。
