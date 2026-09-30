@@ -2,6 +2,8 @@
 
 每天早上 9 點（台北時間）整理 AI Agent 圈的新聞、新模型、新架構與論文、GitHub 爆紅專案，產生繁體中文的深度早報網頁，並推送重點到 Telegram。
 
+網頁：<https://arku02.github.io/ai-daily/> · Telegram：@arku_ai_daily_bot
+
 範例：[samples/2026-09-30.html](samples/2026-09-30.html)（手動整理，用來確認內容方向）
 
 ## 目前進度
@@ -11,7 +13,7 @@
 | 1 | 多來源抓取、去重、星數快照 | ✅ 已實作 |
 | 2 | LLM 篩選、分類、寫摘要與「你可以怎麼用」 | ✅ 已實作 |
 | 3 | 產生網頁、Telegram 推送、回饋按鈕 | ✅ 已實作 |
-| 4 | GitHub Actions 每日排程、GitHub Pages 發布 | ⬜ |
+| 4 | GitHub Actions 每日排程、GitHub Pages 發布 | ✅ 已上線 |
 
 ## 安裝
 
@@ -67,6 +69,19 @@ digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個
 - 兩種回饋：Telegram 訊息下的按鈕評「今天整體」，網頁上每則的 👎👍⭐ 評「單則」（會開啟 Telegram 傳給 bot）
 - 回饋存成 `feedback.jsonl`，每行一筆；bot 的「已記錄」回覆要等 collect 執行時才會出現
 - Telegram 只保留約 24 小時的未確認更新，collect 要定期執行（第 4 步排程）
+
+## 自動排程（GitHub Actions）
+
+| workflow | 時間 | 做什麼 |
+|---|---|---|
+| [daily](.github/workflows/daily.yml) | 每天台北 08:45（GitHub 排程可能延遲） | fetch → digest → render → 提交 data → 部署 Pages → 推送 Telegram |
+| [collect](.github/workflows/collect.yml) | 每 6 小時 | 收 Telegram 回饋，寫入私人 repo `ai-daily-feedback` |
+
+- 兩者都可在 Actions 頁面手動 **Run workflow**；任何一步失敗都會在 Telegram 收到通知
+- Gemini 壅塞（503）時程式會等 20、60 秒重試，仍失敗則整個 digest 5 分鐘後重跑一次
+- 需要的 Secrets：`GEMINI_API_KEY`、`TELEGRAM_BOT_TOKEN`、`TELEGRAM_CHAT_ID`、`PROFILE_TOML`（profile.toml 全文）、`FEEDBACK_REPO_TOKEN`
+- ⚠️ `FEEDBACK_REPO_TOKEN` 是只能讀寫 `ai-daily-feedback` 的 fine-grained token，**2027-09-30 到期**，到期前要重建並更新 Secret，否則 collect 會失敗
+- 修改 `profile.toml` 後，記得同步更新 `PROFILE_TOML` Secret
 
 ## 資料來源
 

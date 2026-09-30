@@ -33,6 +33,7 @@ test_R1_per_source_cap_and_order (workflow_test_1.TestR1Candidates.test_R1_per_s
 test_R1_trending_sorted_by_stars_today (workflow_test_1.TestR1Candidates.test_R1_trending_sorted_by_stars_today) ... ok
 test_R2_exclusions_in_prompt (workflow_test_1.TestR2Selection.test_R2_exclusions_in_prompt) ... ok
 test_R2_invalid_selections_dropped (workflow_test_1.TestR2Selection.test_R2_invalid_selections_dropped) ... ok
+test_R2_minimum_per_section_in_prompt (workflow_test_1.TestR2Selection.test_R2_minimum_per_section_in_prompt) ... ok
 test_R2_ref_used_once_across_sections (workflow_test_1.TestR2Selection.test_R2_ref_used_once_across_sections) ... ok
 test_R2_section_cap (workflow_test_1.TestR2Selection.test_R2_section_cap) ... ok
 test_R2_try_one_ranked_candidates (workflow_test_1.TestR2Selection.test_R2_try_one_ranked_candidates) ... ok
@@ -56,6 +57,9 @@ test_R5_model_list_has_no_retired_model (workflow_test_1.TestR5Client.test_R5_mo
 test_R5_non_retryable_does_not_wait (workflow_test_1.TestR5Client.test_R5_non_retryable_does_not_wait) ... ok
 test_R5_quota_fallback (workflow_test_1.TestR5Client.test_R5_quota_fallback) ... ok
 test_R5_retired_model_not_retried (workflow_test_1.TestR5Client.test_R5_retired_model_not_retried) ... ok
+test_R2_empty_section_reselected (workflow_test_1.TestR6Output.test_R2_empty_section_reselected) ... ok
+test_R2_no_reselect_when_complete (workflow_test_1.TestR6Output.test_R2_no_reselect_when_complete) ... ok
+test_R2_worse_reselection_keeps_first (workflow_test_1.TestR6Output.test_R2_worse_reselection_keeps_first) ... ok
 test_R4_try_one_falls_through_to_next_candidate (workflow_test_1.TestR6Output.test_R4_try_one_falls_through_to_next_candidate) ... ok
 test_R6_dry_run (workflow_test_1.TestR6Output.test_R6_dry_run) ... ok
 test_R6_llm_failure_exit_1 (workflow_test_1.TestR6Output.test_R6_llm_failure_exit_1) ... ok
@@ -106,6 +110,6 @@ test_R5_every_job_notifies (workflow_test_3.TestR5FailureNotice.test_R5_every_jo
 test_R6_commit_steps (workflow_test_3.TestR6SafeCommits.test_R6_commit_steps) ... ok
 
 ----------------------------------------------------------------------
-Ran 106 tests in 0.601s
+Ran 110 tests in 0.656s
 
 OK
