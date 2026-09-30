@@ -1,0 +1,8 @@
+{
+  "change": "add-publish-feedback",
+  "capturedAt": "2026-09-30T11:08:35.108Z",
+  "specs": {
+    "openspec/specs/llm-digest/spec.md": "81da905e0a0a30a0e6d11f997a7dc31bede7a2684ab95ef3487b81cb90aecb69",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  }
+}

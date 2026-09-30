@@ -1,11 +1,11 @@
 """R5：Gemini 客戶端。只用標準函式庫；key 從環境變數或 .env 讀取。"""
 
 import json
-import os
 import re
 import urllib.error
 import urllib.request
-from pathlib import Path
+
+from .. import env
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 FALLBACK_CODES = {404, 429}
@@ -20,16 +20,7 @@ class BadResponse(LLMError):
 
 
 def load_key(root="."):
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if key:
-        return key
-    env = Path(root) / ".env"
-    if env.is_file():
-        for line in env.read_text(encoding="utf-8").splitlines():
-            m = re.match(r"\s*GEMINI_API_KEY\s*=\s*(.*)$", line)
-            if m:
-                return m.group(1).strip().strip("'\"")
-    return ""
+    return env.get("GEMINI_API_KEY", root)
 
 
 def parse_json_text(text):

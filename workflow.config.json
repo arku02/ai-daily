@@ -4,7 +4,8 @@
   "testRunner": "python-unittest",
   "testFiles": [
     "tests/test_fetch.py",
-    "tests/test_digest.py"
+    "tests/test_digest.py",
+    "tests/test_publish.py"
   ],
   "pythonExecutable": ".venv/Scripts/python.exe"
 }

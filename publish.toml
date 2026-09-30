@@ -1,0 +1,15 @@
+# AI 早報的發布設定。bot token 與 chat_id 是機密，放在 .env：
+#   TELEGRAM_BOT_TOKEN=...
+#   TELEGRAM_CHAT_ID=...
+
+[site]
+# GitHub Pages 網址（repo 名稱 ai-daily）
+base_url = "https://arku02.github.io/ai-daily/"
+
+[telegram]
+# 新 bot 的使用者名稱（不含 @）；填了網頁上每則才會出現 👎👍⭐ 回饋連結
+bot_username = "arku_ai_daily_bot"
+
+[feedback]
+# 回饋存放的資料夾；環境變數 FEEDBACK_DIR 優先。第 4 步會指到私人 repo ai-daily-feedback
+dir = "feedback"

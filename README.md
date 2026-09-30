@@ -10,7 +10,7 @@
 |---|---|---|
 | 1 | 多來源抓取、去重、星數快照 | ✅ 已實作 |
 | 2 | LLM 篩選、分類、寫摘要與「你可以怎麼用」 | ✅ 已實作 |
-| 3 | 產生網頁、Telegram 推送、回饋按鈕（回饋存私人 repo） | ⬜ |
+| 3 | 產生網頁、Telegram 推送、回饋按鈕 | ✅ 已實作 |
 | 4 | GitHub Actions 每日排程、GitHub Pages 發布 | ⬜ |
 
 ## 安裝
@@ -52,6 +52,21 @@ digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個
 4. 讀者背景在 [profile.example.toml](profile.example.toml)；想改成自己的，複製成 `profile.toml` 再修改（不會被上傳）
 
 免費方案的輸入可能被 Google 用於改進產品；送出的內容只有公開資料與 profile 的背景描述。每天約 6～7 次呼叫、80 秒左右。
+
+## 發布與回饋
+
+```bash
+.venv\Scripts\python.exe -m ai_daily render                  # data/digest → site/（每天一頁 + 首頁）
+.venv\Scripts\python.exe -m ai_daily push --dry-run          # 預覽 Telegram 訊息
+.venv\Scripts\python.exe -m ai_daily push                    # 推送今天的重點（同一天不會重複送）
+.venv\Scripts\python.exe -m ai_daily collect                 # 收回饋到 feedback/（或 FEEDBACK_DIR）
+```
+
+- `.env` 需要 `TELEGRAM_BOT_TOKEN` 與 `TELEGRAM_CHAT_ID`；bot 使用者名稱與網址在 [publish.toml](publish.toml)
+- 本專案用自己的 bot，不和 arxiv-digest 共用：兩邊收回饋都會確認掉 Telegram 的更新，共用會互相吃掉
+- 兩種回饋：Telegram 訊息下的按鈕評「今天整體」，網頁上每則的 👎👍⭐ 評「單則」（會開啟 Telegram 傳給 bot）
+- 回饋存成 `feedback.jsonl`，每行一筆；bot 的「已記錄」回覆要等 collect 執行時才會出現
+- Telegram 只保留約 24 小時的未確認更新，collect 要定期執行（第 4 步排程）
 
 ## 資料來源
 

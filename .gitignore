@@ -17,3 +17,7 @@ __pycache__/
 
 # AI 早報：個人背景不公開
 profile.toml
+
+# AI 早報：建置輸出與本機回饋
+site/
+feedback/
