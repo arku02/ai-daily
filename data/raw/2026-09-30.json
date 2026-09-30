@@ -1,6 +1,6 @@
 {
  "date": "2026-09-30",
- "fetched_at": "2026-09-30T13:09:44Z",
+ "fetched_at": "2026-09-30T13:37:45Z",
  "sources": {
   "github_trending": {
    "status": "ok",
@@ -43,7 +43,7 @@
    "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
    "published_at": null,
    "metrics": {
-    "stars": 49786,
+    "stars": 49816,
     "stars_today": 3481,
     "stars_delta": null
    },
@@ -60,7 +60,7 @@
    "summary": "OpenShell is the safe, private runtime for autonomous AI agents.",
    "published_at": null,
    "metrics": {
-    "stars": 11363,
+    "stars": 11438,
     "stars_today": 1280,
     "stars_delta": null
    },
@@ -77,7 +77,7 @@
    "summary": "Learn it. Build it. Ship it for others.",
    "published_at": null,
    "metrics": {
-    "stars": 61994,
+    "stars": 62002,
     "stars_today": 1203,
     "stars_delta": null
    },
@@ -94,7 +94,7 @@
    "summary": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
    "published_at": null,
    "metrics": {
-    "stars": 22821,
+    "stars": 22842,
     "stars_today": 1133,
     "stars_delta": null
    },
@@ -111,7 +111,7 @@
    "summary": "An advanced guide which might benefit you a lot 🎉 . 韩先凯的人生进阶指南 人生进阶指南 离谱的人生 人生进阶 AI学习 AI指南 韩先凯的AI学习指南 英语学习指南/英语学习教程/英语学习/学英语",
    "published_at": null,
    "metrics": {
-    "stars": 66142,
+    "stars": 66157,
     "stars_today": 1102,
     "stars_delta": null
    },
@@ -128,7 +128,7 @@
    "summary": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
    "published_at": null,
    "metrics": {
-    "stars": 37833,
+    "stars": 37865,
     "stars_today": 1095,
     "stars_delta": null
    },
@@ -145,7 +145,7 @@
    "summary": "Skills for Real Engineers. Straight from my .agents directory.",
    "published_at": null,
    "metrics": {
-    "stars": 272592,
+    "stars": 272608,
     "stars_today": 736,
     "stars_delta": null
    },
@@ -162,7 +162,7 @@
    "summary": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
    "published_at": null,
    "metrics": {
-    "stars": 148646,
+    "stars": 148674,
     "stars_today": 675,
     "stars_delta": null
    },
@@ -179,7 +179,7 @@
    "summary": "Multi-agent harness that runs Claude Code and Codex together as one system",
    "published_at": null,
    "metrics": {
-    "stars": 2721,
+    "stars": 2735,
     "stars_today": 622,
     "stars_delta": null
    },
@@ -196,7 +196,7 @@
    "summary": "Useful tool to track location or mobile number",
    "published_at": null,
    "metrics": {
-    "stars": 15789,
+    "stars": 15792,
     "stars_today": 579,
     "stars_delta": null
    },
@@ -213,29 +213,12 @@
    "summary": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
    "published_at": null,
    "metrics": {
-    "stars": 26302,
+    "stars": 26310,
     "stars_today": 466,
     "stars_delta": null
    },
    "extra": {
     "language": "PLSQL"
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_trending",
-   "id": "harry0703/MoneyPrinterTurbo",
-   "title": "harry0703/MoneyPrinterTurbo",
-   "url": "https://github.com/harry0703/MoneyPrinterTurbo",
-   "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-   "published_at": null,
-   "metrics": {
-    "stars": 127273,
-    "stars_today": 338,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python"
    },
    "also_in": []
   },
@@ -247,12 +230,29 @@
    "summary": "Write HTML. Render video. Built for agents.",
    "published_at": null,
    "metrics": {
-    "stars": 54429,
-    "stars_today": 324,
+    "stars": 54439,
+    "stars_today": 352,
     "stars_delta": null
    },
    "extra": {
     "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "harry0703/MoneyPrinterTurbo",
+   "title": "harry0703/MoneyPrinterTurbo",
+   "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+   "summary": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+   "published_at": null,
+   "metrics": {
+    "stars": 127285,
+    "stars_today": 338,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
    },
    "also_in": []
   },
@@ -264,7 +264,7 @@
    "summary": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
    "published_at": null,
    "metrics": {
-    "stars": 5992,
+    "stars": 5995,
     "stars_today": 278,
     "stars_delta": null
    },
@@ -281,7 +281,7 @@
    "summary": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
    "published_at": null,
    "metrics": {
-    "stars": 16753,
+    "stars": 16757,
     "stars_today": 250,
     "stars_delta": null
    },
@@ -298,7 +298,7 @@
    "summary": "Search plugins for qBittorrent search feature",
    "published_at": null,
    "metrics": {
-    "stars": 7033,
+    "stars": 7034,
     "stars_today": 174,
     "stars_delta": null
    },
@@ -315,7 +315,7 @@
    "summary": "💫 Toolkit to help you get started with SDD or any other process!",
    "published_at": null,
    "metrics": {
-    "stars": 139506,
+    "stars": 139512,
     "stars_today": 170,
     "stars_delta": null
    },
@@ -332,7 +332,7 @@
    "summary": "380 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 380+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
    "published_at": null,
    "metrics": {
-    "stars": 26978,
+    "stars": 26984,
     "stars_today": 154,
     "stars_delta": null
    },
@@ -349,7 +349,7 @@
    "summary": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞",
    "published_at": null,
    "metrics": {
-    "stars": 390843,
+    "stars": 390844,
     "stars_today": 136,
     "stars_delta": null
    },
@@ -366,7 +366,7 @@
    "summary": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
    "published_at": null,
    "metrics": {
-    "stars": 75965,
+    "stars": 75973,
     "stars_today": 118,
     "stars_delta": null
    },
@@ -383,7 +383,7 @@
    "summary": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
    "published_at": null,
    "metrics": {
-    "stars": 72455,
+    "stars": 72463,
     "stars_today": 116,
     "stars_delta": null
    },
@@ -400,7 +400,7 @@
    "summary": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
    "published_at": null,
    "metrics": {
-    "stars": 24309,
+    "stars": 24319,
     "stars_today": 88,
     "stars_delta": null
    },
@@ -417,7 +417,7 @@
    "summary": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions, including DataForSEO, Firecrawl, Ahrefs and Matomo.",
    "published_at": null,
    "metrics": {
-    "stars": 18001,
+    "stars": 18003,
     "stars_today": 72,
     "stars_delta": null
    },
@@ -451,7 +451,7 @@
    "summary": "Model Context Protocol Servers",
    "published_at": null,
    "metrics": {
-    "stars": 90712,
+    "stars": 90715,
     "stars_today": 48,
     "stars_delta": null
    },
@@ -485,7 +485,7 @@
    "summary": "Breakthrough Method for Agile Ai Driven Development",
    "published_at": null,
    "metrics": {
-    "stars": 53659,
+    "stars": 53660,
     "stars_today": 45,
     "stars_delta": null
    },
@@ -519,7 +519,7 @@
    "summary": "How Python does AI. Agents, realtime voice, image generation, embeddings. Every model, every interface, typed end to end.",
    "published_at": null,
    "metrics": {
-    "stars": 20282,
+    "stars": 20285,
     "stars_today": 24,
     "stars_delta": null
    },
@@ -570,7 +570,7 @@
    "summary": "Firebase SDK for Apple App Development",
    "published_at": null,
    "metrics": {
-    "stars": 6709,
+    "stars": 6711,
     "stars_today": 4,
     "stars_delta": null
    },
@@ -588,7 +588,7 @@
    "published_at": "2026-09-20T12:01:16Z",
    "metrics": {
     "stars": 7233,
-    "forks": 2194,
+    "forks": 2193,
     "stars_delta": null
    },
    "extra": {
@@ -606,7 +606,7 @@
    "summary": "装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
    "published_at": "2026-09-21T11:12:53Z",
    "metrics": {
-    "stars": 7169,
+    "stars": 7170,
     "forks": 1212,
     "stars_delta": null
    },
@@ -634,8 +634,8 @@
    "summary": "一个自己找热点、自己写日报的网站框架。把信源和精选标准换成你的，它就是你的行业热点站。",
    "published_at": "2026-09-28T23:40:05Z",
    "metrics": {
-    "stars": 3878,
-    "forks": 1112,
+    "stars": 3893,
+    "forks": 1114,
     "stars_delta": null
    },
    "extra": {
@@ -662,8 +662,8 @@
    "summary": "Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.",
    "published_at": "2026-09-23T16:22:35Z",
    "metrics": {
-    "stars": 3517,
-    "forks": 205,
+    "stars": 3529,
+    "forks": 206,
     "stars_delta": null
    },
    "extra": {
@@ -731,8 +731,8 @@
    "summary": "Find code by asking what it does. A CLI for coding agents that uses Jev to discover relevant files and source context.",
    "published_at": "2026-09-26T04:06:56Z",
    "metrics": {
-    "stars": 1857,
-    "forks": 123,
+    "stars": 1860,
+    "forks": 124,
     "stars_delta": null
    },
    "extra": {
@@ -763,8 +763,8 @@
    "summary": "Open-source dots for the web: an AI agent with its own browser, one that does not get blocked.",
    "published_at": "2026-09-29T23:06:00Z",
    "metrics": {
-    "stars": 1160,
-    "forks": 151,
+    "stars": 1233,
+    "forks": 165,
     "stars_delta": null
    },
    "extra": {
@@ -803,7 +803,7 @@
    "summary": "Take your agent-built product live: hosting, database, domain, email, payments — on your own accounts. Open-source Agent Skill + zero-dependency Node CLI: detect → plan → approve → apply → verify. No GoLive account, backend or telemetry.",
    "published_at": "2026-09-23T13:37:26Z",
    "metrics": {
-    "stars": 1137,
+    "stars": 1138,
     "forks": 84,
     "stars_delta": null
    },
@@ -843,7 +843,7 @@
    "summary": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. A Claude Agent Skill for product launch films and feature demos.",
    "published_at": "2026-09-26T05:35:17Z",
    "metrics": {
-    "stars": 1032,
+    "stars": 1033,
     "forks": 65,
     "stars_delta": null
    },
@@ -898,8 +898,8 @@
    "summary": "A comprehensive logo-design skill for Claude, Gemini CLI, Codex and other AI agents: principles, process, SVG craft, testing tools and a 1,400+ logo reference library.",
    "published_at": "2026-09-26T08:23:34Z",
    "metrics": {
-    "stars": 973,
-    "forks": 48,
+    "stars": 978,
+    "forks": 49,
     "stars_delta": null
    },
    "extra": {
@@ -953,7 +953,7 @@
    "summary": "Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents (also Claude Code and Codex)",
    "published_at": "2026-09-18T20:01:29Z",
    "metrics": {
-    "stars": 917,
+    "stars": 918,
     "forks": 88,
     "stars_delta": null
    },
@@ -972,7 +972,7 @@
    "summary": "TypeLLM: LLMs with type-safe generation",
    "published_at": "2026-09-17T12:41:27Z",
    "metrics": {
-    "stars": 886,
+    "stars": 888,
     "forks": 58,
     "stars_delta": null
    },
@@ -996,8 +996,8 @@
    "summary": "The open, local take on Jev: typed decisions from an LLM, without generating a single token",
    "published_at": "2026-09-21T00:00:02Z",
    "metrics": {
-    "stars": 763,
-    "forks": 51,
+    "stars": 764,
+    "forks": 52,
     "stars_delta": null
    },
    "extra": {
@@ -1140,7 +1140,7 @@
    "summary": "43 film styles, each a reusable style prompt plus a short film made entirely in code by Claude Opus 5.5. Pick a style, bring your own story, and let your agent direct. | Opus5.5 x 43 种影片风格：风格提示词 + 纯代码样片 + 导演与技术指南",
    "published_at": "2026-09-26T10:10:41Z",
    "metrics": {
-    "stars": 651,
+    "stars": 653,
     "forks": 86,
     "stars_delta": null
    },
@@ -1194,7 +1194,7 @@
    "summary": "Agent-Native multi-platform reverse engineering and CWE-602 client-side authorization audit workbench.",
    "published_at": "2026-09-23T18:05:31Z",
    "metrics": {
-    "stars": 595,
+    "stars": 596,
     "forks": 173,
     "stars_delta": null
    },
@@ -1344,7 +1344,7 @@
    "summary": "An agent skill that finds where a photo was taken — OpenStreetMap geometry, elevation skylines, satellite imagery and street view — and shows its work. Works with Claude Code, Codex, Cursor, Gemini CLI, OpenCode and GitHub Copilot.",
    "published_at": "2026-09-18T08:51:34Z",
    "metrics": {
-    "stars": 531,
+    "stars": 533,
     "forks": 64,
     "stars_delta": null
    },
@@ -1382,7 +1382,7 @@
    "summary": "The agentic CLI for the entire Cloudflare API",
    "published_at": "2026-09-21T15:16:36Z",
    "metrics": {
-    "stars": 520,
+    "stars": 525,
     "forks": 17,
     "stars_delta": null
    },
@@ -1420,7 +1420,7 @@
    "summary": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 Muse Spark 1.3、MiMo V2.6 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, Muse Spark 1.3 and MiMo V2.6 among them. Completely free, with no usage cap.",
    "published_at": "2026-09-24T16:17:19Z",
    "metrics": {
-    "stars": 481,
+    "stars": 482,
     "forks": 22,
     "stars_delta": null
    },
@@ -1488,7 +1488,7 @@
    "summary": "AI System Design - Learn how to design AI systems built on LLMs, RAG, and AI Agents step by step.",
    "published_at": "2026-09-25T04:50:06Z",
    "metrics": {
-    "stars": 471,
+    "stars": 472,
     "forks": 57,
     "stars_delta": null
    },
@@ -1518,7 +1518,7 @@
    "summary": "Agent skill: turn a topic into a 30s vertical film drawn and scored entirely in JavaScript. Reference film: the life of a monarch butterfly.",
    "published_at": "2026-09-17T17:15:34Z",
    "metrics": {
-    "stars": 470,
+    "stars": 471,
     "forks": 52,
     "stars_delta": null
    },
@@ -1537,7 +1537,7 @@
    "summary": "Fast, cheap, typed judgments from TypeSafe's Jev model, as MCP tools.",
    "published_at": "2026-09-17T02:25:38Z",
    "metrics": {
-    "stars": 466,
+    "stars": 467,
     "forks": 53,
     "stars_delta": null
    },
@@ -1658,13 +1658,32 @@
    "summary": "A cartoon 3D office where your team hires Claude Code workers at desks, shares live terminals, talks over voice, and tracks GitHub issues and PRs.",
    "published_at": "2026-09-26T00:32:48Z",
    "metrics": {
-    "stars": 419,
+    "stars": 420,
     "forks": 98,
     "stars_delta": null
    },
    "extra": {
     "language": "TypeScript",
     "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TianyuCodings/JevHarness",
+   "title": "TianyuCodings/JevHarness",
+   "url": "https://github.com/TianyuCodings/JevHarness",
+   "summary": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
+   "published_at": "2026-09-21T08:59:46Z",
+   "metrics": {
+    "stars": 403,
+    "forks": 17,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": null,
     "topics": []
    },
    "also_in": []
@@ -1678,7 +1697,7 @@
    "published_at": "2026-09-22T06:00:27Z",
    "metrics": {
     "stars": 402,
-    "forks": 43,
+    "forks": 44,
     "stars_delta": null
    },
    "extra": {
@@ -1700,25 +1719,6 @@
      "system-one",
      "typed-decisions"
     ]
-   },
-   "also_in": []
-  },
-  {
-   "source": "github_search",
-   "id": "TianyuCodings/JevHarness",
-   "title": "TianyuCodings/JevHarness",
-   "url": "https://github.com/TianyuCodings/JevHarness",
-   "summary": "LLM-authored task-specific Jev harnesses with optional full-trajectory reward reflection and GEPA evolution.",
-   "published_at": "2026-09-21T08:59:46Z",
-   "metrics": {
-    "stars": 402,
-    "forks": 17,
-    "stars_delta": null
-   },
-   "extra": {
-    "language": "Python",
-    "license": null,
-    "topics": []
    },
    "also_in": []
   },
@@ -1818,7 +1818,7 @@
    "summary": "Build plugins that feel like native, first-class features of ChatGPT.",
    "published_at": "2026-09-29T00:45:42Z",
    "metrics": {
-    "stars": 364,
+    "stars": 369,
     "forks": 16,
     "stars_delta": null
    },
@@ -1877,7 +1877,7 @@
    "summary": "PiG (Pi in Go) is a faithful Go port of upstream Pi, the TypeScript codebase behind the Pi coding agent. It is a parity-bound translation, not a rewrite: upstream behavior is the contract, and Go is the implementation language.",
    "published_at": "2026-09-17T15:52:38Z",
    "metrics": {
-    "stars": 340,
+    "stars": 341,
     "forks": 20,
     "stars_delta": null
    },
@@ -1989,8 +1989,8 @@
    "summary": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
    "published_at": "2026-09-30T05:00:35Z",
    "metrics": {
-    "stars": 287,
-    "forks": 10,
+    "stars": 326,
+    "forks": 14,
     "stars_delta": null
    },
    "extra": {
@@ -2202,7 +2202,7 @@
    "published_at": "2026-09-21T11:29:47Z",
    "metrics": {
     "stars": 212,
-    "forks": 27,
+    "forks": 28,
     "stars_delta": null
    },
    "extra": {
@@ -2299,7 +2299,7 @@
    "summary": "A fast browser-use skill powered by local LLMs via single-token reflexes. Fast, local-first, zero hallucinations.",
    "published_at": "2026-09-19T10:17:17Z",
    "metrics": {
-    "stars": 200,
+    "stars": 201,
     "forks": 20,
     "stars_delta": null
    },
@@ -2581,7 +2581,7 @@
    "summary": "Automatic project memory for Claude Code. Also works with Cursor and Codex. Now in Anthropic's Claude plugin directory.",
    "published_at": "2026-09-22T11:47:24Z",
    "metrics": {
-    "stars": 100,
+    "stars": 101,
     "forks": 6,
     "stars_delta": null
    },
@@ -2908,9 +2908,9 @@
    "summary": "",
    "published_at": "2026-08-14T06:15:03Z",
    "metrics": {
-    "likes": 971,
+    "likes": 977,
     "downloads": 30383,
-    "trending_score": 833,
+    "trending_score": 839,
     "likes_delta": null
    },
    "extra": {
@@ -2927,9 +2927,9 @@
    "summary": "",
    "published_at": "2026-09-21T20:09:04Z",
    "metrics": {
-    "likes": 549,
+    "likes": 550,
     "downloads": 2392,
-    "trending_score": 540,
+    "trending_score": 541,
     "likes_delta": null
    },
    "extra": {
@@ -2948,7 +2948,7 @@
    "metrics": {
     "likes": 16609,
     "downloads": 7038259,
-    "trending_score": 355,
+    "trending_score": 353,
     "likes_delta": null
    },
    "extra": {
@@ -2984,7 +2984,7 @@
    "summary": "",
    "published_at": "2026-09-16T23:40:56Z",
    "metrics": {
-    "likes": 2288,
+    "likes": 2291,
     "downloads": 3676692,
     "trending_score": 345,
     "likes_delta": null
@@ -2992,25 +2992,6 @@
    "extra": {
     "pipeline_tag": "text-generation",
     "library": "llama.cpp"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
-   "id": "TaichuAI/ZDTaichu5.0-9B",
-   "title": "TaichuAI/ZDTaichu5.0-9B",
-   "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
-   "summary": "",
-   "published_at": "2026-09-04T02:55:48Z",
-   "metrics": {
-    "likes": 2145,
-    "downloads": 12139,
-    "trending_score": 257,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "image-text-to-text",
-    "library": null
    },
    "also_in": []
   },
@@ -3043,12 +3024,31 @@
    "metrics": {
     "likes": 780,
     "downloads": 8524,
-    "trending_score": 242,
+    "trending_score": 240,
     "likes_delta": null
    },
    "extra": {
     "pipeline_tag": "text-generation",
     "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "TaichuAI/ZDTaichu5.0-9B",
+   "title": "TaichuAI/ZDTaichu5.0-9B",
+   "url": "https://huggingface.co/TaichuAI/ZDTaichu5.0-9B",
+   "summary": "",
+   "published_at": "2026-09-04T02:55:48Z",
+   "metrics": {
+    "likes": 2153,
+    "downloads": 12139,
+    "trending_score": 238,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
    },
    "also_in": []
   },
@@ -3060,9 +3060,9 @@
    "summary": "",
    "published_at": "2026-08-28T18:38:03Z",
    "metrics": {
-    "likes": 1843,
+    "likes": 1846,
     "downloads": 1679903,
-    "trending_score": 224,
+    "trending_score": 225,
     "likes_delta": null
    },
    "extra": {
@@ -3117,9 +3117,9 @@
    "summary": "",
    "published_at": "2026-09-10T02:17:58Z",
    "metrics": {
-    "likes": 3916,
+    "likes": 3917,
     "downloads": 721211,
-    "trending_score": 179,
+    "trending_score": 178,
     "likes_delta": null
    },
    "extra": {
@@ -3138,7 +3138,7 @@
    "metrics": {
     "likes": 604,
     "downloads": 80958,
-    "trending_score": 166,
+    "trending_score": 165,
     "likes_delta": null
    },
    "extra": {
@@ -3155,9 +3155,9 @@
    "summary": "",
    "published_at": "2026-09-01T07:01:09Z",
    "metrics": {
-    "likes": 1291,
+    "likes": 1292,
     "downloads": 1777756,
-    "trending_score": 154,
+    "trending_score": 155,
     "likes_delta": null
    },
    "extra": {
@@ -3174,9 +3174,9 @@
    "summary": "",
    "published_at": "2026-09-24T13:13:45Z",
    "metrics": {
-    "likes": 161,
+    "likes": 162,
     "downloads": 175005,
-    "trending_score": 154,
+    "trending_score": 155,
     "likes_delta": null
    },
    "extra": {
@@ -3193,9 +3193,9 @@
    "summary": "",
    "published_at": "2026-09-26T03:37:50Z",
    "metrics": {
-    "likes": 171,
+    "likes": 172,
     "downloads": 7186,
-    "trending_score": 154,
+    "trending_score": 155,
     "likes_delta": null
    },
    "extra": {
@@ -3225,14 +3225,14 @@
   },
   {
    "source": "hf_models",
-   "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
-   "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
-   "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+   "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+   "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+   "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
    "summary": "",
-   "published_at": "2026-09-07T09:41:37Z",
+   "published_at": "2026-09-26T09:42:51Z",
    "metrics": {
-    "likes": 388,
-    "downloads": 754993,
+    "likes": 139,
+    "downloads": 33259,
     "trending_score": 138,
     "likes_delta": null
    },
@@ -3244,15 +3244,34 @@
   },
   {
    "source": "hf_models",
-   "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
-   "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
-   "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF",
+   "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+   "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+   "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
    "summary": "",
-   "published_at": "2026-09-26T09:42:51Z",
+   "published_at": "2026-09-07T09:41:37Z",
    "metrics": {
-    "likes": 139,
-    "downloads": 33259,
-    "trending_score": 138,
+    "likes": 388,
+    "downloads": 754993,
+    "trending_score": 137,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "ukisai/Swift-1.5-Qwen3.8-27B-GGUF",
+   "title": "ukisai/Swift-1.5-Qwen3.8-27B-GGUF",
+   "url": "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27B-GGUF",
+   "summary": "",
+   "published_at": "2026-09-21T21:24:24Z",
+   "metrics": {
+    "likes": 122,
+    "downloads": 85102,
+    "trending_score": 115,
     "likes_delta": null
    },
    "extra": {
@@ -3277,25 +3296,6 @@
    "extra": {
     "pipeline_tag": "text-generation",
     "library": null
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_models",
-   "id": "ukisai/Swift-1.5-Qwen3.8-27B-GGUF",
-   "title": "ukisai/Swift-1.5-Qwen3.8-27B-GGUF",
-   "url": "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27B-GGUF",
-   "summary": "",
-   "published_at": "2026-09-21T21:24:24Z",
-   "metrics": {
-    "likes": 121,
-    "downloads": 85102,
-    "trending_score": 114,
-    "likes_delta": null
-   },
-   "extra": {
-    "pipeline_tag": "image-text-to-text",
-    "library": "gguf"
    },
    "also_in": []
   },
@@ -3415,15 +3415,15 @@
   },
   {
    "source": "hf_models",
-   "id": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "title": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
-   "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
    "summary": "",
-   "published_at": "2026-09-21T22:09:46Z",
+   "published_at": "2026-07-19T04:33:55Z",
    "metrics": {
-    "likes": 111,
-    "downloads": 205179,
-    "trending_score": 82,
+    "likes": 885,
+    "downloads": 1852689,
+    "trending_score": 81,
     "likes_delta": null
    },
    "extra": {
@@ -3434,14 +3434,14 @@
   },
   {
    "source": "hf_models",
-   "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
-   "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
-   "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "id": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "title": "bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
+   "url": "https://huggingface.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF",
    "summary": "",
-   "published_at": "2026-07-19T04:33:55Z",
+   "published_at": "2026-09-21T22:09:46Z",
    "metrics": {
-    "likes": 885,
-    "downloads": 1852689,
+    "likes": 111,
+    "downloads": 205179,
     "trending_score": 81,
     "likes_delta": null
    },
@@ -3568,7 +3568,7 @@
    "published_at": "2026-09-26T00:00:00Z",
    "metrics": {
     "upvotes": 65,
-    "github_stars": 763
+    "github_stars": 764
    },
    "extra": {
     "arxiv": "https://arxiv.org/abs/2609.32712",
@@ -3802,7 +3802,7 @@
    "published_at": "2026-09-27T00:00:00Z",
    "metrics": {
     "upvotes": 27,
-    "github_stars": 22
+    "github_stars": 24
    },
    "extra": {
     "arxiv": "https://arxiv.org/abs/2609.33803",
@@ -3903,6 +3903,24 @@
   },
   {
    "source": "hf_papers",
+   "id": "2609.32540",
+   "title": "In-Flight KV Cache with Clean Anchors for Faster Autoregressive Video Diffusion",
+   "url": "https://huggingface.co/papers/2609.32540",
+   "summary": "Few-step autoregressive video diffusion generates a long video by splitting the video into temporal chunks and generating chunk-by-chunk, each through a short sequence of denoising stages. To memorize chunks that are already generated, previous methods reconstruct a clean or less-noisy key--value (KV) cache by additional forwards to build the cache without advancing an output latent. However, every denoising forward itself already computes the in-flight KV of the current chunk. We introduce FlashForward, which directly reuses this cache to avoid the heavy cache-update-only model forwards. After the current chunk completes one denoising stage, its stage-specific cache is already available for the next chunk. Assigning one GPU to each stage therefore lets different chunks occupy different stages concurrently. This early availability has a quality cost: the resulting stage-matched history is noisy, causing appearance and motion drift among chunks. To complement it, FlashForward produces sparse auxiliary clean anchor latents before the corresponding region is generated so the generation trajectories can be stabilized by this two-sided conditioning. The two memories operate at different temporal scales: sparse clean anchor KV supplies coarse, long-range two-sided structural guidance, while dense stage-matched history preserves fine, recent evolution. With up to four GPUs, FlashForward runs 1.16--1.69times faster than HiAR and 1.42--2.92times faster than Self-Forcing for 16 FPS videos of 20 seconds or longer across 1.3B and 14B backbone scales at 480p and 720p. On VBench, for the 1.3B model at 480p, it achieves higher scores and remains stable at longer durations, demonstrating that FlashForward generates high-quality and temporally consistent videos across durations of 20s, 35s and 65s at a much faster generation speed.",
+   "published_at": "2026-09-26T00:00:00Z",
+   "metrics": {
+    "upvotes": 22,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.32540",
+    "github": null,
+    "organization": "Meta"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
    "id": "2609.35673",
    "title": "FlowTool: Controlling Tool Parameter in Image Retouching via Flow Matching",
    "url": "https://huggingface.co/papers/2609.35673",
@@ -3916,24 +3934,6 @@
     "arxiv": "https://arxiv.org/abs/2609.35673",
     "github": null,
     "organization": null
-   },
-   "also_in": []
-  },
-  {
-   "source": "hf_papers",
-   "id": "2609.32540",
-   "title": "In-Flight KV Cache with Clean Anchors for Faster Autoregressive Video Diffusion",
-   "url": "https://huggingface.co/papers/2609.32540",
-   "summary": "Few-step autoregressive video diffusion generates a long video by splitting the video into temporal chunks and generating chunk-by-chunk, each through a short sequence of denoising stages. To memorize chunks that are already generated, previous methods reconstruct a clean or less-noisy key--value (KV) cache by additional forwards to build the cache without advancing an output latent. However, every denoising forward itself already computes the in-flight KV of the current chunk. We introduce FlashForward, which directly reuses this cache to avoid the heavy cache-update-only model forwards. After the current chunk completes one denoising stage, its stage-specific cache is already available for the next chunk. Assigning one GPU to each stage therefore lets different chunks occupy different stages concurrently. This early availability has a quality cost: the resulting stage-matched history is noisy, causing appearance and motion drift among chunks. To complement it, FlashForward produces sparse auxiliary clean anchor latents before the corresponding region is generated so the generation trajectories can be stabilized by this two-sided conditioning. The two memories operate at different temporal scales: sparse clean anchor KV supplies coarse, long-range two-sided structural guidance, while dense stage-matched history preserves fine, recent evolution. With up to four GPUs, FlashForward runs 1.16--1.69times faster than HiAR and 1.42--2.92times faster than Self-Forcing for 16 FPS videos of 20 seconds or longer across 1.3B and 14B backbone scales at 480p and 720p. On VBench, for the 1.3B model at 480p, it achieves higher scores and remains stable at longer durations, demonstrating that FlashForward generates high-quality and temporally consistent videos across durations of 20s, 35s and 65s at a much faster generation speed.",
-   "published_at": "2026-09-26T00:00:00Z",
-   "metrics": {
-    "upvotes": 21,
-    "github_stars": null
-   },
-   "extra": {
-    "arxiv": "https://arxiv.org/abs/2609.32540",
-    "github": null,
-    "organization": "Meta"
    },
    "also_in": []
   },
@@ -4018,7 +4018,7 @@
    "published_at": "2026-09-27T00:00:00Z",
    "metrics": {
     "upvotes": 18,
-    "github_stars": 19
+    "github_stars": 20
    },
    "extra": {
     "arxiv": "https://arxiv.org/abs/2609.33616",
@@ -4323,8 +4323,8 @@
    "summary": "",
    "published_at": "2026-09-29T17:06:45Z",
    "metrics": {
-    "points": 990,
-    "comments": 865
+    "points": 995,
+    "comments": 870
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896586"
@@ -4345,8 +4345,8 @@
    "summary": "",
    "published_at": "2026-09-29T17:07:57Z",
    "metrics": {
-    "points": 667,
-    "comments": 525
+    "points": 676,
+    "comments": 532
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896604"
@@ -4371,13 +4371,29 @@
   },
   {
    "source": "hn",
+   "id": "49906637",
+   "title": "Pi.dev: You Said No MCP",
+   "url": "https://earendil.com/posts/you-said-no-mcp/",
+   "summary": "",
+   "published_at": "2026-09-30T09:55:23Z",
+   "metrics": {
+    "points": 244,
+    "comments": 113
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49906637"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
    "id": "49891290",
    "title": "Jeeves. Reasoning improves Jev-like decision models",
    "url": "https://github.com/PostHog/jeeves",
    "summary": "",
    "published_at": "2026-09-29T11:13:54Z",
    "metrics": {
-    "points": 236,
+    "points": 237,
     "comments": 92
    },
    "extra": {
@@ -4394,26 +4410,10 @@
    "published_at": "2026-09-29T17:31:26Z",
    "metrics": {
     "points": 233,
-    "comments": 223
+    "comments": 224
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49897075"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
-   "id": "49906637",
-   "title": "Pi.dev: You Said No MCP",
-   "url": "https://earendil.com/posts/you-said-no-mcp/",
-   "summary": "",
-   "published_at": "2026-09-30T09:55:23Z",
-   "metrics": {
-    "points": 219,
-    "comments": 96
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49906637"
    },
    "also_in": []
   },
@@ -4426,7 +4426,7 @@
    "published_at": "2026-09-29T17:26:27Z",
    "metrics": {
     "points": 210,
-    "comments": 245
+    "comments": 247
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896975"
@@ -4441,8 +4441,8 @@
    "summary": "",
    "published_at": "2026-09-30T07:32:40Z",
    "metrics": {
-    "points": 182,
-    "comments": 159
+    "points": 185,
+    "comments": 164
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49905633"
@@ -4505,7 +4505,7 @@
    "summary": "",
    "published_at": "2026-09-29T11:06:25Z",
    "metrics": {
-    "points": 148,
+    "points": 155,
     "comments": 7
    },
    "extra": {
@@ -4559,7 +4559,7 @@
    "summary": "",
    "published_at": "2026-09-30T03:19:54Z",
    "metrics": {
-    "points": 80,
+    "points": 81,
     "comments": 33
    },
    "extra": {
@@ -4608,7 +4608,7 @@
    "published_at": "2026-09-29T17:15:56Z",
    "metrics": {
     "points": 76,
-    "comments": 24
+    "comments": 25
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49896757"
@@ -4623,8 +4623,8 @@
    "summary": "",
    "published_at": "2026-09-29T23:03:38Z",
    "metrics": {
-    "points": 64,
-    "comments": 30
+    "points": 69,
+    "comments": 32
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49902019"
@@ -4655,8 +4655,8 @@
    "summary": "",
    "published_at": "2026-09-29T19:58:50Z",
    "metrics": {
-    "points": 55,
-    "comments": 30
+    "points": 56,
+    "comments": 31
    },
    "extra": {
     "discussion": "https://news.ycombinator.com/item?id=49899453"
@@ -4697,6 +4697,22 @@
   },
   {
    "source": "hn",
+   "id": "49889780",
+   "title": "Meta's new AI agent built lists of people in vulnerable groups on request",
+   "url": "https://hntrbrk.com/breaking-news/muse-doxxing",
+   "summary": "",
+   "published_at": "2026-09-29T08:06:40Z",
+   "metrics": {
+    "points": 43,
+    "comments": 0
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=49889780"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
    "id": "49897336",
    "title": "OpenAI Targets $30B in New Funding at $1.4T Value",
    "url": "https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value",
@@ -4729,22 +4745,6 @@
   },
   {
    "source": "hn",
-   "id": "49889780",
-   "title": "Meta's new AI agent built lists of people in vulnerable groups on request",
-   "url": "https://hntrbrk.com/breaking-news/muse-doxxing",
-   "summary": "",
-   "published_at": "2026-09-29T08:06:40Z",
-   "metrics": {
-    "points": 32,
-    "comments": 0
-   },
-   "extra": {
-    "discussion": "https://news.ycombinator.com/item?id=49889780"
-   },
-   "also_in": []
-  },
-  {
-   "source": "hn",
    "id": "49901900",
    "title": "McDonald's Is Using AI to Dynamically Price Its Burgers",
    "url": "https://www.rnz.co.nz/news/world/1656965/inside-mcdonald-s-push-to-have-ai-price-your-big-mac",
@@ -4764,7 +4764,7 @@
    "id": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
    "title": "Here’s how tech leaders will self-police AI safety under Trump’s deal",
    "url": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
-   "summary": "We now have the full details of the \"morally binding\" AI safety deal announced by President Trump yesterday, in which top executives agreed to self-regulate their artificial intelligence technology. The accord, officially titled the Joint Commitment On Frontier Responsibilities, was shared online by tech founder and presidential advisor David Sacks, and has been signed by [&#8230;]",
+   "summary": "We now have the full details of the \"morally binding\" AI safety deal announced by President Trump yesterday, in which top executives agreed to self-regulate their artificial intelligence technology. The accord, officially titled the Joint Commitment on Frontier Responsibilities, was shared online by tech founder and presidential adviser David Sacks, and has been signed by [&#8230;]",
    "published_at": "2026-09-30T12:24:32Z",
    "metrics": {},
    "extra": {
