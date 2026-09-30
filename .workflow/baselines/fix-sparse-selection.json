@@ -1,0 +1,9 @@
+{
+  "change": "fix-sparse-selection",
+  "capturedAt": "2026-09-30T13:48:05.473Z",
+  "specs": {
+    "openspec/specs/llm-digest/spec.md": "b1db3e4fc3809a519a8e2d986c33e0ccaa0abc9900352b0c3c680d4c28730c79",
+    "openspec/specs/publish-feedback/spec.md": "ad476fccbb55f6a92988ff1caf0060a769303fdd1e1227667a8db78102c84377",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  }
+}

@@ -180,6 +180,13 @@ class TestR2Selection(Base):
                             {"c1", "c2"}, self.caps)
         self.assertEqual(v["sections"]["github"]["items"], ["c2"])
 
+    def test_R2_minimum_per_section_in_prompt(self):
+        p = select.build_prompt(["c1 | hn | x"], {}, self.caps, "2026-09-30")
+        self.assertIn("每個章節深度至少選 2 則", p)
+        self.assertNotIn("上一次選題這些章節是空的", p)
+        p = select.build_prompt(["c1 | hn | x"], {}, self.caps, "2026-09-30", ["models", "arch"])
+        self.assertIn("上一次選題這些章節是空的：models（新 AI 模型）、arch（新架構與論文）", p)
+
     def test_R2_exclusions_in_prompt(self):
         profile = {"exclude_topics": ["融資新聞", "公司人事"], "try_one_rules": ["15 分鐘內看到結果"]}
         p = select.build_prompt(["c1 | hn | x"], profile, self.caps, "2026-09-30")
@@ -402,13 +409,41 @@ class TestR6Output(Base):
         sel["try_one"] = [r["NVIDIA/OpenShell"], r["vectorize-io/hindsight"]]
         for s in sel["sections"].values():
             s["items"], s["brief"] = [], []
-        fake = FakeLLM([sel, {"skip": True, "reason": "需要 Linux"},
+        # 章節全空會觸發一次重新選題（fix-sparse-selection），所以選題回應給兩次
+        fake = FakeLLM([sel, sel, {"skip": True, "reason": "需要 Linux"},
                         {"title": "試 hindsight", "why": "好用", "steps": ["pip install"], "success_check": "ok"}])
         code, _ = self.run_cli(["--date", "2026-09-30"], fake)
         self.assertEqual(code, 0)
         d = json.loads((self.root / "data" / "digest" / "2026-09-30.json").read_text(encoding="utf-8"))
         self.assertEqual(d["try_one"]["id"], "vectorize-io/hindsight")
         self.assertTrue(any(r["NVIDIA/OpenShell"] in w and "跳過" in w for w in d["warnings"]))
+
+    def sparse_then(self, second):
+        r = self.refs
+        first = {"tldr": ["一"], "sections": {"news": {"items": [r["49896604"]]},
+                                              "github": {"items": [r["vectorize-io/hindsight"]]}}}
+        fake = FakeLLM([first, second])
+        code, _ = self.run_cli(["--date", "2026-09-30"], fake)
+        self.assertEqual(code, 0)
+        d = json.loads((self.root / "data" / "digest" / "2026-09-30.json").read_text(encoding="utf-8"))
+        return d, fake
+
+    def test_R2_empty_section_reselected(self):
+        d, fake = self.sparse_then(self.selection())
+        self.assertIn("上一次選題這些章節是空的：models（新 AI 模型）、arch（新架構與論文）", fake.prompts[1])
+        self.assertEqual(len(d["sections"]["models"]["items"]), 1)
+        self.assertEqual(len(d["sections"]["arch"]["items"]), 1)
+        self.assertTrue(any("重新選題" in w for w in d["warnings"]))
+
+    def test_R2_worse_reselection_keeps_first(self):
+        d, _ = self.sparse_then({"sections": {}})
+        self.assertEqual(len(d["sections"]["news"]["items"]), 1)
+        self.assertEqual(len(d["sections"]["github"]["items"]), 1)
+
+    def test_R2_no_reselect_when_complete(self):
+        fake = FakeLLM([self.selection()])
+        self.run_cli(["--date", "2026-09-30"], fake)
+        self.assertEqual(sum("## 候選清單" in p for p in fake.prompts), 1)
 
     def test_R6_llm_failure_exit_1(self):
         fake = FakeLLM([LLMError("all models failed")])

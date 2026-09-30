@@ -22,11 +22,15 @@ def profile_text(profile):
     )
 
 
-def build_prompt(lines, profile, caps, date):
+def build_prompt(lines, profile, caps, date, empty_sections=()):
     sec = "\n".join(
         f"- {name}：{desc}（深度最多 {caps[name]['items']} 則、快速瀏覽最多 {caps[name]['brief']} 則）"
         for name, desc in SECTIONS.items()
     )
+    retry_note = ""
+    if empty_sections:
+        names = "、".join(f"{n}（{SECTIONS[n].split('：')[0]}）" for n in empty_sections)
+        retry_note = f"## 注意\n上一次選題這些章節是空的：{names}。這次請務必替它們選出深度項目。\n\n"
     return f"""你是 AI Agent 領域的資深編輯，要替一位讀者編 {date} 的早報，完整版閱讀時間約 20 分鐘。
 
 ## 讀者
@@ -40,20 +44,29 @@ def build_prompt(lines, profile, caps, date):
 2. 同一件事只選一個代號，一個代號只能出現一次。「同一件事」包含：同一個產品或模型發表的官方文章、媒體報導、HN 討論與 GitHub repo；同一場發表會的多個公告若重點相同也算。選資訊最完整的那個（通常是官方文章或 repo），其他來源不要再選。
 3. 完全排除「不想看」的主題。
 4. 優先選：對讀者工作有直接用處、熱度高（points、stars_today、upvotes 高）、屬於讀者興趣的項目。
-5. 深度項目放最重要的；次要但值得知道的放快速瀏覽。
+5. 深度項目放最重要的；次要但值得知道的放快速瀏覽。每個章節深度至少選 2 則（該類候選真的不足才例外）；新模型可從 hf_models、官方發布新聞挑，新架構與論文可從 hf_papers 挑。
 6. tldr：寫 3 句繁體中文（台灣用語），總結今天最重要的三件事，每句 60 字以內。
 7. try_one：依「今天試一個」規則挑最多 3 個代號，最適合的放前面；注意讀者可用的 API，需要讀者沒有的付費 key 的不要選。沒有合適的就填 []。
 
 ## 候選清單（代號 | 來源 | 標題 | 類別 | 指標 | 摘要）
 {chr(10).join(lines)}
 
-## 輸出
+{retry_note}## 輸出
 只輸出 JSON，格式：
 {{"tldr": ["...", "...", "..."],
  "sections": {{"news": {{"items": ["c1"], "brief": ["c2"]}}, "models": {{"items": [], "brief": []}},
               "arch": {{"items": [], "brief": []}}, "github": {{"items": [], "brief": []}}}},
  "try_one": ["c3", "c7"]}}
 """
+
+
+def empty_sections(selection):
+    return [n for n in SECTIONS if not selection["sections"][n]["items"]]
+
+
+def completeness(selection):
+    """越小越完整：先比空章節數，再比深度總數。"""
+    return (len(empty_sections(selection)), -sum(len(s["items"]) for s in selection["sections"].values()))
 
 
 def validate(resp, valid_refs, caps):

@@ -1,0 +1,62 @@
+{
+  "change": "fix-sparse-selection",
+  "archivedAt": "2026-09-30T13:49:17.989Z",
+  "archive": "openspec/changes/archive/2026-09-30-fix-sparse-selection",
+  "verifiedDigest": "a21a59225c98a4ec806c3cdcc9fde59e9078ff0c17f196a91f5b14ca2a4d9f48",
+  "specs": {
+    "openspec/specs/llm-digest/spec.md": "89ca457482932b3133dc4c3a1c225e777d802a65dffeec908927dba1924405dc",
+    "openspec/specs/publish-feedback/spec.md": "ad476fccbb55f6a92988ff1caf0060a769303fdd1e1227667a8db78102c84377",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  },
+  "validation": {
+    "items": [
+      {
+        "id": "llm-digest",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 9
+      },
+      {
+        "id": "publish-feedback",
+        "type": "spec",
+        "valid": true,
+        "issues": [
+          {
+            "level": "INFO",
+            "path": "requirements[5]",
+            "message": "Requirement text is very long (>500 characters). Consider breaking it down."
+          }
+        ],
+        "durationMs": 2
+      },
+      {
+        "id": "source-fetch",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 1
+      }
+    ],
+    "summary": {
+      "totals": {
+        "items": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "byType": {
+        "spec": {
+          "items": 3,
+          "passed": 3,
+          "failed": 0
+        }
+      }
+    },
+    "version": "1.0",
+    "root": {
+      "path": "<PROJECT_ROOT>",
+      "source": "nearest"
+    }
+  },
+  "output": "{\n  \"archive\": {\n    \"change\": \"fix-sparse-selection\",\n    \"archivedAs\": \"2026-09-30-fix-sparse-selection\",\n    \"path\": \"<PROJECT_ROOT><NETWORK_PATH>\",\n    \"specsUpdated\": true,\n    \"totals\": {\n      \"added\": 0,\n      \"modified\": 1,\n      \"removed\": 0,\n      \"renamed\": 0\n    }\n  },\n  \"root\": {\n    \"path\": \"<PROJECT_ROOT>\",\n    \"source\": \"nearest\"\n  }\n}\n"
+}

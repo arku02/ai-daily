@@ -73,6 +73,16 @@ def run(date, root=".", dry_run=False, make_llm=None, now=None, out=None):
         if selection is None:
             out("選題失敗：模型兩次都沒有回傳可用的 JSON")
             return 1
+        empty = select.empty_sections(selection)
+        if empty:
+            warnings.append(f"select: 章節 {', '.join(empty)} 沒有項目，重新選題一次")
+            retry_prompt = select.build_prompt(lines, profile, caps, date.isoformat(), empty)
+            try:
+                second = select.validate(llm.generate_json(retry_prompt), set(by_ref), caps)
+                if select.completeness(second) < select.completeness(selection):
+                    selection = second
+            except BadResponse as e:
+                warnings.append(f"select: 重新選題失敗，沿用第一次結果：{e}")
 
         max_chars = int(cfg.get("enrich", {}).get("max_chars", 3000))
         try_chars = int(cfg.get("enrich", {}).get("try_one_max_chars", max_chars))
