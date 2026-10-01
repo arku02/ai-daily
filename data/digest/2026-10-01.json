@@ -1,0 +1,737 @@
+{
+ "date": "2026-10-01",
+ "generated_at": "2026-10-01T02:56:02Z",
+ "models_used": [
+  "gemini-3.5-flash",
+  "gemini-3.5-flash-lite",
+  "gemini-3.8-flash"
+ ],
+ "llm_calls": 26,
+ "tldr": [
+  "Google 發表最強模型 Gemini 4 Argon，主打軟體工程與資安，並限制僅信任的資安防禦者可優先使用。",
+  "OpenAI 於 DevDay 推出 GPT 6.1 Sol 與 Dots 智慧代理，大幅降低推理成本並開啟主動式 Agent 時代。",
+  "開源社群推出 PageIndex 向量免除 RAG 索引與 iFixAi 代理審計工具，為開發者提供實用的本地化開發與評測選擇。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c173",
+     "source": "rss",
+     "id": "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Simon Willison",
+       "url": "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/"
+      }
+     ],
+     "title": "OpenAI 發表 Dots 個人 Agent 與 ChatGPT Space 協作空間",
+     "tags": [
+      "個人 Agent",
+      "多 Agent 協作",
+      "產業動態"
+     ],
+     "summary": "在 OpenAI DevDay 2026 上，官方發表了名為「Dots」的個人 Agent 產品。Dots 由 Astra 模型驅動，擁有可愛的虛擬化身，支援語音互動，並能執行如 API 遷移、在筆電上使用 Codex 建立應用程式並於模擬器執行等複雜任務。此外，OpenAI 推出「ChatGPT Space」協作空間，採用類似 Notion 的斜線選單介面，讓團隊能與各自的 Dots 協同工作。目前 Dots 已開放給 ChatGPT Pro 與 Enterprise 用戶，未來也計劃與企業合作推出法律、金融等領域的專業版 Dots。",
+     "key_points": [
+      "Dots 是由 Astra 驅動的個人 Agent，支援高度語音互動，定位為全新的 AI 工作方式。",
+      "具備強大程式能力，現場展示了利用 Codex 在本機開發並啟動 iPhone 模擬器執行 App。",
+      "ChatGPT Space 提供類似 Notion 的協作介面，讓團隊成員與多個 Dots 共同協作。",
+      "目前僅限付費的 Pro 與 Enterprise 用戶使用，未來將推出特定領域的專業 Dots。"
+     ],
+     "how_to_use": "雖然 Dots 目前僅限 OpenAI 付費訂閱用戶，且與你主要使用的 Gemini 或 Ollama 免費方案不同，但其「ChatGPT Space」的多 Agent 協作概念非常值得參考。在你的 LangGraph 專案中，若需要設計多 Agent 協作，可以模仿這種「共享空間」的架構，讓不同的 Agent（例如資料爬取 Agent 與 SQL 分析 Agent）在同一個狀態（State）或類似 Notion 的共享資料結構中協同作業，並透過定義好的介面與人類互動。",
+     "fallback": false
+    },
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "49896604",
+     "metrics": {
+      "points": 750,
+      "comments": 630
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/introducing-dots/"
+      },
+      {
+       "label": "HN 討論（750 分）",
+       "url": "https://news.ycombinator.com/item?id=49896604"
+      }
+     ],
+     "title": "Dots: Always-on agents",
+     "tags": [],
+     "summary": "",
+     "key_points": [],
+     "how_to_use": "",
+     "fallback": true
+    },
+    {
+     "ref": "c161",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals"
+      }
+     ],
+     "title": "LangSmith 引入 Jev 評測模型：快速且低成本的 Agent 行為評估",
+     "tags": [
+      "Agent 評測",
+      "LangSmith",
+      "開發工具"
+     ],
+     "summary": "LangSmith 宣布在其評測系統（Evals）中支援由 TypeSafe AI 開發的「Jev」模型。Jev 屬於「System One」模型，與傳統生成文字的 LLM 不同，它專門用來評估狀態（如 Agent 執行軌跡、單一訊息等），並直接返回結構化的決策與機率。這項更新解決了傳統「LLM-as-a-judge」速度慢、成本高且輸出不穩定的痛點，同時比單純的程式碼比對更具彈性，能以極低的成本評估 Agent 的開放式行為。",
+     "key_points": [
+      "Jev 是 System One 模型，不生成文本，而是針對輸入狀態返回結構化答案與機率。",
+      "在 LangSmith 中作為評測裁判（Judge），能快速且低成本地評估 Agent 的非確定性行為。",
+      "解決了傳統 LLM 裁判速度慢、token 成本高，以及將自由文本轉為結構化資料時容易出錯的問題。",
+      "使用者可直接在 LangSmith 的任何追蹤專案中的 Evaluators 標籤頁啟用。"
+     ],
+     "how_to_use": "這非常適合你！你正在使用 LangGraph 開發個人專案，而 LangGraph 與 LangSmith 有著原生的完美整合。你可以直接登入 LangSmith（有免費額度），在你的追蹤專案中開啟 Evaluators 標籤頁，設定 Jev 作為裁判。這能幫你快速評估你的資料分析或自動化 Agent 輸出品質（例如檢查 SQL 查詢結果是否符合預期、爬蟲資料是否完整），不需消耗你寶貴的 LLM API 額度，在 Windows 環境下透過瀏覽器與 Python SDK 即可在 15 分鐘內完成設定並看到評測結果。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c134",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/"
+      }
+     ],
+     "title": "OpenAI 推出 Decisions API 複製 Jev 模式",
+     "one_liner": "OpenAI 推出 Decisions API 模仿 Jev，證實了快速且低成本決策模型在 Agent 領域的重要性。",
+     "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+     "fallback": false
+    },
+    {
+     "ref": "c169",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/"
+      }
+     ],
+     "title": "OpenAI 未公開加入 Nvidia 安全平台但私下合作",
+     "one_liner": "OpenAI 雖未公開支持 Nvidia 的開源 Agent 安全平台，但私下正與其展開合作。",
+     "url": "https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/",
+     "fallback": false
+    },
+    {
+     "ref": "c137",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/"
+      }
+     ],
+     "title": "Reddit 因 AI 爬蟲終止 RSS 與公開 API",
+     "one_liner": "Reddit 為了防範 AI 機器人抓取資料，宣布停止支援 RSS 訂閱並結束公開 API 存取。",
+     "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c132",
+     "source": "rss",
+     "id": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google DeepMind",
+       "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
+      }
+     ],
+     "title": "Google 發布新一代旗艦模型 Gemini 4 Argon",
+     "tags": [
+      "模型發布",
+      "Gemini",
+      "長文本"
+     ],
+     "summary": "Google 宣布推出新一代前沿模型 Gemini 4 Argon，專為複雜的長期工作流程而設計，具備業界領先的 100 萬 token 上下文限制，擅長軟體工程、法律、金融及網路安全防禦。官方宣稱其在量子演算法最佳化中表現優異。目前該模型正透過 Fairwind Program 逐步向受信任的資安防禦者推出，並預計以輸入每百萬 token 2 美元、輸出 10 美元的價格向開發者與企業提供。",
+     "key_points": [
+      "支援 100 萬 token 上下文，適合深度、多步驟問題解決",
+      "官方宣稱在軟體工程、法律、金融與資安防禦具備前沿表現",
+      "目前透過 Fairwind Program 進行預先發布與安全測試",
+      "定價為輸入每百萬 token 2 美元、輸出 10 美元（快取輸入享 95% 折扣）"
+     ],
+     "how_to_use": "跟你的工作關係不大。目前該模型透過特定的 Fairwind Program 推出，且定價與 API 尚未全面對一般開發者開放，無法直接將現有的 Gemini 免費方案切換過去。不過其 100 萬 token 的特性未來若下放，將非常適合處理大型知識庫的 RAG 專案。",
+     "fallback": false
+    },
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "49896586",
+     "metrics": {
+      "points": 1051,
+      "comments": 931
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+      },
+      {
+       "label": "HN 討論（1051 分）",
+       "url": "https://news.ycombinator.com/item?id=49896586"
+      }
+     ],
+     "title": "GPT 6.1 Sol 發表：宣稱以五分之一價格提供接近 Astra 的智能",
+     "tags": [
+      "GPT 6.1",
+      "推理模型",
+      "性價比"
+     ],
+     "summary": "根據 Hacker News 熱門討論，新發表的 GPT 6.1 Sol 引起廣泛關注。該模型宣稱能以僅五分之一的價格，提供接近 Astra 等級的智能表現。這項突破對於需要大量呼叫 API 的開發者而言，顯著降低了建置複雜 Agent 系統的成本門檻。",
+     "key_points": [
+      "高性價比：官方宣稱價格僅為前代或同級模型（Astra）的五分之一。",
+      "高智能表現：在維持低成本的同時，依然保有接近頂級模型的推理與理解能力。"
+     ],
+     "how_to_use": "這與你的個人專案息息相關。由於你目前受限於免費的 Gemini 方案與本機 Ollama，高昂的 API 費用往往是多 Agent 協作（Multi-Agent）系統的痛點。雖然此模型可能需要付費 API Key，但這種「高智能、低價格」的趨勢，將迫使其他競爭對手（如 Google Gemini）跟進降價或推出同等免費額度。你可以持續關注其 API 開放進度，未來若有免費額度，非常適合引入 LangGraph 進行多 Agent 協作的評測。",
+     "fallback": false
+    },
+    {
+     "ref": "c174",
+     "source": "rss",
+     "id": "https://huggingface.co/blog/nvidia/kumo-tabular",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Hugging Face Blog",
+       "url": "https://huggingface.co/blog/nvidia/kumo-tabular"
+      }
+     ],
+     "title": "NVIDIA 推出開源表格預測基礎模型 Kumo Tabular",
+     "tags": [
+      "開源模型",
+      "NVIDIA",
+      "表格資料",
+      "機器學習"
+     ],
+     "summary": "NVIDIA 發表開源表格基礎模型 Kumo Tabular（屬於 NVIDIA Kumo Structured 模型系列），現已於 Hugging Face 釋出，適用於商業用途的 OpenMDW-1.1 授權。該模型能在單次前向傳遞中直接對分類與迴歸任務進行預測，無需訓練、調整或特徵工程。模型預訓練僅使用人工資料，提供 28M 到 215M 三種參數規模，並在 TabArena、BeyondArena、TALENT 與 ScoringBench 四大基準測試中排名第一。",
+     "key_points": [
+      "針對表格資料設計的開源基礎模型，支援分類與迴歸任務",
+      "官方宣稱單次前向傳遞即可預測，免訓練、免調參、免特徵工程",
+      "提供 28M 至 215M 三種尺寸，採用 OpenMDW-1.1 授權可商用",
+      "在 TabArena 等四大基準測試中排名第一"
+     ],
+     "how_to_use": "雖然這是一個強大的表格預測開源模型，且可在 Hugging Face 下載，但它是基於 Transformer 架構的深度學習模型，與你平常用 pandas、SQL 或 scikit-learn 處理結構化資料的習慣不同。若你的專案需要直接用 Python 進行表格自動化預測，可以透過其開源庫嘗試，但目前與你的 LangGraph 自動化流程或 Gemini API 沒有直接整合介面。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "zai-org/GLM-5.3",
+     "metrics": {
+      "likes": 2022,
+      "downloads": 1372510,
+      "trending_score": 88,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/zai-org/GLM-5.3"
+      }
+     ],
+     "title": "Hugging Face 熱門模型 zai-org/GLM-5.3",
+     "one_liner": "社群關注度高的開源模型 zai-org/GLM-5.3 在 Hugging Face 上架並持續獲得下載量。",
+     "url": "https://huggingface.co/zai-org/GLM-5.3",
+     "fallback": false
+    },
+    {
+     "ref": "c88",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+     "metrics": {
+      "likes": 3938,
+      "downloads": 721211,
+      "trending_score": 179,
+      "likes_delta": 21
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+     ],
+     "title": "Hugging Face 熱門模型 deepseek-ai/DeepSeek-V4.1-Flash",
+     "one_liner": "DeepSeek-V4.1-Flash 模型在 Hugging Face 獲得高關注與下載量，展現輕量快速的特性。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+     "fallback": false
+    },
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 16662,
+      "downloads": 7038259,
+      "trending_score": 365,
+      "likes_delta": 53
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Hugging Face 熱門模型 Qwen/Qwen3.8-27B",
+     "one_liner": "Qwen3.8-27B 累積了極高的 likes 與下載數，是近期備受矚目的中大型開源模型。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c133",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/building-a-harness-with-jev",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/building-a-harness-with-jev"
+      }
+     ],
+     "title": "TypeSafe AI 推出 Jev：專為快速結構化決策設計的 System One 模型",
+     "tags": [
+      "Agent 架構",
+      "結構化輸出",
+      "決策優化"
+     ],
+     "summary": "TypeSafe AI 推出名為 Jev 的 System One 模型。與傳統生成文本的 LLM 不同，Jev 專為快速、結構化的決策而設計，能評估狀態並回傳具備型別的答案與機率。官方宣稱在分類任務上，其推論速度比同類 LLM 快高達 200 倍，成本降低 400 倍。Jev 採用 RLCD（校準決策強化學習）訓練，支援 Choice（多選）、Score（評分）與 Noul（是非題）三種問題類型，並能在單次請求中平行評估多個問題，避免傳統 Agent 迴圈中每次決策都需要調用完整 LLM 的高昂成本。",
+     "key_points": [
+      "Jev 非傳統文本生成模型，而是專注於快速結構化決策的 System One 模型。",
+      "官方宣稱其分類任務推論速度提升達 200 倍，成本降低 400 倍。",
+      "支援 Choice（選擇）、Score（評等）與 Noul（是非）三種決策型別，並支援單次請求多問題平行處理。",
+      "可與 LangChain 整合，用以引導 Agent 的下一步行動，減少對完整 LLM 的調用。"
+     ],
+     "how_to_use": "這能解決你在自動化流程（如簽核、通知分類）中決策過慢的問題。在你的 LangGraph 工作流中，通常需要用 LLM 判斷下一步分支（例如：這封郵件是否緊急？資料是否異常？）。你可以用 Jev 代替傳統的 Gemini 或 Ollama 呼叫來做這種二分法（Noul）或分類（Choice）決策。雖然目前它需要 TypeSafe AI 的模型支援，但這種「用輕量化專用模型做狀態決策」的設計模式，很適合用來優化你的資料處理與通知流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c115",
+     "source": "hf_papers",
+     "id": "2609.35427",
+     "metrics": {
+      "upvotes": 62,
+      "github_stars": 9
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.35427"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.35427"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/dvmazur/async_llm"
+      }
+     ],
+     "title": "異步 Agent 新突破：讓 LLM 具備並行處理與記憶重疊的非同步架構",
+     "tags": [
+      "非同步 Agent",
+      "Qwen",
+      "多工處理"
+     ],
+     "summary": "傳統 LLM Agent 遵循「閱讀、思考、回覆/調用工具、重複」的循序互動循環，難以應對需要即時反應的非同步場景（如語音助理或監控系統）。本研究提出一個通用的非同步 LLM 框架，允許使用者或 Agent 自行定義具有重疊記憶狀態的推論協程（coroutine）。研究展示了 Qwen 3.x 模型在無需特定任務訓練的情況下，即可在串流影片理解、電子遊戲和系統監控等非同步操作中展現出色的並行處理能力。",
+     "key_points": [
+      "打破傳統 Agent 的循序（Sequential）限制，引入非同步協程機制。",
+      "允許定義具有重疊記憶狀態（overlapping memory states）的推論協程。",
+      "Qwen 3.x 模型在未經特定任務微調下，即可直接支援此非同步運作框架。",
+      "適用於串流影片理解、遊戲及系統監控等需要即時並行輸入的場景。"
+     ],
+     "how_to_use": "這對你開發自動化監控與爬蟲 Agent 非常有幫助。在 LangGraph 中，你常需要處理多個並行的資料來源或等待多個 API 回傳。利用這種非同步協程與重疊記憶的設計，你可以讓 Agent 在等待 SQL 查詢或網頁爬取結果的同時，繼續處理新的使用者輸入或監控其他指標，而不需要卡在傳統的循序節點中。你可以嘗試在 Windows 環境下使用 Ollama 執行 Qwen 3.x，並結合 Python 的 `asyncio` 來實作這種非同步狀態管理。",
+     "fallback": false
+    },
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2609.33439",
+     "metrics": {
+      "upvotes": 455,
+      "github_stars": 4987
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.33439"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.33439"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/EverMind-AI/Raven"
+      }
+     ],
+     "title": "Raven：自動構建與演化模組化測試框架的多 Agent 生態系統",
+     "tags": [
+      "多 Agent 協作",
+      "自動化工作流",
+      "Raven"
+     ],
+     "summary": "隨著 AI Agent 邁向跨領域的長流程工作，手動設計測試與執行框架（Harness）變得難以擴展。開源多 Agent 生態系統 Raven（被稱為 Harness of Harnesses）旨在自動構建與演化針對特定模型和領域的模組化測試框架。Raven 將每個「模型-測試框架」對視為可組合的智慧單元。其 Host Agent 負責分解目標、分配子任務給專業 Agent、協調執行依賴並整合結果；同時透過 Host Archive、EverOS 與 Skill Forge 保存並複用執行經驗。官方宣稱 Raven 在複雜長流程任務上顯著超越現有最先進的 Agent 系統。",
+     "key_points": [
+      "解決手動設計跨領域 Agent 測試與執行框架（Harness）難以擴展的痛點。",
+      "Host Agent 負責目標分解、子任務分配、依賴協調與結果整合。",
+      "透過 EverOS 與 Skill Forge 將執行經驗轉化為可複用的程序（procedures）。",
+      "在複雜且長流程的任務中，效能顯著優於現有的 State-of-the-art Agent 系統。"
+     ],
+     "how_to_use": "雖然 Raven 是一個大型的多 Agent 生態系統，跟你的個人專案規模相比可能偏大，但它的「Host Agent 分解目標並協調專業子 Agent」以及「將經驗保存為可複用程序」的設計非常值得借鏡。在你的 LangGraph 多 Agent 協作專案中，你可以參考 Raven 的架構，設計一個主控 Node 來動態分配任務給負責 SQL 查詢、pandas 分析與 BI 繪圖的子 Node，並建立一個簡單的本地 JSON 檔（類似其 EverOS 概念）來儲存成功的工作流路徑，提升 Agent 的重複執行效率。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c113",
+     "source": "hf_papers",
+     "id": "2609.37226",
+     "metrics": {
+      "upvotes": 73,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.37226"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.37226"
+      }
+     ],
+     "title": "Follow the Entities：為 Agent 檢索建構跨文件實體地圖",
+     "one_liner": "提出透過實體地圖連接多份文件，解決 Agent 在大型扁平檔案庫中迭代檢索效率低下的問題。",
+     "url": "https://huggingface.co/papers/2609.37226",
+     "fallback": false
+    },
+    {
+     "ref": "c125",
+     "source": "hf_papers",
+     "id": "2609.38008",
+     "metrics": {
+      "upvotes": 27,
+      "github_stars": 12
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.38008"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.38008"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ZJU-REAL/HybridCUA"
+      }
+     ],
+     "title": "HybridCUA：結合 GUI 與 CLI 的電腦操作 Agent 協調框架",
+     "one_liner": "結合圖形介面與命令列，克服單一 GUI 效率低且易錯、或 API 難以擴展的電腦操作瓶頸。",
+     "url": "https://huggingface.co/papers/2609.38008",
+     "fallback": false
+    },
+    {
+     "ref": "c117",
+     "source": "hf_papers",
+     "id": "2609.36071",
+     "metrics": {
+      "upvotes": 53,
+      "github_stars": 15
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.36071"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.36071"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/meituan-longcat/LongCat-DeepResearch"
+      }
+     ],
+     "title": "LongCat-DeepResearch：基於多 Agent 協作的深度研究報告生成系統",
+     "one_liner": "透過規劃與調查 Agent 分工，並在章節層級進行並行撰寫與修訂，產出具證據支持的深度報告。",
+     "url": "https://huggingface.co/papers/2609.36071",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c30",
+     "source": "github_trending",
+     "id": "VectifyAI/PageIndex",
+     "metrics": {
+      "stars": 38177,
+      "stars_today": 1097,
+      "stars_delta": 303
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/VectifyAI/PageIndex"
+      }
+     ],
+     "title": "PageIndex: 無向量資料庫的樹狀推理 RAG 引擎",
+     "tags": [
+      "RAG",
+      "知識庫",
+      "文件處理",
+      "Python"
+     ],
+     "summary": "PageIndex 是一款免用向量資料庫與分塊（Chunking）的 RAG 引擎。它模仿人類閱讀長篇專業文件的方式，先為文件建立樹狀索引結構，再透過 LLM 在樹狀結構上進行推理與檢索。此專案在 2026 年 8 月推出了 SDK 本地模式，支援在個人電腦上使用自己的 LLM 金鑰進行索引與檢索，並內建針對文字 PDF 的快速樹狀索引生成演算法。",
+     "key_points": [
+      "捨棄傳統向量相似度檢索，改用樹狀索引與 LLM 推理，解決「相似但不相關」的問題。",
+      "支援本地模式（Local Mode），可完全在個人本機端運作並搭配自訂 LLM。",
+      "提供 PageIndex File System，可將樹狀索引擴展至數百萬份文件進行跨文件推理。",
+      "檢索過程具備可追溯性與可解釋性，能精確對照原文參考來源。"
+     ],
+     "how_to_use": "你可以透過 `pip install pageindex` 快速安裝。雖然官方範例預設使用 OpenAI，但其本地模式支援自訂 LLM，你可以嘗試將其串接至本機的 Ollama 或 Gemini API。在你的 LangGraph 工作流中，當需要處理複雜的內部合約、財務報告或技術文件時，可將 PageIndex 作為自訂的檢索節點（Retrieval Node），取代傳統的 Chroma 或 FAISS，提供更精準、具備上下文推理能力的資料檢索服務。",
+     "fallback": false
+    },
+    {
+     "ref": "c38",
+     "source": "github_trending",
+     "id": "ifixai-ai/iFixAi",
+     "metrics": {
+      "stars": 17411,
+      "stars_today": 340,
+      "stars_delta": 653
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ifixai-ai/iFixAi"
+      }
+     ],
+     "title": "iFixAi: 專為 AI Agent 設計的獨立自動化審計與評測工具",
+     "tags": [
+      "Agent 評測",
+      "自動化",
+      "品質監控",
+      "CLI"
+     ],
+     "summary": "iFixAi 是一款針對 AI Agent 的獨立審計工具，旨在於系統上線前捕捉 Agent 的錯誤與盲點。與傳統僅專注於 Token 效率或延遲的評測工具不同，iFixAi 著重於根據業務 KPI 和組織架構評估 Agent 是否正確執行任務。它提供 CLI 引導式設定，可在 120 秒內完成診斷，並輸出 A 到 F 的評級與核心指標評分卡。",
+     "key_points": [
+      "專注於業務 KPI 與運營保障，而非僅測試 Token 效率或 Prompt 注入等技術指標。",
+      "提供 CLI 引導式設定（`ifixai setup`），會自動偵測環境變數中的 API 金鑰並安全儲存。",
+      "支援 32 種跨越五大核心維度的審計檢查，並生成富文本終端評分卡與 JSON/Markdown 報告。",
+      "可作為套件或技能（Skill）直接整合至 Cursor、Gemini 等開發環境與 Agent 中。"
+     ],
+     "how_to_use": "這對你進行 Agent 評測與監控非常實用。你可以透過 `pip install ifixai` 安裝，並在 Windows 環境下執行 `ifixai setup` 啟動引導。在 LangGraph 的開發流程中，你可以將其整合至 CI/CD 流程中，或在 Agent 輸出結果後，調用 iFixAi 的評測引擎，利用 Gemini 免費方案或本機 Ollama 作為裁判模型（Judge），自動對 Agent 的決策進行合規性與品質審計。",
+     "fallback": false
+    },
+    {
+     "ref": "c51",
+     "source": "github_search",
+     "id": "feder-cr/dots",
+     "metrics": {
+      "stars": 1937,
+      "forks": 320,
+      "stars_delta": 668
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/feder-cr/dots"
+      }
+     ],
+     "title": "dots: 基於 C++ 修改版 Firefox 的防偵測瀏覽器操作 Agent 運作環境",
+     "tags": [
+      "瀏覽器自動化",
+      "防爬蟲偵測",
+      "MCP",
+      "網頁操作"
+     ],
+     "summary": "dots 是一款專為網頁 Agent 設計的瀏覽器操作環境。官方指出，網頁 Agent 失敗通常是因為瀏覽器端的問題（如驗證碼、登入過期、點擊未觸發），而非模型本身。dots 內建一個經過 C++ 修改的真實 Firefox 引擎，從底層偽裝瀏覽器特徵（Fingerprint），並模擬真實人類的手部軌跡與鍵盤輸入，徹底避開自動化檢測。",
+     "key_points": [
+      "採用 C++ 修改的 Firefox 引擎，從底層生成一致的瀏覽器特徵，防止被網站識別為自動化工具。",
+      "模擬真人操作，滑鼠指針會移動到點擊位置，按鍵逐個按下，確保觸發真實事件。",
+      "支援 `--profile-dir` 保持登入狀態與 Cookie，並可透過 `--proxy` 自動同步時區與語言。",
+      "提供 MCP 伺服器整合，可直接作為工具提供給 Claude Code、Gemini CLI 等 Agent 使用。"
+     ],
+     "how_to_use": "這非常適合你的網頁爬蟲與資料蒐集工作。在 Windows PowerShell 中，你可以使用 `uvx` 快速啟動 dots。雖然它預設使用 OpenRouter 金鑰，但你可以將其作為 MCP 伺服器（`invisible_playwright_mcp`），串接到你的 LangGraph 專案中。當你的 LangGraph Agent 需要繞過複雜防爬蟲機制的網站進行資料蒐集時，dots 能提供一個絕對安全的瀏覽器執行環境。",
+     "fallback": false
+    },
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "t8y2/dbx",
+     "metrics": {
+      "stars": 23267,
+      "stars_today": 1138,
+      "stars_delta": 412
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/t8y2/dbx"
+      }
+     ],
+     "title": "DBX: 支援 MCP 與 AI 輔助的輕量級多資料庫管理工具",
+     "tags": [
+      "資料庫",
+      "SQL",
+      "MCP",
+      "Ollama"
+     ],
+     "summary": "DBX 是一款僅 25 MB 的單一執行檔資料庫管理工具，支援超過 100 種資料庫。它無須 Java JRE 或 Python 虛擬環境，內建 AI 助手與 MCP（Model Context Protocol）伺服器。使用者可以直接在編輯器中選取資料表並以自然語言生成 SQL，且內建安全檢查機制，會在 AI 生成的 SQL 執行前進行審查。",
+     "key_points": [
+      "極致輕量，僅 25 MB 的單一二進位檔案，無須安裝 Java 或 Python 運作環境。",
+      "內建 AI 助手，支援透過 Ollama 連接本機模型，實現本地端自然語言轉 SQL。",
+      "支援 Model Context Protocol (MCP)，能將你的資料庫直接暴露給 AI Agent 作為工具使用。",
+      "內建安全審查機制，在執行 AI 生成的 SQL 之前會先進行安全檢查，防止誤刪資料。"
+     ],
+     "how_to_use": "這與你的 SQL 資料庫管理及資料分析工作高度相關。你可以在 Windows 下直接下載並執行這個 25 MB 的工具，並將其設定連接到你本機運作的 Ollama 模型。在 LangGraph 開發中，你可以將 DBX 作為 MCP 伺服器啟動，讓你的 LangGraph Agent 能夠安全、直接地讀取與分析 SQL 資料庫中的數據，省去手寫繁瑣資料庫連接工具的麻煩。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "NVIDIA/OpenShell",
+     "metrics": {
+      "stars": 12840,
+      "stars_today": 1281,
+      "stars_delta": 1369
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/OpenShell"
+      }
+     ],
+     "title": "NVIDIA OpenShell: 自主 AI Agent 的安全隱私執行環境",
+     "one_liner": "提供自主 AI Agent 運作的安全與隱私執行期環境，確保 Agent 執行程式碼時的安全。",
+     "url": "https://github.com/NVIDIA/OpenShell",
+     "fallback": false
+    },
+    {
+     "ref": "c56",
+     "source": "github_search",
+     "id": "malevrigns/agent-jev",
+     "metrics": {
+      "stars": 331,
+      "forks": 30,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/malevrigns/agent-jev"
+      }
+     ],
+     "title": "AgentJev-0.6B: 專為 Agent 快速決策設計的 0.6B 輕量模型",
+     "one_liner": "僅 0.6B 的快速決策模型，可輸入非結構化日誌並在 50 毫秒內輸出校準後的機率分佈。",
+     "url": "https://github.com/malevrigns/agent-jev",
+     "fallback": false
+    },
+    {
+     "ref": "c68",
+     "source": "github_search",
+     "id": "PyModel/jev-judge-mcp",
+     "metrics": {
+      "stars": 72,
+      "forks": 4,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/PyModel/jev-judge-mcp"
+      }
+     ],
+     "title": "jev-judge-mcp: 基於 MCP 的類型安全 Agent 裁判工具",
+     "one_liner": "為 MCP Agent 提供類型安全的評判工具，支援自動決策、審查或呈報等策略。",
+     "url": "https://github.com/PyModel/jev-judge-mcp",
+     "fallback": false
+    },
+    {
+     "ref": "c60",
+     "source": "github_search",
+     "id": "tswawa/WechatVibe",
+     "metrics": {
+      "stars": 165,
+      "forks": 29,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/tswawa/WechatVibe"
+      }
+     ],
+     "title": "WechatVibe: 本地運作的微信聊天分析與畫像工具",
+     "one_liner": "支援本地與 API 模型的微信分析工具，提供情緒感知、人物畫像與 MBTI 推測等功能。",
+     "url": "https://github.com/tswawa/WechatVibe",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c38",
+  "source": "github_trending",
+  "id": "ifixai-ai/iFixAi",
+  "metrics": {
+   "stars": 17411,
+   "stars_today": 340,
+   "stars_delta": 653
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/ifixai-ai/iFixAi"
+   }
+  ],
+  "title": "使用 iFixAi 評測你的 AI Agent 運作表現",
+  "why": "專為 Agent 設計的獨立審計工具，能從業務 KPI 角度評測 Agent。支援 Gemini，還能用 Mock 模式在 1 秒內無 key 體驗評測流程，適合用來檢視你的 LangGraph 專案。",
+  "steps": [
+   "在 Windows 環境下安裝 iFixAi。請在終端機執行：pip install \"ifixai[gemini]\"（若 Windows 找不到指令，可改用 python -m ifixai 執行）。",
+   "先使用內建的 mock 模式進行無網路、無 key 測試，體驗評測流程。請執行：ifixai run --provider mock --api-key not-used --eval-mode self",
+   "準備好 Gemini API key 後，執行引導式設定來配置你自己的評測。請執行：ifixai setup"
+  ],
+  "success_check": "執行 mock 測試後，終端機成功顯示 A–F 的評等與核心指標計分卡，且專案目錄下成功生成包含 JSON 與 Markdown 報告的 ./ifixai-results/ 資料夾。",
+  "fallback": false
+ },
+ "warnings": [
+  "enrich: c3 補充內容抓取失敗，改用原始摘要",
+  "enrich: c1 補充內容抓取失敗，改用原始摘要",
+  "news: c3 使用原始資料（fallback）",
+  "try_one: 模型判斷 c30（VectifyAI/PageIndex）不符合規則，跳過：資料中僅提供使用 OPENAI_API_KEY 與 GPT 模型的範例，未提供切換至 Gemini 或本機 Ollama 的具體設定方式，不符合讀者僅有免費 Gemini 與 Ollama 的環境條件。"
+ ]
+}
