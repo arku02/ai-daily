@@ -74,9 +74,10 @@ digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個
 
 | workflow | 時間 | 做什麼 |
 |---|---|---|
-| [daily](.github/workflows/daily.yml) | 每天台北 08:45（GitHub 排程可能延遲） | fetch → digest → render → 提交 data → 部署 Pages → 推送 Telegram |
+| [daily](.github/workflows/daily.yml) | 每天台北 08:45，10:00 備援（今天已推送就跳過） | fetch → digest → render → 提交 data → 部署 Pages → 推送 Telegram |
 | [collect](.github/workflows/collect.yml) | 每 6 小時 | 收 Telegram 回饋，寫入私人 repo `ai-daily-feedback` |
 
+- GitHub 排程可能延遲數小時甚至整個跳過，所以 daily 排兩次；手動 Run workflow 不檢查，一定會跑
 - 兩者都可在 Actions 頁面手動 **Run workflow**；任何一步失敗都會在 Telegram 收到通知
 - Gemini 壅塞（503）時程式會等 20、60 秒重試，仍失敗則整個 digest 5 分鐘後重跑一次
 - 需要的 Secrets：`GEMINI_API_KEY`、`TELEGRAM_BOT_TOKEN`、`TELEGRAM_CHAT_ID`、`PROFILE_TOML`（profile.toml 全文）、`FEEDBACK_REPO_TOKEN`

@@ -1,9 +1,11 @@
 # 每天台北 08:45 開始：抓取 → 撰寫 → 網頁上線 → 推送 Telegram
+# 10:00 再排一次備援：GitHub 排程可能延遲或整個跳過，今天已推送過就直接結束
 name: daily
 
 on:
   schedule:
     - cron: "45 0 * * *"   # UTC 00:45 = 台北 08:45；GitHub 排程可能延遲
+    - cron: "0 2 * * *"    # UTC 02:00 = 台北 10:00；備援
   workflow_dispatch:
 
 permissions:
@@ -19,7 +21,29 @@ env:
   PYTHONIOENCODING: utf-8
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      done: ${{ steps.check.outputs.done }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main   # 取最新的推送紀錄（前一輪可能剛提交）
+
+      - name: Already pushed today?
+        id: check
+        run: |
+          day=$(TZ=Asia/Taipei date +%F)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f "data/push/$day.json" ]; then
+            echo "$day 已推送過，這次排程跳過"
+            echo "done=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "done=false" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: check
+    if: needs.check.outputs.done != 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
