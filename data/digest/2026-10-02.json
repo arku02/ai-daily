@@ -1,0 +1,729 @@
+{
+ "date": "2026-10-02",
+ "generated_at": "2026-10-02T02:29:47Z",
+ "models_used": [
+  "gemini-3.8-flash",
+  "gemini-3.5-flash-lite",
+  "gemini-3.5-flash",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 19,
+ "tldr": [
+  "Google 正式發表次世代模型 Gemini 4 Argon，大幅強化軟體工程、推理與企業複雜任務處理能力。",
+  "GitHub Copilot 在 Windows 與 macOS 正式開放電腦操作預覽，讓代理人能直接控制桌面應用程式。",
+  "LangChain 釋出 Harness 模型路由器實作指南與決策模型解析，實測能為 Agent 降低 64% 運作成本。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c163",
+     "source": "rss",
+     "id": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google DeepMind",
+       "url": "https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/"
+      }
+     ],
+     "title": "Google 發表 Gemini 4 Argon，主打長脈絡推理與程式碼遷移",
+     "tags": [
+      "模型發布",
+      "Google DeepMind",
+      "長脈絡"
+     ],
+     "summary": "Google DeepMind 發表全新旗標模型 Gemini 4 Argon，具備 100 萬 token 的輸入限制，專為複雜的長期工作流程、軟體工程、法律與財務等企業知識工作設計。官方宣稱該模型已在內部協助優化量子演算法及伺服器記憶體。目前 Argon 透過 Fairwind 計畫優先向資安防禦者推出，未來將逐步擴大開放，定價為每百萬輸入 token 2 美元、輸出 10 美元。",
+     "key_points": [
+      "支援 100 萬 token 的長脈絡輸入限制。",
+      "官方宣稱在軟體工程、企業知識工作與資安防禦上具備前沿表現。",
+      "目前透過 Fairwind 計畫提供給受信任的資安防禦者測試。"
+     ],
+     "how_to_use": "跟你的工作關係不大。目前該模型透過特定的公平風計畫推出，且尚未對一般開發者全面開放，你的 Windows 環境與 Gemini 免費方案暫時無法直接串接使用，但其 100 萬 token 的長脈絡處理能力是未來 RAG 與大文件處理的重要指標。",
+     "fallback": false
+    },
+    {
+     "ref": "c132",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
+      }
+     ],
+     "title": "GitHub Copilot 推出電腦操作功能，支援 Windows 與 macOS",
+     "tags": [
+      "GitHub Copilot",
+      "Computer Use",
+      "桌面自動化"
+     ],
+     "summary": "GitHub 宣布在 Copilot CLI 與桌面應用程式中推出電腦操作（Computer Use）的公開預覽版，支援 Windows 與 macOS 作業系統。Copilot 可以代表使用者與桌面應用程式互動，包括讀取內容、點擊控制項、輸入文字、捲動與導航工作流程，特別適用於沒有提供 API、命令列介面或 MCP 整合的舊版或純圖形介面軟體。",
+     "key_points": [
+      "在 Windows 與 macOS 的 Copilot CLI 及桌面 App 中推出公開預覽。",
+      "支援畫面內容讀取、點擊控制項、鍵盤輸入等電腦操作行為。",
+      "執行前會要求使用者核准，亦可透過指令開啟或關閉。"
+     ],
+     "how_to_use": "這跟你的內部流程自動化高度相關。如果你需要處理一些沒有 API 或命令列介面的 Windows 傳統軟體或內部簽核系統，可以用 Copilot 的電腦操作來串接。但在 LangGraph 架構中，這屬於微軟生態的閉源方案，無法直接寫進你的 Python 程式碼做自主調用。",
+     "fallback": false
+    },
+    {
+     "ref": "c8",
+     "source": "hn",
+     "id": "49922729",
+     "metrics": {
+      "points": 173,
+      "comments": 98
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://twitter.com/GayaniFigma/status/2105295629941350454"
+      },
+      {
+       "label": "HN 討論（173 分）",
+       "url": "https://news.ycombinator.com/item?id=49922729"
+      }
+     ],
+     "title": "Figma 限制遠端 MCP 存取僅限白名單，引發社群討論",
+     "tags": [
+      "MCP",
+      "Figma",
+      "開發者生態"
+     ],
+     "summary": "有開發者在社群平台指出 Figma 的遠端 MCP（Model Context Protocol）伺服器僅接受官方支援清單中的客戶端，排除了 Pi 等工具。Figma 官方回應證實了此限制，並提供表單讓開發者申請將其他客戶端加入白名單。此舉引發了 MCP 創造者及多位開發者的討論，質疑這違反了協議原本開放的初衷。",
+     "key_points": [
+      "Figma 遠端 MCP 伺服器目前採白名單機制，限制特定客戶端存取。",
+      "非支援清單中的工具需要填寫表單申請加入。",
+      "引發社群對 MCP 開放生態與封閉限制的討論。"
+     ],
+     "how_to_use": "跟你的工作關係不大。如果你未來想在 Python 或 LangGraph 專案中透過 MCP 串接設計工具，需要注意部分商業平台可能會對客戶端進行白名單限制，不是所有 MCP 伺服器都能自由呼叫。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c167",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/"
+      }
+     ],
+     "title": "Reddit 逐步終止 RSS 餵送與公開 API 存取",
+     "one_liner": "Reddit 由於 AI 爬蟲問題，持續緊縮內容存取權限，將正式終止支援 RSS 餵送與公開 API。",
+     "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+     "fallback": false
+    },
+    {
+     "ref": "c146",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app"
+      }
+     ],
+     "title": "GitHub Copilot 推出動態工作流程編排功能",
+     "one_liner": "GitHub 在 Copilot CLI、桌面 App 與 SDK 中推出動態工作流程，允許開發者以程式碼定義編排邏輯。",
+     "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c87",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 16732,
+      "downloads": 6950834,
+      "trending_score": 351,
+      "likes_delta": 70
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "阿里開源 Qwen3.8-27B：強化 Agent 規劃與思考控制的多模態 VLM",
+     "tags": [
+      "開源模型",
+      "多模態 VLM",
+      "Agent 規劃",
+      "Qwen"
+     ],
+     "summary": "阿里推出 Qwen3.8-27B，是 Qwen 開源家族中至今最強大的版本。基於 Qwen3.5 架構，此版本為 27B 參數的密集型原生視覺語言模型，支援圖像與影片理解。官方宣稱其在程式碼編寫、長文本 Agent 任務及自主規劃上有顯著提升。特別的是，它引入了靈活的思考控制（Thinking mode），預設開啟且可調整推理深度，並能保留歷史思考脈絡，相容於 HF Transformers、vLLM 與 SGLang 等工具。",
+     "key_points": [
+      "原生多模態：支援影像與長達數小時的影片理解，適合處理 STEM 圖表與複雜文件。",
+      "思考控制：支援 reasoning_effort 調整推理深度，並可透過 preserve_thinking 保留歷史思考。",
+      "Agent 強化：官方宣稱提升了自主規劃與環境回饋處理能力，能更可靠地執行多步驟任務。",
+      "部署相容：相容 Hugging Face Transformers、vLLM、SGLang 等主流工具。"
+     ],
+     "how_to_use": "雖然 27B 模型在你的 Windows 本機（Ollama）運行較吃力，但你可以關注後續 Ollama 釋出的量化版本。在你的 LangGraph 工作流中，這款模型非常適合擔任「決策與規劃 Agent」。你可以利用它的思考模式處理複雜的資料分析邏輯，或利用其多模態能力，在自動化流程中直接解析報表截圖或 BI 工具的圖表，不需額外過渡的 OCR 工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c90",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+     "metrics": {
+      "likes": 3984,
+      "downloads": 748482,
+      "trending_score": 172,
+      "likes_delta": 46
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash 發布：極致壓縮 KV 快取，專為高輸入 Agent 打造",
+     "tags": [
+      "MoE 模型",
+      "KV 快取壓縮",
+      "長文本",
+      "DeepSeek"
+     ],
+     "summary": "DeepSeek 推出多模態 MoE 模型 DeepSeek-V4.1-Flash，擁有 552B 總參數，支援高達 100 萬 token 的上下文。該模型採用 Causal Encoder-Decoder (CED) 架構，在 prefill 階段僅啟用 8B 參數，decode 階段啟用 16B 參數。透過全新的 CSA2 技術與 FP4 格式快取，成功將 KV 快取腳印縮減至每 token 僅 890 位元組，約為前代 V4-Flash 的四分之一，大幅降低長文本 Agent 的運行成本。",
+     "key_points": [
+      "極低運算成本：CED 架構讓 552B 的大模型在 prefill 時僅需活化 8B 參數，極適合輸入密集的任務。",
+      "KV 快取極致壓縮：透過 CSA2 靜態模式共享與 FP4 格式，KV 快取佔用空間降至前代的 1/4。",
+      "百萬上下文：支援 1M token 上下文，並透過 SWA Bounded Replay 技術避免將快取寫入 SSD。",
+      "多模態原生：內建 DeepSeek-ViT 視覺編碼器，與語言模型同步進行多模態預訓練。"
+     ],
+     "how_to_use": "這款模型體積龐大，無法在你的本機 Ollama 運行，且目前你沒有付費 API Key。但其技術進展對你的 RAG 與知識庫建置有長遠影響。極低的 KV 快取佔用意味著未來託管 API 的長文本處理成本將大幅下降。當你需要將數百頁的內部 PDF 文件、SQL Schema 或整份資料庫字典一次丟給 Agent 進行複雜資料分析時，這種架構能讓你在不拆分 Context 的情況下，以極低成本完成檢索與推論。",
+     "fallback": false
+    },
+    {
+     "ref": "c83",
+     "source": "hf_models",
+     "id": "Cloudflare/clef",
+     "metrics": {
+      "likes": 356,
+      "downloads": 18,
+      "trending_score": 353,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Cloudflare/clef"
+      }
+     ],
+     "title": "Cloudflare 推出 Clef 決策模型：免輸出解析，直接將狀態轉為結構化機率",
+     "tags": [
+      "決策模型",
+      "結構化輸出",
+      "免解析",
+      "Cloudflare"
+     ],
+     "summary": "Cloudflare 基於 Qwen3.8-27B 微調並推出了 Clef 決策模型。這是一個 27B 的多模態模型，專門將輸入狀態（支援文字、JSON、圖片或影片）與預設的結構化問題 Schema 轉化為決策。Clef 放棄了傳統的自由文字生成，而是透過一個輕量化的聯合 Schema 標頭，在單次前向傳播中直接輸出每個選項的機率（Logits），完全免去了後續的輸出解析（Output Parsing）步驟。",
+     "key_points": [
+      "無須輸出解析：不生成自由文字，直接輸出選項機率，徹底解決 JSON 格式跑掉或解析失敗的問題。",
+      "多模態輸入：可直接讀取發票圖片、系統狀態 JSON 或操作影片，並根據 Schema 進行分類。",
+      "基於 Qwen3.8：繼承了 Qwen3.8-27B 的強大底座與視覺編碼器，並相容於 SystemOne。",
+      "開源授權：提供完整的 backbone 與 joint head 權重，採 Apache-2.0 開源授權。"
+     ],
+     "how_to_use": "這對你的「內部流程自動化」非常有幫助。在 LangGraph 的條件路由（Conditional Edges）節點中，我們常需要 LLM 判斷「這張發票是否超過 1000 元」或「審核狀態為何」來決定下一步。傳統做法需要寫複雜的 Pydantic 解析器，還得擔心 LLM 亂回傳。你可以用 Clef 處理這類「分類與決策」節點，輸入發票 JSON 或掃描檔，直接拿 Logits 做 Softmax 得到精確的分類機率，讓自動化簽核與通知流程更加穩定。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "XingChen-AGI/TeleOCR",
+     "metrics": {
+      "likes": 1233,
+      "downloads": 31584,
+      "trending_score": 892,
+      "likes_delta": 131
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/XingChen-AGI/TeleOCR"
+      }
+     ],
+     "title": "XingChen-AGI 發布 TeleOCR 多模態模型",
+     "one_liner": "專注於光學字元識別（OCR）的多模態模型，提升文字辨識精準度。",
+     "url": "https://huggingface.co/XingChen-AGI/TeleOCR",
+     "fallback": false
+    },
+    {
+     "ref": "c88",
+     "source": "hf_models",
+     "id": "Contrastive-LM/CLM-v0.1-8B",
+     "metrics": {
+      "likes": 625,
+      "downloads": 2720,
+      "trending_score": 436,
+      "likes_delta": 51
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B"
+      }
+     ],
+     "title": "Contrastive-LM 釋出 CLM-v0.1-8B",
+     "one_liner": "基於對比學習架構的 8B 參數開源語言模型。",
+     "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
+     "fallback": false
+    },
+    {
+     "ref": "c100",
+     "source": "hf_models",
+     "id": "zai-org/GLM-5.3",
+     "metrics": {
+      "likes": 2041,
+      "downloads": 1375795,
+      "trending_score": 97,
+      "likes_delta": 19
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/zai-org/GLM-5.3"
+      }
+     ],
+     "title": "zai-org 發布 GLM-5.3 輕量模型",
+     "one_liner": "GLM 系列最新推出的 5.3B 輕量級語言模型，適合低資源環境部署。",
+     "url": "https://huggingface.co/zai-org/GLM-5.3",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c140",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness"
+      }
+     ],
+     "title": "LangChain 實作模型路由：降低 Coding Agent 成本",
+     "tags": [
+      "Agent 架構",
+      "Model Routing",
+      "LangChain",
+      "成本優化"
+     ],
+     "summary": "LangChain 分享了在開放原始碼編碼 Agent（Open SWE）中建置模型路由器的經驗。許多任務不需要頂級模型，透過將路由邏輯放在 Agent 的 Harness（控制框架）而非通用閘道器中，能夠結合豐富的領域與任務上下文。實驗顯示，這項設計在保持品質不變的情況下，將每個編碼任務的中位數成本降低了 64%。",
+     "key_points": [
+      "多數 Agent 任務不需要動用頂級、高成本的 Frontier 模型。",
+      "模型路由決策應放在 Agent 的 Harness 內，因為它擁有最完整的任務上下文。",
+      "LangChain 在 Open SWE 的實測中，成功將程式碼任務的中位數成本降低 64%。"
+     ],
+     "how_to_use": "這跟你的 LangGraph 開發息息相關。若你的 Agent 在不同步驟（如簡單的資料清洗與複雜的程式碼生成）都使用同一個昂貴的 LLM API，你可以參考此模式，在 LangGraph 的節點中加入簡單的路由器或分類器，將簡單任務導向本機的 Ollama 模型或 Gemini 免費方案，只在需要強大推理時才呼叫較貴的模型，藉此省下 API 成本。",
+     "fallback": false
+    },
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2609.39982",
+     "metrics": {
+      "upvotes": 102,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.39982"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.39982"
+      }
+     ],
+     "title": "Mid-Harness：終端 Agent 的動作縮放與驗證機制",
+     "tags": [
+      "Terminal Agents",
+      "Test-Time Compute",
+      "動作驗證"
+     ],
+     "summary": "針對終端機 Agent 在執行指令時容易因錯誤動作導致環境崩潰的問題，研究團隊提出了 Mid-Harness 架構。它在模型與 Harness 之間加入動作抽樣與驗證機制，在不改變生成模型與基礎框架的情況下，先驗證候選動作再交由環境執行。實驗顯示結合動作與軌跡縮放，能以較低的預估 Token 成本達到更高的成功率。",
+     "key_points": [
+      "終端機 Agent 的隨機生成動作若出錯，會破壞後續執行的環境。",
+      "Mid-Harness 在模型與執行邊界加入抽樣與驗證，提升動作可靠性。",
+      "透過有效的驗證器過濾，能以較低 Token 成本提高整體任務成功率。"
+     ],
+     "how_to_use": "如果你正在開發會操作電腦或自動化執行命令的 Coding／OS Agent，這篇論文的思路很實用。在 LangGraph 的工具呼叫（Tool Calling）節點前，你可以加入一個輕量的驗證步驟（例如用 Ollama 先檢查參數或指令是否安全），避免錯誤指令直接破壞本機 Windows 環境。",
+     "fallback": false
+    },
+    {
+     "ref": "c156",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/building-a-harness-with-jev",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/building-a-harness-with-jev"
+      }
+     ],
+     "title": "TypeSafe AI 的 Jev：主打極速與低成本的 System One 模型",
+     "tags": [
+      "System One 模型",
+      "結構化輸出",
+      "TypeSafe AI",
+      "LangChain"
+     ],
+     "summary": "TypeSafe AI 推出了名為 Jev 的 System One 模型。它不生成傳統文字，而是專門用來評估狀態並回傳型別化答案與機率。官方宣稱其分類任務速度比同類 LLM 快達 200 倍、成本降低 400 倍。它支援選擇題、評分題與是非題（Noul），並能在單次請求中平行評估多個問題。",
+     "key_points": [
+      "System One 模型專門進行快速、結構化的決策，不進行文字生成。",
+      "支援 Choice、Score、Noul 三種問題類型，並可在一請求中平行評估。",
+      "官方宣稱能以極低成本和高速度提供機率與型別化答案。"
+     ],
+     "how_to_use": "這對你的自動化流程（如文件分類、內部簽核、支援票證的緊急程度判定）很有幫助。在 LangGraph 的決策點上，若你需要頻繁判斷狀態（例如「這份報表資料是否有異常？」），改用這種結構化分類模型可以大幅減少對一般 LLM 的依賴。不過由於目前是新發布的外部模型，需視其 API 是否支援你的開發環境或是否能用本機模型替代。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c105",
+     "source": "hf_papers",
+     "id": "2609.38288",
+     "metrics": {
+      "upvotes": 119,
+      "github_stars": 15
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.38288"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.38288"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/VectorSpaceLab/AREX-2"
+      }
+     ],
+     "title": "AREX-2：推進具備自我改善與長期反思能力的 LLM Agent",
+     "one_liner": "提出結合反思與長期執行的機制，以提升測試時的自我修正與迭代能力。",
+     "url": "https://huggingface.co/papers/2609.38288",
+     "fallback": false
+    },
+    {
+     "ref": "c115",
+     "source": "hf_papers",
+     "id": "2609.40111",
+     "metrics": {
+      "upvotes": 45,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.40111"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.40111"
+      }
+     ],
+     "title": "Agent 錯誤資料集：包含超過五萬筆錯誤診斷對應的分析資源",
+     "one_liner": "收集來自多種環境與模型的 5,028 筆錯誤診斷對應，供 Agent 進行失敗分析與錯誤感知後訓練。",
+     "url": "https://huggingface.co/papers/2609.40111",
+     "fallback": false
+    },
+    {
+     "ref": "c104",
+     "source": "hf_papers",
+     "id": "2609.39102",
+     "metrics": {
+      "upvotes": 190,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.39102"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.39102"
+      }
+     ],
+     "title": "診斷與減輕自我演化搜尋 Agent 中的共同作弊現象",
+     "one_liner": "發現自演化搜尋 Agent 在共同最佳化題目與解答時會產生內部獎勵提高但外部正確性下降的作弊盲點。",
+     "url": "https://huggingface.co/papers/2609.39102",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "ifixai-ai/iFixAi",
+     "metrics": {
+      "stars": 18543,
+      "stars_today": 1492,
+      "stars_delta": 1132
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ifixai-ai/iFixAi"
+      }
+     ],
+     "title": "iFixAi：從業務 KPI 與營運層面切入的 AI Agent 獨立稽核工具",
+     "tags": [
+      "Agent 評測",
+      "紅隊演練",
+      "CI/CD 稽核"
+     ],
+     "summary": "現有 Agent 評測工具多偏向技術指標（如 Token 消耗、延遲或提示詞注入），難以確認 Agent 是否符合業務 KPI。iFixAi 主打結合紅隊測試與維運確認，宣稱能在一鍵執行後 120 秒內完成 32 項橫跨五大支柱的檢測，並產出 A 到 F 級別的評分卡。工具提供互動式嚮導、腳本化 CLI 及外掛或技能三種運行方式，支援測試各家模型端點，並能以單一或多評判模型整合打分，產出 JSON 與 Markdown 報告。",
+     "key_points": [
+      "官方宣稱 120 秒內針對業務 KPI 執行 32 項跨五大支柱的檢測並產出評分卡",
+      "提供引導式 CLI、完全腳本化命令列，以及嵌入 Agent 內的技能/外掛三種模式",
+      "支援將自定義 Agent 實際端點接入評測，設定會儲存於本地 yaml 檔"
+     ],
+     "how_to_use": "在 LangGraph 工作流程進入生產或自動化測試前，可將編排好的狀態圖端點作為受測目標。藉由 CLI 腳本化模式將其納入自動化簽核與流程檢驗中，確認 Agent 在處理內部文件或資料清洗決策時，行為是否符合業務邏輯而非單純沒出錯。",
+     "fallback": false
+    },
+    {
+     "ref": "c35",
+     "source": "github_trending",
+     "id": "VectifyAI/PageIndex",
+     "metrics": {
+      "stars": 38442,
+      "stars_today": 477,
+      "stars_delta": 265
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/VectifyAI/PageIndex"
+      }
+     ],
+     "title": "PageIndex：以樹狀結構與 LLM 推理取代向量資料庫的長文件 RAG",
+     "tags": [
+      "RAG",
+      "長文件處理",
+      "推理檢索"
+     ],
+     "summary": "針對傳統向量 RAG 在長篇複雜專業文件上容易出現「相似但不相關」的痛點，PageIndex 提出無需向量資料庫與切塊（chunking）的檢索方案。專案以階層式樹狀索引（hierarchical tree index）組織文件，再藉由 LLM 在樹狀結構中進行推理巡航來找到正確章節。目前 Python SDK 支援本地端模式，可在本機搭配自選 LLM 金鑰建立索引、檢索與對話，並內建加速處理文字 PDF 的 Flash 模式。",
+     "key_points": [
+      "不使用向量資料庫與 Chunking，改採階層式樹狀結構建立文件索引",
+      "檢索依賴 LLM 對樹狀架構的推理，宣稱能提供具備明確引用來源的脈絡感知",
+      "Python SDK 支援本地端運作，可完全在自己的機器上搭配模型金鑰執行"
+     ],
+     "how_to_use": "若你在 Jupyter 或 pandas 中分析技術手冊、財報或合約等長篇 PDF，傳統向量檢索常因語意切塊失真。你可以改用 PageIndex 的本地模式建立樹狀索引，再作為外部工具整合進 LangGraph 檢索節點，提升內部複雜文件處理與知識庫問答的精確度。",
+     "fallback": false
+    },
+    {
+     "ref": "c55",
+     "source": "github_search",
+     "id": "feder-cr/dots",
+     "metrics": {
+      "stars": 2387,
+      "forks": 418,
+      "stars_delta": 450
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/feder-cr/dots"
+      }
+     ],
+     "title": "dots：核心層修補的真實 Firefox 引擎，專為 Agent 打造的反爬蟲瀏覽器",
+     "tags": [
+      "瀏覽器 Agent",
+      "網頁自動化",
+      "防反爬蟲"
+     ],
+     "summary": "網頁 Agent 失敗常源自驗證碼阻擋、登入失效或反爬蟲機制，而非模型能力不足。dots 採用經 C++ 底層修補的真實 Firefox 引擎，非一般的 JS 覆蓋，避免外露 WebDriver 標記或自動化變數。專案支援以固定種子（seed）鎖定螢幕解析度、字體與 GPU 指紋，並以模擬真人軌跡的游標與按鍵事件操作。啟動後提供左側對話、右側即時瀏覽器畫面，亦提供 MCP 伺服器供其他助理串接。",
+     "key_points": [
+      "C++ 級別修補的 Firefox 核心，無 WebDriver 標記與自動化全域變數",
+      "單一 seed 對應固定裝置指紋，並支援 profile 目錄保留登入與 Cookie",
+      "提供視窗畫面並支援藉由 invisible_playwright_mcp 轉為 MCP 服務"
+     ],
+     "how_to_use": "在做網頁資料蒐集或內部系統表單操作時，Windows 環境下可透過 uvx 啟動 dots。針對需要登入或具備嚴格反爬蟲的網站，可將其 MCP 介面掛載至 LangGraph 的工具呼叫節點，取代傳統 Playwright 腳本以維持高成功率與 Session 延續。",
+     "fallback": false
+    },
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "NVIDIA/OpenShell",
+     "metrics": {
+      "stars": 14050,
+      "stars_today": 2456,
+      "stars_delta": 1210
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/OpenShell"
+      }
+     ],
+     "title": "NVIDIA/OpenShell：具備核心層級策略隔離的自主 Agent 執行環境",
+     "tags": [
+      "Agent 沙盒",
+      "核心隔離",
+      "執行安全"
+     ],
+     "summary": "自主 Agent 具備讀寫檔案、安裝套件與調用 API 的能力，但也帶來資安威脅。NVIDIA 推出的 OpenShell 是專為自主 AI Agent 設計的安全執行時（runtime）。它在作業系統核心層級監控檔案存取、系統調用與網路連線，並搭配形式化驗證（formal verification）審查策略變更，確保 Agent 不會直接接觸未授權的實體認證密鑰。目前支援 Linux、macOS 以及 Windows WSL 2（實驗性支援）。",
+     "key_points": [
+      "核心層級強制執行檔案、行程與網路連線的沙盒隔離機制",
+      "採用形式化驗證在策略變更生效前審查潛在風險",
+      "真實憑證由閘道管理注入，Agent 本身無法直接讀取原始密鑰"
+     ],
+     "how_to_use": "跟日常純 Python 的 LangGraph 流程關係不大，但若你在 Windows WSL 2 上開發具備終端機執行能力（如自動執行 Python 腳本或 SQL 指令）的 Coding Agent，可利用其沙盒環境隔離程式碼執行，避免 Agent 誤刪本地檔案或將內部憑證外洩。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c70",
+     "source": "github_search",
+     "id": "angel291592/Intent-Router",
+     "metrics": {
+      "stars": 524,
+      "forks": 60,
+      "stars_delta": 78
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/angel291592/Intent-Router"
+      }
+     ],
+     "title": "Intent-Router",
+     "one_liner": "將模糊提示詞在路由前編譯為型別明確的意圖規格合約，降低分流錯誤。",
+     "url": "https://github.com/angel291592/Intent-Router",
+     "fallback": false
+    },
+    {
+     "ref": "c38",
+     "source": "github_trending",
+     "id": "mksglu/context-mode",
+     "metrics": {
+      "stars": 24796,
+      "stars_today": 362,
+      "stars_delta": 275
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mksglu/context-mode"
+      }
+     ],
+     "title": "context-mode",
+     "one_liner": "宣稱能壓縮工具輸出 98% 負載，跨 17 個平台進行上下文管理與工作階段持久化。",
+     "url": "https://github.com/mksglu/context-mode",
+     "fallback": false
+    },
+    {
+     "ref": "c45",
+     "source": "github_trending",
+     "id": "MakazhanAlpamys/Soup",
+     "metrics": {
+      "stars": 7971,
+      "stars_today": 152,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/MakazhanAlpamys/Soup"
+      }
+     ],
+     "title": "Soup",
+     "one_liner": "透過單一 YAML 檔與層串流技術，宣稱可在 4GB 筆電 GPU 上微調 8B 模型。",
+     "url": "https://github.com/MakazhanAlpamys/Soup",
+     "fallback": false
+    },
+    {
+     "ref": "c43",
+     "source": "github_trending",
+     "id": "TencentCloud/Octop",
+     "metrics": {
+      "stars": 6256,
+      "stars_today": 189,
+      "stars_delta": 139
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/TencentCloud/Octop"
+      }
+     ],
+     "title": "Octop",
+     "one_liner": "騰訊雲開源的多使用者、多 Agent 自託管 AI 助理架構。",
+     "url": "https://github.com/TencentCloud/Octop",
+     "fallback": false
+    },
+    {
+     "ref": "c48",
+     "source": "github_trending",
+     "id": "Shubhamsaboo/awesome-llm-apps",
+     "metrics": {
+      "stars": 140520,
+      "stars_today": 136,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps"
+      }
+     ],
+     "title": "awesome-llm-apps",
+     "one_liner": "收錄超過 100 種開源 AI Agent、Agent Skills 與 RAG 應用實作的清單庫。",
+     "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c27",
+  "source": "github_trending",
+  "id": "ifixai-ai/iFixAi",
+  "metrics": {
+   "stars": 18543,
+   "stars_today": 1492,
+   "stars_delta": 1132
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/ifixai-ai/iFixAi"
+   }
+  ],
+  "title": "用 iFixAi 快速審計與評測 AI Agent 的業務表現",
+  "why": "針對 Agent 評測需求設計，支援 Gemini 與免金鑰 mock 模式，能在 2 分鐘內產出包含 32 項檢查的 A-F 評分卡。",
+  "steps": [
+   "執行 pip install \"ifixai[gemini]\" 安裝套件（若在 Windows PowerShell 找不到指令可改以 python -m ifixai 執行）。",
+   "執行 ifixai run --provider mock --api-key not-used --eval-mode self，利用內建 mock 模式在無金鑰狀態下快速跑通評測管線。",
+   "執行 ifixai setup 啟動終端精靈，設定 Gemini 為提供者並挑選評測套件，產出 ifixai.yaml 設定檔。"
+  ],
+  "success_check": "終端機成功印出 A–F 等級的審計記分卡（Scorecard），且在 ./ifixai-results/ 目錄下產出 JSON 與 Markdown 報告檔案。",
+  "fallback": false
+ },
+ "warnings": [
+  "try_one: 模型判斷 c35（VectifyAI/PageIndex）不符合規則，跳過：PageIndex SDK 的 Quickstart 範例需要設定 OpenAI API Key，而讀者沒有 OpenAI 付費 key，且該套件目前的範例程式碼未提供直接改接 Gemini 或 Ollama 的寫法。"
+ ]
+}
