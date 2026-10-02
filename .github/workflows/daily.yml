@@ -1,5 +1,6 @@
 # 每天台北 08:45 開始：抓取 → 撰寫 → 網頁上線 → 推送 Telegram
-# 10:00 再排一次備援：GitHub 排程可能延遲或整個跳過，今天已推送過就直接結束
+# 主要由 cron-job.org 08:45 呼叫 workflow_dispatch 觸發（見 README）；
+# 下面兩個 GitHub 排程只當備援：常延遲或整個跳過，今天已推送過就直接結束
 name: daily
 
 on:
