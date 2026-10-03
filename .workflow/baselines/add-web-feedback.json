@@ -1,0 +1,10 @@
+{
+  "change": "add-web-feedback",
+  "capturedAt": "2026-10-03T11:24:28.110Z",
+  "specs": {
+    "openspec/specs/daily-schedule/spec.md": "23b0c8aa20d130baf9b8af75fcf91f4404c7f6fdb5784f613e2d6b30896cf14d",
+    "openspec/specs/llm-digest/spec.md": "89ca457482932b3133dc4c3a1c225e777d802a65dffeec908927dba1924405dc",
+    "openspec/specs/publish-feedback/spec.md": "ad476fccbb55f6a92988ff1caf0060a769303fdd1e1227667a8db78102c84377",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  }
+}

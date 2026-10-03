@@ -31,8 +31,10 @@ def build_parser():
     pu.add_argument("--root", default=".", help="專案根目錄（預設目前目錄）")
     pu.add_argument("--dry-run", action="store_true", help="只印出訊息，不送出")
     pu.add_argument("--force", action="store_true", help="已推送過也再送一次")
-    co = sub.add_parser("collect", help="從 Telegram 收回饋，存到回饋資料夾")
+    co = sub.add_parser("collect", help="從 Telegram 與網頁評分端點收回饋，存到回饋資料夾")
     co.add_argument("--root", default=".", help="專案根目錄（預設目前目錄）")
+    pl = sub.add_parser("pass-link", help="用 Telegram 傳送網頁評分的通行證連結")
+    pl.add_argument("--root", default=".", help="專案根目錄（預設目前目錄）")
     return p
 
 
@@ -60,7 +62,8 @@ def _bot(root, make_bot):
 def cmd_render(args):
     from .publish import html
     cfg = _publish_cfg(args.root)
-    result = html.render_all(args.root, cfg.get("telegram", {}).get("bot_username", ""))
+    result = html.render_all(args.root, cfg.get("telegram", {}).get("bot_username", ""),
+                             endpoint=cfg.get("feedback", {}).get("endpoint", ""))
     if result is None:
         print("data/digest 沒有任何早報，請先執行 python -m ai_daily digest", file=sys.stderr)
         return 2
@@ -108,11 +111,51 @@ def cmd_collect(args, now_utc=None, make_bot=None):
         return 2
     folder = os.environ.get("FEEDBACK_DIR") or _publish_cfg(args.root).get("feedback", {}).get("dir", "feedback")
     folder = Path(folder) if Path(folder).is_absolute() else Path(args.root) / folder
+    code = 0
     try:
         collect_mod.collect(bot, args.root, folder, now=now_utc)
     except TelegramError as e:
         print(e, file=sys.stderr)
+        code = 1
+    # R10：有設定網頁評分端點時，Telegram 失敗也照樣收網頁評分
+    from . import env
+    endpoint = _publish_cfg(args.root).get("feedback", {}).get("endpoint", "")
+    if endpoint:
+        key = env.get("FEEDBACK_READ_KEY", args.root)
+        if not key:
+            print("publish.toml 設定了 feedback.endpoint，但找不到 FEEDBACK_READ_KEY：請在 .env 或 Secrets 設定",
+                  file=sys.stderr)
+            return 1
+        try:
+            collect_mod.collect_web(args.root, folder, endpoint, key, get=collect_mod.http_get_json)
+        except collect_mod.WebFeedbackError as e:
+            print(e, file=sys.stderr)
+            code = 1
+    return code
+
+
+def cmd_pass_link(args, make_bot=None):
+    from . import env
+    from .publish.telegram import TelegramError
+    key = env.get("FEEDBACK_WEB_KEY", args.root)
+    if not key:
+        print("找不到 FEEDBACK_WEB_KEY：請在專案根目錄的 .env 設定（和 Worker 的 WEB_KEY 相同）", file=sys.stderr)
+        return 2
+    bot = _bot(args.root, make_bot)
+    if bot is None:
+        return 2
+    link = f"{_publish_cfg(args.root)['site']['base_url']}index.html#k={key}"
+    text = ("🔑 網頁評分通行證\n\n"
+            f"在你看早報的瀏覽器打開這個連結（手機、電腦各一次）：\n{link}\n\n"
+            "設定後，網頁上按 👎👍⭐ 會直接記錄，不會再跳到 Telegram。\n"
+            "這個連結等於密碼，請不要轉傳。")
+    try:
+        bot.call("sendMessage", {"chat_id": bot.chat_id, "text": text,
+                                 "link_preview_options": {"is_disabled": True}})
+    except TelegramError as e:
+        print(str(e).replace(key, "***"), file=sys.stderr)
         return 1
+    print("已用 Telegram 傳送通行證連結")
     return 0
 
 
@@ -163,4 +206,6 @@ def main(argv=None, now_utc=None, make_llm=None, make_bot=None):
         return cmd_push(args, now_utc, make_bot)
     if args.command == "collect":
         return cmd_collect(args, now_utc, make_bot)
+    if args.command == "pass-link":
+        return cmd_pass_link(args, make_bot)
     return 2

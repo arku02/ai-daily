@@ -82,7 +82,11 @@ class TestR4Secrets(unittest.TestCase):
     def test_R4_only_known_secrets(self):
         used = set(re.findall(r"secrets\.([A-Z_]+)", DAILY + COLLECT))
         self.assertEqual(used, {"GITHUB_TOKEN", "GEMINI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID",
-                                "PROFILE_TOML", "FEEDBACK_REPO_TOKEN"})
+                                "PROFILE_TOML", "FEEDBACK_REPO_TOKEN", "FEEDBACK_READ_KEY"})
+
+    def test_R4_read_key_only_in_collect(self):
+        self.assertNotIn("FEEDBACK_READ_KEY", DAILY)
+        self.assertEqual(COLLECT.count("secrets.FEEDBACK_READ_KEY"), 1)
 
     def test_R4_profile_written_not_committed(self):
         self.assertIn('printf \'%s\\n\' "$PROFILE_TOML" > profile.toml', DAILY)

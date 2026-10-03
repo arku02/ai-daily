@@ -1,6 +1,8 @@
 # AI 早報的發布設定。bot token 與 chat_id 是機密，放在 .env：
 #   TELEGRAM_BOT_TOKEN=...
 #   TELEGRAM_CHAT_ID=...
+#   FEEDBACK_WEB_KEY=...（網頁評分通行證）
+#   FEEDBACK_READ_KEY=...（collect 讀取網頁評分）
 
 [site]
 # GitHub Pages 網址（repo 名稱 ai-daily）
@@ -13,3 +15,6 @@ bot_username = "arku_ai_daily_bot"
 [feedback]
 # 回饋存放的資料夾；環境變數 FEEDBACK_DIR 優先。第 4 步會指到私人 repo ai-daily-feedback
 dir = "feedback"
+# 網頁評分端點（worker/ 的 Cloudflare Worker 網址）。填了之後，有通行證的瀏覽器按評分不會跳 Telegram；
+# collect 需要 FEEDBACK_READ_KEY，pass-link 需要 FEEDBACK_WEB_KEY（都放 .env）
+endpoint = "https://ai-daily-feedback.ai-daily-feedback.workers.dev"

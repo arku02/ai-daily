@@ -1,0 +1,24 @@
+# AI 早報的網頁評分端點（見 README「網頁評分」）。
+# 機密不放這裡，用 wrangler secret put 設定：WEB_KEY（通行證）、READ_KEY（collect 用）
+name = "ai-daily-feedback"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGIN = "https://arku02.github.io"
+SITE_URL = "https://arku02.github.io/ai-daily/"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-daily-feedback"
+database_id = "d2d152bd-8025-4470-81c4-3d0234e320e0"
+
+# 同一 IP 每 60 秒最多 20 次評分
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

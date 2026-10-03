@@ -21,3 +21,7 @@ profile.toml
 # AI 早報：建置輸出與本機回饋
 site/
 feedback/
+
+# Cloudflare wrangler 本機快取（含帳號資訊）
+.wrangler/
+node_modules/

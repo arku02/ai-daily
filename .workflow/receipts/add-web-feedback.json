@@ -1,0 +1,85 @@
+{
+  "change": "add-web-feedback",
+  "archivedAt": "2026-10-03T12:19:43.177Z",
+  "archive": "openspec/changes/archive/2026-10-03-add-web-feedback",
+  "verifiedDigest": "b606f9f9f5d9224d206b9977e477143741db11db2164a33a622b401c6c982fd2",
+  "specs": {
+    "openspec/specs/daily-schedule/spec.md": "d4e45bf70f9ecac2895e45b386a75e086461ece40cd2de5376c30a6e2563cfd2",
+    "openspec/specs/llm-digest/spec.md": "89ca457482932b3133dc4c3a1c225e777d802a65dffeec908927dba1924405dc",
+    "openspec/specs/publish-feedback/spec.md": "376a3de3be155dfa5e5996cac5ce8b70e3347ba71e2e2bfd77db063ec5c4b743",
+    "openspec/specs/source-fetch/spec.md": "4aeaf6f8afd42b2f58b942c2fdb16933195f8936dd39466933060fe65ec72e55"
+  },
+  "validation": {
+    "items": [
+      {
+        "id": "daily-schedule",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 9
+      },
+      {
+        "id": "llm-digest",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 3
+      },
+      {
+        "id": "publish-feedback",
+        "type": "spec",
+        "valid": true,
+        "issues": [
+          {
+            "level": "INFO",
+            "path": "requirements[2]",
+            "message": "Requirement text is very long (>500 characters). Consider breaking it down."
+          },
+          {
+            "level": "INFO",
+            "path": "requirements[5]",
+            "message": "Requirement text is very long (>500 characters). Consider breaking it down."
+          },
+          {
+            "level": "INFO",
+            "path": "requirements[7]",
+            "message": "Requirement text is very long (>500 characters). Consider breaking it down."
+          },
+          {
+            "level": "INFO",
+            "path": "requirements[9]",
+            "message": "Requirement text is very long (>500 characters). Consider breaking it down."
+          }
+        ],
+        "durationMs": 2
+      },
+      {
+        "id": "source-fetch",
+        "type": "spec",
+        "valid": true,
+        "issues": [],
+        "durationMs": 0
+      }
+    ],
+    "summary": {
+      "totals": {
+        "items": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "byType": {
+        "spec": {
+          "items": 4,
+          "passed": 4,
+          "failed": 0
+        }
+      }
+    },
+    "version": "1.0",
+    "root": {
+      "path": "<PROJECT_ROOT>",
+      "source": "nearest"
+    }
+  },
+  "output": "{\n  \"archive\": {\n    \"change\": \"add-web-feedback\",\n    \"archivedAs\": \"2026-10-03-add-web-feedback\",\n    \"path\": \"<PROJECT_ROOT><NETWORK_PATH>\",\n    \"specsUpdated\": true,\n    \"totals\": {\n      \"added\": 3,\n      \"modified\": 2,\n      \"removed\": 0,\n      \"renamed\": 0\n    }\n  },\n  \"root\": {\n    \"path\": \"<PROJECT_ROOT>\",\n    \"source\": \"nearest\"\n  }\n}\n"
+}

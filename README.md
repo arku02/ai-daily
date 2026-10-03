@@ -62,26 +62,50 @@ digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個
 .venv\Scripts\python.exe -m ai_daily push --dry-run          # 預覽 Telegram 訊息
 .venv\Scripts\python.exe -m ai_daily push                    # 推送今天的重點（同一天不會重複送）
 .venv\Scripts\python.exe -m ai_daily collect                 # 收回饋到 feedback/（或 FEEDBACK_DIR）
+.venv\Scripts\python.exe -m ai_daily pass-link               # 用 Telegram 傳網頁評分的通行證連結
 ```
 
 - `.env` 需要 `TELEGRAM_BOT_TOKEN` 與 `TELEGRAM_CHAT_ID`；bot 使用者名稱與網址在 [publish.toml](publish.toml)
 - 本專案用自己的 bot，不和 arxiv-digest 共用：兩邊收回饋都會確認掉 Telegram 的更新，共用會互相吃掉
-- 兩種回饋：Telegram 訊息下的按鈕評「今天整體」，網頁上每則的 👎👍⭐ 評「單則」（會開啟 Telegram 傳給 bot）
+- 兩種回饋：Telegram 訊息下的按鈕評「今天整體」，網頁上每則的 👎👍⭐ 評「單則」（有通行證時直接記錄，沒有時開啟 Telegram 傳給 bot，見下方「網頁評分」）
 - 回饋存成 `feedback.jsonl`，每行一筆；bot 的「已記錄」回覆要等 collect 執行時才會出現
 - Telegram 只保留約 24 小時的未確認更新，collect 要定期執行（第 4 步排程）
+
+### 網頁評分（Cloudflare Worker＋通行證）
+
+GitHub Pages 只放靜態檔案，所以網頁評分送到 [worker/](worker/) 的免費 Cloudflare Worker，存進 D1；collect 再用讀取金鑰拉回，和 Telegram 回饋寫進同一個 `feedback.jsonl`（多一個 `via: "web"` 欄位）。
+
+- **通行證**：只有打開過通行證連結的瀏覽器能直接送出。執行 `pass-link`，在 Telegram 收到連結後，用你看早報的瀏覽器打開（手機、電腦各一次）。換手機、換瀏覽器或清除網站資料後要再打開一次
+- 沒有通行證的瀏覽器按評分，會照舊開啟 Telegram，評分不會遺失
+- Worker 只收：正確通行證、日期在 60 天內、該頁真的有這一則、數值是 0/1/2；同一 IP 每分鐘最多 20 次
+- 兩把金鑰：`FEEDBACK_WEB_KEY`（通行證，只能寫；Worker secret `WEB_KEY`）、`FEEDBACK_READ_KEY`（只能讀；Worker secret `READ_KEY`、GitHub Secret）
+- 通行證外流時：產生新值，更新 `.env` 與 `npx wrangler secret put WEB_KEY`，再執行 `pass-link`
+- 停用：把 [publish.toml](publish.toml) 的 `feedback.endpoint` 清空，網頁就回到 Telegram 連結
+
+Worker 網址：<https://ai-daily-feedback.ai-daily-feedback.workers.dev>（2026-10-03 部署，資料庫 D1 `ai-daily-feedback`）。重新部署或從頭建立：
+
+```bash
+cd worker
+npx wrangler login                                                   # 瀏覽器授權一次
+npx wrangler d1 create ai-daily-feedback                             # 只有從頭建立時需要；把 database_id 填進 wrangler.toml
+npx wrangler d1 execute ai-daily-feedback --remote --file=schema.sql
+npx wrangler deploy
+npx wrangler secret put WEB_KEY                                      # 貼上 .env 的 FEEDBACK_WEB_KEY
+npx wrangler secret put READ_KEY                                     # 貼上 .env 的 FEEDBACK_READ_KEY
+```
 
 ## 自動排程（GitHub Actions）
 
 | workflow | 時間 | 做什麼 |
 |---|---|---|
 | [daily](.github/workflows/daily.yml) | 每天台北 08:45 由 cron-job.org 觸發；GitHub 自己的 08:45、10:00 排程當備援（今天已推送就跳過） | fetch → digest → render → 提交 data → 部署 Pages → 推送 Telegram |
-| [collect](.github/workflows/collect.yml) | 每 6 小時 | 收 Telegram 回饋，寫入私人 repo `ai-daily-feedback` |
+| [collect](.github/workflows/collect.yml) | 每 6 小時 | 收 Telegram 與網頁評分，寫入私人 repo `ai-daily-feedback` |
 
 - GitHub 排程在這個 repo 實測常晚 4–7 小時甚至整個跳過，所以主要靠 [cron-job.org](https://console.cron-job.org) 每天 08:45（Asia/Taipei）呼叫 `POST /repos/arku02/ai-daily/actions/workflows/daily.yml/dispatches`（body `{"ref":"main"}`），失敗會寄 email
 - 手動 Run workflow 與 cron-job.org 觸發都不檢查是否已推送，一定會跑（Telegram 推送本身仍不會重複）；只有 GitHub 排程會跳過
 - 兩者都可在 Actions 頁面手動 **Run workflow**；任何一步失敗都會在 Telegram 收到通知
 - Gemini 壅塞（503）時程式會等 20、60 秒重試，仍失敗則整個 digest 5 分鐘後重跑一次
-- 需要的 Secrets：`GEMINI_API_KEY`、`TELEGRAM_BOT_TOKEN`、`TELEGRAM_CHAT_ID`、`PROFILE_TOML`（profile.toml 全文）、`FEEDBACK_REPO_TOKEN`
+- 需要的 Secrets：`GEMINI_API_KEY`、`TELEGRAM_BOT_TOKEN`、`TELEGRAM_CHAT_ID`、`PROFILE_TOML`（profile.toml 全文）、`FEEDBACK_REPO_TOKEN`、`FEEDBACK_READ_KEY`（網頁評分）
 - ⚠️ `FEEDBACK_REPO_TOKEN` 是只能讀寫 `ai-daily-feedback` 的 fine-grained token，**2027-09-30 到期**，到期前要重建並更新 Secret，否則 collect 會失敗
 - ⚠️ cron-job.org 用的 `ai-daily-trigger` 是只能操作 `ai-daily` Actions 的 fine-grained token（存在 cron-job.org 的 Authorization header，不在 GitHub Secrets），**2027-10-02 到期**，到期前要重建並更新 cron-job.org 的 header，否則早上不會自動跑
 - 修改 `profile.toml` 後，記得同步更新 `PROFILE_TOML` Secret

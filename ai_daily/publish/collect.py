@@ -1,7 +1,9 @@
-"""R6～R7：從 Telegram 收回饋，寫入回饋資料夾（之後是私人 repo）。"""
+"""R6～R7、R10：從 Telegram 與網頁評分端點（Cloudflare Worker）收回饋，寫入回饋資料夾（私人 repo）。"""
 
 import json
 import re
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -9,6 +11,9 @@ from .telegram import TelegramError
 
 DAY_RE = re.compile(r"^day:(\d{8}):([012])$")
 ITEM_RE = re.compile(r"^/start fb-(\d{8})-(c\d{1,4})-([012])$")
+WEB_DAY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+WEB_REF_RE = re.compile(r"^c\d{1,4}$")
+WEB_PAGE = 500
 ITEM_LABELS = {0: "👎 沒興趣", 1: "👍 有用", 2: "⭐ 超有用"}
 DAY_LABELS = {0: "👎 今天沒料", 1: "👍 有用", 2: "⭐ 很有收穫"}
 
@@ -68,6 +73,74 @@ def collect(bot, root, folder, now=None, out=None):
         (folder / "state.json").write_text(json.dumps(state), encoding="utf-8")
     out(f"新增回饋 {len(records)} 筆 → {(folder / 'feedback.jsonl').as_posix()}")
     return records
+
+
+class WebFeedbackError(Exception):
+    pass
+
+
+def http_get_json(url, key, timeout=30):
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {key}", "User-Agent": "ai-daily/0.1"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        raise WebFeedbackError(f"HTTP {e.code} {e.read().decode('utf-8', errors='replace')[:200]}") from None
+    except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as e:
+        raise WebFeedbackError(f"{type(e).__name__}: {e}") from None
+
+
+def collect_web(root, folder, endpoint, key, get=http_get_json, out=None):
+    """R10：以讀取金鑰從 Worker 拉 id 大於 web_after 的評分，附加到 feedback.jsonl。"""
+    out = out or (lambda *a: print(*a))
+    folder = Path(folder)
+    folder.mkdir(parents=True, exist_ok=True)
+    state = load_state(folder)
+    after = int(state.get("web_after") or 0)
+    records = []
+    try:
+        while True:
+            data = get(f"{endpoint.rstrip('/')}/feedback?after={after}", key)
+            items = data.get("items") if isinstance(data, dict) else None
+            if not isinstance(items, list):
+                raise WebFeedbackError("回應格式不符：缺少 items")
+            for it in items:
+                try:
+                    after = max(after, int(it["id"]))
+                except (KeyError, TypeError, ValueError):
+                    raise WebFeedbackError("回應格式不符：缺少 id") from None
+                rec = web_record(root, it)
+                if rec:
+                    records.append(rec)
+            if len(items) < WEB_PAGE:
+                break
+    except WebFeedbackError as e:
+        raise WebFeedbackError(f"網頁回饋收集失敗：{e}".replace(key, "***")) from None
+    finally:
+        if records:
+            with (folder / "feedback.jsonl").open("a", encoding="utf-8") as f:
+                for r in records:
+                    f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        if after != int(state.get("web_after") or 0):
+            state["web_after"] = after
+            (folder / "state.json").write_text(json.dumps(state), encoding="utf-8")
+    out(f"新增網頁回饋 {len(records)} 筆 → {(folder / 'feedback.jsonl').as_posix()}")
+    return records
+
+
+def web_record(root, it):
+    day, ref, value = it.get("date"), it.get("ref"), it.get("value")
+    if not (isinstance(day, str) and WEB_DAY_RE.match(day) and isinstance(ref, str) and WEB_REF_RE.match(ref)
+            and value in (0, 1, 2) and not isinstance(value, bool)):
+        return None
+    rec = {"received_at": str(it.get("received_at") or ""), "kind": "item", "date": day, "value": value,
+           "ref": ref, "via": "web"}
+    info = find_item(root, day, ref)
+    if info:
+        rec.update(info)
+    else:
+        rec["unknown_item"] = True
+    return rec
 
 
 def _reply(bot, method, payload):

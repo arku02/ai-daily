@@ -1,4 +1,4 @@
-# 每 6 小時收一次 Telegram 回饋，存進私人 repo ai-daily-feedback
+# 每 6 小時收一次 Telegram 與網頁（Cloudflare Worker）回饋，存進私人 repo ai-daily-feedback
 name: collect
 
 on:
@@ -34,6 +34,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FEEDBACK_READ_KEY: ${{ secrets.FEEDBACK_READ_KEY }}
           FEEDBACK_DIR: feedback-repo
         run: python -m ai_daily collect
 

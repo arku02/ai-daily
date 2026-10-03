@@ -1,8 +1,10 @@
+import io
 import json
 import os
 import re
 import tempfile
 import unittest
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -84,11 +86,13 @@ class Base(unittest.TestCase):
         # 用真實 publish.toml 的結構，但 bot_username 固定清空，不受本機設定影響
         cfg = re.sub(r'(?m)^bot_username = ".*"$', 'bot_username = ""',
                      (ROOT / "publish.toml").read_text(encoding="utf-8"))
+        cfg = re.sub(r'(?m)^endpoint = ".*"$', 'endpoint = ""', cfg)
         (self.root / "publish.toml").write_text(cfg, encoding="utf-8")
         (self.root / "data" / "digest").mkdir(parents=True)
         self.write_digest(digest())
         for p in (mock.patch.object(urllib.request, "urlopen", side_effect=no_network),
-                  mock.patch.dict(os.environ, {"TELEGRAM_BOT_TOKEN": "", "TELEGRAM_CHAT_ID": "", "FEEDBACK_DIR": ""})):
+                  mock.patch.dict(os.environ, {"TELEGRAM_BOT_TOKEN": "", "TELEGRAM_CHAT_ID": "", "FEEDBACK_DIR": "",
+                                          "FEEDBACK_WEB_KEY": "", "FEEDBACK_READ_KEY": ""})):
             p.start()
             self.addCleanup(p.stop)
 
@@ -340,6 +344,207 @@ class TestR7FeedbackLocation(Base):
         lines = (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
         self.assertIn("feedback/", lines)
         self.assertIn("site/", lines)
+
+
+EP = "https://fb.example.workers.dev"
+WEB_KEY = "abcDEF123456789xyz"
+READ_KEY = "read-0123456789abcdef"
+
+
+def set_endpoint(root, url):
+    p = root / "publish.toml"
+    p.write_text(re.sub(r'(?m)^endpoint = ".*"$', f'endpoint = "{url}"', p.read_text(encoding="utf-8")),
+                 encoding="utf-8")
+
+
+class TestR3DirectMode(Base):
+    def render(self):
+        self.assertEqual(self.cli(["render"])[0], 0)
+        site = self.root / "site"
+        return ((site / "2026-09-30.html").read_text(encoding="utf-8"),
+                (site / "index.html").read_text(encoding="utf-8"))
+
+    def test_R3_direct_mode_markup(self):
+        self.set_bot_username("ai_daily_bot")
+        set_endpoint(self.root, EP + "/")
+        page, index = self.render()
+        self.assertIn('href="https://t.me/ai_daily_bot?start=fb-20260930-c12-1" '
+                      'data-day="2026-09-30" data-ref="c12" data-v="1"', page)
+        for ref in ("c1", "c2", "c5", "c12"):
+            self.assertIn(f'data-ref="{ref}" data-v="2"', page)
+        for text in (page, index):
+            self.assertIn(f'var EP="{EP}"', text)
+            self.assertIn('id="fbtoast"', text)
+        self.assertIn('id="fbnote"', page)
+
+    def test_R3_endpoint_not_https(self):
+        self.set_bot_username("ai_daily_bot")
+        for bad in ("", "javascript:alert(1)", "http://fb.example.workers.dev", 'https://x.dev/\\";alert(1)//'):
+            set_endpoint(self.root, bad)
+            page, index = self.render()
+            for text in (page, index):
+                self.assertNotIn("data-ref=", text, bad)
+                self.assertNotIn("<script", text, bad)
+            self.assertIn("start=fb-20260930-c12-1", page)
+
+    def test_R3_endpoint_without_bot(self):
+        set_endpoint(self.root, EP)
+        page, index = self.render()
+        for text in (page, index):
+            self.assertNotIn("<script", text)
+            self.assertNotIn("t.me/", text)
+
+    def test_R3_script_pass_and_fallback(self):
+        js = html.SUBMIT_JS
+        self.assertIn("#k=", js)
+        self.assertIn("history.replaceState", js)
+        # 沒有通行證就直接 return，讓 deep link 照常開啟；有通行證才阻止跳轉
+        self.assertLess(js.index("if(!key)return"), js.index("ev.preventDefault()"))
+        self.assertIn('EP+"/feedback"', js)
+        self.assertIn('"Authorization":"Bearer "+key', js)
+        self.assertIn("r.status===401){put(K,null)", js)
+        self.assertIn("box.classList.add(\"err\")", js)
+
+
+class TestR9PassLink(Base):
+    def run_pass(self, bot, key=WEB_KEY):
+        env = {"TELEGRAM_BOT_TOKEN": "T", "TELEGRAM_CHAT_ID": CHAT, "FEEDBACK_WEB_KEY": key}
+        with mock.patch.dict(os.environ, env):
+            return self.cli(["pass-link"], bot)
+
+    def test_R9_link_sent(self):
+        bot = FakeBot()
+        code, out = self.run_pass(bot)
+        self.assertEqual(code, 0)
+        sent = [p for m, p in bot.calls if m == "sendMessage"]
+        self.assertEqual(len(sent), 1)
+        self.assertEqual(sent[0]["chat_id"], CHAT)
+        self.assertIn(f"https://arku02.github.io/ai-daily/index.html#k={WEB_KEY}", sent[0]["text"])
+        self.assertTrue(sent[0]["link_preview_options"]["is_disabled"])
+        self.assertNotIn(WEB_KEY, out)
+
+    def test_R9_missing_pass_key(self):
+        bot = FakeBot()
+        code, out = self.run_pass(bot, key="")
+        self.assertEqual(code, 2)
+        self.assertIn("FEEDBACK_WEB_KEY", out)
+        self.assertIn(".env", out)
+        self.assertEqual(bot.calls, [])
+
+    def test_R9_error_masked(self):
+        code, out = self.run_pass(FakeBot(fail=TelegramError(f"failed for {WEB_KEY}")))
+        self.assertEqual(code, 1)
+        self.assertNotIn(WEB_KEY, out)
+
+
+class FakeGet:
+    def __init__(self, pages=None, fail=None):
+        self.pages = list(pages or [])
+        self.fail = fail
+        self.calls = []
+
+    def __call__(self, url, key):
+        self.calls.append((url, key))
+        if self.fail:
+            raise self.fail
+        return {"items": self.pages.pop(0) if self.pages else []}
+
+
+def row(i, ref="c12", value=2, day="2026-09-30"):
+    return {"id": i, "received_at": "2026-09-30T02:03:04Z", "date": day, "ref": ref, "value": value}
+
+
+class TestR10CollectWeb(Base):
+    def setUp(self):
+        super().setUp()
+        set_endpoint(self.root, EP)
+
+    def run_collect(self, get, updates=(), key=READ_KEY):
+        bot = FakeBot(updates=list(updates))
+        env = {"TELEGRAM_BOT_TOKEN": "T", "TELEGRAM_CHAT_ID": CHAT, "FEEDBACK_READ_KEY": key}
+        with mock.patch.dict(os.environ, env), mock.patch.object(collect, "http_get_json", get):
+            return self.cli(["collect"], bot)
+
+    def records(self):
+        path = self.root / "feedback" / "feedback.jsonl"
+        return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines()] if path.exists() else []
+
+    def state(self):
+        return json.loads((self.root / "feedback" / "state.json").read_text(encoding="utf-8"))
+
+    def test_R10_web_ratings_collected(self):
+        get = FakeGet([[row(4)]])
+        code, out = self.run_collect(get, [cb(7, CHAT, "day:20260930:1")])
+        self.assertEqual(code, 0)
+        self.assertEqual(get.calls, [(f"{EP}/feedback?after=0", READ_KEY)])
+        web = [r for r in self.records() if r.get("via") == "web"]
+        self.assertEqual(len(self.records()), 2)
+        self.assertEqual(len(web), 1)
+        w = web[0]
+        self.assertEqual((w["kind"], w["value"], w["id"], w["ref"], w["date"]),
+                         ("item", 2, "NVIDIA/OpenShell", "c12", "2026-09-30"))
+        self.assertEqual(w["received_at"], "2026-09-30T02:03:04Z")
+        self.assertEqual(self.state(), {"offset": 8, "web_after": 4})
+        self.assertIn("新增網頁回饋 1 筆", out)
+        # 第二次從 web_after 接著拉，不重複
+        get2 = FakeGet([])
+        self.run_collect(get2)
+        self.assertEqual(get2.calls[0][0], f"{EP}/feedback?after=4")
+        self.assertEqual(len(self.records()), 2)
+
+    def test_R10_paging_bad_rows_and_unknown(self):
+        first = [row(i, ref="c1", value=i % 3) for i in range(1, 501)]
+        second = [row(501, ref="zz"), row(502, value=7), row(503, value=True), row(504, day="20260930"),
+                  row(505, ref="c999")]
+        get = FakeGet([first, second])
+        code, _ = self.run_collect(get)
+        self.assertEqual(code, 0)
+        self.assertEqual([u for u, _ in get.calls], [f"{EP}/feedback?after=0", f"{EP}/feedback?after=500"])
+        recs = self.records()
+        self.assertEqual(len(recs), 501)
+        self.assertTrue(recs[-1]["unknown_item"])
+        self.assertEqual(recs[-1]["ref"], "c999")
+        self.assertEqual(self.state()["web_after"], 505)
+
+    def test_R10_missing_read_key(self):
+        get = FakeGet([[row(1)]])
+        code, out = self.run_collect(get, [cb(3, CHAT, "day:20260930:2")], key="")
+        self.assertEqual(code, 1)
+        self.assertIn("FEEDBACK_READ_KEY", out)
+        self.assertEqual([r["kind"] for r in self.records()], ["day"])
+        self.assertEqual(get.calls, [])
+
+    def test_R10_worker_error_masked(self):
+        err = urllib.error.HTTPError(f"{EP}/feedback", 500, "boom", {},
+                                     io.BytesIO(f"internal error {READ_KEY}".encode()))
+        with mock.patch.object(urllib.request, "urlopen", side_effect=err):
+            code, out = self.run_collect(collect.http_get_json, [cb(5, CHAT, "day:20260930:0")])
+        self.assertEqual(code, 1)
+        self.assertIn("HTTP 500", out)
+        self.assertIn("***", out)
+        self.assertNotIn(READ_KEY, out)
+        self.assertEqual(len(self.records()), 1)
+
+    def test_R10_partial_progress_kept_on_error(self):
+        class Flaky(FakeGet):
+            def __call__(self, url, key):
+                if self.calls:
+                    self.calls.append((url, key))
+                    raise collect.WebFeedbackError("timeout")
+                return super().__call__(url, key)
+        get = Flaky([[row(i) for i in range(1, 501)]])
+        code, _ = self.run_collect(get)
+        self.assertEqual(code, 1)
+        self.assertEqual(len(self.records()), 500)
+        self.assertEqual(self.state()["web_after"], 500)
+
+    def test_R10_no_endpoint_no_call(self):
+        set_endpoint(self.root, "")
+        get = FakeGet(fail=AssertionError("不應呼叫 Worker"))
+        code, out = self.run_collect(get, key="")
+        self.assertEqual(code, 0)
+        self.assertEqual(get.calls, [])
+        self.assertNotIn("網頁回饋", out)
 
 
 class TestD1Offline(Base):

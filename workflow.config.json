@@ -6,7 +6,8 @@
     "tests/test_fetch.py",
     "tests/test_digest.py",
     "tests/test_publish.py",
-    "tests/test_schedule.py"
+    "tests/test_schedule.py",
+    "tests/test_worker.py"
   ],
   "pythonExecutable": ".venv/Scripts/python.exe"
 }
