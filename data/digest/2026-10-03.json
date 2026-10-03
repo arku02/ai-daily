@@ -1,102 +1,21 @@
 {
  "date": "2026-10-03",
- "generated_at": "2026-10-03T00:45:48Z",
+ "generated_at": "2026-10-03T12:36:51Z",
  "models_used": [
+  "gemini-3.7-flash",
   "gemini-3.5-flash"
  ],
- "llm_calls": 18,
+ "llm_calls": 17,
  "tldr": [
-  "GitHub Copilot 推出電腦操作功能，支援 Windows 與 macOS，讓開發者能直接透過 CLI 驅動桌面應用程式。",
-  "Cloudflare 開源決策模型 Clef，專為 Agent 快速決策與強化學習微調設計，大幅降低邊緣運算的推論成本。",
-  "針對 AI Agent 權限過大風險，Apple 宣布收緊 macOS 的完整磁碟存取權限，預示 Agent 安全防護將成為新焦點。"
+  "LangChain 發表 Agent Harness 模型路由架構，能在維持品質下降低六成以上的執行成本。",
+  "阿里巴巴提出 PoS 顯式信念狀態架構，有效解決長週期 AI Agent 記憶紊亂與環境狀態脫節問題。",
+  "Agent-Reach 與 Intent-Router 等開源 Python 工具發布，強化爬蟲資料採集與意圖路由能力。"
  ],
  "sections": {
   "news": {
    "items": [
     {
-     "ref": "c163",
-     "source": "rss",
-     "id": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
-     "metrics": {},
-     "sources": [
-      {
-       "label": "GitHub Changelog",
-       "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
-      }
-     ],
-     "title": "GitHub Copilot 推出 Computer Use 預覽版，可直接操作 Windows 桌面程式",
-     "tags": [
-      "電腦操作 Agent",
-      "自動化",
-      "GitHub Copilot",
-      "Windows 開發"
-     ],
-     "summary": "GitHub 宣布在 GitHub Copilot CLI 與桌面 App 中推出 \"computer use\" 公開預覽版，支援 macOS 與 Windows 系統。官方宣稱，Copilot 現在能代表用戶與桌面應用程式互動，執行讀取畫面、點擊控制項、輸入文字、拖曳及跨應用程式導覽等操作。這項功能特別適合用來自動化處理沒有 API、命令列介面或 MCP 整合的舊型或純 GUI 軟體。",
-     "key_points": [
-      "支援 Windows 與 macOS 系統，可在 Copilot CLI 透過 /computer on 啟用。",
-      "能執行點擊、拖曳、輸入、滾動等滑鼠與鍵盤操作，並能讀取畫面視覺上下文。",
-      "安全機制上，Copilot 在控制應用程式前會要求用戶授權，用戶可隨時重設權限。",
-      "適合處理無 API 的舊系統工作流，例如在瀏覽器中整理通知或更新簡報。"
-     ],
-     "how_to_use": "雖然你主要使用 Gemini 和本機 Ollama，但如果你日常開發有訂閱 GitHub Copilot，現在可以直接在 Windows 環境下開箱體驗。你可以嘗試用它來自動化一些平常需要手動操作、且沒有 API 的舊型資料庫 GUI 工具。不過，因為它是閉源且綁定 Copilot 生態系，無法直接整合到你的 LangGraph 個人專案中，但很適合用來觀察微軟如何設計電腦操作 Agent 的人機互動與安全確認流程。",
-     "fallback": false
-    },
-    {
-     "ref": "c134",
-     "source": "rss",
-     "id": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
-     "metrics": {},
-     "sources": [
-      {
-       "label": "TechCrunch AI",
-       "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
-      }
-     ],
-     "title": "AI Agent 隱私爭議升溫，Apple 將收緊 macOS 完整磁碟取用權限",
-     "tags": [
-      "AI 安全",
-      "桌面 Agent",
-      "隱私保護",
-      "macOS"
-     ],
-     "summary": "在媒體報導 Meta Muse 等桌面 AI 軟體可能在未經明確授權下讀取用戶私密訊息後，Apple 宣布將加強 macOS「完整磁碟取用權限（Full Disk Access）」的控制。Apple 指出，隨著 AI Agent 的自主能力提升，給予此類高權限的風險已大幅增加。未來將引入更嚴格的控制措施，確保用戶必須透過非常明確的操作，才能授權 AI 存取系統檔案與敏感資料。",
-     "key_points": [
-      "起因於 Meta Muse 與 ChatGPT 桌面版先前傳出可能讀取私密訊息或存在安全漏洞。",
-      "「完整磁碟取用權限」原為備份軟體設計，但部分 AI 軟體正利用此權限存取郵件、訊息與瀏覽歷史。",
-      "Apple 官方表示，AI Agent 的自主性讓高權限風險劇增，未來將要求更明確的用戶授權步驟。"
-     ],
-     "how_to_use": "這項變更跟你的工作關係不大，因為你是在 Windows 環境下進行開發。不過這非常值得你留意：當你在開發瀏覽器或電腦操作 Agent 時，如何設計「權限最小化」與「安全邊界」是關鍵。如果你未來設計的 LangGraph Agent 需要讀取本機資料夾，建議採用明確的單一目錄授權，避免要求過高的系統權限，以建立使用者信任。",
-     "fallback": false
-    },
-    {
-     "ref": "c135",
-     "source": "rss",
-     "id": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
-     "metrics": {},
-     "sources": [
-      {
-       "label": "The Verge AI",
-       "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent"
-      }
-     ],
-     "title": "OpenAI 推出企業級 Agent 平台 Dots，主打虛擬機操作與辦公自動化",
-     "tags": [
-      "電腦操作 Agent",
-      "OpenAI Dots",
-      "自動化",
-      "虛擬機"
-     ],
-     "summary": "OpenAI 推出全新 Agent 平台 \"Dots\"，與偏向個人助理的 Meta Muse 不同，Dots 定位更偏向企業辦公軟體。Dots 擁有擬人化的虛擬分身，會在獨立的虛擬機中幫用戶操作軟體。官方宣稱，Dots 預設即可存取 Blender、GIMP 等工具，並能透過 ChatGPT 桌面版存取用戶的本機電腦來協同工作，就像是一位能幫忙點外送也能處理工作的虛擬同事。",
-     "key_points": [
-      "定位為企業級軟體，使用者可在獨立視窗中觀看 Agent 在虛擬機中點擊與操作。",
-      "預設支援虛擬機內的開源軟體（如 GIMP、Blender），並可透過桌面版 ChatGPT 與本機連動。",
-      "目前每位用戶僅能擁有一隻自訂名稱的 Dot，未來計畫支援多 Agent 協作。"
-     ],
-     "how_to_use": "這跟你的工作關係不大，因為這屬於 OpenAI 的閉源生態系，且需要付費帳號才能完整體驗，無法直接用你的 Gemini 免費方案或本機 Ollama 介接。不過，它展示了「在隔離虛擬機中執行 Agent」的架構，這對於你開發自動化爬蟲或流程處理 Agent 很有啟發——在 Windows 上使用 Docker 或沙盒環境來執行你的 LangGraph Agent，能有效避免 Agent 誤操作損毀本機檔案。",
-     "fallback": false
-    },
-    {
-     "ref": "c147",
+     "ref": "c137",
      "source": "rss",
      "id": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness",
      "metrics": {},
@@ -106,61 +25,152 @@
        "url": "https://www.langchain.com/blog/how-to-build-a-model-router-in-the-harness"
       }
      ],
-     "title": "LangChain 實戰分享：如何為 Agent 建立模型路由器降低 64% 成本",
+     "title": "LangChain 實戰分享：如何為 AI Agent 打造省錢又高效的模型路由器",
      "tags": [
       "模型路由",
       "LangGraph",
       "成本優化",
-      "Agent 評測"
+      "多 Agent 協作"
      ],
-     "summary": "LangChain 團隊分享了在開源 coding agent \"Open SWE\" 中導入模型路由器（Model Router）的實戰經驗。他們指出，並非所有任務都需要最強的 LLM，透過在 Agent 系統（Harness）中建立路由器，根據任務複雜度分流，成功在不影響品質的前提下，將中位數成本降低了 64%。團隊強調，路由器應建在 Agent 系統內部而非通用網關，才能保有足夠的任務上下文。",
+     "summary": "LangChain 團隊分享了在 Agent 框架（harness）中建立模型路由器（Model Router）的實務經驗。以其開源程式 Agent \"Open SWE\" 為例，透過路由器將任務分流，在不影響品質的前提下，成功降低了 64% 的中位數成本。他們強調，路由器應該內建於 Agent 框架中，而非通用的 API 閘道器，因為路由決策需要依賴框架所收集的領域與任務上下文。實作步驟包括：分析任務類型、評估不同模型在各任務上的表現，並制定明確的評測與路由規則。",
      "key_points": [
-      "LangChain 實驗證明，將任務分流給合適的模型，能大幅降低運作成本並維持相同品質。",
-      "模型路由器應內建於 Agent 系統中，因為路由決策需要依賴領域與任務的上下文資訊。",
-      "建立步驟包括：利用 LangSmith 分析歷史 trace、用 LLM 分類任務類型、評估不同模型在各任務的表現，最後實作路由邏輯。"
+      "模型路由成功讓 LangChain 的 Open SWE 專案降低 64% 的每條對話中位數成本，且品質無明顯變化。",
+      "路由決策應留在 Agent 框架（Harness）內，因為它需要框架已組合好的領域與任務上下文，這是通用閘道器所缺乏的。",
+      "建立路由器的第一步是理解任務，LangChain 團隊透過 LangSmith 追蹤資料，並使用 LLM 分類器對任務進行標記與分類。",
+      "並非所有任務都需要最強的模型，善用中階或輕量模型（如 Claude Haiku）能避免邊際效益遞減與不必要的延遲。"
      ],
-     "how_to_use": "這非常適合你今天動手嘗試！你可以用 LangGraph 實作這個概念：在你的資料分析或自動化工作流中，設計一個簡單的分類節點（Classification Node）。當收到用戶請求時，先用本機輕量化的 Ollama 模型（例如 Llama 3）判斷任務難度；如果是簡單的 SQL 查詢或格式轉換，直接由 Ollama 處理；如果是複雜的 pandas 資料分析或需要長文本理解的爬蟲整理，再路由給 Gemini 免費 API。這樣既能節省 Gemini 的額度，又能發揮本機模型的速度優勢。",
+     "how_to_use": "這非常適合你目前使用的 LangGraph 專案！雖然你主要使用免費的 Gemini 與本機 Ollama，但你可以在 LangGraph 中設計一個「條件分支（Conditional Edge）」。先用本機輕量模型（如 Ollama 跑 Llama 3）做初步的任務分類或簡單的資料格式化，如果判斷任務複雜度高（例如需要複雜的 SQL 查詢或深度的 pandas 分析），再透過路由分支將任務交給 Gemini API。這樣既能節省 Gemini 的免費額度，又能提升本機執行的反應速度，完美實踐多 Agent 協作。",
+     "fallback": false
+    },
+    {
+     "ref": "c120",
+     "source": "rss",
+     "id": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents"
+      }
+     ],
+     "title": "防範 AI Agent 隱私風險：Apple 將限制 macOS 的完整磁碟存取權限",
+     "tags": [
+      "安全與隱私",
+      "macOS",
+      "電腦操作 Agent"
+     ],
+     "summary": "Apple 宣布將針對 macOS 的「完整磁碟存取權限（Full Disk Access）」引入更嚴格的限制，未來 App 需要使用者進行「非常明確的操作」才能獲得此權限。Apple 指出，隨著 AI Agent 的自主性與能力大幅提升，這類高權限帶來的安全風險也隨之劇增，可能導致郵件、訊息及瀏覽紀錄等敏感資料在使用者不知情下外洩。此舉起因於先前有報導指出 Meta 的 Muse AI 在未獲明確授權下讀取了使用者的簡訊內容。",
+     "key_points": [
+      "Apple 將限制 Mac 的「完整磁碟存取權限」，要求更明確的使用者操作才能授權，以應對 AI Agent 帶來的安全風險。",
+      "「完整磁碟存取權限」原本是為了讓備份軟體正常運作而繞過隱私控制的設計，但現在被部分開發者濫用。",
+      "此更新起因於 Meta Muse AI 被指控能讀取使用者簡訊，Meta 澄清需同時啟用磁碟存取與簡訊連接器才行。",
+      "Apple 尚未公布此項安全更新具體的推出時間。"
+     ],
+     "how_to_use": "雖然你目前是在 Windows 環境下開發，這項 macOS 的變更跟你的工作直接關係不大，但這代表了作業系統底層對於「電腦操作 Agent」權限收緊的必然趨勢。當你在開發自動化流程或本機資料蒐集 Agent 時，應提早規劃最小權限原則，避免程式過度依賴系統級的完整讀寫權限，以免未來 Windows 採取類似限制時導致你的 Agent 停擺。",
+     "fallback": false
+    },
+    {
+     "ref": "c125",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent"
+      }
+     ],
+     "title": "OpenAI 推出 Dot 平台：能操作虛擬機器與辦公軟體的企業級 Agent",
+     "tags": [
+      "電腦操作 Agent",
+      "OpenAI Dots",
+      "自動化工作流"
+     ],
+     "summary": "OpenAI 發表了名為 \"Dots\" 的全新 Agent 平台，其定位更偏向企業與辦公軟體助手。使用者可以透過對話視窗與名為 Dot 的虛擬助理互動，並在另一個視窗中即時觀看 Dot 在虛擬機器（VM）中點擊與操作 Blender、GIMP 等軟體。此外，使用者也可以透過 ChatGPT 桌面版授權 Dot 存取自己的電腦。相較於娛樂性質，Dots 的設計更著重於扮演能協同工作的虛擬同事。",
+     "key_points": [
+      "OpenAI 的 Dots 平台提供具備擬人化化身的 Agent，目前每位使用者預設可擁有一隻自訂名稱的 Dot。",
+      "Dots 運作於虛擬機器中，預設可直接操作 Blender、GIMP 等多款應用程式，並提供雙視窗介面讓使用者監控其操作過程。",
+      "使用者可透過 ChatGPT 桌面版授權，讓 Dot 存取並操作本機電腦。",
+      "Dots 的定位偏向企業協作與辦公軟體操作，而非單純的個人生活助理。"
+     ],
+     "how_to_use": "這與你感興趣的「瀏覽器與電腦操作 Agent」高度相關。雖然你目前受限於沒有 OpenAI 付費 Key，無法直接在個人專案中整合 Dots，但其「雙視窗監控（一個對話、一個看 VM 畫面）」的設計非常值得你參考。當你在 Windows 上使用 Python 寫自動化爬蟲或流程處理 Agent 時，也可以考慮搭配 Docker 虛擬環境，並設計一個簡單的日誌或螢幕截圖監控介面，來提升你個人自動化工具的視覺化監控能力。",
+     "fallback": false
+    },
+    {
+     "ref": "c119",
+     "source": "rss",
+     "id": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link"
+      }
+     ],
+     "title": "Meta 開源 Muse AI 裝置程式碼：支援 Raspberry Pi 與硬體連動",
+     "tags": [
+      "開源專案",
+      "硬體協作",
+      "Muse AI"
+     ],
+     "summary": "Meta 宣布開源其 Muse AI 智慧裝置的相關程式碼與 SDK，允許開發者將 Muse AI Agent 連接到自建的硬體設備上。開發者可以使用 ESP32 開發板或 Raspberry Pi，將 Muse 結合 E Ink 顯示器、HDMI 棒或觸控螢幕，打造自製的 Muse 實體裝置。此外，Meta 也推出了限量 5,000 台的 \"Muse Home Link\" 實體裝置，可透過社群開發的技能來控制燈光、電視及印表機等家電。",
+     "key_points": [
+      "Meta 開源了 Muse 裝置的程式碼與 SDK，支援 ESP32 與 Raspberry Pi 等常見硬體平台。",
+      "開發者可利用開源程式碼將 Muse AI 接入顯示器、按鈕、感測器及致動器，打造客製化的實體 AI 助理。",
+      "Meta 推出 5,000 台 Muse Home Link 實體裝置供申請候補，預計本月出貨，可透過社群技能控制家電。",
+      "Meta 提醒開發者在自行組裝與連接硬體時需「自負風險」。"
+     ],
+     "how_to_use": "雖然這項硬體開源專案與你目前專注的「軟體資料分析與自動化流程」工作關係不大，但如果你手邊剛好有 Raspberry Pi，這是一個極佳的玩具。你可以嘗試用 Python 呼叫它的 SDK，看看 Meta 如何處理 Agent 與實體感測器之間的事件驅動（Event-driven）協作，這對於你理解多 Agent 協作中的「環境反饋機制」會有間接的啟發。",
      "fallback": false
     }
    ],
    "brief": [
     {
-     "ref": "c141",
+     "ref": "c122",
      "source": "rss",
-     "id": "https://openai.com/index/practical-guide-building-gpt-6",
+     "id": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
      "metrics": {},
      "sources": [
       {
-       "label": "OpenAI News",
-       "url": "https://openai.com/index/practical-guide-building-gpt-6"
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
       }
      ],
-     "title": "GPT-6 家族模型選擇與生產線部署指南",
-     "one_liner": "介紹新創如何挑選 GPT-6 模型、調整推理努力度、優化提示詞與工具協調以準備生產線部署。",
-     "url": "https://openai.com/index/practical-guide-building-gpt-6",
+     "title": "GitHub Copilot 程式碼審查功能現已支援 API 與自訂投入程度",
+     "one_liner": "GitHub Copilot 程式碼審查現可透過 REST 與 GraphQL API 呼叫，並可設定審查投入程度。",
+     "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
      "fallback": false
     },
     {
-     "ref": "c4",
-     "source": "hn",
-     "id": "49922729",
-     "metrics": {
-      "points": 186,
-      "comments": 104
-     },
+     "ref": "c117",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out",
+     "metrics": {},
      "sources": [
       {
-       "label": "原文",
-       "url": "https://twitter.com/GayaniFigma/status/2105295629941350454"
-      },
-      {
-       "label": "HN 討論（186 分）",
-       "url": "https://news.ycombinator.com/item?id=49922729"
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out"
       }
      ],
-     "title": "Figma 限制 MCP 存取權限，排除第三方客戶",
-     "one_liner": "Figma 將其模型上下文協議（MCP）存取限制在白名單客戶內，並將 Pi 等第三方客戶排除在外。",
-     "url": "https://twitter.com/GayaniFigma/status/2105295629941350454",
+     "title": "GitHub App 無狀態安裝 Token 已全面預設啟用",
+     "one_liner": "無狀態 GitHub App 安裝 Token 的分階段推出已完成，預設所有新產生的 Token 皆為無狀態格式。",
+     "url": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out",
+     "fallback": false
+    },
+    {
+     "ref": "c144",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability"
+      }
+     ],
+     "title": "AI 音樂生成工具 Suno 推出語音生成 Beta 功能",
+     "one_liner": "Suno 推出語音生成功能，支援根據腳本生成人聲旁白，並能同時搭配背景音樂。",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability",
      "fallback": false
     }
    ]
@@ -168,48 +178,47 @@
   "models": {
    "items": [
     {
-     "ref": "c1",
-     "source": "hn",
-     "id": "49923692",
+     "ref": "c71",
+     "source": "hf_models",
+     "id": "zai-org/GLM-5.3-Flash",
      "metrics": {
-      "points": 619,
-      "comments": 215
+      "likes": 2671,
+      "downloads": 5428853,
+      "trending_score": 75,
+      "likes_delta": null
      },
      "sources": [
       {
-       "label": "原文",
-       "url": "https://blog.cloudflare.com/clef-decision-models/"
-      },
-      {
-       "label": "HN 討論（619 分）",
-       "url": "https://news.ycombinator.com/item?id=49923692"
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
       }
      ],
-     "title": "Cloudflare 開源決策模型 Clef：專為 Agent 路由與分類設計的輕量選擇",
+     "title": "智譜 GLM-5.3-Flash 發布：混合稀疏與線性注意力，逼近 Claude Opus 的 Agent 效能",
      "tags": [
-      "決策模型",
-      "開源模型",
-      "Agent 路由"
+      "多模態模型",
+      "混合架構",
+      "Agent 評測",
+      "本地部署"
      ],
-     "summary": "Cloudflare 推出開源決策模型 Clef 與 Clef-flash，並採用 Apache 2.0 授權。這類「決策模型」與傳統生成式 LLM 不同，專注於快速、便宜且穩定地輸出結構化的分類與機率。這能讓 Agent 在工作流中進行程式化決策（例如客服分類、安全威脅評估），而不需要每次都調用高延遲且非確定性的 LLM。官方宣稱在威脅情資分類任務中，Clef 僅需 2.2 秒即可完成網頁抓取與分類，比一般 LLM 快上兩倍。",
+     "summary": "智譜推出首款原生多模態模型 GLM-5.3-Flash，擁有 320B 總參數與 18B 活躍參數。官方宣稱其在編碼與 Agent 評測上逼近 Claude Opus 4.8，且成本僅為前代十分之一。此版本首度引入稀疏與線性注意力混合架構，大幅降低長文本推理成本，並支援透過 `reasoning_effort` 參數控制思考預算（low、high、max）。",
      "key_points": [
-      "專為 Agent 決策設計，提供確定性高、帶有機率的結構化分類輸出。",
-      "採 Apache 2.0 授權開源，可在 Hugging Face 下載並於本機部署執行。",
-      "官方測試顯示，相較於大型 LLM，Clef 在分類任務上的延遲降低了一半以上。",
-      "支援與 Jev API 相容，並提供強化學習（RL）平台供使用者微調模型。"
+      "18B 活躍參數的 MoE 混合架構，大幅降低長文本服務成本",
+      "官方宣稱在編碼與 Agent 任務上效能逼近 Claude Opus 4.8",
+      "支援 `reasoning_effort` 控制思考深度，預設為 max",
+      "相容 SGLang、vLLM、Transformers 與 KTransformers 等多種本地部署框架"
      ],
-     "how_to_use": "這對你的 LangGraph 多 Agent 協作非常實用。在多 Agent 系統中，你常需要「路由器」決定下一步交給哪個 Agent（如資料分析或 SQL 查詢）。以往用 LLM 做路由不僅慢，還可能格式錯誤。你可以直接在本機載入開源的 Clef，當作 LangGraph 的條件分支決策器，用極低延遲與穩定的結構化輸出完成路由分類。",
+     "how_to_use": "這款模型的 18B 活躍參數非常適合你在本地使用 KTransformers 或 vLLM 部署。在你的 LangGraph 多 Agent 協作系統中，你可以將它作為負責程式撰寫或資料分析的子 Agent。利用它支援的 `reasoning_effort` 參數，你可以在簡單的資料清洗步驟設定為 `low` 以加快速度，而在複雜的 SQL 查詢生成或 RAG 檢索決策時設定為 `max`，精準控制 Token 消耗與回應時間。",
      "fallback": false
     },
     {
-     "ref": "c87",
+     "ref": "c79",
      "source": "hf_models",
      "id": "Qwen/Qwen3.8-27B",
      "metrics": {
-      "likes": 16803,
-      "downloads": 6934867,
-      "trending_score": 351,
-      "likes_delta": 71
+      "likes": 16845,
+      "downloads": 6895117,
+      "trending_score": 359,
+      "likes_delta": 113
      },
      "sources": [
       {
@@ -217,31 +226,67 @@
        "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
       }
      ],
-     "title": "阿里開源 Qwen3.8-27B：強化 Agent 規劃能力與彈性思考控制",
+     "title": "阿里 Qwen3.8-27B 開源：強化自主規劃與環境回饋，支援彈性思考控制",
      "tags": [
       "開源模型",
-      "視覺語言模型",
-      "Agent 規劃"
+      "多模態",
+      "自主 Agent",
+      "視覺理解"
      ],
-     "summary": "Qwen 團隊發布了最新一代開源模型 Qwen3.8-27B，這是一款 27B 參數的原生視覺語言模型（VLM）。官方宣稱此版本在程式碼編寫、長文本 Agent 任務及自主規劃上有顯著提升。特別的是，它引入了「彈性思考控制」，預設開啟思考模式，並允許開發者透過 reasoning_effort 調整推理深度，甚至能透過 preserve_thinking 保留歷史訊息中的推理脈絡，非常適合處理複雜的多步驟任務。",
+     "summary": "阿里巴巴發布 Qwen3.8-27B 密集模型，基於 Qwen3.5 架構升級，顯著提升了編碼、專業工作與長流程 Agent 任務的表現。官方宣稱其具備更強的自主規劃與環境回饋處理能力，能更可靠地執行端到端任務。模型原生支援影像與影片理解，並提供彈性的思考控制功能，可透過 `reasoning_effort` 調整推理深度。",
      "key_points": [
-      "27B 參數的原生視覺語言模型，支援圖像與影片理解。",
-      "強化自主規劃與環境回饋處理能力，提升 Agent 端到端任務的執行成功率。",
-      "支援彈性思考控制，可自由調整推理深度或關閉思考模式。",
-      "相容於 Hugging Face Transformers、vLLM 與 SGLang 等主流推理框架。"
+      "27B 密集型多模態模型，原生支援圖片與長影片理解",
+      "強化自主規劃能力，能更好地處理 Agent 執行過程中的環境回饋",
+      "支援 `reasoning_effort` 與 `preserve_thinking` 彈性控制思考過程",
+      "完全相容 Transformers、vLLM、SGLang 等主流開源推理框架"
      ],
-     "how_to_use": "27B 的大小非常適合你在本機用 Ollama（或透過 GGUF 量化）來跑。當你在開發 Coding Agent 或需要操作瀏覽器的自動化 Agent 時，Qwen3.8 強化的環境回饋處理能力，能讓 Agent 在執行程式碼出錯或網頁元素改變時，更聰明地自我修正。你可以將它接入 LangGraph 作為核心推理引擎，利用它的思考模式來處理複雜的資料分析邏輯與 SQL 語法生成。",
+     "how_to_use": "雖然 27B 在本機 Ollama 執行需要較高硬體配置，但非常適合做為你 LangGraph 流程中的「主導 Agent（Supervisor）」。利用它強化的自主規劃與環境回饋處理能力，可以更穩定地編排複雜的資料分析工作流。此外，它的原生多模態能力，能讓你直接在瀏覽器操作 Agent 中輸入螢幕截圖，進行網頁元素定位與狀態判斷，無須額外掛載其他視覺模型。",
      "fallback": false
     },
     {
-     "ref": "c91",
+     "ref": "c73",
+     "source": "hf_models",
+     "id": "Cloudflare/clef",
+     "metrics": {
+      "likes": 905,
+      "downloads": 2620,
+      "trending_score": 870,
+      "likes_delta": 549
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Cloudflare/clef"
+      }
+     ],
+     "title": "Cloudflare Clef 決策模型開源：免輸出解析，單次前向傳播直接輸出結構化機率",
+     "tags": [
+      "結構化輸出",
+      "決策模型",
+      "微調模型",
+      "工作流自動化"
+     ],
+     "summary": "Cloudflare 開源基於 Qwen3.8-27B 微調的多模態決策模型 Clef。該模型能將輸入狀態（支援文字、JSON、圖片、影片）與自訂的 Schema 問題，在單次前向傳播中直接轉化為各選項的機率分佈。官方宣稱其完全不進行自由文字生成，因此不需要任何輸出解析（Output Parsing），徹底解決了結構化輸出格式出錯的問題。",
+     "key_points": [
+      "基於 Qwen3.8-27B 微調，專為結構化決策與分類設計",
+      "輸入支援多模態（文字、JSON、圖片、影片），輸出直接為選項機率",
+      "無自由文字生成，完全免除 LLM 輸出解析出錯的風險",
+      "相容 Jev 與 SystemOne，提供 Python 載入與推論範例程式碼"
+     ],
+     "how_to_use": "這對你的自動化與內部流程（如簽核、文件處理）極具價值。在 LangGraph 的條件路由（Conditional Edge）或節點決策中，我們常因為 LLM 輸出的 JSON 格式不符而導致程式崩潰。你可以直接在本地用 PyTorch 載入 Clef，輸入發票圖片或 SQL 資料 JSON，並給定分類 Schema（例如：是否超支、部門歸屬），它會直接回傳各分類的機率，讓你用純 Python 程式碼進行精準的分流，完全不用寫 Prompt 也不用擔心解析失敗。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c84",
      "source": "hf_models",
      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
      "metrics": {
-      "likes": 4015,
-      "downloads": 767871,
-      "trending_score": 168,
-      "likes_delta": 31
+      "likes": 4037,
+      "downloads": 787841,
+      "trending_score": 181,
+      "likes_delta": 53
      },
      "sources": [
       {
@@ -249,85 +294,67 @@
        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
       }
      ],
-     "title": "DeepSeek-V4.1-Flash 發布：極致壓縮 KV Cache 的百萬 Token 混合專家模型",
-     "tags": [
-      "混合專家模型",
-      "長文本",
-      "KV Cache 壓縮"
-     ],
-     "summary": "DeepSeek 推出 DeepSeek-V4.1-Flash，這是一款擁有 552B 總參數的混合專家（MoE）多模態模型，支援高達 100 萬字元的上下文。該模型採用了創新的「因果編解碼器（CED）」架構，在 Prefill 階段僅需啟用 8B 參數，Decode 階段啟用 16B 參數。此外，透過 CSA2 技術與 FP4 格式的 KV 快取，成功將 KV Cache 佔用空間壓縮至每 Token 僅 890 位元組（約為前代 Flash 的四分之一），大幅降低了長文本 Agent 任務的運行成本。",
-     "key_points": [
-      "552B 參數的 MoE 架構，Prefill 僅需啟用 8B 參數，極具成本優勢。",
-      "支援 1M 超長上下文，原生支援圖像與文字輸入。",
-      "採用 CED 架構與 CSA2 技術，將 KV Cache 記憶體佔用壓縮至前代的 1/4。",
-      "結合 DSpark 投機解碼技術，進一步提升生成速度。"
-     ],
-     "how_to_use": "雖然 552B 的模型無法在你的本機 Ollama 完整運行，但這項技術突破對你的 RAG 與知識庫專案影響深遠。未來當這類 Flash 模型上架到免費或廉價 API 服務時，其極低的 KV Cache 成本意味著你可以把整個資料庫的 Schema、多個 CSV 檔案的範例，甚至長篇 PDF 文件直接塞進 1M 的上下文視窗中，讓 Agent 進行跨文件的複雜資料分析，而不用擔心 API 費用暴增。",
+     "title": "DeepSeek-V4.1-Flash 發布",
+     "one_liner": "DeepSeek 發布輕量級 V4.1-Flash 模型，主打高速與高效率的推理表現。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
      "fallback": false
-    }
-   ],
-   "brief": [
+    },
     {
-     "ref": "c82",
+     "ref": "c81",
      "source": "hf_models",
-     "id": "Cloudflare/clef-flash",
+     "id": "Contrastive-LM/CLM-v0.1-8B",
      "metrics": {
-      "likes": 259,
-      "downloads": 1303,
-      "trending_score": 254,
-      "likes_delta": 143
+      "likes": 686,
+      "downloads": 3190,
+      "trending_score": 407,
+      "likes_delta": 61
      },
      "sources": [
       {
        "label": "Hugging Face",
-       "url": "https://huggingface.co/Cloudflare/clef-flash"
+       "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B"
       }
      ],
-     "title": "Cloudflare 推出 Clef-flash 決策模型",
-     "one_liner": "Cloudflare 決策模型 Clef 的輕量 Flash 版本，提供更快的推論速度與更低的資源消耗。",
-     "url": "https://huggingface.co/Cloudflare/clef-flash",
+     "title": "Contrastive-LM 開源 CLM-v0.1-8B",
+     "one_liner": "基於對比學習訓練的 8B 參數語言模型 CLM-v0.1-8B 正式開源。",
+     "url": "https://huggingface.co/Contrastive-LM/CLM-v0.1-8B",
      "fallback": false
     },
     {
-     "ref": "c97",
+     "ref": "c90",
      "source": "hf_models",
-     "id": "Qwen/Qwen3.8-Flash-Next",
+     "id": "XingChen-AGI/TeleOCR",
      "metrics": {
-      "likes": 5840,
-      "downloads": 1299909,
-      "trending_score": 121,
-      "likes_delta": 22
-     },
-     "sources": [
-      {
-       "label": "Hugging Face",
-       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
-      }
-     ],
-     "title": "Qwen3.8-Flash-Next 快速版模型發布",
-     "one_liner": "Qwen3.8 系列的極速 Flash 版本，專為需要極低延遲的 Agent 即時對話與工具調用場景設計。",
-     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-     "fallback": false
-    },
-    {
-     "ref": "c89",
-     "source": "hf_models",
-     "id": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
-     "metrics": {
-      "likes": 269,
-      "downloads": 9533,
-      "trending_score": 227,
+      "likes": 1267,
+      "downloads": 35418,
+      "trending_score": 83,
       "likes_delta": 34
      },
      "sources": [
       {
        "label": "Hugging Face",
-       "url": "https://huggingface.co/orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF"
+       "url": "https://huggingface.co/XingChen-AGI/TeleOCR"
       }
      ],
-     "title": "OrcaSAQ-2-Cyber-27B-Uncensored-GGUF 上架",
-     "one_liner": "針對網路安全優化且無審查的 27B GGUF 格式模型，適合本機 Ollama 部署進行安全測試。",
-     "url": "https://huggingface.co/orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+     "title": "星辰 AGI 開源 TeleOCR 模型",
+     "one_liner": "專注於光學字元識別與多模態文件理解任務的 TeleOCR 模型開源發布。",
+     "url": "https://huggingface.co/XingChen-AGI/TeleOCR",
+     "fallback": false
+    },
+    {
+     "ref": "c133",
+     "source": "rss",
+     "id": "https://huggingface.co/blog/allenai/astabrief",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Hugging Face Blog",
+       "url": "https://huggingface.co/blog/allenai/astabrief"
+      }
+     ],
+     "title": "Asta 開源 AstaBrief 報告生成模型",
+     "one_liner": "Asta 宣布開源其內部用於快速生成分析報告的專用模型 AstaBrief。",
+     "url": "https://huggingface.co/blog/allenai/astabrief",
      "fallback": false
     }
    ]
@@ -335,12 +362,12 @@
   "arch": {
    "items": [
     {
-     "ref": "c104",
+     "ref": "c94",
      "source": "hf_papers",
      "id": "2610.01415",
      "metrics": {
-      "upvotes": 69,
-      "github_stars": 16
+      "upvotes": 75,
+      "github_stars": 20
      },
      "sources": [
       {
@@ -356,28 +383,28 @@
        "url": "https://github.com/luoyu100/PoS"
       }
      ],
-     "title": "超越記憶：利用顯式信念狀態駕馭長流程 Agent",
+     "title": "超越單純歷史記憶：利用顯式信念狀態引導長流程 Agent",
      "tags": [
-      "設計模式",
       "長流程管理",
-      "信念狀態"
+      "信念狀態",
+      "LangGraph 狀態設計"
      ],
-     "summary": "這篇論文指出，現今 LLM Agent 雖然能處理複雜任務，但僅將互動歷史整理進記憶中，並無法確保對當前世界狀態有連貫的理解。為此，研究團隊提出 PoS 推理期框架。PoS 會建構並持續維護一個「顯式信念狀態」作為決策上下文，該狀態結合了對當前世界狀態的估計與未解決的任務需求。為了確保信念的可靠性，PoS 會驗證其一致性並監控任務進度，以偵測 Agent 是否陷入「信念陷阱」（即持續行動卻無實質進展），並根據陷阱模式提供量身定制的復原機制。官方宣稱在四個基準測試中，PoS 搭配三種 LLM 骨幹皆取得了最佳效能，且對上下文增長具有韌性。",
+     "summary": "傳統 LLM Agent 僅將互動歷史堆疊至記憶中，難以確保對當前環境有連貫理解。本文提出 PoS 推理期框架，建立並維護「顯式信念狀態」（Belief States）作為決策上下文。信念狀態結合了對當前世界狀態的估計與未完成的任務需求，能明確指出 Agent 還需要學習或完成什麼。為確保信念可靠，PoS 會驗證其一致性並監控任務進度，以偵測 Agent 是否陷入無實質進展的「信念陷阱（Belief Trapping）」，並針對不同陷阱與任務類型提供量身定制的恢復機制。實驗顯示 PoS 在多個基準測試上均取得最佳表現。",
      "key_points": [
-      "提出 PoS 框架，在推理期維護顯式信念狀態，而非單純依賴歷史記憶。",
-      "信念狀態結合了當前世界狀態與未完成的任務需求，明確指出 Agent 還需要學習和完成什麼。",
-      "具備「信念陷阱」偵測機制，能發現 Agent 原地打轉的無效行為並進行針對性復原。",
-      "實驗證實一致性驗證與復原機制對提升長流程任務的成功率至關重要。"
+      "引入顯式信念狀態（PoS），將當前世界狀態與未完成任務結合，作為 Agent 決策上下文。",
+      "具備一致性驗證與進度監控，能主動偵測並診斷 Agent 是否陷入原地打轉的「信念陷阱」。",
+      "針對不同的陷阱模式與未完成任務類型，提供客製化的錯誤恢復與調整機制。",
+      "在四個基準測試中展現出對上下文增長的韌性，不依賴歷史壓縮也能維持長流程管理。"
      ],
-     "how_to_use": "在你的 LangGraph 專案中，當你開發需要多步驟處理的資料分析或自動化爬蟲 Agent 時，可以參考這個設計模式。不要只把對話歷史丟進 State，你可以額外定義一個 `belief_state` 欄位，用來記錄「目前已取得的資料欄位」與「尚待查詢的 SQL 條件」。同時，設計一個節點專門比對前後步驟的 belief 是否重複（即偵測 Belief Trapping），一旦發現 Agent 連續兩次嘗試都無法推進資料蒐集進度，就強制觸發復原節點，更換搜尋關鍵字或改用備用 API，避免 Agent 在本機執行時白白消耗 Gemini 的免費額度。",
+     "how_to_use": "這對你在 LangGraph 中開發資料分析或爬蟲流程非常實用。你可以參考 PoS 的設計，在 LangGraph 的 State 中除了儲存對話歷史，另外定義一個顯式的 `belief_state` 結構（例如用 Pydantic 定義當前已取得的資料欄位、尚待爬取的頁面）。在 Node 之間傳遞時，加入一個「一致性檢查」Node，一旦偵測到 Agent 陷入重複執行的錯誤（如 SQL 語法一直出錯卻沒修正），就主動觸發恢復機制，避免白白消耗 Gemini 免費額度。",
      "fallback": false
     },
     {
-     "ref": "c110",
+     "ref": "c102",
      "source": "hf_papers",
      "id": "2610.00906",
      "metrics": {
-      "upvotes": 50,
+      "upvotes": 53,
       "github_stars": null
      },
      "sources": [
@@ -390,91 +417,27 @@
        "url": "https://arxiv.org/abs/2610.00906"
       }
      ],
-     "title": "ActiveSaddler：用於 Agent 測試優化的自動課程學習",
+     "title": "ActiveSaddler：透過動態課程學習自動優化 Agent 系統架構",
      "tags": [
-      "Agent評測",
-      "自動化優化",
-      "課程學習"
+      "Agent 優化",
+      "課程學習",
+      "評測與監控"
      ],
-     "summary": "現有的 Agent Harness 優化方法主要專注於如何根據執行回饋來更新 Prompt、工具介面和控制邏輯，但通常固定了產生回饋的訓練場景。這篇論文提出 ActiveSaddler，將此問題視為自動課程學習。ActiveSaddler 將演進中的課程建模為具有動態優化目標的非平穩多臂蠻兵（Bandit）。它將重複出現的失敗抽象化為可複用的「失敗模式臂」，評估針對各模式進行優化的潛在學習進度，並在「複習已知弱點」與「探索新失敗場景」之間取得平衡。官方宣稱在 GAIA2 和 Terminal-Bench 2.0 測試中，ActiveSaddler 相比固定場景順序的優化器，分別提升了 4.4 和 7.5 個百分點的測試 Pass@1 成功率。",
+     "summary": "自動化架構優化能透過執行回饋迭代更新 Agent 的提示詞、工具介面與控制邏輯。然而，現有方法多半固定了產生回饋的訓練場景。本文提出 ActiveSaddler，將此問題視為自動化課程學習。它將演進中的課程建模為具有動態目標的非平穩多臂賭博機，把重複出現的失敗抽象化為可複用的「失敗模式臂」，評估針對各模式進行優化的潛在學習進度，並動態平衡「複習已知弱點」與「探索新失敗場景」。在 GAIA2 和 Terminal-Bench 2.0 的實驗中，ActiveSaddler 顯著提升了測試的 Pass@1 成功率。",
      "key_points": [
-      "將 Agent 測試優化視為自動課程學習，讓測試場景隨著 Agent 的演進動態調整。",
-      "利用非平穩多臂蠻兵模型，動態平衡已知失敗模式的強化與新失敗情境的探索。",
-      "將失敗案例抽象化為可複用的失敗模式，動態更新發現的失敗集與優先級。",
-      "實驗證實動態建構優化目標與評估其演進效用，是提升 Agent 最終表現的關鍵。"
+      "將 Agent 架構優化與訓練場景選擇結合，讓測試課程隨 Agent 能力提升而動態演進。",
+      "利用非平穩多臂賭博機模型，動態平衡複習已知失敗模式與探索全新未見場景。",
+      "將零散的執行失敗抽象化為可複用的「失敗模式」，使優化目標更具針對性。"
      ],
-     "how_to_use": "這與你感興趣的 Agent 評測與監控高度相關。雖然你目前沒有付費 key 來跑大規模的自動化優化，但你可以借鑑其「失敗模式臂」的概念。在 Windows 環境下，你可以用 Python 寫一個簡單的測試腳本，將你個人資料分析專案中常見的失敗（例如 SQL 語法錯誤、Pandas 轉型失敗、爬蟲被擋）分類。每次你修改 LangGraph 的 Prompt 或工具後，測試腳本可以動態調整測試案例的權重，優先測試那些你最常寫錯、最棘手的邊界條件，而不是每次都跑整套固定的測試流程，這能幫你更高效地在本機用 Ollama 進行迴歸測試。",
+     "how_to_use": "這與你的 Agent 評測與監控興趣高度相關。當你在 Windows 下微調 LangGraph Agent 的提示詞或工具設計時，通常難以決定要用哪些測試資料。你可以借鏡 ActiveSaddler 的思路：建立一個簡易的錯誤分類器，將 Agent 執行失敗的案例（例如特定 PDF 解析失敗、SQL 語法報錯）歸類。接著，優先讓 Agent 測試這些高頻失敗的場景，並隨著 Agent 程式碼修改動態調整測試案例權重，實現自動化的迴歸測試與提示詞優化。",
      "fallback": false
     },
     {
-     "ref": "c120",
-     "source": "hf_papers",
-     "id": "2609.38923",
-     "metrics": {
-      "upvotes": 34,
-      "github_stars": null
-     },
-     "sources": [
-      {
-       "label": "HF Papers",
-       "url": "https://huggingface.co/papers/2609.38923"
-      },
-      {
-       "label": "arXiv",
-       "url": "https://arxiv.org/abs/2609.38923"
-      }
-     ],
-     "title": "GraphForge：利用圖錨定工作空間合成訓練工作型 Agent",
-     "tags": [
-      "資料合成",
-      "Agent評測",
-      "工作空間"
-     ],
-     "summary": "工作型 Agent 需要處理多種檔案、協調工具並產出成果，但目前缺乏能合成具有真實檔案與可驗證結果的任務管道。現有方法要麼缺乏真實性，要麼缺乏驗證器。這篇論文提出 GraphForge，一個基於證據圖（evidence-graph）的框架。它從職業導向的種子出發，為每個種子組裝真實檔案的工作空間，並建立檔案關係的證據圖。任務陳述與評分標準（rubrics）皆源自此圖，確保任務要求與驗證標準都錨定在真實檔案上。官方宣稱，利用 GraphForge 合成的軌跡微調 Qwen3.6-27B 後，在 OpenHands、Claude Code 等基準測試（包含 SpreadsheetBench II）上皆取得了顯著的效能提升。",
-     "key_points": [
-      "提出 GraphForge 框架，利用證據圖將任務與驗證標準雙重錨定在真實檔案上。",
-      "解決了合成任務缺乏真實性，以及真實檔案任務缺乏自動驗證器的痛點。",
-      "引入修復 Agent，在收集軌跡前先針對原始檔案修復任務與評分標準。",
-      "實驗證實，基於證據錨定評分標準的拒絕微調（RFT）能提供有效的篩選訊號並提升效能。"
-     ],
-     "how_to_use": "這對你進行資料分析（如處理 CSV、Excel 試算表）的 Agent 評測非常實用。當你在 Windows 本機開發處理 Excel 的 LangGraph Agent 時，最難的是如何自動驗證 Agent 的輸出是否正確。你可以參考 GraphForge 的邏輯，利用 Python 預先讀取本機的真實資料表，建立欄位關係圖（例如：A 欄加總等於 B 欄），並以此圖自動生成測試題目（如「請計算 A 欄的總和並寫入 B 欄」）與對應的斷言驗證程式碼（Assertion）。這樣一來，你就能在不用人工檢查的情況下，自動評測你的資料分析 Agent 在處理複雜試算表時的精準度。",
-     "fallback": false
-    }
-   ],
-   "brief": [
-    {
-     "ref": "c101",
-     "source": "hf_papers",
-     "id": "2610.01762",
-     "metrics": {
-      "upvotes": 146,
-      "github_stars": 45
-     },
-     "sources": [
-      {
-       "label": "HF Papers",
-       "url": "https://huggingface.co/papers/2610.01762"
-      },
-      {
-       "label": "arXiv",
-       "url": "https://arxiv.org/abs/2610.01762"
-      },
-      {
-       "label": "GitHub",
-       "url": "https://github.com/MCG-NJU/OneStreamer"
-      }
-     ],
-     "title": "OneStreamer：統一串流影片互動中的感知、記憶與主動回應",
-     "one_liner": "提出統一學習框架，透過共享的主動生成過程，在不影響即時感知的狀況下建立可複用的影片事實記憶。",
-     "url": "https://huggingface.co/papers/2610.01762",
-     "fallback": false
-    },
-    {
-     "ref": "c114",
+     "ref": "c105",
      "source": "hf_papers",
      "id": "2610.01215",
      "metrics": {
-      "upvotes": 42,
+      "upvotes": 46,
       "github_stars": 4
      },
      "sources": [
@@ -492,35 +455,93 @@
       }
      ],
      "title": "AutoGUIWorld：將影像生成器作為 GUI Agent 的視覺世界模型",
-     "one_liner": "利用影像生成器模擬軟體環境對操作的反饋，解決 GUI Agent 訓練時面臨的複雜軟體安裝與配置限制。",
-     "url": "https://huggingface.co/papers/2610.01215",
+     "tags": [
+      "GUI 自動化",
+      "視覺世界模型",
+      "合成資料生成"
+     ],
+     "summary": "GUI Agent 需要高質量的互動軌跡來學習軟體環境的狀態變化與多步驟工作流。然而，實機部署各種複雜軟體以收集軌跡的成本極高。本文提出 AutoGUIWorld 資料生成框架，結合影像生成器的視覺先驗與規劃器的任務知識，在不實際運行軟體的情況下合成 GUI 互動軌跡。該框架從作業系統上下文、視覺外觀與介面狀態的結構化說明中取樣初始 GUI 畫面，並由規劃器指定原子動作與預期視覺結果，再由影像生成器迭代編輯截圖產生後續觀察。此方法生成了近八萬個跨多平台的步驟級訓練樣本，顯著提升了 GUI Agent 在真實桌面任務上的表現。",
+     "key_points": [
+      "利用影像生成器作為視覺世界模型，無需實際安裝與運行軟體即可合成 GUI 互動軌跡。",
+      "結合規劃器（Planner）定義原子動作與預期視覺變化，確保生成軌跡的邏輯合理性。",
+      "產出近八萬個跨多平台的空間標註步驟級樣本，微調後的模型在 OSWorld 等基準上表現大幅提升。"
+     ],
+     "how_to_use": "雖然這項研究主要在於生成訓練資料來微調大型視覺模型，與你目前直接在 Windows 上用 Python/LangGraph 寫自動化腳本的直接關係不大。但它提供了一個很重要的趨勢：未來的電腦操作 Agent，可能會在「想像」的虛擬 GUI 環境中先進行規劃與模擬，再實際執行動作。如果你未來想開發基於視覺的自動化 Agent，理解這種「用影像生成模擬軟體反應」的架構，能幫你評估何時該引入視覺模型，以及如何設計更具彈性的 GUI 狀態監控機制。",
      "fallback": false
-    },
+    }
+   ],
+   "brief": [
     {
-     "ref": "c122",
+     "ref": "c91",
      "source": "hf_papers",
-     "id": "2610.01939",
+     "id": "2610.01762",
      "metrics": {
-      "upvotes": 24,
-      "github_stars": 17
+      "upvotes": 157,
+      "github_stars": 65
      },
      "sources": [
       {
        "label": "HF Papers",
-       "url": "https://huggingface.co/papers/2610.01939"
+       "url": "https://huggingface.co/papers/2610.01762"
       },
       {
        "label": "arXiv",
-       "url": "https://arxiv.org/abs/2610.01939"
+       "url": "https://arxiv.org/abs/2610.01762"
       },
       {
        "label": "GitHub",
-       "url": "https://github.com/DAGroup-PKU/PyRUA-Lean"
+       "url": "https://github.com/MCG-NJU/OneStreamer"
       }
      ],
-     "title": "更少 Token，更好行動：成功率提升 14% 且 Token 減少 65% 的機器人 Agent",
-     "one_liner": "推出 PyRUA-Lean 框架，將機器人動作與 VLA 策略組合成 Python 程式碼單元執行，大幅降低 Token 消耗。",
-     "url": "https://huggingface.co/papers/2610.01939",
+     "title": "OneStreamer：統一串流影片互動中的感知、記憶與主動回應",
+     "one_liner": "提出 OneStreamer 架構，透過共享的主動生成流程，同時實現串流影片的無關查詢證據記錄與任務回應。",
+     "url": "https://huggingface.co/papers/2610.01762",
+     "fallback": false
+    },
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2609.38024",
+     "metrics": {
+      "upvotes": 44,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.38024"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.38024"
+      }
+     ],
+     "title": "基於跨測試平台適應的檢索增強技能優化",
+     "one_liner": "探討如何利用檢索增強技術，跨不同測試平台重用與優化已有的開源 Agent 技能。",
+     "url": "https://huggingface.co/papers/2609.38024",
+     "fallback": false
+    },
+    {
+     "ref": "c111",
+     "source": "hf_papers",
+     "id": "2609.38923",
+     "metrics": {
+      "upvotes": 37,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.38923"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.38923"
+      }
+     ],
+     "title": "GraphForge：利用圖錨定工作空間合成訓練實用型 Agent",
+     "one_liner": "推出 GraphForge 框架，利用證據圖合成真實檔案與驗證器任務，用以訓練能協調工具的實用型 Agent。",
+     "url": "https://huggingface.co/papers/2609.38923",
      "fallback": false
     }
    ]
@@ -528,43 +549,12 @@
   "github": {
    "items": [
     {
-     "ref": "c40",
-     "source": "github_trending",
-     "id": "D4Vinci/Scrapling",
-     "metrics": {
-      "stars": 85245,
-      "stars_today": 241,
-      "stars_delta": null
-     },
-     "sources": [
-      {
-       "label": "GitHub",
-       "url": "https://github.com/D4Vinci/Scrapling"
-      }
-     ],
-     "title": "Scrapling：具備自適應網頁解析與防爬蟲繞過的現代化爬蟲框架",
-     "tags": [
-      "網頁爬蟲",
-      "自動化資料蒐集",
-      "Python",
-      "防爬蟲繞過"
-     ],
-     "summary": "Scrapling 是一個專為現代網頁設計的自適應網頁爬蟲框架，支援從單一請求到大規模的並行爬取。官方宣稱其解析器具備自適應能力，能在網頁結構改變時自動重新定位元素。此外，它內建繞過 Cloudflare Turnstile 等防爬蟲機制的能力，並支援自動代理輪替與自適應爬取速度，讓開發者用極簡的 Python 程式碼即可完成高效且穩定的網頁資料採集。",
-     "key_points": [
-      "自適應解析：在 css 選擇器中使用 adaptive=True，即使網頁結構改變也能自動尋找目標元素。",
-      "防爬蟲繞過：內建 StealthyFetcher 等工具，官方宣稱可直接繞過 Cloudflare Turnstile 等防護系統。",
-      "高效並行爬取：Spider 框架支援多工作階段、暫停與恢復，並能根據網站回應速度自動調整爬取頻率。"
-     ],
-     "how_to_use": "這對你的自動化爬蟲與資料蒐集工作非常實用。你可以將它打包成 LangGraph 中的一個 Tool 節點。當 Agent 需要獲取特定網頁資料時，直接呼叫 Scrapling 進行抓取。其自適應定位功能能大幅減少因為目標網站改版而導致 LangGraph 工作流中斷的維護成本，且無須額外付費 API 即可在 Windows 本地環境順暢執行。",
-     "fallback": false
-    },
-    {
-     "ref": "c29",
+     "ref": "c16",
      "source": "github_trending",
      "id": "Panniantong/Agent-Reach",
      "metrics": {
-      "stars": 88627,
-      "stars_today": 696,
+      "stars": 89373,
+      "stars_today": 1683,
       "stars_delta": null
      },
      "sources": [
@@ -573,134 +563,30 @@
        "url": "https://github.com/Panniantong/Agent-Reach"
       }
      ],
-     "title": "Agent Reach：為 AI Agent 一鍵啟用跨平台社群與網頁讀取能力",
+     "title": "Agent-Reach：一鍵為 AI Agent 啟用網路與社群平台爬取能力",
      "tags": [
-      "AI Agent",
-      "社群媒體讀取",
-      "MCP",
-      "免 API 密鑰"
+      "資料搜集",
+      "自動化爬蟲",
+      "Agent 工具箱"
      ],
-     "summary": "Agent Reach 是一個開源且完全免費的工具，旨在解決 AI Agent 無法直接讀取主流社群平台與網頁內容的痛點。它整合了多種免 API 密鑰的管道，讓 Agent 能夠直接搜尋並讀取 YouTube 字幕、Twitter、Reddit、Bilibili、小紅書與 LinkedIn 等平台。官方宣稱其具備持續維護與多後端路由機制，當某個平台防爬機制變更時會自動切換備用方案，確保 Agent 網路存取的穩定性。",
+     "summary": "Agent-Reach 是一個開源且完全免費的工具，旨在解決 AI Agent 無法順利讀取網路資料（如 YouTube 字幕、Twitter、Reddit、小紅書、B站等）的痛點。它透過整合多種後端路由，在平台封鎖或改版時自動切換備用方案，讓 Agent 能穩定獲取結構化網頁資料。",
      "key_points": [
-      "免 API 密鑰：完全免費且開源，提供 MCP 接入，無需配置昂貴的第三方社群平台 API。",
-      "隱私與安全：所有 Cookie 僅保存在本地端，不外傳，且程式碼完全開源可供審查。",
-      "自動容錯路由：當特定抓取工具失效時，系統會自動切換至備用後端，對使用者完全無感。"
+      "完全免費且開源，Cookie 僅儲存於本地，保障隱私安全",
+      "支援多平台，包括網頁閱讀、YouTube 字幕提取、RSS 訂閱等，部分平台需配置登入狀態",
+      "內建 agent-reach doctor 診斷指令，一鍵排查連線問題",
+      "相容於多種 Agent 框架，平台介面失效時會自動無感切換後端"
      ],
-     "how_to_use": "雖然它主要針對 CLI 工具設計，但它支援 MCP 協定。你可以利用它作為 LangGraph 專案中的外部資料獲取管道。例如，在你的自動化輿情分析或資料蒐集工作流中，當需要分析 YouTube 影片內容或 Reddit 討論時，直接透過 Agent Reach 獲取結構化文字，再交由本地的 Ollama 或免費的 Gemini API 進行分析，免去自己維護各種社群爬蟲與繞過風控的麻煩。",
+     "how_to_use": "對於你的資料蒐集與自動化工作流，這是一個極佳的工具。你可以將它整合進 LangGraph 的 Tool 節點中。當你的 Agent 需要爬取特定社群媒體或網頁進行資料分析時，直接呼叫 Agent-Reach 的命令列工具，免去你自己用 Python 寫爬蟲或處理防爬機制的時間。",
      "fallback": false
     },
     {
-     "ref": "c42",
-     "source": "github_trending",
-     "id": "NVIDIA/SkillSpector",
-     "metrics": {
-      "stars": 19113,
-      "stars_today": 168,
-      "stars_delta": null
-     },
-     "sources": [
-      {
-       "label": "GitHub",
-       "url": "https://github.com/NVIDIA/SkillSpector"
-      }
-     ],
-     "title": "SkillSpector：NVIDIA 開源的 AI Agent 技能安全與漏洞掃描器",
-     "tags": [
-      "Agent 安全",
-      "漏洞掃描",
-      "靜態分析",
-      "MCP"
-     ],
-     "summary": "SkillSpector 是 NVIDIA 開源的 AI Agent 技能安全掃描器，用於在安裝或執行 Agent 技能前檢測安全風險。根據官方對三萬多個技能的分析研究，有 26.1% 含有漏洞，5.2% 具惡意意圖。該工具支援掃描 Git 倉庫、壓縮檔或目錄，能識別提示詞注入、資料外洩、權限提升等 71 種漏洞模式，並提供靜態分析與 LLM 語義評估。",
-     "key_points": [
-      "全面安全檢測：涵蓋提示詞注入、資料外洩、工具誤用、惡意程式碼等 17 個類別共 71 種漏洞模式。",
-      "雙階段分析：結合快速的靜態分析與選用的 LLM 語義評估，並支援即時查詢 OSV 漏洞資料庫獲取即時 CVE 資料。",
-      "靈活整合：提供終端機、JSON、Markdown 等多種報告格式，並可作為 MCP 工具或 OpenCode 擴充功能使用。"
-     ],
-     "how_to_use": "這與你關注的「Agent 評測與監控」高度相關。在開發個人 LangGraph 專案時，如果你引入了第三方的自訂 Tool 或 Prompt 範本，可以在部署前使用 SkillSpector 進行靜態掃描。你可以透過 pip 或 uv 在 Windows 環境下快速安裝，並將其整合進你的測試流程中，確保你的 Agent 在呼叫本機資料庫或執行系統指令時，不會因為 Prompt 注入而執行危險操作。",
-     "fallback": false
-    },
-    {
-     "ref": "c66",
-     "source": "github_search",
-     "id": "feder-cr/dots",
-     "metrics": {
-      "stars": 2481,
-      "forks": 434,
-      "stars_delta": 94
-     },
-     "sources": [
-      {
-       "label": "GitHub",
-       "url": "https://github.com/feder-cr/dots"
-      }
-     ],
-     "title": "dots：基於 C++ 修改版 Firefox 的 AI 瀏覽器 Agent 互動介面",
-     "tags": [
-      "瀏覽器 Agent",
-      "防偵測",
-      "Windows 支援",
-      "MCP"
-     ],
-     "summary": "dots 是一個專為 AI Agent 設計的瀏覽器互動介面，其核心理念在於網頁 Agent 的失敗通常源於瀏覽器層面的偵測或載入問題，而非模型本身。dots 內建了經過 C++ 修改的真實 Firefox 引擎，能從底層決定瀏覽器特徵，避免被網站識別為自動化工具。它支援模擬人類手部軌跡的滑鼠點擊與鍵盤輸入，並能透過 MCP 將此瀏覽器作為伺服器提供給各式 Agent 使用。",
-     "key_points": [
-      "底層防偵測：修改 Firefox 引擎，不留 WebDriver 標記或自動化全域變數，完美繞過自動化偵測。",
-      "身分一致性：透過 seed 參數確保每次執行的螢幕、字型、GPU 與時區完全一致，並支援 profile-dir 保留登入狀態。",
-      "人類行為模擬：滑鼠指針會移動到點擊位置，按鍵逐一按下，產生真實的瀏覽器事件。"
-     ],
-     "how_to_use": "這非常適合你對「瀏覽器操作 Agent」的興趣。你可以直接在 Windows 中透過 uvx 一鍵啟動它。它支援 MCP 協定，因此你可以將其作為一個 MCP 伺服器，直接對接到你的 LangGraph 專案中。當你的自動化流程需要登入複雜網站、填寫表單或抓取高度防禦自動化的 BI 系統資料時，讓 LangGraph 呼叫 dots 提供的瀏覽器節點，即可穩定地執行網頁操作，且可搭配免費的 Gemini 進行決策。",
-     "fallback": false
-    }
-   ],
-   "brief": [
-    {
-     "ref": "c46",
-     "source": "github_trending",
-     "id": "MakazhanAlpamys/Soup",
-     "metrics": {
-      "stars": 8031,
-      "stars_today": 90,
-      "stars_delta": 60
-     },
-     "sources": [
-      {
-       "label": "GitHub",
-       "url": "https://github.com/MakazhanAlpamys/Soup"
-      }
-     ],
-     "title": "Soup",
-     "one_liner": "僅需單一 YAML 即可微調 LLM，支援層串流技術，可在 4 GB 顯卡筆電上訓練 8B 模型。",
-     "url": "https://github.com/MakazhanAlpamys/Soup",
-     "fallback": false
-    },
-    {
-     "ref": "c57",
-     "source": "github_search",
-     "id": "strands-labs/strands-decider",
-     "metrics": {
-      "stars": 206,
-      "forks": 34,
-      "stars_delta": null
-     },
-     "sources": [
-      {
-       "label": "GitHub",
-       "url": "https://github.com/strands-labs/strands-decider"
-      }
-     ],
-     "title": "strands-decider",
-     "one_liner": "專為 Agent 工作流設計的輕量快速決策模型，能比一般 LLM 更快地進行選項決策或評分。",
-     "url": "https://github.com/strands-labs/strands-decider",
-     "fallback": false
-    },
-    {
-     "ref": "c67",
+     "ref": "c54",
      "source": "github_search",
      "id": "angel291592/Intent-Router",
      "metrics": {
-      "stars": 617,
-      "forks": 67,
-      "stars_delta": 93
+      "stars": 671,
+      "forks": 70,
+      "stars_delta": 147
      },
      "sources": [
       {
@@ -708,18 +594,29 @@
        "url": "https://github.com/angel291592/Intent-Router"
       }
      ],
-     "title": "Intent-Router",
-     "one_liner": "AI Agent 的意圖編譯器，能將模糊的使用者請求收斂為具備型別定義的意圖合約。",
-     "url": "https://github.com/angel291592/Intent-Router",
+     "title": "Intent-Router：將模糊需求轉化為精準 IntentSpec 的 Agent 意圖編譯器",
+     "tags": [
+      "Coding Agent",
+      "意圖解析",
+      "Agent 評測"
+     ],
+     "summary": "Intent-Router 是一款專為 AI Agent 設計的意圖編譯器。它能將使用者模糊的開發需求轉化為具備型別定義的 IntentSpec，並在過程中自動查詢現有儲存庫或文件，僅針對無法確認的關鍵問題進行單次提問。最後，它會嚴格對照規格書檢查 Agent 產出的程式碼，而非僅進行模糊的語意檢查。",
+     "key_points": [
+      "將模糊請求編譯為儲存於 .intent/ .intent.yaml 的機器可讀 IntentSpec",
+      "自動讀取現有 Repo、Ticket 系統與文件，大幅減少 Agent 重複提問的次數",
+      "後續 Session 可直接讀取規格檔，確保決策與實作的一致性",
+      "提供嚴格的約束條件比對，確保生成的程式碼符合預期"
+     ],
+     "how_to_use": "雖然它主要用於軟體開發，但你可以將其核心邏輯引入你的 LangGraph 個人專案中。在 Agent 執行複雜的 SQL 查詢或資料分析前，先用類似的意圖編譯機制生成結構化的 IntentSpec，並在資料輸出後進行嚴格的 schema 驗證，避免 LLM 產生幻覺或不合規的資料格式。",
      "fallback": false
     },
     {
-     "ref": "c76",
+     "ref": "c66",
      "source": "github_search",
      "id": "graygnatconsole/mcp-audit-tool",
      "metrics": {
-      "stars": 53,
-      "forks": 2,
+      "stars": 64,
+      "forks": 3,
       "stars_delta": null
      },
      "sources": [
@@ -728,18 +625,102 @@
        "url": "https://github.com/graygnatconsole/mcp-audit-tool"
       }
      ],
-     "title": "mcp-audit-tool",
-     "one_liner": "基於純 Python 的 MCP 伺服器安全審計工具，可掃描配置中的工具投毒與硬編碼金鑰等風險。",
-     "url": "https://github.com/graygnatconsole/mcp-audit-tool",
+     "title": "mcp-audit-tool：純 Python 的 MCP 伺服器安全性靜態審查工具",
+     "tags": [
+      "Agent 安全",
+      "MCP",
+      "靜態分析"
+     ],
+     "summary": "mcp-audit-tool 是一款針對 Model Context Protocol (MCP) 客戶端設定檔進行安全性審查的命令列工具。它採用純 Python 開發，無須 Node.js、Docker 或 LLM API 金鑰，能快速掃描並偵測工具投毒、明文金鑰洩漏、未鎖定套件版本（Rug pulls）及任意指令執行等安全風險。",
+     "key_points": [
+      "內建 12 條偵測規則，涵蓋 OWASP MCP Top 10 安全風險",
+      "支援 macOS、Linux 及 Windows，能自動偵測 Cursor、Claude Desktop 等常見 MCP 設定檔",
+      "提供終端機美化報告、JSON 及 SARIF 2.1.0 格式輸出，便於整合 CI/CD",
+      "純 Python 3.9+ 實作，僅依賴 typer、rich 和 pyyaml 三個輕量套件"
+     ],
+     "how_to_use": "這非常適合你今天花 15 分鐘動手測試！由於它是純 Python 專案且完全支援 Windows 環境，你只需在 Windows 終端機中安裝並執行，即可自動掃描你本機的 Cursor 或其他 Agent 設定檔。這能幫你檢查在連接本地 Ollama 或 Gemini 時，是否有不小心將 API Key 明文寫在設定檔中，或引入了有安全隱患的第三方 MCP 工具。",
      "fallback": false
     },
     {
-     "ref": "c51",
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "mksglu/context-mode",
+     "metrics": {
+      "stars": 25162,
+      "stars_today": 256,
+      "stars_delta": 366
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mksglu/context-mode"
+      }
+     ],
+     "title": "Context Mode：透過 SQLite 與程式碼生成優化 Agent 上下文的 MCP 伺服器",
+     "tags": [
+      "上下文優化",
+      "MCP",
+      "記憶管理"
+     ],
+     "summary": "Context Mode 是一款旨在解決 Agent 上下文膨脹問題的 MCP 伺服器。它透過沙盒工具阻隔原始資料直接進入上下文，並將檔案編輯、任務狀態等歷程記錄於 SQLite 中，利用 FTS5 與 BM25 進行精準檢索。此外，它強制引導 LLM 透過編寫並執行腳本來產出分析結果，而非將大量檔案讀入上下文，大幅節省 Token 消耗。",
+     "key_points": [
+      "沙盒化工具調用，官方宣稱可減少高達 98% 的上下文佔用",
+      "使用 SQLite 追蹤工作歷程，並透過全文檢索（FTS5）實現跨 Session 的連續性",
+      "倡導「以程式碼思考」模式，讓 LLM 生成執行腳本而非直接讀取大量原始檔案",
+      "不強制約束模型最終回答的文風，專注於資料流向與上下文管理"
+     ],
+     "how_to_use": "這與你日常的資料分析工作高度相關。當你使用 LangGraph 構建分析 Agent 時，可以參考其「以程式碼思考」的設計：不要讓 Gemini 讀入整個 CSV 或 SQL 資料庫內容，而是讓 Agent 寫一段 pandas 程式碼並在本地執行，只將最終計算結果（如 shape 或統計值）回傳給 LLM。這能極大地節省你使用 Gemini 免費額度的 Token 消耗。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c52",
+     "source": "github_search",
+     "id": "feder-cr/dots",
+     "metrics": {
+      "stars": 2566,
+      "forks": 435,
+      "stars_delta": 179
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/feder-cr/dots"
+      }
+     ],
+     "title": "dots",
+     "one_liner": "開源的網頁端 AI Agent，配備專屬且不易被封鎖的瀏覽器。",
+     "url": "https://github.com/feder-cr/dots",
+     "fallback": false
+    },
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "usestrix/strix",
+     "metrics": {
+      "stars": 66270,
+      "stars_today": 238,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/usestrix/strix"
+      }
+     ],
+     "title": "strix",
+     "one_liner": "開源的 AI 滲透測試工具，用於尋找並修復應用程式的安全漏洞。",
+     "url": "https://github.com/usestrix/strix",
+     "fallback": false
+    },
+    {
+     "ref": "c42",
      "source": "github_search",
      "id": "Edwardxlai/easyread",
      "metrics": {
-      "stars": 601,
-      "forks": 46,
+      "stars": 654,
+      "forks": 48,
       "stars_delta": null
      },
      "sources": [
@@ -749,36 +730,76 @@
       }
      ],
      "title": "easyread",
-     "one_liner": "專為閱讀英文論文設計的本地 PDF 翻譯與文獻管理工具，支援對照閱讀與 AI 邊讀邊問。",
+     "one_liner": "支援本地 PDF 論文翻譯、雙語對照與文獻管理的 AI 閱讀輔助工具。",
      "url": "https://github.com/Edwardxlai/easyread",
+     "fallback": false
+    },
+    {
+     "ref": "c24",
+     "source": "github_trending",
+     "id": "calesthio/OpenMontage",
+     "metrics": {
+      "stars": 62575,
+      "stars_today": 328,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/calesthio/OpenMontage"
+      }
+     ],
+     "title": "OpenMontage",
+     "one_liner": "開源的 Agent 影片製作系統，內建 12 條製作管線與數百種 Agent 技能。",
+     "url": "https://github.com/calesthio/OpenMontage",
+     "fallback": false
+    },
+    {
+     "ref": "c21",
+     "source": "github_trending",
+     "id": "obra/superpowers",
+     "metrics": {
+      "stars": 294705,
+      "stars_today": 578,
+      "stars_delta": 702
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/obra/superpowers"
+      }
+     ],
+     "title": "superpowers",
+     "one_liner": "一套實用的 Agent 技能框架與軟體開發方法論。",
+     "url": "https://github.com/obra/superpowers",
      "fallback": false
     }
    ]
   }
  },
  "try_one": {
-  "ref": "c40",
+  "ref": "c16",
   "source": "github_trending",
-  "id": "D4Vinci/Scrapling",
+  "id": "Panniantong/Agent-Reach",
   "metrics": {
-   "stars": 85245,
-   "stars_today": 241,
+   "stars": 89373,
+   "stars_today": 1683,
    "stars_delta": null
   },
   "sources": [
    {
     "label": "GitHub",
-    "url": "https://github.com/D4Vinci/Scrapling"
+    "url": "https://github.com/Panniantong/Agent-Reach"
    }
   ],
-  "title": "用 Scrapling 體驗自適應網頁爬取，輕鬆繞過防爬機制收集資料",
-  "why": "適合自動化爬蟲的你。其自適應解析與防爬繞過，可作為 LangGraph Agent 的自訂工具，解決網頁改版導致爬蟲失效的痛點。",
+  "title": "用 Agent Reach 幫你的 LangGraph 代理程式一鍵裝上網頁與社群讀取能力",
+  "why": "解決 LangGraph 爬蟲時擋 IP 與格式難清的痛點。它整合並自動維護 Jina、yt-dlp 等工具，一鍵讓 Agent 具備網頁與社群讀取能力。",
   "steps": [
-   "建立一個 Python 檔案，並載入資料中提及的 StealthyFetcher 模組。",
-   "撰寫程式碼調用 StealthyFetcher 抓取目標網頁，並使用 css 選擇器搭配 adaptive 參數提取資料。",
-   "執行該檔案，測試其官方宣稱能自動適應網頁結構改變與繞過防爬機制的能力。"
+   "若使用 OpenClaw，先在終端機執行 openclaw config set tools.profile \"coding\" 開啟執行權限並重啟。",
+   "提供專案的安裝說明文件給你的 Agent，讓它在本地自動執行安裝與環境檢查。",
+   "在終端機執行 agent-reach doctor 診斷指令，確認各個平台的通道狀態。"
   ],
-  "success_check": "成功執行 Python 程式並順利印出從網頁中提取出的資料，且過程未被防爬系統阻擋。",
+  "success_check": "執行 agent-reach doctor 後，終端機成功輸出各平台（如網頁、YouTube、GitHub）的連線診斷結果，並顯示當前啟用的後端路由。",
   "fallback": false
  },
  "warnings": []
