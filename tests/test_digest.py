@@ -370,6 +370,18 @@ class TestR5Client(Base):
         self.assertEqual(seen["body"]["generationConfig"]["responseMimeType"], "application/json")
         self.assertEqual(seen["headers"]["x-goog-api-key"], "k")
 
+    def test_R5_extra_data_keeps_leading_json(self):
+        self.assertEqual(llm.parse_json_text('{"items": [1]}\n  ]}\n{"brief": []}'), {"items": [1]})
+        with self.assertRaises(BadResponse):
+            llm.parse_json_text('{"items": [1')
+
+    def test_R5_raw_responses_logged(self):
+        post, _ = self.post_seq([(429, "quota"), (200, json.dumps(
+            {"candidates": [{"content": {"parts": [{"text": '{"a": 1} extra'}]}}]}))])
+        g = Gemini("k", ["m1", "m2"], post=post)
+        self.assertEqual(g.generate_json("第一行\n讀者資料"), {"a": 1})
+        self.assertEqual(g.log, [{"model": "m2", "prompt": "第一行", "response": '{"a": 1} extra'}])
+
 
 class TestR6Output(Base):
     def test_R6_dry_run(self):
@@ -390,11 +402,14 @@ class TestR6Output(Base):
             {"items": [deep(r["vectorize-io/hindsight"]), deep(r["NVIDIA/OpenShell"])]},
             {"title": "試 hindsight", "why": "好用", "steps": ["pip install"], "success_check": "ok"},
         ])
+        fake.log = [{"model": "fake-model", "prompt": "p", "response": "{}"}]
         code, out = self.run_cli(["--date", "2026-09-30"], fake)
         self.assertEqual(code, 0, out)
         d = json.loads((self.root / "data" / "digest" / "2026-09-30.json").read_text(encoding="utf-8"))
         self.assertEqual(set(d), {"date", "generated_at", "models_used", "llm_calls", "tldr", "sections",
                                   "try_one", "warnings"})
+        log = json.loads((self.root / "data" / "llm" / "2026-09-30.json").read_text(encoding="utf-8"))
+        self.assertEqual(log, fake.log)
         self.assertEqual(d["llm_calls"], fake.calls)
         self.assertEqual(d["llm_calls"], 6)
         self.assertEqual(set(d["sections"]), {"news", "models", "arch", "github"})

@@ -1,3 +1,4 @@
+import html
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -25,7 +26,7 @@ def _date(value):
 
 def _clean(text, limit=600):
     text = re.sub(r"<[^>]+>", " ", text or "")
-    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", html.unescape(text)).strip()  # 有些來源重複跳脫，留下 &#8230; 之類
     return text[:limit]
 
 

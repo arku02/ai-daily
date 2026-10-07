@@ -129,6 +129,12 @@ def run(date, root=".", dry_run=False, make_llm=None, now=None, out=None):
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{date.isoformat()}.json"
     path.write_text(json.dumps(digest, ensure_ascii=False, indent=1), encoding="utf-8")
+    log = getattr(llm, "log", None)
+    if log:
+        log_dir = root / "data" / "llm"
+        log_dir.mkdir(parents=True, exist_ok=True)
+        (log_dir / f"{date.isoformat()}.json").write_text(json.dumps(log, ensure_ascii=False, indent=1),
+                                                          encoding="utf-8")
 
     n_items = sum(len(s["items"]) for s in sections.values())
     n_brief = sum(len(s["brief"]) for s in sections.values())

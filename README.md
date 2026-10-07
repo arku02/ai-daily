@@ -46,6 +46,8 @@ fetch 的輸出：
 
 digest 的輸出是 `data/digest/<日期>.json`：今天只看三件事、四個章節（新聞、模型、架構與論文、GitHub）的深度項目與快速瀏覽、今天試一個。來源連結一律由程式從原始資料帶入，不採用模型寫的網址。
 
+模型每次回應的原始文字另外存在 `data/llm/<日期>.json`（模型、提示第一行、回應），出現「原始資料」降級時用來查原因。
+
 ### Gemini 設定
 
 1. 到 [Google AI Studio](https://aistudio.google.com/apikey) 建立 key（選免費方案）

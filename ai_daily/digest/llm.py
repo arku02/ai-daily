@@ -31,7 +31,11 @@ def parse_json_text(text):
     try:
         return json.loads(text)
     except json.JSONDecodeError as e:
-        raise BadResponse(f"模型回應不是 JSON：{e}") from None
+        try:
+            # 模型偶爾在完整的 JSON 後面多吐一段（Extra data）：保留前面完整的部分
+            return json.JSONDecoder().raw_decode(text)[0]
+        except json.JSONDecodeError:
+            raise BadResponse(f"模型回應不是 JSON：{e}") from None
 
 
 def _http_post(url, body, headers, timeout):
@@ -59,6 +63,7 @@ class Gemini:
         self.sleep = sleep
         self.calls = 0
         self.models_used = []
+        self.log = []  # 每次成功回應的原始文字，供事後查原因
 
     def mask(self, text):
         text = str(text)
@@ -90,6 +95,7 @@ class Gemini:
                         raise BadResponse(self.mask(f"{model} 回應格式異常：{text[:200]}")) from None
                     if model not in self.models_used:
                         self.models_used.append(model)
+                    self.log.append({"model": model, "prompt": prompt.split("\n", 1)[0], "response": out})
                     return parse_json_text(out)
                 errors.append(f"[第 {round_no + 1} 輪] {model}: HTTP {status} {text[:160]}")
                 if status == 404:

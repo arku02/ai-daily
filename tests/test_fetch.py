@@ -173,6 +173,11 @@ class TestR2Filters(Base):
         fresh = next(i for i in items if i.title == "Fresh post")
         self.assertEqual(fresh.summary, "Hello agents")
 
+    def test_R2_rss_double_escaped_entities(self):
+        xml = ('<rss><channel><item><title>T</title><link>https://e.com/a</link>'
+               '<description>Pay $4.99 [&amp;#8230;] &amp;amp; more</description></item></channel></rss>')
+        self.assertEqual(rss.parse_feed(xml, "F")[0].summary, "Pay $4.99 […] & more")
+
 
 class TestR3Growth(Base):
     def write_snap(self, day, data):
