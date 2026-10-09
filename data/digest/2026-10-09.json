@@ -49,31 +49,6 @@
      "fallback": false
     },
     {
-     "ref": "c2",
-     "source": "hn",
-     "id": "49996425",
-     "metrics": {
-      "points": 742,
-      "comments": 447
-     },
-     "sources": [
-      {
-       "label": "原文",
-       "url": "https://openai.com/index/gpt-6-for-everyone/"
-      },
-      {
-       "label": "HN 討論（742 分）",
-       "url": "https://news.ycombinator.com/item?id=49996425"
-      }
-     ],
-     "title": "GPT‑6 and Intelligent UI for everyone",
-     "tags": [],
-     "summary": "",
-     "key_points": [],
-     "how_to_use": "",
-     "fallback": true
-    },
-    {
      "ref": "c129",
      "source": "rss",
      "id": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
@@ -101,6 +76,29 @@
     }
    ],
    "brief": [
+    {
+     "ref": "c2",
+     "source": "hn",
+     "id": "49996425",
+     "metrics": {
+      "points": 742,
+      "comments": 447
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/gpt-6-for-everyone/"
+      },
+      {
+       "label": "HN 討論（742 分）",
+       "url": "https://news.ycombinator.com/item?id=49996425"
+      }
+     ],
+     "title": "GPT-6 與智慧介面發布",
+     "one_liner": "文章內容從缺，僅標題提及 GPT-6 與針對大眾的智慧介面更新。",
+     "url": "https://openai.com/index/gpt-6-for-everyone/",
+     "fallback": false
+    },
     {
      "ref": "c138",
      "source": "rss",
@@ -659,6 +657,6 @@
  },
  "warnings": [
   "enrich: c2 補充內容抓取失敗，改用原始摘要",
-  "news: c2 使用原始資料（fallback）"
+  "news: c2 模型改寫成快速瀏覽，移到快速瀏覽"
  ]
 }

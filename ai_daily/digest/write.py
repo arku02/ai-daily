@@ -166,7 +166,10 @@ def _by_ref(resp, key):
 
 
 def write_section(llm, name, deep, brief, texts, profile, date, warnings):
-    """回傳 (items, briefs)。整批重試一次，之後逐項降級。"""
+    """回傳 (items, briefs)。整批重試一次，之後逐項降級。
+
+    深度項目若被模型改寫成快速瀏覽（常見於原文抓不到內容），就移到快速瀏覽，不當成失敗。
+    """
     if not deep and not brief:
         return [], []
     prompt = section_prompt(name, deep, brief, texts, profile, date)
@@ -185,13 +188,17 @@ def write_section(llm, name, deep, brief, texts, profile, date, warnings):
             v = valid_brief(r)
             if v and ref not in good_briefs:
                 good_briefs[ref] = v
-        if all(c.ref in good_items for c in deep) and all(c.ref in good_briefs for c in brief):
+        if (all(c.ref in good_items or c.ref in good_briefs for c in deep)
+                and all(c.ref in good_briefs for c in brief)):
             break
+    demoted = [c for c in deep if c.ref not in good_items and c.ref in good_briefs]
+    for c in demoted:
+        warnings.append(f"{name}: {c.ref} 模型改寫成快速瀏覽，移到快速瀏覽")
     items = [{**_base(c), **good_items[c.ref], "fallback": False} if c.ref in good_items else fallback_item(c)
-             for c in deep]
+             for c in deep if c not in demoted]
     briefs = [{**_base(c), **good_briefs[c.ref], "url": c.item["url"], "fallback": False}
               if c.ref in good_briefs else {**fallback_brief(c), "url": c.item["url"]}
-              for c in brief]
+              for c in demoted + brief]
     for x in items + briefs:
         if x["fallback"]:
             warnings.append(f"{name}: {x['ref']} 使用原始資料（fallback）")

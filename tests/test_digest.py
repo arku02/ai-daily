@@ -259,6 +259,18 @@ class TestR4Writing(Base):
         self.assertEqual(items[1]["summary"], "safe runtime for agents")
         self.assertTrue(any(b.ref in w for w in warnings))
 
+    def test_R4_deep_item_written_as_brief_is_demoted(self):
+        a, b = self.cands_for("vectorize-io/hindsight", "NVIDIA/OpenShell")
+        fake = FakeLLM([{"items": [deep(a.ref)], "brief": [brief(b.ref)]}])
+        warnings = []
+        items, briefs = write.write_section(fake, "github", [a, b], [], {}, {}, "2026-09-30", warnings)
+        self.assertEqual(fake.calls, 1)  # 不必重試
+        self.assertEqual([x["ref"] for x in items], [a.ref])
+        self.assertEqual([x["ref"] for x in briefs], [b.ref])
+        self.assertFalse(briefs[0]["fallback"])
+        self.assertEqual(briefs[0]["one_liner"], "一句話")
+        self.assertTrue(any(b.ref in w and "快速瀏覽" in w for w in warnings))
+
     def test_R4_retry_fixes_batch(self):
         a = self.cands_for("vectorize-io/hindsight")[0]
         fake = FakeLLM([BadResponse("not json"), {"items": [deep(a.ref)]}])
