@@ -1,0 +1,745 @@
+{
+ "date": "2026-10-13",
+ "generated_at": "2026-10-13T00:45:40Z",
+ "models_used": [
+  "gemini-3.8-flash",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 8,
+ "tldr": [
+  "針對 Coding Agent 的產出品質與背景常駐行為，社群展開對代理安全與實質交付價值的深入檢視。",
+  "開源模型陣營釋出 Qwen3.8 與 DeepSeek-V4.1-Flash，Google 亦推出適合 RAG 的嵌入模型。",
+  "電腦操作與 GUI Agent 架構持續進化，重點聚焦於軟體環境合成與人類操作經驗的技能轉化。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50060694",
+     "metrics": {
+      "points": 437,
+      "comments": 229
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/openai/codex/issues/48195"
+      },
+      {
+       "label": "HN 討論（437 分）",
+       "url": "https://news.ycombinator.com/item?id=50060694"
+      }
+     ],
+     "title": "Codex CLI 預設常駐背景 Daemon 引發爭議：佔用資源且自動更新",
+     "tags": [
+      "Coding Agent",
+      "CLI",
+      "開發環境"
+     ],
+     "summary": "GitHub 社群近期針對 OpenAI 的 Codex CLI（0.157.0 版起）提出重大疑慮。使用者回報，在啟動互動式 CLI 時，系統會預設在背景常駐一個名為 app-server 的 daemon，關閉視窗後依然維持運作（reparent 至 PID 1）。該常駐程式會在本地端複製約 374 MB 的套件檔案，脫離套件管理工具的版本控制，並每小時檢查更新、強行重啟後端，可能中斷進行中的任務。此外，該 daemon 會鎖定初次啟動時的環境變數（如 Proxy），導致後續不同環境的連線出現非預期行為，社群正要求官方改為手動選擇啟用（opt-in）。",
+     "key_points": [
+      "Codex CLI 0.157.0 預設背景啟動常駐 daemon，關閉終端機後仍不退出，直到手動停止或重開機。",
+      "背景執行獨立更新循環，檢查新版本並強制重啟，可能直接殺死運作中的 turn。",
+      "會固定初次啟動的環境變數（如 Proxy 與工作路徑），影響後續不同 session 的設定相容性。"
+     ],
+     "how_to_use": "若你在 Windows（含 WSL2）環境有安裝或測試 Codex CLI，需留意背景是否有殘留行程佔用系統資源或鎖住 Proxy 設定。這也提醒我們在 LangGraph 中包裝本機 Coding Agent 或外部 CLI 工具時，應避免仰賴具有未知背景常駐與自我更新機制的工具，維持獨立、無狀態且能被乾淨關閉的子程序，以確保自動化流程的穩定。",
+     "fallback": false
+    },
+    {
+     "ref": "c8",
+     "source": "hn",
+     "id": "50059523",
+     "metrics": {
+      "points": 304,
+      "comments": 264
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/"
+      },
+      {
+       "label": "HN 討論（304 分）",
+       "url": "https://news.ycombinator.com/item?id=50059523"
+      }
+     ],
+     "title": "哈佛研究：AI Coding Agent 產出更多程式碼，但未實質提升軟體總產出",
+     "tags": [
+      "Coding Agent",
+      "生產力評測",
+      "軟體工程"
+     ],
+     "summary": "Ars Technica 報導哈佛大學研究員分析 Jellyfish 平台自 2021 年至 2026 年 3 月間、涵蓋 700 多家軟體公司與 70 萬名員工的 3 億筆工作事件資料。研究顯示，導入 AI Coding Agent 後，企業的程式碼總行數增加 30%、Commit 數增加 20%、Pull Request（PR）增加 23%。然而，這並未反映在最終軟體交付上，Issue 與 Epic 的解決率並未提高。主因在於人工程式碼審查（Code Review）形成嚴重瓶頸，AI 產生的 PR 審查時間大幅拉長、需要修改的頻率提高，審查留言數量也顯著增加，抵消了前端撰寫程式碼節省的時間。",
+     "key_points": [
+      "AI Agent 顯著提高前端產量：程式碼行數增加 30%、PR 數量增加 23%。",
+      "後端審查成為主要瓶頸：PR 修改率上升、審查流程時間拉長，整體 Issue 解決率未見提升。",
+      "研究指出單純加速「寫程式」無法直接轉化為軟體商業產出，瓶頸已轉移至驗證與審查環節。"
+     ],
+     "how_to_use": "這對你設計資料分析腳本或內部流程自動化很有參考價值。當利用 LLM 生成 pandas 或 SQL 腳本時，若直接把產生的程式碼交給人工審查，只會塞車。在 LangGraph 設計工作流程時，建議把重心放在「自動驗證節點」——例如自動執行單元測試、資料 schema 驗證或語法檢查，在送交人工確認前過濾掉低級錯誤，才能真正縮短交付時間。",
+     "fallback": false
+    },
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50047422",
+     "metrics": {
+      "points": 680,
+      "comments": 990
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://twitter.com/karpathy/status/2109361546505966046"
+      },
+      {
+       "label": "HN 討論（680 分）",
+       "url": "https://news.ycombinator.com/item?id=50047422"
+      }
+     ],
+     "title": "Karpathy 談 LLM 認知落差：頂尖 Agent 已進入多代理協作階段",
+     "tags": [
+      "Agent 趨勢",
+      "多 Agent 協作",
+      "產業觀察"
+     ],
+     "summary": "Andrej Karpathy 發文指出，大眾對 LLM 能力的理解差距正呈現極端漏斗化。底層約 60 億人幾乎未接觸，10 至 20 億人僅將其視為聊天或搜尋工具；而約 2,000 萬名專業工程師已能運用 frontier-grade LLM 快速完成過去耗時數週的專案。最頂端的數千名內部研究人員，則已見證數千個 Agent 協同運作數週，能自主發掘漏洞、推進科學研究。Karpathy 強調，影響力取決於問題規模與野心，且 LLM 能力在程式碼等數位領域具備顯著峰值（jaggedness），而目前人類的審查與理解速度已開始落後於系統產出。",
+     "key_points": [
+      "認知分化成漏斗狀：從 75% 幾乎未接觸者，到極少數接觸到多 Agent 數週協同運作的內部研究者。",
+      "頂尖應用已超越單一對話，轉向數千個 Agent 在大型專案中自主協作。",
+      "LLM 具備能力參差性（jaggedness），程式碼領域是極致高峰，但人類審查能力已成為主要天花板。"
+     ],
+     "how_to_use": "雖然這偏向巨觀觀點，跟日常手邊的 pandas 或資料庫操作沒有立即的 API 連結，但為你的架構方向提供了重要依據。在規劃 LangGraph 多 Agent 系統時，單點問答能帶來的效益有限；若要放大價值，應鎖定需要多步驟推導的自動化長流程（如端到端資料爬取、整理加報表生成），同時必須提早設計針對 Agent 輸出的自動評測與監控機制。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c11",
+     "source": "hn",
+     "id": "50059096",
+     "metrics": {
+      "points": 93,
+      "comments": 62
+     },
+     "sources": [
+      {
+       "label": "HN 討論（93 分）",
+       "url": "https://news.ycombinator.com/item?id=50059096"
+      }
+     ],
+     "title": "Agent37 推出低成本 Agent 沙盒環境",
+     "one_liner": "YC 團隊推出專為 Agent 執行的低成本沙盒，主打隔離與執行環境支援。",
+     "url": "https://news.ycombinator.com/item?id=50059096",
+     "fallback": false
+    },
+    {
+     "ref": "c114",
+     "source": "rss",
+     "id": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Simon Willison",
+       "url": "https://simonwillison.net/2026/Oct/12/python-3-15/"
+      }
+     ],
+     "title": "Python 3.15 釋出並引入顯式惰性導入",
+     "one_liner": "Python 3.15 正式推出，PEP 810 惰性導入有助於縮短大型專案啟動時間。",
+     "url": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+     "fallback": false
+    },
+    {
+     "ref": "c118",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview"
+      }
+     ],
+     "title": "GitHub 推出 Push 身分歸屬預覽功能",
+     "one_liner": "GitHub 開始在 UI 與 API 記錄並顯示實際 push commit 的使用者身分。",
+     "url": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c76",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 17576,
+      "downloads": 6895303,
+      "trending_score": 349,
+      "likes_delta": 69
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 開源：強化 Agent 規劃與可調思考控制的密集視覺模型",
+     "tags": [
+      "開源模型",
+      "視覺語言模型",
+      "Agent 推理",
+      "Ollama"
+     ],
+     "summary": "Qwen 團隊推出開源密集模型 Qwen3.8-27B，原生支援圖片與影片理解。架構結合 Gated DeltaNet 與 Gated Attention，官方宣稱在程式撰寫與長流程 Agent 任務表現顯著提升。該模型引入彈性思考控制功能，思考模式預設開啟但可逐次請求關閉，並能透過 reasoning_effort 調整推理深度及利用 preserve_thinking 保留歷史思考脈絡。模型相容 Hugging Face Transformers 與 vLLM 等推論引擎。",
+     "key_points": [
+      "原生多模態設計，支援文件、STEM 圖表與小時級影片理解",
+      "具備彈性思考控制，可調整推理深度並保留歷史訊息中的思考脈絡",
+      "官方宣稱增強自主規劃與環境回饋處理，提升端到端任務完成度"
+     ],
+     "how_to_use": "若你的 Windows 本機記憶體足夠，後續可透過 Ollama 載入量化版，作為 LangGraph 中負責程式生成或視覺資料分析的節點。在需要解讀報表圖表或自動化爬蟲網頁截圖時，能直接作為單一多模態推論核心，並藉由調整思考參數來平衡內部流程處理的延遲與正確率。",
+     "fallback": false
+    },
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+     "metrics": {
+      "likes": 4414,
+      "downloads": 1294550,
+      "trending_score": 162,
+      "likes_delta": 50
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash：大幅壓縮 KV Cache 的 1M 長上下文多模態 MoE",
+     "tags": [
+      "多模態模型",
+      "MoE",
+      "KV Cache",
+      "長上下文"
+     ],
+     "summary": "DeepSeek 發布開源多模態 MoE 模型 DeepSeek-V4.1-Flash，總參數 552B，支援最高 100 萬 token 上下文。模型採用因果編碼器-解碼器（CED）架構，解碼器 KV cache 由編碼器隱藏狀態投影而來，使預填階段僅活化 8B、解碼階段僅活化 16B 參數。搭配 CSA2 稀疏注意力與 FP4 KV 快取技術，官方數據顯示其持久化 KV cache 佔用縮減至前代的四分之一至八分之一，每 token 僅需 890 位元組。",
+     "key_points": [
+      "CED 架構降低活化參數，預填僅 8B、解碼 16B，提升高輸入負載的性價比",
+      "SWA Bounded Replay 與 CSA2 設計，大幅減輕長上下文 KV Cache 記憶體負擔",
+      "原生整合 DeepSeek-ViT 視覺編碼器，文字與視覺特徵自預訓練初期即聯合處理"
+     ],
+     "how_to_use": "這款 552B 模型量體龐大，在只有本機 Ollama 與 Windows 開發環境下無法直接運行，跟現階段本機工作關係不大。但其針對高輸入量 Agent 任務大幅降低 KV 快取開銷的設計極具參考價值，未來若有相容的免費或低成本託管 API，可評估導入 LangGraph 處理超長內部稽核文件或龐大日誌分析。",
+     "fallback": false
+    },
+    {
+     "ref": "c71",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 1937,
+      "downloads": 115763,
+      "trending_score": 1775,
+      "likes_delta": 237
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google 開源 EmbeddingGemma 2：740M 端側四模態統一向量模型",
+     "tags": [
+      "RAG",
+      "向量檢索",
+      "端側模型",
+      "開源"
+     ],
+     "summary": "Google DeepMind 釋出開源多模態嵌入模型 EmbeddingGemma 2，總參數量僅 740M，採 Apache 2.0 授權。模型將文字（含程式碼）、圖片、影片與音訊統一對齊至 768 維向量空間，文字主幹為 270M，視覺與音訊編碼器採模組化設計可依需載入。支援 Matryoshka 表示學習（MRL），可將維度縮減至 128 維，並提供 8K token 上下文與任務前綴導向檢索。",
+     "key_points": [
+      "四模態統一嵌入，官方宣稱程式碼檢索能力較前代提升約 14%",
+      "模組化架構設計，本機端若只需文字檢索可單獨載入 270M 模型",
+      "支援 MRL 維度裁切（128d～768d），最高可節省 6 倍向量儲存成本"
+     ],
+     "how_to_use": "這非常適合放進你的本機 RAG 知識庫流程。因為參數量小，可在 Windows 本機環境直接以 Python 載入運行，作為 LangGraph 檢索節點的特徵萃取工具。不僅能替 SQL Schema、pandas 腳本與資料分析筆記建立程式碼檢索，還能直接替報表截圖建索引，完全不需要依賴額外的付費 API。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c74",
+     "source": "hf_models",
+     "id": "baidu/Unlimited-OCR",
+     "metrics": {
+      "likes": 4514,
+      "downloads": 1205646,
+      "trending_score": 169,
+      "likes_delta": 85
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/baidu/Unlimited-OCR"
+      }
+     ],
+     "title": "百度發布 Unlimited-OCR 模型",
+     "one_liner": "百度於 Hugging Face 釋出 Unlimited-OCR 模型，主打文件與各類影像文字辨識應用。",
+     "url": "https://huggingface.co/baidu/Unlimited-OCR",
+     "fallback": false
+    },
+    {
+     "ref": "c86",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6148,
+      "downloads": 1934542,
+      "trending_score": 154,
+      "likes_delta": 36
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen 釋出 Qwen3.8-Flash-Next 開源權重",
+     "one_liner": "Qwen 團隊發布新一代輕量快速模型 Qwen3.8-Flash-Next，瞄準低延遲推論場景。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    },
+    {
+     "ref": "c115",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+      }
+     ],
+     "title": "Meta 推出 Muse Wonder 前沿模型",
+     "one_liner": "Meta 發表較大體積的 Muse Wonder，官方宣稱在基準測試與 Coding 等複雜任務表現更佳。",
+     "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c92",
+     "source": "hf_papers",
+     "id": "2610.12611",
+     "metrics": {
+      "upvotes": 83,
+      "github_stars": 16
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.12611"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.12611"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/MrKiing-Jin/SoftwareGym"
+      }
+     ],
+     "title": "SoftwareGym：合成多樣化 GUI 軟體環境以擴展電腦操作 Agent 訓練",
+     "tags": [
+      "電腦操作 Agent",
+      "合成環境",
+      "GUI 評測",
+      "模型訓練"
+     ],
+     "summary": "這篇論文針對電腦操作 Agent（CUA）環境建構成本高、原生應用易過度擬合且瀏覽器環境互動深度不足的問題，提出了自動化合成管線 SoftwareGym。該管線能合成具備多樣結構介面、可執行功能且通過執行期驗證的 GUI 軟體。研究團隊合成了涵蓋 12 個類別的 182 款應用程式，GUI 任務平均通過率達 91.5%，並構建包含 120 項任務的 SoftwareGym-Bench。利用這些環境收集軌跡訓練後的模型，在嚴格屬於領域外的 OSWorld 基準測試中，Pass@3 從 41.39% 提升至 56.97%，展示出合成環境作為可轉移監督訊號的潛力。",
+     "key_points": [
+      "透過自動化管線合成可執行的 GUI 應用程式，並利用 GUI 評估與反覆修復確保功能可靠性",
+      "合成 12 類別共 182 款應用，並建立 120 項任務的評測集 SoftwareGym-Bench",
+      "在完全跨領域的 OSWorld 基準測試上，Pass@3 表現從 41.39% 提升到 56.97%"
+     ],
+     "how_to_use": "這篇論文聚焦於模型端預訓練與資料合成，對你目前以 LangGraph 串接現成 API 的日常開發關係不大。但如果你正在設計電腦操作 Agent 的評測環境，其「合成介面搭配反覆修復以確保可執行性」的驗證思路，值得在設計自動化 UI 測試或評測節點時作為架構參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c98",
+     "source": "hf_papers",
+     "id": "2610.12984",
+     "metrics": {
+      "upvotes": 39,
+      "github_stars": 18
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.12984"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.12984"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/china-qijizhifeng/Work2Skill"
+      }
+     ],
+     "title": "Work2Skill：擷取人類 GUI 操作經驗並歸納為可重複使用的 Agent 技能",
+     "tags": [
+      "電腦操作 Agent",
+      "技能歸納",
+      "流程自動化",
+      "開源框架"
+     ],
+     "summary": "面對陌生的桌面軟體與複雜工作流程，電腦操作 Agent 往往缺乏領域知識。Work2Skill 提出了從人類操作中擷取經驗並歸納成通用技能的架構。其基礎套件 WorkRecorder 能同步記錄螢幕錄影、滑鼠鍵盤事件與無障礙樹資訊，藉此構建出包含 350 個成功演示的 WorkDemo-350 多模態資料集。系統接著以 Agent 方式按需檢視證據，萃取出包含工作流程規則、步驟相依性與完成檢查的「可重複使用技能」。實驗顯示，結合歸納技能後，四款執行模型在 MyPCBench Bounded Action 上的平均分數提升了 4.67 至 10.54 分，在 OSWorld-Verified 子集提升了 3.11 至 7.50 分，程式碼已開源。",
+     "key_points": [
+      "WorkRecorder 基礎建設可同步對齊螢幕畫面、鍵盤滑鼠操作與 Accessibility Tree 資訊",
+      "透過 Agent 檢視操作軌跡，萃取出具備步驟相依性與檢查機制的抽象工作流規則",
+      "在 MyPCBench 與 OSWorld-Verified 基準測試中，平均分數均獲得顯著提升，且已釋出開源程式碼"
+     ],
+     "how_to_use": "你可以參考它的概念來優化內部流程自動化。若要將內部簽核或文件操作交給 Agent，可借鑑其「步驟相依性＋完成檢查」的技能抽象格式，在 LangGraph 狀態機中將人類的操作示範切分成標準 Tool 或 Subgraph 節點，大幅降低 Agent 在 Windows 桌面軟體卡關的機率。",
+     "fallback": false
+    },
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2610.12569",
+     "metrics": {
+      "upvotes": 20,
+      "github_stars": 3
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.12569"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.12569"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/sweduel/SWE-Duel"
+      }
+     ],
+     "title": "SWE-Duel：透過紅藍對抗自適應擴展的 Coding Agent 競技場",
+     "tags": [
+      "Coding Agent",
+      "對抗評測",
+      "自動測試",
+      "Benchmark"
+     ],
+     "summary": "傳統靜態 Coding Benchmark 容易面臨訓練資料外洩與評測飽和的問題。SWE-Duel 提出了自適應擴展的動態評測競技場，讓兩組 Coding Agent 在真實儲存庫中進行紅藍對抗。紅方 Agent 負責在三個隔離環境中開發新功能與對應測試，同時植入隱蔽 Bug 與觸發測試；該 PR 必須通過功能測試且被同個 Agent 盲修復成功才算有效任務。接著藍方 Agent 在未知 Bug 存在的情況下進行審查與修復，通過所有測試即獲勝，雙方隨後交換角色。在 11 款模型組合、15 個儲存庫進行的 1,500 回合錦標賽中，研究發現任務難度會隨著出題模型的程式撰寫能力同步提升。",
+     "key_points": [
+      "任務與驗證規則均在評測當下動態產生，避免靜態測試集資料外洩與分數飽和",
+      "嚴格的紅方驗收機制：新功能必須通過測試，且同一模型必須能盲修復該 Bug 以確保題目有解",
+      "在 1,500 回合錦標賽中驗證了「出題 Agent 越強，所產生的評測難度越高」的自適應擴展特性"
+     ],
+     "how_to_use": "你可以借鑑其「紅藍對抗與自我修復驗證」模式來設計內部 Coding Agent 的品質檢驗流程。在 LangGraph 中建構自動化爬蟲或資料清理程式碼時，可建立一個評測節點：讓出題節點先注入邊界狀況並確保可被修復，再讓主力 Coding 節點進行審查與修正，打造自給自足的程式碼可靠度測試鏈。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c96",
+     "source": "hf_papers",
+     "id": "2610.13395",
+     "metrics": {
+      "upvotes": 48,
+      "github_stars": 10
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.13395"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.13395"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Acm1011/ProgramGym"
+      }
+     ],
+     "title": "ProgramGym：從零構建專案的長期程式碼生成訓練環境",
+     "one_liner": "針對從無到有構建專案的需求，提出可驗證且支援長週期探索的程式合成訓練環境。",
+     "url": "https://huggingface.co/papers/2610.13395",
+     "fallback": false
+    },
+    {
+     "ref": "c109",
+     "source": "hf_papers",
+     "id": "2610.07625",
+     "metrics": {
+      "upvotes": 18,
+      "github_stars": 2
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.07625"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.07625"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Alex-q-z/stateless-language-agents"
+      }
+     ],
+     "title": "Stateless Language Agents：解耦狀態以擴展長週期自動化研究",
+     "one_liner": "分析長任務中歷史膨脹與重複嘗試的失效模式，探討無狀態設計對長週期 Agent 的擴展潛力。",
+     "url": "https://huggingface.co/papers/2610.07625",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c25",
+     "source": "github_trending",
+     "id": "hugohe3/ppt-master",
+     "metrics": {
+      "stars": 61100,
+      "stars_today": 786,
+      "stars_delta": 733
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/hugohe3/ppt-master"
+      }
+     ],
+     "title": "PPT Master：從各類文件生成原生可編輯 PowerPoint 的 Agent 工作流",
+     "tags": [
+      "文件處理",
+      "自動化",
+      "PPTX 生成"
+     ],
+     "summary": "PPT Master 是一個開源簡報生成工具，官方宣稱其特點在於深度原生整合，而非單純套用樣板或扁平文字方塊。它能理解 PDF、DOCX 和網頁等來源資料，先梳理出論點架構再進行版面設計，產出包含投影片母片、原生向量圖形以及具備數據連動的圖表與表格。此專案本質為可於具備 Agent 能力的 AI 工具中運行的工作流程，並有贊助商提供各類模型中繼與 API 方案支援。",
+     "key_points": [
+      "官方宣稱生成深度原生 PPTX，支援投影片母片與數據連動圖表，方便後續在 PowerPoint 編輯。",
+      "支援解析 PDF、DOCX 及網頁內容，先推理組織論點架構再著手設計。",
+      "採工作流程形式運作，可嵌入相容 Agent 的工具環境中。"
+     ],
+     "how_to_use": "你可以將其邏輯串入 LangGraph 的文件自動化流程中。在爬蟲抓取資料或 pandas 產出統計報表後，接上此節點將摘要自動轉換為原生 PPTX，解決內部流程需要手動彙整簡報的繁瑣工作。",
+     "fallback": false
+    },
+    {
+     "ref": "c24",
+     "source": "github_trending",
+     "id": "lyogavin/airllm",
+     "metrics": {
+      "stars": 37528,
+      "stars_today": 879,
+      "stars_delta": 1041
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/lyogavin/airllm"
+      }
+     ],
+     "title": "AirLLM：在單張 4GB GPU 跑 70B 與超大模型推論訓練的記憶體最佳化工具",
+     "tags": [
+      "本機模型",
+      "推論最佳化",
+      "Python"
+     ],
+     "summary": "AirLLM 透過分層串流與分塊技術大幅降低顯存需求，官方宣稱無需量化、蒸餾或剪枝，即可在單張 4GB GPU 上執行 70B 語言模型推論，甚至能將 Kimi K3 (2.8T) 壓在 4GB 內、DeepSeek-V3 (671B) 壓在約 12GB 內運行。近期版本更支援逐層串流權重進行訓練，讓 Qwen3.8-Flash-Next 等大型模型也能在低顯存環境訓練，並支援 CPU 推論、macOS 及 4bit/8bit 量化。",
+     "key_points": [
+      "官方宣稱推論記憶體最佳化顯著，單張 4GB 顯卡可無量化運行 70B 等級模型。",
+      "新增訓練支援，凍結權重逐層串流並將 adapter 保留在 GPU 上，支援 6GB 顯存訓練部分大模型。",
+      "提供 AutoModel 統一介面自動判斷架構，並內建預取技術重疊模型載入與運算時間。"
+     ],
+     "how_to_use": "如果你的 Windows 本機顯卡顯存較小、平時依賴 Ollama 跑小模型，當你想在本機測試 Ollama 塞不下的大型開源權重時，可直接在 Python 中使用 AirLLM 載入，作為 LangGraph 外部推論節點的本機替代方案。",
+     "fallback": false
+    },
+    {
+     "ref": "c32",
+     "source": "github_trending",
+     "id": "mksglu/context-mode",
+     "metrics": {
+      "stars": 27285,
+      "stars_today": 246,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mksglu/context-mode"
+      }
+     ],
+     "title": "Context Mode：以沙盒執行與程式碼思維減少 98% Context Window 浪費的 MCP 伺服器",
+     "tags": [
+      "MCP",
+      "Context最佳化",
+      "Coding Agent"
+     ],
+     "summary": "Context Mode 是一個專門解決 Agent 工具呼叫浪費上下文空間的 MCP 伺服器。官方宣稱透過沙盒工具攔截未經處理的原始資料，可將資料量從 315 KB 縮減至 5.4 KB。它提倡「以程式碼思考」，讓模型撰寫腳本運算並只輸出結果，而非把大量檔案內容硬塞進 Context；同時使用 SQLite 記錄編輯歷程，並在對話壓縮時透過 FTS5 與 BM25 檢索相關事件，維持會話連續性且不強制規範模型的回答語氣。",
+     "key_points": [
+      "官方宣稱可減少 98% 上下文佔用，避免工具呼叫原始輸出耗盡 Token。",
+      "強制推行寫腳本運算取代直接讀取大量檔案，只印出最終分析結果。",
+      "使用 SQLite 與 FTS5 索引會話狀態，壓縮上下文後可精準檢索延續任務。"
+     ],
+     "how_to_use": "雖然該專案目前主打 Claude Code 等 MCP 用戶端，但「以程式碼運算代替將全文塞進 Context」的架構非常適合搬到你的 LangGraph 資料分析流程：讓 Agent 寫 pandas 腳本跑分析只回傳指標，避免把整個表格塞給 Gemini 免費額度。",
+     "fallback": false
+    },
+    {
+     "ref": "c37",
+     "source": "github_trending",
+     "id": "google/skills",
+     "metrics": {
+      "stars": 21218,
+      "stars_today": 43,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google/skills"
+      }
+     ],
+     "title": "Google Agent Skills：涵蓋 GCP 架構、Gemini 與 Genkit 的官方技能庫",
+     "tags": [
+      "Google Cloud",
+      "Gemini",
+      "Agent技能"
+     ],
+     "summary": "此專案為 Google 官方維護的 Agent Skills 庫，支援透過 npx 快速安裝至指定 Agent。內容涵蓋 Google Cloud IAM 認證、基礎架構設計、GKE 與 AlloyDB 解決方案；AI/ML 部分則包含 Agent 平台評測飛輪、Prompt 管理、RAG 引擎管理、BigQuery AI/ML，以及支援 Python、JS、Go、Dart 等多語言的 Genkit SDK 和 Gemini API 整合技能。",
+     "key_points": [
+      "Google 官方推出，透過 npx skills 指令安裝與設定專案層級技能。",
+      "涵蓋雲端架構設計、GKE 容器維運以及 BigQuery 數據治理等維運技能。",
+      "提供 Gemini API、Genkit Python/JS SDK 與 Agent 評測管理等多項 AI 模組。"
+     ],
+     "how_to_use": "專案包含 Gemini API 與 Genkit Python 相關技能規範，但由於安裝機制依賴 Node.js/npx，且絕大多數技能深度綁定 GCP/GKE 付費雲端架構，跟你的 Windows 本機與純開源工作流程關係不大；若無企業雲端部署需求，僅建議參考其評測飛輪與提示詞管理定義。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c21",
+     "source": "github_trending",
+     "id": "cathrynlavery/diagram-design",
+     "metrics": {
+      "stars": 52609,
+      "stars_today": 2081,
+      "stars_delta": 2265
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/cathrynlavery/diagram-design"
+      }
+     ],
+     "title": "diagram-design：專為 Coding Agent 打造的 44 款獨立 HTML/SVG 圖表樣式庫",
+     "one_liner": "提供 44 種無陰影的乾淨圖表樣式，專供 Claude Code 等 Coding Agent 生成高品質圖形。",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "fallback": false
+    },
+    {
+     "ref": "c41",
+     "source": "github_search",
+     "id": "openqodex/openqodex",
+     "metrics": {
+      "stars": 634,
+      "forks": 47,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/openqodex/openqodex"
+      }
+     ],
+     "title": "openqodex：推程式碼前在 Agent 本機端運行的開源 Code Review 工具",
+     "one_liner": "結合掃描器與獨立 AI 審查機制，在推送前直接於本機環境完成程式碼審查，無需付費 API Key。",
+     "url": "https://github.com/openqodex/openqodex",
+     "fallback": false
+    },
+    {
+     "ref": "c52",
+     "source": "github_search",
+     "id": "Folkbench/folkbench",
+     "metrics": {
+      "stars": 572,
+      "forks": 7,
+      "stars_delta": 266
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Folkbench/folkbench"
+      }
+     ],
+     "title": "folkbench：開源 AI API 中轉站評測排行與動態切換工具",
+     "one_liner": "專門為 Coding Agent 實測各 API 中轉站的可用率、延遲與價格，並提供開源切換功能。",
+     "url": "https://github.com/Folkbench/folkbench",
+     "fallback": false
+    },
+    {
+     "ref": "c19",
+     "source": "github_trending",
+     "id": "morluto/rea",
+     "metrics": {
+      "stars": 157044,
+      "stars_today": 45327,
+      "stars_delta": 52483
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/morluto/rea"
+      },
+      {
+       "label": "HN 討論（82 分）",
+       "url": "https://news.ycombinator.com/item?id=50058850"
+      }
+     ],
+     "title": "rea：利用 Agent 逆向工程應用程式與原生二進位檔案的分析工具",
+     "one_liner": "官方宣稱能透過 Agent 全自動化分析應用程式行為，向下深入解析原生 Binary 結構。",
+     "url": "https://github.com/morluto/rea",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c71",
+  "source": "hf_models",
+  "id": "google/embeddinggemma-2",
+  "metrics": {
+   "likes": 1937,
+   "downloads": 115763,
+   "trending_score": 1775,
+   "likes_delta": 237
+  },
+  "sources": [
+   {
+    "label": "Hugging Face",
+    "url": "https://huggingface.co/google/embeddinggemma-2"
+   }
+  ],
+  "title": "用 EmbeddingGemma 2 本機實作 RAG 向量相似度比對",
+  "why": "開源 740M 輕量模型可在本機跑，官方宣稱程式碼檢索能力提升，適合整合進 LangGraph 的 RAG 節點省下 API 成本。",
+  "steps": [
+   "在終端機執行 pip install -U sentence-transformers transformers 安裝所需套件。",
+   "撰寫 Python 程式，使用 SentenceTransformer(\"google/embeddinggemma-2\") 載入模型。",
+   "以 prompt_name=\"SearchQuery\" 與 prompt_name=\"Document\" 分別對 query 和 document 進行 encode，並執行 print(model.similarity(query_emb, doc_emb))。"
+  ],
+  "success_check": "終端機成功印出 query 與 document 的相似度分數矩陣且沒有跳出錯誤訊息。",
+  "fallback": false
+ },
+ "warnings": [
+  "try_one: 模型判斷 c25（hugohe3/ppt-master）不符合規則，跳過：資料中未提供具體安裝指令（如 pip install 或明確 CLI 執行步驟），且其作為 AI 工具外掛工作流，缺乏可直接整合至 LangGraph 或獨立快速驗證的具體程式碼。"
+ ]
+}

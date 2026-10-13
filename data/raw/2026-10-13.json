@@ -1,0 +1,4586 @@
+{
+ "date": "2026-10-13",
+ "fetched_at": "2026-10-13T00:45:29Z",
+ "sources": {
+  "github_trending": {
+   "status": "ok",
+   "count": 20,
+   "error": null
+  },
+  "github_search": {
+   "status": "ok",
+   "count": 81,
+   "error": null
+  },
+  "hf_models": {
+   "status": "ok",
+   "count": 36,
+   "error": null
+  },
+  "hf_papers": {
+   "status": "ok",
+   "count": 39,
+   "error": null
+  },
+  "hn": {
+   "status": "ok",
+   "count": 19,
+   "error": null
+  },
+  "rss": {
+   "status": "ok",
+   "count": 18,
+   "error": null
+  }
+ },
+ "warnings": [],
+ "items": [
+  {
+   "source": "github_trending",
+   "id": "morluto/rea",
+   "title": "morluto/rea",
+   "url": "https://github.com/morluto/rea",
+   "summary": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+   "published_at": null,
+   "metrics": {
+    "stars": 157044,
+    "stars_today": 45327,
+    "stars_delta": 52483
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": [
+    {
+     "source": "hn",
+     "id": "50058850",
+     "metrics": {
+      "points": 82,
+      "comments": 26
+     }
+    }
+   ]
+  },
+  {
+   "source": "github_trending",
+   "id": "storytold/artcraft",
+   "title": "storytold/artcraft",
+   "url": "https://github.com/storytold/artcraft",
+   "summary": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+   "published_at": null,
+   "metrics": {
+    "stars": 22025,
+    "stars_today": 4095,
+    "stars_delta": 4121
+   },
+   "extra": {
+    "language": "Rust"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "cathrynlavery/diagram-design",
+   "title": "cathrynlavery/diagram-design",
+   "url": "https://github.com/cathrynlavery/diagram-design",
+   "summary": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+   "published_at": null,
+   "metrics": {
+    "stars": 52609,
+    "stars_today": 2081,
+    "stars_delta": 2265
+   },
+   "extra": {
+    "language": "HTML"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "bilawalsidhu/gods-eye-view",
+   "title": "bilawalsidhu/gods-eye-view",
+   "url": "https://github.com/bilawalsidhu/gods-eye-view",
+   "summary": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+   "published_at": null,
+   "metrics": {
+    "stars": 53666,
+    "stars_today": 1895,
+    "stars_delta": 1976
+   },
+   "extra": {
+    "language": "JavaScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "debpalash/VoiceStudio",
+   "title": "debpalash/VoiceStudio",
+   "url": "https://github.com/debpalash/VoiceStudio",
+   "summary": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+   "published_at": null,
+   "metrics": {
+    "stars": 60428,
+    "stars_today": 1691,
+    "stars_delta": 1684
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "lyogavin/airllm",
+   "title": "lyogavin/airllm",
+   "url": "https://github.com/lyogavin/airllm",
+   "summary": "AirLLM 2.8T LLM inference with single 4GB GPU",
+   "published_at": null,
+   "metrics": {
+    "stars": 37528,
+    "stars_today": 879,
+    "stars_delta": 1041
+   },
+   "extra": {
+    "language": "Jupyter Notebook"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "hugohe3/ppt-master",
+   "title": "hugohe3/ppt-master",
+   "url": "https://github.com/hugohe3/ppt-master",
+   "summary": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+   "published_at": null,
+   "metrics": {
+    "stars": 61100,
+    "stars_today": 786,
+    "stars_delta": 733
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "calesthio/OpenMontage",
+   "title": "calesthio/OpenMontage",
+   "url": "https://github.com/calesthio/OpenMontage",
+   "summary": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+   "published_at": null,
+   "metrics": {
+    "stars": 67556,
+    "stars_today": 635,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "Alishahryar1/free-claude-code",
+   "title": "Alishahryar1/free-claude-code",
+   "url": "https://github.com/Alishahryar1/free-claude-code",
+   "summary": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+   "published_at": null,
+   "metrics": {
+    "stars": 59112,
+    "stars_today": 626,
+    "stars_delta": 1032
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "pytorch/pytorch",
+   "title": "pytorch/pytorch",
+   "url": "https://github.com/pytorch/pytorch",
+   "summary": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+   "published_at": null,
+   "metrics": {
+    "stars": 104740,
+    "stars_today": 529,
+    "stars_delta": 249
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "public-apis/public-apis",
+   "title": "public-apis/public-apis",
+   "url": "https://github.com/public-apis/public-apis",
+   "summary": "A collective list of free APIs",
+   "published_at": null,
+   "metrics": {
+    "stars": 488007,
+    "stars_today": 432,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "MadsLorentzen/ai-job-search",
+   "title": "MadsLorentzen/ai-job-search",
+   "url": "https://github.com/MadsLorentzen/ai-job-search",
+   "summary": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+   "published_at": null,
+   "metrics": {
+    "stars": 46377,
+    "stars_today": 304,
+    "stars_delta": 255
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "OpenBMB/VoxCPM",
+   "title": "OpenBMB/VoxCPM",
+   "url": "https://github.com/OpenBMB/VoxCPM",
+   "summary": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+   "published_at": null,
+   "metrics": {
+    "stars": 39181,
+    "stars_today": 290,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "mksglu/context-mode",
+   "title": "mksglu/context-mode",
+   "url": "https://github.com/mksglu/context-mode",
+   "summary": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+   "published_at": null,
+   "metrics": {
+    "stars": 27285,
+    "stars_today": 246,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "multimodal-art-projection/YuE",
+   "title": "multimodal-art-projection/YuE",
+   "url": "https://github.com/multimodal-art-projection/YuE",
+   "summary": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+   "published_at": null,
+   "metrics": {
+    "stars": 11797,
+    "stars_today": 216,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "open-webui/open-webui",
+   "title": "open-webui/open-webui",
+   "url": "https://github.com/open-webui/open-webui",
+   "summary": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+   "published_at": null,
+   "metrics": {
+    "stars": 154993,
+    "stars_today": 157,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "microsoft/BitNet",
+   "title": "microsoft/BitNet",
+   "url": "https://github.com/microsoft/BitNet",
+   "summary": "Official inference framework for 1-bit LLMs",
+   "published_at": null,
+   "metrics": {
+    "stars": 40906,
+    "stars_today": 97,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "C++"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "huggingface/transformers",
+   "title": "huggingface/transformers",
+   "url": "https://github.com/huggingface/transformers",
+   "summary": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+   "published_at": null,
+   "metrics": {
+    "stars": 167604,
+    "stars_today": 95,
+    "stars_delta": 79
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "google/skills",
+   "title": "google/skills",
+   "url": "https://github.com/google/skills",
+   "summary": "Agent Skills for Google products and technologies",
+   "published_at": null,
+   "metrics": {
+    "stars": 21218,
+    "stars_today": 43,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "home-assistant/core",
+   "title": "home-assistant/core",
+   "url": "https://github.com/home-assistant/core",
+   "summary": "🏡 Open source home automation that puts local control and privacy first.",
+   "published_at": null,
+   "metrics": {
+    "stars": 91417,
+    "stars_today": 39,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "rehan-remade/universal-modder",
+   "title": "rehan-remade/universal-modder",
+   "url": "https://github.com/rehan-remade/universal-modder",
+   "summary": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+   "published_at": "2026-09-30T05:00:35Z",
+   "metrics": {
+    "stars": 7086,
+    "forks": 744,
+    "stars_delta": 408
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "age-of-empires",
+     "claude-code",
+     "claude-code-plugin",
+     "fal",
+     "game-assets",
+     "game-modding",
+     "mcp",
+     "modding",
+     "reverse-engineering",
+     "tmodloader"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "wheresryan22/anatomy",
+   "title": "wheresryan22/anatomy",
+   "url": "https://github.com/wheresryan22/anatomy",
+   "summary": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
+   "published_at": "2026-10-08T10:12:49Z",
+   "metrics": {
+    "stars": 6242,
+    "forks": 438,
+    "stars_delta": 2939
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "agent-skill",
+     "open-source",
+     "svg",
+     "vizualization"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "mhtsec/ARTEX",
+   "title": "mhtsec/ARTEX",
+   "url": "https://github.com/mhtsec/ARTEX",
+   "summary": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
+   "published_at": "2026-10-08T05:33:06Z",
+   "metrics": {
+    "stars": 3571,
+    "forks": 5973,
+    "stars_delta": 423
+   },
+   "extra": {
+    "language": "Go",
+    "license": "AGPL-3.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "QingYunA/answer-me-with-html",
+   "title": "QingYunA/answer-me-with-html",
+   "url": "https://github.com/QingYunA/answer-me-with-html",
+   "summary": "Answer me with HTML — an agent skill that answers hard questions with a one-page HTML you can actually read. 让 AI Agent 用一页 HTML 回答复杂问题。",
+   "published_at": "2026-10-02T09:57:40Z",
+   "metrics": {
+    "stars": 3129,
+    "forks": 216,
+    "stars_delta": 227
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "agent-skill",
+     "ai-agent",
+     "claude-code",
+     "claude-code-skill",
+     "claude-skill",
+     "claude-skills",
+     "cli",
+     "diagram",
+     "dsh-plugin",
+     "explainer",
+     "html",
+     "llm",
+     "ste100"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "LosaLosSantos/aurelio-finance",
+   "title": "LosaLosSantos/aurelio-finance",
+   "url": "https://github.com/LosaLosSantos/aurelio-finance",
+   "summary": "Open-source personal finance app with an AI financial advisor: track your net worth, investments, ETFs, cash and debts on your own computer.",
+   "published_at": "2026-10-06T20:14:19Z",
+   "metrics": {
+    "stars": 2866,
+    "forks": 380,
+    "stars_delta": 621
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "ai",
+     "dividends",
+     "etf",
+     "finance",
+     "financial-planning",
+     "fintech",
+     "investing",
+     "llm",
+     "net-worth",
+     "personal-finance",
+     "portfolio-tracker",
+     "self-hosted",
+     "stocks",
+     "wealth-management"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Jakeschincariol/replica-skill",
+   "title": "Jakeschincariol/replica-skill",
+   "url": "https://github.com/Jakeschincariol/replica-skill",
+   "summary": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+   "published_at": "2026-10-03T12:07:49Z",
+   "metrics": {
+    "stars": 2176,
+    "forks": 313,
+    "stars_delta": 268
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent",
+     "agent-skills",
+     "app-clone",
+     "claude",
+     "claude-code",
+     "claude-skills",
+     "indie-hacker",
+     "reverse-engineering",
+     "saas"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "nanaism/yomiyasu",
+   "title": "nanaism/yomiyasu",
+   "url": "https://github.com/nanaism/yomiyasu",
+   "summary": "AI生成の日本語を自然な日本語へ推敲するAgent Skill / Agent Skill for Refining AI-Generated Japanese into Natural Japanese",
+   "published_at": "2026-09-30T11:49:32Z",
+   "metrics": {
+    "stars": 1914,
+    "forks": 44,
+    "stars_delta": 54
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-writing",
+     "antigravity",
+     "claude-code",
+     "codex",
+     "cursor",
+     "gemini",
+     "japanese",
+     "linter",
+     "llm",
+     "nlp",
+     "writing",
+     "writing-assistant",
+     "writing-tool"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "jiwoochris/artex-ko",
+   "title": "jiwoochris/artex-ko",
+   "url": "https://github.com/jiwoochris/artex-ko",
+   "summary": "ARTEX 한국어판 · AI 자율 침투 테스트 프레임워크(upstream: Autumn-27/ARTEX, AGPL-3.0)",
+   "published_at": "2026-10-03T14:49:48Z",
+   "metrics": {
+    "stars": 1378,
+    "forks": 1628,
+    "stars_delta": 135
+   },
+   "extra": {
+    "language": "Go",
+    "license": "AGPL-3.0",
+    "topics": [
+     "ai-agent",
+     "autonomous-agents",
+     "blue-team",
+     "cybersecurity",
+     "detection-engineering",
+     "i18n",
+     "korean",
+     "llm",
+     "penetration-testing",
+     "security",
+     "security-research",
+     "security-tools",
+     "sigma-rules",
+     "threat-detection"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "oil-oil/oil-ui",
+   "title": "oil-oil/oil-ui",
+   "url": "https://github.com/oil-oil/oil-ui",
+   "summary": "UI design skill for Claude Code, Codex and other AI agents: explore distinct directions, compare them side by side, refine against real screenshots. 给 AI Agent 用的 UI 设计 Skill。",
+   "published_at": "2026-09-30T03:55:35Z",
+   "metrics": {
+    "stars": 1373,
+    "forks": 74,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-design",
+     "claude-code",
+     "claude-skills",
+     "codex",
+     "frontend",
+     "ui-design",
+     "ux-design"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "bherbruck/solidcraft",
+   "title": "bherbruck/solidcraft",
+   "url": "https://github.com/bherbruck/solidcraft",
+   "summary": "SolidCraft: an open-source parametric 3D CAD application built in pure Rust. Desktop, web, and automation through MCP.",
+   "published_at": "2026-10-07T18:57:48Z",
+   "metrics": {
+    "stars": 1089,
+    "forks": 108,
+    "stars_delta": 513
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "topics": [
+     "3d-modeling",
+     "brep",
+     "cad",
+     "egui",
+     "mcp",
+     "parametric-cad",
+     "rust",
+     "step",
+     "wasm"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "wuyoscar/AISafetyHot-Hub",
+   "title": "wuyoscar/AISafetyHot-Hub",
+   "url": "https://github.com/wuyoscar/AISafetyHot-Hub",
+   "summary": "每天的 AI 安全精选和论文清单（md / bib / json），附 Agent 接入说明 · AI Safety HOT",
+   "published_at": "2026-10-01T11:33:59Z",
+   "metrics": {
+    "stars": 1050,
+    "forks": 11,
+    "stars_delta": 13
+   },
+   "extra": {
+    "language": "TeX",
+    "license": "NOASSERTION",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "academa-labs/manimgx",
+   "title": "academa-labs/manimgx",
+   "url": "https://github.com/academa-labs/manimgx",
+   "summary": "The animation engine for agents: blazingly fast math and 3D videos with Manim's Python API, on a Rust GPU core.",
+   "published_at": "2026-10-05T20:57:05Z",
+   "metrics": {
+    "stars": 952,
+    "forks": 58,
+    "stars_delta": 401
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Edwardxlai/easyread",
+   "title": "Edwardxlai/easyread",
+   "url": "https://github.com/Edwardxlai/easyread",
+   "summary": "把英文论文读成舒服的中文：本地 PDF 论文翻译、原文对照、边读边问 AI、文献管理。Read English papers in comfortable Chinese.",
+   "published_at": "2026-09-30T12:52:24Z",
+   "metrics": {
+    "stars": 907,
+    "forks": 67,
+    "stars_delta": 12
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "academic",
+     "arxiv",
+     "chinese",
+     "claude-code",
+     "codex",
+     "electron",
+     "llm",
+     "paper-reading",
+     "pdf-translator",
+     "reference-manager",
+     "research-tool",
+     "translation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "rociiu/talorys",
+   "title": "rociiu/talorys",
+   "url": "https://github.com/rociiu/talorys",
+   "summary": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no telemetry.",
+   "published_at": "2026-10-10T09:46:56Z",
+   "metrics": {
+    "stars": 898,
+    "forks": 76,
+    "stars_delta": 146
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "cloudflare",
+     "cloudflare-workers",
+     "durable-objects",
+     "personal-assistant",
+     "react",
+     "self-hosted",
+     "typescript",
+     "workers-ai"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "elstongun/leviathan",
+   "title": "elstongun/leviathan",
+   "url": "https://github.com/elstongun/leviathan",
+   "summary": "Deep memory for agents over large datasets. Leviathan is a single static binary that turns your records (JSONL, JSON, CSV/TSV, SQLite, or anything a database CLI can export) into a ranked full-text index.",
+   "published_at": "2026-10-05T08:57:44Z",
+   "metrics": {
+    "stars": 773,
+    "forks": 41,
+    "stars_delta": 32
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "AgentMemoryRepo/agentmemoryrepo",
+   "title": "AgentMemoryRepo/agentmemoryrepo",
+   "url": "https://github.com/AgentMemoryRepo/agentmemoryrepo",
+   "summary": "Spec for Agent Memory Repo",
+   "published_at": "2026-10-04T22:10:48Z",
+   "metrics": {
+    "stars": 763,
+    "forks": 38,
+    "stars_delta": 56
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "blendi-remade/agentcraft",
+   "title": "blendi-remade/agentcraft",
+   "url": "https://github.com/blendi-remade/agentcraft",
+   "summary": "",
+   "published_at": "2026-10-03T00:59:54Z",
+   "metrics": {
+    "stars": 727,
+    "forks": 97,
+    "stars_delta": 28
+   },
+   "extra": {
+    "language": "Java",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "franzenzenhofer/big-arrow-on-the-screen",
+   "title": "franzenzenhofer/big-arrow-on-the-screen",
+   "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+   "summary": "Let your AI agents paint big arrows, boxes and text on your Mac screen. One CLI, click-through, gone by itself. Skill for Claude Code and Codex. MIT.",
+   "published_at": "2026-10-08T08:39:15Z",
+   "metrics": {
+    "stars": 670,
+    "forks": 16,
+    "stars_delta": 43
+   },
+   "extra": {
+    "language": "Swift",
+    "license": "MIT",
+    "topics": [
+     "accessibility",
+     "ai-agents",
+     "claude-code",
+     "cli",
+     "codex",
+     "macos",
+     "swift"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "shinshin86/mesh-avatar-studio",
+   "title": "shinshin86/mesh-avatar-studio",
+   "url": "https://github.com/shinshin86/mesh-avatar-studio",
+   "summary": "Turn one illustration into an animated 2D mesh avatar with a coding agent and a local editor",
+   "published_at": "2026-10-04T03:33:57Z",
+   "metrics": {
+    "stars": 652,
+    "forks": 78,
+    "stars_delta": 40
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "2d-animation",
+     "avatar",
+     "claude-code",
+     "codex",
+     "mesh-deformation",
+     "vtuber",
+     "webgl"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "openqodex/openqodex",
+   "title": "openqodex/openqodex",
+   "url": "https://github.com/openqodex/openqodex",
+   "summary": "Open source code review that runs in your coding agent before you push. Scanners plus a separate AI reviewer, on your own login, no key.",
+   "published_at": "2026-10-02T06:19:06Z",
+   "metrics": {
+    "stars": 634,
+    "forks": 47,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": [
+     "agent-skills",
+     "ai-agents",
+     "ai-code-review",
+     "claude-code",
+     "claude-code-plugin",
+     "claude-skills",
+     "cline",
+     "code-quality",
+     "code-review",
+     "codex",
+     "coding-agents",
+     "cursor",
+     "github-actions",
+     "linter",
+     "pre-commit",
+     "sast",
+     "secret-scanning",
+     "security",
+     "security-tools",
+     "static-analysis"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "onehumanbeing/esp32-iphone-agent",
+   "title": "onehumanbeing/esp32-iphone-agent",
+   "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+   "summary": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.",
+   "published_at": "2026-10-11T19:10:25Z",
+   "metrics": {
+    "stars": 618,
+    "forks": 75,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "airplay",
+     "automation",
+     "computer-use",
+     "esp32",
+     "esp32-s3",
+     "iphone",
+     "llm",
+     "usb-hid"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Folkbench/folkbench",
+   "title": "Folkbench/folkbench",
+   "url": "https://github.com/Folkbench/folkbench",
+   "summary": "AI API 中转站评测排行与切换工具：实测可用率、延迟与价格 · Open-source AI API relay benchmark, rankings & switcher for Claude Code / Codex",
+   "published_at": "2026-10-02T09:50:45Z",
+   "metrics": {
+    "stars": 572,
+    "forks": 7,
+    "stars_delta": 266
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "NOASSERTION",
+    "topics": [
+     "ai",
+     "api-relay",
+     "api-relay-pricing",
+     "benchmark",
+     "benchmarks",
+     "claude",
+     "claude-code",
+     "codex",
+     "folkbench",
+     "llm",
+     "model-evaluation",
+     "openai-api",
+     "reliability",
+     "tauri"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "trhhubsd/ARTEXX",
+   "title": "trhhubsd/ARTEXX",
+   "url": "https://github.com/trhhubsd/ARTEXX",
+   "summary": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目 Autumn-27/ARTEX",
+   "published_at": "2026-10-08T20:35:22Z",
+   "metrics": {
+    "stars": 540,
+    "forks": 10,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Go",
+    "license": "AGPL-3.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "whirlchat/whirl",
+   "title": "whirlchat/whirl",
+   "url": "https://github.com/whirlchat/whirl",
+   "summary": "The AI chat app that sweats the details. Every top model, real memory, living documents, and your own tools.",
+   "published_at": "2026-10-02T13:50:42Z",
+   "metrics": {
+    "stars": 505,
+    "forks": 48,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai",
+     "ai-chat",
+     "chat",
+     "convex",
+     "llm",
+     "nextjs",
+     "openrouter",
+     "react",
+     "self-hosted",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "iamlukethedev/Herald-OS",
+   "title": "iamlukethedev/Herald-OS",
+   "url": "https://github.com/iamlukethedev/Herald-OS",
+   "summary": "An agent-native operating system, with Hermes Agent as the interface. Independent project, not affiliated with Nous Research.",
+   "published_at": "2026-10-06T20:37:44Z",
+   "metrics": {
+    "stars": 453,
+    "forks": 66,
+    "stars_delta": 24
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "desktop-environment",
+     "fedora",
+     "hermes-agent",
+     "hyprland",
+     "linux",
+     "macos",
+     "niri",
+     "omarchy",
+     "operating-system"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Aryanutkarsh/SeeCode",
+   "title": "Aryanutkarsh/SeeCode",
+   "url": "https://github.com/Aryanutkarsh/SeeCode",
+   "summary": "Animated, explorable diagrams for Claude and other coding agents, from a short JSON spec.",
+   "published_at": "2026-10-02T18:41:07Z",
+   "metrics": {
+    "stars": 415,
+    "forks": 20,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-agents",
+     "architecture-diagram",
+     "claude-code",
+     "claude-skills",
+     "codex",
+     "coding-agents",
+     "data-visualization",
+     "developer-tools",
+     "diagrams",
+     "diagrams-as-code",
+     "drawio",
+     "flowchart",
+     "isometric",
+     "mermaid",
+     "sequence-diagram",
+     "software-architecture",
+     "svg",
+     "system-design",
+     "visualization"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Jakeschincariol/founder-skill",
+   "title": "Jakeschincariol/founder-skill",
+   "url": "https://github.com/Jakeschincariol/founder-skill",
+   "summary": "Eleven free Claude skills that test a business before you launch it: a board trained on Hormozi, Thiel and Jobs, a marketing director, a CFO, and a consumer panel of 100 buyer agents. Free, MIT.",
+   "published_at": "2026-10-07T01:07:13Z",
+   "metrics": {
+    "stars": 403,
+    "forks": 40,
+    "stars_delta": 94
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "business-plan",
+     "claude-code",
+     "claude-skills",
+     "startup",
+     "subagents",
+     "unit-economics"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TannerMidd/pi-pocket",
+   "title": "TannerMidd/pi-pocket",
+   "url": "https://github.com/TannerMidd/pi-pocket",
+   "summary": "A durable, multiplayer, mobile-first web app for Pi agents, built on Pi Durable",
+   "published_at": "2026-10-04T02:29:57Z",
+   "metrics": {
+    "stars": 379,
+    "forks": 26,
+    "stars_delta": 18
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "coding-agent",
+     "mobile",
+     "multiplayer",
+     "omarchy",
+     "pi",
+     "pi-durable",
+     "pwa",
+     "self-hosted"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Adolanium/hermes-gadget-sdk",
+   "title": "Adolanium/hermes-gadget-sdk",
+   "url": "https://github.com/Adolanium/hermes-gadget-sdk",
+   "summary": "Build voice and text devices for your Hermes Agent, with ESP32 firmware, a Linux client, and a desktop simulator.",
+   "published_at": "2026-10-03T10:08:24Z",
+   "metrics": {
+    "stars": 372,
+    "forks": 55,
+    "stars_delta": 7
+   },
+   "extra": {
+    "language": "C++",
+    "license": "MIT",
+    "topics": [
+     "cpp17",
+     "embedded",
+     "esp-idf",
+     "esp32",
+     "esp32-s3",
+     "hermes-agent",
+     "iot",
+     "linux",
+     "push-to-talk",
+     "python",
+     "raspberry-pi",
+     "sdk",
+     "simulator",
+     "voice-assistant",
+     "websocket"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "strands-agents/box",
+   "title": "strands-agents/box",
+   "url": "https://github.com/strands-agents/box",
+   "summary": "Run AI agents in a sandbox that restricts what they can execute, read, write, and reach on the network. Box combines OS isolation with default-deny Dogwood policies and credential injection that keeps secrets outside the agent. Written in Rust. Supports macOS on Apple silicon, with Linux support planned.",
+   "published_at": "2026-10-02T20:34:08Z",
+   "metrics": {
+    "stars": 370,
+    "forks": 18,
+    "stars_delta": 38
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "Apache-2.0",
+    "topics": [
+     "agentic-ai",
+     "agents",
+     "ai",
+     "ai-agents",
+     "ai-safety",
+     "containment",
+     "egress",
+     "harness",
+     "linux",
+     "llm",
+     "macos",
+     "mcp",
+     "policy",
+     "rust",
+     "sandbox",
+     "sandboxing",
+     "seatbelt",
+     "security",
+     "strands-agents",
+     "zero-trust"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "vojtaholik/good-css",
+   "title": "vojtaholik/good-css",
+   "url": "https://github.com/vojtaholik/good-css",
+   "summary": "Opinionated modern CSS techniques, packaged as an agent skill, each with a live specimen.",
+   "published_at": "2026-10-01T11:49:36Z",
+   "metrics": {
+    "stars": 358,
+    "forks": 5,
+    "stars_delta": 18
+   },
+   "extra": {
+    "language": "HTML",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "BootLoops-ai/bootloops",
+   "title": "BootLoops-ai/bootloops",
+   "url": "https://github.com/BootLoops-ai/bootloops",
+   "summary": "BootLoops 1.0: certified computational tools and house engines for exact and high-precision physics and quantitative science, built to be driven by LLM agents. MIT; docs CC BY 4.0.",
+   "published_at": "2026-10-01T15:29:28Z",
+   "metrics": {
+    "stars": 346,
+    "forks": 60,
+    "stars_delta": 8
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "bootloops",
+     "feynman-integrals",
+     "llm-agents",
+     "physics",
+     "scientific-computing"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "mrsarac/ff-tracking",
+   "title": "mrsarac/ff-tracking",
+   "url": "https://github.com/mrsarac/ff-tracking",
+   "summary": "A virtual camera films an AI agent's screen while a tracker locks onto every glyph. Two fframes passes, one SkSL shader, all sound synthesized.",
+   "published_at": "2026-10-09T11:12:47Z",
+   "metrics": {
+    "stars": 342,
+    "forks": 21,
+    "stars_delta": 49
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "MIT",
+    "topics": [
+     "fframes",
+     "generative-video",
+     "hud",
+     "motion-graphics",
+     "rust",
+     "shader",
+     "skia",
+     "sksl"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "mariagorskikh/open-instinct",
+   "title": "mariagorskikh/open-instinct",
+   "url": "https://github.com/mariagorskikh/open-instinct",
+   "summary": "Open Instinct: an open-source Instinct. A personal agent you text on iMessage, with its own computer and a trusted network of other agents. Built on Pi, Inkbox, Maritime and Composio.",
+   "published_at": "2026-10-03T20:07:59Z",
+   "metrics": {
+    "stars": 314,
+    "forks": 67,
+    "stars_delta": 15
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "agents",
+     "ai-agents",
+     "composio",
+     "imessage",
+     "inkbox",
+     "instinct",
+     "maritime",
+     "open-source",
+     "personal-assistant",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "VoltAgent/official-mcp-servers",
+   "title": "VoltAgent/official-mcp-servers",
+   "url": "https://github.com/VoltAgent/official-mcp-servers",
+   "summary": "A curated directory of 280+ official MCP servers from the companies behind the products. No unofficial forks, no abandoned projects.",
+   "published_at": "2026-10-01T07:30:34Z",
+   "metrics": {
+    "stars": 305,
+    "forks": 49,
+    "stars_delta": 9
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "ai-tools",
+     "awesome-list",
+     "claude",
+     "claude-code",
+     "codex",
+     "cursor",
+     "mcp",
+     "mcp-server",
+     "mcp-servers",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Harvil1/codeAgent",
+   "title": "Harvil1/codeAgent",
+   "url": "https://github.com/Harvil1/codeAgent",
+   "summary": "CodeAgent is an open-source coding agent that lives in your terminal. It understands your repository, plans multi-step changes, writes and edits files, runs commands and tests, and iterates until the task is done — all with a transparent, extensible tool loop.",
+   "published_at": "2026-10-02T05:15:41Z",
+   "metrics": {
+    "stars": 304,
+    "forks": 38,
+    "stars_delta": 85
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent",
+     "ai-agent",
+     "cli",
+     "coding-agent",
+     "context-engineering",
+     "deepseek",
+     "llm",
+     "mcp",
+     "python",
+     "terminal"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "zhouwei713/luobo-ppt",
+   "title": "zhouwei713/luobo-ppt",
+   "url": "https://github.com/zhouwei713/luobo-ppt",
+   "summary": "生成和美化可编辑原生 PPT 的 Agent Skill",
+   "published_at": "2026-10-08T11:50:44Z",
+   "metrics": {
+    "stars": 303,
+    "forks": 57,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "codex-skill",
+     "powerpoint",
+     "pptx",
+     "presentation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "cosscom/shipyard",
+   "title": "cosscom/shipyard",
+   "url": "https://github.com/cosscom/shipyard",
+   "summary": "Run coding agents on your dev boxes: worktrees, terminals, orchestration, kits and automations, with a desktop app.",
+   "published_at": "2026-10-02T19:49:23Z",
+   "metrics": {
+    "stars": 302,
+    "forks": 32,
+    "stars_delta": 7
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "morluto/awesome-reverse-engineering",
+   "title": "morluto/awesome-reverse-engineering",
+   "url": "https://github.com/morluto/awesome-reverse-engineering",
+   "summary": "Curated reverse-engineering tools and learning resources for binaries, apps, firmware, formats, and protocols.",
+   "published_at": "2026-10-09T14:58:20Z",
+   "metrics": {
+    "stars": 293,
+    "forks": 63,
+    "stars_delta": 187
+   },
+   "extra": {
+    "language": null,
+    "license": "CC0-1.0",
+    "topics": [
+     "agent-skills",
+     "ai-agents",
+     "awesome",
+     "awesome-list",
+     "binary-analysis",
+     "ctf",
+     "cybersecurity",
+     "debugging",
+     "decompiler",
+     "disassembler",
+     "dynamic-analysis",
+     "firmware",
+     "frida",
+     "ghidra",
+     "malware-analysis",
+     "mcp",
+     "reverse-engineering",
+     "security",
+     "security-tools",
+     "static-analysis"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "justxor/claude-code-pro-course",
+   "title": "justxor/claude-code-pro-course",
+   "url": "https://github.com/justxor/claude-code-pro-course",
+   "summary": "Claude Code PRO — полный курс и гайд на русском: CLAUDE.md, settings, skills, subagents, hooks, MCP, плагины, CI. 8 лабораторных, библиотека промптов и готовый starter-kit. Здесь бесплатные курсы  по chatgpt - ",
+   "published_at": "2026-09-30T12:15:37Z",
+   "metrics": {
+    "stars": 291,
+    "forks": 53,
+    "stars_delta": 4
+   },
+   "extra": {
+    "language": "Shell",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "ai-coding",
+     "anthropic",
+     "best-practices",
+     "claude",
+     "claude-code",
+     "claude-code-hooks",
+     "claude-code-skills",
+     "claude-code-subagents",
+     "mcp",
+     "prompt-engineering",
+     "russian",
+     "tutorial"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "arielshad/3d-asset-server",
+   "title": "arielshad/3d-asset-server",
+   "url": "https://github.com/arielshad/3d-asset-server",
+   "summary": "3d assets api and mcp",
+   "published_at": "2026-10-04T19:28:37Z",
+   "metrics": {
+    "stars": 286,
+    "forks": 28,
+    "stars_delta": 4
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "sno-ai/sno-station-skills",
+   "title": "sno-ai/sno-station-skills",
+   "url": "https://github.com/sno-ai/sno-station-skills",
+   "summary": "Sno Station Skills: 31 tested skills that turn Claude Code and Codex into one working team. Cross-vendor peer review, automatic handoff when an agent hits its quota, a one-page morning brief, work orders with proof, and a nightly loop that learns from your own sessions. Open source, installed with one sno setup.",
+   "published_at": "2026-10-01T04:18:51Z",
+   "metrics": {
+    "stars": 276,
+    "forks": 189,
+    "stars_delta": 27
+   },
+   "extra": {
+    "language": "Shell",
+    "license": "Apache-2.0",
+    "topics": [
+     "agent-handoff",
+     "agent-skills",
+     "agentic-ai",
+     "ai-agents",
+     "claude-code",
+     "claude-code-skills",
+     "code-review",
+     "codex",
+     "codex-skills",
+     "coding-agents",
+     "developer-tools",
+     "llm",
+     "multi-agent",
+     "open-source",
+     "peer-review",
+     "rate-limit",
+     "self-improving",
+     "skills",
+     "sno",
+     "sno-ai"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "NousResearch/hermes-official-plugins",
+   "title": "NousResearch/hermes-official-plugins",
+   "url": "https://github.com/NousResearch/hermes-official-plugins",
+   "summary": "☤ The official plugins for Hermes Agent, built and maintained by Nous Research: Home Assistant, Spotify, Claude Subscription DirectSDK and more, one install away from the Hermes plugin catalog.",
+   "published_at": "2026-10-10T20:51:25Z",
+   "metrics": {
+    "stars": 245,
+    "forks": 19,
+    "stars_delta": 60
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-plugins",
+     "ai-agents",
+     "claude",
+     "hermes",
+     "hermes-agent",
+     "home-assistant",
+     "llm",
+     "model-provider",
+     "nous-research",
+     "plugins",
+     "spotify"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "zzzz7788990213-ops/EvoVLM",
+   "title": "zzzz7788990213-ops/EvoVLM",
+   "url": "https://github.com/zzzz7788990213-ops/EvoVLM",
+   "summary": "Evolving Multimodal Inference Programs: LLM-guided evolutionary search for accurate and efficient vision-language inference.",
+   "published_at": "2026-10-02T01:03:55Z",
+   "metrics": {
+    "stars": 237,
+    "forks": 4,
+    "stars_delta": -70
+   },
+   "extra": {
+    "language": "Python",
+    "license": null,
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Ayzzz123/mcd-coupon-strategist",
+   "title": "Ayzzz123/mcd-coupon-strategist",
+   "url": "https://github.com/Ayzzz123/mcd-coupon-strategist",
+   "summary": "麦麦省钱助手 —— 基于麦当劳 MCP 的点餐成本优化 Skill。算出当前门店最省钱的点餐方案，并主动提示凑单陷阱。",
+   "published_at": "2026-10-10T12:59:19Z",
+   "metrics": {
+    "stars": 232,
+    "forks": 19,
+    "stars_delta": 61
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent",
+     "cost-optimization",
+     "coupon",
+     "llm",
+     "mcd-mcp",
+     "mcdonalds",
+     "mcp",
+     "python",
+     "skill",
+     "workbuddy"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "deeplethe/solid-glass",
+   "title": "deeplethe/solid-glass",
+   "url": "https://github.com/deeplethe/solid-glass",
+   "summary": "A design system for AI applications. Material, physical, tactile, technical.",
+   "published_at": "2026-10-12T09:19:02Z",
+   "metrics": {
+    "stars": 229,
+    "forks": 0,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "agent-ui",
+     "ai",
+     "ai-agents",
+     "chat-ui",
+     "design-system",
+     "llm",
+     "react",
+     "shadcn",
+     "shadcn-ui",
+     "tailwindcss",
+     "theme"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "LingCore/WinShun",
+   "title": "LingCore/WinShun",
+   "url": "https://github.com/LingCore/WinShun",
+   "summary": "Win顺：免费开源的 Windows 快速搜索启动器。双击 Ctrl，拼音秒搜文件、全文搜索 Word/Excel/PDF、剪贴板历史（代替 Win+V）、对话框搜索、任务栏搜索、插件、AI 助手 MCP。Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+   "published_at": "2026-10-08T03:18:00Z",
+   "metrics": {
+    "stars": 228,
+    "forks": 22,
+    "stars_delta": 42
+   },
+   "extra": {
+    "language": "C++",
+    "license": "MIT",
+    "topics": [
+     "chinese",
+     "clipboard-history",
+     "clipboard-manager",
+     "cpp",
+     "everything",
+     "file-search",
+     "full-text-search",
+     "launcher",
+     "listary",
+     "mcp",
+     "mcp-server",
+     "ntfs",
+     "ocr",
+     "pinyin",
+     "productivity",
+     "qt6",
+     "search",
+     "windows"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "BinceQu/RoboHarness",
+   "title": "BinceQu/RoboHarness",
+   "url": "https://github.com/BinceQu/RoboHarness",
+   "summary": "A robotic harness that gives LLM agents a visual-geometric control panel so that they can directly understand and invoke embodied tasks.",
+   "published_at": "2026-10-07T04:39:45Z",
+   "metrics": {
+    "stars": 226,
+    "forks": 18,
+    "stars_delta": 2
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "weike-zhang/ai-novel-studio",
+   "title": "weike-zhang/ai-novel-studio",
+   "url": "https://github.com/weike-zhang/ai-novel-studio",
+   "summary": "AI novel generation with world building, interactive choices, and persistent character state. Next.js + Go. AI 小说创作台。",
+   "published_at": "2026-10-03T06:08:29Z",
+   "metrics": {
+    "stars": 225,
+    "forks": 16,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": "Go",
+    "license": "MIT",
+    "topics": [
+     "ai",
+     "ai-novel",
+     "golang",
+     "interactive-fiction",
+     "llm",
+     "nextjs",
+     "novel-generation",
+     "storytelling"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "w16638771062/mccarbon",
+   "title": "w16638771062/mccarbon",
+   "url": "https://github.com/w16638771062/mccarbon",
+   "summary": "麦麦碳账本 · 基于麦当劳 MCP 的个人餐饮碳足迹估算与减排模拟器 | Personal dining carbon footprint estimator powered by McDonald's MCP",
+   "published_at": "2026-10-12T09:45:08Z",
+   "metrics": {
+    "stars": 200,
+    "forks": 11,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "lithos-ai/lithos-metal",
+   "title": "lithos-ai/lithos-metal",
+   "url": "https://github.com/lithos-ai/lithos-metal",
+   "summary": "lithos-metal: high-performance LLM inference kernels and serving for Apple silicon.",
+   "published_at": "2026-10-05T15:23:30Z",
+   "metrics": {
+    "stars": 190,
+    "forks": 15,
+    "stars_delta": 7
+   },
+   "extra": {
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "ManfredCh/Lyapunov",
+   "title": "ManfredCh/Lyapunov",
+   "url": "https://github.com/ManfredCh/Lyapunov",
+   "summary": "LLM-first, 3D-native robotics and simulation workspace.",
+   "published_at": "2026-10-02T15:45:56Z",
+   "metrics": {
+    "stars": 187,
+    "forks": 15,
+    "stars_delta": 39
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "nuglifeleoji/Sentry",
+   "title": "nuglifeleoji/Sentry",
+   "url": "https://github.com/nuglifeleoji/Sentry",
+   "summary": "Learning to Recover from LLM Agent Failures at Test Time",
+   "published_at": "2026-10-02T00:54:32Z",
+   "metrics": {
+    "stars": 179,
+    "forks": 4,
+    "stars_delta": 16
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "longsurf-ai/openchart",
+   "title": "longsurf-ai/openchart",
+   "url": "https://github.com/longsurf-ai/openchart",
+   "summary": "OSS trading workspace with your favorite agents",
+   "published_at": "2026-10-05T16:16:41Z",
+   "metrics": {
+    "stars": 171,
+    "forks": 17,
+    "stars_delta": 9
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "topics": [
+     "agent",
+     "agentic-trader",
+     "ai",
+     "charting",
+     "charts",
+     "charts-js",
+     "harness",
+     "llm",
+     "llm-agents",
+     "pinescript",
+     "pinescript-v6",
+     "quantitative",
+     "quantitative-finance",
+     "trader",
+     "trading-toolkits"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "yzg1226/mcd-party-officer",
+   "title": "yzg1226/mcd-party-officer",
+   "url": "https://github.com/yzg1226/mcd-party-officer",
+   "summary": "🍟 麦当劳门店派对成团调度 Skill — 把派对从「策划」推进到「办得成」：成团概率雷达 / 包场vs拼团 / 择日黄历 / 儿童营养指数 / 招募卡与邀请函",
+   "published_at": "2026-10-09T14:20:03Z",
+   "metrics": {
+    "stars": 158,
+    "forks": 4,
+    "stars_delta": 73
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skill",
+     "mcdonalds",
+     "mcp",
+     "mcp-server",
+     "party",
+     "python",
+     "workbuddy"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "weike-zhang/architecture-canvas",
+   "title": "weike-zhang/architecture-canvas",
+   "url": "https://github.com/weike-zhang/architecture-canvas",
+   "summary": "Chat with your documents to create and refine editable architecture diagrams. Local workspace, Excalidraw canvas, optional Tavily search.",
+   "published_at": "2026-10-03T05:40:51Z",
+   "metrics": {
+    "stars": 150,
+    "forks": 12,
+    "stars_delta": 3
+   },
+   "extra": {
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai-agent",
+     "architecture-diagram",
+     "excalidraw",
+     "local-first",
+     "mcp",
+     "tavily"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "THUROI0787/absent-author",
+   "title": "THUROI0787/absent-author",
+   "url": "https://github.com/THUROI0787/absent-author",
+   "summary": "Research and writing can be automated. Authorship cannot. Evidence list + agent skills for spotting AI-produced papers no human stood behind.",
+   "published_at": "2026-10-05T08:41:20Z",
+   "metrics": {
+    "stars": 147,
+    "forks": 7,
+    "stars_delta": 10
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-generated-content-detection",
+     "claude-code",
+     "codex",
+     "llm",
+     "peer-review",
+     "research-integrity"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Sam-Hui-dot/mcd-budget-meal",
+   "title": "Sam-Hui-dot/mcd-budget-meal",
+   "url": "https://github.com/Sam-Hui-dot/mcd-budget-meal",
+   "summary": "麦麦预算餐：基于麦当劳 MCP 的真实核价、预算比较与餐品替换 Skill",
+   "published_at": "2026-10-11T08:25:55Z",
+   "metrics": {
+    "stars": 142,
+    "forks": 4,
+    "stars_delta": 71
+   },
+   "extra": {
+    "language": "Python",
+    "license": "NOASSERTION",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "joeseesun/qiaomu-codex-imagegen",
+   "title": "joeseesun/qiaomu-codex-imagegen",
+   "url": "https://github.com/joeseesun/qiaomu-codex-imagegen",
+   "summary": "让任何 Agent 调用 Codex 内置生图（MCP + CLI + Skill），内置小红书、视频封面、Mondo 海报技巧 · Codex image generation for any agent",
+   "published_at": "2026-10-04T08:47:02Z",
+   "metrics": {
+    "stars": 130,
+    "forks": 7,
+    "stars_delta": 2
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "claude-code",
+     "codex",
+     "image-generation",
+     "mcp",
+     "poster-design",
+     "xiaohongshu"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "chenxiachan/paperfold",
+   "title": "chenxiachan/paperfold",
+   "url": "https://github.com/chenxiachan/paperfold",
+   "summary": "Zoom any paper for your better understanding",
+   "published_at": "2026-10-04T22:19:52Z",
+   "metrics": {
+    "stars": 130,
+    "forks": 9,
+    "stars_delta": 5
+   },
+   "extra": {
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": [
+     "arxiv",
+     "llm",
+     "local-first",
+     "open-source",
+     "paper-reader",
+     "research-papers",
+     "semantic-zoom",
+     "translation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Xuanwo/agenvo",
+   "title": "Xuanwo/agenvo",
+   "url": "https://github.com/Xuanwo/agenvo",
+   "summary": "A self-hosted MCP relay for native coding runtimes",
+   "published_at": "2026-10-06T18:49:53Z",
+   "metrics": {
+    "stars": 128,
+    "forks": 5,
+    "stars_delta": 3
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "kutukam/autonomous-pentest-agent",
+   "title": "kutukam/autonomous-pentest-agent",
+   "url": "https://github.com/kutukam/autonomous-pentest-agent",
+   "summary": "Autonomous Pentest Agent — LLM multi-agent autonomous penetration testing system (Go backend + Next.js UI). AGPL-3.0.",
+   "published_at": "2026-10-08T18:47:12Z",
+   "metrics": {
+    "stars": 126,
+    "forks": 280,
+    "stars_delta": 12
+   },
+   "extra": {
+    "language": "Go",
+    "license": "AGPL-3.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Zhou-Yujing114514/deepseek-harness-linux",
+   "title": "Zhou-Yujing114514/deepseek-harness-linux",
+   "url": "https://github.com/Zhou-Yujing114514/deepseek-harness-linux",
+   "summary": "First-class Linux packaging for DeepSeek Harness desktop — AppImage, .deb, .tar.gz for x64/arm64, built by native CI.",
+   "published_at": "2026-10-03T04:26:57Z",
+   "metrics": {
+    "stars": 125,
+    "forks": 14,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "agent",
+     "ai-agent",
+     "ai-assistant",
+     "appimage",
+     "arm64",
+     "chatbot",
+     "deb",
+     "deepseek",
+     "desktop",
+     "electron",
+     "electron-builder",
+     "linux",
+     "llm",
+     "local-llm",
+     "ollama",
+     "packaging",
+     "self-hosted",
+     "ubuntu",
+     "x64"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "lawrencewzen/wx-bot",
+   "title": "lawrencewzen/wx-bot",
+   "url": "https://github.com/lawrencewzen/wx-bot",
+   "summary": "把微信接入你的 AI Agent（Grok / Muse / Claude 等）· Connect WeChat to your personal AI agent via official iLink",
+   "published_at": "2026-10-09T12:51:25Z",
+   "metrics": {
+    "stars": 121,
+    "forks": 21,
+    "stars_delta": 11
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "bun",
+     "claude-code",
+     "llm",
+     "typescript",
+     "wechat",
+     "wechat-bot"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Yamz-Labs/kyojin",
+   "title": "Yamz-Labs/kyojin",
+   "url": "https://github.com/Yamz-Labs/kyojin",
+   "summary": "Kyojin: the Yamz inference engine for AMD Strix Halo (ROCm, gfx1151), built on ExLlamaV3. Runs 300B-class MoE models on one 128 GB mini PC.",
+   "published_at": "2026-10-02T20:45:48Z",
+   "metrics": {
+    "stars": 118,
+    "forks": 13,
+    "stars_delta": 15
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "amd",
+     "exl3",
+     "inference",
+     "llm",
+     "quantization",
+     "rocm",
+     "strix-halo"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "KODAMA-TECHNOLOGY/Chat_UI",
+   "title": "KODAMA-TECHNOLOGY/Chat_UI",
+   "url": "https://github.com/KODAMA-TECHNOLOGY/Chat_UI",
+   "summary": "The fastest and litest LLM chating ui with 2 fields, less than 100 kb and completely no dependent.",
+   "published_at": "2026-10-02T15:31:16Z",
+   "metrics": {
+    "stars": 110,
+    "forks": 15,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "GPL-3.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Sev7eEn7/dsh-sieve",
+   "title": "Sev7eEn7/dsh-sieve",
+   "url": "https://github.com/Sev7eEn7/dsh-sieve",
+   "summary": "dsh-sieve: context engineering & token optimization plugin for DeepSeek Harness (DSH) — tool output filtering, context pruning, progressive skill disclosure. 36% smaller payload in offline replay. DSH 上下文管理与 token 优化节省插件。",
+   "published_at": "2026-10-04T12:30:42Z",
+   "metrics": {
+    "stars": 107,
+    "forks": 5,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "agent-tools",
+     "ai-agent",
+     "ai-coding",
+     "coding-agent",
+     "context-engineering",
+     "context-management",
+     "context-pruning",
+     "context-window",
+     "cordis",
+     "deepseek",
+     "deepseek-harness",
+     "dsh-plugin",
+     "llm",
+     "llm-agent",
+     "llm-cost",
+     "prompt-compression",
+     "token-efficiency",
+     "token-optimization",
+     "tool-output",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "hypersniper05/MCP-Image-Generator-Uncensored",
+   "title": "hypersniper05/MCP-Image-Generator-Uncensored",
+   "url": "https://github.com/hypersniper05/MCP-Image-Generator-Uncensored",
+   "summary": "Self-hosted MCP server for image generation and editing with the uncensored Qwen-Image-2.1 model",
+   "published_at": "2026-10-06T14:54:31Z",
+   "metrics": {
+    "stars": 90,
+    "forks": 15,
+    "stars_delta": 7
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Dicklesworthstone/frankensonos",
+   "title": "Dicklesworthstone/frankensonos",
+   "url": "https://github.com/Dicklesworthstone/frankensonos",
+   "summary": "Memory-safe Rust controller for your own Sonos speakers on your own LAN — reliable SSDP/UPnP-SOAP/GENA interoperability (S1 + S2), a Spotify-library classical DJ, and a CLI + HTTP API + MCP server so AI agents can run the house, including off-LAN over Tailscale.",
+   "published_at": "2026-10-06T23:30:08Z",
+   "metrics": {
+    "stars": 87,
+    "forks": 6,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "NOASSERTION",
+    "topics": [
+     "async",
+     "dlna",
+     "home-automation",
+     "interoperability",
+     "mcp",
+     "model-context-protocol",
+     "rust",
+     "smart-home",
+     "soco",
+     "sonos",
+     "spotify",
+     "ssdp",
+     "tailscale",
+     "upnp"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "AI-BizOS/cross-harness",
+   "title": "AI-BizOS/cross-harness",
+   "url": "https://github.com/AI-BizOS/cross-harness",
+   "summary": "Open cross-harness protocol with terminal and local web interfaces",
+   "published_at": "2026-10-10T06:37:06Z",
+   "metrics": {
+    "stars": 83,
+    "forks": 3,
+    "stars_delta": 21
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "Apache-2.0",
+    "topics": [
+     "acp",
+     "claude-code",
+     "cli",
+     "codex",
+     "coding-agents",
+     "mcp",
+     "multi-agent",
+     "orchestration",
+     "tui"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "mcpdelta/mcpdelta",
+   "title": "mcpdelta/mcpdelta",
+   "url": "https://github.com/mcpdelta/mcpdelta",
+   "summary": "Delta MCP is a free app that sits between your AI apps and their MCP servers: one program per task instead of one tool call per step, up to 24.1× fewer tokens in our benchmarks. Every change is recorded and undoable. Coming soon for macOS, Windows and Linux. Shortcuts can run by themselves, on a schedule.",
+   "published_at": "2026-10-07T17:53:23Z",
+   "metrics": {
+    "stars": 81,
+    "forks": 11,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": null,
+    "license": null,
+    "topics": [
+     "ai-agents",
+     "ai-coding",
+     "automation",
+     "claude",
+     "claude-code",
+     "claude-desktop",
+     "cursor",
+     "desktop-app",
+     "developer-tools",
+     "gemini-cli",
+     "llm-tools",
+     "mcp",
+     "mcp-servers",
+     "model-context-protocol",
+     "scheduled-tasks",
+     "token-optimization",
+     "vscode",
+     "windsurf",
+     "workflow-automation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Tuskira/ai-agent-gateway",
+   "title": "Tuskira/ai-agent-gateway",
+   "url": "https://github.com/Tuskira/ai-agent-gateway",
+   "summary": "AI Agent Gateway - an open-source gateway that secures, governs and observes AI agents' MCP tool calls and LLM traffic",
+   "published_at": "2026-10-01T11:32:10Z",
+   "metrics": {
+    "stars": 76,
+    "forks": 9,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "zhutoumeme/mcd-git",
+   "title": "zhutoumeme/mcd-git",
+   "url": "https://github.com/zhutoumeme/mcd-git",
+   "summary": "用 git 命令点麦当劳：add 放购物车，rebase 凑最省，push 确认后才下单；card 生成 1024 吃麦贡献图（3D 汉堡天际线 / 年度小票）。基于麦当劳 MCP Server，附 --demo 无 Token 试玩和 Agent Skill。非官方参赛作品。",
+   "published_at": "2026-10-10T14:46:47Z",
+   "metrics": {
+    "stars": 74,
+    "forks": 0,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "claude-code",
+     "cli",
+     "git",
+     "mcdonalds",
+     "mcp",
+     "mcp-client",
+     "model-context-protocol",
+     "python",
+     "terminal",
+     "workbuddy"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Zafer-Liu/mcd-event-radar",
+   "title": "Zafer-Liu/mcd-event-radar",
+   "url": "https://github.com/Zafer-Liu/mcd-event-radar",
+   "summary": "麦当劳 MCP Agent Skill：查「附近有什么麦麦活动」，生成卡通活动地图——门店位置取自官方经纬度，只展示已核实可预约场次 🍟",
+   "published_at": "2026-10-09T11:28:06Z",
+   "metrics": {
+    "stars": 73,
+    "forks": 0,
+    "stars_delta": 5
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "agent-skill",
+     "event-map",
+     "mcdonalds",
+     "mcp",
+     "mcp-server",
+     "skill",
+     "workbuddy"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "OSINT-Experts-Society/Consensus-OSINT",
+   "title": "OSINT-Experts-Society/Consensus-OSINT",
+   "url": "https://github.com/OSINT-Experts-Society/Consensus-OSINT",
+   "summary": "OSINT tool for username search, email lookup and phone intelligence. 7,900+ lookup modules standardised from 19 projects, with enriched results, evidence graphs and MCP integration. By the OSINT Experts Society.",
+   "published_at": "2026-10-08T16:08:36Z",
+   "metrics": {
+    "stars": 72,
+    "forks": 11,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "GPL-3.0",
+    "topics": [
+     "bulk-search",
+     "cli",
+     "digital-footprint",
+     "email-lookup",
+     "email-osint",
+     "graph-visualization",
+     "investigation",
+     "mcp-server",
+     "model-context-protocol",
+     "open-source-intelligence",
+     "osint",
+     "osint-tools",
+     "phone-osint",
+     "python",
+     "username-lookup",
+     "username-search"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "rakesh0x/OpenCardboard",
+   "title": "rakesh0x/OpenCardboard",
+   "url": "https://github.com/rakesh0x/OpenCardboard",
+   "summary": "OpenCardboard — local-first chat-to-edit AI video editor. Your footage never leaves your machine.",
+   "published_at": "2026-10-04T09:23:43Z",
+   "metrics": {
+    "stars": 71,
+    "forks": 20,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai",
+     "electron",
+     "local-first",
+     "mcp",
+     "video-editor"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "jimoto-no-llm/rustdsh",
+   "title": "jimoto-no-llm/rustdsh",
+   "url": "https://github.com/jimoto-no-llm/rustdsh",
+   "summary": "Fast Rust launcher for DeepSeek Harness, with clear Claude Code/Codex migration, model setup and lightweight local tools",
+   "published_at": "2026-10-04T06:05:05Z",
+   "metrics": {
+    "stars": 71,
+    "forks": 7,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "claude-code",
+     "cli",
+     "codex",
+     "command-line",
+     "cross-platform",
+     "dashboard",
+     "deepseek",
+     "developer-tools",
+     "dsh",
+     "mcp",
+     "model-context-protocol",
+     "performance",
+     "rust",
+     "token-optimization"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "hujjun/mcd-saver-strategist",
+   "title": "hujjun/mcd-saver-strategist",
+   "url": "https://github.com/hujjun/mcd-saver-strategist",
+   "summary": "麦当劳省钱点餐助手（麦门精算师）｜麦当劳优惠券组合优化 Skill：拉取麦当劳菜单与全部可用优惠券，算出最省的点餐组合，巨无霸套餐 ¥47 → ¥21.9（省 53%）。McDonalds MCP（麦当劳 MCP）coupon optimizer · McDonalds China MCP Server · Agent Skill for WorkBuddy · 麦当劳程序员创意开发大赛参赛作品",
+   "published_at": "2026-10-09T03:21:52Z",
+   "metrics": {
+    "stars": 67,
+    "forks": 1,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skill",
+     "ai-agent",
+     "coupon-optimizer",
+     "coupons",
+     "deterministic-optimization",
+     "fast-food",
+     "mcd",
+     "mcdonalds",
+     "mcdonalds-mcp",
+     "mcp",
+     "mcp-server",
+     "money-saving",
+     "python",
+     "workbuddy",
+     "workbuddy-skill"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "chienbm98/foxprofile",
+   "title": "chienbm98/foxprofile",
+   "url": "https://github.com/chienbm98/foxprofile",
+   "summary": "Free, open-source anti-detect browser profile manager: per-profile fingerprint, cookies and proxy, Camoufox and Chrome engines, desktop app, REST API and MCP server for AI agents. Self-hosted alternative to GoLogin / MoreLogin.",
+   "published_at": "2026-10-07T19:48:26Z",
+   "metrics": {
+    "stars": 66,
+    "forks": 47,
+    "stars_delta": 5
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "anti-detect-browser",
+     "antidetect",
+     "browser-automation",
+     "browser-profiles",
+     "camoufox",
+     "chromium",
+     "cookies",
+     "fastapi",
+     "fingerprint",
+     "flet",
+     "gologin-alternative",
+     "mcp",
+     "multi-account",
+     "playwright",
+     "proxy",
+     "python",
+     "self-hosted",
+     "vietnamese",
+     "web-scraping"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "sepehr071/awesome-iran-mcp",
+   "title": "sepehr071/awesome-iran-mcp",
+   "url": "https://github.com/sepehr071/awesome-iran-mcp",
+   "summary": "19 open-source MCP servers (308 tools) that give AI agents the Iranian web: Digikala, Snappfood, Jabama, MrBilit, Paziresh24, Taaghche and more. Prices in Toman.",
+   "published_at": "2026-10-11T12:42:59Z",
+   "metrics": {
+    "stars": 65,
+    "forks": 6,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-agents",
+     "awesome",
+     "claude",
+     "claude-code-plugin",
+     "digikala",
+     "iran",
+     "llm",
+     "mcp",
+     "mcp-server",
+     "mcp-servers",
+     "model-context-protocol",
+     "persian",
+     "price-comparison",
+     "snappfood",
+     "unofficial-api"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "dongnguyenvie/BashCut",
+   "title": "dongnguyenvie/BashCut",
+   "url": "https://github.com/dongnguyenvie/BashCut",
+   "summary": "Native macOS video editor that coding agents can drive: everything the UI does, Claude Code and Codex can do through the bashcut CLI or MCP server. Layered timeline, captions, voiceover, plugins.",
+   "published_at": "2026-10-02T18:46:34Z",
+   "metrics": {
+    "stars": 62,
+    "forks": 21,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": "Swift",
+    "license": "MIT",
+    "topics": [
+     "agentic-ai",
+     "ai-agents",
+     "apple-silicon",
+     "bashcut",
+     "captions",
+     "claude-code",
+     "cli",
+     "codex",
+     "coding-agents",
+     "homebrew-cask",
+     "macos",
+     "macos-app",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol",
+     "plugins",
+     "swift",
+     "swiftui",
+     "video-editing",
+     "video-editor"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "google/embeddinggemma-2",
+   "title": "google/embeddinggemma-2",
+   "url": "https://huggingface.co/google/embeddinggemma-2",
+   "summary": "",
+   "published_at": "2026-09-14T14:53:42Z",
+   "metrics": {
+    "likes": 1937,
+    "downloads": 115763,
+    "trending_score": 1775,
+    "likes_delta": 237
+   },
+   "extra": {
+    "pipeline_tag": "feature-extraction",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "jialinyyzz/humanizer",
+   "title": "jialinyyzz/humanizer",
+   "url": "https://huggingface.co/jialinyyzz/humanizer",
+   "summary": "",
+   "published_at": "2026-09-11T05:00:16Z",
+   "metrics": {
+    "likes": 1321,
+    "downloads": 46070,
+    "trending_score": 1035,
+    "likes_delta": 242
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Cloudflare/clef",
+   "title": "Cloudflare/clef",
+   "url": "https://huggingface.co/Cloudflare/clef",
+   "summary": "",
+   "published_at": "2026-09-30T21:15:35Z",
+   "metrics": {
+    "likes": 2093,
+    "downloads": 15064,
+    "trending_score": 493,
+    "likes_delta": 65
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "ConwayResearch/Underdog-Saluki-27B-1.0",
+   "title": "ConwayResearch/Underdog-Saluki-27B-1.0",
+   "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
+   "summary": "",
+   "published_at": "2026-10-08T01:47:26Z",
+   "metrics": {
+    "likes": 371,
+    "downloads": 242329,
+    "trending_score": 362,
+    "likes_delta": 49
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Qwen/Qwen3.8-27B",
+   "title": "Qwen/Qwen3.8-27B",
+   "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+   "summary": "",
+   "published_at": "2026-08-05T08:22:59Z",
+   "metrics": {
+    "likes": 17576,
+    "downloads": 6895303,
+    "trending_score": 349,
+    "likes_delta": 69
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "LiquidAI/d1-3B",
+   "title": "LiquidAI/d1-3B",
+   "url": "https://huggingface.co/LiquidAI/d1-3B",
+   "summary": "",
+   "published_at": "2026-10-05T09:55:28Z",
+   "metrics": {
+    "likes": 342,
+    "downloads": 11866,
+    "trending_score": 333,
+    "likes_delta": 42
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
+   "title": "nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
+   "url": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
+   "summary": "",
+   "published_at": "2026-10-04T10:44:11Z",
+   "metrics": {
+    "likes": 284,
+    "downloads": 75302,
+    "trending_score": 264,
+    "likes_delta": 50
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+   "title": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+   "url": "https://huggingface.co/Venastine-Research/Xing4.0-29B-A4B-GGUF",
+   "summary": "",
+   "published_at": "2026-09-17T18:37:31Z",
+   "metrics": {
+    "likes": 705,
+    "downloads": 52788,
+    "trending_score": 250,
+    "likes_delta": 14
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "unsloth/embeddinggemma-2-GGUF",
+   "title": "unsloth/embeddinggemma-2-GGUF",
+   "url": "https://huggingface.co/unsloth/embeddinggemma-2-GGUF",
+   "summary": "",
+   "published_at": "2026-10-06T10:58:50Z",
+   "metrics": {
+    "likes": 283,
+    "downloads": 71914,
+    "trending_score": 248,
+    "likes_delta": 28
+   },
+   "extra": {
+    "pipeline_tag": "feature-extraction",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Aleph-Alpha/Kolibri-1",
+   "title": "Aleph-Alpha/Kolibri-1",
+   "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+   "summary": "",
+   "published_at": "2026-10-02T05:54:02Z",
+   "metrics": {
+    "likes": 914,
+    "downloads": 14018,
+    "trending_score": 228,
+    "likes_delta": 27
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "vllm"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Cloudflare/clef-flash",
+   "title": "Cloudflare/clef-flash",
+   "url": "https://huggingface.co/Cloudflare/clef-flash",
+   "summary": "",
+   "published_at": "2026-09-30T21:15:36Z",
+   "metrics": {
+    "likes": 786,
+    "downloads": 23285,
+    "trending_score": 208,
+    "likes_delta": 30
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+   "title": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+   "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+   "summary": "",
+   "published_at": "2026-09-07T09:41:37Z",
+   "metrics": {
+    "likes": 830,
+    "downloads": 4413142,
+    "trending_score": 170,
+    "likes_delta": 32
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "baidu/Unlimited-OCR",
+   "title": "baidu/Unlimited-OCR",
+   "url": "https://huggingface.co/baidu/Unlimited-OCR",
+   "summary": "",
+   "published_at": "2026-06-19T09:40:33Z",
+   "metrics": {
+    "likes": 4514,
+    "downloads": 1205646,
+    "trending_score": 169,
+    "likes_delta": 85
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-09-01T07:01:09Z",
+   "metrics": {
+    "likes": 1695,
+    "downloads": 2025498,
+    "trending_score": 163,
+    "likes_delta": 37
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "title": "deepseek-ai/DeepSeek-V4.1-Flash",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+   "summary": "",
+   "published_at": "2026-09-10T02:17:58Z",
+   "metrics": {
+    "likes": 4414,
+    "downloads": 1294550,
+    "trending_score": 162,
+    "likes_delta": 50
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+   "title": "orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+   "url": "https://huggingface.co/orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF",
+   "summary": "",
+   "published_at": "2026-08-26T11:15:13Z",
+   "metrics": {
+    "likes": 812,
+    "downloads": 629886,
+    "trending_score": 155,
+    "likes_delta": 53
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Qwen/Qwen3.8-Flash-Next",
+   "title": "Qwen/Qwen3.8-Flash-Next",
+   "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+   "summary": "",
+   "published_at": "2026-08-24T08:24:59Z",
+   "metrics": {
+    "likes": 6148,
+    "downloads": 1934542,
+    "trending_score": 154,
+    "likes_delta": 36
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+   "title": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+   "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+   "summary": "",
+   "published_at": "2026-09-16T23:40:56Z",
+   "metrics": {
+    "likes": 2660,
+    "downloads": 4615462,
+    "trending_score": 151,
+    "likes_delta": 30
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "llama.cpp"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+   "title": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+   "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+   "summary": "",
+   "published_at": "2026-08-28T18:38:03Z",
+   "metrics": {
+    "likes": 2178,
+    "downloads": 1482471,
+    "trending_score": 150,
+    "likes_delta": 27
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+   "title": "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+   "url": "https://huggingface.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+   "summary": "",
+   "published_at": "2026-10-02T03:42:33Z",
+   "metrics": {
+    "likes": 230,
+    "downloads": 1018399,
+    "trending_score": 128,
+    "likes_delta": 27
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8",
+   "title": "dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8",
+   "url": "https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8",
+   "summary": "",
+   "published_at": "2026-09-10T21:02:04Z",
+   "metrics": {
+    "likes": 571,
+    "downloads": 79209,
+    "trending_score": 124,
+    "likes_delta": 45
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+   "title": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+   "url": "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-08-17T15:15:19Z",
+   "metrics": {
+    "likes": 1783,
+    "downloads": 2241701,
+    "trending_score": 117,
+    "likes_delta": 25
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "LiquidAI/d1-omni-600M",
+   "title": "LiquidAI/d1-omni-600M",
+   "url": "https://huggingface.co/LiquidAI/d1-omni-600M",
+   "summary": "",
+   "published_at": "2026-10-05T17:18:48Z",
+   "metrics": {
+    "likes": 115,
+    "downloads": 10942,
+    "trending_score": 114,
+    "likes_delta": 9
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "JetBrains/Mellum2.1-12B-A2.5B-Thinking",
+   "title": "JetBrains/Mellum2.1-12B-A2.5B-Thinking",
+   "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking",
+   "summary": "",
+   "published_at": "2026-09-20T10:52:55Z",
+   "metrics": {
+    "likes": 113,
+    "downloads": 1068,
+    "trending_score": 112,
+    "likes_delta": 10
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Cloudflare/clef-omni",
+   "title": "Cloudflare/clef-omni",
+   "url": "https://huggingface.co/Cloudflare/clef-omni",
+   "summary": "",
+   "published_at": "2026-10-09T04:10:22Z",
+   "metrics": {
+    "likes": 107,
+    "downloads": 600,
+    "trending_score": 106,
+    "likes_delta": 16
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+   "title": "openbmb/MiniCPM-V-4.7-35B-A3B",
+   "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+   "summary": "",
+   "published_at": "2026-10-07T07:07:30Z",
+   "metrics": {
+    "likes": 108,
+    "downloads": 166,
+    "trending_score": 105,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "autotrust/GLM5.3-Flash-E192-DGX-Spark",
+   "title": "autotrust/GLM5.3-Flash-E192-DGX-Spark",
+   "url": "https://huggingface.co/autotrust/GLM5.3-Flash-E192-DGX-Spark",
+   "summary": "",
+   "published_at": "2026-10-09T23:02:37Z",
+   "metrics": {
+    "likes": 132,
+    "downloads": 2982,
+    "trending_score": 93,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "vllm"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "zai-org/GLM-5.3-Flash",
+   "title": "zai-org/GLM-5.3-Flash",
+   "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+   "summary": "",
+   "published_at": "2026-08-25T06:43:14Z",
+   "metrics": {
+    "likes": 2820,
+    "downloads": 6489462,
+    "trending_score": 88,
+    "likes_delta": 19
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "tencent/Youtu-Parsing-Omni",
+   "title": "tencent/Youtu-Parsing-Omni",
+   "url": "https://huggingface.co/tencent/Youtu-Parsing-Omni",
+   "summary": "",
+   "published_at": "2026-10-09T06:42:18Z",
+   "metrics": {
+    "likes": 86,
+    "downloads": 741,
+    "trending_score": 86,
+    "likes_delta": 9
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+   "title": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+   "url": "https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+   "summary": "",
+   "published_at": "2026-08-16T13:18:55Z",
+   "metrics": {
+    "likes": 1298,
+    "downloads": 2231889,
+    "trending_score": 85,
+    "likes_delta": 26
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+   "title": "orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+   "url": "https://huggingface.co/orcarouter/OrcaSAQ-2-Cyber-27B-Uncensored-GGUF",
+   "summary": "",
+   "published_at": "2026-09-26T03:37:50Z",
+   "metrics": {
+    "likes": 515,
+    "downloads": 23735,
+    "trending_score": 84,
+    "likes_delta": 12
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "llama.cpp"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF",
+   "title": "ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF",
+   "url": "https://huggingface.co/ukisai/Swift-1.5-Qwen3.8-27B-GSQ-RCO-GGUF",
+   "summary": "",
+   "published_at": "2026-09-24T13:13:45Z",
+   "metrics": {
+    "likes": 345,
+    "downloads": 815744,
+    "trending_score": 81,
+    "likes_delta": 11
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+   "title": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+   "url": "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+   "summary": "",
+   "published_at": "2026-08-14T03:43:36Z",
+   "metrics": {
+    "likes": 1559,
+    "downloads": 2411985,
+    "trending_score": 79,
+    "likes_delta": 14
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "llama.cpp"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "autotrust/JEV-27B-VL",
+   "title": "autotrust/JEV-27B-VL",
+   "url": "https://huggingface.co/autotrust/JEV-27B-VL",
+   "summary": "",
+   "published_at": "2026-09-30T05:02:23Z",
+   "metrics": {
+    "likes": 3833,
+    "downloads": 1550455,
+    "trending_score": 75.2,
+    "likes_delta": 58
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-07-19T04:33:55Z",
+   "metrics": {
+    "likes": 1038,
+    "downloads": 2024381,
+    "trending_score": 75,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "lightonai/LightOnOCR-3-4B",
+   "title": "lightonai/LightOnOCR-3-4B",
+   "url": "https://huggingface.co/lightonai/LightOnOCR-3-4B",
+   "summary": "",
+   "published_at": "2026-10-06T16:12:40Z",
+   "metrics": {
+    "likes": 75,
+    "downloads": 3222,
+    "trending_score": 75,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12572",
+   "title": "DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models",
+   "url": "https://huggingface.co/papers/2610.12572",
+   "summary": "Online reinforcement learning (RL) fine-tunes diffusion models with black-box rewards, but reverse-process methods such as Flow-GRPO are limited in efficiency by poor credit assignment, while forward-process methods such as DiffusionNFT are efficient yet unstable without carefully tuned exponential-moving-average (EMA) off-policy training. We show that NFT-style objectives contain a hidden forward--reverse consistency force that joint positive--negative training cancels only partially, and that EMA stabilizes training through restoration rather than off-policy rollouts. We introduce DiffusionART (Diffusion Reinforcement with Aggregation-First Reward Tilting), which aggregates each prompt's rewards into a shared reward-improving direction for reverse-process states, removing the consistency force by construction, and adds a trust-region-masked second update for drift-adaptive restoration without EMA tuning. It requires no differentiable reward model, remains effective with fewer samples per prompt, and supports pairwise reward models (DiffusionART-Pairwise). Across image and video generation, DiffusionART trains efficiently and stably without per-task tuning. In particular, on HunyuanVideo-13B with equally weighted visual and motion quality rewards, DiffusionART reaches the late-stage mean reward levels of DiffusionNFT and Flow-GRPO-Fast with 12.02 and 11.72 times fewer GPU hours, respectively, while achieving 28.8% and 53.0% higher mean training rewards.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 228,
+    "github_stars": 72
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12572",
+    "github": "https://github.com/vanzll/DiffusionART",
+    "organization": "KlingAI Research"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13527",
+   "title": "S-Space: Exploring Spatial Workspace in Multimodal Language Models",
+   "url": "https://huggingface.co/papers/2610.13527",
+   "summary": "Multimodal language models (MLLMs) exhibit promising spatial reasoning capabilities, yet the internal mechanisms supporting them remain poorly understood. We uncover S-Space, a linear representation subspace in which object-token representations encode continuous coordinates along horizontal, vertical, and distance axes. Although we identify these axes by differentiating spatial-answer scores with respect to object-token activations, S-Space is intrinsic rather than induced by specific data or prompts, remaining readable under non-spatial questions. We show that S-Space functions as an internal spatial workspace of MLLMs. Perception encodes object locations into it, forming spatial representations that can be directly read out to support accurate spatial judgments. Internal reasoning transforms it for changing viewpoints. Verbal responses selectively access it, evidenced by causal interventions that alter spatial judgments while largely preserving non-spatial responses. Case studies further show that S-Space assigns locations to unseen entities and the observer, and connects physical directions with abstract linguistic meanings, suggesting both the capabilities and limitations of large-scale language training. Finally, we use S-Space as a diagnostic tool for spatial reasoning failures. Direction-word readouts reveal systematic coupling between cardinal and image-relative reference frames. More importantly, a perception-computation decomposition exposes a key bottleneck: MLLMs can form capable spatial representations, yet fall short in the spatial transformations required to reason reliably across viewpoint changes.",
+   "published_at": "2026-10-09T12:48:41Z",
+   "metrics": {
+    "upvotes": 201,
+    "github_stars": 247
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13527",
+    "github": "https://github.com/mirros-lab/s-space",
+    "organization": "MirroS"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12772",
+   "title": "Reflex: Visually Grounded Reactive Humanoid Control",
+   "url": "https://huggingface.co/papers/2610.12772",
+   "summary": "Humans effortlessly react to the world; they adeptly return a tennis shot, catch a falling cup, step aside from a passing cart, or pass a box tossed during truck unloading. These everyday actions require anticipating a moving target and reflexively responding with the whole body within about a second. Such visual reactive whole-body control remains challenging for humanoids, which must (1) coordinate whole-body control, (2) react to object dynamics in real time, and (3) ground perception in egocentric vision. We study catching thrown boxes as a representative task that demands all three capabilities; existing systems cover only part of it, relying on end-effectors, motion capture, or marked objects. We present Reflex, a three-stage framework that learns these capabilities stage by stage while connecting them through a compact representation of object dynamics. First, a state-based policy learns whole-body catching with reinforcement learning. Second, the policy learns to infer the dynamics of a moving box from delayed and incomplete observations. Third, an egocentric RGB-D encoder learns to recover this dynamics representation directly from visual observations while keeping the whole-body controller fixed. This decomposition provides each capability with a direct training signal and makes visual learning substantially more scalable. In simulation, Reflex achieves 85.7% catch success from egocentric RGB-D, compared with 87.9% when given privileged box observations. Temporal visual history is critical: removing it reduces success by 35.6 and 39.8 points on centered and laterally offset throws. On a real Unitree G1, Reflex catches human-thrown boxes with 65% and 40% success at 2.5 and 5 m, reaching 76% and 59% of human catchers' success at the same distances.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 129,
+    "github_stars": 18
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12772",
+    "github": "https://github.com/ToberJ/reflex",
+    "organization": "University of Washington"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12611",
+   "title": "SoftwareGym: Scaling Computer-Use Agent Training with Diverse Synthesized Software Environments",
+   "url": "https://huggingface.co/papers/2610.12611",
+   "summary": "Computer-use agents (CUAs) are rapidly improving, yet synthesizing diverse and reliable software environments at scale remains challenging. Native application environments require substantial construction and integration effort, which limits application coverage and increases the risk of application-specific overfitting. Browser-hosted environments provide limited interaction depth and workflow complexity. These limitations motivate SoftwareGym, an automated pipeline for synthesizing GUI software environments with diverse interfaces, executable functionality, and runtime-verified behavior. It generates structurally diverse designs, realizes them as runnable applications, and uses GUI evaluation with iterative repair to ensure functional reliability. Using SoftwareGym, we synthesize 182 applications across twelve categories and achieve a mean GUI task pass rate of 91.5%. We construct SoftwareGym-Bench, a 120-task evaluation suite spanning the same twelve categories, and use trajectories collected from these environments for CUA training. The resulting model improves Pass@3 from 41.39% to 56.97% on the strictly out-of-domain OSWorld benchmark and achieves 40.0% on SoftwareGym-Bench. These results demonstrate the potential of synthesized software environments as scalable and transferable supervision for CUA training.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 83,
+    "github_stars": 16
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12611",
+    "github": "https://github.com/MrKiing-Jin/SoftwareGym",
+    "organization": "Shanghai Jiao Tong University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13021",
+   "title": "EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents",
+   "url": "https://huggingface.co/papers/2610.13021",
+   "summary": "Continual learning requires models to accumulate past experience and transfer it to new tasks. Despite substantial research on continual learning, existing work remains largely confined to non-embodied settings, without extending to embodied environments. To address this gap, we introduce EmbodiedCLBench, the first benchmark in embodied simulation for evaluating the continual learning capability of self-evolving agents. With compositional generalization as the core evaluation principle, our benchmark evaluates whether agents can first learn from basic tasks and then recombine the acquired skills to solve complex, unseen advanced tasks. Based on EmbodiedCLBench, we conduct extensive experiments across multiple agent harnesses and learning methods, revealing consistent limitations and distinctive behaviors. Our results show that while advanced tasks can be hardly solved under zero-shot setting, the experience from basic tasks enables consistent improvement. Such benefit from the experience remains stable even if the task complexity increases. However, this improvement does not scale accordingly with the number of learning samples, and current agents cannot extract meaningful information from additional experience. Collectively, our findings highlight continual learning as a fundamental yet underexplored capability, and our benchmark offers valuable resources for designing effective self-evolving agents in embodied environments. Our code and dataset are available at https://pku-value-lab.github.io/EmbodiedCLBench-homepage.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 62,
+    "github_stars": 9
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13021",
+    "github": "https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench",
+    "organization": "PKU-VaLuE-Lab"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.07987",
+   "title": "VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs",
+   "url": "https://huggingface.co/papers/2610.07987",
+   "summary": "Multimodal large language models have become the dominant paradigm for visual understanding, but incur substantial costs by encoding inputs into dense, fixed-size patch tokens. However, visual information is unevenly distributed: some regions require fine-grained detail, while others admit compact representations. Downsampling sacrifices this detail, while existing token pruning and adaptive approaches remain limited in content-adaptive granularity, task generalization, and integration with modern MLLMs and serving infrastructure. Overcoming these limitations calls for foundation models that learn, end to end, where-and at what granularity-to allocate visual representations, a native capability we term elastic visual representation weaving. We introduce VisionWeave, establishing this capability in frontier-level MLLMs through large-scale training. It combines two components: a gated spatial pooler constructs coarse-grained representations alongside native fine-grained representations within a shared MRoPE coordinate, while a granularity router learns their content-adaptive allocation. Through self-distillation alone, we validate this capability on Qwen3.5-4B and scale to Qwen3.8-27B with over 30K A100 GPU-hours. Based on Qwen3.8-27B, VisionWeave adaptively adjusts token savings to visual content, saving 43.0% tokens on average while retaining 98.9% native performance across eight benchmarks, versus only 88% performance preserved for token pruning baselines with a fixed 50% savings target. Extensive evaluations confirm robust efficiency-quality trade-offs across diverse tasks, resolutions and video frames. When deployed on SGLang serving engine, our method achieves a 2.3x throughput gain while reducing mean TTFT by 54.4% and mean TPOT by 60.6%. Together, we believe these results position elastic visual weaving as a promising capability for next-generation multimodal models.",
+   "published_at": "2026-10-06T00:00:00Z",
+   "metrics": {
+    "upvotes": 55,
+    "github_stars": 44
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.07987",
+    "github": "https://github.com/FFY0/VisionWeave",
+    "organization": "Qwen"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.38748",
+   "title": "Here the World in Stereo: Learning Dynamic Spatial Correspondence for Immersive Joint Video-Audio Generation",
+   "url": "https://huggingface.co/papers/2609.38748",
+   "summary": "Recent joint video-audio generation models have achieved strong semantic correspondence and temporal synchronization. However, applications such as AR/VR and interactive gaming further require stereo audio to provide an immersive sense, which remains largely overlooked. Effective stereo audio requires the perceived sound location to evolve consistently with the motion of its corresponding visual source. We refer to this property as Dynamic Spatial Correspondence and propose StereoBind, a framework that binds visual source motion to stereo sound generation. StereoBind uses motion tracks to coordinate visual motion and stereo audio through three complementary mechanisms. Visual Motion Binding establishes source-aware audiovisual correspondence, the Spatial Track Encoder captures absolute source positions, and Residual Track RoPE models relative motion. For supervision and evaluation, we construct StereoWorld-29K, a large-scale stereo audio-video dataset with paired motion tracks, and StereoWorldBench for measuring audiovisual spatial consistency. Experiments show that StereoBind substantially improves spatial alignment in stereo audio generation over existing models while preserving overall audiovisual quality.",
+   "published_at": "2026-09-30T00:00:00Z",
+   "metrics": {
+    "upvotes": 51,
+    "github_stars": 11
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.38748",
+    "github": "https://github.com/vivoCameraResearch/StereoBind",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13395",
+   "title": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
+   "url": "https://huggingface.co/papers/2610.13395",
+   "summary": "Coding agents are increasingly used to build programs from scratch as software engineers do rather than to resolve issues within a repository or to generate a repository from a given requirements document. However, scalable verifiable training environments that force agents to discover what is required and to decide how the system should be designed remain scarce. Moreover, existing agent workflows also cannot sustain long-horizon development in which the agent explores the reference program before implementation. To address these challenges, we introduce ProgramGym, a framework consisting of Program-Env and Program-Agent for scalable training environments of long-horizon program reproduction agents. Specifically, Program-Env constructs verifiable training environments from repositories through a feedback-driven loop that repairs runtime sandbox builds and the quality of black-box tests. Using this novel pipeline, we obtain 1,648 training environments spanning C, C++, Go, and Rust. Program-Agent combines a role-isolated workflow of analysis, implementation, and review with revision management for compilation checks and failure recovery. Experiments on ProgramBench show that both Program-Env and Program-Agent improve performance on program reproduction. Fine-tuning on trajectories with these constructed environments raises the performance of Qwen3.8-27B from 34.87% to 42.84%. Program-Agent further raises the base and SFT models to 55.71% and 56.25%, both exceeding some flagship models. We will release the ProgramGym to support further research on coding agents that build programs from scratch.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 48,
+    "github_stars": 10
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13395",
+    "github": "https://github.com/Acm1011/ProgramGym",
+    "organization": "ProgramGym"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13113",
+   "title": "Continually Post-training Small Models via Synthetic Self-distillation",
+   "url": "https://huggingface.co/papers/2610.13113",
+   "summary": "Continual post-training faces a dual challenge of acquisition and retention: models must learn new capabilities while preserving prior knowledge. While Self-Distillation Fine-Tuning (SDFT) mitigates this using self-supervision with in-context demonstrations, it relies on strong in-context learning and instruction-following abilities. Consequently, SDFT fails on smaller models critical for low-latency, on-device use. To enable continual learning at smaller scales, we first identify the root cause of failure. We show that poor acquisition and forgetting correlate linearly with the post-trained model's distribution shift, revealing the necessity of in-distribution learning. We thus introduce Synthetic Self-Distillation (SynthSelf), imitating SDFT's in-distribution rewrite by outsourcing the task to a minimally larger, same-family aligner. Coupled with off-policy supervision and rejection sampling, this provides the high-quality supervision small models require without breaking their original distribution. Evaluations spanning 4 acquisition datasets (including a mixture) and 14 retention benchmarks show SynthSelf consistently outperforms 6 methods (including off- and on-policy distillation) across 3 small model scales. Extensive further analyses confirm SynthSelf paves the way toward effective small-model continual learning.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 41,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13113",
+    "github": null,
+    "organization": "LG AI Research"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12984",
+   "title": "Work2Skill: Capturing Human GUI Experience for Reusable Agent Skill Induction",
+   "url": "https://huggingface.co/papers/2610.12984",
+   "summary": "Computer-use agents can perform increasingly complex GUI tasks, yet unfamiliar software and workflows requiring human domain knowledge remain challenging. Human demonstrations convey procedural knowledge through the same GUI interaction space, but reuse requires interpreting actions in context and separating workflow rules from task-specific details. We thus introduce Work2Skill, a framework that captures human GUI experience for reusable agent skill induction. WorkRecorder provides the framework's infrastructure for collecting this experience, aligning screen recordings, mouse and keyboard events, and available accessibility-tree information. Using WorkRecorder, we construct WorkDemo-350, the first synchronized multimodal dataset of human desktop GUI demonstrations for reusable agent skill induction and downstream evaluation. Its 350 demonstrations are screened for completeness and task success. We then propose an agentic skill-induction method that inspects evidence on demand to produce reusable skills capturing workflow rules, step dependencies, and completion checks. When the same four execution models are equipped with skills induced by each method under shared execution settings, Work2Skill achieves the highest scores and success rates. Mean score improvements over the corresponding No Skill baseline are 4.67--10.54 points on MyPCBench Bounded Action and 3.11--7.50 points on a 286-task subset of OSWorld-Verified. Our code and data are available at https://github.com/china-qijizhifeng/Work2Skill.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 39,
+    "github_stars": 18
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12984",
+    "github": "https://github.com/china-qijizhifeng/Work2Skill",
+    "organization": "Nex AGI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.11361",
+   "title": "SepGen: Multi-Stem Audio-Video Separation and Generation in a Single Model",
+   "url": "https://huggingface.co/papers/2610.11361",
+   "summary": "A 4D audio-visual scene comprises a video, the dynamic geometry it depicts, and the sound sources that populate it, each with its own position and trajectory. Rendering such a scene from a novel viewpoint requires that every source be available as an individual waveform, so that it can be localized in the scene and propagated to the observer before the signals are mixed. Joint audio-video generators can synthesize the video and its soundtrack, but the soundtrack is emitted as a single audio-mix in which the sources are not individually accessible. We present SepGen, which extends a pretrained audio-video generator to emit the video, the mixed soundtrack, and one waveform per captioned source in one joint sampling run. SepGen supports two complementary modes: generation and separation. In generation mode, each source caption specifies what its stem contains. A two-speaker dialogue, for example, comes out as one stem per speaker in the original turn order. In separation mode, the input audio-mix remains clean while the captions specify what to extract, so the model can decompose a recording from a free-text description. We evaluate generation on scenes synthesized from text, and separation on scenes rendered by other generators and on real recordings of speech, music, and sound effects. Given an audio-mix and captions that carry the spoken lines, SepGen outperforms language-conditioned separators, most clearly on speech, and it keeps the lead when the lines are removed from the captions. Code, checkpoints, and datasets are available at https://sepgen.github.io/",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 39,
+    "github_stars": 9
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.11361",
+    "github": "https://github.com/AviadDahan/SepGen",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12341",
+   "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+   "url": "https://huggingface.co/papers/2610.12341",
+   "summary": "Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on heuristic learning (HL), we formalize Adversarial Heuristic Learning (AHL), a paradigm that uses AI agents as learning engines to refine game policies and supporting software while keeping model weights fixed. We introduce AAArena, a benchmark comprising 12 authentic adversarial games and 1,920 archived human programs, with an evaluation protocol modeled on real-world game competitions. Agents interpret rules, choose opponents, analyze replays, and revise game agents to achieve their highest ranking within fixed match and evaluation budgets. We evaluate completedmodels model and harness configurations: Opus5.5 with Claude Code earns 6 gold medals, while no evaluated configuration tops the remaining 6 human ladders. Performance is generally weaker in games with more complex rule specifications. Further experiments show that opponent selection and dense feedback support policy improvement, and that agents learn from both on-policy replays of their own matches and off-policy replays of other players' matches. These results highlight HL's potential in adversarial games and identify persistent challenges in game understanding, strategy implementation, and long-horizon policy development.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 33,
+    "github_stars": 36
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12341",
+    "github": "https://github.com/THU-CST-SAST/AAArena",
+    "organization": "THU-CST-SAST"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.07121",
+   "title": "SoloQ: Calibration-Free Quantization for Diffusion Language Models",
+   "url": "https://huggingface.co/papers/2610.07121",
+   "summary": "Diffusion large language models dLLMs) have emerged as a promising alternative to autoregressive language models through bidirectional diffusion-based token generation. However, their growing model sizes and high inference costs make efficient deployment challenging: full-sequence denoising repeatedly invokes compute-intensive forward passes, while block-diffusion models additionally introduce a memory-intensive KV-cache. Low-bit weight-activation quantization is therefore attractive, yet existing dLLM post-training quantization methods rely on calibration data despite activation distributions shifting across masking states and denoising steps. We present SoloQ, a calibration-free quantization framework that maps weights and activations into a normalized rotated basis with a predictable marginal distribution, enabling data-independent quantization. SoloQ combines a structured K-RPBH rotation with a lightweight rescaling correction for calibration-free quantization. Its predictable post-rotation distribution supports both distribution-matched codebooks and hardware-native NVFP4. For block-diffusion models, SoloQ further applies commit-time KV-cache quantization to compress persistent states without perturbing the actively denoised block. Across full-sequence dLLMs (LLaDA and Dream) and block-diffusion dLLMs(Fast-dLLM v2 and Nemotron-Labs-Diffusion), SoloQ retains accuracy under 4-bit quantization and outperforms calibration-based baselines on knowledge- and reasoning-intensive benchmarks. With NVFP4, SoloQ reduces peak memory by up to 2.61X and accelerates end-to-end inference by up to 2.24X.",
+   "published_at": "2026-10-05T00:00:00Z",
+   "metrics": {
+    "upvotes": 33,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.07121",
+    "github": null,
+    "organization": "University of Southern California"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13912",
+   "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+   "url": "https://huggingface.co/papers/2610.13912",
+   "summary": "Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection. Observed feedback drives policy or workflow improvement and conditional world-model adaptation, while component and compatibility checks govern the retention of updated policy-model pairs. Across diverse computational and scientific domains, RSI-Anything demonstrates substantial gains. In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2% through predictive selection and 31.2% after world-model adaptation, at comparable test usage. Graphical user interface (GUI) evaluations showed higher task completion, while average actions decrease by 39.4%. Across five successive policy versions, laboratory-planning scores more than double from 21.80% to 46.01%. In reaction optimization, RSI-Anything achieves 96.15% mean best observed yield versus 82.16% for Bayesian optimization under the same 40-experiment budget. An end-to-end immune-science application further connects workflow evolution and predictive modeling with therapeutic hypothesis generation. These results demonstrate how predictive world models and retained system updates enable recursive improvement across diverse environments.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 30,
+    "github_stars": 281
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13912",
+    "github": "https://github.com/Gen-Verse/RSI-Anything",
+    "organization": "PhAI Labs"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.37712",
+   "title": "PolyOCR-Venus: Unified OCR Foundation Models for Text-Centric Visual Intelligence",
+   "url": "https://huggingface.co/papers/2609.37712",
+   "summary": "Optical Character Recognition (OCR) is evolving from plain-text transcription toward general visual intelligence, requiring models to recognize, localize, and reason over textual information in complex visual environments. However, existing OCR systems often excel at only some tasks and struggle to balance recognition, parsing, and reasoning across scenarios. In this report, we present PolyOCR, a family of unified OCR foundation models of varying scales. PolyOCR combines a shared instruction-following framework with a large-scale data engine that converts heterogeneous visual resources into quality-verified OCR supervision. We introduce Competence-Guided Policy Optimization, which combines verifier-based Group Relative Policy Optimization with on-policy distillation through sample-wise routing based on teacher reliability and the teacher--student competence gap. We also introduce OCRBench v2.1, our revision of OCRBench v2 with manually verified annotation corrections and task-aligned scoring metrics. Extensive experiments across OCRBench v2.1, CC-OCR, in-house KIE Benchmark, OmniDocBench v1.6 and MDPBench demonstrate that PolyOCR achieves state-of-the-art or highly competitive performance.",
+   "published_at": "2026-09-29T00:00:00Z",
+   "metrics": {
+    "upvotes": 28,
+    "github_stars": 52
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.37712",
+    "github": "https://github.com/inclusionAI/PolyOCR-Venus",
+    "organization": "inclusionAI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12978",
+   "title": "Learning Representations to Guide Pixel Diffusion Transformers",
+   "url": "https://huggingface.co/papers/2610.12978",
+   "summary": "Visual representations are largely developed for understanding, yet what makes them useful for generation remains unclear. We study this question in pixel diffusion transformers and uncover two key insights. First, better representation quality does not necessarily translate into greater generative utility, as externally aligned semantics can be progressively lost during pixel synthesis. Second, architectural separation with specialized pixel decoders mainly redistributes semantic and spatial modeling, without necessarily yielding representations better suited to generation. These insights suggest that a useful generative representation must be both properly formed and actively exploited. Motivated by these insights, we introduce Representation Guidance (RG), which directly forms and exploits internal representations while retaining a plain Transformer architecture. A low-dimensional bottleneck forces generation-relevant information into a compact representation, which is then explicitly used to guide decoder generation by modifying the flow-matching target according to its induced prediction offset. RG learns clearer semantic and spatial structure while scaling efficiently in both parameters and computation. On ImageNet 256x256, RG-L/16 with only 459M parameters outperforms substantially larger pixel diffusion transformers, while RG-XL/16 achieves an FID of 1.55. RG further reaches an FID of 1.74 at 512x512 and extends to text-to-image generation, achieving 0.89 on GenEval and 87.1 on DPG-Bench.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 22,
+    "github_stars": 7
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12978",
+    "github": "https://github.com/Pan-Zihao/Representation-Guidance",
+    "organization": "alibaba"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12570",
+   "title": "Contextual Correction of Parallel Draftsfor Speculative Decoding",
+   "url": "https://huggingface.co/papers/2610.12570",
+   "summary": "Speculative decoding accelerates large language model inference by using a lightweight drafter to propose multiple tokens that are subsequently verified in parallel by the target model. Recent diffusion-based drafters make this paradigm particularly attractive: deep attention-based neural backbones provide strong predictions, while drafting multiple future positions in parallel avoids the sequential cost of autoregressive generation. This parallelism, however, comes at a cost. Tokens within a draft block are predicted without access to the realized identities of preceding draft tokens, removing intra-block dependencies that would naturally be available under autoregressive generation. We introduce DCOCO (DFlash Contextual Corrector), a lightweight mechanism that restores these dependencies while preserving parallel drafting. Rather than committing to each position's top prediction, DCOCO retains multiple candidate tokens and evaluates their contextual compatibility across adjacent draft positions in parallel, enabling contextually informed token selection at low additional cost. Across four verifier backbones and ten benchmarks, DCOCO achieves the highest average throughput in every evaluated configuration, spanning greedy and stochastic decoding with and without extended reasoning, with speedups of up to 6.6x over vanilla decoding. Its advantage persists under concurrent serving: DCOCO outperforms the strongest competing method by 6-23% across 4-32 concurrent requests, while other sequential correctors fall below uncorrected DFlash at these loads. These results demonstrate that recovering intra-block dependencies through parallel contextual scoring delivers consistent acceleration across decoding regimes and serving loads.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 21,
+    "github_stars": 20
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12570",
+    "github": "https://github.com/two-delta/DCOCO",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12569",
+   "title": "SWE-Duel: Towards a Self-Scaling Arena for Coding Agents",
+   "url": "https://huggingface.co/papers/2610.12569",
+   "summary": "Static coding benchmarks are fixed at release. Over time their tasks leak into training data, and stronger agents eventually saturate them. We argue that a benchmark should instead aim to be self-scaling: its tasks and oracles are created at evaluation time, so no content exists in advance to leak, and its difficulty is set by the participating agents rather than fixed at release. We introduce SWE-Duel, an arena in which two coding agents evaluate each other over mirrored Red-Blue turns. In each turn, the Red agent works on a real repository across three context-isolated sessions. It proposes and implements a new feature with feature tests, then embeds a subtle bug in that feature along with sealed bug-triggering tests. The resulting pull request is admitted only if (1) it passes the feature tests and the repository's existing tests while failing exactly the bug tests, and (2) a fresh session of the same agent can repair the bug blind, which rules out unsolvable tasks. The Blue agent then reviews the pull request without being told a bug exists. It wins only if its revision passes all three test suites, and then the two agents swap roles. We run a tournament among 11 model-harness participants on 15 repositories in five languages for 1,500 turns. The leaders win in different ways. GPT-5.5 with Codex CLI ranks first as the strongest solver, repairing 98.3% of the defects it reviews. Claude Opus 4.8 with mini-swe-agent ranks second as the strongest task author, with a 27.3% Red win rate. Finally, within one model family, tasks written by the newest version defeat a fixed-reference solver far more often than those of older versions (42.9% vs. 4.0%), giving preliminary evidence that task difficulty scales with task authoring capability.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 20,
+    "github_stars": 3
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12569",
+    "github": "https://github.com/sweduel/SWE-Duel",
+    "organization": "Singapore Management University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13944",
+   "title": "InstantFusion: A Shared Latent Interface for Heterogeneous Image Generators",
+   "url": "https://huggingface.co/papers/2610.13944",
+   "summary": "Diffusion/flow models have emerged as the de facto paradigms for image generation, giving rise to a diverse family of modern generators with increasingly heterogeneous architectures and representations. Despite their remarkable generation capabilities, the cross-model alignment of latent representations and the consistency of their underlying denoising dynamics remain underexplored. In this work, we uncover an intriguing cross-model compatibility: independently trained generators exhibit similar latent spatial organization, while directly handing off intermediate states between unaligned models can still preserve coarse visual content. Motivated by these observations, we propose InstantFusion, a lightweight shared latent interface that connects the denoising trajectories of heterogeneous image generators. Specifically, to enable flexible cross-model state translation, model-specific Latent AutoEncoders (LAEs) are introduced to project intermediate states from different generators into a shared latent space and decode them into the latent space of a target generator. This shared space is constrained by two complementary objectives: aligning intermediate states derived from the same image at matched noise levels and synchronizing their corresponding local denoising velocities. Once trained, InstantFusion allows denoising to seamlessly transition across frozen generators without requiring a dedicated mapping for every model pair. The versatility of InstantFusion is demonstrated across acceleration, multi-preference composition, cross-architecture on-policy distillation, and cross-model composition, achieving competitive performance across these diverse settings.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 18,
+    "github_stars": 18
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13944",
+    "github": "https://github.com/InternLM/InstantFusion",
+    "organization": "Shanghai AI Laboratory"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.36641",
+   "title": "Inducing Process Supervision from Outcome-Only Reinforcement Learning",
+   "url": "https://huggingface.co/papers/2609.36641",
+   "summary": "Process reward models (PRMs) have become a key component for LLMs, as their step-level feedback supports both post-training and test-time reasoning. However, training strong PRMs remains costly: human step annotation is difficult to scale, while Monte Carlo estimation is computationally expensive and can drift from the intrinsic correctness of steps. To get effective PRMs at low cost, we introduce TIPS (Thinking-Induced Process Supervision), an outcome-only reinforcement learning (RL) framework for training generative PRMs. In TIPS, the model generates a chain-of-thought (CoT) followed by step-level labels and an outcome label. The reward depends solely on whether the predicted outcome matches the ground truth, and the resulting group-relative advantage is used to optimize the entire generated response. Intuitively, when checking intermediate steps helps determine the outcome, more accurate checks can lead to better outcome judgments and higher rewards. Outcome-only RL can therefore reinforce step-level verification without explicit process supervision. We validate the effectiveness of TIPS across math and agent benchmarks and four backbone families. Notably, TIPS-Qwen3-4B-Thinking-2507 reaches 85.2 F1 on ProcessBench with only 3.2K outcome-labeled trajectories, surpassing all evaluated trained PRMs and strong prompt-only judges such as GPT-5.4-Instruct and Claude-4.7-Opus, while still trailing o1-mini. Code and data are available at https://github.com/RUCBM/TIPS.",
+   "published_at": "2026-09-29T00:00:00Z",
+   "metrics": {
+    "upvotes": 18,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.36641",
+    "github": null,
+    "organization": "Renmin University of China"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.07625",
+   "title": "Stateless Language Agents: Scaling Long-Horizon Automated Research",
+   "url": "https://huggingface.co/papers/2610.07625",
+   "summary": "Automated research systems increasingly run LLM agents over long horizons, but more inference does not by itself produce more progress: agents replay growing histories, duplicate one another's work, or stop experimenting while token consumption continues. Yet most evaluations use short budgets or benchmarks that saturate early, leaving these failure modes untested. We trace these failures to two choices: where research state lives and who decides what to try next. We introduce Stateless Language Agents (SLAs), built on the principle of stateful search with stateless agents: no agent carries its conversation across invocations; instead, the harness owns the research state (candidate solutions and measured outcomes) and reconstructs a fresh and role-specific context for every invocation. What each agent sees becomes an explicit design choice rather than a history that grows with the run. We implement this principle in the SLA framework, where a stateless Advisor reads harness-summarized evidence across search directions and assigns concrete experiments to parallel Workers. We evaluate SLA against three recent frameworks on software engineering, kernel optimization, and algorithm design at budgets of up to one billion tokens. SLA achieves the best final result on every task and reaches the strongest kernel baseline's final performance with over 84% fewer tokens. Ablations from shared checkpoints show that focused contexts and explicit assignments each contribute to SLA's progress, with effects that can compound over full runs, while the Advisor consumes less than 0.6% of tokens. These results argue for SLAs, which keep durable research state out of agent conversations, and show that short evaluation horizons can misjudge research systems and their components.",
+   "published_at": "2026-10-06T00:00:00Z",
+   "metrics": {
+    "upvotes": 18,
+    "github_stars": 2
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.07625",
+    "github": "https://github.com/Alex-q-z/stateless-language-agents",
+    "organization": "Stanford University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13947",
+   "title": "Towards Physically Grounded Articulated 3D Assets: A Multi-Agent Pipeline and Benchmark",
+   "url": "https://huggingface.co/papers/2610.13947",
+   "summary": "In this paper, we study physically grounded articulated 3D asset generation---moving the goal from reproducing how objects look to capturing how they move and function. Inspired by the literature on procedural and agentic generation, we present Artisan, a system that extends the latest method Articraft by introducing a multi-agent pipeline with physical simulation feedback, enabling comprehensive attributes beyond geometry, appearance, and physically plausible articulation, such as collision-free motion, stability under gravity, and accurate mass and material properties. Furthermore, we construct a unified benchmark spanning four key aspects: spatial fidelity, physical plausibility, downstream task performance, and overall quality. The benchmark encompasses 100 reference assets from ArtVIP and LightWheel, 50 stability prompts, and 50 ABO objects with reference masses, with protocols evaluating various metrics. Through extensive evaluation of more than 10 representative models, Artisan achieves competitive spatial fidelity while attaining the lowest collision rates and highest stability rates among the evaluated methods. Together, our system and benchmark establish insights for advancing 3D generation towards physically plausible, functionally usable assets.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 18,
+    "github_stars": 55
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13947",
+    "github": "https://github.com/physicalvision/Artisan",
+    "organization": "Nanyang Technological University Singapore"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.11291",
+   "title": "When Do We Need On-Policy Distillation? Distilling on Offline Student Rollouts Is Often Better",
+   "url": "https://huggingface.co/papers/2610.11291",
+   "summary": "On-policy distillation (OPD) has become increasingly popular for transferring teacher capabilities to student models. In this work, we ask a critical research question: Is on-policy sampling always beneficial for distilling arbitrary teacher-student pairs? We show that a simple alternative, Semi-OPD, which distills from offline rollouts generated by the initial student, can often outperform OPD in both accuracy and training efficiency. Across 17 teacher-student pairs ranging from 1.5B to 235B parameters, Semi-OPD outperforms OPD in 14 cases, with up to +13.6% accuracy and 11.4x training speedup. We further find that the choice between OPD and Semi-OPD depends on the alignment between the initial teacher and student, quantified by an output-token overlap ratio: OPD is beneficial only when the two are highly aligned with high overlap ratios. Our deeper investigation suggests that effective distillation requires on-policyness w.r.t. both the student and the teacher. For misaligned pairs, student rollouts can become increasingly off-policy w.r.t. the teacher as context length grows, weakening the distillation signal. In contrast, Semi-OPD is often more stable, as it distills on shorter contexts while covering full trajectories and exposing the student to more teacher-preferred tokens. Beyond proposing Semi-OPD as an efficient alternative, our work motivates the community to rethink when to use OPD and to study stronger OPD variants with meaningful teacher-student pairs.",
+   "published_at": "2026-10-08T05:54:03Z",
+   "metrics": {
+    "upvotes": 17,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.11291",
+    "github": null,
+    "organization": "NVIDIA"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.05014",
+   "title": "MetaKernelBench: Measuring GPU Kernel Knowledge Transfer Beyond Code",
+   "url": "https://huggingface.co/papers/2610.05014",
+   "summary": "Recent GPU kernel optimization agents retain what they learn in knowledge bases or as distilled skills. Kernel benchmarks score each attempt's implementation for correctness and speed but leave the reuse value of retained experience unmeasured. We introduce MetaKernelBench, which measures whether experience distilled from an attempt in one kernel domain-specific language (DSL) improves a fresh attempt at the same problem in another. Its 74 problems are fused subgraphs in six families, each posed as a pair of CuTe DSL and TIRx variants that differ only in the DSL. The agent first attempts each variant solo and is instructed to distill what it learns into a natural-language skill, which is transferred whether or not the source attempt passes verification. The skill is the only extra input to a skill-conditioned attempt by the same model in the other DSL. We compare each skill-conditioned attempt with the solo attempt on the same variant under matched per-attempt budgets, scoring correctness and end-to-end runtime. Across six models and both directions, paired lift over solo attempts ranges from -19% to +29%. Four models gain in both directions, yet regressions occur on 16% to 45% of problems in every model and direction. Outcomes follow the source attempt's result relative to the target's solo attempt rather than source success alone, improving in 71% of comparisons when the source stands above and regressing in 54% when it stands below. MetaKernelBench complements implementation-quality metrics by measuring same-problem cross-DSL kernel knowledge transfer.",
+   "published_at": "2026-10-04T00:00:00Z",
+   "metrics": {
+    "upvotes": 16,
+    "github_stars": 4
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.05014",
+    "github": "https://github.com/YIGE24/MetaKernelBench",
+    "organization": "Westlake ENCODE Lab"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12668",
+   "title": "Recurrent Harness for Agentic Continual Learning",
+   "url": "https://huggingface.co/papers/2610.12668",
+   "summary": "Language model agents increasingly operate over long interaction streams, requiring online adaptation to distribution shifts through continual learning. However, existing agent harnesses typically either evolve their states only through forward information flow or rely on additional replay or validation data for harness optimization. To address this, we propose ReHarness, a recurrent harness framework for agentic continual learning that complements forward read and write with backward revision under a strictly online streaming protocol. We ask what information could have been captured differently in the harness state to better inform the current instance in the stream. Specifically, after each instance, we leverage the resulting trajectory as feedback to revise the reflections retrieved for that instance, thereby propagating feedback backward through the textual harness state. Across three continual learning benchmarks and three language model backbones, ReHarness consistently outperforms strong raw-context baselines, memory- and reflection-based methods, and prompt optimization approaches. Further analysis shows that ReHarness produces source-grounded and meaningful revisions, corrects overgeneralized or outdated experience under distribution shifts, and improves both stability and plasticity during continual learning.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 16,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12668",
+    "github": null,
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.09788",
+   "title": "Judging in Latent Space: Efficient Generative Reward Modeling via Semantics-Preserving Compression",
+   "url": "https://huggingface.co/papers/2610.09788",
+   "summary": "Reward modeling often requires jointly representing and reasoning over multiple evaluation criteria, yet verbalizing this process token by token can incur substantial inference cost. Recent work on latent reasoning suggests that continuous states may support this computation more compactly. We introduce LatentGRM, a latent evaluation framework built on semantic chunking, compression, and reconstruction. By using the structure of rubric-guided evaluations to guide compression, LatentGRM learns compact continuous trajectories that support autonomous pairwise judgments without generating textual assessments. A separate interpreter reconstructs evaluation text from these trajectories, providing an offline view of the information retained under compression. Under matched training data and backbones, LatentGRM achieves competitive aggregate preference accuracy relative to explicit Supervised Fine-Tuning (SFT) judges at both 4B and 8B scales. Across four benchmark domains, LatentGRM-8B compresses evaluation trajectories by 8.9--9.2x and reduces total judge inference time by 6.1--7.0x at vote@5. Controlled rubric interventions show that criterion-dependent preference information is carried through the latent sequence. Together, these results demonstrate that continuous latent evaluation can substantially reduce inference cost while preserving competitive judgment quality.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 16,
+    "github_stars": 7
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.09788",
+    "github": "https://github.com/EADMO/LatentGRM",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.11993",
+   "title": "DataVista: Diagnosing Multimodal LLMs on Data Video Understanding",
+   "url": "https://huggingface.co/papers/2610.11993",
+   "summary": "Data video is a media form that integrates data visualization with video narrative, widely adopted in news reporting and business analysis. Compared with general video understanding, data video understanding places greater emphasis on accurately reading data from animated charts, integrating evidence across charts and time, and understanding how narrative organization and visual design communicate information. Yet existing benchmarks target either general videos or static charts, and data video understanding has not been systematically evaluated. We present DataVista, the first benchmark for data video understanding, containing 961 real-world data videos and 6,775 evaluation questions organized under a three-level progressive capability framework (data perception, temporal reasoning, narrative understanding) with 10 fine-grained question types across five topic domains. Systematic evaluation of 19 mainstream MLLMs shows that the best-performing model, Gemini-3.1-Pro, achieves 70.0% overall accuracy, still far below human expert performance, with models performing worst on Causal Reasoning and Narrative Structure. Increasing frame counts and adding subtitles mainly benefit data perception and temporal reasoning, with limited gains in narrative understanding. Further analysis of model responses identifies typical failure modes in chart reading, evidence judgment, and instruction understanding. The benchmark is available at https://github.com/HKUSTDial/DataVista.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 13,
+    "github_stars": 2
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.11993",
+    "github": "https://github.com/HKUSTDial/DataVista",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12939",
+   "title": "Surfing the Activation Wave: Analyzing the Information and Geometry of LLM Hidden States for Speculative Decoding",
+   "url": "https://huggingface.co/papers/2610.12939",
+   "summary": "Decoder hidden states from different layers of large language models (LLMs) often encode complementary information. However, existing speculative decoding methods typically rely on a small set of target-model layers chosen using fixed, position-based heuristics. Selecting an optimal subset of layers is inherently a combinatorial problem, making exhaustive evaluation infeasible even for moderately deep models. In this work, we present a principled framework for multi-layer hidden-state selection for speculative decoding based on two complementary criteria: informativeness, measured through matrix-entropy analysis, and diversity, quantified using centered kernel alignment (CKA). We investigate layer-wise Shannon entropy, aggregate entropy under hidden-state concatenation, and pairwise CKA dynamics across depth, revealing distinct geometric and informational compartments within decoder representations. Motivated by these findings, we propose entropy and CKA-based layer selection algorithms that favor hidden-state sets that are both highly informative and minimally redundant. As part of this framework, we introduce token-entropy filtering, which removes hidden states associated with low predictive-entropy tokens, thereby improving the quality of layer-selection statistics. In EAGLE3-style speculative decoding, our selected sets outperform fixed baseline choices, including the default [2, N//2, N-3] rule, while providing a clearer explanation of why some defaults can remain competitive. Our results provide a practical recipe for multi-layer hidden-state selection for speculative decoding, insights into the geometry and information in LLM decoder states, and a foundation for extending similar analysis to related applications.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 13,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12939",
+    "github": null,
+    "organization": "Qualcomm AI Research"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.06354",
+   "title": "GraphDecisionBench: Benchmarking System One Models on Graph Tasks",
+   "url": "https://huggingface.co/papers/2610.06354",
+   "summary": "Large language models (LLMs) are increasingly explored for graph understanding and decision-making, while System One models such as Jev select directly from supplied options. However, the capabilities of System One models on graph-related tasks remain unclear. We introduce GraphDecide, a model-independent benchmark that combines structural task profiles, matched graph-text input contrasts and heuristic-proposal controls to diagnose graph decision performance. We evaluate Jev and related choice-based models alongside language-model baselines, covering fourteen model-interface configurations. Jev's results illustrate the benchmark's central distinctions: accurate adjacency recognition does not guarantee broader structural correctness, joint graph-text input does not consistently improve prediction, and feasible construction does not establish high solution quality. Its task contracts, candidate interfaces and scoring rules support comparison across native selectors and language-model adapters. Code and aggregate results are available at https://github.com/VictorYXL/JevGraphBench.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 13,
+    "github_stars": 3
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.06354",
+    "github": "https://github.com/VictorYXL/GraphDecisionBench",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.39566",
+   "title": "From Given to Gathered Evidence: Agentic Learning for Longitudinal Medical Reasoning",
+   "url": "https://huggingface.co/papers/2609.39566",
+   "summary": "Foundation models can serve as clinical agents through tool-use harnesses. However, conventional medical benchmarks assess reasoning over preselected evidence rather than the ability to seek it across clinical records and longitudinal imaging. We propose CASE: a series of role-specific Clinical Agents for Seeking Evidence, together with a tool-use harness and an agentic post-training framework for compact vision-language policy models. We further introduce a longitudinal multimodal benchmark built on UK Biobank, comprising 50,401 clinical questions derived from real-world ICD-10-coded diagnoses of 4,739 participants. Each question links to a patient-specific environment containing clinical context and multi-sequence MRI from baseline and follow-up visits, where agents autonomously select which visits, organs, modalities, slices, and specialist tools to inspect and compare. Supervised fine-tuning transfers evidence-seeking workflows from 14,734 frontier-model interaction trajectories, followed by agentic reinforcement learning on the learner's own environment interactions. Privileged on-policy self-distillation and rubric-based LLM feedback refine evidence-to-conclusion reasoning without prescribing tool sequences. Experiments show that CASE moves beyond question-answer imitation toward transferable investigation policies, strengthening evidence-grounded longitudinal reasoning. Under matched evaluation conditions, our Qwen3-VL-8B based agent achieves over 16% and 10% relative improvements in answer accuracy over GPT-5.4 and Claude Opus 4.8. Code will be available at https://github.com/VinyehShaw/CASE.",
+   "published_at": "2026-09-30T00:00:00Z",
+   "metrics": {
+    "upvotes": 12,
+    "github_stars": 2
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.39566",
+    "github": "https://github.com/VinyehShaw/CASE",
+    "organization": "CASE"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13181",
+   "title": "MixTok: Adaptive Visual Tokenization with Global 1D Tokens and Sparse 2D Refinement",
+   "url": "https://huggingface.co/papers/2610.13181",
+   "summary": "Efficient visual tokenization requires balancing representation compactness with the preservation of fine-grained image content. Conventional grid-based tokenizers allocate tokens uniformly across spatial locations despite non-uniform visual complexity, whereas compact 1D tokenizers aggregate global information but can struggle to preserve local details. We introduce MixTok, a hybrid visual tokenizer that combines a compact 1D global representation with sparse 2D tokens for local refinement. A content-adaptive router ranks candidate locations by refinement priority and determines the number of 2D tokens for each image under a target average token budget. At the highest-scoring locations, 2D token features replace the spatial features recovered from the 1D representation, and a shared decoder reconstructs the image from the resulting mixed features. On ImageNet 256 x 256, MixTok achieves highly competitive reconstruction and generation performance, with an rFID of 1.195 and a gFID of 1.95 at respective average budgets of approximately 128 and 131 content tokens per image.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 12,
+    "github_stars": 2
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13181",
+    "github": "https://github.com/LCGLiChenge/MixTok",
+    "organization": "Zhejiang University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.09633",
+   "title": "Coding-Agent Benchmarks Should Match Their Users' Task Flows",
+   "url": "https://huggingface.co/papers/2610.09633",
+   "summary": "The evaluation of coding agents generally strives to be as realistic as possible. In our study, we collect 4,782 agent sessions of real software engineers in JetBrains IDEs, which we call Production Sessions. Since our subject is interactive agents, we study the sessions with at least three user messages (33% of the sample). These long sessions differ from issue-derived benchmark tasks in two ways: (i) user requests span a far wider mix of task types - questions about the project's code, planning, review, refactoring, execution - and (ii) users switch between types throughout a session. Long-session samples from three public interaction corpora exhibit markedly different Task Flows (the distributions of session lengths, task types, and type-to-type transitions), so no single interaction distribution is universally realistic: benchmarks should name a target use case and calibrate to measurements from it. We present SWE-TaskFlow, an approach for transforming any issue-derived benchmark: it preserves the verified tasks and tests while steering the interaction toward a target Task Flow through prompt splitting and verifiable repository QA, with a TaskFlow Alignment Score (TFAS) for selecting among generated trajectories. In a pilot on 700 SWE-Bench Pro tasks, solving the task sequentially in several steps approximately doubles agent cost without a stable change in resolve rate: the interaction protocol itself is an important dimension of evaluation.",
+   "published_at": "2026-10-07T00:00:00Z",
+   "metrics": {
+    "upvotes": 11,
+    "github_stars": 0
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.09633",
+    "github": "https://github.com/JetBrains-Research/SWE-TaskFlow-Generation-Public",
+    "organization": "JetBrains Research"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2609.37950",
+   "title": "Video-RSI: Recursive Self-Improvement of Video Understanding Agents via Harness Evolution",
+   "url": "https://huggingface.co/papers/2609.37950",
+   "summary": "Video understanding agents acquire evidence through an executable harness that controls what they observe and how they use those observations. However, execution traces contain only the evidence acquired by the current harness, leaving competing explanations for failure unresolved and limiting the basis for self-improvement. We introduce Video-RSI, a framework for recursive self-improvement in which a video understanding agent uses its own language model to revise its harness. Through active video investigation, the model revisits the original training videos to test competing failure explanations with additional observations, grounding proposed changes in evidence beyond the existing trace. Cost-aware harness evolution turns these diagnoses into reusable revisions and determines which revisions to retain by considering both answer accuracy and visual cost. Across our evaluation settings on video understanding benchmarks, the evolved agent improves accuracy while processing fewer frames and achieves competitive accuracy-efficiency trade-offs against existing video understanding agents. These results demonstrate the potential for video understanding agents to improve their own evidence acquisition and use through harness evolution. Code is available at https://github.com/bingjunluo/Video-RSI .",
+   "published_at": "2026-09-29T00:00:00Z",
+   "metrics": {
+    "upvotes": 11,
+    "github_stars": 17
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2609.37950",
+    "github": "https://github.com/bingjunluo/Video-RSI",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13627",
+   "title": "AMLworld-Compact: Importance-Weighted Downsampling for Cost-Effective LLM Evaluation and Error Diagnosis",
+   "url": "https://huggingface.co/papers/2610.13627",
+   "summary": "Evaluating large language models (LLMs) on AMLworld's smallest test splits is costly because each of over a million targets requires a separate graph prompt. Sampling reduces this cost, but small balanced subsets change unweighted precision and F1. We introduce AMLworld-Compact, an evaluation set that retains every illicit test transaction and samples benign transactions from supervised-score strata. Its HT-Coreset protocol reduces evaluation targets by 271x and 611x on HI-Small and LI-Small. Horvitz-Thompson weights give unbiased full-test confusion-count estimates for fixed predictions; recall is exact, while precision and F1 are ratio estimates. In a held-out study using Graph Feature Preprocessor (GFP) features, one boosted-tree family defines strata for evaluating the other over 500 draws per configuration. At the released sizes, F1 RMSE is 0.00-2.58 percentage points versus 4.44-7.41 for uniform sampling with HT weights; conservative intervals remain broad. Under the evaluated graph prompts, seven open-weight LLMs have weighted precision near the predict-all-illicit baseline. In an outcome-stratified audit of 1,000 HI-Small few-shot outputs from one run per model, lexical checks pass for 84.5% of correct and 56.2% of incorrect binary verdicts, so these markers do not establish correctness. We release the evaluation sets, construction code, and audit tools at https://huggingface.co/datasets/typhoon-ai/AMLworldCompactEval and https://github.com/nat-nischw/AMLworld-Compact.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 11,
+    "github_stars": 0
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13627",
+    "github": "https://github.com/nat-nischw/AMLworld-Compact",
+    "organization": "Typhoon"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.12114",
+   "title": "Universal Textual Teaching for LLMs",
+   "url": "https://huggingface.co/papers/2610.12114",
+   "summary": "Knowledge distillation (KD) transfers knowledge from stronger Teacher models to weaker Student models, but most methods require training the Student parameters, thereby binding the distilled knowledge to a specific architecture and checkpoint. This implicit representation is difficult to interpret or reuse across models and limits KD for API-only or costly-to-train models. This paper studies knowledge transfer for large language models (LLMs). We introduce Universal Textual Teaching (UTT), a parameter-update-free framework that distills observed Teacher-Student knowledge gaps into a textual, interpretable, and reusable natural-language artifact called Primer. Specifically, UTT first identifies representative gap cases through paired evaluations, and iteratively updates the Primer via multi-role interactions: the Student attempts each task, the Prompter turns evaluation feedback into a teaching instruction, the Teacher provides a targeted demonstration, and the Synthesizer consolidates validated lessons. Empirically, on the challenging math (Omni-MATH-2) and code generation (KernelBench) tasks, extensive results confirm the effectiveness of the method: UTT remarkably raises the Student's accuracy from 9.4% to 48.6% and Fast1 accuracy from 9% to 35% on KernelBench, while increasing mathematical reasoning accuracy from 27.6% to 51.7%. UTT also performs better than representative prompt engineering and parameter-based KD methods. Of note, UTT is shown to be generalizable across different Teachers and Students: a Primer synthesized for one Teacher-Student pair can generalize to other Students that do not participate in the synthesis.",
+   "published_at": "2026-10-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 10,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.12114",
+    "github": null,
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.10288",
+   "title": "TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning",
+   "url": "https://huggingface.co/papers/2610.10288",
+   "summary": "Large-scale egocentric human interaction data is becoming an important source of physical supervision for embodied learning, yet video alone leaves the contact and pressure that characterize physical interaction unrecorded. Recent visual-tactile datasets provide this missing supervision, but their synchronized tactile data remain far smaller in volume than human video. Moreover, the largest resources often merge recordings from different sensors or annotation procedures, which makes the effect of data scale difficult to isolate. We therefore introduce TouchScale, a 500-hour dataset of contact-rich human interaction recorded with a single unified wearable setup. Its approximately 2K predefined task descriptions span everyday activities and structured manipulation, and each recording temporally aligns egocentric RGB-D video with wrist RGB video and dense full-hand bimanual tactile measurements. Compared with prior tactile data, training on the full TouchScale raises zero-shot contact IoU on data from an unseen tactile sensor from 0.134 to 0.383. Pretraining a visual encoder on TouchScale also yields the highest action recognition accuracy on three benchmarks among the compared visual-tactile datasets. Used for visual-tactile mid-training of a robot policy, TouchScale improves the average real-world success rate across four contact-rich manipulation tasks from 22.5% to 57.5%. With the sensor and collection protocol held fixed, both zero-shot tactile prediction and robot success show an overall upward trend as more TouchScale data is used. These results suggest that human visual-tactile data collected at scale with consistent sensing benefits both perception and robot manipulation. We will publicly release TouchScale, including all synchronized visual-tactile recordings and reconstructed object models, to support future research on scalable visual-tactile learning.",
+   "published_at": "2026-10-07T00:00:00Z",
+   "metrics": {
+    "upvotes": 10,
+    "github_stars": 8
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.10288",
+    "github": "https://github.com/phai-lab/touchscale",
+    "organization": "2077AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13171",
+   "title": "PreSTO: Predictive Subtree Prefetching for Fast LLM Power Sampling",
+   "url": "https://huggingface.co/papers/2610.13171",
+   "summary": "Power sampling improves large language model (LLM) reasoning at test time by sampling from a sharpened version of the base model's distribution. Its sampler, PowerMH, is slow because its Metropolis--Hastings (MH) updates are sequential: each accept/reject decision sets the state from which the next proposal is generated. Prior work reduces this cost by changing the sampler or the model (e.g., sequential Monte Carlo, approximate lookahead, distillation). We propose Predictive SubTree Prefetching (PreSTO), which accelerates PowerMH by prefetching future proposals and provably leaves its MH transition kernel unchanged. PreSTO views future MH outcomes as a tree of accept/reject decisions: in each model call, it generates the proposals of a prefetched subtree of this tree in one batch, then follows the realized path with the original MH acceptance rule. We also observe that MH reaches only a sparse, nearly unary part of each prefetched subtree, we further design a predictive traversal rule that chooses the subtree to maximize the predicted number of completed transitions. Across seven datasets and five base LLMs, PreSTO achieves median speedups of 1.71times, 1.91times, and 2.33times on PowerMH and its follow-ups EntropyCut and MultiTryMH, respectively; on the first two, it makes a median of 3.9times fewer model calls, each only 2.1times longer. On LCB V6 with Qwen3.5-9B, the predictive traversal rule is a further 1.25times--1.37times faster than the default breadth-first traversal.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 10,
+    "github_stars": 0
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13171",
+    "github": "https://github.com/Nan-Jiang-Group/PreSTO",
+    "organization": "Morgan Stanley"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.00898",
+   "title": "When Do Biological Reasoning Models Use Their Biological Inputs?",
+   "url": "https://huggingface.co/papers/2610.00898",
+   "summary": "Biological reasoning models use post-training to connect LLMs to biological foundation model representations and biological text. Their benchmark accuracy is taken as evidence that LLMs reason over these inputs. We test this assumption in six biological reasoning models across DNA, protein, and single-cell tasks. We perturb one biological input while holding the query and other inputs fixed, construct evidence conflicts that pair the foundation model representation of one genome, protein, or cell with the text of another, fit linear probes to the representations the language model receives, and analyze reasoning traces against the biological inputs. Evo2 and ESM3 contribute little to BioReason and BioReason-Pro performance on the evaluated tasks. Shuffling the DNA sequence barely changes BioReason disease prediction accuracy, and in evidence conflicts the two models follow the text in 97.9% and 99.7% of cases. Linear probes trained on the Evo2 and ESM3 representations predict the task targets, so these foundation models encode information relevant to the task, but provide limited overall performance improvement to BioReason and BioReason-Pro. In contrast, foundation model inputs contribute to ChatNT, Prot2Text-V2, and CellWhisperer performance, and differentially expressed genes in the gene sentence contribute to Cell2Sentence-Scale performance. Across SFT and RL checkpoints of BioReason-Pro and 42 BioReason checkpoints, increases in accuracy do not imply greater performance contributions from biological inputs. BioReason traces misstate nucleotide changes, while BioReason-Pro traces describe functions omitted from final predictions under evidence conflicts. We find that current post-training strategies do not ensure that foundation model representations contribute to task performance.",
+   "published_at": "2026-10-01T00:00:00Z",
+   "metrics": {
+    "upvotes": 10,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.00898",
+    "github": null,
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2610.13205",
+   "title": "Rethinking Relative Policy Differences Transfer of On-Policy Distillation",
+   "url": "https://huggingface.co/papers/2610.13205",
+   "summary": "On-policy distillation (OPD) trains a target policy on its own rollouts using token-level supervision from a stronger teacher, but typically relies on the teacher being substantially more capable than the target. Recent work relaxes this requirement by transferring the relative policy difference between an expert and a reference policy rather than the expert's absolute distribution. Yet it remains unclear which differences provide useful supervision and which targets can benefit from them. We develop a unified view in which the log-probability ratio between a proxy expert and a proxy reference defines an implicit reward for KL-regularized policy optimization. This formulation induces an on-policy update for the target, recovers conventional OPD as a special case, and enables any-to-any transfer across models that differ in scale, training stage or generation. Our systematic experiments yield three findings. First, a stronger expert is not necessarily a better source of supervision: differences induced by task-specific training, including reinforcement learning and supervised fine-tuning, transfer consistently, whereas those arising from model scale alone transfer weakly or not at all. Second, the expert and reference serve complementary roles: the expert provides the capability to be transferred, while the reference filters out shared behavior and isolates the relevant residual. Third, even a useful difference does not transfer to every target: success requires the induced update to move the target toward the expert and generalize beyond sampled rollouts. Raw policy distance does not predict transferability, whereas an appropriate reference can rescue otherwise unsuccessful transfer. These results characterize when relative policy differences provide effective supervision for OPD.",
+   "published_at": "2026-10-09T00:00:00Z",
+   "metrics": {
+    "upvotes": 10,
+    "github_stars": 3
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2610.13205",
+    "github": "https://github.com/KnowledgeXLab/A2-OPD",
+    "organization": "KnowledgeXLab@Shanghai AI Lab"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50047422",
+   "title": "The gap in shared understanding of LLM capability is widening",
+   "url": "https://twitter.com/karpathy/status/2109361546505966046",
+   "summary": "",
+   "published_at": "2026-10-11T20:20:52Z",
+   "metrics": {
+    "points": 680,
+    "comments": 990
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50047422"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50045984",
+   "title": "Total Annihilation, rebuilt for modern computers",
+   "url": "https://nanolathe.gg",
+   "summary": "",
+   "published_at": "2026-10-11T18:04:47Z",
+   "metrics": {
+    "points": 666,
+    "comments": 249
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50045984"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50060694",
+   "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+   "url": "https://github.com/openai/codex/issues/48195",
+   "summary": "",
+   "published_at": "2026-10-12T18:29:04Z",
+   "metrics": {
+    "points": 437,
+    "comments": 229
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50060694"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50055304",
+   "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
+   "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
+   "summary": "",
+   "published_at": "2026-10-12T12:16:42Z",
+   "metrics": {
+    "points": 417,
+    "comments": 637
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50055304"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50058507",
+   "title": "GLM-Legal",
+   "url": "https://z.ai/blog/glm-legal",
+   "summary": "",
+   "published_at": "2026-10-12T16:11:45Z",
+   "metrics": {
+    "points": 414,
+    "comments": 237
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50058507"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50058528",
+   "title": "A Modern Web App in C",
+   "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+   "summary": "",
+   "published_at": "2026-10-12T16:13:10Z",
+   "metrics": {
+    "points": 371,
+    "comments": 159
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50058528"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50057278",
+   "title": "Why aren't AI companies being charged for hacking?",
+   "url": "https://mortoray.com/why-arent-ai-companies-being-charged-for-hacking/",
+   "summary": "",
+   "published_at": "2026-10-12T14:52:37Z",
+   "metrics": {
+    "points": 309,
+    "comments": 328
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50057278"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50059523",
+   "title": "AI coding agents generate more code, but not more software",
+   "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+   "summary": "",
+   "published_at": "2026-10-12T17:14:01Z",
+   "metrics": {
+    "points": 304,
+    "comments": 264
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50059523"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50060500",
+   "title": "Just say no to OpenAI and Anthropic",
+   "url": "https://micahflee.com/just-say-no-to-openai-and-anthropic/",
+   "summary": "",
+   "published_at": "2026-10-12T18:17:29Z",
+   "metrics": {
+    "points": 153,
+    "comments": 142
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50060500"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50059446",
+   "title": "Feds got warrants to use fake cell towers to hunt down Don Lemon's producer",
+   "url": "https://www.wired.com/story/feds-got-warrants-to-use-fake-cell-towers-to-hunt-down-don-lemons-producer/",
+   "summary": "",
+   "published_at": "2026-10-12T17:08:16Z",
+   "metrics": {
+    "points": 143,
+    "comments": 97
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50059446"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50059096",
+   "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+   "url": "https://news.ycombinator.com/item?id=50059096",
+   "summary": "",
+   "published_at": "2026-10-12T16:46:34Z",
+   "metrics": {
+    "points": 93,
+    "comments": 62
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50059096"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50061603",
+   "title": "AI models may be capable of self-replicating without access to a datacenter",
+   "url": "https://www.anthropic.com/research/self-replicating-ai",
+   "summary": "",
+   "published_at": "2026-10-12T19:25:29Z",
+   "metrics": {
+    "points": 75,
+    "comments": 94
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50061603"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50049588",
+   "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
+   "url": "https://github.com/SaarthurR/atticus-mac",
+   "summary": "",
+   "published_at": "2026-10-12T00:15:12Z",
+   "metrics": {
+    "points": 61,
+    "comments": 9
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50049588"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50056063",
+   "title": "\"Just Ask Claude\" Is a Rare and Valuable Skill",
+   "url": "https://justismills.substack.com/p/just-ask-claude-is-a-rare-and-valuable",
+   "summary": "",
+   "published_at": "2026-10-12T13:20:04Z",
+   "metrics": {
+    "points": 53,
+    "comments": 62
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50056063"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50060311",
+   "title": "Show HN: Opus 5.5 made a fully featured Figma clone in 3 hours / 8 prompts",
+   "url": "https://www.mana.space/home/rZfbotNWAXegQypmpkzaAPFC6Mp1/Apps/Figma%20Next%20Launch",
+   "summary": "",
+   "published_at": "2026-10-12T18:03:56Z",
+   "metrics": {
+    "points": 39,
+    "comments": 41
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50060311"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50049132",
+   "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
+   "url": "https://github.com/swimmingbrain/brainotes",
+   "summary": "",
+   "published_at": "2026-10-11T23:22:29Z",
+   "metrics": {
+    "points": 34,
+    "comments": 2
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50049132"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50044919",
+   "title": "We solved SQLite's single-writer limitation",
+   "url": "https://marcobambini.substack.com/p/we-solved-sqlites-single-writer-limitation",
+   "summary": "",
+   "published_at": "2026-10-11T16:25:25Z",
+   "metrics": {
+    "points": 32,
+    "comments": 0
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50044919"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50047257",
+   "title": "Cognitive Decline or Sanity Incline?",
+   "url": "https://mdelcaro.substack.com/p/cognitive-decline-or-sanity-incline",
+   "summary": "",
+   "published_at": "2026-10-11T20:05:03Z",
+   "metrics": {
+    "points": 32,
+    "comments": 18
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50047257"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+   "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
+   "url": "https://simonwillison.net/2026/Oct/12/python-3-15/",
+   "summary": "Python 3.15 is here ! Here's the essential What's new in Python 3.15 guide, this year curated by 3.14 and 3.15 release manager Hugo van Kemenade. As someone who builds open source software that works in every supported Python version, I get to say goodbye to Python 3.10 and start embracing features from Python 3.11. First, some highlights from Python 3.15. Explicit lazy imports I'm most excited about Explicit lazy imports from PEP 810 . These let you import modules like so: lazy import json lazy from pathlib import Path The module will then be imported the first time those symbols are used in ",
+   "published_at": "2026-10-12T18:15:38Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+   "title": "Meta releases its first frontier model, Muse Wonder",
+   "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+   "summary": "Where Muse Spark aimed to be a lightweight model that could perform at low latency, the Wonder models are larger and said to be more capable, with higher benchmark scores and better results on complex tasks like coding.",
+   "published_at": "2026-10-12T17:56:56Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+   "title": "WindBorne wins a hefty US Air Force contract for its balloon data",
+   "url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+   "summary": "A Silicon Valley startup that uses weather balloons and AI to predict the weather won a U.S. military contract worth almost $50 million.",
+   "published_at": "2026-10-12T17:19:14Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+   "title": "Meta has some Wonder Full new AI models",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model",
+   "summary": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available […]",
+   "published_at": "2026-10-12T17:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview",
+   "title": "Push attribution for commits in limited public preview",
+   "url": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview",
+   "summary": "GitHub now durably records the authenticated user who pushed each commit and surfaces that pusher identity in the UI and API alongside the existing author and committer fields. Commit author… The post Push attribution for commits in limited public preview appeared first on The GitHub Blog .",
+   "published_at": "2026-10-12T16:30:11Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+   "title": "Honeyjar offers AI tools to improve PR and comms at every company",
+   "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+   "summary": "Journalists, entrepreneurs, and even some public relations professionals will tell you that the PR process is broken. But could AI actually make things better?",
+   "published_at": "2026-10-12T15:45:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
+   "title": "Microsoft president says UK is best placed to drive AI regulation",
+   "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
+   "summary": "Microsoft president Brad Smith calls for urgent AI regulation, saying milk and washing machines have more oversight than AI companies.",
+   "published_at": "2026-10-12T15:31:19Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes/",
+   "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+   "url": "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes/",
+   "summary": "Blueprints AI, a bootstrapped startup based in Santa Monica, developed software that produces code-compliant construction blueprints from a photo, PDF, or sketch.",
+   "published_at": "2026-10-12T15:27:59Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-10-12-anonymous-organization-level-registries-for-dependabot",
+   "title": "Anonymous organization-level registries for Dependabot",
+   "url": "https://github.blog/changelog/2026-10-12-anonymous-organization-level-registries-for-dependabot",
+   "summary": "You can now select Anonymous as the authentication method for an organization-level private registry. Use it for registries that Dependabot can reach without credentials, such as an internal package mirror… The post Anonymous organization-level registries for Dependabot appeared first on The GitHub Blog .",
+   "published_at": "2026-10-12T14:04:16Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/techcrunch-disrupt-2026-starts-tomorrow-your-final-chance-to-secure-up-to-100-ticket-savings/",
+   "title": "TechCrunch Disrupt 2026 starts tomorrow: Your final chance to secure up to $100 ticket savings",
+   "url": "https://techcrunch.com/2026/10/12/techcrunch-disrupt-2026-starts-tomorrow-your-final-chance-to-secure-up-to-100-ticket-savings/",
+   "summary": "Tomorrow at 8 a.m. PT, it all begins z— 10,000+ founders, investors, and tech operators will gather at San Francisco’s Moscone West for TechCrunch Disrupt 2026 for three days of ideas, connections, and startups shaping what comes next. This is your last 24 hours to secure ticket savings of up to $100, and get 50% off a second.",
+   "published_at": "2026-10-12T14:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+   "title": "Microsoft’s new AI chip makes it less reliant on Nvidia’s GPUs",
+   "url": "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout",
+   "summary": "Microsoft is announcing its third-generation Maia in-house AI chip today, designed to be the \"primary AI inference system\" for Microsoft's products and services. Maia 300 not only improves the cost and efficiency of running AI workloads in the cloud, it's also more capable of handling the latest reasoning models and agentic tasks. Maia 300 will […]",
+   "published_at": "2026-10-12T13:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/12/former-plaud-exec-raises-26m-for-ai-app-that-listens-to-you-in-the-background/",
+   "title": "Former Plaud exec raises $26M for AI app that listens to you in the background",
+   "url": "https://techcrunch.com/2026/10/12/former-plaud-exec-raises-26m-for-ai-app-that-listens-to-you-in-the-background/",
+   "summary": "One of the core promises of AI is that the more it knows about a person, the better it will be able to assist them with tasks and make appropriate suggestions, which, if you'll believe the tech companies, requires apps and devices to listen, watch, or record users' activity all the time and gather all possible context.",
+   "published_at": "2026-10-12T12:47:59Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Oct/12/datasette-ports/",
+   "title": "datasette-ports 0.4",
+   "url": "https://simonwillison.net/2026/Oct/12/datasette-ports/",
+   "summary": "Release: datasette-ports 0.4 My plugin for detecting and listing all Datasette instances on the current machine now works with the latest version, and displays the detected PID as well. Knowing the PID makes it easier to attach the new Python 3.15 profiler . Tags: datasette",
+   "published_at": "2026-10-12T04:57:07Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+   "title": "Will the HomeView be Apple’s first smart home success?",
+   "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+   "summary": "Over the past couple of years, we’ve seen multiple reports that Apple was working on a new smart home product, but now it seems the product has a name and a launch date.",
+   "published_at": "2026-10-11T21:14:40Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/",
+   "title": "48 hours to TechCrunch Disrupt 2026 — hear directly from the people building what’s next",
+   "url": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/",
+   "summary": "Less than 48 hours, TechCrunch Disrupt 2026 starts in San Francisco’s Moscone West. Save up to $100 on your pass before prices increase at the door, plus get 50% on a second pass. Or score other deals.",
+   "published_at": "2026-10-11T19:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+   "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai",
+   "summary": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]",
+   "published_at": "2026-10-11T18:33:56Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+   "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+   "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+   "summary": "On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.",
+   "published_at": "2026-10-11T16:52:33Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+   "title": "These execs think voice AI hasn’t reached its ChatGPT moment yet",
+   "url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+   "summary": "Voice AI often misses important points for its context layer, and causes the whole pipeline to break.",
+   "published_at": "2026-10-11T14:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  }
+ ]
+}
