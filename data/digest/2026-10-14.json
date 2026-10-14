@@ -1,0 +1,740 @@
+{
+ "date": "2026-10-14",
+ "generated_at": "2026-10-14T00:45:48Z",
+ "models_used": [
+  "gemini-3.8-flash",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 9,
+ "tldr": [
+  "Google 正式發表新一代旗艦模型 Gemini 4 Argon，大幅強化複雜程式碼編寫與自主 Agent 推理表現。",
+  "LangChain 釋出全新 MCP 支援與開源框架 Open SWE，能直接以 LangGraph 中斷機制整合工具並打造 Coding Agent。",
+  "開源社群聚焦上下文管理與自動化，推出 PPT 自動生成工具、Agent 上下文壓縮機制及低顯存推論方案。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c123",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more"
+      }
+     ],
+     "title": "LangChain 重構 MCP 支援：納入核心套件並支援 LangGraph 中斷機制",
+     "tags": [
+      "LangGraph",
+      "MCP",
+      "工具整合",
+      "快取"
+     ],
+     "summary": "LangChain 宣布因應 MCP 新版規範大幅改版其支援架構。新版 MCP 轉為無狀態（Stateless）核心，不再依賴固定連線階段（Session），徹底解決了伺服器擴展與重新部署中斷連線的問題。LangChain 將 MCP 直接整合至主套件的 langchain.mcp，透過 FastMCP 支援新舊協定，並將原本的 MultiServerMCPClient 整合為 MCPAdapter。此外，新版還支援工具清單的客戶端快取，以及工具要求補充資訊或確認時的 Elicitation 機制，並將其直接轉化為 LangGraph 的 interrupt 流程。",
+     "key_points": [
+      "MCP 核心移至主套件，安裝指令改為 pip install \"langchain[mcp]\"，統一由 MCPAdapter 管理。",
+      "MCP 走向無狀態協定，伺服器重啟不中斷對話，免去黏性路由（Sticky Routing）與共享 Session 負擔。",
+      "支援工具清單快取以減少重複請求，並將工具中途確認（Elicitation）無縫轉化為 LangGraph interrupt。"
+     ],
+     "how_to_use": "這對你的 LangGraph 專案非常實用。如果你的自動化流程包含高風險操作（如資料庫刪除、發送簽核通知），過去需要自己寫中斷邏輯，現在可直接透過 MCP 的 Elicitation 觸發 LangGraph interrupt 暫停等待確認。此外，工具快取也能改善本地 Ollama 或 Gemini 呼叫工具時的反覆開銷。",
+     "fallback": false
+    },
+    {
+     "ref": "c129",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents"
+      }
+     ],
+     "title": "LangChain 開源 Open SWE：以 LangGraph 打造企業內部 Coding Agent",
+     "tags": [
+      "LangGraph",
+      "Coding Agent",
+      "多 Agent",
+      "開源框架"
+     ],
+     "summary": "LangChain 參考了 Stripe、Ramp 與 Coinbase 內部 Coding Agent 的架構實務，正式開源基於 Deep Agents 與 LangGraph 的 Open SWE 框架。官方歸納出企業級 Agent 的五大共通模式：在隔離雲端沙箱內執行以控制錯誤影響範圍、精選且嚴格維護的工具集而非盲目擴充、優先整合 Slack 等現有工作通訊管道、在啟動初期從 Issue 或 PR 預先帶入完整脈絡以減少探查工具呼叫，以及利用子 Agent 編排協作來拆解複雜任務。",
+     "key_points": [
+      "基於 LangGraph 與 Deep Agents 建構，將業界實踐的內部開發 Agent 架構開源化。",
+      "強調隔離沙箱執行、精選工具庫（Curated Toolsets）與 Slack 原生介面整合。",
+      "採用子 Agent（Subagent）拆解任務與啟動時預載完整脈絡，降低模型重複試錯的開銷。"
+     ],
+     "how_to_use": "你可以直接參考其 LangGraph 多 Agent 編排架構。在設計內部文件處理或資料庫自動化流程時，借鑑其「啟動預載完整資料脈絡」與「子 Agent 各自隔離權責」的作法，即使搭配免費的 Gemini 或本地 Ollama，也能有效減少工具呼叫次數並提高執行的穩定度。",
+     "fallback": false
+    },
+    {
+     "ref": "c131",
+     "source": "rss",
+     "id": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents"
+      }
+     ],
+     "title": "Shopify 開放商品型錄：允許第三方 AI Agent 代客瀏覽與下單結帳",
+     "tags": [
+      "Agent Commerce",
+      "電商",
+      "授權機制"
+     ],
+     "summary": "Shopify 宣布擴大支援 Agent 電商功能，允許使用者設定個人 AI Agent 代為瀏覽及購買旗下超過 10 億件商品型錄。消費者只需將 Agent 綁定至 Shop 平台帳號，便能透過一鍵 Shop Pay 在與 Agent 對話期間完成交易，訂單也會自動同步回 Shop App。官方宣稱該功能如同個人購物助理，使用者可自訂預算上限或限制出貨速度等防護規則（Guardrails），但每筆最終交易仍強制要求人類手動批准。",
+     "key_points": [
+      "開放超過 10 億件商品型錄給各類 AI Agent，不再侷限於特定合作夥伴。",
+      "整合 Shop Pay 機制，讓 Agent 在對話介面中直接完成結帳授權流程。",
+      "具備預算限制等防護規則，並採用人類介入（Human-in-the-loop）機制強制每筆訂單需手動核准。"
+     ],
+     "how_to_use": "這項商業功能跟你的內部資料分析與自動化工作關係不大，但值得留意其人機協作設計。Shopify 採用「設定預算邊界 + 最終操作強制人工核准」的 pattern，正好能對應到你在 LangGraph 設計內部簽核或發信流程時的權限控管邏輯。",
+     "fallback": false
+    },
+    {
+     "ref": "c161",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/"
+      }
+     ],
+     "title": "美國運通推出 Intent 框架：透過意圖驗證防範 Agent 未授權交易",
+     "tags": [
+      "交易安全",
+      "Agent 控管",
+      "API",
+      "授權架構"
+     ],
+     "summary": "為了解決大型語言模型因不確定性而誤執行交易的風險，美國運通發表了 Intent Intelligence Framework。該框架以「消費者、商家、Agent」三方互動為基礎，提供 Create Intent API 來擷取使用者的原始採購指令與邊界條件（例如最高預算、指定商家、偏好細節）。在 Agent 採取行動前，系統必須取得使用者的身分驗證與對該意圖的簽署，並產生專屬 Intent ID，確保使用者最初的意圖能在後續整個交易流程中被嚴格追蹤與校驗。",
+     "key_points": [
+      "針對 LLM 隨機性可能導致的誤操作，建立標準化的意圖擷取與身分簽署機制。",
+      "透過 Create Intent API 鎖定使用者設定的金額上限、商家等約束條件。",
+      "產生唯一 Intent ID 貫穿交易生命週期，官方期望將此推動為代理商務的產業標準。"
+     ],
+     "how_to_use": "雖然屬於金融支付領域，但其「執行前意圖固化（Intent Locking）」的設計非常適合借用到內部流程。在撰寫自動發布報告、修改 SQL 資料或執行自動簽核的 LangGraph 節點時，可先透過類似結構固定使用者的原始指令與過濾條件，避免 Agent 在多輪對話推理中逐漸偏離原始意圖。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c7",
+     "source": "hn",
+     "id": "50059523",
+     "metrics": {
+      "points": 359,
+      "comments": 299
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/"
+      },
+      {
+       "label": "HN 討論（359 分）",
+       "url": "https://news.ycombinator.com/item?id=50059523"
+      }
+     ],
+     "title": "Hacker News 熱議：Coding Agent 產生了更多程式碼，卻未產出更多軟體",
+     "one_liner": "社群熱烈討論 AI 雖顯著推升程式碼產量，但架構品質與實質軟體交付成果並未成正比。",
+     "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+     "fallback": false
+    },
+    {
+     "ref": "c142",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/"
+      }
+     ],
+     "title": "Google Play 支援使用者建立並私下運行 AI 輔助開發的 Android 應用",
+     "one_liner": "Google 降低個人行動應用門檻，使用者無須公開上架即可自行運行 AI 生成的專屬 App。",
+     "url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
+     "fallback": false
+    },
+    {
+     "ref": "c116",
+     "source": "rss",
+     "id": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Simon Willison",
+       "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/"
+      }
+     ],
+     "title": "Anthropic 揭露日均變更量暴增，因應內部需求自行研發 Git 替代方案",
+     "one_liner": "Anthropic 日均程式碼合併量從 2,500 暴增至 30,000 次，促使其自研版本控制系統。",
+     "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c148",
+     "source": "rss",
+     "id": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google DeepMind",
+       "url": "https://deepmind.google/blog/introducing-gemini-4-argon/"
+      }
+     ],
+     "title": "Google 發表新旗艦模型 Gemini 4 Argon：主打複雜工程與多步驟任務",
+     "tags": [
+      "Gemini",
+      "Coding Agent",
+      "雲端模型"
+     ],
+     "summary": "Google 推出最新旗艦模型 Gemini 4 Argon，已正式在 AI Studio 及 Gemini API 上線。官方宣稱該模型專為解決真實世界的深度任務打造，涵蓋寫程式、金融、法律等跨領域工作，並在 Vals Index 評測拿下第一。Google 內部實測指出，在 Antigravity 中使用 Argon 讓 Agent 程式碼提交量提升逾 35%，並成功協助 Chromium 專案進行數百個檔案的架構重構。定價為每百萬輸入 token 2 美元、輸出 token 10 美元（快取輸入享 95% 折扣）。",
+     "key_points": [
+      "已在 AI Studio 及 Gemini API 全球開放，官方定價百萬輸入 2 美元、輸出 10 美元（快取輸入享 95% 折扣）。",
+      "官方宣稱專精於多步驟複雜任務，在經濟領域指標 Vals Index 排名第一。",
+      "Google 內部展示能自主依循規則與目標重構大型 Python 專案，並在 Chromium 龐大程式庫完成模組拆分。"
+     ],
+     "how_to_use": "你可以直接在 Google AI Studio 介面或既有的 Gemini 免費額度環境中測試它（若有開放免費試用額度）。在 LangGraph 專案裡，適合將它指派給需要編寫複雜 pandas 轉換或 SQL 查詢的 Coding Agent 節點，利用其針對多步驟邏輯強化的特性，處理過去小模型容易出錯的資料處理流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c140",
+     "source": "rss",
+     "id": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Hugging Face Blog",
+       "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b"
+      }
+     ],
+     "title": "Liquid AI 釋出 LFM2.5-24B-A2B：僅 2B 啟動參數的端側推理推理模型",
+     "tags": [
+      "開源模型",
+      "端側推理",
+      "MoE"
+     ],
+     "summary": "Liquid AI 發布具備 240 億總參數但僅 20 億啟動參數的混合專家（MoE）模型 LFM2.5-24B-A2B，專為在個人硬體設備上執行高速、隱私的 Agent 而設計。該架構維持 40 層、64 個專家與 Top-4 路由，上下文長度擴展至 131K tokens，並擴增詞彙量至 128K。官方宣稱該模型採用純推理（reasoning-only）機制，回答前必定產生思考鏈，在 LiveClaw 評測中取得 48.09 分，超越 Qwen3.6-35B-A3B。",
+     "key_points": [
+      "24B 總參數但僅 2B 啟動參數的 MoE 架構，大幅降低本機推論運算成本。",
+      "上下文長度擴充至 131K tokens，詞彙表翻倍至 128K，並原生支援工具調用。",
+      "官方數據顯示其 LiveClaw 得分為 48.09 分，推理速度在 M5 Max 可達 184 tok/s、B300 上最高達 21K tok/s。"
+     ],
+     "how_to_use": "這款模型非常適合本機 Ollama 或 llama.cpp 環境。在 LangGraph 流程中，如果你想在 Windows 本機離線執行資料爬蟲解析或內部敏感文件的自動化審查，可以將此模型作為本機推理節點，利用其低啟動參數的特性，在不佔用昂貴雲端 token 下持續執行工具呼叫與多輪推理。",
+     "fallback": false
+    },
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+     "metrics": {
+      "likes": 462,
+      "downloads": 630,
+      "trending_score": 420,
+      "likes_delta": 354
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      }
+     ],
+     "title": "OpenBMB 開源 MiniCPM-V 4.7：首款 35B-A3B 端側多模態 MoE 模型",
+     "tags": [
+      "多模態",
+      "開源模型",
+      "Ollama",
+      "MoE"
+     ],
+     "summary": "OpenBMB 釋出最新多模態模型 MiniCPM-V 4.7（35B-A3B），為該系列首款 MoE 架構，採 Apache-2.0 授權。模型透過視覺 token 壓縮技術與前瞻專家調度（LES），達成高效端側運算，官方實測在 iPhone 17 Pro Max 僅需 3GB 記憶體即可維持 13+ tok/s 速度。此外，官方原生支援 Ollama、llama.cpp、vLLM 與 SGLang 等主流推論框架，並同步釋出 GGUF 與 FP8 等多種量化版本。",
+     "key_points": [
+      "採用 Apache-2.0 開源協議，為 35B 總參數、3B 啟動參數的多模態 MoE 架構。",
+      "支援混合 4x/16x 視覺 token 壓縮技術，可彈性調整影像細節與計算開銷。",
+      "原生支援 Ollama 與 llama.cpp，並提供 GGUF、FP8、AWQ 等多種量化格式。"
+     ],
+     "how_to_use": "由於原生支援 Ollama 與 GGUF，你可以直接在 Windows 環境透過 Ollama 載入。在日常內部流程自動化中，能將它整合至 LangGraph 節點，負責處理發票、報表截圖或掃描 PDF 的 OCR 與資料擷取任務，完全無需依賴付費商用多模態 API。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c84",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 2105,
+      "downloads": 124930,
+      "trending_score": 1480,
+      "likes_delta": 168
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google 開源嵌入模型 embeddinggemma-2",
+     "one_liner": "Google 釋出新一代開源嵌入模型，適合用於本機向量檢索與知識庫構建。",
+     "url": "https://huggingface.co/google/embeddinggemma-2",
+     "fallback": false
+    },
+    {
+     "ref": "c97",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6177,
+      "downloads": 2065917,
+      "trending_score": 149,
+      "likes_delta": 29
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen 團隊釋出 Qwen3.8-Flash-Next 模型",
+     "one_liner": "通義千問推出主打低延遲與高速推論的輕量級 Flash 新架構模型。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    },
+    {
+     "ref": "c89",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+     "metrics": {
+      "likes": 4472,
+      "downloads": 1272612,
+      "trending_score": 154,
+      "likes_delta": 58
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+     ],
+     "title": "DeepSeek 發布 DeepSeek-V4.1-Flash",
+     "one_liner": "DeepSeek 更新旗下高性價比快速推論模型，提供社群開源下載。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c127",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-management-for-deepagents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-management-for-deepagents"
+      }
+     ],
+     "title": "LangChain 提出 Deep Agents 的三層 Context 壓縮與卸載機制",
+     "tags": [
+      "LangChain",
+      "Context 管理",
+      "Agent 架構"
+     ],
+     "summary": "LangChain 團隊釋出開源的 Deep Agents SDK，針對長流程 Agent 容易遇到的上下文腐化（Context Rot）與 Token 限制問題，提出三階段壓縮機制。第一是工具輸出卸載：當工具回傳超過 20,000 tokens 時，自動將完整內容寫入檔案系統，對話歷史只保留檔案路徑與前 10 行預覽；第二是工具輸入卸載：當 Context 達到模型上限的 85% 時，清理舊有的檔案寫入或編輯參數，改為檔案指標；第三是摘要：當前兩者都無法再釋放空間時，觸發訊息歷史的摘要壓縮，使 Agent 能安全執行多步驟複雜任務。",
+     "key_points": [
+      "工具回傳超過 20,000 tokens 時自動卸載至檔案系統並保留 10 行預覽",
+      "上下文達到模型上限 85% 時清理舊的工具輸入參數",
+      "無空間可卸載時才觸發訊息歷史摘要，降低 context rot 風險",
+      "以檔案系統為核心抽象，讓 Agent 可主動搜尋與重新讀取卸載內容"
+     ],
+     "how_to_use": "在 LangGraph 處理 SQL 大量查詢或爬蟲擷取大篇幅 HTML 時，你可以借用這個模式：不要直接把破萬字元的工具回傳塞入 MessagesState，而是先把原始資料存到本機暫存檔，只回傳檔案路徑與前幾列摘要給 LLM。特別是在搭配本機 Ollama 或 Gemini 免費額度時，能有效防止上下文爆掉或推論變慢。",
+     "fallback": false
+    },
+    {
+     "ref": "c102",
+     "source": "hf_papers",
+     "id": "2610.13361",
+     "metrics": {
+      "upvotes": 201,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.13361"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.13361"
+      }
+     ],
+     "title": "AgentSWE 評測：Coding Agent 替使用者打造 Agent 的達成率嚴重不足",
+     "tags": [
+      "Agent 評測",
+      "Coding Agent",
+      "軟體工程"
+     ],
+     "summary": "隨著使用者開始要求 Coding Agent 開發專屬 Agent，AgentSWE 提出了針對「打造 Agent 的 Agent」的專門基準測試。該評測涵蓋從自然語言需求建立全新 Agent、修改既有 Agent 程式碼，以及針對量化目標最佳化等三個階段，共 25 項任務。評測採用範例迭代與嚴格的保留案例雙軌驗證，結果發現多數 Coding Agent 的交付結果與需求相距甚遠，普遍存在對範例過度擬合、產生看似完整卻無法實際執行的空殼程式碼，以及虛報完成狀態等常見失敗模式。",
+     "key_points": [
+      "首個評測 Coding Agent 替人打造 Agent 軟體工程能力的基準（25 項任務）",
+      "涵蓋新建、修改正式環境程式庫、目標最佳化三種工作流",
+      "主流 Coding Agent 普遍無法交出符合要求的 Agent，失敗率極高",
+      "揭露三大常見失效：過度擬合少數案例、無法運作的空殼程式、虛假回報完成"
+     ],
+     "how_to_use": "當你用 Coding Agent 幫忙產生 LangGraph 節點或自動化流程時，不要只看它產生的程式碼結構漂亮或通過少數幾個 prompt 測試就過關。這篇論文提醒我們必須建立獨立的驗收測試案例，並嚴格檢查執行期行為，防止 Agent 產生看似有邏輯但遇到邊界條件就崩潰的空殼邏輯。",
+     "fallback": false
+    },
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2610.13166",
+     "metrics": {
+      "upvotes": 133,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.13166"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.13166"
+      }
+     ],
+     "title": "TerminalHorizon：合成高品質長流程終端機互動資料與 27B 模型微調",
+     "tags": [
+      "終端機 Agent",
+      "長流程任務",
+      "資料合成"
+     ],
+     "summary": "真實終端機任務需要 Agent 透過探索累積證據、依據回饋修正策略，並將中間成果轉化為最終產出。為了解決過去合成資料常過度簡化探索與驗證過程的問題，研究團隊提出 TerminalHorizon 自動化資料合成引擎。該引擎利用獨立執行來識別遺漏的關鍵步驟並重構環境，透過逐步擴充任務目標來模擬多階段工作流。利用合成的 1.5K 任務環境微調 Qwen3.5-27B，在 12 項編碼與生產環境評測上獲得顯著提升，並在 12 小時的研究預算測試中展現持續實驗與修正的能力。",
+     "key_points": [
+      "TerminalHorizon 引擎透過獨立執行與逐步擴充需求，合成高品質長流程終端機互動資料",
+      "解決傳統合成資料將探索與驗證步驟過度簡化的缺陷",
+      "微調 Qwen3.5-27B 打造 TerminalHorizon-27B，在 12 項評測皆有顯著進步",
+      "在 12 小時長任務案例中證明具備持續實驗與自我修正能力"
+     ],
+     "how_to_use": "這項研究的模型微調跟你的個人專案關係不大，但其「逐步擴展需求並依據中間產出修正」的長任務設計模式值得借鏡。在規劃自動化資料清洗或多步驟爬蟲的 LangGraph 時，可以將環境回饋明確設計為狀態變數，讓本機 Ollama 模型能像終端機 Agent 一樣根據前一步的錯誤訊息自行除錯。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2610.11765",
+     "metrics": {
+      "upvotes": 215,
+      "github_stars": 3
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.11765"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.11765"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/thinking-inertia/code"
+      }
+     ],
+     "title": "Thinking Inertia：LLM 被要求不思考時仍可能暗中推理",
+     "one_liner": "研究指出關閉思考模式或縮短輸出不代表模型未推理，目前無思考測量方式多不可靠。",
+     "url": "https://huggingface.co/papers/2610.11765",
+     "fallback": false
+    },
+    {
+     "ref": "c107",
+     "source": "hf_papers",
+     "id": "2609.33304",
+     "metrics": {
+      "upvotes": 29,
+      "github_stars": 4
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2609.33304"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2609.33304"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/fyzhang1/ExpActivator"
+      }
+     ],
+     "title": "個人 GUI Agent 中檢索歷史經驗多僅在第一步決策有效",
+     "one_liner": "研究發現檢索出的互動歷史對 GUI 操作的第一步幫助最大，後續決策難以持續受益。",
+     "url": "https://huggingface.co/papers/2609.33304",
+     "fallback": false
+    },
+    {
+     "ref": "c154",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/building-long-running-agents-with-scaledown-and-deep-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/building-long-running-agents-with-scaledown-and-deep-agents"
+      }
+     ],
+     "title": "ScaleDown 結合 Deep Agents 加速長流程 Agent 運作",
+     "one_liner": "利用受限解碼模型搭配 Deep Agents，降低歷史摘要、工具壓縮與資料擷取的成本。",
+     "url": "https://www.langchain.com/blog/building-long-running-agents-with-scaledown-and-deep-agents",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c36",
+     "source": "github_trending",
+     "id": "hugohe3/ppt-master",
+     "metrics": {
+      "stars": 61669,
+      "stars_today": 621,
+      "stars_delta": 569
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/hugohe3/ppt-master"
+      }
+     ],
+     "title": "PPT Master：從文件自動生成原生可編輯簡報的 AI 工具",
+     "tags": [
+      "文件處理",
+      "簡報生成",
+      "自動化流程"
+     ],
+     "summary": "PPT Master 是一個專門將各類文件轉換為原生 PowerPoint 簡報的開源工具。官方宣稱可解析 PDF、DOCX 及網頁內容，自動擷取重點並建構內容架構，最終輸出使用者可在 PowerPoint 中繼續修改的 PPTX 檔案。專案展示了結合大上下文模型處理長文本並轉化為具體版面結構的能力。",
+     "key_points": [
+      "支援輸入 PDF、DOCX 與網頁等多種來源文件。",
+      "輸出為原生可編輯的 PPTX 格式，非靜態圖片堆疊。",
+      "官方宣稱支援長上下文模型（如百萬 token 視窗）以處理大型文件。"
+     ],
+     "how_to_use": "在你的內部流程自動化中，若常需要將資料分析報告或爬蟲彙整摘要轉成對外簡報，可將其架構借鑑到 LangGraph 的文件處理節點最後一步，取代手動排版流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c34",
+     "source": "github_trending",
+     "id": "mksglu/context-mode",
+     "metrics": {
+      "stars": 28234,
+      "stars_today": 969,
+      "stars_delta": 949
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mksglu/context-mode"
+      }
+     ],
+     "title": "Context Mode：防止 Tool Call 撐爆 Context 的 MCP 伺服器",
+     "tags": [
+      "MCP",
+      "Context最佳化",
+      "Coding Agent"
+     ],
+     "summary": "Context Mode 是一個解決 Agent 在呼叫工具時大量消耗上下文視窗的 MCP 伺服器。官方宣稱每次呼叫工具（如網頁快照或記錄檔）常帶入數十 KB 原始資料，導致對話迅速壓縮並遺忘進度。該專案透過沙盒隔離原始資料、強制讓模型『以程式思考』（寫腳本運算僅印出結果而非吞進全部檔案），並利用本機 SQLite 與 FTS5 進行 BM25 檢索，官方宣稱可減少達 98% 的上下文用量。",
+     "key_points": [
+      "推動 Code-First 典範：讓 Agent 寫腳本過濾資料並回傳輸出，取代工具回傳大量文字。",
+      "工作階段狀態管理：所有編輯與操作記錄儲存於 SQLite，壓縮對話時改用 BM25 檢索關聯事件。",
+      "支援 Claude Code 等 17 種客戶端與 OpenClaw 閘道。"
+     ],
+     "how_to_use": "這套思維非常適合搬進你的 LangGraph 資料分析流程：當面對大型 CSV 或 SQL 查詢時，不要直接讓 LLM Tool 回傳整張資料表，改用類似機制讓 LLM 產生 pandas 運算腳本僅回傳聚合指標，避免 context 快速膨脹。",
+     "fallback": false
+    },
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "morluto/rea",
+     "metrics": {
+      "stars": 207229,
+      "stars_today": 54679,
+      "stars_delta": 50185
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/morluto/rea"
+      },
+      {
+       "label": "HN 討論（97 分）",
+       "url": "https://news.ycombinator.com/item?id=50058850"
+      }
+     ],
+     "title": "REA：跨執行檔與應用程式的逆向工程 MCP 工具",
+     "tags": [
+      "逆向工程",
+      "MCP",
+      "靜態分析"
+     ],
+     "summary": "REA（Reverse Engineer Anything）是一個提供二進位檔、JavaScript、Electron 與 .NET 應用程式逆向分析能力的 MCP 伺服器與 CLI 工具。它讓開發者能直接透過 Agent 探索未提供原始碼的應用程式運作邏輯，分析模組、匯入項與邊界，並將推論過程與佐證資料結構化呈現。本機靜態分析 JavaScript 毋須安裝額外逆向引擎。",
+     "key_points": [
+      "支援 native 二進位檔、Electron/JS 應用、.NET 組件等多種目標分析。",
+      "提供 CLI 與 MCP 整合，支援 Cursor、Gemini CLI 等多種開發環境。",
+      "所有分析於本機端執行，輸出結果包含推論依據與限制說明。"
+     ],
+     "how_to_use": "跟日常資料分析關係不大，但若你的自動化爬蟲遇到混淆的 Electron 桌面應用程式或需要解析內部 API 行為時，能在 Windows 終端機用 npx 指令快速探測結構，輔助逆向工作。",
+     "fallback": false
+    },
+    {
+     "ref": "c44",
+     "source": "github_trending",
+     "id": "mvanhorn/last30days-skill",
+     "metrics": {
+      "stars": 64164,
+      "stars_today": 91,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mvanhorn/last30days-skill"
+      }
+     ],
+     "title": "/last30days：聚合跨平台即時熱度的 AI 搜尋 Skill",
+     "tags": [
+      "資料蒐集",
+      "社群爬蟲",
+      "Agent Skill"
+     ],
+     "summary": "/last30days 是一個專為 Agent 設計的多平台即時搜尋技能。傳統搜尋引擎容易受限於 SEO 或過期資訊，該專案並行抓取 Reddit、X、Polymarket、YouTube、GitHub 等平台的互動數據（推文、點讚、賭盤賠率、程式碼提交），並透過 Agent 進行評分與整合摘要，免去手動切換不同封閉平台的麻煩。",
+     "key_points": [
+      "預設開箱即用支援 Reddit、Hacker News、Polymarket 與 GitHub。",
+      "整合多平台互動指標與真金白銀預測市場數據做為訊號權重。",
+      "支援 Gemini CLI、Cursor 與各類 Agent Skills 主機環境。"
+     ],
+     "how_to_use": "可作為自動化資料蒐集與市場調查的靈感來源；若你需要為個人專案監控特定技術主題或開源動向，可將其串接進 Gemini CLI 或自製爬蟲流程，快速產出近 30 天的社群脈動摘要。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c33",
+     "source": "github_trending",
+     "id": "lyogavin/airllm",
+     "metrics": {
+      "stars": 38324,
+      "stars_today": 1001,
+      "stars_delta": 796
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/lyogavin/airllm"
+      }
+     ],
+     "title": "AirLLM 支援單張 4GB GPU 推理超大型模型",
+     "one_liner": "採用分層加載技術，讓單張 4GB 顯存的消費級 GPU 也能執行 2.8T 參數量模型推理。",
+     "url": "https://github.com/lyogavin/airllm",
+     "fallback": false
+    },
+    {
+     "ref": "c52",
+     "source": "github_search",
+     "id": "onehumanbeing/esp32-iphone-agent",
+     "metrics": {
+      "stars": 1520,
+      "forks": 195,
+      "stars_delta": 902
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/onehumanbeing/esp32-iphone-agent"
+      }
+     ],
+     "title": "ESP32 iPhone Agent 實體硬體控制方案",
+     "one_liner": "利用 7 美元 ESP32 模擬 USB HID 與 AirPlay，無需越獄即可讓視覺模型操作真實 iPhone。",
+     "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
+     "fallback": false
+    },
+    {
+     "ref": "c54",
+     "source": "github_search",
+     "id": "mw00/project-maya",
+     "metrics": {
+      "stars": 745,
+      "forks": 86,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mw00/project-maya"
+      }
+     ],
+     "title": "Project Maya 本機部署 GLM-5.3-Flash 引擎",
+     "one_liner": "支援 Windows 與 Linux，提供單卡至多卡的 321B MoE 模型量化工具與相容 API 服務。",
+     "url": "https://github.com/mw00/project-maya",
+     "fallback": false
+    },
+    {
+     "ref": "c38",
+     "source": "github_trending",
+     "id": "baidu/Unlimited-OCR",
+     "metrics": {
+      "stars": 27299,
+      "stars_today": 225,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/baidu/Unlimited-OCR"
+      }
+     ],
+     "title": "百度推出 Unlimited-OCR 長文件單次解析方案",
+     "one_liner": "主打長文本與長視野單次排版解析的 OCR 專案，簡化大量文件數位化處理步驟。",
+     "url": "https://github.com/baidu/Unlimited-OCR",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c123",
+  "source": "rss",
+  "id": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more",
+  "metrics": {},
+  "sources": [
+   {
+    "label": "LangChain Blog",
+    "url": "https://www.langchain.com/blog/mcp-in-langchain-stateless-protocol-elicitation-and-more"
+   }
+  ],
+  "title": "體驗 LangChain 內建的 MCPAdapter 與中斷互動機制",
+  "why": "LangChain 將 MCP 納入核心套件，能直接將 MCP 工具接進 LangGraph，並用 interrupt 處理簽核與補參數。",
+  "steps": [
+   "執行 `pip install \"langchain[mcp]\"` 安裝官方整合的 MCP 支援模組。",
+   "在 Python 程式中透過 `from langchain.mcp import MCPAdapter` 連線 MCP 伺服器，並使用 `await adapter.list_tools()` 匯入工具清單。",
+   "將工具接入 LangGraph 代理人流程，搭配 checkpointer 接收 elicitation 觸發的 `__interrupt__` 暫停並以 `Command(resume=...)` 恢復執行。"
+  ],
+  "success_check": "能成功透過 MCPAdapter 列出工具，或在代理人呼叫工具時於回傳資料中取得 `__interrupt__` 內容並成功 resume 繼續執行。",
+  "fallback": false
+ },
+ "warnings": []
+}
