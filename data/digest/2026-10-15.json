@@ -1,0 +1,777 @@
+{
+ "date": "2026-10-15",
+ "generated_at": "2026-10-15T00:45:44Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.8-flash",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 12,
+ "tldr": [
+  "Google 推出新一代旗艦模型 Gemini 4 Argon，全面支援機器人、GitHub Copilot 與各類 API 開發。",
+  "LangChain 發表 Deep Agents 與 Open SWE，利用 LangGraph 提供開源且可本地執行的長效代理架構。",
+  "多項聚焦程式碼與代理逆向的開源專案與 Agent Skill 在 GitHub 獲得高度關注，適合開發者直接上手。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50073879",
+     "metrics": {
+      "points": 1433,
+      "comments": 1027
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://deepmind.google/models/gemini/"
+      },
+      {
+       "label": "HN 討論（1433 分）",
+       "url": "https://news.ycombinator.com/item?id=50073879"
+      }
+     ],
+     "title": "Google 發表 Gemini 4 Argon：主打長程軟體工程與自主程式碼重構",
+     "tags": [
+      "Gemini",
+      "Coding Agent",
+      "模型發布",
+      "自動化重構"
+     ],
+     "summary": "Google DeepMind 正式推出 Gemini 4 Argon，定位為解決複雜科學與工程難題的前沿模型，目前可在 Google AI Studio、Gemini 與 Google Antigravity 中體驗。官方宣稱該模型在 CWE-Bench 漏洞修復測試拿下 68% 並列第一，且具備更強的間接提示詞注入防禦力。在軟體工程方面，Argon 協助 Chrome 團隊處理跨數百檔案的架構重構，並透過 Antigravity 自動化最佳化了開源量子化學套件 xTB 與 Google 開源的 Agent Development Kit（ADK）。此外，模型亦支援從影片推導物理邊界並自主生成模擬程式碼。",
+     "key_points": [
+      "於 Google AI Studio 與 Antigravity 上線，主打長程軟體工程能力",
+      "官方宣稱 CWE-Bench 達 68% 並列第一，增強抗間接提示詞注入攻擊防護",
+      "展示實際工程實績：重構 Chromium 核心模組、最佳化開源 xTB 與 ADK 框架"
+     ],
+     "how_to_use": "你可以直接登入 Google AI Studio，利用免費方案配額測試 Gemini 4 Argon。對於平常在 Windows 環境維護 Python 爬蟲或資料處理腳本的你，可將長期累積的龐大 legacy 模組或複雜 SQL 邏輯丟給它做架構重構與效能最佳化；若有建立防禦間接注入的 LangGraph 檢驗節點，也能參考其安全防禦指標。",
+     "fallback": false
+    },
+    {
+     "ref": "c155",
+     "source": "rss",
+     "id": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "OpenAI News",
+       "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic"
+      }
+     ],
+     "title": "歐盟發布分析報告：企業與中小企業正加速導入 Agentic AI",
+     "tags": [
+      "歐盟動態",
+      "Agentic AI",
+      "產業趨勢"
+     ],
+     "summary": "最新分析報告指出，歐盟內部的企業與中小企業對 Agentic AI 的採用率正在持續成長。報告同時探討了若能在不同業務環節進行更深度的整合與應用，將能進一步釋放自動化與智慧決策帶來的潛在商業價值。",
+     "key_points": [
+      "最新分析顯示歐洲企業與中小企業的 Agentic AI 採用率逐漸上升",
+      "探討更深度導入 Agentic 模式可釋放的商業價值空間"
+     ],
+     "how_to_use": "這篇主要屬於區域宏觀趨勢分析，跟你的日常 Python 與 LangGraph 開發工作關係不大。但它反映出中小企業已逐步從單純問答式 LLM 轉向具備自主執行能力的 Agent 架構，驗證了內部流程自動化與跨系統 Agent 的市場需求。",
+     "fallback": false
+    },
+    {
+     "ref": "c164",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/how-orange-business-built-live-intelligence-on-langchain-and-langsmith",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/how-orange-business-built-live-intelligence-on-langchain-and-langsmith"
+      }
+     ],
+     "title": "Orange Business 透過 LangChain 與 LangSmith 打造企業級 Live Intelligence 平台",
+     "tags": [
+      "LangChain",
+      "LangSmith",
+      "企業架構",
+      "Agent 監控"
+     ],
+     "summary": "電信與數位服務巨頭 Orange Business 旗下 B2B 團隊分享了其 AI 平台「Live Intelligence」的架構實踐。該平台涵蓋 12 萬名員工與 150 多家企業客戶。為了跨破碎的企業系統協調整合，並兼顧資料主權與安全性，團隊在評估 20 家供應商後選用具模型中立性的 LangChain 作為編排核心，並採用 LangSmith 解決監控評測與可觀測性問題。其平台分為 Studio、Portal 與 Console 三大組件，並已納入 MCP 協議支援與 LangSmith Fleet 驅動的 Agent 建置能力。",
+     "key_points": [
+      "Orange Business 導入 LangChain 與 LangSmith，部署至 12 萬內部員工與 150+ 客戶",
+      "評估 20 家廠商後選擇 LangChain，看中模型中立性與自主架構掌控度",
+      "整合 MCP 支援、LangSmith 可觀測性，並建立 Studio 與業務端 Portal 串接工作流"
+     ],
+     "how_to_use": "這篇架構設計非常貼合你的技術棧。雖然使用免費資源，但你在 Windows 本機串接 Ollama 或 Gemini 搭配 LangGraph 時，同樣能藉由 LangSmith 的免費額度建立 Tracing 與評測機制；其採用的 MCP 支援與架構切分方式，也適合作為你設計內部審批、通知與文件處理 Agent 的實作參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c8",
+     "source": "hn",
+     "id": "50085323",
+     "metrics": {
+      "points": 139,
+      "comments": 78
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage"
+      },
+      {
+       "label": "HN 討論（139 分）",
+       "url": "https://news.ycombinator.com/item?id=50085323"
+      }
+     ],
+     "title": "TV4 因 AI Agent 誤刪剪輯素材而延後節目播出",
+     "one_liner": "瑞典電視台 TV4 因自動化 AI Agent 誤刪剪輯完成的節目素材，導致節目被迫延期播放。",
+     "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
+     "fallback": false
+    },
+    {
+     "ref": "c124",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/"
+      }
+     ],
+     "title": "Gudea 運用 AI 追蹤網路輿論以預防社群公關危機",
+     "one_liner": "新創 Gudea 自稱網路風暴追蹤器，利用 AI 監控社群謠言與不實訊息擴散以防範危機。",
+     "url": "https://techcrunch.com/2026/10/14/gudea-leverages-ai-to-help-organizations-prevent-social-media-crises-before-they-erupt/",
+     "fallback": false
+    },
+    {
+     "ref": "c128",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety"
+      }
+     ],
+     "title": "美國八州聯合起訴 OpenAI 稱 ChatGPT 對兒童不安全",
+     "one_liner": "愛荷華等八個州對 OpenAI 提起訴訟，指控其在 ChatGPT 安全防護上誤導大眾且忽視兒童安全。",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM2.5-24B-A2B",
+     "metrics": {
+      "likes": 305,
+      "downloads": 4067,
+      "trending_score": 304,
+      "likes_delta": 149
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      }
+     ],
+     "title": "LiquidAI 推出 LFM2.5-24B-A2B 端側推論 MoE 模型",
+     "tags": [
+      "MoE",
+      "端側模型",
+      "Agent",
+      "推論模型"
+     ],
+     "summary": "LiquidAI 正式發布 LFM2.5 系列的最大與收官之作 LFM2.5-24B-A2B。該模型總參數為 24B，但在推論時僅啟用約 2.45B 活躍參數，架構包含 40 層（30 個雙門控短卷積區塊與 10 個 GQA）及 64 個專家（top-4 路由）。官方宣稱其在 LiveClaw 測試中取得 48.09 分，優於 Qwen3.6-35B-A3B 的 38.19 分。模型支援 131,072 tokens 上下文長度，以「先思考後回答」為特色，兼顧推論成本與端側執行速度，官方宣稱在 Apple M5 Max 可達 184 tok/s。",
+     "key_points": [
+      "24B 總參數搭配 2.45B 活躍參數，支援 131k context 長度與 16 種語言",
+      "官方宣稱 LiveClaw agentic 任務評測得分 48.09，超越 Qwen3.6-35B-A3B",
+      "原生具備思考機制，每 token 啟用參數量低，具備推論成本效益"
+     ],
+     "how_to_use": "適合在 LangGraph 的複雜條件分支或多步驟規劃節點中嘗試。由於目前提供 Transformers、vLLM 與 SGLang 格式，本機若以 Ollama 為主可能需等待 GGUF 支援；若未來量化釋出，可評估作為本地執行的自動化流程核心，用極低的活躍參數量處理需要先思考後調用工具的 Agent 任務。",
+     "fallback": false
+    },
+    {
+     "ref": "c87",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 17700,
+      "downloads": 7221327,
+      "trending_score": 321,
+      "likes_delta": 61
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "通義千問釋出 Qwen3.8-27B 多模態模型，強化 Agent 規劃與思考控制",
+     "tags": [
+      "Qwen",
+      "多模態",
+      "Agent",
+      "開源模型"
+     ],
+     "summary": "阿里巴巴發布開源 Qwen3.8-27B Dense 模型，採用 Apache 2.0 授權。模型架構結合 Gated DeltaNet 與 Gated Attention，原生支援圖片與長達數小時的影片理解。官方宣稱該版本在程式碼編寫、長程 Agent 任務以及環境回饋處理上有顯著改進。此模型預設開啟思考模式（Thinking mode），開發者可依個別請求關閉，並能透過 reasoning_effort 調整推論深度，或利用 preserve_thinking 保留歷史對話中的思考脈絡。",
+     "key_points": [
+      "27B 稠密架構多模態模型（Apache 2.0），原生支援圖像與長影片理解",
+      "提供靈活思考控制：可開關思考模式、調整推論深度並保留歷史思考紀錄",
+      "官方宣稱強化長程自主規劃能力與環境回饋應變，提升端到端任務可靠度"
+     ],
+     "how_to_use": "非常適合接進 LangGraph 開發 Coding Agent 或自動化爬蟲分析流程。藉由可調的思考深度與對話思考紀錄保留功能，能在需要複雜推理的 SQL 生成或多步驟爬蟲遭遇錯誤時，讓模型根據回傳錯誤自主修正計畫，同時可分析截圖等視覺資訊。",
+     "fallback": false
+    },
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+     "metrics": {
+      "likes": 616,
+      "downloads": 4157,
+      "trending_score": 548,
+      "likes_delta": 154
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      }
+     ],
+     "title": "OpenBMB 發布 MiniCPM-V 4.7-35B-A3B 端側多模態 MoE 模型",
+     "tags": [
+      "多模態",
+      "MoE",
+      "端側推論",
+      "Ollama"
+     ],
+     "summary": "OpenBMB 推出 MiniCPM-V 4.7 系列首款 MoE 架構模型 35B-A3B，採 Apache 2.0 授權開源。官方宣稱透過 Lookahead Expert Scheduling (LES) 與層級量化技術，模型能在極限資源設備上平順運作。模型整合 LLaVA-UHD v4 早期視覺 token 壓縮技術（支援 4x/16x 混合壓縮）以降低推論開銷。生態系方面直接支援 Ollama、llama.cpp、vLLM 及 SGLang，並釋出 GGUF、AWQ、GPTQ 與 FP8 等多種量化版本。",
+     "key_points": [
+      "35B-A3B MoE 架構，官方宣稱在 Instruct 模式下表現優於 Qwen3.6-35B-A3B",
+      "支援 4x/16x 混合視覺 token 壓縮，可彈性平衡視覺細節與計算成本",
+      "開箱支援 Ollama 與 GGUF 格式，生態整合度高且容易本機部署"
+     ],
+     "how_to_use": "這款模型非常適合你的本機環境，因為它直接支援 Ollama 與 GGUF 格式。在 LangGraph 流程中，你可以將它作為本機多模態處理節點，用來解析內部簽核單據、發票照片或網頁截圖，甚至能在個人專案中打造全本地運作的電腦操作視覺輔助 Agent。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c80",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 2262,
+      "downloads": 135175,
+      "trending_score": 1141,
+      "likes_delta": 157
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google 釋出 EmbeddingGemma-2 嵌入模型",
+     "one_liner": "Google 發布新一代開源嵌入模型，為文字檢索與 RAG 應用提供新的特徵提取選項。",
+     "url": "https://huggingface.co/google/embeddinggemma-2",
+     "fallback": false
+    },
+    {
+     "ref": "c86",
+     "source": "hf_models",
+     "id": "JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF",
+     "metrics": {
+      "likes": 96,
+      "downloads": 47690,
+      "trending_score": 91,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF"
+      }
+     ],
+     "title": "JetBrains 釋出 Mellum2.1 思考推理 GGUF 量化版",
+     "one_liner": "JetBrains 推出 12B-A2.5B 具備推理思考能力的量化模型，方便本機端快速部署。",
+     "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF",
+     "fallback": false
+    },
+    {
+     "ref": "c88",
+     "source": "hf_models",
+     "id": "openbmb/MiniCPM-V-4.7-1B",
+     "metrics": {
+      "likes": 330,
+      "downloads": 2543,
+      "trending_score": 238,
+      "likes_delta": 46
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B"
+      }
+     ],
+     "title": "OpenBMB 發布輕量版 MiniCPM-V 4.7-1B",
+     "one_liner": "MiniCPM-V 4.7 推出 1B 極小參數端側多模態版本，適合超低資源設備的視覺任務。",
+     "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B",
+     "fallback": false
+    },
+    {
+     "ref": "c90",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6209,
+      "downloads": 2185644,
+      "trending_score": 156,
+      "likes_delta": 32
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen 發布 Qwen3.8-Flash-Next 高速模型",
+     "one_liner": "通義千問更新其 Flash 系列高速模型，著重提升低延遲推論與高吞吐處理能力。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c100",
+     "source": "hf_papers",
+     "id": "2610.17953",
+     "metrics": {
+      "upvotes": 193,
+      "github_stars": 55
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.17953"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.17953"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/RUC-NLPIR/Agent-Reflex"
+      }
+     ],
+     "title": "Agent-Reflex：透過三階段訓練強化 Agent 反思與雜訊修復能力",
+     "tags": [
+      "Agent 架構",
+      "工具調用",
+      "模型訓練"
+     ],
+     "summary": "在實際部署中，MCP 工具常回傳帶有雜訊的結果或非預期錯誤，現有方法缺乏對 Agent 反思與錯誤復原的監督機制。論文提出 Agent-Reflex 訓練框架，包含三大階段：第一階段為環境反思技能發現（RSD），透過注入工具回饋擾動來挖掘成功與失敗配對，總結反思 meta-skills；第二階段為反思監督微調（ReSFT），將技能轉為自我反思與修正的監督資料；第三階段為 ORPO 策略最佳化，結合雜訊互動下的 RL 與蒸餾。基於 Qwen3-8B 的實驗顯示，其在五項長程工具使用基準達到 58.6 分、AgentNoiseBench 達到 29.1 分，能顯著改善 Agent 面對工具雜訊時的穩健度。",
+     "key_points": [
+      "針對真實環境中 MCP 工具回饋雜訊與使用者介入修正問題，提供完整的反思訓練流程",
+      "提出 RSD 技能發現、ReSFT 反思微調與 ORPO 強化學習三階段框架",
+      "以 Qwen3-8B 為基底，在長程工具使用與抗雜訊評測上超越多項基線"
+     ],
+     "how_to_use": "雖然這篇偏向模型訓練，但其「擾動測試」與「失敗復原 meta-skills」概念很適合搬到 LangGraph。讀者在撰寫爬蟲或內部系統 API 整合節點時，常遇到目標網站改版或回傳格式異常；你可以借鑑其設計，在 LangGraph 工具調用節點後方設計重試與反思子圖，專門捕捉格式雜訊並嘗試自我修正。此外，若未來其微調權重釋出，也可嘗試透過本機 Ollama 載入測試工具容錯能力。",
+     "fallback": false
+    },
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2610.14224",
+     "metrics": {
+      "upvotes": 77,
+      "github_stars": 10
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.14224"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.14224"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google-research/harness2"
+      }
+     ],
+     "title": "Harness^2：開放環境下的雙層遞迴 Agent 執行架構自適應框架",
+     "tags": [
+      "架構設計",
+      "自我改進",
+      "Gemini 應用"
+     ],
+     "summary": "Agent 的表現不僅取決於底層模型，也高度依賴執行框架（Harness）。在未見過的開放環境中，缺乏標準答案驗證器（ground-truth verifier）使得自動化演進架構變得困難。Harness^2 提出即插即用的雙層遞迴改善機制：任務層級遞迴採用對比式「Propose-Probe-Compose」步驟，在沒有標準答案驗證器的情況下引導修改執行架構；框架層級遞迴則提煉過往經驗更新持續改進模組，以適應未來新任務。官方實驗顯示，單步改進即可讓 GLM-5 與 Gemini 3.5 Flash 在 WorkBuddy-Bench 上提升最多 11.5 分、JobBench 提升 4.5 分、LAB 提升 11.8 個百分點。",
+     "key_points": [
+      "免改模型權重，專注於外圍執行環境與工作流程（Harness）的自動進化",
+      "任務層級利用 Propose-Probe-Compose 解決缺乏 ground-truth 驗證器的難題",
+      "在 Gemini 3.5 Flash 等模型上取得顯著的基準效能增長"
+     ],
+     "how_to_use": "這篇概念與讀者使用 Gemini API 及 LangGraph 的情境非常契合。讀者在處理沒有絕對標準答案的內部文件處理或非結構化資料萃取時，往往不知道如何自動優化 LangGraph 節點流程；Harness^2 的 Propose-Probe-Compose 機制提供了一套不需要標註資料就能自我測試與組合最佳流程的設計模式，可作為設計自我調整工作流程的參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c117",
+     "source": "hf_papers",
+     "id": "2610.14766",
+     "metrics": {
+      "upvotes": 51,
+      "github_stars": 21
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.14766"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.14766"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/alibaba/last-secure-code-benchmark"
+      }
+     ],
+     "title": "Last Secure Code Benchmark：Coding Agent 生成程式碼的安全性評測",
+     "tags": [
+      "Agent 評測",
+      "程式碼生成",
+      "資安防護"
+     ],
+     "summary": "針對 AI Coding Agent 生成程式碼日益普及但安全性未明的情況，論文發表 Last Secure Code Benchmark。該評測以 150 個真實漏洞為基礎，涵蓋 Python、Java、JavaScript 等 7 種主流語言、450 個任務與 24 種常見弱點（包含 21 個 2025 CWE Top 25 弱點）。評測模擬函式填寫、單檔生成與專案樹架構三種情境，題目規格僅要求功能性而不提及安全要求。評測結果顯示，雖然 6 款頂尖 Agent 的功能通過率達到 73.6% 至 91.3%，但同時兼具功能與安全的比例極低，最強的 Claude Fable 5 僅有 25.1%，其餘更低至 16.4%～24.7%，在所有漏洞場景的最佳通過率僅 12%。",
+     "key_points": [
+      "涵蓋 7 種語言、24 種 CWE 弱點與 450 個無安全提示的功能需求任務",
+      "主流 Agent 功能正確率高（>73%），但兼顧安全性的比例最高僅約 25%",
+      "凸顯目前單純依靠提示詞生成的程式碼在資安防護上存在嚴重盲點"
+     ],
+     "how_to_use": "對平時會用 Coding Agent 輔助撰寫 Python 資料清理指令碼、SQL 查詢或自動化簽核流程的讀者而言，這是一記警鐘。這項評測顯示即便 Agent 寫出的程式碼功能完全符合預期，背後仍可能潛藏 SQL injection 或路徑遍歷等漏洞。在實務上，不應直接將 Agent 生成的程式碼或 SQL 語法上線，建議在 LangGraph 的生成流程後方強制加入靜態語法檢查節點或安全驗證規則。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2610.18868",
+     "metrics": {
+      "upvotes": 95,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.18868"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.18868"
+      }
+     ],
+     "title": "Tev：以密集進度獎勵擴展長程任務 Agent 環境",
+     "one_liner": "針對開源模型長程任務缺乏資料與獎勵稀疏的痛點，提出密集進度獎勵的環境擴展訓練方案。",
+     "url": "https://huggingface.co/papers/2610.18868",
+     "fallback": false
+    },
+    {
+     "ref": "c110",
+     "source": "hf_papers",
+     "id": "2610.13990",
+     "metrics": {
+      "upvotes": 66,
+      "github_stars": 21
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.13990"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.13990"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/llm-sys/flash-indexer"
+      }
+     ],
+     "title": "DoSA：基於下界剪枝的無損稀疏注意力機制",
+     "one_liner": "提出點稀疏注意力方法，藉由條件式計算與殘差邊界在維持精準 Token 選取的同時降低運算量。",
+     "url": "https://huggingface.co/papers/2610.13990",
+     "fallback": false
+    },
+    {
+     "ref": "c122",
+     "source": "hf_papers",
+     "id": "2610.17928",
+     "metrics": {
+      "upvotes": 41,
+      "github_stars": 2
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.17928"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.17928"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/dmis-lab/SwitchMem"
+      }
+     ],
+     "title": "GUI Agent 的動態記憶模態選擇機制",
+     "one_liner": "探討 GUI 操作 Agent 在不同互動步驟下動態切換檢索記憶模態的最佳化策略。",
+     "url": "https://huggingface.co/papers/2610.17928",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c32",
+     "source": "github_trending",
+     "id": "mksglu/context-mode",
+     "metrics": {
+      "stars": 29125,
+      "stars_today": 947,
+      "stars_delta": 891
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mksglu/context-mode"
+      }
+     ],
+     "title": "Context Mode：以代碼執行與 SQLite 檢索解決 Agent 上下文浪費的 MCP 伺服器",
+     "tags": [
+      "MCP",
+      "上下文工程",
+      "Token優化"
+     ],
+     "summary": "這是一個專注於解決 Agent 上下文肥大問題的 MCP 伺服器。官方宣稱能將原始工具調用資料縮減 98%（例如從 315 KB 降至 5.4 KB）。其核心理念是讓模型「以寫程式代替直接計算」，不再把大量原始檔案讀入對話，而是產生腳本在沙盒執行後僅印出結果。同時，它利用 SQLite、FTS5 與 BM25 檢索記錄每次檔案修改與任務進度，在對話壓縮時僅提取相關記憶，避免丟失關鍵資訊，且不強制約束模型的輸出語氣。",
+     "key_points": [
+      "推行 Think in Code 模式，透過單次腳本執行取代數十次工具調用，大幅節省 context",
+      "使用 SQLite 與 FTS5 全文檢索記錄會話狀態，壓縮對話時精準檢索歷史",
+      "官方宣稱沙盒工具能阻擋原始資料直接塞入上下文，達到 98% 體積縮減"
+     ],
+     "how_to_use": "在你的 LangGraph 流程中，如果設計了抓取網頁原始碼或查詢大型 SQL 資料表的工具節點，往往會迅速耗盡上下文。你可以借鏡此專案的「以程式處理資料」架構，讓 Agent 生成 Python 或 JS 腳本在本機沙盒先過濾彙整，只回傳最終結果給 Gemini 或 Ollama，避免免費額度迅速超限。",
+     "fallback": false
+    },
+    {
+     "ref": "c61",
+     "source": "github_search",
+     "id": "Harvil1/codeAgent",
+     "metrics": {
+      "stars": 664,
+      "forks": 59,
+      "stars_delta": 167
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Harvil1/codeAgent"
+      }
+     ],
+     "title": "CodeAgent：Windows 優先且具備中文註釋的終端 AI 程式助手",
+     "tags": [
+      "Coding Agent",
+      "Windows",
+      "開源教材"
+     ],
+     "summary": "以 Python 打造的終端 AI 程式助手，對標 Claude Code 互動體驗，專門針對 Windows 環境優化。整個專案從主迴圈到各模組皆附帶中文註釋，被設計為開發 Agent 的活教材。功能包含命令審批面板、MCP 外部工具介接、工具自註冊、L1 至 L4 分級上下文壓縮，以及透過對話軌跡沉澱新技能的自學習管線。模型介面支援 OpenAI 與 Anthropic 相容協議，並區分主模型與輔助小模型架構。",
+     "key_points": [
+      "Python 3.11+ 開發，Windows 優先，支援 uv 快速安裝與管理",
+      "完整中文註釋，涵蓋權限控制、上下文壓縮、子代理與工作流引擎",
+      "支援 OpenAI 相容協議與 MCP 工具，可切換至自建模型端點"
+     ],
+     "how_to_use": "專案支援 OpenAI 相容端點，能直接連線到你的本機 Ollama 運作。除了能當作本機 Coding Agent 輔助寫 code 外，其原始碼非常適合當作 LangGraph 的實作範本，特別是上下文分級壓縮與工具審批機制的寫法，能直接借鏡到你的自動化與內部簽核流程中。",
+     "fallback": false
+    },
+    {
+     "ref": "c64",
+     "source": "github_search",
+     "id": "Graphicle-AI/graphicle",
+     "metrics": {
+      "stars": 125,
+      "forks": 6,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Graphicle-AI/graphicle"
+      }
+     ],
+     "title": "Graphicle：為 Coding Agent 建立本機程式碼圖譜與記憶的 Rust 工具",
+     "tags": [
+      "程式碼圖譜",
+      "RAG",
+      "MCP"
+     ],
+     "summary": "以單一 Rust 程式運行的本機工具，能將程式碼儲存庫映射為程式碼圖譜，並整合專案文件、決策與過往 Agent 會話記憶。它完全在本機端運行，無須 API key、無帳號與遙測資料回傳，可作為 MCP 伺服器連接多種 Agent。它能在檢索時提供精準的檔案名稱與行號引用。目前模型支援 Anthropic、OpenAI 與 Ollama；作業系統方面目前無 Windows 原生建置，需在 WSL2 下執行（官方規劃原生支援中）。",
+     "key_points": [
+      "單一 Rust 程式本機建構 code graph，精確引用檔案與行號",
+      "完全離線運行無遙測，支援終端查詢與 MCP 協議接入",
+      "支援 Ollama 模型，但 Windows 目前僅能在 WSL2 環境測試"
+     ],
+     "how_to_use": "若你的本機開發環境有啟用 WSL2，可以將它當作 MCP 伺服器掛接到 Agent 工具鏈中，搭配 Ollama 使用。當你在維護複雜的資料處理腳本或爬蟲專案時，能透過其圖譜分析特定函式影響範圍，不必手動在多個檔案間穿梭排查依賴關係。",
+     "fallback": false
+    },
+    {
+     "ref": "c47",
+     "source": "github_trending",
+     "id": "isair/jarvis",
+     "metrics": {
+      "stars": 2067,
+      "stars_today": 31,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/isair/jarvis"
+      }
+     ],
+     "title": "Jarvis：支援 Ollama 的本機語音與文字隱私 AI 助理",
+     "tags": [
+      "個人助理",
+      "Ollama",
+      "本機部署"
+     ],
+     "summary": "這是一款注重隱私、主打本機運行的語音與文字 AI 助理，提供 Windows x64 解壓縮即用的執行檔。語音辨識、語言模型推論與語音合成皆在使用者自備的硬體上執行，支援介接本機 Ollama 或 OpenAI 相容伺服器。具備暫存對話滑動視窗以加入即時交談，並將知識圖譜與個人日記保存在本機，在送交模型前會先行遮蔽敏感資訊，僅在聯網搜尋等外部工具調用時使用網路。",
+     "key_points": [
+      "提供 Windows x64 原生執行檔，下載解壓即可啟動",
+      "支援直接介接 Ollama，並提供模型記憶體用量估算機制",
+      "具備本機知識圖譜、日記系統與敏感資料過濾功能"
+     ],
+     "how_to_use": "雖然這款語音助理跟你的 LangGraph 流程與資料分析工作直接關聯不大，但它提供了一套完整的本機 Ollama 串接範例，且具備 Windows 執行檔。若你想在個人電腦上搭建一套不依賴付費雲端 API、完全隱私的對話與記憶工具，可以直接用它做為日常輔助。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c28",
+     "source": "github_trending",
+     "id": "ifixai-ai/iFixAi",
+     "metrics": {
+      "stars": 27399,
+      "stars_today": 2109,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ifixai-ai/iFixAi"
+      }
+     ],
+     "title": "iFixAi 獨立 Agent 審計工具",
+     "one_liner": "主打在 120 秒內驗證 Agent 是否按預期行為執行的獨立審計工具。",
+     "url": "https://github.com/ifixai-ai/iFixAi",
+     "fallback": false
+    },
+    {
+     "ref": "c38",
+     "source": "github_trending",
+     "id": "K-Dense-AI/scientific-agent-skills",
+     "metrics": {
+      "stars": 49331,
+      "stars_today": 163,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+      }
+     ],
+     "title": "scientific-agent-skills 科學技能庫",
+     "one_liner": "官方宣稱提供 177 個科學驗證技能與百餘個資料庫介接的 Agent 外掛庫。",
+     "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+     "fallback": false
+    },
+    {
+     "ref": "c43",
+     "source": "github_trending",
+     "id": "wshobson/agents",
+     "metrics": {
+      "stars": 40775,
+      "stars_today": 118,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/wshobson/agents"
+      }
+     ],
+     "title": "agents 多平台 Agent 外掛市集",
+     "one_liner": "支援 Claude Code、Cursor 與 Copilot 等多平台的 Agent 外掛市集與整合框架。",
+     "url": "https://github.com/wshobson/agents",
+     "fallback": false
+    },
+    {
+     "ref": "c59",
+     "source": "github_search",
+     "id": "Jakeschincariol/replica-skill",
+     "metrics": {
+      "stars": 2609,
+      "forks": 387,
+      "stars_delta": 209
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Jakeschincariol/replica-skill"
+      }
+     ],
+     "title": "replica-skill 應用逆向克隆技能組",
+     "one_liner": "開源 MIT 授權的 Claude 技能集合，專門用於逆向工程、重構與測試既有軟體。",
+     "url": "https://github.com/Jakeschincariol/replica-skill",
+     "fallback": false
+    },
+    {
+     "ref": "c72",
+     "source": "github_search",
+     "id": "chienbm98/foxprofile",
+     "metrics": {
+      "stars": 85,
+      "forks": 51,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/chienbm98/foxprofile"
+      }
+     ],
+     "title": "foxprofile 防關聯瀏覽器管理工具",
+     "one_liner": "提供指紋隔離與代理管理的開源工具，具備 MCP 與 REST API 可供爬蟲串接。",
+     "url": "https://github.com/chienbm98/foxprofile",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": null,
+ "warnings": [
+  "enrich: c155 補充內容抓取失敗，改用原始摘要",
+  "try_one: 模型判斷 c47（isair/jarvis）不符合規則，跳過：Jarvis 為打包好的獨立桌面應用程式（.exe），並非 Python 開發套件，無法直接整合至 LangGraph 開發流程中。",
+  "try_one: 模型判斷 c64（Graphicle-AI/graphicle）不符合規則，跳過：官方明確標註尚未支援原生 Windows（WSL2 也未經測試），且本體為 Rust 程式而非 Python 工具，無法在 15～30 分鐘內於讀者的 Windows 環境順暢體驗。",
+  "try_one: 模型判斷 c32（mksglu/context-mode）不符合規則，跳過：此專案為 Node.js / npm 生態系的 MCP 伺服器，需 Node.js 22.5+ 環境，且目前官方整合主要面向 Claude Code、Gemini CLI 與 VS Code Copilot，並非以 Python 為主，資料中也未提供直接接入 LangGraph 的方式。"
+ ]
+}
