@@ -1,0 +1,776 @@
+{
+ "date": "2026-10-16",
+ "generated_at": "2026-10-16T00:45:47Z",
+ "models_used": [
+  "gemini-3.7-flash",
+  "gemini-3.8-flash",
+  "gemini-3.5-flash-lite"
+ ],
+ "llm_calls": 10,
+ "tldr": [
+  "Meta 正式釋出開源多模態模型 Muse Spark Open，Liquid AI 亦推出主打端側 Agent 的輕量模型。",
+  "LangChain 發布最新 Agent 評測與長上下文工程指南，深入解析多輪調用下的記憶精簡與成本控制。",
+  "開源社群聚焦 Agent 稽核與記憶機制，iFixAi 與 OpenViking 為自主評測及 RAG 整合提供即裝即用方案。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c146",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/common-questions-about-agent-evals",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/common-questions-about-agent-evals"
+      }
+     ],
+     "title": "LangSmith 官方解析：Agent 評測最常見的問題與起步指南",
+     "tags": [
+      "Agent 評測",
+      "LangSmith",
+      "測試工作流"
+     ],
+     "summary": "LangSmith 團隊針對 Agent 評測（Evals）整理了實務常見問題。與傳統單元測試不同，Agent 每次執行輸出具隨機性、答案不唯一，且可能採取錯誤的推理路徑或工具呼叫。官方建議開發者評測應從小規模起步：先從實際 trace 中抓出 10 到 20 個樣本建立小型資料集，針對單一行為建立基準線。在架構上，應在發布前使用離線評測、上線後使用即時評測；能用程式碼驗證的優先使用，其次才使用 LLM 當裁判，並輔以人工審核。針對多步驟 Agent，需針對完整對話執行緒、工具軌跡（trajectories）與最終狀態進行整體評估。",
+     "key_points": [
+      "Agent 輸出具變異性且解法多元，不能單靠傳統單元測試的比對字串方式驗證",
+      "起步建議從真實 trace 擷取 10 至 20 筆特定行為案例組成初始資料集",
+      "評測策略採「程式碼檢查優先、LLM 裁判次之、人工抽檢把關」的層次分工",
+      "多步驟 Agent 需同時檢驗完整軌跡、狀態變化與最終成果"
+     ],
+     "how_to_use": "在你的 LangGraph 專案中，不需一開始就架設複雜的評測平台。你可以挑選目前最常出錯的節點（例如 SQL 生成或爬蟲資料擷取），手動挑選 10 筆真實輸出的 trace 存成 JSON 測試集。在本機端先寫簡單的 Python 斷言（Assertion）檢查工具呼叫參數是否合法，再用本機 Ollama 或免費的 Gemini API 作為 LLM Judge 評估最終回應的準確性，建立小型的自動化回歸測試。",
+     "fallback": false
+    },
+    {
+     "ref": "c157",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember"
+      }
+     ],
+     "title": "LangChain Deep Agents 框架：透過 Context 工程解決記憶膨脹問題",
+     "tags": [
+      "LangChain",
+      "Context Engineering",
+      "記憶管理"
+     ],
+     "summary": "LangChain 介紹了開源 Agent 框架 Deep Agents 採用的 Context 工程機制，旨在解決長任務中的「Context 腐爛（Context rot）」現象。當 Agent 累積過多工具輸出、歷史紀錄與檔案時，模型的準確度與推理能力會明顯下降。Deep Agents 透過中介軟體（middleware）管理 Context，並將記憶以純文字檔案形式存放在使用者掌控的儲存空間，方便抽換底層模型。其核心技術包含 Offloading（將大型工具輸出存檔僅留摘要預覽）、Summarization（對話接近上限時自動濃縮）、Skills（按需載入專屬技能）、Subagents（將繁雜子任務委派給獨立 Context）以及長效記憶檔案跨對話保存。",
+     "key_points": [
+      "長任務堆疊的大量 Context 會導致模型推理效能衰退（Context rot）",
+      "Deep Agents 記憶全數以純檔案儲存，便於本機控管且不綁定特定模型供應商",
+      "運用 Offloading 將大型工具結果寫入檔案，僅提供預覽給模型閱讀",
+      "結合子 Agent 與按需載入技能機制，維持主要 Agent Context 視窗的整潔"
+     ],
+     "how_to_use": "這套設計模式非常適合移植到你的 LangGraph 資料分析流程中。當你的爬蟲工具抓回大量 HTML，或 SQL 查詢回傳數百列 pandas 資料時，不要直接將 raw data 塞回 Graph 的 State，而是先將資料寫入本機暫存檔，只把欄位結構與前五筆資料預覽傳入 State 讓 Gemini 或 Ollama 閱讀；若 Agent 需要細部計算再透過自訂 Tool 讀取檔案，即可在有限 Context 內完成任務。",
+     "fallback": false
+    },
+    {
+     "ref": "c140",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability"
+      }
+     ],
+     "title": "GitHub 程式碼安全警報 Agentic Autofix 正式全面開放",
+     "tags": [
+      "Coding Agent",
+      "GitHub",
+      "自動修復"
+     ],
+     "summary": "GitHub 宣布程式碼掃描警報的 Agentic Autofix 功能正式全面開放（GA）。官方宣稱該功能可模擬軟體工程師的工作模式，在儲存庫中探索相關檔案、產生修復建議，並自動重新執行 CodeQL 驗證修復是否成功關閉警報，最後自動建立 Draft PR 供人工審查。這項功能適用於 GitHub Enterprise Cloud 上的 GitHub Advanced Security 客戶，支援單一警報指派或批次選取最多 25 個警報一次修復，系統將消耗使用者的 Code Security AI 點數與 Actions 執行時間。",
+     "key_points": [
+      "官方宣稱可跨專案探索檔案、生成修復，並自動重跑 CodeQL 驗證",
+      "支援單一指派或一次批次處理最多 25 個安全警報並整合成 PR",
+      "僅限 GitHub Enterprise Cloud 搭配進階安全方案之預設分支使用",
+      "計費方式將扣抵組織的 Code Security AI 點數與 Actions 分鐘數"
+     ],
+     "how_to_use": "此功能綁定 GitHub Enterprise 付費方案，與你目前的本機個人開發環境關係不大。但其「檢測問題 -> 探索代碼 -> 提出補丁 -> 自動重跑工具驗證（CodeQL）-> 迭代修正」的閉環邏輯，正是打造 Coding Agent 的標準流程。你可以參考這套迴圈，在 LangGraph 中設計一個能讀取本地 Python 腳本、執行 pytest 驗證修復結果，並依測試回傳繼續修正的自動化節點。",
+     "fallback": false
+    },
+    {
+     "ref": "c114",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs"
+      }
+     ],
+     "title": "ChatGPT Chrome 擴充功能升級：支援直接讀取與操作開啟的分頁",
+     "tags": [
+      "瀏覽器 Agent",
+      "Chrome 擴充功能",
+      "OpenAI"
+     ],
+     "summary": "OpenAI 更新了 ChatGPT 的 Google Chrome 擴充功能，讓使用者在對話中標註 Chrome 時，ChatGPT 能夠直接讀取並分析目前瀏覽器中已開啟的分頁內容。官方展示的使用情境包括比對多個商品分頁、整合廠商報價至表格、跨分頁摘要資訊後草擬郵件等。此外，側邊欄介面也同步整合完整對話紀錄，官方宣稱 ChatGPT Work 模式未來還能直接控制分頁執行發送訊息、填寫表單或下載檔案等操作。",
+     "key_points": [
+      "在 ChatGPT 介面中標註 Chrome 即可讀取已開啟的多個瀏覽器分頁內容",
+      "官方示範跨分頁比價、提取廠商資訊至比對表與自動草擬郵件等場景",
+      "側邊欄更新完整對話功能，無需切換畫面即可在當前頁面呼叫",
+      "官方宣稱 ChatGPT Work 具備自動控制分頁、填寫表單與整理標籤頁之能力"
+     ],
+     "how_to_use": "如果你在做資料蒐集或內部簽核時，需要臨時比對多個 Web 報表或系統頁面，這款擴充功能適合作為隨手輔助工具。但因其為閉源雲端外掛且無法程式化串接，不能整合進你的 Python 自動化流程。若要實現全自動化的跨網頁資料爬取與表單處理，建議依然在 Python 中以 Playwright 搭配本機 Ollama 撰寫自動化腳本，能維持更高掌控度且不需額外付費。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c145",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/"
+      }
+     ],
+     "title": "Figma 發表 Agent 運作平台新機制與程式碼圖層公測",
+     "one_liner": "Figma 推出定義 Agent 於其平台上運作的新功能，並同步將 code layers 功能轉為公開測試。",
+     "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+     "fallback": false
+    },
+    {
+     "ref": "c130",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/october-2026-langchain-newsletter",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/october-2026-langchain-newsletter"
+      }
+     ],
+     "title": "LangChain 發布 10 月動態：AI Search 與 Deep Agents v0.9",
+     "one_liner": "LangChain 彙整技術發表，包含 LangSmith AI Search、軌跡功能及託管版 Deep Agents v0.9。",
+     "url": "https://www.langchain.com/blog/october-2026-langchain-newsletter",
+     "fallback": false
+    },
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50091788",
+     "metrics": {
+      "points": 939,
+      "comments": 611
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html"
+      },
+      {
+       "label": "HN 討論（939 分）",
+       "url": "https://news.ycombinator.com/item?id=50091788"
+      }
+     ],
+     "title": "專家指 AI 資安事件主因多為隔離與監控機制缺失",
+     "one_liner": "資安專家指出，近期多起 AI 遭入侵與攻擊的通報，主要肇因於系統沙盒隔離與監控防護機制的失效。",
+     "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c149",
+     "source": "rss",
+     "id": "https://huggingface.co/blog/meta-muse-spark-open",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Hugging Face Blog",
+       "url": "https://huggingface.co/blog/meta-muse-spark-open"
+      }
+     ],
+     "title": "Meta 推出 Muse Spark Open 開源多模態模型",
+     "tags": [
+      "Meta",
+      "開源模型",
+      "多模態",
+      "MoE"
+     ],
+     "summary": "Meta 發布開源權重的多模態混合專家（MoE）模型 Muse Spark Open，總參數約 8160 億，每個 Token 啟動約 420 億參數，支援最高 100 萬 Token 的上下文窗口。該模型官方宣稱專為 Agent 式編程（Agentic Coding）與真實開發者工作流程設計，能處理文字、圖像、音訊與影片輸入。",
+     "key_points": [
+      "總參數約 816B，啟用約 42B，支援 1M 上下文。",
+      "支援文字、圖片、音訊與影片多模態輸入。",
+      "官方宣稱針對程式碼讀取、偵錯與工具調用進行訓練。"
+     ],
+     "how_to_use": "由於模型規模高達 816B，你的 Windows 開發環境無法直接在本機運行，且沒有 OpenAI 或 Anthropic 付費 Key 也無法透過雲端 API 呼叫。跟你的工作關係不大，但它代表開源多模態 Agent 模型規模的最新進展，未來若有輕量化版本釋出再行評估。",
+     "fallback": false
+    },
+    {
+     "ref": "c76",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM2.5-24B-A2B",
+     "metrics": {
+      "likes": 390,
+      "downloads": 6286,
+      "trending_score": 386,
+      "likes_delta": 85
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      }
+     ],
+     "title": "LiquidAI 發布 LFM2.5-24B-A2B 推理模型",
+     "tags": [
+      "LiquidAI",
+      "推理模型",
+      "MoE",
+      "邊緣計算"
+     ],
+     "summary": "LiquidAI 推出 LFM2.5-24B-A2B，這是一款總參數 240 億、但每個 Token 僅啟用約 20 億參數的文字推理模型，專為裝置端快速、隱私的 Agent 設計。官方宣稱其在 LiveClaw 代理與工具使用任務上表現優異，推理速度快且記憶體佔用低。",
+     "key_points": [
+      "24B 總參數，僅 2.45B 活躍參數。",
+      "專為 Agent 與工具使用（Tool-use）任務優化。",
+      "支援 131,072 Token 上下文長度。"
+     ],
+     "how_to_use": "雖然是開源模型，但 24B 參數對你的 Windows 本機硬體來說運行吃力，且目前 Ollama 支援狀況未知。若透過 Transformers 執行，你的環境配置會較為複雜。建議先觀望社群是否有推出更小的量化版本或適合本地 Ollama 運行的衍生版本。",
+     "fallback": false
+    },
+    {
+     "ref": "c71",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 2402,
+      "downloads": 144280,
+      "trending_score": 1006,
+      "likes_delta": 140
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google DeepMind 推出 EmbeddingGemma 2 多模態嵌入模型",
+     "tags": [
+      "Google",
+      "Embedding",
+      "多模態",
+      "RAG"
+     ],
+     "summary": "Google DeepMind 推出 EmbeddingGemma 2，這是一款開源的多模態嵌入模型，總參數 740M，將文字、圖像、影片和音訊對應至單一 768 維的向量空間。支援 100 多種語言，並具備 Matryoshka 學習能力，能提供低延遲的語意表示以供邊緣與本機應用使用。",
+     "key_points": [
+      "740M 參數，結合文字、視覺與音訊編碼器。",
+      "支援 8K 上下文窗口與多語言、程式碼檢索。",
+      "支援 MRL 截斷嵌入（128d 至 768d）。"
+     ],
+     "how_to_use": "非常適合用在你的本機 RAG 與知識庫專案中。你可以用 Python 的 sentence-transformers 或相關庫載入此模型，將文件、圖片或程式碼片段轉為向量，建立更全面的多模態檢索系統，並搭配你的 Gemini 免費方案或本機 Ollama 串接至 LangGraph 檢索流程中。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c70",
+     "source": "hf_models",
+     "id": "openbmb/MiniCPM-V-4.7-35B-A3B",
+     "metrics": {
+      "likes": 794,
+      "downloads": 9278,
+      "trending_score": 649,
+      "likes_delta": 178
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B"
+      }
+     ],
+     "title": "OpenBMB 發布 MiniCPM-V-4.7-35B-A3B",
+     "one_liner": "OpenBMB 推出 35B 參數的多模態視覺開源模型。",
+     "url": "https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B",
+     "fallback": false
+    },
+    {
+     "ref": "c77",
+     "source": "hf_models",
+     "id": "baidu/Unlimited-OCR",
+     "metrics": {
+      "likes": 4702,
+      "downloads": 1163009,
+      "trending_score": 319,
+      "likes_delta": 65
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/baidu/Unlimited-OCR"
+      }
+     ],
+     "title": "百度推出 Unlimited-OCR",
+     "one_liner": "百度發布高下載量的開源 OCR 文字辨識模型。",
+     "url": "https://huggingface.co/baidu/Unlimited-OCR",
+     "fallback": false
+    },
+    {
+     "ref": "c79",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6252,
+      "downloads": 2290500,
+      "trending_score": 163,
+      "likes_delta": 43
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen 推出 Qwen3.8-Flash-Next",
+     "one_liner": "阿里通義千問釋出 Qwen3.8-Flash-Next 模型。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c91",
+     "source": "hf_papers",
+     "id": "2610.20344",
+     "metrics": {
+      "upvotes": 93,
+      "github_stars": 33
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.20344"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.20344"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/YuyaoGe/doc2harness"
+      }
+     ],
+     "title": "Doc2Harness：首個評測 Coding Agent 框架工程能力的基準",
+     "tags": [
+      "Coding Agent",
+      "基準評測",
+      "Agent 架構"
+     ],
+     "summary": "過去評測 Coding Agent 多半在固定外圍框架（harness）下測試模型解題，忽視了框架工程本身對長期任務成敗的影響。Doc2Harness 提出兩階段基準：第一階段讓模型根據規格文件與介面架構，在隔離容器內自行建立完整的候選 harness；第二階段由腳本模擬模型驅動該 harness，並從發送請求、磁碟檔案、行程退出碼與命令輸出四個面向計分。在 19 個前沿模型、328 個測試案例評測中，GPT-6 Astra 達到最高的 53.05% 通過率，最弱模型為 27.44%。即便最強模型也失敗近半，錯誤多集中在跨模組功能的拆分邏輯。",
+     "key_points": [
+      "首創針對 Coding Agent 外圍框架工程（harness engineering）的確定性基準評測",
+      "以兩階段架構評測：模型先建構 harness，再由 mock 模型透過四種可觀察管道驗證功能",
+      "最高通過率僅 53.05%，顯示現今 LLM 在處理跨模組整合與長期架構設計上仍有顯著短板"
+     ],
+     "how_to_use": "這篇研究對你設計 LangGraph 工作流程極具參考價值。許多時候 Agent 任務失敗不是因為 LLM 寫不出那行 Python 程式碼，而是你設計的外圍狀態流轉、錯誤捕捉與環境回傳結構不夠強固。論文歸納的 12 種 harness 行為與四個可觀察指標（終端輸出、檔案變化、請求格式、行程狀態碼），可以直接拿來作為你在本機 Windows 撰寫自動化爬蟲或資料處理 Agent 時的狀態檢查清單。",
+     "fallback": false
+    },
+    {
+     "ref": "c89",
+     "source": "hf_papers",
+     "id": "2610.20584",
+     "metrics": {
+      "upvotes": 267,
+      "github_stars": 75
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.20584"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.20584"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/TencentARC/Player-1"
+      }
+     ],
+     "title": "Player-1：透過合成經驗強化電腦操作與遊戲控制 Agent",
+     "tags": [
+      "電腦操作",
+      "強化學習",
+      "多模態 Agent"
+     ],
+     "summary": "現有電腦操作（Computer-Use）Agent 多依賴操作示範，難以涵蓋動態狀態。Player-1 提出以合成經驗進行後訓練的框架：先將操作空間擴展至相對游標移動、持續按壓與複合動作，並以 6,044 筆結合視覺推理與操作的軌跡進行監督式微調（SFT）；接著在 16 個合成 2D/3D 環境（Player-1-Gym）中透過 PPO 強化學習訓練。結果顯示 Player-1-9B 在 MineDojo-300 的成功率達 38.33%，顯著高於最強基準的 12.63%，且在 ViZDoom-10 等環境也展現出跨環境的泛化能力。",
+     "key_points": [
+      "擴展電腦操作動作空間，支援相對游標移動、持續按壓與鍵鼠複合動作",
+      "結合 6,044 筆精選軌跡 SFT 與 16 個合成環境 PPO 強化學習",
+      "Player-1-9B 與 35B 模型在動態遊戲環境大幅超越既有開源基準，驗證合成經驗泛化性"
+     ],
+     "how_to_use": "雖然你主要聚焦於資料分析與流程自動化，但其底層的「擴充動作空間」觀念非常實用。若你正在嘗試用多模態模型（如 Gemini 免費方案）撰寫自動化瀏覽器或桌面操作腳本，單純依賴單點點擊常遇到動態選單或拖曳問題。Player-1 定義的複合操作（同時長按與拖曳）與驗證回饋機制，可啟發你如何用 Python 封裝更可靠的桌面控制 Tool node。",
+     "fallback": false
+    },
+    {
+     "ref": "c95",
+     "source": "hf_papers",
+     "id": "2610.20399",
+     "metrics": {
+      "upvotes": 63,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.20399"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.20399"
+      }
+     ],
+     "title": "Cortex：將長上下文整合進模型參數記憶體的架構",
+     "tags": [
+      "記憶機制",
+      "知識編輯",
+      "參數量化更新"
+     ],
+     "summary": "LLM 雖然能利用 Context 提升表現，但上下文一旦移除能力便消失。Cortex 將「記憶鞏固（Memory Consolidation）」形式化為在保留非目標能力的前提下內部化這些效益。Cortex 透過生成前瞻性查詢（prospective queries）預測上下文用途，再將條件化輸出提煉為可合併的低秩或結構化前饋網路（FFN）權重更新。在 4B 到 120B 的稠密與 MoE 模型測試中，經過 50 次連續事實編輯，Cortex-Structural 在 14B 模型上收回了 88.9% 的上下文增益，同時保留了 99.8% 的原始非目標效能。",
+     "key_points": [
+      "將生物系統鞏固概念引入 LLM，把上下文增益轉化為可合併的模型參數量化更新",
+      "透過前瞻查詢預先掌握 context 用法，並以低秩或 FFN 結構進行蒸餾",
+      "在 14B 模型上連續編輯 50 次，保有 99.8% 原始能力並維持 88.9% 的 context 增益"
+     ],
+     "how_to_use": "跟你的日常開發關係不大，因為你目前主要使用 Gemini API 與本機 Ollama 推論，無法直接在 LangGraph 執行中即時修改模型 FFN 參數權重。不過這篇論文點出目前 RAG 與 Long-context 的根本痛點：長 context 成本高且無法固化。若未來這類微結構更新能打包成 GGUF 模組或 LoRA adapter，你就有機會在本機 Ollama 實現免 context 注入的專屬業務知識永久固化。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c97",
+     "source": "hf_papers",
+     "id": "2610.19366",
+     "metrics": {
+      "upvotes": 45,
+      "github_stars": 31
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.19366"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.19366"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Seeing-Maintaining-Learning/multimodal-agent-memory-evolution"
+      }
+     ],
+     "title": "多模態 Agent 記憶機制的演進與挑戰回顧",
+     "one_liner": "探討多模態 Agent 如何在跨長週期任務中，從複雜異質資料持續維護並學習長期記憶架構。",
+     "url": "https://huggingface.co/papers/2610.19366",
+     "fallback": false
+    },
+    {
+     "ref": "c102",
+     "source": "hf_papers",
+     "id": "2610.19128",
+     "metrics": {
+      "upvotes": 25,
+      "github_stars": 1
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.19128"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.19128"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google-research/CLASHarness"
+      }
+     ],
+     "title": "CLASHarness：電腦操作多 Agent 衝突與驗證基準",
+     "one_liner": "針對多 Agent 在電腦操作時遭遇過期狀態、衝突指令或檔案競爭等真實情況的評測基準。",
+     "url": "https://huggingface.co/papers/2610.19128",
+     "fallback": false
+    },
+    {
+     "ref": "c111",
+     "source": "hf_papers",
+     "id": "2610.19560",
+     "metrics": {
+      "upvotes": 14,
+      "github_stars": 8
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.19560"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.19560"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/sahsaeedi/tau-emotion-bench"
+      }
+     ],
+     "title": "τ-Emotion-Bench：評測使用者情緒對工具呼叫 Agent 的干擾",
+     "one_liner": "涵蓋十個領域，專門測試真實使用者的情緒波動如何衝擊 Agent 工具呼叫的穩定度。",
+     "url": "https://huggingface.co/papers/2610.19560",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c18",
+     "source": "github_trending",
+     "id": "ifixai-ai/iFixAi",
+     "metrics": {
+      "stars": 28353,
+      "stars_today": 1587,
+      "stars_delta": 954
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ifixai-ai/iFixAi"
+      }
+     ],
+     "title": "iFixAi：從業務 KPI 與營運層面切入的 Agent 評測與紅隊審計工具",
+     "tags": [
+      "Agent評測",
+      "紅隊測試",
+      "CI自動化",
+      "Python"
+     ],
+     "summary": "現有 Agent 評測工具多偏向技術指標（如 Token 效率或 Prompt Injection），iFixAi 主打在 120 秒內檢驗 Agent 是否符合業務 KPI 與組織架構。其結合對抗性紅隊測試與營運合規審查，提供 Policy Lab 功能以找出合法權限組合下可能的最短有害行為鏈，並支援離線情境與本機重放。安裝可透過 pip，並提供精靈導引、CLI 參數與 Skill 插件三種執行方式。",
+     "key_points": [
+      "提供三種驅動方式：互動導引精靈（自動產生 ifixai.yaml）、CLI 腳本化旗標，以及能讓 Agent 自行操作的 Plugin/Skill。",
+      "內建預設 10 項檢查，完整測試包含 60 項，支援 smoke、strategic、essential、core、extended 等套件等級。",
+      "支援多種終端、CI 環境，評分可由自身、單一獨立廠商或多評判者集合進行，並產出 JSON 與 Markdown 報告。"
+     ],
+     "how_to_use": "在你的 LangGraph 流程中，特別是內部簽核、通知或文件處理的自動化 Agent，可以引入 iFixAi 進行業務規則與權限路徑審計。利用 pip install 安裝後，透過 CLI 或導引精靈設定 API 變數名稱與終端端點，驗證 Agent 在多步驟工具呼叫時是否會繞過業務限制或觸發意外行為。",
+     "fallback": false
+    },
+    {
+     "ref": "c33",
+     "source": "github_trending",
+     "id": "volcengine/OpenViking",
+     "metrics": {
+      "stars": 40015,
+      "stars_today": 105,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/volcengine/OpenViking"
+      }
+     ],
+     "title": "OpenViking：為 AI Agent 打造的檔案系統式上下文資料庫",
+     "tags": [
+      "Agent記憶",
+      "RAG與知識庫",
+      "虛擬檔案系統",
+      "上下文管理"
+     ],
+     "summary": "火山引擎開源的 OpenViking 試圖解決 Agent 記憶與知識庫黑盒子化的問題。它將知識、記憶與技能以虛擬檔案系統「viking://」的方式組織，讓 Agent 能像操作檔案一樣透過 ls、tree、read、write、grep 進行探索與編輯。系統將上下文分層為 L0（一句話摘要）、L1（核心架構與場景）與 L2（完整原文），Agent 能在讀取全文前先判斷相關性，減少大量無效讀取。",
+     "key_points": [
+      "將資源（文件/程式碼）、使用者記憶（習慣/偏好）與技能統一在單一虛擬檔案系統下管理。",
+      "支援目錄層級的語意檢索，不必每次都做全域向量庫掃描，並提供 find 與基於上下文規劃的 search 功能。",
+      "每次對話 Session 結束後可封存為 Markdown 檔案，供人類直接檢視、編輯或合併，亦支援進一步編譯為知識庫與報告。"
+     ],
+     "how_to_use": "在做爬蟲資料蒐集或資料分析的 LangGraph 狀態設計時，常面臨上下文過長問題。你可以將分析腳本、SQL Schema 與歷次抽取結果掛載到 viking:// 目錄，讓 Agent 依循 L0/L1 摘要先判斷需要哪張表或哪份文件，避免把全部資料一次灌進 Gemini 或本機 Ollama 的 Context Window 中。",
+     "fallback": false
+    },
+    {
+     "ref": "c23",
+     "source": "github_trending",
+     "id": "HKUDS/CLI-Anything",
+     "metrics": {
+      "stars": 53085,
+      "stars_today": 716,
+      "stars_delta": 596
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/HKUDS/CLI-Anything"
+      }
+     ],
+     "title": "CLI-Anything：將現有軟體轉化為 Agent 原生命令列介面的中介層",
+     "tags": [
+      "自動化",
+      "Coding Agent",
+      "命令列工具",
+      "MCP生態"
+     ],
+     "summary": "CLI-Anything 旨在弭平現有為人類設計的軟體與 AI Agent 之間的落差。透過 CLI-Hub 統一註冊與管理各種軟體專用的 CLI Harness，讓 Agent 能在終端環境下直接呼叫工具產出實體成果（如 CAD、3D 場景、圖表、筆記處理等）。近期社群已納入支援 Windows/ArcPy 的 ArcGIS Pro、Obsidian 記憶管理、Joplin、Calibre 甚至多媒體處理工具，能廣泛介接至 Cursor、Claude Code 等環境。",
+     "key_points": [
+      "提供 cli-anything-hub 工具，可透過 pip 快速安裝與管理社群貢獻的 CLI 封裝。",
+      "社群持續擴充不同領域軟體的適配器，包括筆記軟體（Obsidian、Joplin）、地理資訊、影音與 3D 處理工具。",
+      "著重安全性防護，針對路徑遍歷、符號連結溢出與資料庫寫入路徑進行權限硬化與測試驗證。"
+     ],
+     "how_to_use": "若你的內部自動化工作流需要操作特定的本機軟體或桌面應用，可透過其 Hub 尋找現成封裝，或參考其架構將內部系統的 API/指令轉化為標準 CLI。在 LangGraph 中，Agent 能以 subprocess 或命令列工具節點方式呼叫這些 CLI，擴展電腦操作與文件轉檔等自動化情境。",
+     "fallback": false
+    },
+    {
+     "ref": "c24",
+     "source": "github_trending",
+     "id": "xerj-org/xerj",
+     "metrics": {
+      "stars": 5644,
+      "stars_today": 715,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/xerj-org/xerj"
+      }
+     ],
+     "title": "XERJ：降低 Coding Agent Token 消耗的本機參考程式碼語意搜尋引擎",
+     "tags": [
+      "Coding Agent",
+      "本機搜尋",
+      "Token優化",
+      "開源工具"
+     ],
+     "summary": "XERJ 是一款可在本機運行的 AI 搜尋引擎，專門替 Coding Agent 索引資料夾與開源專案。官方宣稱其主打「參考程式碼（Reference Coding）」工作流：讓 Agent 在撰寫程式前，先搜尋已索引的類似開源專案如何解決問題，在受控測試中將輸出 Token 降低 2.7 倍（日常生活回報約 5 倍）。提供 autoindex、定義跳轉（def）與搜尋（search）指令，並支援 Windows 手動安裝與 MCP 介接。",
+     "key_points": [
+      "本機預設綁定 127.0.0.1，提供零設定快速啟動與 MCP 整合，讓 Agent 只抓取所需程式碼片段而非逐檔讀取。",
+      "具備 xerj gain 指令，可量化統計實際節省的工作量與效率提升。",
+      "採 Apache-2.0 授權，專案採行社群回報機制，鼓勵使用者提交 Markdown 欄位報告協助改善引擎。"
+     ],
+     "how_to_use": "當你在 Windows 上使用 Coding Agent 撰寫 pandas 分析腳本或複雜 LangGraph 節點時，可先用 XERJ 索引常用開源套件或過往專案。Agent 在實作功能前先本機檢索具體實作邏輯與函數簽名，能大幅減少因本機 Ollama 上下文限制或 Gemini 免費額度不足而產生的重試修復迴圈。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "bojieli/ai-agent-book",
+     "metrics": {
+      "stars": 54409,
+      "stars_today": 204,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/bojieli/ai-agent-book"
+      }
+     ],
+     "title": "《深入理解 AI Agent》開源專案",
+     "one_liner": "李博杰所著的 AI Agent 原理與工程實踐專書，開源全書內文、PDF 與章節範例程式碼。",
+     "url": "https://github.com/bojieli/ai-agent-book",
+     "fallback": false
+    },
+    {
+     "ref": "c22",
+     "source": "github_trending",
+     "id": "mksglu/context-mode",
+     "metrics": {
+      "stars": 29794,
+      "stars_today": 904,
+      "stars_delta": 669
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mksglu/context-mode"
+      }
+     ],
+     "title": "context-mode 上下文沙盒最佳化工具",
+     "one_liner": "透過沙盒化工具輸出號稱可減少 98% 內容，並支援跨 17 個平台的 MCP 記憶管理。",
+     "url": "https://github.com/mksglu/context-mode",
+     "fallback": false
+    },
+    {
+     "ref": "c50",
+     "source": "github_search",
+     "id": "outcrawlai/scout",
+     "metrics": {
+      "stars": 831,
+      "forks": 26,
+      "stars_delta": 183
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/outcrawlai/scout"
+      }
+     ],
+     "title": "Scout 開源瀏覽器操作 Agent",
+     "one_liner": "Outcrawl 推出的開源瀏覽器操作 Agent 鏡像專案，專注於網頁自動化任務。",
+     "url": "https://github.com/outcrawlai/scout",
+     "fallback": false
+    },
+    {
+     "ref": "c17",
+     "source": "github_trending",
+     "id": "debpalash/VoiceStudio",
+     "metrics": {
+      "stars": 69088,
+      "stars_today": 3024,
+      "stars_delta": 2743
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/debpalash/VoiceStudio"
+      }
+     ],
+     "title": "VoiceStudio 本機語音合成與複製工作台",
+     "one_liner": "支援 646 種語言的開源且完全本機運行的語音設計、複製與聽寫工具。",
+     "url": "https://github.com/debpalash/VoiceStudio",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c18",
+  "source": "github_trending",
+  "id": "ifixai-ai/iFixAi",
+  "metrics": {
+   "stars": 28353,
+   "stars_today": 1587,
+   "stars_delta": 954
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/ifixai-ai/iFixAi"
+   }
+  ],
+  "title": "用 iFixAi 跑完 Agent 業務規範與安全評測",
+  "why": "評測 Agent 是否符合業務規範與 KPI，支援內建 mock 模式，不需付費金鑰就能在 Windows 跑完評測管線。",
+  "steps": [
+   "在終端機執行 `pip install \"ifixai[gemini]\"` 安裝評測工具。",
+   "執行 `ifixai run --provider mock --api-key not-used --eval-mode self`，透過內建 mock 模式測試預設的 10 項檢查（Windows 若找不到指令可改用 `python -m ifixai run --provider mock --api-key not-used --eval-mode self`）。",
+   "若想連接現有環境進行評測，執行 `ifixai setup` 透過互動精靈挑選 provider、模型與檢查項目，自動產出 `ifixai.yaml` 設定檔。"
+  ],
+  "success_check": "終端機顯示檢查計分卡（預設 mock 會看到 B01 與 P01 失敗），且在 `./ifixai-results/` 目錄下成功產生 JSON 與 Markdown 格式的評測報告。",
+  "fallback": false
+ },
+ "warnings": []
+}
