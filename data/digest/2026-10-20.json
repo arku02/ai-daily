@@ -1,0 +1,859 @@
+{
+ "date": "2026-10-20",
+ "generated_at": "2026-10-20T00:45:46Z",
+ "models_used": [
+  "gemini-3.8-flash"
+ ],
+ "llm_calls": 6,
+ "tldr": [
+  "LangChain 分享案例，展示以 LangGraph 與評測優先架構打造高可靠 Agent 的實務經驗。",
+  "熱門開源工具 OpenCode 遭駭導致金鑰外洩與異常扣款，引發開發者對 Agent 供應鏈安全的警惕。",
+  "Mistral 發布時間序列基礎模型 Timestral，Google 亦釋出全新輕量嵌入模型。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c129",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/"
+      }
+     ],
+     "title": "開源 Coding Agent OpenCode 平台遭駭，用戶 API 金鑰遭盜刷",
+     "tags": [
+      "Coding Agent",
+      "資安風險",
+      "API 金鑰安全"
+     ],
+     "summary": "開源 AI 寫程式工具 OpenCode 宣布其線上平台 OpenCode Console 舊系統遭駭客入侵，波及約 1.4% 儲存 API 金鑰的用戶。駭客疑利用外洩的金鑰發動大規模模型蒸餾攻擊，造成部分開發者的 OpenAI、Anthropic 與 Google 帳戶出現數百至上千美元的未授權扣款。OpenCode 表示開源本機端 app 與 CLI 工具不受影響，目前正在處理受害用戶退款並持續防禦。",
+     "key_points": [
+      "OpenCode Console 雲端平台遭入侵，1.4% 存放 API 金鑰的帳戶受到波及。",
+      "外洩金鑰疑似被用於模型蒸餾攻擊，導致部分開發者收到巨額 API 帳單通知。",
+      "共同創辦人 Dax Raad 強調本機開源軟體與命令列工具不受影響，金鑰並未傳至官方伺服器。"
+     ],
+     "how_to_use": "這提醒我們在 Windows 本機開發 LangGraph 專案時，切勿將金鑰存放於第三方雲端平台或工作區。即使你主要使用 Gemini 免費方案或本機 Ollama，只要有配置任何線上 API Key，都應嚴格保存在本機的 .env 檔案中，並在雲端後台設定嚴格的用量警示或預算上限，避免無端遭到盜用。",
+     "fallback": false
+    },
+    {
+     "ref": "c133",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/how-numan-built-an-eval-first-ai-health-coach-with-langgraph-and-langsmith",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/how-numan-built-an-eval-first-ai-health-coach-with-langgraph-and-langsmith"
+      }
+     ],
+     "title": "Numan 以 LangGraph 實踐評測優先的 AI 健康教練架構",
+     "tags": [
+      "LangGraph",
+      "LangSmith",
+      "Agent 評測",
+      "多輪對話"
+     ],
+     "summary": "英國數位健康業者 Numan 分享運用 LangGraph 與 LangSmith 開發 AI 健康教練 Nu 的經驗。為了在法規邊界內避免觸及醫療診斷，團隊發現傳統的「單輪靜態評測」與「預先編寫腳本的多輪評測」完全失效，前者平均分數會掩蓋合規缺失，後者則無法應對真實對話的發散性。團隊體會到在行為引導的對話情境中，評測準則的設計權重甚至高於 Agent 本身。",
+     "key_points": [
+      "單輪靜態評測（LLM 裁判對單一回覆打分）在多輪對話中容易掩蓋嚴重違規與合規邊界問題。",
+      "預先寫死回覆的腳本多輪評測，會因 Agent 第一輪回答偏離腳本而導致後續測試失去效力。",
+      "高合規對話系統的核心在於評測準則的動態設計，須評估對話節奏、探索過程與邊界防守能力。"
+     ],
+     "how_to_use": "你在用 LangGraph 設計內部流程或資料諮詢 Agent 時，能直接借鑑這個評測思維。針對多輪對話，不要只用簡單的單問單答 LLM-as-a-judge 算平均分；可以在 LangGraph 流程圖中加入專屬的評估或安全驗證節點，搭配本機 Ollama 或 Gemini API 來動態檢驗 Agent 是否在多輪互動中維持既定邊界與資料準確性。",
+     "fallback": false
+    },
+    {
+     "ref": "c123",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/"
+      }
+     ],
+     "title": "微軟推出 Guardian Agents 監控內部 AI，示警前沿模型不可盲信",
+     "tags": [
+      "Agent 監控",
+      "微軟",
+      "權限分離",
+      "資安架構"
+     ],
+     "summary": "微軟發表全新安全功能 Guardian Agents，隸屬 Project Perception 專案，專門用來監控企業內部部署的 AI Agent。微軟執行長 Satya Nadella 與資安部門指出，前沿模型本質上難以預測且未經組織判斷訓練，當 Agent 被賦予存取敏感資料與工具權限後，其風險如同內部威脅。微軟主張企業必須將「模型智力提供」與「決策授權管控」拆開，建立獨立於模型廠之外的監控防線。",
+     "key_points": [
+      "Guardian Agents 旨在防範企業內部被賦予過高權限的 Agent 產生不可預測的非預期行為。",
+      "微軟執行長主張企業不應單方面信任模型供應商的安全宣稱，須自建獨立監控系統。",
+      "核心原則為將模型智力的供應（Intelligence）與執行權限（Authority）明確切分。"
+     ],
+     "how_to_use": "跟你的日常工作關聯不大，但此架構思維值得在 LangGraph 專案中參考。當你讓 Agent 具備執行 SQL 查詢、修改資料庫或自動寄信的 tool call 權限時，不能只靠 Prompt 規範模型行為。你應該在 Graph 中實作嚴格的 Guardrail 邏輯或人機協同（human-in-the-loop）審核節點，確保執行關鍵操作前有獨立的權限阻截機制。",
+     "fallback": false
+    },
+    {
+     "ref": "c8",
+     "source": "hn",
+     "id": "50141657",
+     "metrics": {
+      "points": 153,
+      "comments": 149
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web"
+      },
+      {
+       "label": "HN 討論（153 分）",
+       "url": "https://news.ycombinator.com/item?id=50141657"
+      }
+     ],
+     "title": "各大網站開始封鎖 AI Agent，網路自動化與操作面臨嚴格防禦",
+     "tags": [
+      "瀏覽器 Agent",
+      "網頁爬蟲",
+      "自動化阻擋",
+      "反爬機制"
+     ],
+     "summary": "儘管科技大廠力推能代客訂票、比價的瀏覽器操作與自主 Agent，主流網站卻加速關閉存取大門。Yelp 宣布僅開放付費授權的 Agent，達美航空（Delta）禁止 Agent 代替用戶訂票，摩根大通與嘉信理財亦基於安全考量封鎖 Agent 操作帳戶；Cars.com、Amtrak 等站點也陸續實施阻擋。亞馬遜去年即禁止 Perplexity 代購功能並提起訴訟，顯示外部自主 Agent 於公開網路的執行難度正快速攀升。",
+     "key_points": [
+      "金融、航空與消費服務業者基於帳戶安全與商業授權考量，全面防堵 AI Agent 代客操作。",
+      "Yelp 與 Amazon 等平台傾向將資料與操作存取權限收攏至付費授權或正式 API 協議中。",
+      "終端使用者在操作自主上網 Agent 時，遭遇封鎖與執行失敗的頻率顯著增加。"
+     ],
+     "how_to_use": "這直接關係到你的網頁爬蟲與自動化流程設計。如果你正打算利用電腦操作或瀏覽器 Agent 去外部網站爬取資料或執行填表流程，必須預期反爬機制與 Agent 阻擋將越來越嚴格。在規劃工作流時，建議優先尋求正規 API、公開資料匯出管道，或維持標準的 Python 爬蟲腳本，避免過度依賴脆弱的端到端瀏覽器 Agent。",
+     "fallback": false
+    },
+    {
+     "ref": "c16",
+     "source": "hn",
+     "id": "50152877",
+     "metrics": {
+      "points": 59,
+      "comments": 3
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins"
+      },
+      {
+       "label": "HN 討論（59 分）",
+       "url": "https://news.ycombinator.com/item?id=50152877"
+      }
+     ],
+     "title": "駭客利用開源 Agent 平台 Cairn 協同入侵百家企業網站",
+     "tags": [
+      "多 Agent 協作",
+      "資安事件",
+      "開源工具 Cairn",
+      "自動化攻擊"
+     ],
+     "summary": "資安業者 Norforge 揭露，有駭客利用名為 Cairn 的開源自主 Agent 平台入侵了超過 100 家網站，路透社指出受害名單包含 John Deere、SharkNinja 與 Cummins 等企業。Cairn 原為目標導向的問題解決引擎，使用者僅需設定起點與終點任務，Agent 便能自主推進並記錄進度。攻擊者僅輸入不到 100 個中文字設定滲透戰術，Agent 即可在約 23 小時內高度自主地完成入侵。",
+     "key_points": [
+      "駭客利用開源目標導向引擎 Cairn 部署多個 Agent，成功自主入侵全球逾百家網站。",
+      "攻擊者僅以少於 100 字的指引設定目標，多數滲透流程由 Agent 自行規劃與推進，人為介入極低。",
+      "Norforge 指出網路上存在超過 20 個疑似具惡意用途的公開 Cairn 實例。"
+     ],
+     "how_to_use": "跟你的具體工作關係不大，但 Cairn 展示的「定義起訖目標、自動規劃路徑並記錄狀態」架構很具啟發性。你在 LangGraph 構建多步驟資料處理或 ETL Pipeline 時，也可採用類似的目標導向狀態機設計。同時這也是個警訊：若在本機或內部網路運行具備自動執行 shell 或程式碼權限的 Agent 工具，務必做好沙箱隔離與權限限制。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c17",
+     "source": "hn",
+     "id": "50156189",
+     "metrics": {
+      "points": 58,
+      "comments": 32
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://madrobot.blog/2026/10/19/us-bans-deepseek-federal-agencies-dhs-order-remove-third-party/"
+      },
+      {
+       "label": "HN 討論（58 分）",
+       "url": "https://news.ycombinator.com/item?id=50156189"
+      }
+     ],
+     "title": "美政府下令民事機構全面停用 DeepSeek 相關工具",
+     "one_liner": "美國下令所有民事機構徹底移除 DeepSeek 模型，連同基於其所建構的各類工具也一併禁用。",
+     "url": "https://madrobot.blog/2026/10/19/us-bans-deepseek-federal-agencies-dhs-order-remove-third-party/",
+     "fallback": false
+    },
+    {
+     "ref": "c122",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/"
+      }
+     ],
+     "title": "Hugging Face 政策長稱嵌入式 AI 評估機制仍未成熟",
+     "one_liner": "Hugging Face 政策主管指出，模型評測背後的方法論相當複雜，嵌入式評估器目前並非現成的萬靈丹。",
+     "url": "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/",
+     "fallback": false
+    },
+    {
+     "ref": "c138",
+     "source": "rss",
+     "id": "https://openai.com/index/low-resource-programming-languages",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "OpenAI News",
+       "url": "https://openai.com/index/low-resource-programming-languages"
+      }
+     ],
+     "title": "OpenAI 強化低資源程式語言與 SQLite 等編程評測",
+     "one_liner": "OpenAI 正提升 ChatGPT 在低資源語言上的表現，並新增針對軟體工程、SQLite 與 COBOL 遷移的評測。",
+     "url": "https://openai.com/index/low-resource-programming-languages",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c75",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 1693,
+      "downloads": 17924,
+      "trending_score": 1540,
+      "likes_delta": 359
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017：Agent 與程式能力小改版，採 MIT 開源",
+     "tags": [
+      "開源模型",
+      "Coding Agent",
+      "自動化"
+     ],
+     "summary": "DeepSeek 發布開源（MIT 授權）的 V4.1-Flash-1017 小改版，定位為多模態（image-text-to-text）模型。官方宣稱該版本在推論、寫程式、Agent 任務與視覺評測上有顯著進步，且降低了執行時間與輸出長度。官方基準顯示其在 Terminal-Bench 4.0 拿下 42.3 分、Automation-Bench v1.0.6 拿下 60.5 分、DeepSWE v1.1 為 77.0 分。此次未附 Jinja 格式的 chat template，而是提供 Python 參考實作 encoding.py 與 Rust 庫 deepseek-recipe 來處理多輪對話、工具呼叫與思考模式，模型支援 1M 上下文視窗。",
+     "key_points": [
+      "採 MIT 開源授權，具備 1M 上下文視窗與多模態能力",
+      "官方基準顯示終端（Terminal-Bench）與自動化（Automation-Bench）成績顯著提升",
+      "棄用 Jinja template，改以 Python/Rust 套件處理 prompt 編碼與 tool call 解析"
+     ],
+     "how_to_use": "適合在 LangGraph 的自動化或 Coding Agent 節點中作為核心決策模型。若未來 Ollama 支援或透過本機推論部署，其較高的 Automation-Bench 分數與縮短的輸出長度，能在處理瀏覽器操作、爬蟲排錯或終端指令生成時降低延遲並提升穩定度。如果要在 Python 中手動構造包含思考與工具呼叫的 prompt，可參考官方提供的 encoding.py。",
+     "fallback": false
+    },
+    {
+     "ref": "c2",
+     "source": "hn",
+     "id": "50150434",
+     "metrics": {
+      "points": 537,
+      "comments": 101
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://mistral.ai/news/timestral/"
+      },
+      {
+       "label": "HN 討論（537 分）",
+       "url": "https://news.ycombinator.com/item?id=50150434"
+      }
+     ],
+     "title": "Mistral Timestral：專為時間序列打造的輕量開源基底模型",
+     "tags": [
+      "時間序列",
+      "資料分析",
+      "開源模型"
+     ],
+     "summary": "Mistral 推出首個時間序列基底模型家族 Timestral，提供 5M 到 209M 四種參數量級。模型支援機率型預測與多變量預測，並能納入過去與已知的未來協變數（covariates）。官方宣稱其 209M 模型在零樣本（zero-shot）設定下，於 GIFT-Eval、TIME 與 fev-bench 三大公開基準評測中均位居第一，勝過更大規模的模型。由於模型體積極小，官方強調其能在一般 CPU 上高效運算，適用於跨領域感測器、維運指標與財務流向預測。",
+     "key_points": [
+      "參數量僅 5M 至 209M，可在一般 CPU 高效運行，適合本機推論",
+      "支援零樣本多變量預測，以及過去與已知未來的協變數輸入",
+      "官方稱在 GIFT-Eval 等時間序列公開基準取得領先成績"
+     ],
+     "how_to_use": "非常契合你的日常資料分析工作。以往用 pandas 與 SQL 撈取內部流程或系統指標後，通常需要針對單一序列刻 ARIMA 或機器學習模型；現在可直接在 Windows 本機 Python 腳本中以 CPU 載入 Timestral，免去繁瑣調參，直接對訂單量、工作排程量或系統負載進行零樣本預測，亦能封裝成 LangGraph 資料分析 Agent 的客製預測工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c79",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 2725,
+      "downloads": 167750,
+      "trending_score": 631,
+      "likes_delta": 63
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google EmbeddingGemma 2：740M 輕量多模態統一向量模型",
+     "tags": [
+      "多模態 Embedding",
+      "RAG",
+      "知識庫"
+     ],
+     "summary": "Google DeepMind 開源（Apache 2.0）多模態向量模型 EmbeddingGemma 2。總參數 740M，包含 270M 文字主幹、170M 視覺與 300M 音訊編碼器，可將文字、程式碼、圖片、影片與音訊統一映射到 768 維向量空間。官方指出在程式碼任務上表現較前代提升約 14%，支援 100 多種語言與 8K 上下文。特色是支援 MRL（Matryoshka），可直接將維度截斷至 128d、256d 或 512d 以降低最多 6 倍儲存成本，並允許依需求僅載入特定模態的編碼器以節省資源。",
+     "key_points": [
+      "Apache 2.0 開源，將文字、程式碼、圖片與音訊統一嵌入至 768 維空間",
+      "採模組化設計（文字 270M、視覺 170M、音訊 300M），可選擇性載入模態",
+      "原生支援 MRL 維度截斷（最低 128d），顯著降低向量儲存開銷"
+     ],
+     "how_to_use": "可用於升級個人專案的 RAG 檢索流程。由於文字主幹僅 270M，在 Windows 本機 CPU 或筆電即可輕快運行。在 LangGraph 的知識庫節點中，不僅能檢索 Python 程式碼庫與內部文件，還能同時索引發票截圖、通知圖檔或操作錄音，而無需維護多個專用向量模型；搭配 MRL 截斷維度還能減輕向量資料庫的儲存負擔。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 18010,
+      "downloads": 7458401,
+      "trending_score": 290,
+      "likes_delta": 52
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 正式釋出",
+     "one_liner": "阿里通義千問釋出 Qwen3.8-27B 模型，吸引大量社群下載與關注。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+     "fallback": false
+    },
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM2.5-24B-A2B",
+     "metrics": {
+      "likes": 501,
+      "downloads": 14151,
+      "trending_score": 485,
+      "likes_delta": 31
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+      }
+     ],
+     "title": "Liquid AI 釋出 LFM2.5-24B-A2B",
+     "one_liner": "Liquid AI 發布具備 24B 規模的新架構模型 LFM2.5-24B-A2B。",
+     "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+     "fallback": false
+    },
+    {
+     "ref": "c87",
+     "source": "hf_models",
+     "id": "tencent/Hy-Memory-30B-A3B",
+     "metrics": {
+      "likes": 219,
+      "downloads": 1571,
+      "trending_score": 216,
+      "likes_delta": 30
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B"
+      }
+     ],
+     "title": "騰訊開源 Hy-Memory-30B-A3B",
+     "one_liner": "騰訊在 Hugging Face 開源 30B 參數量級的 Hy-Memory-30B-A3B 模型。",
+     "url": "https://huggingface.co/tencent/Hy-Memory-30B-A3B",
+     "fallback": false
+    },
+    {
+     "ref": "c10",
+     "source": "hn",
+     "id": "50151928",
+     "metrics": {
+      "points": 145,
+      "comments": 107
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://100toolkit.com/blog/deslop-model/"
+      },
+      {
+       "label": "HN 討論（145 分）",
+       "url": "https://news.ycombinator.com/item?id=50151928"
+      }
+     ],
+     "title": "社群微調去「AI 味」的 Qwen3-4B",
+     "one_liner": "開發者發布經微調的 Qwen3-4B，宣稱移除了常見的 AI 寫作腔調與生硬慣用語。",
+     "url": "https://100toolkit.com/blog/deslop-model/",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c13",
+     "source": "hn",
+     "id": "50151390",
+     "metrics": {
+      "points": 128,
+      "comments": 64
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/IsuruMaduranga/harness-engineering-101"
+      },
+      {
+       "label": "HN 討論（128 分）",
+       "url": "https://news.ycombinator.com/item?id=50151390"
+      }
+     ],
+     "title": "Harness Engineering 101：從第一原理以純 Python 打造 Agent 架構",
+     "tags": [
+      "Agent架構",
+      "Python",
+      "系統設計"
+     ],
+     "summary": "作者根據開發 WSO2 企業 Copilot 與開源 Coding Agent 的實務經驗，撰寫了這份 16 章的開源教學。核心觀點指出 LLM API 本質上是無狀態的 JSON 陣列，而所謂的「Agent」其實就是圍繞該陣列的一套修正循環（Harness）。內文使用約 300 行純 Python 程式碼，逐步示範如何解決 Context 預算超標、工具呼叫、子任務狀態分叉（Fork）與 Guardrails 等具體痛點。",
+     "key_points": [
+      "將 LLM 視為大腦，Harness 視為身體，Agent 即是圍繞對話陣列的控制迴圈",
+      "每章皆以「遇到什麼具體故障、如何以最少程式碼修補、該修補帶來什麼成本」展開",
+      "涵蓋 Context 預算管理、子 Agent 分叉、動態方向微調與 RAG 的 Harness 本質"
+     ],
+     "how_to_use": "在 LangGraph 中，StateGraph 本質上就是 Harness 的封裝。當你在寫內部自動化或資料流程時，若發現對話歷史不斷膨脹，可以參考其「Context 是預算而非袋子」與「Subagents Fork」章節，在 LangGraph 節點間主動剪裁 State，而非一股腦將每次 tool message 堆疊回去。",
+     "fallback": false
+    },
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2610.18784",
+     "metrics": {
+      "upvotes": 99,
+      "github_stars": 4
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.18784"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.18784"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Ethannju/carryon"
+      }
+     ],
+     "title": "CarryOn：以任務物件為核心的長流程 Agent 上下文管理架構",
+     "tags": [
+      "長上下文",
+      "論文",
+      "Token優化"
+     ],
+     "summary": "長流程 Agent 往往會不斷重複處理落落長的歷史互動紀錄。論文提出 CarryOn 物件導向 Context 執行時期架構，主張圍繞「可重複使用的任務進度物件（Carriers）」而非歷史紀錄來維持接續執行。在舊歷史封存後，系統僅比對環境檢查並更新受影響的物件。官方實驗顯示，在 OSWorld 2.0 與 BrowseComp-Plus 上表現提升 5.8% 與 7.0%，Token 用量分別減少 51.9% 與 22.9%。",
+     "key_points": [
+      "揚棄傳統完整歷史壓縮，改以物件導向的延續載體（Carriers）保存任務狀態",
+      "歷史封存時僅針對環境變更進行局部驗證與更新，降低重複重建成本",
+      "論文實驗顯示在環境操作與網頁檢索任務上可降低 20% 至 50% 以上的 Token 消耗"
+     ],
+     "how_to_use": "這對在 Windows 本機使用 Ollama 或 Gemini 免費額度的開發者很有啟發。做多步驟爬蟲或 SQL 資料清理時，不必在 LangGraph 的 State 保留所有歷史 ToolMessage；改為在 State 內維護明確的資料表結構與驗證狀態物件，只傳入最新尾端訊息與狀態物件，能有效避免 Context 爆掉。",
+     "fallback": false
+    },
+    {
+     "ref": "c97",
+     "source": "hf_papers",
+     "id": "2610.20424",
+     "metrics": {
+      "upvotes": 169,
+      "github_stars": 21
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.20424"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.20424"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ant-intl/BizAgentBench"
+      }
+     ],
+     "title": "BizBench：針對真實商業流程與政策約束的長流程 Agent 評測基準",
+     "tags": [
+      "Agent評測",
+      "商業流程",
+      "合規性"
+     ],
+     "summary": "現有基準常只看最終任務是否完成，忽略了中間步驟是否合規。BizBench 取自支付公司的真實業務流程，包含 789 份知識文件、601 個商業工具與 50 個複雜任務，涵蓋資源限制、時間依賴與過期衝突的指引。實驗指出即便是前沿模型（如論文測試的 Claude Opus 5 與 GPT-6 Sol），嚴格合規成功率也僅約 64.0% 與 61.3%；開源的 Qwen3.8-27B 最終目標達成率雖有 42.0%，嚴格合規率卻掉到 32.7%。",
+     "key_points": [
+      "跳脫只看結果的評測盲點，聚焦長流程中的政策遵循與中途執行合法性",
+      "提供包含 601 個工具與 789 份文件的可執行環境，模擬真實過期與衝突規則",
+      "論文數據顯示 DeepSeek-V4.1-Flash 平均工具呼叫達 191.3 次，比參考路徑高出約 70%，突顯額外執行開銷"
+     ],
+     "how_to_use": "若你在規劃內部簽核、審批或資料庫異動的自動化 Agent，不能只用最終輸出做單元測試。可以借鑑 BizBench 的驗證思路，在 LangGraph 流程的 Tool 節點加入確定性攔截器，檢查工具呼叫順序與業務邊界條件，防止模型表面上回傳正確結果，中間卻呼叫了違規工具。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50145337",
+     "metrics": {
+      "points": 502,
+      "comments": 236
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://arxiv.org/abs/2610.18861"
+      },
+      {
+       "label": "HN 討論（502 分）",
+       "url": "https://news.ycombinator.com/item?id=50145337"
+      }
+     ],
+     "title": "Hybrid Reasoning Agents",
+     "one_liner": "探討讓 Agent 在潛在空間（latent space）進行內部思考並透過文字採取行動的混合推理架構。",
+     "url": "https://arxiv.org/abs/2610.18861",
+     "fallback": false
+    },
+    {
+     "ref": "c14",
+     "source": "hn",
+     "id": "50151059",
+     "metrics": {
+      "points": 72,
+      "comments": 17
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/google-research/harness2"
+      },
+      {
+       "label": "HN 討論（72 分）",
+       "url": "https://news.ycombinator.com/item?id=50151059"
+      }
+     ],
+     "title": "Google Research 發表 Harness2",
+     "one_liner": "由 Google Research 提出的遞迴式 Agent Harness（控制框架）設計模式。",
+     "url": "https://github.com/google-research/harness2",
+     "fallback": false
+    },
+    {
+     "ref": "c114",
+     "source": "hf_papers",
+     "id": "2610.23787",
+     "metrics": {
+      "upvotes": 20,
+      "github_stars": 36
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.23787"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.23787"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/SJTU-DAI-Sys/DLite"
+      }
+     ],
+     "title": "DLite：面向 Agent 負載的無歷史投機解碼技術",
+     "one_liner": "論文針對 Agent 長上下文與頻繁多回合互動導致草稿模型接受率驟降的問題，提出輕量化投機解碼方案。",
+     "url": "https://huggingface.co/papers/2610.23787",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c28",
+     "source": "github_trending",
+     "id": "Graphify-Labs/graphify",
+     "metrics": {
+      "stars": 129172,
+      "stars_today": 751,
+      "stars_delta": 743
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Graphify-Labs/graphify"
+      }
+     ],
+     "title": "Graphify：將專案程式碼與文件轉為本機知識圖譜的 CLI 工具",
+     "tags": [
+      "知識圖譜",
+      "程式碼分析",
+      "本機工具",
+      "Tree-sitter"
+     ],
+     "summary": "Graphify 是一套將整個專案結構轉換為知識圖譜的工具。在程式碼解析方面完全於本機端執行，利用 tree-sitter AST 進行確定性分析，不需經過 LLM 也不會將程式碼外傳；若處理文件、PDF、圖片等非程式碼內容，才調用助理的模型進行語意解析。其產出的圖譜非向量索引，而是能實際遍歷的節點與邊，所有關聯均標記為明確擷取（EXTRACTED）或推斷解析（INFERRED）。執行後會產生可視化的 HTML、重點報告 Markdown 以及可重複查詢的 JSON 資料檔，支援 Windows 等多平台。",
+     "key_points": [
+      "程式碼解析採用 tree-sitter AST 本機確定性處理，完全不需 LLM 且不耗費 token",
+      "關聯明確標示 EXTRACTED 或 INFERRED，能清楚辨識直接讀取與推斷的邏輯",
+      "執行後生成 graph.html、GRAPH_REPORT.md 與 graph.json 三個檔案供查詢",
+      "官方宣稱其付費雲端方案可降低 Agent 80% 的 token 花費並具備形式驗證"
+     ],
+     "how_to_use": "在 LangGraph 建構專案知識庫或 Coding Agent 流程時，你可以先用 graphify 產出 graph.json。在 Agent 檢索環節中，直接以 Python 讀取並遍歷該 JSON 檔案中的相依節點，取代傳統向量檢索或全文搜尋，能精確找出模組與函式呼叫鏈，大幅節省上下文 token。",
+     "fallback": false
+    },
+    {
+     "ref": "c39",
+     "source": "github_trending",
+     "id": "headroomlabs-ai/headroom",
+     "metrics": {
+      "stars": 76243,
+      "stars_today": 310,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/headroomlabs-ai/headroom"
+      }
+     ],
+     "title": "Headroom：於本機端壓縮 Agent 提示詞與上下文的開源中介層",
+     "tags": [
+      "Token壓縮",
+      "本機運算",
+      "MCP",
+      "LangGraph整合"
+     ],
+     "summary": "Headroom 是一套在資料傳送給 LLM 前進行壓縮的工具，能處理工具輸出、記錄檔、RAG 文本區塊與對話歷史。所有壓縮運算皆在本機端執行，不會將提示詞或檔案外傳。其內部架構包含 ContentRouter，能分別透過 SmartCrusher 處理 JSON、CodeCompressor 處理程式碼 AST，以及 Kompress-v2-base 處理文字；同時具備可逆機制（CCR），本機快取原始內容並提供擷取工具供模型按需回查。提供 Python 套件、本地 Proxy 以及 MCP 伺服器等多種串接介面。",
+     "key_points": [
+      "全本機端執行壓縮，提示詞、記錄與檔案不需傳送至外部進行壓縮處理",
+      "依內容類型分流：JSON、程式碼與一般文本分別採用對應壓縮引擎",
+      "具備 CCR 可逆機制，本機快取原始資料並支援 retrieval 工具按需還原",
+      "提供 Python 函式庫 compress()、本機 Proxy、Agent Wrap 及 MCP 伺服器"
+     ],
+     "how_to_use": "這非常適合放進你的 LangGraph 工作流。在資料分析或內部爬蟲抓取大量資料（例如龐大的 JSON、表格或網頁日誌）後，於節點送出給 Gemini 免費 API 或本機 Ollama 之前，先呼叫 headroom 的 Python 函式 compress(messages) 壓低 token 量，避免超出免費額度或塞爆本機模型上下文。",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "HKUDS/CLI-Anything",
+     "metrics": {
+      "stars": 55235,
+      "stars_today": 606,
+      "stars_delta": 641
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/HKUDS/CLI-Anything"
+      }
+     ],
+     "title": "CLI-Anything：將現有軟體轉化為 Agent 原生 CLI 介面的框架",
+     "tags": [
+      "Agent工具",
+      "CLI封裝",
+      "工作流程自動化",
+      "開源生態"
+     ],
+     "summary": "CLI-Anything 旨在將各類現有軟體轉換為 Agent 能夠直接驅動的命令列介面（CLI Harness）。專案維護了 CLI-Hub 生態，開發者可透過 pip 安裝 cli-anything-hub 來下載與管理社群貢獻的 CLI 工具。近期更新包含了針對 Windows/ArcPy 的 ArcGIS Pro 自動化 CLI、Obsidian 筆記操作、Joplin 與 Calibre 等工具的封裝，讓 AI 助理如 Claude Code、Cursor 或自建 Agent 能透過終端機執行複雜軟體的工作流程。",
+     "key_points": [
+      "透過 CLI-Hub 集中管理各類軟體的 Agent 原生命令列封裝工具",
+      "支援將複雜 GUI 軟體操作轉換為可供 LLM 呼叫的標準 CLI 流程",
+      "近期社群更新涵蓋 Windows/ArcPy 地理資訊、Obsidian 與 Joplin 等筆記自動化",
+      "支援預覽、即時預覽與軌跡循環，可搭配外部 Agent 工具進行操作"
+     ],
+     "how_to_use": "在設計內部流程或文件處理 Agent 時，你可以透過 CLI-Hub 安裝現成的工具（如 Obsidian CLI 或 Joplin CLI），並在 LangGraph 中以標準的 Python subprocess 節點進行呼叫，無需自己手寫複雜的應用程式自動化腳本，即可快速完成筆記整理與文件同步。",
+     "fallback": false
+    },
+    {
+     "ref": "c32",
+     "source": "github_trending",
+     "id": "google/artemis",
+     "metrics": {
+      "stars": 12985,
+      "stars_today": 597,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google/artemis"
+      }
+     ],
+     "title": "ARTEMIS：以 MCP 協定驅動 Android 實機與模擬器的自動化測試工具",
+     "tags": [
+      "Android自動化",
+      "MCP",
+      "電腦操作Agent",
+      "Windows支援"
+     ],
+     "summary": "ARTEMIS 是 Google 開源的 Android 裝置操作框架，能讓 AI 助理或測試腳本透過自然語言控制實體手機或模擬器。技術上結合元素索引與座標視覺定位回退機制，並以每步約 3 至 5 秒的反應式觀察與動作循環運作。該專案深度整合 Model Context Protocol（MCP），能讓 IDE 或 Agent 驅動裝置並蒐集 Logcat 與截圖。Windows 環境提供 start.bat 一鍵安裝腳本，自動配置 ADB、scrcpy 等環境並於本地端 8000 埠開啟畫面鏡像管理介面。",
+     "key_points": [
+      "支援自然語言驅動跨應用程式操作，具備 UI 元素索引與視覺座標定位回退機制",
+      "深度支援 MCP 協定，可無縫介接各式 AI IDE 與自建 Agent 流程",
+      "Windows 環境提供 start.bat 一鍵設定，自動部署 ADB、scrcpy 與 Python 依賴",
+      "官方宣稱在 AndroidWorld 基準測試中達到 99% 以上的任務完成率"
+     ],
+     "how_to_use": "若你的自動化任務或簽核流程需要操作行動端 App（例如缺乏 API 的內部審批系統），可利用其 start.bat 在 Windows 跑起環境，並將 ARTEMIS 的 MCP 伺服器串接至你的 Agent 架構中，由 Agent 直接下指令操作實機或模擬器完成資料蒐集與點擊確認。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c18",
+     "source": "hn",
+     "id": "50154029",
+     "metrics": {
+      "points": 45,
+      "comments": 22
+     },
+     "sources": [
+      {
+       "label": "HN 討論（45 分）",
+       "url": "https://news.ycombinator.com/item?id=50154029"
+      }
+     ],
+     "title": "Laminar 推出利用強化學習找出 Agent 軌跡錯誤的模型",
+     "one_liner": "透過 RL 訓練模型自動標記與診斷 Agent 執行軌跡中的錯誤，偏向評測與監控領域。",
+     "url": "https://news.ycombinator.com/item?id=50154029",
+     "fallback": false
+    },
+    {
+     "ref": "c15",
+     "source": "hn",
+     "id": "50152541",
+     "metrics": {
+      "points": 62,
+      "comments": 39
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/kividbio/kividb"
+      },
+      {
+       "label": "HN 討論（62 分）",
+       "url": "https://news.ycombinator.com/item?id=50152541"
+      }
+     ],
+     "title": "KiviDB：相容 Redis 的高效率記憶體資料庫與向量快取",
+     "one_liner": "相容 Redis 協定的本機記憶體資料庫，額外內建向量快取功能供查詢加速。",
+     "url": "https://github.com/kividbio/kividb",
+     "fallback": false
+    },
+    {
+     "ref": "c34",
+     "source": "github_trending",
+     "id": "usestrix/strix",
+     "metrics": {
+      "stars": 70083,
+      "stars_today": 509,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/usestrix/strix"
+      }
+     ],
+     "title": "strix：開源 AI 滲透測試與漏洞修復工具",
+     "one_liner": "專門用於自動化發現並修復應用程式安全弱點的開源 AI 滲透測試專案。",
+     "url": "https://github.com/usestrix/strix",
+     "fallback": false
+    },
+    {
+     "ref": "c64",
+     "source": "github_search",
+     "id": "LiCinCan/blender-ai-mcp-addon",
+     "metrics": {
+      "stars": 931,
+      "forks": 380,
+      "stars_delta": 145
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/LiCinCan/blender-ai-mcp-addon"
+      }
+     ],
+     "title": "blender-ai-mcp-addon：支援 MCP 的 Blender AI 助理外掛",
+     "one_liner": "支援 Ollama 與 Gemini 的 Blender 外掛，可透過 MCP 執行 bpy 腳本與 3D 場景工具。",
+     "url": "https://github.com/LiCinCan/blender-ai-mcp-addon",
+     "fallback": false
+    },
+    {
+     "ref": "c53",
+     "source": "github_search",
+     "id": "Hybirdss/Hycli",
+     "metrics": {
+      "stars": 306,
+      "forks": 71,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Hybirdss/Hycli"
+      }
+     ],
+     "title": "Hycli：將網站任務轉換為 CLI 與 MCP 動作的自動化工具",
+     "one_liner": "把網頁操作轉化為具備本機儀表板的 CLI 與 MCP 動作，方便 Agent 介接網站任務。",
+     "url": "https://github.com/Hybirdss/Hycli",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c39",
+  "source": "github_trending",
+  "id": "headroomlabs-ai/headroom",
+  "metrics": {
+   "stars": 76243,
+   "stars_today": 310,
+   "stars_delta": null
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/headroomlabs-ai/headroom"
+   }
+  ],
+  "title": "用 Headroom 本機壓縮 Agent 龐大工具輸出與 Prompt",
+  "why": "本機壓縮不外傳資料，能在 LangGraph 呼叫模型前壓縮爬蟲或日誌等龐大工具輸出，減少 Token 消耗。",
+  "steps": [
+   "在終端機執行 pip install \"headroom-ai[all]\" 安裝套件。",
+   "執行 headroom doctor 確認本機環境與路由檢測正常。",
+   "開啟 Python 執行：from headroom import compress; result = compress([{'role': 'user', 'content': '貼上一段重複日誌或長文字'}]); print(result.tokens_saved, result.compression_ratio)"
+  ],
+  "success_check": "Python 成功印出節省的 Token 數（tokens_saved）與壓縮比例（compression_ratio）。",
+  "fallback": false
+ },
+ "warnings": []
+}
