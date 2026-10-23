@@ -1,0 +1,803 @@
+{
+ "date": "2026-10-23",
+ "generated_at": "2026-10-23T00:45:46Z",
+ "models_used": [
+  "gemini-3.7-flash",
+  "gemini-3.8-flash",
+  "gemini-3.5-flash-lite"
+ ],
+ "llm_calls": 18,
+ "tldr": [
+  "LangSmith 推出 LLM Gateway 強化 Agent 執行期監控與控管，Anthropic 亦將 Agent Skills 標準開源捐贈。",
+  "GitHub 出現 Headroom 與 Graphify 等利器，能顯著壓縮 RAG 內容消耗並將 SQL 與程式碼轉為知識圖譜。",
+  "Mistral Large 4 正式推出，學界也發表針對長軌跡 Agent 降低記憶體負擔的 KV Cache 工程架構。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c154",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/langsmith-llm-gateway-runtime-controls-for-production-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/langsmith-llm-gateway-runtime-controls-for-production-agents"
+      }
+     ],
+     "title": "LangSmith 推出 LLM Gateway 公開測試版，提供 Agent 執行期控管",
+     "tags": [
+      "LangChain",
+      "LLM Gateway",
+      "成本控管",
+      "可靠性"
+     ],
+     "summary": "LangSmith 正式推出 LLM Gateway 公開測試版。官方宣稱這是專為生產環境 Agent 設計的中央治理層，介於 Agent 應用與底層模型之間，旨在避免廠商綁定並支援閉源與開放權重模型。系統提供執行期成本控管與可靠性功能，可在組織、工作區、API 金鑰及使用者四個層級設定預算上限與速率限制，並具備跨模型自動容錯切換（fallback）機制。此外，Gateway 也內建機密資料保護機制，能在請求送往供應商前遮蔽 PII 與機密資訊，避免 Agent 陷入重試迴圈產生意外帳單或因單一供應商斷線而停擺。",
+     "key_points": [
+      "提供中央治理層以統一行使存取原則，支援多種閉源與開源模型",
+      "支援四層級（組織、工作區、API Key、使用者）的預算與速率限制控管",
+      "具備跨模型 Fallback 機制與 PII 等敏感資料自動遮蔽功能"
+     ],
+     "how_to_use": "在你的 LangGraph 流程中，呼叫免費 Gemini 或本機 Ollama 時常受限於速率或連線不穩。雖然你目前不需擔心付費 API 帳單超支，但透過此 Gateway 的 Fallback 與 Rate Limit 機制，能在批次資料分析或長時間爬蟲任務中，自動在不同模型節點間無痛切換，防止程式中斷。",
+     "fallback": false
+    },
+    {
+     "ref": "c138",
+     "source": "rss",
+     "id": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Simon Willison",
+       "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
+      }
+     ],
+     "title": "Anthropic 將 Agent Skills 規範捐贈給 Linux 基金會旗下 AAIF",
+     "tags": [
+      "Agent Skills",
+      "Anthropic",
+      "開源標準",
+      "AAIF"
+     ],
+     "summary": "Anthropic 宣布將 Agent Skills 標準捐贈給 Linux 基金會旗下的 Agentic AI Foundation（AAIF）。AAIF 是由 Anthropic、Block 與 OpenAI 於去年共同成立的組織，先前已納入 Model Context Protocol（MCP）規格。Anthropic 表示此舉是為了確保 Agent Skills 標準能維持開放、社群驅動且不受單一廠商綁定。這代表繼 MCP 建立工具上下文規範後，Agent 的技能擴充機制也正式納入開放標準治理架構中。",
+     "key_points": [
+      "Anthropic 將 Agent Skills 捐贈給 Linux 基金會的 AAIF 組織",
+      "延續先前捐贈 MCP 的模式，推動 Agent 工具規格的跨廠商中立化",
+      "由 Anthropic、OpenAI 與 Block 等業者共同維護開源標準生態"
+     ],
+     "how_to_use": "這項異動跟你的日常程式碼寫作目前關係不大，但值得持續追蹤。當 Agent Skills 成為跨框架標準後，未來在 LangGraph 中串接或移植各類外部工具時，將更具通用性，不必針對個別平台重寫呼叫介面。",
+     "fallback": false
+    },
+    {
+     "ref": "c5",
+     "source": "hn",
+     "id": "50198675",
+     "metrics": {
+      "points": 287,
+      "comments": 144
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/NVIDIA/OpenShell"
+      },
+      {
+       "label": "HN 討論（287 分）",
+       "url": "https://news.ycombinator.com/item?id=50198675"
+      }
+     ],
+     "title": "NVIDIA 開源 OpenShell：具備核心級隔離的自主 Agent 執行環境",
+     "tags": [
+      "安全沙盒",
+      "Runtime",
+      "Agent 安全",
+      "Linux 核心"
+     ],
+     "summary": "NVIDIA 開源了專為自主 AI Agent 設計的執行環境 OpenShell 0.1.x。該工具旨在讓 Agent 能執行檔案讀寫、安裝套件與呼叫 API，同時透過政策限制存取範圍以確保主機安全。OpenShell 採用核心層級（Kernel-level）沙盒來控管系統呼叫、檔案存取與網路連線，真實憑證僅在向核可端點發出請求時由系統代為注入；此外，政策變更需透過形式化驗證（Formal verification）審查風險。環境目前支援 Linux、macOS，以及 Windows 上的 WSL 2（實驗性支援）。",
+     "key_points": [
+      "透過核心層級沙盒隔離檔案系統、網路連線與系統呼叫",
+      "真實憑證不暴露給 Agent，僅在轉發至核可端點時動態注入",
+      "支援 WSL 2 實驗性環境，並提供專用 Agent Skills 指令"
+     ],
+     "how_to_use": "如果你在 LangGraph 中嘗試建構 Coding Agent 或需要自動執行 Python 程式碼、處理檔案的自動化流程，OpenShell 能在沙盒中隔離高風險操作。不過目前 Windows 僅支援 WSL 2 且仍屬實驗性，若要導入個人開發環境，需要配置 Docker 並注意相容性。",
+     "fallback": false
+    },
+    {
+     "ref": "c129",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/"
+      }
+     ],
+     "title": "1Password 推出 1Password for Agents：讓 Agent 無密碼安全代為登入",
+     "tags": [
+      "身分驗證",
+      "自動化登入",
+      "憑證安全",
+      "1Password"
+     ],
+     "summary": "密碼管理工具 1Password 推出「1Password for Agents」，讓使用者能授權 AI Agent 代表自己登入特定服務，而過程中 Agent 完全接觸不到使用者的真實密碼。運作時，Agent 發出登入請求並傳送專屬數位金鑰驗證身分，使用者收到通知並手動確認授權後，由 1Password 在後端代為填入憑證完成登入。此方案目前支援 Claude Duet、OpenAI Dots 等產品。該功能發布之際，正值部分銀行監測到帳戶內出現 Agent 活動並引發資安與授權疑慮的時期。",
+     "key_points": [
+      "Agent 僅持有數位金鑰識別身分，全程無法讀取明文帳號密碼",
+      "採 Human-in-the-loop 機制，登入動作需經使用者接收通知並手動確認",
+      "解決傳統流程直接給予 Agent 憑證可能導致敏感資料外洩的風險"
+     ],
+     "how_to_use": "在開發爬蟲或內部簽核自動化時，處理登入憑證往往是最危險的一環。雖然該服務目前優先支援少數商用 Agent，但其「金鑰驗證＋人類確認授權＋憑證代填」的架構，非常適合做為你在 LangGraph 設計敏感節點存取控制的參考模式。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50186037",
+     "metrics": {
+      "points": 547,
+      "comments": 511
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://claude.com/product/claude-duet"
+      },
+      {
+       "label": "HN 討論（547 分）",
+       "url": "https://news.ycombinator.com/item?id=50186037"
+      }
+     ],
+     "title": "Anthropic 發布 Claude Duet",
+     "one_liner": "Anthropic 推出新功能 Claude Duet，在社群引發熱烈討論。",
+     "url": "https://claude.com/product/claude-duet",
+     "fallback": false
+    },
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50180079",
+     "metrics": {
+      "points": 322,
+      "comments": 144
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/openai-models-google-cloud/"
+      },
+      {
+       "label": "HN 討論（322 分）",
+       "url": "https://news.ycombinator.com/item?id=50180079"
+      }
+     ],
+     "title": "OpenAI 模型將進駐 Google Cloud",
+     "one_liner": "OpenAI 模型正式支援登陸 Google Cloud 雲端平台。",
+     "url": "https://openai.com/index/openai-models-google-cloud/",
+     "fallback": false
+    },
+    {
+     "ref": "c121",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api"
+      }
+     ],
+     "title": "GitHub Copilot API 支援自訂技能與 MCP 指標",
+     "one_liner": "使用量 API 現已細分顯示自訂 Agent、技能與 MCP 伺服器名稱。",
+     "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c4",
+     "source": "hn",
+     "id": "50186129",
+     "metrics": {
+      "points": 322,
+      "comments": 102
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://mistral.ai/news/mistral-large-4/"
+      },
+      {
+       "label": "HN 討論（322 分）",
+       "url": "https://news.ycombinator.com/item?id=50186129"
+      }
+     ],
+     "title": "Mistral Large 4 公開預覽：1 兆參數原生多模態開源權重模型即將釋出",
+     "tags": [
+      "多模態模型",
+      "開源模型",
+      "Agent能力"
+     ],
+     "summary": "Mistral 推出 Mistral Large 4（ML4，代號 le Chonk）公開預覽版，官方預計 10 月底釋出模型權重。ML4 為總參數量 1 兆、啟用參數量 520 億的原生多模態模型，於歐洲以 3,800 張 NVIDIA Grace Blackwell GPU 訓練。官方宣稱其在程式碼生成、Agent 工作流程與多模態理解上表現優異，在視覺定位等特定領域甚至超越部分封閉旗艦模型。目前可於 Mistral Studio API 試用，並針對網路安全、金融與法律等企業工作負載進行紅隊測試。",
+     "key_points": [
+      "1 兆總參數、520 億啟用參數的原生多模態模型，預計 10 月底釋出開源權重。",
+      "官方宣稱在 Coding、Agentic 工作流程及視覺定位表現達到頂尖水準。",
+      "訓練涵蓋超過 160 種語言，專為資料主權與企業自託管環境設計。"
+     ],
+     "how_to_use": "這款模型目前跟你的本機開發環境關係不大，因為 52B 的活躍參數量無法直接在 Windows 筆電或單機 Ollama 順暢運作，且目前僅提供雲端 Studio 預覽。不過它在 Agentic 行為與程式碼任務上的評測表現出色，值得持續追蹤 10 月底權重釋出後社群是否推出量化版本，未來或許可作為 LangGraph 中複雜推理節點的備選方案。",
+     "fallback": false
+    },
+    {
+     "ref": "c74",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 2357,
+      "downloads": 51911,
+      "trending_score": 2043,
+      "likes_delta": 192
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 更新：強化 Agent 評測表現與推論效率",
+     "tags": [
+      "開源模型",
+      "Coding Agent",
+      "MIT授權"
+     ],
+     "summary": "DeepSeek 發布 DeepSeek-V4.1-Flash-1017 小幅更新版本，採用 MIT 授權釋出。官方數據顯示該版本在推理、程式碼編寫、Agent 任務與視覺評測上均有提升，並縮短了輸出長度與任務執行時間以降低成本。此版本並未提供 Jinja 格式的對話模板，改為提供 Python 參考實作與具備 Python 綁定的 Rust 工具庫 deepseek-recipe，負責處理對話格式轉換、工具調用編碼及回應解析，支援 1M 上下文長度與思考模式。",
+     "key_points": [
+      "MIT 開源授權，在 DeepSWE v1.1（77.0）與 Automation-Bench（60.5）等 Agent 基準測試表現突出。",
+      "縮減任務輸出長度與執行時間，優化 Agent 執行的成本效能比。",
+      "提供 Python 實作與 deepseek-recipe 工具庫，原生處理思考模式、工具調用與串流解析。"
+     ],
+     "how_to_use": "這個模型非常適合融入你的自動化與爬蟲工作。其在 Automation-Bench 評測達 60.5，且官方提供 deepseek-recipe 的 Python 綁定，能精準處理 Tool Calling 與多輪對話。你可以將其封裝進 LangGraph 的決策或程式碼生成節點，搭配本機轉換權重或等待 Ollama 支援，就能在 Windows 本機離線驅動複雜的自動化流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 2845,
+      "downloads": 185259,
+      "trending_score": 354,
+      "likes_delta": 39
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google 開源 EmbeddingGemma 2：740M 輕量多模態向量模型",
+     "tags": [
+      "向量模型",
+      "RAG",
+      "端身裝置"
+     ],
+     "summary": "Google DeepMind 採用 Apache 2.0 授權開源 EmbeddingGemma 2。該模型總參數量為 740M，將文字、程式碼、圖片、音訊與影片統一映射至 768 維向量空間。架構包含 270M 文字主幹，以及可依需求單獨載入的 170M 視覺與 300M 音訊編碼器。模型支援 8K 上下文長度與 Matryoshka 表示學習（MRL），允許向量截斷至 128 維以節省儲存空間。官方宣稱其針對消費級筆電與行動裝置最佳化，在程式碼任務上的表現較前代提升約 14%。",
+     "key_points": [
+      "740M 參數輕量設計，可依需求單獨載入文字（270M）、視覺（170M）或音訊（300M）編碼器。",
+      "原生支援 4 種模態並統一映射至 768 維空間，程式碼表現提升約 14%。",
+      "支援 MRL 技術，可彈性截斷至 128、256 或 512 維，官方宣稱可降低高達 6 倍儲存成本。"
+     ],
+     "how_to_use": "你可以直接在 Windows 環境用 Python 的 transformers 或 sentence-transformers 載入它。若只載入文字模組僅需 270M 參數，非常適合在 Jupyter 中替 SQL 表結構、資料分析筆記或內部文件建置本機 RAG 知識庫。其提升的程式碼理解能力與低維度截斷功能，能大幅降低本機向量資料庫的儲存負擔並加速檢索。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c73",
+     "source": "hf_models",
+     "id": "RecursiveSI/flint",
+     "metrics": {
+      "likes": 535,
+      "downloads": 420,
+      "trending_score": 527,
+      "likes_delta": 290
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/RecursiveSI/flint"
+      }
+     ],
+     "title": "RecursiveSI 發布開源模型 flint",
+     "one_liner": "RecursiveSI 於 Hugging Face 平台發布開源模型 flint。",
+     "url": "https://huggingface.co/RecursiveSI/flint",
+     "fallback": false
+    },
+    {
+     "ref": "c90",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6409,
+      "downloads": 2706809,
+      "trending_score": 151,
+      "likes_delta": 19
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "通義千問推出 Qwen3.8-Flash-Next",
+     "one_liner": "阿里雲 Qwen 團隊發布新一代輕量模型 Qwen3.8-Flash-Next。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    },
+    {
+     "ref": "c166",
+     "source": "rss",
+     "id": "https://huggingface.co/blog/nvidia/kumo-relational",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Hugging Face Blog",
+       "url": "https://huggingface.co/blog/nvidia/kumo-relational"
+      }
+     ],
+     "title": "NVIDIA Kumo Relational 免訓練超越傳統關聯式機器學習",
+     "one_liner": "NVIDIA 發表關聯式資料模型，宣稱免訓練即可超越監督式機器學習。",
+     "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c97",
+     "source": "hf_papers",
+     "id": "2610.28577",
+     "metrics": {
+      "upvotes": 113,
+      "github_stars": 29
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.28577"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.28577"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/thu-nics/AKV"
+      }
+     ],
+     "title": "快取工程與 AKV 引擎：長軌跡 Agent 的主動 KV Cache 管理機制",
+     "tags": [
+      "Agent 架構",
+      "推論優化",
+      "KV Cache",
+      "開源框架"
+     ],
+     "summary": "清華等團隊提出「快取工程」（Cache Engineering）與 AKV 服務引擎，解決 Agent 執行長軌跡時 KV Cache 帶來的 I/O 與儲存瓶頸。過去透過刪減或摘要歷史上下文的 Context Engineering 會破壞已快取的狀態，導致耗時的重新前綴填充（re-prefill）。該研究讓 Agent 能主動發送 drop 與 repos 指令控制 KV 快取，且無需改動對話前綴。AKV 提供相容現有 API 的無狀態介面，內部自動管理快取重用與收回。實驗顯示，工具回傳的 rolling-drop 策略比傳統摘要減少 27.7% 成本並微幅提升基準分數，P95 延遲加速 1.5 倍。",
+     "key_points": [
+      "提出 drop 與 repos 原語，讓 Agent 主動控制 KV Cache 而不引發重新 prefill",
+      "設計 AKV 推論引擎，維持標準無狀態 API 接口並自動處理歷史依賴性快取重用",
+      "相較於門檻觸發式摘要，工具回傳滾動丟棄策略降低 27.7% 成本且輸出吞吐量提升至 1.2 倍"
+     ],
+     "how_to_use": "這篇技術偏底層推論架構，與目前在 LangGraph 上層以 Python 呼叫雲端 Gemini API 的模式關係不大，因商業 API 尚未開放此類底層 KV 操作。但若你在本機以 Ollama 跑長流程爬蟲或資料清理 Agent，未來底層推論若支援類似 AKV 的機制，能顯著改善 context window 爆炸與長對話卡頓的問題，值得追蹤其架構演進。",
+     "fallback": false
+    },
+    {
+     "ref": "c98",
+     "source": "hf_papers",
+     "id": "2610.11942",
+     "metrics": {
+      "upvotes": 87,
+      "github_stars": 1
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.11942"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.11942"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/jiamingzhang94/lgwm"
+      }
+     ],
+     "title": "LGWM：以特徵空間預測轉換驗證 GUI Agent 行為安全性",
+     "tags": [
+      "GUI Agent",
+      "安全驗證",
+      "World Model",
+      "電腦操作"
+     ],
+     "summary": "針對電腦操作 Agent 容易遭逢的畫面劫持風險，研究指出 GUI 安全性取決於「畫面轉換（Transition）」而非單一畫面合法性（如點擊查看訂單卻跳出登入頁面即為異常）。作者提出無解碼器的世界模型 LGWM，直接在畫面特徵編碼空間預測下一步畫面，將安全驗證簡化為向量比對，並可在殘差方向上區分惡意或良性異常。在 RSWT-BENCH 測試中，LGWM 達到 0.987 AUC，決策時間僅 17 毫秒，在維持即時性下效能比肩商用大型 VLM，將世界模型從過去的模擬與規劃用途延伸至輕量驗證層。",
+     "key_points": [
+      "提出以轉換合理性作為安全防線，避免被合法偽造畫面（如釣魚登入頁）欺騙",
+      "LGWM 直接在表示空間預測下一步畫面，省去生成影像或文字的多模態評估延遲，單次比對僅 17ms",
+      "在有害異常分離任務達 0.953 AUC，大幅超越 Prompt 引導的商用 VLM"
+     ],
+     "how_to_use": "若你正在嘗試開發操作瀏覽器做內部流程自動化（如表單簽核或後台爬蟲）的 Agent，這篇研究點出重要架構思維：不要只用 VLM 判斷當前畫面是否正常，而應在 LangGraph 的 tool node 之後建立「預期狀態轉換驗證」，比對點擊動作後的特徵或路徑是否偏離預期，及早阻斷非預期的畫面劫持。",
+     "fallback": false
+    },
+    {
+     "ref": "c104",
+     "source": "hf_papers",
+     "id": "2610.29722",
+     "metrics": {
+      "upvotes": 27,
+      "github_stars": 9
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.29722"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.29722"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/dolev31/lasagna"
+      }
+     ],
+     "title": "LASAGNA 評測框架：揭露 RAG 多模組堆疊的增益衰減與取捨",
+     "tags": [
+      "RAG",
+      "評測工具",
+      "檢索增強",
+      "模組化設計"
+     ],
+     "summary": "業界常個別驗證切塊、檢索、重排（Rerank）等 RAG 組件，但各組件效益組合時往往無法線性相加。研究團隊推出開源評測框架 LASAGNA，在 8 個基準與 5K 至 200K 文件規模下測試 450 種配置。研究發現，三種各具優勢的檢索技術理論預期疊加可提升 47%，實際組合僅有 17% 增益；且檢索品質與生成忠實度（faithfulness）往往存在拉鋸，優化一端常損害另一端。此外，在小型知識庫表現最佳的組合，移至大型知識庫後往往不再勝出。",
+     "key_points": [
+      "單獨有效的技術在整合時收益顯著遞減，三技術合用僅發揮預估增益的三分之一",
+      "檢索召回與忠實度存在權衡，單純追求高檢索相關度可能降低生成忠實度",
+      "最佳 RAG 模組組合隨文件庫規模（5K 到 200K）動態改變，不可盲信單點論文數據"
+     ],
+     "how_to_use": "在做個人知識庫或內部文件處理 RAG 時，不要盲目疊加 Query 改寫、多種重排器與複雜切塊。建議利用這篇論文提到的思維與開源框架 LASAGNA，直接在自己的資料集上做全鏈路評測。特別是在調整 LangGraph 中的檢索檢驗節點時，務必同時觀測答案忠實度指標，避免過度工程化檢索環節。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c99",
+     "source": "hf_papers",
+     "id": "2610.26828",
+     "metrics": {
+      "upvotes": 64,
+      "github_stars": 69
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.26828"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.26828"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/MSR-Orchard/WildAWM"
+      }
+     ],
+     "title": "WildAWM：合成電腦操作環境以降低實體系統學習風險",
+     "one_liner": "提出可擴展的環境與任務合成管線，解決電腦操作 Agent 缺乏多樣訓練資料與直接操作實體系統的安全性問題。",
+     "url": "https://huggingface.co/papers/2610.26828",
+     "fallback": false
+    },
+    {
+     "ref": "c111",
+     "source": "hf_papers",
+     "id": "2610.19376",
+     "metrics": {
+      "upvotes": 17,
+      "github_stars": 0
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.19376"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.19376"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/cskyl/deloop"
+      }
+     ],
+     "title": "DeLoop：以重複工具呼叫為自監督訊號減少長流程死循環",
+     "one_liner": "針對模型在歷史壓縮後易陷入無效重複動作的現象，提出 DeLoop 自監督訓練以改善長軌跡 Agent 的死循環。",
+     "url": "https://huggingface.co/papers/2610.19376",
+     "fallback": false
+    },
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2610.17860",
+     "metrics": {
+      "upvotes": 30,
+      "github_stars": 2
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.17860"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.17860"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NJU-LINK/Socratic-Skill-Learning"
+      }
+     ],
+     "title": "Socratic Skill Learning：師生交錯互動提煉高遷移性 Agent 技能",
+     "one_liner": "透過導師引導與 Agent 自行實作反思交錯進行，確保 Agent 累積具遷移性的長效技能與使用邊界知識。",
+     "url": "https://huggingface.co/papers/2610.17860",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c30",
+     "source": "github_trending",
+     "id": "headroomlabs-ai/headroom",
+     "metrics": {
+      "stars": 77558,
+      "stars_today": 517,
+      "stars_delta": 305
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/headroomlabs-ai/headroom"
+      }
+     ],
+     "title": "Headroom：本機端 Agent 上下文與工具輸出壓縮工具",
+     "tags": [
+      "Token壓縮",
+      "本機工具",
+      "MCP",
+      "LangGraph"
+     ],
+     "summary": "Headroom 是一個能在資料進入 LLM 前先進行本機壓縮的工具，專門處理工具輸出、日誌、RAG 檢索片段、檔案與對話紀錄。它完全在使用者本機執行，不將提示詞或檔案外傳，核心透過 ContentRouter 分流，分別對 JSON、AST 程式碼及一般文本進行壓縮。官方宣稱可大幅降低 Token 消耗，並具備 CCR 可逆快取機制，當模型需要完整原文時可透過 MCP 工具回呼調取。此外還提供 Python 函式庫、Proxy 代理、命令列包裝與跨 Agent 記憶體同步等功能。",
+     "key_points": [
+      "支援 Python 函式庫 `compress(messages)` 與本機 Proxy 代理（port 8787），無縫接入現有流程",
+      "純本機端處理，包含 SmartCrusher（JSON）、CodeCompressor（AST）與 Kompress-v2-base 等壓縮器",
+      "具備 CCR 機制，原始資料快取於本機，模型有需要可呼叫 retrieve 工具調回原文",
+      "提供 MCP 伺服器，支援跨 Claude、Codex、Gemini 等模型的共享記憶與除錯學習"
+     ],
+     "how_to_use": "在你的 LangGraph 流程中，當爬蟲節點或 SQL 查詢回傳龐大 JSON/日誌時，可直接呼叫 Headroom 的 Python SDK 進行壓縮，再傳給節點內的 Gemini 免費版或本機 Ollama。這樣能有效避免免費額度被大量 Context 灌爆，也能解決本機模型 Context 窗口有限的問題。",
+     "fallback": false
+    },
+    {
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "Graphify-Labs/graphify",
+     "metrics": {
+      "stars": 132939,
+      "stars_today": 1408,
+      "stars_delta": 1305
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Graphify-Labs/graphify"
+      }
+     ],
+     "title": "Graphify：將專案程式碼與文件轉為知識圖譜的本機工具",
+     "tags": [
+      "知識圖譜",
+      "Codebase分析",
+      "AST",
+      "開發工具"
+     ],
+     "summary": "Graphify 是一套能將專案程式碼、文件轉換為知識圖譜的命令列工具。針對程式碼部分，它完全在本地使用 tree-sitter AST 進行確定性解析，無需依賴 LLM 或外傳資料即可免費產出圖譜。每個關聯邊皆明確標記為原始碼直接提取或推論得出，並產出可視化 HTML、Markdown 報告與 JSON 圖譜檔案。官方宣稱其非傳統向量索引，能直接進行圖譜遍歷與概念路徑追蹤，支援 Windows 等多平台與主流 Coding Agent 擴充技能。",
+     "key_points": [
+      "程式碼解析純本機執行，利用 tree-sitter AST 解析，無需呼叫 LLM 即可免費構建",
+      "執行後生成三項檔案：可視化網頁 graph.html、重點摘要 GRAPH_REPORT.md 及結構化 graph.json",
+      "圖譜每條關係皆標註 EXTRACTED（直接提取）或 INFERRED（推論），具備透明性",
+      "支援 Python 3.10+，可透過 uv 或 pipx 在 Windows 上快速安裝並綁定 Agent 技能"
+     ],
+     "how_to_use": "你可以用 uv 在本機安裝後，對個人專案或公司的 Python/SQL 自動化腳本執行分析。生成的 graph.json 能作為本地知識庫，直接供 LangGraph 檢索程式架構與依賴關係，不必再耗費 Gemini 額度讀取大量零散程式碼，也能開啟 graph.html 直觀檢視模組關聯。",
+     "fallback": false
+    },
+    {
+     "ref": "c57",
+     "source": "github_search",
+     "id": "alibaba/qz-browser-agent",
+     "metrics": {
+      "stars": 115,
+      "forks": 15,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/alibaba/qz-browser-agent"
+      }
+     ],
+     "title": "qz：基於現有 Chrome 瀏覽器的開源本機自動化 Agent",
+     "tags": [
+      "瀏覽器Agent",
+      "自動化爬蟲",
+      "Chrome外掛",
+      "MCP"
+     ],
+     "summary": "qz 是一款以 Chrome 擴充功能形式運行的本機優先瀏覽器 Agent。它直接在使用者平時使用的 Chrome 中運作，能直接沿用既有的登入狀態、Cookie 與外掛，避開登入牆與複雜的驗證流程。使用者可以自備模型 API Key，所有資料保留在本地。該工具支援自然語言任務拆解、多任務並行、將成功流程一鍵儲存為 Skill 複用，並提供 CLI 與 MCP 伺服器，讓外部 Agent 能夠派發網頁任務並取回結構化表格或檔案。",
+     "key_points": [
+      "直接在日常 Chrome 側邊欄執行，沿用既有登入態，使用者可隨時介入或暫停",
+      "自備 API Key（支援多種模型），資料全程保存在本機端",
+      "支援並行子任務，能跨分散網站蒐集數據並自動整理為比較表格與檔案",
+      "提供 CLI 與 MCP 接口，可被外部 Coding Agent 或自動化系統呼叫"
+     ],
+     "how_to_use": "針對內部系統簽核或需要複雜登入的後台資料蒐集，直接讓 qz 在你的日常 Chrome 執行，免去寫 Playwright 處理 Session 的麻煩。抓取出的結構化數據可直接匯出成 CSV/表格，再由你的 Jupyter/pandas 進行後續資料分析。",
+     "fallback": false
+    },
+    {
+     "ref": "c40",
+     "source": "github_trending",
+     "id": "NanmiCoder/MediaCrawler",
+     "metrics": {
+      "stars": 67710,
+      "stars_today": 102,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NanmiCoder/MediaCrawler"
+      }
+     ],
+     "title": "MediaCrawler：基於 Playwright 與 CDP 的多平台社群爬蟲",
+     "tags": [
+      "自動化爬蟲",
+      "資料蒐集",
+      "Playwright",
+      "社群平台"
+     ],
+     "summary": "MediaCrawler 是一套專門抓取主流自媒體公開資訊的開源爬蟲工具，支援小紅書、抖音、快手、B站、微博、貼吧與知乎等平台。技術原理採用 Playwright 登入並保留瀏覽器上下文，透過 JavaScript 表達式獲取簽名參數，免去複雜的 JS 逆向工程門檻。專案預設可透過 CDP 模式連接使用者既有的 Chrome 瀏覽器，大幅簡化環境依賴，並支援關鍵詞搜尋、貼文爬取、二級評論抓取與 IP 代理池等功能。",
+     "key_points": [
+      "支援小紅書、抖音、B站、微博等 7 大平台之公開資料、關鍵詞搜尋與二級評論採集",
+      "採用 CDP 模式直接連接本機 Chrome，免去逆向加密簽名的繁瑣過程",
+      "環境依賴 Node.js 與 Python，推薦使用 uv 進行套件管理與同步",
+      "官方宣稱 Pro 版提供斷點續爬、AI Agent Skill 整合與評論分析等延伸功能"
+     ],
+     "how_to_use": "在 Windows 上利用 uv 與本機 Chrome 快速啟動，設定關鍵詞或指定貼文抓取社群留言與內文。抓下來的公開數據可直接匯入 SQL 資料庫或以 pandas 清洗，作為後續社群輿情或市場調查資料分析流程的穩定資料來源。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c25",
+     "source": "github_trending",
+     "id": "cloudflare/security-audit-skill",
+     "metrics": {
+      "stars": 39570,
+      "stars_today": 2979,
+      "stars_delta": 3096
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/cloudflare/security-audit-skill"
+      }
+     ],
+     "title": "Cloudflare 安全審計 Agent 技能",
+     "one_liner": "提供多階段安全審計技能，能產生經驗證且機器可讀的稽核報告。",
+     "url": "https://github.com/cloudflare/security-audit-skill",
+     "fallback": false
+    },
+    {
+     "ref": "c39",
+     "source": "github_trending",
+     "id": "BerriAI/litellm",
+     "metrics": {
+      "stars": 61838,
+      "stars_today": 107,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/BerriAI/litellm"
+      }
+     ],
+     "title": "LiteLLM：輕量化多模型 API 閘道",
+     "one_liner": "以 Rust 為核心的 LLM 閘道，以統一介面呼叫百種模型並支援負載平衡與成本追蹤。",
+     "url": "https://github.com/BerriAI/litellm",
+     "fallback": false
+    },
+    {
+     "ref": "c51",
+     "source": "github_search",
+     "id": "C4rohan/Lampline",
+     "metrics": {
+      "stars": 163,
+      "forks": 29,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/C4rohan/Lampline"
+      }
+     ],
+     "title": "Lampline：本機電話語音 Agent 開發與測試平台",
+     "one_liner": "能在本機建構 AI 電話 Agent，並使用虛擬通話測試對話流程，支援匯入 Dialogflow。",
+     "url": "https://github.com/C4rohan/Lampline",
+     "fallback": false
+    },
+    {
+     "ref": "c58",
+     "source": "github_search",
+     "id": "alexgaoth/awesome-reverse-engineered",
+     "metrics": {
+      "stars": 603,
+      "forks": 114,
+      "stars_delta": 114
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/alexgaoth/awesome-reverse-engineered"
+      }
+     ],
+     "title": "awesome-reverse-engineered：開源逆向專案清單與 MCP",
+     "one_liner": "整理逾 1.6 萬個逆向工程開源專案，提供搜尋、Agent 技能與 MCP 伺服器。",
+     "url": "https://github.com/alexgaoth/awesome-reverse-engineered",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c27",
+  "source": "github_trending",
+  "id": "Graphify-Labs/graphify",
+  "metrics": {
+   "stars": 132939,
+   "stars_today": 1408,
+   "stars_delta": 1305
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/Graphify-Labs/graphify"
+   }
+  ],
+  "title": "用 Graphify 把本地專案轉成程式碼知識圖譜",
+  "why": "不用付費 LLM，純用本地 AST 解析程式碼，幫你建立可查詢的知識圖譜，對 RAG 與 Agent 開發很有幫助。",
+  "steps": [
+   "在 Windows 終端機執行指令安裝工具：`uv tool install graphifyy`（或用 `pip install graphifyy`）",
+   "在專案根目錄執行 `graphify install` 註冊設定",
+   "執行指令對當前專案建立圖譜並查看產出的 `graph.html` 與 `graph.json`"
+  ],
+  "success_check": "專案資料夾內出現 `graphify-out/` 目錄，且裡面包含能用瀏覽器開啟的 `graph.html` 與結構化的 `graph.json`。",
+  "fallback": false
+ },
+ "warnings": [
+  "github: 模型回應不是 JSON：Invalid control character at: line 22 column 42 (char 1337)",
+  "try_one: 模型判斷 c30（headroomlabs-ai/headroom）不符合規則，跳過：Headroom 的 proxy 與壓縮功能主要適用於 OpenAI、Anthropic 等主流雲端 LLM 供應商，讀者手上的 Gemini 免費方案與本機 Ollama 於此工具的整合說明不足，無法在 15-30 分鐘內確保順利執行。"
+ ]
+}
