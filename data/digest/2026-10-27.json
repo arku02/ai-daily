@@ -1,0 +1,592 @@
+{
+ "date": "2026-10-27",
+ "generated_at": "2026-10-27T00:45:46Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.5-flash"
+ ],
+ "llm_calls": 30,
+ "tldr": [
+  "OpenAI 發表聚焦於視覺推理與終端操作的全新模型 GPT-6.1 Terra，並已整合至 GitHub Copilot。",
+  "Anthropic 正式提交 S-1 上市申請，披露其企業級客戶留存策略與高額營收結構。",
+  "LangChain 發表 Deep Agents 的 Context Engineering 與檢索策略，解決長運行 agent 上下文退化問題。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50248124",
+     "metrics": {
+      "points": 483,
+      "comments": 307
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+      },
+      {
+       "label": "HN 討論（483 分）",
+       "url": "https://news.ycombinator.com/item?id=50248124"
+      }
+     ],
+     "title": "GPT-6.1 Terra",
+     "tags": [],
+     "summary": "",
+     "key_points": [],
+     "how_to_use": "",
+     "fallback": true
+    },
+    {
+     "ref": "c6",
+     "source": "hn",
+     "id": "50251344",
+     "metrics": {
+      "points": 337,
+      "comments": 132
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+      },
+      {
+       "label": "HN 討論（337 分）",
+       "url": "https://news.ycombinator.com/item?id=50251344"
+      }
+     ],
+     "title": "Announcing three new discoveries in mathematics, computer science, and physics",
+     "tags": [],
+     "summary": "",
+     "key_points": [],
+     "how_to_use": "",
+     "fallback": true
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c113",
+     "source": "rss",
+     "id": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Simon Willison",
+       "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/"
+      }
+     ],
+     "title": "OpenAI 推出 GPT-6.1 Terra",
+     "one_liner": "官方宣稱 GPT-6.1 Terra 結合詳細視覺推理與精準電腦操作能力，是針對日常溝通與電腦任務設計的快速高效模型。",
+     "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+     "fallback": false
+    },
+    {
+     "ref": "c117",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot"
+      }
+     ],
+     "title": "GitHub Copilot 整合 GPT-6.1 Terra",
+     "one_liner": "OpenAI 的 GPT-6.1 Terra 現已全面登陸 GitHub Copilot，專為日常 Agentic 程式碼編寫與終端機工作打造。",
+     "url": "https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c84",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 3189,
+      "downloads": 95889,
+      "trending_score": 1044,
+      "likes_delta": 207
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 開源發布：提升 Coding 與 Agent 效能並優化 Prompt 編碼",
+     "tags": [
+      "開源模型",
+      "Agent 任務",
+      "Python 工具包"
+     ],
+     "summary": "DeepSeek 發布 DeepSeek-V4.1-Flash-1017，為前代的微幅更新版本。官方宣稱該模型在推理、程式編寫、Agent 任務與視覺評測上有顯著提升，並降低任務執行時間與輸出長度以節省成本。模型採用 MIT 授權，支援 1M 上下文與 256K 以上最大輸出長度。本次未包含 Jinja 格式範本，但提供 Python 參考實作 encoding.py 與 Rust/Python 工具庫 deepseek-recipe 來處理思考模式、工具調用與對話編碼。",
+     "key_points": [
+      "官方數據顯示 Terminal-Bench 4.0 得分 42.3、DeepSWE v1.1 達 77.0、Automation-Bench v1.0.6 達 60.5",
+      "採 MIT 開源授權，支援 1M Context Window 與 256K 以上最大 Token 輸出",
+      "提供 Python 版參考實作 encoding.py，支援多輪對話、工具調用與圖像處理",
+      "釋出 deepseek-recipe 工具庫（Rust 底層，具 Python 綁定），協助解析模型輸出與 API 請求轉換"
+     ],
+     "how_to_use": "對於使用 Python 與 LangGraph 開發 Agent 的開發者，若需要自訂連線與呼叫邏輯，可參考官方發布的 deepseek-recipe 工具包。在 LangGraph 的工具調用（Tool Calling）與 Prompt 組裝環節中，該工具包能協助正確編碼對話格式並解析思考模式與工具回應，讓你在自建的模型 API 解析模組中節省處理格式轉換的時間。",
+     "fallback": false
+    },
+    {
+     "ref": "c87",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 18460,
+      "downloads": 7608285,
+      "trending_score": 312,
+      "likes_delta": 66
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 稠密視覺語言模型發布：強化多步驟 Agent 規劃與思考控制",
+     "tags": [
+      "開源模型",
+      "多模態",
+      "Agent 規劃"
+     ],
+     "summary": "通義千問團隊推出 Qwen3.8-27B，採用 Apache-2.0 授權的 27B 稠密原生視覺語言模型。官方宣稱該模型承襲 Qwen3.5 架構，在程式編寫、研究與長流程 Agent 任務表現提升，具備更強的自主規劃與環境反饋處理能力。模型支援圖片與影片理解，並提供彈性的思考模式控制（可調整 reasoning_effort 與透過 preserve_thinking 保留歷史思考脈絡）。",
+     "key_points": [
+      "27B 參數稠密架構，結合 Gated DeltaNet 與 Gated Attention 混合設計",
+      "支援原生視覺與小時級影片理解，相容 Hugging Face Transformers、vLLM 與 SGLang",
+      "提供靈活思考控制機制，支援 reasoning_effort 調整深度，並能透過 preserve_thinking 延續思考脈絡",
+      "採用 Apache-2.0 開源授權，適合本地部署"
+     ],
+     "how_to_use": "這款 27B 模型相當適合透過 Ollama 或 vLLM 部署到本地環境，作為 LangGraph 流程中複雜決策節點的 LLM。在自動化資料處理或檔案分析時，你可以利用其原生視覺能力處理圖表截圖；在多輪 LangGraph 協作時，則能透過 preserve_thinking 設定延續歷史思考脈絡，提高長流程邏輯推演的穩定度。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+     "metrics": {
+      "likes": 1048,
+      "downloads": 7089722,
+      "trending_score": 95,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF"
+      }
+     ],
+     "title": "Qwen3.8-Flash-Next GSQ/RCO 量化模型發布",
+     "one_liner": "提供適用於本地低記憶體環境運行的 Qwen3.8-Flash-Next GGUF 量化模型。",
+     "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+     "fallback": false
+    },
+    {
+     "ref": "c94",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6505,
+      "downloads": 3162203,
+      "trending_score": 141,
+      "likes_delta": 26
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen3.8-Flash-Next 高效能模型發布",
+     "one_liner": "主打低延遲與高執行效率的 Qwen3.8 Flash Next 模型版本。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c127",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval"
+      }
+     ],
+     "title": "LangChain 提出的檢索導向 Context 工程：解決 Agent 檢索失效問題",
+     "tags": [
+      "Context 工程",
+      "Agent 架構",
+      "RAG",
+      "LangGraph"
+     ],
+     "summary": "LangChain 討論了 AI Agent 在處理有限 Context Window 時面臨的檢索挑戰。當 Agent 進行檢索時，常遇到搜尋效率低下、一次載入過多 context 或引入無關/過期資料的問題，進而導致 context rot 與錯誤傳播。LangChain 的 Deep Agents Harness 設計採用「先搜尋再閱讀」機制（使用 glob、grep、read_file），並提出「檢索、卸載、委派」（retrieve, offload, delegate）模式：將大型工具搜尋結果或 RAG 結果存入檔案系統，僅傳回檔案路徑與預覽，再由子 Agent 讀取，讓主 Agent 僅接觸相關 context。",
+     "key_points": [
+      "Agent 檢索三大痛點：無效搜尋浪費 Token、單次載入過多資料、誤用過期無關資訊",
+      "檔案系統工具策略：採用 glob 匹配檔名、grep 找相關行、read_file 按頁讀取，避免一口氣開啟大檔",
+      "卸載與委派模式：過大的工具執行結果先寫入檔案，僅傳回預覽與路徑給主 Agent，細節交由子 Agent 處理"
+     ],
+     "how_to_use": "在你的 LangGraph 個人自動化或資料分析工作流程中，可參考其「檢索、卸載、委派」模式設計自訂 Tool。當爬蟲或 SQL 查詢回傳大量資料時，不要直接傳回完整的 pandas DataFrame 或長文字，而是先將結果寫入本機檔案（或 Ollama/Gemini 支援的本機儲存），僅回傳路徑與簡短摘要給 LangGraph 主節點；需要細節時再由獨立的子節點讀取檔案處理，避免傳送過多資料導致 Context 上下文爆炸與精度下滑。",
+     "fallback": false
+    },
+    {
+     "ref": "c128",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember"
+      }
+     ],
+     "title": "Deep Agents 的 Context 工程：預防長任務中的 Context 腐敗問題",
+     "tags": [
+      "Context 腐敗",
+      "Agent 記憶",
+      "Deep Agents",
+      "LangChain"
+     ],
+     "summary": "隨著 AI Agent 執行長時間任務，累積的對話歷史與工具輸出會超出模型 Context Window，導致推理與精確度下降（即 Context 腐敗）。LangChain 開源的 Deep Agents Harness 透過中間件（Middleware）機制導入五大 context 管理技術，將非必要資訊移出活躍的 Context Window。此外，Agent 的記憶被儲存為純文字檔案，讓開發者在更換 LLM 模型或提供者時，仍能保留先前學習到的記憶。",
+     "key_points": [
+      "Context 腐敗（Context Rot）：歷史資料與工具雜訊過多，直接降低模型的思考精確度",
+      "五大 Context 管理技術：卸載（Offloading）、摘要（Summarization）、技能（Skills）、子 Agent（Subagents）、長期記憶（Long-term memory）",
+      "純文字檔案記憶：將 Agent 記憶儲存在開發者可控的本機純檔案中，跨模型或跨供應商皆可續用"
+     ],
+     "how_to_use": "這個設計模式非常適合應用在你的 LangGraph 本機專案。由於你使用 Gemini 免費方案或本機 Ollama，Context Window 或算力資源有限，避免 Context 腐敗至關重要。你可以模仿 Deep Agents 的作法：將 SQL 查詢結果或簽核文件摘要儲存為本機純文字檔作為長期記憶，並在 LangGraph 中實現「長歷史對話自動摘要」與「子 Agent 處理耗時/雜訊多的爬蟲任務」，確保主 Agent 永遠只載入需要的指示。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c104",
+     "source": "hf_papers",
+     "id": "2610.32253",
+     "metrics": {
+      "upvotes": 34,
+      "github_stars": 198
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.32253"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.32253"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/simple-agent-lab/RSIHub"
+      }
+     ],
+     "title": "RSIHub：Agent 自動演化方法的模組化開源框架",
+     "one_liner": "提供可複用的運算子與執行環境，讓開發者專注於 Prompt 與技能的自動演化策略。",
+     "url": "https://huggingface.co/papers/2610.32253",
+     "fallback": false
+    },
+    {
+     "ref": "c105",
+     "source": "hf_papers",
+     "id": "2610.32965",
+     "metrics": {
+      "upvotes": 33,
+      "github_stars": 18
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.32965"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.32965"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/alibaba-damo-academy/RynnUnify"
+      }
+     ],
+     "title": "RynnUnify：結合長時程視覺規劃的 16B 具身智慧模型",
+     "one_liner": "整合空間推理與實體預測能力，屬於具身智慧領域，跟你的資料分析與內部自動化工作關係不大。",
+     "url": "https://huggingface.co/papers/2610.32965",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c30",
+     "source": "github_trending",
+     "id": "TauricResearch/TradingAgents",
+     "metrics": {
+      "stars": 116096,
+      "stars_today": 1395,
+      "stars_delta": 1493
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/TauricResearch/TradingAgents"
+      }
+     ],
+     "title": "TradingAgents：多代理人 LLM 財務交易框架",
+     "tags": [
+      "AI Agent",
+      "財務交易",
+      "多代理人"
+     ],
+     "summary": "TradingAgents 是一套支援多個 LLM 代理人的財務交易與回測框架。近期發布的 v0.7.0 支援使用你自己的 ChatGPT Plus 或 Pro 方案、提供基於決策後第一個收盤價的評分回測，以及每次啟動時的更新提示。系統透過研究經理、交易員與投資組合經理等多代理人分工，結合宏觀數據、情緒分析與點對點時間校驗，進行自動化回測與交易策略研究。",
+     "key_points": [
+      "支援多代理人協作（研究經理、交易員、投資組合經理等角色）",
+      "v0.7.0 支援串接個人 ChatGPT Plus/Pro 方案與自動化回測評分",
+      "確保時間序列與點對點資料完整性，避免回測見到未來數據",
+      "提供命令列介面（CLI）與報告自動生成功能"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然它是一套完整的 Python 多代理人框架，但核心專注於美股與金融市場的量化交易與回測。除非你有金融資料分析需求，否則在自動化或一般資料分析工作上較難直接套用，不過其 LangGraph 與多代理人的架構設計仍可作為個人學習參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c35",
+     "source": "github_trending",
+     "id": "Panniantong/Agent-Reach",
+     "metrics": {
+      "stars": 103581,
+      "stars_today": 746,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Panniantong/Agent-Reach"
+      }
+     ],
+     "title": "Agent Reach：讓 AI Agent 夠得着它自己上不去的互聯網",
+     "tags": [
+      "AI Agent",
+      "網頁爬蟲",
+      "自動化"
+     ],
+     "summary": "Agent Reach 是一套專為 AI Agent 設計的互聯網存取工具，旨在解決主流 CLI Agent 無法取得登入牆後平台、影音內容及中文特定平台的痛點。它提供一條簡單的命令列介面，能自動存取 B站、小紅書、V2EX、GitHub、雪球等平台，並取得乾淨的結構化資料或進行影音轉文字，讓各類 Agent 能夠輕鬆擴展資訊收集的邊界。",
+     "key_points": [
+      "支援登入牆後平台（如小紅書、X、Boss 直聘等）",
+      "提供中文平台與結構化資料抓取（B站、V2EX、雪球、GitHub）",
+      "支援影音字幕與語音轉文字功能",
+      "透過專用背景瀏覽器運作，不干擾本地預設瀏覽器與密碼庫"
+     ],
+     "how_to_use": "非常適合用在你的自動化爬蟲與資料蒐集工作。你可以透過指令直接讓 Agent 抓取 V2EX 討論串、GitHub 倉庫或 B站內容，省去自己寫 BeautifulSoup 或處理反爬蟲的時間。由於它支援命令列操作，你可以輕易把它整合進 LangGraph 的節點中，作為 Agent 收集網路公開資料與內部流程文件的工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c41",
+     "source": "github_trending",
+     "id": "NVIDIA/SkillSpector",
+     "metrics": {
+      "stars": 22186,
+      "stars_today": 214,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/SkillSpector"
+      }
+     ],
+     "title": "SkillSpector：AI Agent 技能安全性掃描器",
+     "tags": [
+      "AI Agent",
+      "資安防護",
+      "開源工具"
+     ],
+     "summary": "SkillSpector 是由 NVIDIA 推出的 AI Agent 技能安全掃描器，用於在安裝 agent 技能之前偵測潛在的漏洞、惡意模式與安全風險。研究顯示有超過兩成的一般技能包含漏洞。該工具支援靜態分析與 LLM 語義評估，提供高達 71 種弱點模式檢測，並能整合進開發與執行管線中，確保載入的代理人技能安全性。",
+     "key_points": [
+      "支援 Git 倉庫、URL、壓縮檔或單一檔案等多格式輸入",
+      "涵蓋 17 個類別共 71 種弱點模式（包含提示詞注入、資料外洩、權限提升等）",
+      "結合快速靜態分析與選配的 LLM 語義評估",
+      "提供終端機、JSON、Markdown 與 SARIF 等多種報告格式"
+     ],
+     "how_to_use": "跟你的工作沒有直接的資料分析關係，但如果你在 Windows 開發環境中嘗試各種開源的 Coding Agent 或社群外掛技能，這是一套保護本機安全的重要工具。你可以透過 pip 或 uv 快速安裝，在執行不受信任的 Agent 技能前先進行掃描，降低本機環境遭受工具中毒或提示詞注入攻擊的風險。",
+     "fallback": false
+    },
+    {
+     "ref": "c47",
+     "source": "github_trending",
+     "id": "HarnessRouter/harnessrouter",
+     "metrics": {
+      "stars": 3695,
+      "stars_today": 77,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/HarnessRouter/harnessrouter"
+      }
+     ],
+     "title": "HarnessRouter：代理人 Harness 的統一整合介面",
+     "tags": [
+      "AI Agent",
+      "後端架構",
+      "統一介面"
+     ],
+     "summary": "HarnessRouter 是一套代理人 Harness（如 Codex、Claude Code 等）的統一介面基礎設施層。它透過實作統一代理人協定（UHP）並提供相容 OpenAI Responses 的 API，讓產品能將不同的 agent harness 轉為隨插即用的後端，透過單一 API 執行任務、檢索結果並自由切換底層框架。",
+     "key_points": [
+      "支援高達 30 種不同的 Agent Harness（包含 Claude Code、Codex、Gemini CLI 等）",
+      "提供 OpenAI Responses 相容的 API 介面",
+      "處理持續性工作階段、串流進度、檔案、產出物與結構化失敗",
+      "支援 Docker 一鍵本機部署，無須額外帳號或預付費金鑰"
+     ],
+     "how_to_use": "跟你的資料分析工作關係不大，但如果你正在用 Python 開發自己的多 Agent 協作專案，這是一套值得了解的後端架構。你可以透過 Docker 在本機跑起這套統一介面，嘗試把不同的 CLI Agent 封裝成標準 API 呼叫，作為未來串接 LangGraph 的後端執行環境參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "debpalash/VoiceStudio",
+     "metrics": {
+      "stars": 89233,
+      "stars_today": 2297,
+      "stars_delta": 2419
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/debpalash/VoiceStudio"
+      }
+     ],
+     "title": "VoiceStudio：開源且完全本機執行的語音處理工作室",
+     "one_liner": "一套支援 646 種語言的開源本機語音複製、語音設計、影片配音與聽寫工具，可作為 ElevenLabs 的免費替代方案。",
+     "url": "https://github.com/debpalash/VoiceStudio",
+     "fallback": false
+    },
+    {
+     "ref": "c37",
+     "source": "github_trending",
+     "id": "AstrBotDevs/AstrBot",
+     "metrics": {
+      "stars": 43829,
+      "stars_today": 376,
+      "stars_delta": 388
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/AstrBotDevs/AstrBot"
+      }
+     ],
+     "title": "AstrBot：整合多種 IM 平台與 LLM 的 AI Agent 開發框架",
+     "one_liner": "整合多個即時通訊平台、大模型與外掛的 AI 助理開發框架，可作為輕量級的 OpenClaw 替代方案。",
+     "url": "https://github.com/AstrBotDevs/AstrBot",
+     "fallback": false
+    },
+    {
+     "ref": "c43",
+     "source": "github_trending",
+     "id": "nightly-labs/openbot",
+     "metrics": {
+      "stars": 1474,
+      "stars_today": 176,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/nightly-labs/openbot"
+      }
+     ],
+     "title": "OpenBot：本地優先的桌面 AI 協作工作空間",
+     "one_liner": "為 Claude、Codex 等代理人提供專屬工作空間、任務佇列與瀏覽器控制的本機桌面應用程式。",
+     "url": "https://github.com/nightly-labs/openbot",
+     "fallback": false
+    },
+    {
+     "ref": "c49",
+     "source": "github_trending",
+     "id": "eugeniughelbur/obsidian-second-brain",
+     "metrics": {
+      "stars": 4955,
+      "stars_today": 42,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/eugeniughelbur/obsidian-second-brain"
+      }
+     ],
+     "title": "Obsidian Second Brain：為 AI Agent 提供永續記憶的筆記外掛",
+     "one_liner": "將 Obsidian 筆記庫轉為 Claude Code、Codex 等代理人的持久化記憶與共用日誌。",
+     "url": "https://github.com/eugeniughelbur/obsidian-second-brain",
+     "fallback": false
+    },
+    {
+     "ref": "c50",
+     "source": "github_trending",
+     "id": "homeassistant-ai/ha-mcp",
+     "metrics": {
+      "stars": 5279,
+      "stars_today": 36,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/homeassistant-ai/ha-mcp"
+      }
+     ],
+     "title": "ha-mcp：非官方的 Home Assistant MCP 伺服器",
+     "one_liner": "讓支援 Model Context Protocol 的 AI 代理人直接控制與查詢 Home Assistant 智慧家居裝置。",
+     "url": "https://github.com/homeassistant-ai/ha-mcp",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c35",
+  "source": "github_trending",
+  "id": "Panniantong/Agent-Reach",
+  "metrics": {
+   "stars": 103581,
+   "stars_today": 746,
+   "stars_delta": null
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/Panniantong/Agent-Reach"
+   }
+  ],
+  "title": "用 Agent Reach 幫你的 Agent 補上網頁與 B 站搜索能力",
+  "why": "能幫你的 LangGraph 代理快速串接中文與結構化平台，Windows 終端執行、支援免費與開源。",
+  "steps": [
+   "在終端機讓你的 AI Agent 執行安裝指令：agent-reach channels",
+   "確認預設渠道（如 bilibili、v2ex、github、web）是否可用",
+   "嘗試執行 agent-reach bilibili search 大模型 測試搜尋結果"
+  ],
+  "success_check": "終端機能成功回傳結構化的 B 站搜尋結果或渠道清單，沒有報錯。",
+  "fallback": false
+ },
+ "warnings": [
+  "select: 模型回應不是 JSON：Expecting property name enclosed in double quotes: line 1 column 81 (char 80)",
+  "enrich: c3 補充內容抓取失敗，改用原始摘要",
+  "enrich: c6 補充內容抓取失敗，改用原始摘要",
+  "news: c3 使用原始資料（fallback）",
+  "news: c6 使用原始資料（fallback）"
+ ]
+}
