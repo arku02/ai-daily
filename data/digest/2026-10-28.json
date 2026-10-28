@@ -1,0 +1,664 @@
+{
+ "date": "2026-10-28",
+ "generated_at": "2026-10-28T00:45:45Z",
+ "models_used": [
+  "gemini-3.5-flash",
+  "gemini-3.5-flash-lite"
+ ],
+ "llm_calls": 34,
+ "tldr": [
+  "OpenAI 發布 GPT-6.1 Terra，主打電腦操作與視覺推理能力。",
+  "NVIDIA 開源 Agent 技能安全掃描器 SkillSpector 與自動圖譜建構框架。",
+  "學界提出 Agent Harness 穩定性基準 Trial by Trace，關注代理人可靠度。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c153",
+     "source": "rss",
+     "id": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Simon Willison",
+       "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/"
+      }
+     ],
+     "title": "OpenAI 推出 GPT-6.1 Terra，主打視覺推理與電腦操作",
+     "tags": [
+      "OpenAI",
+      "LLM",
+      "電腦操作"
+     ],
+     "summary": "OpenAI 發表 GPT-6.1 Terra 模型，官方宣稱這是一款快速、高效的模型，結合了詳細的視覺推理與精準的電腦操作能力，並具備更自然流暢的寫作表現。其定位類似 Anthropic 的 Sonnet，非常適合用在自動化與重複性高的任務。價格方面，輸入為每百萬 token 1 美元，輸出為 5 美元，大約是前一代 GPT-5.6 Terra 的半價。",
+     "key_points": [
+      "官方宣稱具備詳細的視覺推理與精準電腦操作能力。",
+      "定位為中階模型，適合執行自動化與重複性工作。",
+      "定價為每百萬輸入 token 1 美元、輸出 5 美元。"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為你目前主要使用 Gemini 免費方案與本機 Ollama，沒有 OpenAI 付費 key，暫時無法直接在 LangGraph 中調用這個 API。不過其「適合自動化重複任務」的定位，概念上跟你要做的瀏覽器或電腦操作 Agent 類似，值得關注類似規格的開源模型發展。",
+     "fallback": false
+    },
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50251344",
+     "metrics": {
+      "points": 1125,
+      "comments": 655
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+      },
+      {
+       "label": "HN 討論（1125 分）",
+       "url": "https://news.ycombinator.com/item?id=50251344"
+      }
+     ],
+     "title": "Three new discoveries in mathematics, computer science, and physics",
+     "tags": [],
+     "summary": "",
+     "key_points": [],
+     "how_to_use": "",
+     "fallback": true
+    },
+    {
+     "ref": "c139",
+     "source": "rss",
+     "id": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google DeepMind",
+       "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      }
+     ],
+     "title": "Google DeepMind 發表新一代世界模擬模型 Genie 4",
+     "tags": [
+      "Google",
+      "模擬器",
+      "多模態"
+     ],
+     "summary": "Google DeepMind 推出新一代世界模擬模型 Genie 4，官方宣稱其大幅提升真實感，並改善即時互動模擬。Genie 4 具備原生多模態能力，能同時生成音樂、環境噪音與互動對話。該模型結合了 Gemini 系列的能力，以 Gemini Omni 錨定真實世界的外觀與行為，並由其他 Gemini 模型提供複雜推理來維持模擬的一致性。目前已作為研究預覽版向受信任的測試者推出。",
+     "key_points": [
+      "官方宣稱具備更高的真實感與即時互動模擬能力。",
+      "原生多模態，可同時生成音訊與互動對話。",
+      "結合 Gemini Omni 與其他 Gemini 模型維持模擬連貫性。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這是一個大型的世界模擬模型研究預覽，主要應用在機器人與 Agent 的訓練環境等前沿領域。對你的 Python 開發與資料自動化專案而言，目前沒有可直接引用的 pip 套件或 API 能在本地 Windows 環境中執行。",
+     "fallback": false
+    },
+    {
+     "ref": "c11",
+     "source": "hn",
+     "id": "50242870",
+     "metrics": {
+      "points": 171,
+      "comments": 71
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm"
+      },
+      {
+       "label": "HN 討論（171 分）",
+       "url": "https://news.ycombinator.com/item?id=50242870"
+      }
+     ],
+     "title": "vLLM 社群探討如何修正開源模型的工具呼叫準確率",
+     "tags": [
+      "vLLM",
+      "開源模型",
+      "Tool Call"
+     ],
+     "summary": "vLLM 開發團隊指出，在使用開源模型時，實際的工具呼叫（Tool Call）準確率往往不如模型公開的品質評測指標。當工具呼叫不準確時，模型會累積無意義的上下文，進而導致輸出結果品質低落，這在以開源模型構建互動流程時是個需要正視的問題。",
+     "key_points": [
+      "開源模型的實際工具呼叫準確率常落後於基準測試。",
+      "工具呼叫不準確會導致上下文累積錯誤，降低結果品質。"
+     ],
+     "how_to_use": "這與你在本地使用 Ollama 跑開源模型息息相關。當你嘗試用本地模型搭配 LangGraph 執行自動化工具呼叫時，若遇到模型胡亂呼叫或陷入奇怪的上下文迴圈，這篇討論點出了問題根源在於模型本身的 tool-call 實作與推理能力。你在設計 Agent 的系統提示詞（System Prompt）時，需要對工具參數格式有更嚴格的限制與防錯機制。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c145",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/"
+      }
+     ],
+     "title": "Opera 提出 WebAI 新網頁標準",
+     "one_liner": "Opera 推出名為 WebAI 的新標準，旨在讓使用者能直接在瀏覽器中部署各種 AI 模型。",
+     "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
+     "fallback": false
+    },
+    {
+     "ref": "c125",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/"
+      }
+     ],
+     "title": "美國銀行提醒用戶勿將密碼交給 AI 助理",
+     "one_liner": "美國銀行提醒客戶，若因 AI Agent 存取帳戶而產生相關活動，客戶必須自行負責。",
+     "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c84",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 18543,
+      "downloads": 7522728,
+      "trending_score": 324,
+      "likes_delta": 83
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B：支援原生視訊與彈性思考控制的開源模型",
+     "tags": [
+      "Qwen",
+      "開源模型",
+      "多模態 Agent",
+      "LangGraph"
+     ],
+     "summary": "Qwen 推出至今最強大的開源模型 Qwen3.8-27B，採用 27B 密集模型架構，官方宣稱在程式碼編寫、專業工作與長視野 Agent 任務上有顯著提升。該模型具備原生視訊與圖像理解能力，並內建預設開啟且可透過參數調整的「彈性思考控制（Flexible Thinking Control）」，支援主流推理工具與 vLLM 等執行框架，提供 Apache 2.0 授權。",
+     "key_points": [
+      "27B 參數規模的密集架構，強化長視野 Agent 自主規劃能力。",
+      "原生支援圖像與影片的多模態理解（從文件圖表到長達一小時的影片）。",
+      "支援彈性思考控制，可調整推理深度並保留歷史對話的推理脈絡。",
+      "相容 Hugging Face Transformers、vLLM 與 SGLang 等常見部署工具。"
+     ],
+     "how_to_use": "由於 27B 模型在本機 Windows 環境運作對記憶體要求較高，若你的硬體無法直接地端跑大模型，可以先關注其官方未來將推出的託管 API 服務。在 LangGraph 架構中，若未來透過 API 接入，其強化的自主規劃與長期任務處理能力，非常適合用來串接需要解析圖表與長文件處理的自動化與資料分析工作流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c79",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 3388,
+      "downloads": 105667,
+      "trending_score": 968,
+      "likes_delta": 199
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017：強化代理任務與程式碼表現的輕量更新",
+     "tags": [
+      "DeepSeek",
+      "開源模型",
+      "程式碼 Agent",
+      "KV 快取壓縮"
+     ],
+     "summary": "DeepSeek-V4.1-Flash-1017 針對推理、程式碼編寫及視覺基準測試進行了升級，官方宣稱在減少任務執行時間與輸出長度的同時，提升了各個 Agent 評測基準的表現。此版本未附帶 Jinja 格式的 chat template，但官方在程式碼庫中提供了包含多輪對話、工具呼叫與思考模式的 Python 參考實作，並採 MIT 授權釋出。",
+     "key_points": [
+      "大幅改善 Terminal-Bench 4.0、Automation-Bench 與 DeepSWE 等代理任務表現。",
+      "提供 1M 鄰近 Token 上下文與大於等於 256K 的最大輸出 Token 支援。",
+      "附帶包含完整工具呼叫、思考模式與影像內容處理的 Python 參考實作（encoding.py）。",
+      "採用 MIT 授權條款釋出。"
+     ],
+     "how_to_use": "這個模型跟你的工作關係密切，特別適合用在 Coding Agent 與自動化爬蟲、資料蒐集等需要頻繁工具呼叫與長上下文的場景。由於它未直接提供標準模板，你需要參考其提供 Python 實作來客製化訊息編碼，再將其串接進你的 LangGraph 程式中，作為處理複雜資料清洗或內部流程自動化的底層推理引擎。",
+     "fallback": false
+    },
+    {
+     "ref": "c80",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 170,
+      "downloads": 6311,
+      "trending_score": 170,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI LFM3-1.7B：專為邊緣裝置與本地 Agent 設計的輕量模型",
+     "tags": [
+      "LFM3",
+      "極輕量模型",
+      "Ollama",
+      "本地 Agent"
+     ],
+     "summary": "LiquidAI 推出基於三混合架構的 LFM3-1.7B 文字模型，專為本地 Agent、結構化輸出與特定領域微調設計。模型在 4-bit 量化下僅需約 1GB 記憶體，可在手機或筆電等邊緣裝置執行。支援 256K 內容視窗，官方推薦用於工具呼叫與本地代理任務，但不建議用於複雜的多步驟程式碼編寫與深度推理。",
+     "key_points": [
+      "1.73B 參數規模，4-bit 量化下僅佔用約 1GB 記憶體，適合 Windows 本機執行。",
+      "支援 256K 超長上下文與 16 種語言，針對 Hermes Agent 等本地 Agent 架構進行後訓練。",
+      "提供 GGUF 格式，可直接透過 Ollama、llama.cpp 或 LM Studio 載入。",
+      "針對一般聊天、工具使用與代理任務建議設定 temperature=0.1。"
+     ],
+     "how_to_use": "這顆模型完全符合你的技術棧！因為你使用 Windows 且搭配本機 Ollama，又沒有付費 API Key，這顆 1.7B 模型只需約 1GB 記憶體就能跑。你可以直接用 `ollama run` 載入 GGUF 格式，並在 LangGraph 中將其設定為預設的本地 LLM，用來處理內部文件處理、簡單的自動化通知簽核或輕量資料分析任務，15 分鐘內就能在本機端看見運作結果。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "nvidia/Nemotron-3.5-Parse",
+     "metrics": {
+      "likes": 122,
+      "downloads": 9406,
+      "trending_score": 89,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/nvidia/Nemotron-3.5-Parse"
+      }
+     ],
+     "title": "Nvidia Nemotron-3.5-Parse",
+     "one_liner": "Nvidia 推出的文件解析模型，獲得 122 個讚與 9,406 次下載。",
+     "url": "https://huggingface.co/nvidia/Nemotron-3.5-Parse",
+     "fallback": false
+    },
+    {
+     "ref": "c83",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6610,
+      "downloads": 3350248,
+      "trending_score": 147,
+      "likes_delta": 105
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen3.8-Flash-Next",
+     "one_liner": "Qwen 系列的輕量快速模型分支，下載量超過 335 萬次。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c99",
+     "source": "hf_papers",
+     "id": "2610.32285",
+     "metrics": {
+      "upvotes": 246,
+      "github_stars": 15
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.32285"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.32285"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/TraceLite-AI/TraceTrial-Bench"
+      }
+     ],
+     "title": "TraceTrial-Bench：針對 AI Agent 外殼可靠性與失敗歸因的評測基準",
+     "tags": [
+      "Agent評測",
+      "外殼架構",
+      "失敗歸因",
+      "TraceTrial-Bench"
+     ],
+     "summary": "現有 Agent 評測多關注模型本體能力，忽視了支撐運作的外殼（Harness）機制。TraceTrial-Bench 將外殼可靠度劃分為上下文、執行、治理、生命週期、可觀測性、工具與驗證 7 大維度，並建構 95 個具備狀態或可執行 Ground Truth 的專家級任務。研究設計了軌跡追蹤（TT）、多源證據獲取（MEA）與失敗歸因（FA）模組，評測 4 種外殼與 9 種模型共 3,420 次運行。結果顯示外殼平均可靠度得分介於 59.8% 至 72.0%，且有 31.1% 的任務雖然成功，卻違反了至少一項外殼可靠性標準。",
+     "key_points": [
+      "拆解外殼可靠度的 7 大關鍵組件，建立雙層評測架構。",
+      "提供軌跡追蹤與失敗歸因模組，實現運行等級（Run-level）的顯式機制鏈診斷。",
+      "揭露 31.1% 的任務成功屬於「帶病運行」（未達外殼可靠標準但任務剛好成功）。"
+     ],
+     "how_to_use": "這篇論文提醒我們，在 LangGraph 中開發 Agent 時不能只依賴最終輸出是否正確。你可以參考其 7 大維度，為自己寫的 SQL 查詢或爬蟲 Agent 建立可靠性檢查機制（例如檢查工具呼叫是否有異常重試或上下文溢位）。利用其失敗歸因（FA）思路，在 LangGraph 節點間紀錄 Execution Traces，能幫你在自動化流程出錯時迅速定位是 prompt 寫不好，還是外殼的 State 轉移出現問題。",
+     "fallback": false
+    },
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2610.34467",
+     "metrics": {
+      "upvotes": 189,
+      "github_stars": 53
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.34467"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.34467"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/amiya-special/Dynaflow"
+      }
+     ],
+     "title": "DynaFlow：讓主 Agent 動態生成多 Agent 協作程式碼的自由流架構",
+     "tags": [
+      "多Agent協作",
+      "工作流編排",
+      "動態合成",
+      "Qwen3.5"
+     ],
+     "summary": "傳統多 Agent 系統多依賴預先定義好的協作結構，難以適應複雜任務。DynaFlow 將「自由流可執行工作流合成」直接納入主 Agent 的動作空間。當主 Agent 判斷需要協作時，會即時生成特定任務的程式碼來調度子 Agent（包含順序/平行執行、結構化資訊交換與驗證）。主 Agent 透過蒸餾軌跡的 SFT 微調與缺陷過濾進行訓練，而子 Agent 則保持固定。官方宣稱在 Qwen3.5-27B 骨幹下，DynaFlow 在 6 項基準測試中達到 88.08% 的總體準確率，超越最強評測對手 10.9 個百分點。",
+     "key_points": [
+      "將工作流程式碼生成納入主 Agent 的動作空間，達成任務導向的動態編排。",
+      "僅對主 Agent 進行 SFT 訓練與缺陷過濾，固定子 Agent 降低訓練複雜度。",
+      "實驗顯示訓練後能顯著提升對上游資料的顯式利用、驗證與修正能力。"
+     ],
+     "how_to_use": "在 LangGraph 設計多 Agent 時，我們常手動寫死 conditional_edge。DynaFlow 的思維是讓 Main Agent 根據當前資料分析任務，動態生成調用子 Agent 的 Python 腳本或子工作流。例如處理複雜的跨表 SQL 統計時，主 Agent 可以動態生成「平行讓多個子 Agent 抓取不同 DB 表資料，再經由驗證節點匯總」的程式碼，你可以搭配本機 Ollama 跑 Qwen 模型來實驗這種動態動態編排模式。",
+     "fallback": false
+    },
+    {
+     "ref": "c167",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember"
+      }
+     ],
+     "title": "Deep Agents：解決 Agent 上下文腐爛（Context Rot）的 5 大工程模式",
+     "tags": [
+      "上下文工程",
+      "LangChain",
+      "記憶機制",
+      "Deep Agents"
+     ],
+     "summary": "當 Agent 執行長任務時，維護過多的歷史訊息與工具輸出會導致「上下文腐爛」（Context Rot），進而降低推理準確度。LangChain 的開源外殼 Deep Agents 提出 5 種上下文工程技術：將大檔與工具結果卸載（Offloading）至檔案系統僅保留預覽；接近限制時進行摘要（Summarization）；按需載入技能（Skills）；將高噪音任務放入獨立 Agent（Subagents）；以及將學習到的知識持久化寫入純文字檔（Long-term memory）。記憶直接存為本機檔案，讓開發者切換 LLM 模型時也能完整保留 Agent 所學。",
+     "key_points": [
+      "提出 Context Rot 概念，指出過度載入上下文會直接損害模型推理能力。",
+      "採用 Offloading、Summarization、Skills、Subagents、Long-term memory 5 大工程手段機制。",
+      "記憶與經驗直接儲存為使用者可控的純文字檔案，解耦 LLM 供應商與記憶層。"
+     ],
+     "how_to_use": "這套設計極度貼近你目前在 LangGraph 的自動化與資料處理工作。例如用 pandas 處理巨量 CSV 或爬蟲抓回大量 HTML 時，不要把原始文字全部丟進 LangGraph State，而是實作 Offloading 模式：將資料存在 Windows 本機檔案，僅傳給 Gemini API 或 Ollama 預覽片段；背景耗時清理則交給 Subagent 獨立運行，避免 Context 爆炸並節省免費 API 的 Token 使用額度。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2610.35845",
+     "metrics": {
+      "upvotes": 102,
+      "github_stars": 56
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.35845"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.35845"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/EnjunDu/awesome-working-agent"
+      }
+     ],
+     "title": "Work Agents：從系統層面解析 Agent 執行複雜工作流的架構總覽",
+     "one_liner": "將 Work Agent 解構為基底模型與執行階段外殼，探討如何在有狀態工作區中穩定完成複雜任務。",
+     "url": "https://huggingface.co/papers/2610.35845",
+     "fallback": false
+    },
+    {
+     "ref": "c110",
+     "source": "hf_papers",
+     "id": "2610.34238",
+     "metrics": {
+      "upvotes": 25,
+      "github_stars": 5
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.34238"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.34238"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/zjunlp/delta-tau-bench"
+      }
+     ],
+     "title": "Δτ-Bench：評測 Agent 在動態工具生態系中的路徑探索能力",
+     "one_liner": "模擬 API 變更與舊工具失效的動態環境，評測 Agent 能否自主發現高效的新工具路徑。",
+     "url": "https://huggingface.co/papers/2610.34238",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "Panniantong/Agent-Reach",
+     "metrics": {
+      "stars": 104925,
+      "stars_today": 1632,
+      "stars_delta": 1344
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Panniantong/Agent-Reach"
+      }
+     ],
+     "title": "Agent-Reach：讓 AI Agent 一條命令搞定登入牆與中文平台資料",
+     "tags": [
+      "Python",
+      "網頁爬蟲",
+      "AI Agent",
+      "資料蒐集"
+     ],
+     "summary": "Agent-Reach 是一個專門用來突破 AI Agent 聯網限制的開源工具，能讓 Agent 透過簡單命令取得登入牆後平台、影音平台逐字稿以及 B站、小紅書、V2EX、雪球等中文網站的乾淨結構化資料。它會自動在背景管理專用瀏覽器，不干擾你的主瀏覽器，且支援免費用於各類 Agent 框架。",
+     "key_points": [
+      "支援 B站、小紅書、V2EX、雪球、GitHub 等多個主流平台",
+      "可取得影片逐字稿與需要登入的社群內容",
+      "採用背景專用瀏覽器運行，不讀取密碼庫且不跳窗干擾",
+      "提供簡單的 CLI 命令，任何 Agent 都能輕鬆串接"
+     ],
+     "how_to_use": "你的工作涉及自動化爬蟲與資料蒐集時，可以將 Agent-Reach 整合進 LangGraph 的工具鏈中。當 Agent 需要抓取 B站討論、V2EX 貼文或雪球行情時，不必自己寫複雜的 Selenium 爬蟲，直接透過其命令或包裝好的介面就能取得結構化資料。專案支援 Windows 且完全開源，你可以直接在終端機安裝試用。",
+     "fallback": false
+    },
+    {
+     "ref": "c33",
+     "source": "github_trending",
+     "id": "NVIDIA/SkillSpector",
+     "metrics": {
+      "stars": 22735,
+      "stars_today": 953,
+      "stars_delta": 549
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/SkillSpector"
+      }
+     ],
+     "title": "SkillSpector：針對 AI Agent 技能的安全掃描器",
+     "tags": [
+      "Python",
+      "安全審查",
+      "AI Agent",
+      "開源工具"
+     ],
+     "summary": "SkillSpector 是 NVIDIA 相關生態中的開源專案，用於在安裝 AI Agent 技能前進行安全檢測，防範惡意程式碼、提示詞注入與資料外洩。研究顯示部分 Agent 技能帶有安全隱患，該工具提供靜態分析、LLM 語義評估與即時 CVE 查詢，支援多種輸出格式與風險評分。",
+     "key_points": [
+      "提供高達 71 種漏洞模式與 17 個分類的檢測能力",
+      "支援 Git 倉庫、壓縮檔或單一檔案等多格式輸入",
+      "結合快速靜態分析與可選的 LLM 語義評估",
+      "可透過 pip 或 uv 在 Windows 環境快速安裝與使用"
+     ],
+     "how_to_use": "在開發個人 AI Agent 專案時，若會下載或載入外部的 Skills / 工具，可以將 SkillSpector 納入自動化流程或手動審查步驟。它能幫你快速掃描程式碼中的潛在風險。由於它支援 Python 與命令列操作，你可以輕鬆在 Windows 開發環境中用 uv 或 pip 安裝，並在將工具接入 LangGraph 之前先做安全把關。",
+     "fallback": false
+    },
+    {
+     "ref": "c25",
+     "source": "github_trending",
+     "id": "TauricResearch/TradingAgents",
+     "metrics": {
+      "stars": 117324,
+      "stars_today": 1735,
+      "stars_delta": 1228
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/TauricResearch/TradingAgents"
+      }
+     ],
+     "title": "TradingAgents：多代理人 LLM 金融交易框架",
+     "tags": [
+      "Python",
+      "LangGraph",
+      "金融分析",
+      "多 Agent"
+     ],
+     "summary": "TradingAgents 推出 v0.7.1 版本，這是一個基於多 Agent 的金融交易與分析框架。新版本修正了決策評分、財報日期過濾及歷史回測等問題，支援在長假期間穩定結算，並允許讓分析師與經理人運行在不同模型或本機提供者上，提供更完善的點對點時間資料完整性。",
+     "key_points": [
+      "多代理人協作架構，包含平行分析師與各類策略評估",
+      "支援點對點時間（Point-in-Time）資料完整性，避免未來資料洩漏",
+      "支援命令列無互動參數執行與重現點檢查點恢復",
+      "可相容多種 LLM 供應商與本機 Ollama 端點"
+     ],
+     "how_to_use": "如果你對多 Agent 協作與金融數據分析感興趣，可以研究它的源碼與 LangGraph 架構設計。它支援本機 Ollama，讓你在沒有付費 API Key 的情況下也能在 Windows 執行。你可以參考它如何將複雜的資料分析與決策流程拆解給不同的 Agent 協同處理，作為你個人自動化專案的架構參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c44",
+     "source": "github_trending",
+     "id": "NVIDIA/auto-ontology",
+     "metrics": {
+      "stars": 345,
+      "stars_today": 80,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/auto-ontology"
+      }
+     ],
+     "title": "NVIDIA Auto Ontology",
+     "one_liner": "自動從企業元資料建立知識圖譜與語意層，支援自然語言轉 SQL 的開源資料分析工具。",
+     "url": "https://github.com/NVIDIA/auto-ontology",
+     "fallback": false
+    },
+    {
+     "ref": "c36",
+     "source": "github_trending",
+     "id": "nightly-labs/openbot",
+     "metrics": {
+      "stars": 2432,
+      "stars_today": 777,
+      "stars_delta": 958
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/nightly-labs/openbot"
+      }
+     ],
+     "title": "openbot",
+     "one_liner": "專為本機打造的 AI 團隊桌面工作區，支援多種 Agent 協作、任務佇列與瀏覽器控制。",
+     "url": "https://github.com/nightly-labs/openbot",
+     "fallback": false
+    },
+    {
+     "ref": "c46",
+     "source": "github_trending",
+     "id": "HKUDS/AutoSwarm",
+     "metrics": {
+      "stars": 2033,
+      "stars_today": 33,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/HKUDS/AutoSwarm"
+      }
+     ],
+     "title": "AutoSwarm",
+     "one_liner": "串聯多種主流 Agent 框架與工具的協同管理平台，讓各路 Agent 整合工作。",
+     "url": "https://github.com/HKUDS/AutoSwarm",
+     "fallback": false
+    },
+    {
+     "ref": "c68",
+     "source": "github_search",
+     "id": "ztt0216/MyAgent",
+     "metrics": {
+      "stars": 172,
+      "forks": 0,
+      "stars_delta": 81
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ztt0216/MyAgent"
+      }
+     ],
+     "title": "MyAgent",
+     "one_liner": "從零實作的通用 Agent Runtime，包含 Agent Loop、MCP 與 Skills 自進化功能。",
+     "url": "https://github.com/ztt0216/MyAgent",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": null,
+ "warnings": [
+  "enrich: c1 補充內容抓取失敗，改用原始摘要",
+  "news: c1 使用原始資料（fallback）",
+  "github: c44 模型改寫成快速瀏覽，移到快速瀏覽",
+  "try_one: 模型判斷 c26（Panniantong/Agent-Reach）不符合規則，跳過：Agent-Reach 的安裝需要透過 Agent 執行安裝指令並可能涉及 uv 工具或 GitHub 腳本，無法在 15-30 分鐘內透過單純的 pip install 或簡單設定穩定重現結果。",
+  "try_one: 模型判斷 c33（NVIDIA/SkillSpector）不符合規則，跳過：雖然有提供安裝方式，但 LLM 語意評估預設對應 DeepSeek，且文件提及對本地模型的支援有限或需自行調整，不符合免付費 key 且能直接使用 Gemini 或 Ollama 的規則。",
+  "try_one: 模型判斷 c44（NVIDIA/auto-ontology）不符合規則，跳過：需要 NVIDIA API key 才能運作，且專案是以 Docker Compose 部署的完整 Web 服務，不符合 15～30 分鐘內用 Python 快速嘗試的規則。"
+ ]
+}
