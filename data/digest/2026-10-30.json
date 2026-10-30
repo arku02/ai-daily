@@ -1,0 +1,773 @@
+{
+ "date": "2026-10-30",
+ "generated_at": "2026-10-30T00:45:53Z",
+ "models_used": [
+  "gemini-3.8-flash",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 7,
+ "tldr": [
+  "Google 正式發表新一代旗艦模型 Gemini 4 Carbon，在 Coding 與資安評測登上榜首。",
+  "開源模型陣容迎來重大突破，Mistral Large 4 開源權重與 DeepSeek-V4.1-Flash 相繼推出。",
+  "LangChain 釋出 Deep Agents v0.10，正式導入原生瀏覽器操作與非同步子 Agent 機制。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c140",
+     "source": "rss",
+     "id": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier"
+      }
+     ],
+     "title": "Google 發表 Gemini 4 Carbon：主打程式碼與資安推理能力",
+     "tags": [
+      "Gemini",
+      "Coding Agent",
+      "資安評測"
+     ],
+     "summary": "Google 推出最新旗艦模型 Gemini 4 Carbon。官方宣稱該模型在程式碼編寫、Agent 任務與資安防禦方面有顯著提升，並在 Artificial Analysis Intelligence Index (v5.0) 以及評測漏洞發現能力的 SEC-bench Pro 與 ExploitGym 上取得領先。Google 表示該模型針對長時間任務設計，內部測試可連續執行數天以解決多步驟工程問題，同時具備更強的抗提示詞注入能力。目前該模型僅開放給特定的資安防禦企業夥伴。",
+     "key_points": [
+      "官方宣稱在 Artificial Analysis v5.0、SEC-bench Pro 等評測超越 Claude Opus 5.5 與 GPT-6 Astra",
+      "針對長任務最佳化，官方稱內部測試能持續數天處理複雜多步驟工程流程",
+      "目前僅提供少數資安合作夥伴，未來預計透過 Fairwind Program 逐步擴大開放"
+     ],
+     "how_to_use": "這款模型目前尚未進入一般免費 API，因此跟你的日常開發暫時無法直接串接。但身為 Gemini 免費方案使用者，值得關注其長鏈條推理與抗注入特性的發展；未來若下放到標準 API，將能大幅提升 LangGraph 中負責自動化除錯與複雜程式碼生成節點的穩定度。",
+     "fallback": false
+    },
+    {
+     "ref": "c108",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/managed-deep-agents-browser-use-and-asynchronous-subagents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/managed-deep-agents-browser-use-and-asynchronous-subagents"
+      }
+     ],
+     "title": "Managed Deep Agents v0.10：支援沙盒瀏覽器與非同步子 Agent",
+     "tags": [
+      "LangSmith",
+      "Browser Agent",
+      "非同步架構"
+     ],
+     "summary": "Managed Deep Agents 發布 v0.10 版本，新增沙盒瀏覽器操作（Browser Use）與非同步子 Agent 功能。瀏覽器工具透過讀取無障礙樹取得元素 ID 進行操作與截圖，並支援真人接手機制，在需要登入時把視窗交給使用者，避免密碼流入模型對話記錄。非同步子 Agent 則允許主 Agent 在背景指派長耗時任務，同時繼續與使用者對話，完成後自動將結果回傳至原始對話討論串。",
+     "key_points": [
+      "內建 Accessibility Tree 解析與操作工具，支援在無 API 的網站執行自動化",
+      "提供瀏覽器手動接管功能，保護登入憑證不外洩到 Prompt 與追蹤記錄中",
+      "非同步子 Agent 能在背景處理耗時任務，支援進度查詢與中途取消"
+     ],
+     "how_to_use": "你在做內部流程與自動化爬蟲時常遇到沒有 API 或需要登入的網站。雖然該服務綁定 LangSmith 沙盒，但其架構非常值得借鑑到你的 LangGraph 專案：可以用 Playwright 實作類似的 human-in-the-loop 接管邏輯，並利用 LangGraph 的非同步節點把耗時爬蟲丟到背景跑，避免阻斷主流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c8",
+     "source": "hn",
+     "id": "50275626",
+     "metrics": {
+      "points": 253,
+      "comments": 171
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://surgehq.ai/blog/dayjob-tax"
+      },
+      {
+       "label": "HN 討論（253 分）",
+       "url": "https://news.ycombinator.com/item?id=50275626"
+      }
+     ],
+     "title": "Surge AI 釋出 DAYJOB: Tax：評測 Agent 處理模糊資訊的專業判斷",
+     "tags": [
+      "Agent 評測",
+      "資料處理",
+      "專業自動化"
+     ],
+     "summary": "Surge AI 推出 DAYJOB: Tax 評測基準，涵蓋 50 個環境與 1,789 份文件，專門測試 AI Agent 處理複雜稅務諮詢與作業的能力。該基準著重於真實場景中「指令不完整、紀錄衝突」的狀況，要求 Agent 不僅要會計算，還需具備主動發掘客戶未提及但至關重要的條件（例如稅務優惠的居住年限截止日）。這項評測反映出高階 Agent 從被動問答走向主動排查潛在風險的要求。",
+     "key_points": [
+      "包含 50 個實際業務環境與 1,789 份檔案，涵蓋 8 個稅務實務領域",
+      "評測重點在於資訊不全或存在衝突時，Agent 是否能主動發現隱含關鍵問題",
+      "案例顯示即使模型算對稅額，若漏掉截止期限等潛在限制仍被視為不及格"
+     ],
+     "how_to_use": "這套評測很適合拿來參考如何驗證你自己的資料分析或審批 Agent。在設計 LangGraph 的文件審查或 SQL 資料核對節點時，不能只測正確指令，應刻意設計「遺漏欄位」或「矛盾資料」的測試案例，要求 Agent 在主動提出警示後才放行流程，提升自動化簽核與數據處理的嚴謹度。",
+     "fallback": false
+    },
+    {
+     "ref": "c105",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs"
+      }
+     ],
+     "title": "Google Gemini 網頁版支援直接產生並編輯 Docs 與試算表檔案",
+     "tags": [
+      "Gemini",
+      "文件處理",
+      "工作流程"
+     ],
+     "summary": "Google 宣布 Gemini 聊天介面即日起支援直接生成、預覽並編輯多種文件格式，包含 Google Docs、Google Sheets、PDF、Markdown、TXT 與程式碼檔案。使用者不需要離開 Gemini 介面即可在全螢幕模式下微調檔案內容，亦能直接選取特定區段下指令修改，例如圈選表格請模型直接繪製成圖表。目前 PDF 編輯支援網頁與行動版，其餘格式暫時僅限網頁版使用。",
+     "key_points": [
+      "支援在 Gemini 聊天介面內直接生成並雙向編輯 Docs、Sheets、PDF 與程式碼",
+      "提供局部選取互動功能，可反白文字或表格直接要求調整或轉換格式",
+      "所有 Gemini 使用者皆可使用，除 PDF 外目前多數編輯功能僅限網頁版"
+     ],
+     "how_to_use": "平時處理內部文件或整理報表時，你不需要透過 Python 腳本反覆呼叫 API 匯出檔案。直接在 Gemini 網頁版貼上 SQL 查詢結果或 pandas 產出的文字資料，讓它產出試算表或 Markdown，再透過反白編輯功能微調格式與產生摘要圖表，能大幅節省日常臨時性文件與報表的整理時間。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50284255",
+     "metrics": {
+      "points": 558,
+      "comments": 224
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce"
+      },
+      {
+       "label": "HN 討論（558 分）",
+       "url": "https://news.ycombinator.com/item?id=50284255"
+      }
+     ],
+     "title": "Claude Code 定期回傳背景 Agent 記錄至模型",
+     "one_liner": "社群發現 Claude Code 會將背景 Agent 的完整執行歷程定時回傳給模型，引發對上下文消耗與監控機制的討論。",
+     "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+     "fallback": false
+    },
+    {
+     "ref": "c128",
+     "source": "rss",
+     "id": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "OpenAI News",
+       "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+      }
+     ],
+     "title": "OpenAI 介紹前沿模型對齊偏差偵測機制",
+     "one_liner": "OpenAI 說明如何利用分層監控架構提早偵測 Agent 未授權行為與模型對齊偏差，以便即時介入防範。",
+     "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+     "fallback": false
+    },
+    {
+     "ref": "c10",
+     "source": "hn",
+     "id": "50296486",
+     "metrics": {
+      "points": 119,
+      "comments": 45
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://labs.ycombinator.com/projects/games/index.html"
+      },
+      {
+       "label": "HN 討論（119 分）",
+       "url": "https://news.ycombinator.com/item?id=50296486"
+      }
+     ],
+     "title": "開發者在 Minecraft 與 Mindustry 實現多 Agent 協作群",
+     "one_liner": "社群分享在複雜遊戲環境中部署多 Agent 群體協作的實驗，驗證群體任務分配與自動化策略。",
+     "url": "https://labs.ycombinator.com/projects/games/index.html",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c75",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 3773,
+      "downloads": 131062,
+      "trending_score": 882,
+      "likes_delta": 229
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek 發布 V4.1-Flash-1017：強化 Agent 與視覺推理並開源編碼工具",
+     "tags": [
+      "開源模型",
+      "多模態",
+      "Agent 推理",
+      "MIT 授權"
+     ],
+     "summary": "DeepSeek 推出 DeepSeek-V4.1-Flash-1017 小幅升級版本，採 MIT 授權釋出。官方宣稱新版本在推理、寫程式、視覺與 Agent 任務評測（如 Terminal-Bench 4.0 達 42.3、DeepSWE v1.1 達 77.0、Automation-Bench 達 60.5）均有顯著進步，且降低了執行時間與輸出長度。此版本未附 Jinja 格式的 chat template，而是提供獨立的 Python 參考實作（encoding.py）與具備 Python 綁定的 Rust 工具庫 deepseek-recipe，可處理多輪對話、思考模式、工具調用與交錯圖文編碼，支援 1M 上下文。",
+     "key_points": [
+      "採 MIT 開源授權，支援 1M 上下文與大於 256K 輸出長度",
+      "在 Automation-Bench、DeepSWE 等 Agent 評測上表現較前代提升",
+      "釋出 deepseek-recipe 提供 Python 介面，標準化處理思考模式與 Tool Calling 提示詞編碼"
+     ],
+     "how_to_use": "雖然本機可能難以全量載入該模型，但其官方釋出的 `deepseek-recipe` Python 工具庫非常值得參考。若你在 LangGraph 中需要自行解析與組裝多步驟 Agent 的 Tool Calling、思考鏈與多模態輸入，可借鏡其封裝格式；未來若社群推出 GGUF 權重引進 Ollama，也能直接評估其在資料處理自動化腳本上的程式碼生成表現。",
+     "fallback": false
+    },
+    {
+     "ref": "c74",
+     "source": "hf_models",
+     "id": "mistralai/Mistral-Large-4-1T-A52B",
+     "metrics": {
+      "likes": 1216,
+      "downloads": 278,
+      "trending_score": 296,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+      }
+     ],
+     "title": "Mistral Large 4 發布：1T 參數開源 MoE 模型支援 1M 上下文與原生視覺",
+     "tags": [
+      "MoE",
+      "多模態",
+      "開源權重",
+      "長上下文"
+     ],
+     "summary": "Mistral AI 發布旗下體積最大的開源多模態混合專家模型 Mistral Large 4（代號 Le Chonk）。該模型總參數量達 1T，採用 128 個路由專家中啟用 4 個專家（加 1 個共享專家）的架構，每個 token 啟用約 52B 參數。模型原生支援文字與圖像輸入、1M 上下文視窗、嚴格 JSON Schema 強制輸出與原生 Function Calling。官方宣稱其在視覺定位、資安與程式工作表現出色，並提供 low/medium/high 三段推理強度設定，支援 vLLM、SGLang 與 llama.cpp 等推論框架。",
+     "key_points": [
+      "1T 總參數、52B 啟用參數的 MoE 架構，支援 1M 上下文與多模態輸入",
+      "具備原生 Function Calling、嚴格 JSON Schema 輸出與三段推理強度調整",
+      "採 Mistral 生態系開放權重授權，並提供適用於現代 GPU 的 NVFP4 量化版"
+     ],
+     "how_to_use": "這個兆級參數量模型對本機硬體需求極高，一般個人 Windows 開發環境無法直接以 Ollama 運作。不過其支援 llama.cpp 與嚴格 JSON 結構化輸出，若未來有雲端 API 免費額度或第三方向量化部署，很適合做為 LangGraph 流程中負責拆解繁複內部簽核邏輯、解析文件報表圖像的主控節點。",
+     "fallback": false
+    },
+    {
+     "ref": "c80",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 18687,
+      "downloads": 7509924,
+      "trending_score": 309,
+      "likes_delta": 70
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 登場：具備小時級長影片理解與彈性思考控制的稠密模型",
+     "tags": [
+      "多模態",
+      "Apache 2.0",
+      "視覺語言",
+      "Agent 規劃"
+     ],
+     "summary": "阿里 Qwen 團隊發布開源 Apache-2.0 授權的稠密多模態模型 Qwen3.8-27B。該架構結合 Gated DeltaNet 與 Gated Attention，支援圖像與長達數小時的影片理解。官方宣稱該版本顯著提升了長程 Agent 任務的自主規劃能力與對環境反饋的處理。模型原生整合思考模式（預設開啟，可單次關閉），支援透過 `reasoning_effort` 調節推理深度，並能以 `preserve_thinking` 參數在多輪歷史對話中保留思考脈絡，相容於 Hugging Face Transformers、vLLM 與 SGLang 等常見推論框架。",
+     "key_points": [
+      "採 Apache-2.0 授權的 27B 稠密模型，結合線性與標準注意力混合架構",
+      "原生支援圖像與長影片理解，強化長程 Agent 自主規劃能力",
+      "具備細緻的思考模式控制，支援保留歷史思考脈絡與調整推理深度"
+     ],
+     "how_to_use": "27B 尺寸非常適合在 Ollama 釋出 Q4 量化版本後拉至本機測試。若你正在用 LangGraph 開發跨步驟的資料蒐集爬蟲或文件處理 Agent，其保留思考脈絡（`preserve_thinking`）與環境反饋修正能力，能有效減少多輪對話時邏輯發散的問題；原生視覺能力也能直接應用於截圖比對與圖表解析。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c78",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 483,
+      "downloads": 15885,
+      "trending_score": 473,
+      "likes_delta": 94
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI 釋出 LFM3-1.7B 輕量級非 Transformer 架構模型",
+     "one_liner": "僅 1.7B 參數的小型模型，適合邊緣裝置或本機極低延遲推論實驗。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+     "fallback": false
+    },
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "baidu/Unlimited-OCR-2",
+     "metrics": {
+      "likes": 382,
+      "downloads": 18141,
+      "trending_score": 365,
+      "likes_delta": 58
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/baidu/Unlimited-OCR-2"
+      }
+     ],
+     "title": "百度發布 Unlimited-OCR-2 多語言光學字元辨識模型",
+     "one_liner": "聚焦高吞吐與多格式文件解析的開源 OCR 工具，有助自動化處理掃描檔與報表。",
+     "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+     "fallback": false
+    },
+    {
+     "ref": "c88",
+     "source": "hf_models",
+     "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+     "metrics": {
+      "likes": 256,
+      "downloads": 57228,
+      "trending_score": 239,
+      "likes_delta": 36
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
+      }
+     ],
+     "title": "NVIDIA 釋出 Nemotron-3.5-Bolt-E4B 邊緣端專用小模型",
+     "one_liner": "針對邊緣裝置低記憶體環境最佳化的小型模型，主打輕量推論與快速響應。",
+     "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c141",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember"
+      }
+     ],
+     "title": "Deep Agents 上下文工程：五種技巧解決 Agent 記憶膨脹與腐化",
+     "tags": [
+      "LangGraph",
+      "上下文管理",
+      "Agent架構"
+     ],
+     "summary": "長時間運行的 Agent 容易因為塞滿歷史對話、工具輸出與檔案而產生「上下文腐化（context rot）」，導致模型推論準確率下降。LangChain 開源的 Deep Agents 機構提出透過中介軟體（middleware）管理活躍視窗，並採用五種核心技術：Offloading（大結果存入檔案僅留預覽）、Summarization（對話接近上限時自動摘要）、Skills（僅在需要時載入任務知識）、Subagents（將嘈雜任務分流至獨立上下文）、Long-term memory（以純文字檔案持久化記憶，便於跨模型遷移）。",
+     "key_points": [
+      "指出 Context rot 現象：攜帶過多雜訊與歷史會直接降低模型推論與準確度",
+      "採用五大減載策略：結果檔案化預覽、動態摘要、按需載入技能、子代理分流與長期文字記憶",
+      "記憶以本機純檔案保存，切換模型或供應商時不遺失累積資料"
+     ],
+     "how_to_use": "在你的 LangGraph 資料分析或自動化流程中，抓取網頁爬蟲或 SQL 大量查詢輸出時，不要將原始資料直接塞入 State 的對話歷史。可借鏡其 Offloading 概念，將大型 pandas DataFrame 或 HTML 存入本機檔案並只傳回前五筆預覽；長流程內部審核則可將雜訊子任務拆到獨立 Node，避免佔滿 Gemini 免費額度的 context window。",
+     "fallback": false
+    },
+    {
+     "ref": "c97",
+     "source": "hf_papers",
+     "id": "2610.37230",
+     "metrics": {
+      "upvotes": 16,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.37230"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.37230"
+      }
+     ],
+     "title": "TAO：考量工具執行就緒狀態的 LLM Agent 推論調度架構",
+     "tags": [
+      "推論優化",
+      "GPU調度",
+      "系統架構"
+     ],
+     "summary": "Agent 服務通常在 GPU 模型推論與 CPU 外部工具呼叫之間頻繁交替。既有系統往往忽略工具回傳的就緒時間，並依賴啟發式規則調度 GPU，造成資源浪費與排程不佳。論文提出 TAO 聯合調度架構，結合近端工具就緒時間、具時間衰減特性的節點快取信用及 token footprint，透過動態規劃在容量限制下選取並配置待處理 Session。官方測試顯示，TAO 可將延遲降低最高 26.8%、首字延遲（TTFT）降低 36.3%，解碼吞吐量提升 29.5%。",
+     "key_points": [
+      "解決 Agent 在 GPU 推論與 CPU 外部工具交替時的排程無效率問題",
+      "整合工具就緒時間、節點快取信用衰減與 token 佔用量進行動態規劃調度",
+      "在多項基準評測中，延遲最高降低 26.8%，解碼吞吐提升最高 29.5%"
+     ],
+     "how_to_use": "跟日常單機開發關係不大。這篇論文主要針對在伺服器端部署多並行 Agent 服務的架構團隊。不過它指出「等待外部工具（如資料庫查詢、爬蟲）回傳時的運算閒置」是 Agent 系統的一大瓶頸，如果你未來需要在 Ollama 本機環境同時跑多個自動化腳本，能借鏡其非同步切換與快取管理的思維。",
+     "fallback": false
+    },
+    {
+     "ref": "c98",
+     "source": "hf_papers",
+     "id": "2610.22507",
+     "metrics": {
+      "upvotes": 15,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.22507"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.22507"
+      }
+     ],
+     "title": "RealCLI：真實終端環境下的人機協作與指令執行評測基準",
+     "tags": [
+      "CLI Agent",
+      "評測基準",
+      "人機協作"
+     ],
+     "summary": "現有的 CLI Agent 評測常假設使用者指令固定不變，或僅評估最終結果而忽略執行過程中的互動品質。論文提出 REALCLI 基準，結合 5 個維度、22 個子維度與 51 個互動情境範本。評測分為單純給定完整說明的 REALCLI-EXEC，以及由腳本模擬人類逐步提供修正、授權與限制的 REALCLI-COLLAB 模式。測試發現尖端模型平均得分僅 49.2%，聯合協作分數（J_collab）最高僅 37.6%，顯示模型在引導性、信任校準和安全邊界管理上仍有明顯短板。",
+     "key_points": [
+      "建立針對命令列 Agent 的人機協作評測基準，涵蓋 5 大維度與 51 個互動範本",
+      "對比靜態全指令（EXEC）與動態模擬人類提供修正及授權（COLLAB）兩種模式",
+      "評測顯示頂尖模型在動態協作分數僅 37.6%，暴露出模型在安全授權與依循引導的不足"
+     ],
+     "how_to_use": "若你在規劃讓 Coding Agent 或自動化流程去操作本機 Windows 命令列、執行 SQL 腳本或部署程式，這項研究提醒了「靜態執行成功不代表能在動態協作中安全受控」。在設計 LangGraph 流程時，對於危險操作（如 DROP TABLE、系統刪除指令）應明確建立中斷與授權節點，不能假設模型能自主拿捏安全邊界。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c124",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/the-art-of-loop-engineering"
+      }
+     ],
+     "title": "LangChain 探討 Agent 迴圈工程設計模式",
+     "one_liner": "文章解析核心 Agent 迴圈架構，探討如何利用堆疊與擴展迴圈來強化任務執行穩定度。",
+     "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+     "fallback": false
+    },
+    {
+     "ref": "c147",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/building-agent-memory-openwiki-graphs",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/building-agent-memory-openwiki-graphs"
+      }
+     ],
+     "title": "以 OpenWiki 與圖譜建構 Agent 證據導向記憶",
+     "one_liner": "介紹開源 wiki 編譯器 OpenWiki 與證據圖譜，為 Agent 打造可跨任務重複使用的持久記憶層。",
+     "url": "https://www.langchain.com/blog/building-agent-memory-openwiki-graphs",
+     "fallback": false
+    },
+    {
+     "ref": "c96",
+     "source": "hf_papers",
+     "id": "2610.31670",
+     "metrics": {
+      "upvotes": 20,
+      "github_stars": 8
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.31670"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.31670"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/yunfeixie233/sensorimotor-alignment"
+      }
+     ],
+     "title": "具身智慧策略成功的低成本離線評估指標",
+     "one_liner": "論文提出感官運動對齊概念，探索將動作軌跡作為表徵模態，作為機器人模型閉環評估的離線代理指標。",
+     "url": "https://huggingface.co/papers/2610.31670",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "vectorize-io/hindsight",
+     "metrics": {
+      "stars": 56197,
+      "stars_today": 1454,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/vectorize-io/hindsight"
+      }
+     ],
+     "title": "Hindsight：支援本機 Ollama 的 Agent 長期記憶系統",
+     "tags": [
+      "Agent 記憶",
+      "LangGraph",
+      "Ollama",
+      "開源工具"
+     ],
+     "summary": "Hindsight 是一套專為 AI Agent 設計的記憶系統，核心訴求是讓 Agent 具備隨時間持續「學習」的能力，而非僅是單純儲存對話歷史。官方宣稱其在 LongMemEval 基準測試中達到當前最佳表現（SOTA），超越傳統 RAG 與知識圖譜方案，並經第三方研究單位重現驗證。架構提供 Server 與 UI 介面，支援超過 25 種 LLM 提供商，涵蓋 Gemini 免費 API 與本機端 Ollama 等多種後端，並提供 MCP 與 Coding Agent 擴充能力。",
+     "key_points": [
+      "官方宣稱在 LongMemEval 基準測試取得長文本記憶最佳表現，能持續累積經驗與心智模型",
+      "支援 25 種以上 LLM 提供商，包含 Gemini、本機 Ollama、LM Studio，以及無 API Key 的開發訂閱端點",
+      "以 Docker 容器方式啟動服務，提供 API（8888 埠）與視覺化 UI（9999 埠）供監控管理"
+     ],
+     "how_to_use": "在 Windows 上透過 Docker 啟動 Hindsight 並指定 Ollama 或 Gemini 為後端。整合到 LangGraph 時，可將其包裝為自訂 Checkpointer 或獨立 Node，在對話前撈取使用者長期偏好，對話後更新記憶，改善分析流程中重複輸入偏好的問題。",
+     "fallback": false
+    },
+    {
+     "ref": "c42",
+     "source": "github_trending",
+     "id": "volcengine/OpenViking",
+     "metrics": {
+      "stars": 41150,
+      "stars_today": 88,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/volcengine/OpenViking"
+      }
+     ],
+     "title": "OpenViking：虛擬檔案系統架構的 Agent 上下文資料庫",
+     "tags": [
+      "上下文管理",
+      "檔案系統",
+      "RAG",
+      "Agent 記憶"
+     ],
+     "summary": "字節跳動旗下的火山引擎推出開源 Agent 上下文資料庫 OpenViking，試圖打破傳統向量資料庫難以檢視的黑盒子問題。專案將 Agent 所需的知識、記憶與技能統一組織在 `viking://` 虛擬檔案系統中，允許 Agent 與開發者透過 `ls`、`tree`、`grep` 等檔案操作直接檢視與編輯。檢索採用 L0 一句話摘要、L1 結構概覽、L2 完整內容的三層載入機制，大幅降低無效檢索的 Token 開銷。",
+     "key_points": [
+      "以虛擬檔案系統 `viking://` 統整知識（resources）、記憶（memories）與技能（skills），可手動編輯與除錯",
+      "具備 L0 摘要、L1 概覽、L2 詳情三層上下文架構，讓 Agent 能先判斷關聯度再讀取全文",
+      "支援限定目錄範圍的語意搜尋，並可將對話 Session 彙整編譯為 Markdown、Wiki 或知識圖譜"
+     ],
+     "how_to_use": "適合用於 LangGraph 內部知識庫或自動化爬蟲成果管理。你可以將爬取的文件依資料夾歸檔，Agent 在決策節點先讀取 L0/L1 概覽以判斷是否深入分析，減少長文件 Token 浪費並方便在本地除錯記憶內容。",
+     "fallback": false
+    },
+    {
+     "ref": "c40",
+     "source": "github_trending",
+     "id": "baidu/Unlimited-OCR",
+     "metrics": {
+      "stars": 29757,
+      "stars_today": 247,
+      "stars_delta": 239
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/baidu/Unlimited-OCR"
+      }
+     ],
+     "title": "Unlimited-OCR 2：極長文件解析與滑動視窗注意力模型",
+     "tags": [
+      "OCR",
+      "文件處理",
+      "多模態",
+      "資料自動化"
+     ],
+     "summary": "百度開源的 Unlimited-OCR 2 主打超長文本與文件解析，正式發布於 2026 年 10 月 27 日。該版本引進稀疏參考滑動視窗注意力（SR-SWA）技術，將極長序列的文本視覺注意力壓縮至固定大小的工作參考（如 512 tokens），使解碼延遲與記憶體佔用不隨文件長度呈二次方暴增。官方宣稱在數十頁的 MPDocBench 與上百頁的 MarathonDocBench 基準測試中均取得領先成績，支援 Transformers 與 SGLang 推論。",
+     "key_points": [
+      "採用 SR-SWA 機制，在有限上下文視窗內消除長文件二次方運算與記憶體瓶頸",
+      "針對百頁級別長文件設計，於 MarathonDocBench 與 MPDocBench 取得領先指標",
+      "官方提供 Transformers 快速測試程式碼與 SGLang 部署方案，支援 Hugging Face 與 ModelScope"
+     ],
+     "how_to_use": "若工作包含掃描版 PDF 報表、長篇合約等內部文件處理自動化流程，這套工具值得注意；但官方測試環境為高階 GPU（如 A800），若手邊無高階顯卡，建議先在雲端測試或待社群量化後再評估接入本地 Pipeline。",
+     "fallback": false
+    },
+    {
+     "ref": "c37",
+     "source": "github_trending",
+     "id": "beenuar/AiSOC",
+     "metrics": {
+      "stars": 5139,
+      "stars_today": 320,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/beenuar/AiSOC"
+      }
+     ],
+     "title": "AiSOC：可稽核決策軌跡的開源 AI 資安維運中心",
+     "tags": [
+      "資安維運",
+      "多 Agent 協作",
+      "審批流程",
+      "自動化"
+     ],
+     "summary": "AiSOC 是一套開源且可自架的 AI 資安營運中心（SOC）平台，負責收集遙測資料、透過 2,500 條以上規則關聯威脅，並由 AI Agent 進行自動化事件調查與處置建議。專案強調推理過程完全可審計，完整記錄每一次 Prompt 與工具呼叫，且在執行處置前強制需要人工核准。提供單行安裝指令與無 Docker 的離線沙盒模式，內建本地模型即可完成初步分類與 CISA 威脅情報更新。",
+     "key_points": [
+      "內建 2,530 條可執行規則，由 AI Agent 逐一調查事件並完整記錄推論歷程與工具呼叫",
+      "具備強制人工簽核（Human-in-the-loop）機制，提出應變動作後需經人工確認才執行",
+      "支援 Windows 單行 PowerShell 安裝，亦提供 `pip install aisoc-sandbox` 離線 30 秒演示模式"
+     ],
+     "how_to_use": "雖然屬於資安專用系統，跟一般資料分析距離較遠，但其「AI 自動調查生成處置方案 + 強制人工簽核」的架構，非常適合作為在 LangGraph 中設計敏感內部簽核流程、審計日誌與防護邊界的架構參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c23",
+     "source": "github_trending",
+     "id": "pbakaus/impeccable",
+     "metrics": {
+      "stars": 95317,
+      "stars_today": 2870,
+      "stars_delta": 2660
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/pbakaus/impeccable"
+      }
+     ],
+     "title": "impeccable：Coding Agent 專用設計詞彙規範",
+     "one_liner": "為程式生成 Agent 提供設計審查詞彙與規範，協助在產出前把關 UI 細節。",
+     "url": "https://github.com/pbakaus/impeccable",
+     "fallback": false
+    },
+    {
+     "ref": "c56",
+     "source": "github_search",
+     "id": "YOLOW92/pagesift",
+     "metrics": {
+      "stars": 164,
+      "forks": 18,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/YOLOW92/pagesift"
+      }
+     ],
+     "title": "pagesift：高效率 Rust 爬蟲與內容擷取引擎",
+     "one_liner": "針對 Agent 與 RAG 設計的 Rust 爬蟲引擎，支援輸出乾淨 Markdown 與 Python SDK。",
+     "url": "https://github.com/YOLOW92/pagesift",
+     "fallback": false
+    },
+    {
+     "ref": "c48",
+     "source": "github_search",
+     "id": "yjid/kensaku",
+     "metrics": {
+      "stars": 220,
+      "forks": 8,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/yjid/kensaku"
+      }
+     ],
+     "title": "kensaku：本機文件與截圖語意搜尋工具",
+     "one_liner": "免連網的本機檔案啟動器，整合 OCR、語意檢索與 MCP Agent 存取介面。",
+     "url": "https://github.com/yjid/kensaku",
+     "fallback": false
+    },
+    {
+     "ref": "c58",
+     "source": "github_search",
+     "id": "divagr18/qwenputer",
+     "metrics": {
+      "stars": 228,
+      "forks": 29,
+      "stars_delta": 148
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/divagr18/qwenputer"
+      }
+     ],
+     "title": "qwenputer：將 CPU 邏輯編譯進模型權重的實驗專案",
+     "one_liner": "將 CPU 邏輯直接編入 Qwen3.5-4B 權重，使用 Gated DeltaNet 作為 RAM 的研究概念。",
+     "url": "https://github.com/divagr18/qwenputer",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "nightly-labs/openbot",
+     "metrics": {
+      "stars": 3877,
+      "stars_today": 709,
+      "stars_delta": 628
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/nightly-labs/openbot"
+      }
+     ],
+     "title": "openbot：本地優先的桌面 AI 協同工作區",
+     "one_liner": "支援本機工作區、任務佇列、瀏覽器控制與多 Agent 協同作業的桌面端環境。",
+     "url": "https://github.com/nightly-labs/openbot",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c26",
+  "source": "github_trending",
+  "id": "vectorize-io/hindsight",
+  "metrics": {
+   "stars": 56197,
+   "stars_today": 1454,
+   "stars_delta": null
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/vectorize-io/hindsight"
+   }
+  ],
+  "title": "用 Hindsight 為 LangGraph 打造本機長期記憶",
+  "why": "開源 Agent 長期記憶系統，支援 Windows 與本機 Ollama/Gemini，免架伺服器即可整合進 LangGraph 流程。",
+  "steps": [
+   "在終端機執行 `pip install hindsight-all -U` 安裝支援 Windows 內嵌資料庫的 Python 套件。",
+   "撰寫 Python 程式，以 `HindsightServer(llm_provider=\"ollama\")`（或搭配 Gemini 設定）啟動內嵌伺服器，並初始化 `client = HindsightClient(base_url=server.url)`。",
+   "呼叫 `client.retain(bank_id=\"my-bank\", content=\"簽核流程：金額超過五萬需主管審查\")` 寫入記憶，並執行 `client.recall(bank_id=\"my-bank\", query=\"五萬以上的簽核規定？\")` 檢索。"
+  ],
+  "success_check": "程式順利執行完畢，`client.recall()` 成功回傳包含剛才寫入之簽核規定的檢索資料。",
+  "fallback": false
+ },
+ "warnings": []
+}
