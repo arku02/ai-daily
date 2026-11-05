@@ -1,0 +1,757 @@
+{
+ "date": "2026-11-05",
+ "generated_at": "2026-11-05T00:45:45Z",
+ "models_used": [
+  "gemini-3.5-flash-lite"
+ ],
+ "llm_calls": 28,
+ "tldr": [
+  "Meta 收購主打多代理協作的 AI 程式碼新創 Conductor，持續擴展開發自動化工具。",
+  "LangChain 推出 LangSmith BYOC 支援各大雲端，確保資料與評測留在企業帳戶。",
+  "GitHub Copilot 正式整合至 Xcode 與 JetBrains Air，全面拓展原生開發環境。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c129",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/"
+      }
+     ],
+     "title": "Meta 收購 AI 程式碼新創 Conductor",
+     "tags": [
+      "AI 程式碼",
+      "多 Agent 協作",
+      "Meta"
+     ],
+     "summary": "Meta 宣布收購 AI 程式碼新創 Conductor。該新創提供讓使用者透過部署多個 Agent 到平行工作區來開展軟體專案的平台，其平台所部署的 Agent 來自 Anthropic 與 OpenAI 等主要實驗室。創辦人 Charlie Holtz 將加入 Meta，並與 Meta 首席 AI 長 Alexandr Wang 及 Superintelligence Labs 產品負責人 Nat Friedman 合作。官方宣稱 Conductor 核心功能將持續運作至明年初，但其雲端服務將於 11 月 20 日關閉並刪除使用者雲端資料。",
+     "key_points": [
+      "Meta 收購 AI 程式碼新創 Conductor，創辦人與團隊將加入 Meta。",
+      "Conductor 允許使用者部署多個 Agent 到平行工作區來進行軟體開發。",
+      "其雲端服務預計於 11 月 20 日關閉並清除資料，核心功能暫維運至明年初。"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然你關注 Coding Agent，但 Conductor 依賴 Anthropic 與 OpenAI 的模型，且其雲端服務即將關閉。對使用 Gemini 與 Ollama、在 Windows 上開發的你來說，這則新聞主要是產業動態，無法直接取得並拿來跑個人專案。",
+     "fallback": false
+    },
+    {
+     "ref": "c124",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/langsmith-byoc-aws-gc-azure",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/langsmith-byoc-aws-gc-azure"
+      }
+     ],
+     "title": "LangSmith BYOC 正式支援三大主流雲端平台",
+     "tags": [
+      "LangSmith",
+      "Agent 評測與監控",
+      "雲端部署"
+     ],
+     "summary": "LangChain 宣布 LangSmith Bring Your Own Cloud（BYOC）現在支援 AWS（GA）、Azure（Beta）與 Google Cloud（Beta）。BYOC 將控制面與資料面分開，LangChain 負責控制面，而追蹤紀錄、評測、資料集、提示詞與 Agent 部署等敏感資料則存放在使用者自己的雲端帳戶與 VPC 中。此架構讓團隊在保有完整資料隱私與合規邊界的同時，也能享有自動擴展與持續升級的便利，免去維護自架環境的負擔。",
+     "key_points": [
+      "LangSmith BYOC 現已在 AWS、Azure 與 Google Cloud 推出。",
+      "採用控制面與資料面分離架構，資料留在使用者自己的雲端帳戶內。",
+      "LangChain 負責平台的自動擴展與持續升級，省去自架維護成本。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這項功能主要針對有嚴格企業合規與雲端架構需求的大型團隊，而你的日常開發是在 Windows 本機環境並使用 Python 與 LangGraph，因此這項雲端部署異動對你的個人專案幫助有限，但仍可作為了解 LangSmith 企業級架構演進的參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c134",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant"
+      }
+     ],
+     "title": "GitHub Copilot 整合進 Xcode",
+     "one_liner": "GitHub Copilot 現已在 Xcode 的內建程式碼助理中提供公開預覽版，讓開發者能在原生 Xcode 工作流程中使用。",
+     "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+     "fallback": false
+    },
+    {
+     "ref": "c170",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air"
+      }
+     ],
+     "title": "GitHub Copilot 登陸 JetBrains Air",
+     "one_liner": "GitHub Copilot 透過 Agent Client Protocol 支援 JetBrains Air，讓開發者可在其中委派與指導程式碼任務。",
+     "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+     "fallback": false
+    },
+    {
+     "ref": "c141",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/human-insight-strategic-advantage-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/human-insight-strategic-advantage-agents"
+      }
+     ],
+     "title": "探討人類洞察對建立優質 Agent 的重要性",
+     "one_liner": "文章探討了實作有效的人機協作（Human-in-the-loop）工作流程的 3 項原則，以及人工審查對生產級 Agent 的重要性。",
+     "url": "https://www.langchain.com/blog/human-insight-strategic-advantage-agents",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 493,
+      "downloads": 797,
+      "trending_score": 484,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      },
+      {
+       "label": "HN 討論（350 分）",
+       "url": "https://news.ycombinator.com/item?id=50366999"
+      }
+     ],
+     "title": "Moonshot AI 發布 Kimi K3.1 Pro 開源多模態模型",
+     "tags": [
+      "Kimi",
+      "多模態",
+      "開源模型",
+      "Agentic"
+     ],
+     "summary": "Moonshot AI 推出開源且具備原生多模態能力的 3T 級模型 Kimi K3.1 Pro，支援 100 萬 token 的上下文視窗。該模型採用 MoE 架構（總參數 2.8T，啟動 104B），並在編碼、財務研究與長文本處理等 agentic 任務上有顯著提升。官方宣稱其在多項評測中表現優異。",
+     "key_points": [
+      "支援 1M 長上下文視窗與文字、圖片多模態輸入",
+      "採用 MoE 架構與 Gated DeepSeek Sparse Attention（Gated DSA）層",
+      "在編碼、3D 創作及財務研究等 agentic 能力表現突出"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然其 agentic 能力很強，但 2.8T 的龐大體積無法在你的 Windows 本機或免費 API 環境執行，也缺乏直接可用的輕量化本地部署路徑。",
+     "fallback": false
+    },
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5267,
+      "downloads": 221621,
+      "trending_score": 607,
+      "likes_delta": 416
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 釋出，強化推理與視覺表現",
+     "tags": [
+      "DeepSeek",
+      "開源模型",
+      "代理任務",
+      "MIT授權"
+     ],
+     "summary": "DeepSeek 推出 DeepSeek-V4.1-Flash-1017，為前代模型的小幅更新版本，在推理、編碼、代理任務與視覺評測上有顯著提升。官方宣稱此版本能減少執行時間與輸出長度，降低成本並提升效能。該倉庫採用 MIT 授權，提供參考用 Python 實作與 Rust 函式庫協助處理提示詞編碼。",
+     "key_points": [
+      "全面提升 Terminal-Bench、DeepSWE 等代理與編碼基準表現",
+      "支援 1M 上下文視窗與大於 256K 的最大輸出",
+      "以 MIT 授權釋出，提供完整的提示詞編碼參考與 Rust 工具組"
+     ],
+     "how_to_use": "你可以關注其開源的程式碼與架構設計，但由於模型規模較大，在沒有高階 GPU 的 Windows 開發環境下，暫時難以直接在本機透過 Ollama 運行。若未來有提供量化版本且社群適配後，有機會作為 LangGraph 中處理複雜自動化流程與程式碼分析的後端選擇。",
+     "fallback": false
+    },
+    {
+     "ref": "c87",
+     "source": "hf_models",
+     "id": "mistralai/Mistral-Large-4-1T-A52B",
+     "metrics": {
+      "likes": 1590,
+      "downloads": 8200,
+      "trending_score": 557,
+      "likes_delta": 46
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+      }
+     ],
+     "title": "Mistral AI 推出 1 兆參數開源模型 Mistral Large 4",
+     "tags": [
+      "Mistral",
+      "開源模型",
+      "MoE",
+      "多語言"
+     ],
+     "summary": "Mistral AI 發布旗下最大、最強悍的模型 Mistral Large 4（代號 Le Chonk），這是一款擁有約 1 兆總參數（52 億啟動參數）的原生多模態 MoE 模型。官方宣稱其具備 100 萬 token 上下文長度，並在指令遵循、推理、編碼與代理工作流程上有出色表現，對金融、法律及網路安全等領域特別優化。",
+     "key_points": [
+      "約 1T 總參數／約 52B 啟動參數的 MoE 架構",
+      "支援 1M 上下文長度、圖片輸入與原生函數呼叫（Function Calling）",
+      "提供三種推理 effort 等級設定（low、medium、high）"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然它支援強大的代理功能與結構化輸出，但其龐大的 1 兆參數規模需要專業硬體支援，無法在你的 Windows 本機環境或免費 API 額度內實際跑起來。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 1485,
+      "downloads": 54959,
+      "trending_score": 566,
+      "likes_delta": 81
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI 發布 LFM3-1.7B 模型",
+     "one_liner": "LiquidAI 釋出 17 億參數的 LFM3-1.7B 模型，適合輕量化應用。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+     "fallback": false
+    },
+    {
+     "ref": "c92",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6784,
+      "downloads": 3781476,
+      "trending_score": 102,
+      "likes_delta": 36
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen 推出 Qwen3.8-Flash-Next",
+     "one_liner": "Qwen 發布 Qwen3.8-Flash-Next 模型，下載量與社群關注度極高。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    },
+    {
+     "ref": "c96",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-VL-2B",
+     "metrics": {
+      "likes": 259,
+      "downloads": 12688,
+      "trending_score": 94,
+      "likes_delta": 31
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B"
+      }
+     ],
+     "title": "LiquidAI 推出 LFM3-VL-2B 多模態模型",
+     "one_liner": "LiquidAI 釋出 20 億參數的 LFM3-VL-2B 視覺多模態模型。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B",
+     "fallback": false
+    },
+    {
+     "ref": "c100",
+     "source": "hf_models",
+     "id": "LiquidAI/d1-2B",
+     "metrics": {
+      "likes": 227,
+      "downloads": 6750,
+      "trending_score": 119,
+      "likes_delta": 26
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/d1-2B"
+      }
+     ],
+     "title": "LiquidAI 發布 d1-2B 模型",
+     "one_liner": "LiquidAI 推出 20 億參數的 d1-2B 輕量化模型。",
+     "url": "https://huggingface.co/LiquidAI/d1-2B",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2611.04814",
+     "metrics": {
+      "upvotes": 65,
+      "github_stars": 6
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.04814"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.04814"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/MuyaoYuan/LoCo"
+      }
+     ],
+     "title": "LoCo：用區域偏好學習壓縮推理過程，減少過度思考",
+     "tags": [
+      "推理壓縮",
+      "模型優化",
+      "DPO"
+     ],
+     "summary": "大型推理模型常因過度思考而產生冗長的思維鏈，增加推理成本。LoCo 提出一種區域偏好學習方法，透過偵測模型自身的過度思考狀態，凍結推理前綴並重新生成較短的驗證續寫，再以 DPO 進行訓練。實驗顯示，該方法在數學與程式碼基準測試中能顯著縮短生成長度，同時維持或提升準確率，展現出跨領域的通用性。",
+     "key_points": [
+      "針對模型局部的過度思考狀態進行偵測與狀態條件偏好對齊。",
+      "利用自身生成的數學軌跡建構訓練資料。",
+      "在數學與程式碼基準測試中有效降低完成長度並保持準確率。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這篇論文主要在探討如何修改與訓練模型來減少推理負擔，而你目前使用 Gemini 免費方案或本機 Ollama，無法直接微調這些開源模型。不過，若未來有機會使用支援微調的開源小模型，這種透過 DPO 減少冗長思考的思路可作為優化本地推理效率的參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c109",
+     "source": "hf_papers",
+     "id": "2611.03233",
+     "metrics": {
+      "upvotes": 39,
+      "github_stars": 37
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.03233"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.03233"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/bytedance/axion1_0"
+      }
+     ],
+     "title": "Axion 1.0：訓練步驟極簡的開源 Agent 基礎模型",
+     "tags": [
+      "Agent 模型",
+      "開源專案",
+      "SFT"
+     ],
+     "summary": "Axion 1.0 是一個完全開源的 Agent 基礎模型，主打極簡的訓練食譜，僅包含兩個輕量級 SFT 階段與強化學習，省去了複雜的中期訓練或 DPO。團隊透過模型感知資料構建與確定性計算來自動驗證任務，使其在多項 Agent 基準測試中具備強大表現。官方更釋出了完整的訓練程式碼與資料建構流程，提供了一條可重現的開源 Agent 發展路徑。",
+     "key_points": [
+      "採用包含兩個 SFT 階段與 RL 的精簡訓練流程。",
+      "透過自動化驗證與真實資料建構具挑戰性的 Agent 任務。",
+      "完整開源資料建構、提示詞與訓練程式碼。"
+     ],
+     "how_to_use": "你可以關注這個專案釋出的提示詞設計與資料建構流程，作為自己寫 LangGraph Agent 時的提示詞工程與任務拆解參考。不過因為它是一個基礎模型，在沒有高階 GPU 的 Windows 開發環境下，你主要還是透過 API 或 Ollama 叫用現成模型，較難直接在本地完整運行或微調 Axion 1.0。",
+     "fallback": false
+    },
+    {
+     "ref": "c110",
+     "source": "hf_papers",
+     "id": "2611.05036",
+     "metrics": {
+      "upvotes": 34,
+      "github_stars": 28
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.05036"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.05036"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/dongguanting/ToolSpace"
+      }
+     ],
+     "title": "ToolSpace：以工具為中心的環境合成框架與長期 Agent 評測",
+     "tags": [
+      "Tool Use",
+      "MCP",
+      "Agent 評測"
+     ],
+     "summary": "針對現有 MCP 環境擴展多數採用資料中心方法、導致工具介面與真實落差的問題，ToolSpace 提出以工具為中心的框架。它透過確定性規則從真實執行追蹤中挖掘相依性，並將工具圖聚類成環境，結合狀態感知隨機漫步與自動化斷言檢查來生成具挑戰性的長期任務。實驗證明，該框架能有效提升多款大型語言模型的工具使用能力。",
+     "key_points": [
+      "從真實執行追蹤中以確定性規則挖掘工具相依性。",
+      "透過狀態感知隨機漫步與回溯來自動化生成自然語言任務與檢查。",
+      "大幅提升多個長跨度工具使用基準測試的效能表現。"
+     ],
+     "how_to_use": "這與你的自動化與工具協作興趣高度相關。當你在 LangGraph 中串接多個工具（如 SQL 資料庫、爬蟲或內部簽核 API）時，ToolSpace 的思路提醒你應重視工具之間的相依性與執行狀態的回放測試。你可以借鏡其以執行記錄來驗證工具呼叫邏輯的方法，用來設計自己專案中的 Agent 評測與自動化測試案例。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c113",
+     "source": "hf_papers",
+     "id": "2610.39813",
+     "metrics": {
+      "upvotes": 23,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.39813"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.39813"
+      }
+     ],
+     "title": "EvoTeam：基於演化團隊的多 Agent 協作方法",
+     "one_liner": "將演化機制從單一代理人擴展至團隊協作層級，利用集體執行經驗來調整團隊組織與互動。",
+     "url": "https://huggingface.co/papers/2610.39813",
+     "fallback": false
+    },
+    {
+     "ref": "c116",
+     "source": "hf_papers",
+     "id": "2611.02501",
+     "metrics": {
+      "upvotes": 16,
+      "github_stars": 82
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.02501"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.02501"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/StargazerX0/SpecPilot"
+      }
+     ],
+     "title": "SpecPilot：推測解碼的自主演算法發現與系統優化",
+     "one_liner": "針對推測解碼在批次處理與單一請求時的速度瓶頸進行自主演算法探索與系統級優化。",
+     "url": "https://huggingface.co/papers/2611.02501",
+     "fallback": false
+    },
+    {
+     "ref": "c117",
+     "source": "hf_papers",
+     "id": "2611.02079",
+     "metrics": {
+      "upvotes": 16,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.02079"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.02079"
+      }
+     ],
+     "title": "ParetoSaddler：代理人 Harness 的品質與成本柏拉圖導向優化",
+     "one_liner": "透過分離中期候選提升與最終部署選擇，解決代理人框架在同時優化品質與成本時的過早拒絕問題。",
+     "url": "https://huggingface.co/papers/2611.02079",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "NVIDIA/auto-ontology",
+     "metrics": {
+      "stars": 4977,
+      "stars_today": 2050,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/auto-ontology"
+      }
+     ],
+     "title": "NVIDIA Auto Ontology：為結構化資料建立語意知識圖譜",
+     "tags": [
+      "NVIDIA",
+      "資料分析",
+      "文字轉 SQL",
+      "企業知識庫"
+     ],
+     "summary": "NVIDIA 推出的開源函式庫，專為資料分析與 Agent 打造。它能從企業後端的中介資料自動產生知識圖譜與語意模型，串聯多個系統中不一致的資料定義。系統透過 FastAPI 與 LangChain 運作，提供自然語言轉 SQL 的能力，並支援透過 MCP、CLI 與 API 讓任何 Agent 呼叫，確保資料查詢的準確性與可追溯性。",
+     "key_points": [
+      "從中介資料自動產生企業級本體（Ontology）與 AI 知識圖譜。",
+      "支援自然語言轉 SQL，將查詢直接對接到關聯式資料庫。",
+      "提供 FastAPI 後端與 LangChain 整合，並支援 MCP 介面。"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然它處理資料庫與 SQL，但官方架構主要針對企業級大規模部署（使用 PostgreSQL、Docker Compose 或 Kubernetes），且高度綁定 NVIDIA NIM 模型服務，對你的 Windows 本機環境與 Gemini 免費 API 來說設定較重，門檻偏高。",
+     "fallback": false
+    },
+    {
+     "ref": "c28",
+     "source": "github_trending",
+     "id": "D4Vinci/Scrapling",
+     "metrics": {
+      "stars": 96533,
+      "stars_today": 2005,
+      "stars_delta": 1697
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/D4Vinci/Scrapling"
+      }
+     ],
+     "title": "Scrapling：兼具隱身與 AI 互動的現代化 Python 爬蟲框架",
+     "tags": [
+      "Python",
+      "自動化",
+      "爬蟲",
+      "MCP"
+     ],
+     "summary": "一個強大的 Python 網頁抓取框架，整合了快速 HTTP 請求、隱身瀏覽器、JavaScript 渲染與自動化代理輪換。除了提供類似傳統爬蟲的 CSS 與 XPath 解析，它還支援將網頁內容轉為乾淨的 Markdown，並具備 MCP 伺服器與 Agent Skill 功能，讓 AI agent 可以直接在終端機或程式中自主抓取與瀏覽網頁資料。",
+     "key_points": [
+      "支援快速 HTTP 請求、JavaScript 渲染及 Cloudflare 驗證處理。",
+      "提供豐富的解析方式，並可將網頁直接輸出為乾淨的 Markdown。",
+      "內建 MCP 伺服器，可直接讓 AI agent 呼叫來進行網頁資料蒐集。"
+     ],
+     "how_to_use": "非常適合你的自動化與爬蟲工作。你可以在 Windows 上用 pip 安裝，並在自己的 Python 爬蟲腳本中直接呼叫，作為資料蒐集的利器。它不需要付費 API key，且能完美整合進你想打造的自動化流程中。",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "thedotmack/claude-mem",
+     "metrics": {
+      "stars": 112851,
+      "stars_today": 1172,
+      "stars_delta": 959
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/thedotmack/claude-mem"
+      }
+     ],
+     "title": "claude-mem：跨工作階段的持續記憶壓縮系統",
+     "tags": [
+      "Claude Code",
+      "長期記憶",
+      "Agent 工具"
+     ],
+     "summary": "專為 Claude Code 等開發工具打造的持續記憶系統。它能自動捕捉工具操作的觀察結果、產生語意摘要，並在不同的對話工作階段之間保持記憶連續性，讓 AI 即使在重新連線後也能保有專案的背景知識。提供 npm 安裝方式，並支援透過設定改用本機或自訂的 LLM 來源。",
+     "key_points": [
+      "自動捕捉工具使用觀察並生成語意摘要，跨工作階段保留專案脈絡。",
+      "支援透過 npx 指令快速安裝至多種 IDE 與開發環境。",
+      "提供彈性的供應商設定選項。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這主要是針對 Claude Code 或特定雲端 AI 助手的外掛記憶工具，與你偏好在 Windows 上使用本機 Ollama 或免費 Gemini API 的個人 Python/LangGraph 開發專案契合度較低。",
+     "fallback": false
+    },
+    {
+     "ref": "c41",
+     "source": "github_trending",
+     "id": "The-PR-Agent/pr-agent",
+     "metrics": {
+      "stars": 14756,
+      "stars_today": 280,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/The-PR-Agent/pr-agent"
+      }
+     ],
+     "title": "PR-Agent：開源的 AI 程式碼審查與修改 Agent",
+     "tags": [
+      "Coding Agent",
+      "程式碼審查",
+      "GitHub Action"
+     ],
+     "summary": "歷史悠久的開源 AI 程式碼審查專案，提供自動化 PR 審查、程式碼改善與互動問答功能。它支援透過 GitHub Action、Docker 或命令列（CLI）執行，利用單一 LLM 呼叫來處理各種大小的 Pull Request，並允許開發者透過 JSON 設定檔自訂審查規則與提示詞。",
+     "key_points": [
+      "提供自動化 PR 審查（/review）、改善建議（/improve）與互動問答（/ask）。",
+      "支援 GitHub Actions、CLI 及 Docker 等多種部署方式。",
+      "高度可自訂，能透過 JSON 調整審查類別與行為。"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然它是優秀的 Coding Agent 工具，但預設強烈依賴 OpenAI 等付費金鑰（OPENAI_KEY），且主要情境是整合在 Git 平台的 CI/CD 流程中，不適合你在 Windows 本機使用 Gemini 或 Ollama 進行日常的資料分析與自動化開發。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c33",
+     "source": "github_trending",
+     "id": "Usagi-org/ai-goofish-monitor",
+     "metrics": {
+      "stars": 17141,
+      "stars_today": 984,
+      "stars_delta": 781
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Usagi-org/ai-goofish-monitor"
+      }
+     ],
+     "title": "ai-goofish-monitor",
+     "one_liner": "基於 Playwright 與 AI 實作的閒魚多任務即時監控與智能分析系統，附帶完整管理後台。",
+     "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+     "fallback": false
+    },
+    {
+     "ref": "c46",
+     "source": "github_trending",
+     "id": "Anil-matcha/open-duet",
+     "metrics": {
+      "stars": 6773,
+      "stars_today": 72,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Anil-matcha/open-duet"
+      }
+     ],
+     "title": "open-duet",
+     "one_liner": "開源、可自行架設的 AI 同事替代方案，具備獨立電腦環境與執行前需人工審核機制。",
+     "url": "https://github.com/Anil-matcha/open-duet",
+     "fallback": false
+    },
+    {
+     "ref": "c51",
+     "source": "github_search",
+     "id": "KKKKhazix/agent-autoloop",
+     "metrics": {
+      "stars": 2491,
+      "forks": 498,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/KKKKhazix/agent-autoloop"
+      }
+     ],
+     "title": "agent-autoloop",
+     "one_liner": "讓命令列 Agent 在背景自動接活與跟進，遇到不確定時才發送卡片請你拍板決定的工具。",
+     "url": "https://github.com/KKKKhazix/agent-autoloop",
+     "fallback": false
+    },
+    {
+     "ref": "c75",
+     "source": "github_search",
+     "id": "aa1143/NamiAgent",
+     "metrics": {
+      "stars": 339,
+      "forks": 33,
+      "stars_delta": 55
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/aa1143/NamiAgent"
+      }
+     ],
+     "title": "NamiAgent",
+     "one_liner": "零基礎入門的本地 AI Agent 教材與專案，從 100 行最小循環開始實作檔案讀寫與長期記憶。",
+     "url": "https://github.com/aa1143/NamiAgent",
+     "fallback": false
+    },
+    {
+     "ref": "c79",
+     "source": "github_search",
+     "id": "eduwxyz/tucano",
+     "metrics": {
+      "stars": 219,
+      "forks": 41,
+      "stars_delta": 40
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/eduwxyz/tucano"
+      }
+     ],
+     "title": "tucano",
+     "one_liner": "能在 Windows 運作的多 Agent 協作團隊，支援頻道對話與工具操作，所有實際行動皆須經你同意。",
+     "url": "https://github.com/eduwxyz/tucano",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c28",
+  "source": "github_trending",
+  "id": "D4Vinci/Scrapling",
+  "metrics": {
+   "stars": 96533,
+   "stars_today": 2005,
+   "stars_delta": 1697
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/D4Vinci/Scrapling"
+   }
+  ],
+  "title": "用 Scrapling 快速抓取網頁資料",
+  "why": "提供極速 HTTP 請求與強大解析，支援 Windows 開發環境與 Python，15 分鐘內即可上手。",
+  "steps": [
+   "開啟終端機執行 pip install scrapling 安裝套件",
+   "建立 Python 檔案並貼上官方提供的 Fetcher 範例程式碼",
+   "執行程式並確認能順利抓取並印出網頁文字"
+  ],
+  "success_check": "終端機成功印出網頁上的名言列表即算成功。",
+  "fallback": false
+ },
+ "warnings": [
+  "arch: 模型回應不是 JSON：Expecting property name enclosed in double quotes: line 6 column 7 (char 85)"
+ ]
+}
