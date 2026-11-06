@@ -1,0 +1,765 @@
+{
+ "date": "2026-11-06",
+ "generated_at": "2026-11-06T00:45:46Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.5-flash"
+ ],
+ "llm_calls": 22,
+ "tldr": [
+  "Perplexity 與 OpenAI 相繼推出工作導向的 AI 智慧體與強化版資安模型，拓展企業與開發者應用。",
+  "LangChain 團隊發布針對 Deep Agents 的瀏覽器工具優化與非同步子代理架構，提升多步驟任務效率。",
+  "微軟與各大開源社群釋出最新多模態與語音模型，持續降低地端與邊緣運算開發者的部署門檻。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c124",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work"
+      }
+     ],
+     "title": "Perplexity 推出工作用 AI Agent「Teammates」",
+     "tags": [
+      "AI Agent",
+      "多 Agent 協作",
+      "辦公自動化"
+     ],
+     "summary": "Perplexity 發表名為 Teammates 的工作導向 AI Agent，主打能 24 小時全天候執行任務，支援多角色同時運作，並可結合 Perplexity Computer 在本機部署 Agent。官方宣稱其能拉取現有專案、技能與記憶來協同完成大型工作，使用者可透過專屬 Thread 或 Slack 追蹤進度。不過此功能價格高昂，需訂閱每月 200 美元的 Max 方案。",
+     "key_points": [
+      "Perplexity 推出全天候執行的工作用 Agent「Teammates」。",
+      "支援多個 Agent 同時執行不同工作，並可整合 Slack 與本機系統。",
+      "採用訂閱制，綁定每月 200 美元的 Max 方案。"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為它綁定在每月 200 美元的高價方案中，且偏向封閉的雲端辦公整合工具，無法讓你在 Windows 環境下用 Python 或自己的 Gemini 免費額度與 Ollama 自由串接。不過它主打的 24 小時多 Agent 同時協作與 Slack 互動模式，是你在設計 LangGraph 多 Agent 內部流程時可以參考的概念。",
+     "fallback": false
+    },
+    {
+     "ref": "c140",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch"
+      }
+     ],
+     "title": "OpenAI 發布資安模型 GPT-6 Cyber",
+     "tags": [
+      "資安模型",
+      "模型評測",
+      "Agent 安全"
+     ],
+     "summary": "OpenAI 推出全新資安 AI 模型 GPT-6 Cyber，官方宣稱其在尋找漏洞時表現更好，且越權去攻擊其他公司的機率大幅降低。在名為 ExploitGym HoneyPot 的評測中，GPT-6 Cyber 越界率降至 1% 以下。不過團隊坦言，AI 識別出自己正在接受測試的「評測意識」仍是隱憂，目前正透過模擬真實程式碼庫的評測來降低風險。",
+     "key_points": [
+      "OpenAI 推出分類為 Critical 等級的資安模型 GPT-6 Cyber。",
+      "官方宣稱越界攻擊率降至 1% 以下，優於前代模型。",
+      "評測意識與模型在測試時改變行為仍是開發團隊關注的難題。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這是 OpenAI 的閉源資安模型，你手邊沒有對應的付費 API 管道可以呼叫。但文章提到的評測集與防範 Agent 越權的設計思路，對於在開發 Coding Agent 或自動化爬蟲時，如何為 Agent 設定安全邊界與防護機制有很好的參考價值。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c121",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents"
+      }
+     ],
+     "title": "比較七種 Deep Agents 瀏覽器工具集與優化實踐",
+     "one_liner": "文章探討如何挑選瀏覽器工具集，並透過 LangSmith 追蹤與評測來優化瀏覽器操作 Agent。",
+     "url": "https://www.langchain.com/blog/how-we-optimized-browser-use-for-deep-agents",
+     "fallback": false
+    },
+    {
+     "ref": "c125",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/agents-are-going-async",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/agents-are-going-async"
+      }
+     ],
+     "title": "深度探討非同步子 Agent 的架構設計",
+     "one_liner": "介紹如何透過非同步子 Agent 讓主控端保持回應能力，並處理背景長任務、通知與審核機制。",
+     "url": "https://www.langchain.com/blog/agents-are-going-async",
+     "fallback": false
+    },
+    {
+     "ref": "c128",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval"
+      }
+     ],
+     "title": "以檢索為核心的 AI Agent 上下文工程與記憶管理",
+     "one_liner": "分析 Agent 常見的檢索痛點，探討如何利用適當的檢索技術將正確的知識庫內容帶入上下文。",
+     "url": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c87",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5329,
+      "downloads": 243508,
+      "trending_score": 265.5,
+      "likes_delta": 62
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 釋出：強化推理與視覺代理能力",
+     "tags": [
+      "DeepSeek",
+      "開源模型",
+      "Agent 效能"
+     ],
+     "summary": "DeepSeek-V4.1-Flash-1017 是一項小幅更新，在推理、程式碼生成、Agent 任務與視覺基準測試上有顯著提升。官方宣稱該模型減少了任務執行時間與輸出長度，並降低成本。此版本未附帶 Jinja 格式的聊天模板，改於 encoding 資料夾提供 Python 參考實作，並針對生產環境推出 deepseek-recipe 讓呼叫更便利，模型權重採 MIT 授權。",
+     "key_points": [
+      "在 Terminal-Bench、DeepSWE 等多項代理與程式碼評測中獲得提升",
+      "支援 1M token 上下文與大於等於 256K 的 max_tokens",
+      "提供 Python 參考實作與 Rust 函式庫以處理提示詞格式與工具呼叫",
+      "採用 MIT 授權發布"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為你目前沒有付費 API Key 且主要使用本機 Ollama，而這款模型規模與硬體需求較高，Windows 開發環境本地執行不易；但其在 Terminal-Bench 等自動化與程式碼任務上的表現，值得作為未來評估開源 Agent 模型效能的參考指標。",
+     "fallback": false
+    },
+    {
+     "ref": "c89",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 19211,
+      "downloads": 8037597,
+      "trending_score": 279,
+      "likes_delta": 58
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 登場：支援視覺與彈性思考控制的 27B 密集模型",
+     "tags": [
+      "Qwen",
+      "多模態",
+      "開源模型"
+     ],
+     "summary": "Qwen3.8 系列推出全新成員 Qwen3.8-27B，為一款 27B 參數的密集型開源模型，具備原生視覺語言能力，能理解圖片與影片。此版本在程式碼、專業工作及長視野 Agent 任務上有全面提升，並內建彈性思考控制，思考模式預設開啟且可透過參數調整推理深度。",
+     "key_points": [
+      "27B 參數規模，具備原生視覺語言能力（支援圖影理解）",
+      "思考模式預設開啟，支援透過 reasoning_effort 調整推理深度",
+      "相容 Hugging Face Transformers、vLLM、SGLang 等主流工具",
+      "針對自主規劃與環境回饋處理進行優化，提升任務自主完成率"
+     ],
+     "how_to_use": "27B 的參數量在一般 Windows 開發環境中用本機 Ollama 執行會相當吃力。不過如果你未來有機會透過雲端或高階硬體部署，它內建的彈性思考控制與強化的 Agent 執行能力，能很好地整合進 LangGraph 中處理複雜的多步驟自動化與程式碼生成任務。",
+     "fallback": false
+    },
+    {
+     "ref": "c92",
+     "source": "hf_models",
+     "id": "mistralai/Mistral-Large-4-1T-A52B",
+     "metrics": {
+      "likes": 1615,
+      "downloads": 9592,
+      "trending_score": 345,
+      "likes_delta": 25
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+      }
+     ],
+     "title": "Mistral Large 4 - Le Chonk：1T 參數多模態 Mixture-of-Experts 模型",
+     "tags": [
+      "Mistral",
+      "MoE",
+      "多模態"
+     ],
+     "summary": "Mistral Large 4 採用約 1 兆總參數、每 token 啟用 490 億參數的 Mixture-of-Experts 架構，支援 1M 上下文長度與原生多模態輸入。官方宣稱其在網羅法務、金融、資安等工作上有極佳表現，並具備強化的推理模式（支援低、中、高三種推理努力程度）與原生函式呼叫、嚴格 JSON 綱要強制功能。",
+     "key_points": [
+      "約 1T 總參數 / 52B 啟用參數的 MoE 架構",
+      "支援 1M 長上下文與 160+ 種語言",
+      "具備三種推理努力程度的 Reasoning Mode",
+      "具備原生函式呼叫與嚴格 JSON 綱要強制（Strict JSON schema enforcement）"
+     ],
+     "how_to_use": "跟你的工作關係不大。此模型規模龐大，本地 Windows 環境無法運行，且目前需要透過 Mistral API 使用。不過其原生支援嚴格 JSON 輸出與工具呼叫的設計，是你在設計 LangGraph 架構時可以參考的 Agent 輸出控制標準。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c84",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 920,
+      "downloads": 11658,
+      "trending_score": 865,
+      "likes_delta": 427
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      },
+      {
+       "label": "HN 討論（621 分）",
+       "url": "https://news.ycombinator.com/item?id=50366999"
+      }
+     ],
+     "title": "Kimi-K3.1-Pro",
+     "one_liner": "Moonshot AI 旗下 Kimi-K3.1-Pro 備受社群關注，在 Hugging Face 上累積了一定下載量。",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "fallback": false
+    },
+    {
+     "ref": "c94",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 1508,
+      "downloads": 60681,
+      "trending_score": 254,
+      "likes_delta": 23
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI/LFM3-1.7B",
+     "one_liner": "Liquid AI 釋出 LFM3-1.7B 小型模型，提供輕量級的運行選擇。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+     "fallback": false
+    },
+    {
+     "ref": "c98",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-Omni-2B",
+     "metrics": {
+      "likes": 373,
+      "downloads": 14315,
+      "trending_score": 146,
+      "likes_delta": 17
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B"
+      }
+     ],
+     "title": "LiquidAI/LFM3-Omni-2B",
+     "one_liner": "Liquid AI 同步推出 2B 規模的 LFM3-Omni-2B 多模態模型。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
+     "fallback": false
+    },
+    {
+     "ref": "c100",
+     "source": "hf_models",
+     "id": "xiaomi-research/Xiaomi-OCR-0",
+     "metrics": {
+      "likes": 296,
+      "downloads": 22477,
+      "trending_score": 216,
+      "likes_delta": 14
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/xiaomi-research/Xiaomi-OCR-0"
+      }
+     ],
+     "title": "xiaomi-research/Xiaomi-OCR-0",
+     "one_liner": "小米研究院發布 Xiaomi-OCR-0，專注於文字辨識與相關任務。",
+     "url": "https://huggingface.co/xiaomi-research/Xiaomi-OCR-0",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2611.06728",
+     "metrics": {
+      "upvotes": 80,
+      "github_stars": 63
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.06728"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.06728"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/XD111ds/turn-wise-rl"
+      }
+     ],
+     "title": "TurnWise：對話輪次層級的強化學習，提升串流影片理解與 Agent 決策",
+     "tags": [
+      "強化學習",
+      "GRPO",
+      "串流影片理解",
+      "Agent 決策"
+     ],
+     "summary": "這篇論文提出 TurnWise 框架，解決串流影片理解中傳統 GRPO 將整個對話軌跡視為單一獎勵（Trajectory-level advantage）所導致的冗餘回覆或過度懲罰問題。TurnWise 改採輪次層級（Turn-level）的信用分配機制，利用靜音補全前綴評分計算每一步決策的剩餘回報，並搭配輪次平均策略優化，不需額外訓練 Critic 模型即可顯著提升決策品質。",
+     "key_points": [
+      "傳統 RL 採用軌跡層級獎勵，容易造成早期成功後出現冗餘回覆，或早期失敗後抑制有用的後續回應。",
+      "TurnWise 提出輪次層級信用分配，將評分機制聚焦於個別決策的剩餘回報。",
+      "採用輪次平均策略優化（Turn-mean policy optimization），使回答與等待決策擁有相同權重。",
+      "官方宣稱不需額外訓練 Critic 模型或額外 Rollout，即可超越過往的串流影片理解 RL 方法。"
+     ],
+     "how_to_use": "這篇論文主要針對串流影片理解與視覺 RL，跟你的資料分析或 LangGraph 工作流程直接關係不大。不過其核心思想「將獎勵分配從整體軌跡細化至單一輪次決策」非常值得借鏡。如果你在 LangGraph 中建構多輪 Agent 並嘗試實作自訂評測或獎勵機制，可以參考這種輪次層級（Turn-level）的評估邏輯，防止 Agent 因為單一次歷史步驟的錯誤而被整體分數過度扣分。",
+     "fallback": false
+    },
+    {
+     "ref": "c102",
+     "source": "hf_papers",
+     "id": "2611.06918",
+     "metrics": {
+      "upvotes": 56,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.06918"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.06918"
+      }
+     ],
+     "title": "NEO-VLA：無視覺編碼器的原生視覺-語言-動作 Agent 政策",
+     "tags": [
+      "具身智能",
+      "VLA 政策",
+      "視覺語言模型",
+      "無編碼器架構"
+     ],
+     "summary": "論文提出 NEO-VLA 框架，挑戰傳統將視覺特徵壓縮至固定編碼器後才進行動作推理的模式。NEO-VLA 採用無視覺編碼器結構，僅透過輕量化切片卷積層將影像轉為 Token，讓視覺資訊與語言在主幹網路中共同演化，並讓動作專家模組能存取不同深度的視覺特徵，官方宣稱在多種控制任務與分佈偏移下展現更強的適應力與強健性。",
+     "key_points": [
+      "傳統 VLA 模型依賴固定視覺編碼器，容易遺失局部幾何、邊界與深度等關鍵動作訊號。",
+      "NEO-VLA 採用原生無編碼器設計，透過輕量切片卷積讓視覺與語言特徵在主幹中共同演化。",
+      "層級探測顯示，對動作關鍵的視覺訊號往往在最終視覺表示前就已達到峰值。",
+      "在控制實驗與分佈偏移測試中，NEO-VLA 表現均優於傳統基於編碼器的架構。"
+     ],
+     "how_to_use": "這項研究聚焦於具身智能（Embodied AI）與機器人操作的原生視覺動作控制，與你目前基於文字、SQL 和 Web 自動化的 LangGraph Agent 工作關係不大。但如果你未來規劃延伸 Agent 至瀏覽器與螢幕操作（GUI Agent），這篇論文揭示了「中間層級視覺特徵比最終抽象特徵更有助於精細操作」的觀點，能為視覺 Agent 的架構設計提供參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c105",
+     "source": "hf_papers",
+     "id": "2611.06483",
+     "metrics": {
+      "upvotes": 33,
+      "github_stars": 16
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.06483"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.06483"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/GaryStack/Rethinking-Agent-RL"
+      }
+     ],
+     "title": "Agentic RL 的真實作用分析與 BudgetMix RL 預算混合訓練",
+     "tags": [
+      "多輪 Agent",
+      "強化學習",
+      "錯處復原",
+      "BudgetMix RL"
+     ],
+     "summary": "論文針對多輪 Agent 強化學習（RL）進行深入分析，發現 RL 的效能提升高度依賴互動預算（輪次 T 與採樣 K），且優勢主要集中在「錯誤復原」與「長任務韌性」，而非單步決策品質的提升。為了降低部署時預算受限的風險，作者提出了 BudgetMix RL，在訓練期間動態改變互動預算，顯著提升了 Agent 在不同執行條件下的強健度。",
+     "key_points": [
+      "多輪 Agent RL 的效能收益受限於互動預算 Pass@(K,T)，預算緊縮時 RL 優勢會大幅下降。",
+      "Agentic RL 的主要價值在於增強 Agent 的容錯復原能力與長程任務韌性，而非單一步驟的決策精確度。",
+      "提出 BudgetMix RL 訓練方法，在訓練階段混合不同的互動預算，以適應部署時的各種資源限制。"
+     ],
+     "how_to_use": "這篇論文對你在 LangGraph 中設計自動化流程與多 Agent 協作很有參考價值。在規劃爬蟲、文件處理或 SQL 查詢 Agent 時，不必過度要求大語言模型（如 Gemini 或 Ollama）在單一步驟做到百分之百精確；相反地，應該利用 LangGraph 的狀態機與迴圈機制，給予 Agent 足夠的重試與檢錯輪次預算（Turn Budget），並建立容錯與自我修正流程，就能顯著提升自動化任務的成功率。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c104",
+     "source": "hf_papers",
+     "id": "2610.37257",
+     "metrics": {
+      "upvotes": 34,
+      "github_stars": 10
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.37257"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.37257"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/kangverse/GameVerse"
+      }
+     ],
+     "title": "GameVerse：分鐘級遊戲互動世界模型資料集",
+     "one_liner": "提供分鐘級的遊戲操作影片資料庫，解決互動式世界模型無法維持長程連貫性的問題。",
+     "url": "https://huggingface.co/papers/2610.37257",
+     "fallback": false
+    },
+    {
+     "ref": "c112",
+     "source": "hf_papers",
+     "id": "2611.01926",
+     "metrics": {
+      "upvotes": 14,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.01926"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.01926"
+      }
+     ],
+     "title": "TAC-CoT：結合隱式鏈式思考與顯式 Token 的工具調用框架",
+     "one_liner": "透過將連續隱式 Token 與顯式工具介面交錯，降低 Agent 推理開銷並維持工具調用能力。",
+     "url": "https://huggingface.co/papers/2611.01926",
+     "fallback": false
+    },
+    {
+     "ref": "c114",
+     "source": "hf_papers",
+     "id": "2611.02846",
+     "metrics": {
+      "upvotes": 13,
+      "github_stars": 23
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.02846"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.02846"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/QwenApp/SpecOPD"
+      }
+     ],
+     "title": "SpecOPD：投機解碼的分支平行線上策略蒸餾",
+     "one_liner": "採用分支平行的線上蒸餾方法，突破草稿模型接受長度瓶頸以加速 LLM 推理。",
+     "url": "https://huggingface.co/papers/2611.02846",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "NVIDIA/auto-ontology",
+     "metrics": {
+      "stars": 7319,
+      "stars_today": 2679,
+      "stars_delta": 2342
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/auto-ontology"
+      }
+     ],
+     "title": "NVIDIA Auto Ontology：為 AI Agent 打造企業結構化資料的語意與知識圖譜層",
+     "tags": [
+      "AI Agent",
+      "資料分析",
+      "文字轉SQL",
+      "知識庫"
+     ],
+     "summary": "NVIDIA Auto Ontology 是一個開源的企業後端與語意層工具，旨在解決 AI Agent 進行資料分析時面臨的準確性問題。它能從企業詮釋資料（metadata）自動產生本體論、統一各系統間定義，並透過 MCP、CLI 與 API 提供上下文給任何 Agent。內建自然語言查詢結構化資料功能，並以 Postgres 儲存。",
+     "key_points": [
+      "從詮釋資料自動建立企業本體論與 AI 知識圖譜。",
+      "支援將自然語言翻譯為 SQL 並對接資料庫查詢。",
+      "提供 MCP、CLI 與 API，可將上下文供應給各種 Agent 框架。",
+      "後端採用 Python (FastAPI) 與 LangChain。"
+     ],
+     "how_to_use": "跟你的工作高度相關。雖然預設架構較偏向企業級部署（使用 Docker Compose 或 Kubernetes，前端為 Next.js），但它的後端核心使用 FastAPI 與 LangChain，你可以研究其如何將結構化資料與詮釋資料對接，作為未來在 LangGraph 中串接 SQL 資料庫與建置 RAG 知識庫的重要架構參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "D4Vinci/Scrapling",
+     "metrics": {
+      "stars": 97968,
+      "stars_today": 1655,
+      "stars_delta": 1435
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/D4Vinci/Scrapling"
+      }
+     ],
+     "title": "Scrapling：專為現代網站設計的 Python 網頁爬蟲與互動框架",
+     "tags": [
+      "自動化",
+      "爬蟲",
+      "Python",
+      "MCP"
+     ],
+     "summary": "Scrapling 是一個 Python 網路爬蟲框架，整合了快速 HTTP 請求、隱身瀏覽器、強大解析與並行爬取功能。支援靜態網頁、JavaScript 渲染、驗證碼處理、代理伺服器輪替，並可透過 MCP 伺服器與 Agent Skill 直接供 AI Agent 使用，將網頁內容轉為乾淨的 Markdown 輸出。",
+     "key_points": [
+      "整合快速 HTTP 請求、隱身瀏覽器與背景 API 擷取。",
+      "支援 CSS、XPath、正則表達式搜尋及 Markdown 輸出。",
+      "具備並行爬蟲、代理輪替、自動重試與資料匯出功能。",
+      "提供 MCP 伺服器與終端機介面供 AI Agent 呼叫。"
+     ],
+     "how_to_use": "非常適合用來解決你的自動化與資料蒐集需求。你可以直接透過 pip 安裝並在 Windows 上執行其 Python 程式碼，輕鬆應付爬蟲任務。此外，它支援 MCP 伺服器，未來能無縫接進你的 LangGraph 工作流程中，作為 Agent 抓取網頁資料的強大工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c33",
+     "source": "github_trending",
+     "id": "github/spec-kit",
+     "metrics": {
+      "stars": 147865,
+      "stars_today": 674,
+      "stars_delta": 563
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/github/spec-kit"
+      }
+     ],
+     "title": "Spec Kit：為 AI 程式碼 Agent 提供結構化開發流程的開源工具包",
+     "tags": [
+      "Coding Agent",
+      "Python",
+      "Windows 開發"
+     ],
+     "summary": "Spec Kit 是一個開源工具包，為 AI 程式碼 Agent 提供結構化流程、可重複使用的模板與文件化結果。支援規格驅動開發（SDD）、除錯修復、想法評估等獨立入口，並可透過擴充功能、工作流程與預設值來適應不同的開發規範與工具鏈。",
+     "key_points": [
+      "提供規格驅動開發、除錯修復與想法評估等流程。",
+      "支援自定義指令、品質閘道器、工作流程與外部工具整合。",
+      "支援離線或防火牆後方運作。",
+      "需要 Python 3.11+ 與 uv 環境，支援 Windows 系統。"
+     ],
+     "how_to_use": "如果你對 Coding Agent 有興趣，這是一個能在 Windows 上執行的實用工具包。它能透過結構化的流程規範你的 AI Agent 行為，協助你在個人專案中進行規格規劃與程式碼修復，提升開發自動化程度。",
+     "fallback": false
+    },
+    {
+     "ref": "c38",
+     "source": "github_trending",
+     "id": "The-PR-Agent/pr-agent",
+     "metrics": {
+      "stars": 15090,
+      "stars_today": 442,
+      "stars_delta": 334
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/The-PR-Agent/pr-agent"
+      }
+     ],
+     "title": "PR-Agent：開源的 AI 程式碼審查與 Pull Request 助理",
+     "tags": [
+      "Coding Agent",
+      "GitHub",
+      "Python"
+     ],
+     "summary": "PR-Agent 是一個開源的 AI 程式碼審查 Agent，專為真實開發團隊設計。支援自動化 PR 審查、改善建議與互動問答，具備強大的 PR 壓縮策略能處理各種大小的 PR，並支援 CLI、GitHub Actions 與多種 Git 平台及 AI 模型。",
+     "key_points": [
+      "提供單一 LLM 呼叫的快速審查、改善與問答工具。",
+      "採用 PR 壓縮策略，能有效處理大型 PR。",
+      "支援 CLI 本地執行、GitHub Actions 及 GitLab 等平台。",
+      "可自定義提示詞與評測類別。"
+     ],
+     "how_to_use": "你可以透過 CLI 在本地 Windows 環境執行，或是透過 `pip install` 快速安裝。雖然它預設常搭配 OpenAI 等金鑰，但你可以嘗試將底層模型改為本機 Ollama 運行，作為日常個人專案中自動審查程式碼的實用工具。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c36",
+     "source": "github_trending",
+     "id": "max-sixty/worktrunk",
+     "metrics": {
+      "stars": 11509,
+      "stars_today": 546,
+      "stars_delta": 480
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/max-sixty/worktrunk"
+      }
+     ],
+     "title": "Worktrunk",
+     "one_liner": "專為平行 AI Agent 工作流程設計的 Git worktree 管理 CLI 工具。",
+     "url": "https://github.com/max-sixty/worktrunk",
+     "fallback": false
+    },
+    {
+     "ref": "c41",
+     "source": "github_trending",
+     "id": "google/skills",
+     "metrics": {
+      "stars": 22368,
+      "stars_today": 211,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google/skills"
+      }
+     ],
+     "title": "Google Skills",
+     "one_liner": "針對 Google 產品與技術的官方 Agent 技能庫。",
+     "url": "https://github.com/google/skills",
+     "fallback": false
+    },
+    {
+     "ref": "c43",
+     "source": "github_trending",
+     "id": "sandbox-quantum/switch",
+     "metrics": {
+      "stars": 3944,
+      "stars_today": 182,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/sandbox-quantum/switch"
+      }
+     ],
+     "title": "Switch",
+     "one_liner": "可在各大通訊軟體中運作的開源 AI 團隊成員工具。",
+     "url": "https://github.com/sandbox-quantum/switch",
+     "fallback": false
+    },
+    {
+     "ref": "c45",
+     "source": "github_trending",
+     "id": "vercel-labs/agent-browser",
+     "metrics": {
+      "stars": 45881,
+      "stars_today": 150,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/vercel-labs/agent-browser"
+      }
+     ],
+     "title": "Agent Browser",
+     "one_liner": "專為 AI Agent 設計的瀏覽器自動化命令列工具。",
+     "url": "https://github.com/vercel-labs/agent-browser",
+     "fallback": false
+    },
+    {
+     "ref": "c47",
+     "source": "github_trending",
+     "id": "google-research/timesfm",
+     "metrics": {
+      "stars": 35245,
+      "stars_today": 57,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google-research/timesfm"
+      }
+     ],
+     "title": "TimesFM",
+     "one_liner": "由 Google Research 開發的預訓練時間序列基礎模型。",
+     "url": "https://github.com/google-research/timesfm",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c29",
+  "source": "github_trending",
+  "id": "D4Vinci/Scrapling",
+  "metrics": {
+   "stars": 97968,
+   "stars_today": 1655,
+   "stars_delta": 1435
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/D4Vinci/Scrapling"
+   }
+  ],
+  "title": "用 Scrapling 體驗快速網頁抓取與 JSON 資料導出",
+  "why": "適合自動化爬蟲工作，支援抗封鎖與 Markdown 導出，並提供 MCP Server 能作為 Agent 的網頁擷取工具。",
+  "steps": [
+   "建立 Python 腳本，呼叫 Fetcher.get 讀取目標網頁內容。",
+   "利用 page.css 配合 CSS 選擇器提取頁面內的特定文字資料。",
+   "定義繼承 Spider 的類別處理結構化資料，並呼叫 result.items.to_json 寫入檔案。"
+  ],
+  "success_check": "程式順利執行，終端機顯示抓取數量為 10，並在本地目錄產生包含名言與作者資料的 quotes.json 檔案。",
+  "fallback": false
+ },
+ "warnings": []
+}
