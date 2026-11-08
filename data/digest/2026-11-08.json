@@ -1,0 +1,749 @@
+{
+ "date": "2026-11-08",
+ "generated_at": "2026-11-08T00:45:46Z",
+ "models_used": [
+  "gemini-3.7-flash",
+  "gemini-3.8-flash"
+ ],
+ "llm_calls": 9,
+ "tldr": [
+  "LangChain 推出 Deep Agents v0.10，支援網頁操作與後台非同步子代理架構。",
+  "Google 推出 Gemini Omni 1.2 Flash，Qwen 亦釋出 3.8 系列開源權重。",
+  "NVIDIA 開源 auto-ontology 資料語意推理框架，強化 Agent 的 SQL 與查詢能力。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c101",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/managed-deep-agents-browser-use-and-asynchronous-subagents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/managed-deep-agents-browser-use-and-asynchronous-subagents"
+      }
+     ],
+     "title": "Managed Deep Agents v0.10：支援瀏覽器操作與非同步子代理人",
+     "tags": [
+      "LangSmith",
+      "瀏覽器操作",
+      "非同步 Agent"
+     ],
+     "summary": "Managed Deep Agents 發布 v0.10 版本，新增瀏覽器操作能力與非同步子代理人架構。瀏覽器功能運作於 LangSmith 沙盒中，專門處理無 API 網站的互動，並提供讀取無障礙樹 ID 的 snapshot、執行點擊互動的 run，以及在遇到登入頁時交由真人輸入帳密的 handoff 工具，確保敏感密碼不進入模型脈絡。此外，非同步子代理人允許將耗時任務派發至背景執行，主代理人可繼續與使用者對話並隨時確認進度或調整方向。",
+     "key_points": [
+      "內建 browser_snapshot、browser_run 與 browser_handoff，真人接管機制可防止帳密外洩至模型 Trace",
+      "非同步子代理人在背景執行長任務，主代理人維持對話並可隨時檢查狀態或中止執行",
+      "整合 Slack 討論串來源追蹤，支援非同步完成後回覆及中途停止按鈕"
+     ],
+     "how_to_use": "雖然該功能綁定 LangSmith 沙盒環境，但其瀏覽器架構極具參考價值。你在 LangGraph 實作無 API 網站的資料爬蟲或自動化流程時，可借鏡其利用無障礙樹定位元素與真人接管（handoff）輸入帳密的設計，提升自動化穩定度與金鑰安全性。",
+     "fallback": false
+    },
+    {
+     "ref": "c4",
+     "source": "hn",
+     "id": "50407882",
+     "metrics": {
+      "points": 138,
+      "comments": 98
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+      },
+      {
+       "label": "HN 討論（138 分）",
+       "url": "https://news.ycombinator.com/item?id=50407882"
+      }
+     ],
+     "title": "Claude Code「不再詢問」設定遭指導致逾千個公開 GitHub 檔案外洩密碼",
+     "tags": [
+      "Coding Agent",
+      "資安防護",
+      "Claude Code"
+     ],
+     "summary": "根據資安社群消息指出，Claude Code 的「Don't Ask Again」（不再詢問）選項在實際應用中引發安全疑慮，被發現導致 1,122 個公開 GitHub 檔案洩漏密碼或敏感憑證。此事件凸顯了開發者在使用各類 Coding Agent 時，若為了自動化便利性而跳過確認流程，極容易不慎將本機憑證或環境變數推送到公開儲存庫。",
+     "key_points": [
+      "消息指出 Claude Code 的「不再詢問」設定造成 1,122 個公開 GitHub 檔案暴露密碼",
+      "Coding Agent 授權自動化執行與提交時，缺乏人為審核會帶來高資安風險"
+     ],
+     "how_to_use": "跟你的日常開發高度相關。當你在 Windows 環境讓 Agent 操作檔案或自動執行 Git 指令時，務必在 .gitignore 嚴格排除敏感資料，並在 LangGraph 加入安全檢查節點，避免金鑰在無提示狀態下被打包或提交。",
+     "fallback": false
+    },
+    {
+     "ref": "c12",
+     "source": "hn",
+     "id": "50395866",
+     "metrics": {
+      "points": 63,
+      "comments": 54
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work"
+      },
+      {
+       "label": "HN 討論（63 分）",
+       "url": "https://news.ycombinator.com/item?id=50395866"
+      }
+     ],
+     "title": "Perplexity 宣布推出工作用 AI 代理人功能",
+     "tags": [
+      "Perplexity",
+      "工作自動化",
+      "AI 產品"
+     ],
+     "summary": "Perplexity 正式發布針對工作場景設計的 AI 代理人（AI agents for work）。雖然目前公開資料中尚未揭露具體的架構細節、支援工具或串接介面，但代表其平台正積極從單純的搜尋與問答引擎，跨足更具主動性的辦公室工作自動化流程。",
+     "key_points": [
+      "Perplexity 正式推出工作用 AI 代理人產品",
+      "搜尋引擎服務持續朝向辦公與工作流程自動化領域延伸"
+     ],
+     "how_to_use": "目前未釋出技術規格，跟你的 LangGraph 專案工作關係不大；但值得觀察其如何將企業知識搜尋與流程任務整合，作為你日後設計內部 RAG 與文件處理 Agent 的產品參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c14",
+     "source": "hn",
+     "id": "50391804",
+     "metrics": {
+      "points": 34,
+      "comments": 19
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.phoronix.com/news/OpenAI-948-Linux-LPE-Bugs"
+      },
+      {
+       "label": "HN 討論（34 分）",
+       "url": "https://news.ycombinator.com/item?id=50391804"
+      }
+     ],
+     "title": "OpenAI 發現數百個 Linux 核心漏洞",
+     "one_liner": "OpenAI 宣布在 Linux 核心中發現了 948 個本機權限提升漏洞。",
+     "url": "https://www.phoronix.com/news/OpenAI-948-Linux-LPE-Bugs",
+     "fallback": false
+    },
+    {
+     "ref": "c107",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available"
+      }
+     ],
+     "title": "GitHub 於 Slack 與 Teams 整合正式推出",
+     "one_liner": "GitHub 於 Slack 和 Teams 的整合功能正式推出，可在對話中排查 bug 與建立 PR。",
+     "url": "https://github.blog/changelog/2026-11-06-github-copilot-in-slack-and-teams-is-generally-available",
+     "fallback": false
+    },
+    {
+     "ref": "c110",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/"
+      }
+     ],
+     "title": "Meta 推出 Muse 代理人協作功能 Spaces",
+     "one_liner": "Meta 推出 Spaces，為其 Muse 代理人提供全新的多方協作互動介面。",
+     "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c2",
+     "source": "hn",
+     "id": "50392118",
+     "metrics": {
+      "points": 359,
+      "comments": 249
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+      },
+      {
+       "label": "HN 討論（359 分）",
+       "url": "https://news.ycombinator.com/item?id=50392118"
+      }
+     ],
+     "title": "Google 推出 Gemini Omni 1.2 Flash，支援 15 秒影片生成與對話編輯",
+     "tags": [
+      "Gemini",
+      "多模態生成",
+      "影片編輯",
+      "API更新"
+     ],
+     "summary": "Google 推出 Gemini Omni 1.2 Flash 並於 Gemini API 等平台全面上線。新版本將原生影片生成長度從 10 秒提升至 15 秒（可自訂 3 至 15 秒），並引入多輪對話式編輯功能，允許使用者透過後續指令微調局部細節而無需全片重新生成。此外，模型強化了對角色、產品、圖片與簡短動態片段的參考依從度。官方宣稱計費價格調降 30%，720p 規格定價為每秒 0.07 美元，並建議採取低畫質草稿微調後再放大輸出的流程以節省成本。",
+     "key_points": [
+      "支援 3 至 15 秒原生影片生成，提供多輪對話式接續編輯",
+      "提升人物、風格與產品圖片的一致性參考能力",
+      "720p 每秒 0.07 美元，官方稱價格較前代降低 30%"
+     ],
+     "how_to_use": "這項更新跟你日常的資料分析、SQL 資料庫與流程自動化工作關係不大。但由於你平時使用 Gemini 免費方案，若未來個人專案有延伸至「自動產出報表影音摘要」或「自動化社群素材生成」等管線末端任務，這項多輪對話編輯機制可在 LangGraph 中作為通知或多媒體產出的下游節點。",
+     "fallback": false
+    },
+    {
+     "ref": "c76",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 19341,
+      "downloads": 7813215,
+      "trending_score": 314,
+      "likes_delta": 67
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "阿里開源 Qwen3.8-27B 視覺語言模型，強化 Agent 規劃與思考控制",
+     "tags": [
+      "開源模型",
+      "視覺語言模型",
+      "Agent規劃",
+      "Qwen"
+     ],
+     "summary": "阿里巴巴開源 Qwen3.8-27B，採用 Apache-2.0 授權。該模型架構結合 Gated DeltaNet 與注意力機制，官方宣稱在程式編碼、研究與長流程 Agent 任務上有顯著進步。模型原生支援圖片與影片理解，並提供彈性的思考控制功能：預設開啟思考模式，開發者可透過 reasoning_effort 參數調整推論深度，並利用 preserve_thinking 保留跨輪對話的思考脈絡。模型相容於 Transformers 與 vLLM 等推論框架，雲端版本後續預計支援 1M 上下文與內建工具呼叫。",
+     "key_points": [
+      "27B 密集型多模態模型，原生支援圖像、文件至長影片理解",
+      "具備自主規劃與環境回饋處理能力，提升多步驟任務穩定度",
+      "支援推論深度微調（reasoning_effort）與思考歷程保留"
+     ],
+     "how_to_use": "在你的 LangGraph 流程中，這類強化環境反饋與思考控制的模型非常適合作為「規劃與除錯節點」。如果未來 Ollama 提供量化版本，你可以本機部署來處理包含圖表報表的資料分析流程；透過調整 reasoning_effort，在簡單 SQL 查詢時降低推論時間，而在複雜資料清洗與 pandas 程式碼修正時拉高推論深度。",
+     "fallback": false
+    },
+    {
+     "ref": "c83",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5389,
+      "downloads": 277323,
+      "trending_score": 212,
+      "likes_delta": 28
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 發布，更新工具調用與 Agent 效能",
+     "tags": [
+      "開源模型",
+      "DeepSeek",
+      "Agent評測",
+      "程式碼生成"
+     ],
+     "summary": "DeepSeek 發布開源 MIT 授權的 DeepSeek-V4.1-Flash-1017 小幅升級版本，聚焦於提升推論、程式設計、Agent 任務與視覺基準表現。官方評測顯示其在 Terminal-Bench 4.0（42.3）與 Automation-Bench v1.0.6（60.5）等環境顯著優於前代，同時縮短了任務執行時間與輸出長度。本次釋出包含 Python 參考實作 encoding.py 以及具備 Python 綁定的 Rust 工具 deepseek-recipe，可協助開發者處理多輪對話、思考模式與工具呼叫的提示詞編碼。",
+     "key_points": [
+      "MIT 開源授權，終端機與自動化等多項 Agent 基準分數明顯成長",
+      "降低輸出長度與執行時間，官方宣稱推進效能與成本平衡",
+      "釋出 deepseek-recipe 套件，提供完整的工具調用與思考格式編碼實作"
+     ],
+     "how_to_use": "這個更新直接對應你的內部自動化與爬蟲需求。雖然目前主要提供權重轉換與推論實作，但其釋出的 deepseek-recipe 與 encoding.py 非常適合作為你在 LangGraph 中實作自訂 Tool Calling 解析與思考歷程管理的參考範本，有助於深入理解 Agent 如何有效封裝終端機操作與外部工具。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c90",
+     "source": "hf_models",
+     "id": "google/embeddinggemma-2",
+     "metrics": {
+      "likes": 3190,
+      "downloads": 498510,
+      "trending_score": 100,
+      "likes_delta": 14
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/google/embeddinggemma-2"
+      }
+     ],
+     "title": "Google 開源 embeddinggemma-2 嵌入模型",
+     "one_liner": "Google 釋出新一代 EmbeddingGemma-2 向量模型，社群熱度與下載量快速攀升。",
+     "url": "https://huggingface.co/google/embeddinggemma-2",
+     "fallback": false
+    },
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 1548,
+      "downloads": 70034,
+      "trending_score": 205.5,
+      "likes_delta": 23
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI 釋出輕量級 LFM3-1.7B 模型",
+     "one_liner": "主打端側與低資源場景，LiquidAI 上架 1.7B 小參數量非傳統架構模型。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+     "fallback": false
+    },
+    {
+     "ref": "c75",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 1634,
+      "downloads": 22571,
+      "trending_score": 530,
+      "likes_delta": 138
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      }
+     ],
+     "title": "月之暗面發布 Kimi-K3.1-Pro 模型",
+     "one_liner": "Moonshot AI 釋出新版 K3.1-Pro 模型權重，在開源社群引發高度關注。",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50402212",
+     "metrics": {
+      "points": 151,
+      "comments": 75
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.anthropic.com/research/components-of-agent-memory"
+      },
+      {
+       "label": "HN 討論（151 分）",
+       "url": "https://news.ycombinator.com/item?id=50402212"
+      }
+     ],
+     "title": "Anthropic 剖析 Agent 記憶架構：借鑑大腦睡眠與離線整理機制",
+     "tags": [
+      "Agent 記憶",
+      "系統架構",
+      "設計模式"
+     ],
+     "summary": "Anthropic 分享了其為 Claude 設計記憶系統的思考方式。文章借鑑神經科學中海馬體即時記錄經驗、並在睡眠離線時重放（replay）轉化為大腦皮層長期知識的機制，提出 Agent 記憶也可採用類似的分工。Agent 在執行任務時會將過程記錄在日誌中，並可藉由 Letta 與 UC Berkeley 提出的「睡眠計算（sleep-time compute）」概念，在互動閒置期進行被稱為「做夢（dreaming）」的離線處理，反思並修正錯誤、產出筆記或建立新表徵。官方指出這種記憶機制有別於微調權重或單次對話摘要，能有效跨 session 保留並提煉經驗。",
+     "key_points": [
+      "將記憶分為即時日誌標記與離線「做夢（dreaming）」整理兩個階段。",
+      "利用閒置時間執行反思，自動修正歷史錯誤並提取高價值筆記。",
+      "與模型權重更新、單次上下文學習或上下文壓縮做出明確區隔。"
+     ],
+     "how_to_use": "在 LangGraph 流程中，你可以設計一個獨立的「離線整理節點」。例如在自動化爬蟲或內部文件處理結束後的閒置時段，排程呼叫本機 Ollama 批次讀取當天的執行日誌與錯誤紀錄，提煉成結構化的 Markdown 或 JSON 知識筆記（如各網站防爬機制變化、欄位清洗例外），並持久化存入資料庫，供下次 LangGraph 流程啟動時預先載入。",
+     "fallback": false
+    },
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50397429",
+     "metrics": {
+      "points": 571,
+      "comments": 145
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+      },
+      {
+       "label": "HN 討論（571 分）",
+       "url": "https://news.ycombinator.com/item?id=50397429"
+      }
+     ],
+     "title": "小模型搭配大模型求助：身分識別準確率逼近 Opus 且成本降 4 倍",
+     "tags": [
+      "模型路由",
+      "資料清洗",
+      "成本優化"
+     ],
+     "summary": "Hightouch 針對身分識別（Identity Resolution, IDR）這類資料對齊難題進行評測，測試廉價決策模型（Jev、GPT-6 Luna）與前沿旗艦模型（Claude Opus）的表現。測試顯示決策模型速度快 10 倍以上且成本大幅降低，但在困難案例上準確率落後 Opus 約 6 個百分點。關鍵在於 Jev 的信心度校準極佳，出錯時通常伴隨低信心度。Hightouch 藉此設計混合架構：由 Jev 優先判斷，僅在信心度偏低時向 Opus 求助，官方宣稱此舉以低於 1/4 的成本達到前沿模型水準的準確率。",
+     "key_points": [
+      "Jev 等決策模型成本極低（每千筆 0.05 至 0.1 美元），但高難度案例仍略遜旗艦模型。",
+      "模型「信心度校準」是路由關鍵：Jev 答錯時多數為低信心，適合當作升級觸發條件。",
+      "「小模型先審、不確定再轉大模型」的仲裁機制兼顧了吞吐量與頂尖準確率。"
+     ],
+     "how_to_use": "這套分流模式非常適合你的 pandas 與 SQL 資料清洗工作（例如合併客戶資料、模糊比對地址或錯字）。你可以在 LangGraph 中建立條件分支節點：第一關先用本機 Ollama 快速推論並輸出信心評分，若信心度高於門檻就直接通過；遇到低信心度邊界案例，再自動路由呼叫 Gemini 免費 API 做二次裁決，既不超額消耗 API 額度，又能保證清洗品質。",
+     "fallback": false
+    },
+    {
+     "ref": "c6",
+     "source": "hn",
+     "id": "50395919",
+     "metrics": {
+      "points": 115,
+      "comments": 13
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://arxiv.org/abs/2610.21375"
+      },
+      {
+       "label": "HN 討論（115 分）",
+       "url": "https://news.ycombinator.com/item?id=50395919"
+      }
+     ],
+     "title": "Memorilla：以固定潛在 Token 為凍結 LLM 注入長期語義記憶",
+     "tags": [
+      "論文速讀",
+      "長上下文",
+      "Agent 記憶"
+     ],
+     "summary": "史丹佛大學等機構提出名為 Memorilla 的記憶系統，旨在解決凍結參數 LLM 難以在長上下文與歷史紀錄中兼顧效率的問題。Memorilla 會將長文件或對話歷史一次性編碼為可重用的嵌入向量，並學習在 LLM 的輸入嵌入空間中，僅用固定數量（如 16 個）與查詢相關的「記憶 Token」來傳遞資訊。論文實驗顯示，在 FactKG 基準測試中，Memorilla 僅用比原文少 108 倍的 Token 量就達到 84.33% 準確率（高於全上下文推論的 80.43%）；在 TextWorld 環境中，也有效減少 Agent 重複探索已走過房間的現象，成功率從 18.6% 提升至 24.2%。",
+     "key_points": [
+      "將整批文檔編碼為重用嵌入，推論時僅注入極少量（如 16 個）虛擬記憶 Token。",
+      "在事實檢索評測中以少 108 倍的 Token 超越全上下文輸入的準確率。",
+      "能有效輔助 Agent 在長軌跡互動中累積狀態記憶，避免迷航與無效重複動作。"
+     ],
+     "how_to_use": "這篇技術需要修改或直接控制模型輸入端的嵌入空間（Embedding Space），因此目前無法直接應用在閉源的 Gemini API。不過其「將歷史動作壓製為語義狀態」以防止 Agent 鬼打牆的思路值得借鑑；在 LangGraph 打造多步驟爬蟲或自動化流程時，可參考其設計，在 State 中維護精簡的已造訪狀態雜湊或抽象摘要，避免 Agent 在長軌跡中反覆走冤枉路。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c16",
+     "source": "hn",
+     "id": "50397325",
+     "metrics": {
+      "points": 30,
+      "comments": 2
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/anteloc/ldraw-mecha/tree/v0.5.0"
+      },
+      {
+       "label": "HN 討論（30 分）",
+       "url": "https://news.ycombinator.com/item?id=50397325"
+      }
+     ],
+     "title": "樂高機構自動推論與動畫生成",
+     "one_liner": "展示透過 Agent 自動解析資料來源推論樂高機構，並生成對應動態模擬。",
+     "url": "https://github.com/anteloc/ldraw-mecha/tree/v0.5.0",
+     "fallback": false
+    },
+    {
+     "ref": "c13",
+     "source": "hn",
+     "id": "50405263",
+     "metrics": {
+      "points": 57,
+      "comments": 12
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash"
+      },
+      {
+       "label": "HN 討論（57 分）",
+       "url": "https://news.ycombinator.com/item?id=50405263"
+      }
+     ],
+     "title": "31B 視訊音訊擴散模型極致壓縮",
+     "one_liner": "社群將 31B 影音擴散模型壓縮量化至 14B INT8，且僅需 6 步推論。",
+     "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c20",
+     "source": "github_trending",
+     "id": "NVIDIA/auto-ontology",
+     "metrics": {
+      "stars": 9789,
+      "stars_today": 1155,
+      "stars_delta": 765
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/auto-ontology"
+      }
+     ],
+     "title": "NVIDIA Auto Ontology：企業資料本體層與驗證工具",
+     "tags": [
+      "資料分析",
+      "Text-to-SQL",
+      "MCP",
+      "FastAPI"
+     ],
+     "summary": "NVIDIA 開源的 Auto Ontology 專案旨在解決分析型 Agent 回答指標不穩定的問題。官方宣稱可從企業元資料自動生成本體論，建立具備商業語意的知識圖譜，並透過 MCP、CLI 與 API 介面串接外部 Agent。架構整合 FastAPI 後端、LangChain、Postgres/pgvector 與 Next.js 16 前端，並由 NVIDIA NIM 驅動將自然語言轉為 SQL 查詢與驗證資料血統。該專案採 Apache 2.0 授權，目前不接受外部貢獻。",
+     "key_points": [
+      "從結構化資料元資料自動建立本體層與知識圖譜，對齊各系統定義",
+      "支援自然語言轉 SQL（官方以 NVIDIA NIM 驅動）並驗證生成查詢的血統",
+      "後端採用 FastAPI 與 LangChain，提供 MCP、CLI 與 API 接口",
+      "以 Apache 2.0 授權開源，目前官方不接受外部貢獻"
+     ],
+     "how_to_use": "在 LangGraph 資料分析流程中，可將其後端或 MCP 工具作為 Text-to-SQL 節點的「語意驗證層」。當使用者提出營收或指標問題時，先透過其 API 取得已對齊的定義與資料庫結構，降低 SQL 生成錯誤率。",
+     "fallback": false
+    },
+    {
+     "ref": "c51",
+     "source": "github_search",
+     "id": "shanselman/gputaskman",
+     "metrics": {
+      "stars": 522,
+      "forks": 23,
+      "stars_delta": 251
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/shanselman/gputaskman"
+      }
+     ],
+     "title": "gputaskman：終端機專用的本機 GPU 記憶體細節檢視器",
+     "tags": [
+      "GPU 監控",
+      "Windows 工具",
+      "本機開發",
+      "CLI"
+     ],
+     "summary": "這是一款針對本機 GPU 工作負載設計的終端機介面工具，概念類似 htop。它不僅顯示顯存使用量，更進一步關聯各行程的 GPU 記憶體、引擎活動、載入的執行階段、模型檔案與 GGUF LLM 緩衝區細節（如權重與 KV cache 估算）。支援 64 位元 Windows 與 NVIDIA/AMD 顯卡，提供 PyPI（uv/pipx）安裝或開箱即用的免安裝可攜式 ZIP 包，無需另外安裝 CUDA Toolkit 即可執行。",
+     "key_points": [
+      "細分顯存用途，區分模型權重、KV cache、瀏覽器與桌面合成器",
+      "提供終端機 TUI，並支援 `--once` 與 `--json` 輸出選項",
+      "原生支援 Windows 10/11，提供獨立打包的免安裝可攜式 exe",
+      "官方說明分類與 GGUF 細分為估計值，非直接 VRAM 傾印"
+     ],
+     "how_to_use": "在 Windows 執行 Ollama 本機模型或跑 LangGraph 測試時，可在 PowerShell 執行免安裝可攜式 exe，直接觀察模型載入與推理時顯存與 KV 快取的真實消耗，快速排查顯存溢出或被推到系統記憶體的問題。",
+     "fallback": false
+    },
+    {
+     "ref": "c49",
+     "source": "github_search",
+     "id": "shanselman/sandbox-mcp",
+     "metrics": {
+      "stars": 264,
+      "forks": 12,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/shanselman/sandbox-mcp"
+      }
+     ],
+     "title": "sandbox-mcp：專為 Agent 設計的拋棄式 Windows 沙箱與 MCP",
+     "tags": [
+      "Windows 自動化",
+      "MCP",
+      "電腦操作",
+      "測試環境"
+     ],
+     "summary": "專為 AI Agent 設計的 Windows 11 沙箱控制工具，結合 CLI（sbx）與 MCP 介面。它能在乾淨、預設關閉網路的 Windows 沙箱中啟動應用程式、透過原生 UIA 操作介面並擷取當機證據（截圖、HTML、錄影等），執行完畢後立即銷毀。官方實測範例端到端耗時約 40 至 50 秒，能精準捕捉缺少 VC++ redistributable 等相依性錯誤，並支援依需求自動安裝經過驗證的執行階段。",
+     "key_points": [
+      "提供真正的拋棄式 Windows 11 環境，非容器模擬",
+      "支援原生 UI Automation（UIA），可自動巡檢、點擊、輸入與切換",
+      "提供完整除錯證據產出，包括 PNG 截圖、處理序結束代碼與當機報告",
+      "可作為獨立 CLI 執行，亦內建免裝 Node.js 的 MCP 伺服器"
+     ],
+     "how_to_use": "在自動化測試或電腦操作 Agent 專案中，可透過其 MCP 伺服器讓 LangGraph 節點操控乾淨的 Windows 訪客端，用來測試內部 Windows 桌面工具部署或驗證 GUI 自動化流程，且完全不污染本機環境。",
+     "fallback": false
+    },
+    {
+     "ref": "c56",
+     "source": "github_search",
+     "id": "zaxiu88888/issue-rag",
+     "metrics": {
+      "stars": 133,
+      "forks": 3,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/zaxiu88888/issue-rag"
+      }
+     ],
+     "title": "issue-rag：針對開源 Issue 的 RAG 評測與評判器審計",
+     "tags": [
+      "RAG",
+      "Agent 評測",
+      "知識庫",
+      "評估方法"
+     ],
+     "summary": "這是一個以開源專案 issue tracker 為對象的 RAG 問答與評測專案，核心特色在於扎實的評測設計與對 LLM 評判器的多軸審計。基於 vitejs/vite 專案的 95 條人工覆核問題實測，檢索讓準確率由閉卷 8.4% 提升至 64.2%，但同時也發現檢索會使編造率從 1.1% 升至 20%（從不知道變成自信地錯）。專案還驗證了評判器雜訊與四種檢索配置難以區分等反直覺現象，語料與檢索目前僅支援英文。",
+     "key_points": [
+      "以 95 條人工標註真實問題評測，檢索使準確率提升 2.3 至 3.2 倍",
+      "揭露反直覺現象：加入檢索會大幅抬高模型的虛構編造率（1.1% 升至 20.0%）",
+      "對 LLM 評分器進行 4 個維度審計，包含人工盲評一致率驗證（70.0%）",
+      "限制標明：語料、分詞與 embedding 僅支援英文，中文提問會拒答"
+     ],
+     "how_to_use": "在設計 LangGraph 知識庫或文件問答 Agent 時，可直接借鏡該專案的評測集設計與評分器審計架構，評估 RAG 上線後是否存在「檢索後自信回答錯誤資訊」的幻覺問題，提升評測指標的客觀性。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "vercel-labs/agent-browser",
+     "metrics": {
+      "stars": 46827,
+      "stars_today": 190,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/vercel-labs/agent-browser"
+      }
+     ],
+     "title": "vercel-labs/agent-browser",
+     "one_liner": "專為 AI Agent 設計的瀏覽器自動化命令列工具。",
+     "url": "https://github.com/vercel-labs/agent-browser",
+     "fallback": false
+    },
+    {
+     "ref": "c53",
+     "source": "github_search",
+     "id": "anomalyco/browse",
+     "metrics": {
+      "stars": 233,
+      "forks": 13,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/anomalyco/browse"
+      }
+     ],
+     "title": "anomalyco/browse",
+     "one_liner": "透過 MCP 伺服器與 Chromium 擴充功能，讓 Agent 操控真實瀏覽器。",
+     "url": "https://github.com/anomalyco/browse",
+     "fallback": false
+    },
+    {
+     "ref": "c17",
+     "source": "github_trending",
+     "id": "cloudflare/security-audit-skill",
+     "metrics": {
+      "stars": 65724,
+      "stars_today": 2085,
+      "stars_delta": 1727
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/cloudflare/security-audit-skill"
+      }
+     ],
+     "title": "cloudflare/security-audit-skill",
+     "one_liner": "提供 Coding Agent 多階段安全稽核與機器可讀報告的技能外掛。",
+     "url": "https://github.com/cloudflare/security-audit-skill",
+     "fallback": false
+    },
+    {
+     "ref": "c43",
+     "source": "github_search",
+     "id": "deepseek-ai/dsh-superagent-prototype",
+     "metrics": {
+      "stars": 20819,
+      "forks": 2457,
+      "stars_delta": 577
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+      }
+     ],
+     "title": "deepseek-ai/dsh-superagent-prototype",
+     "one_liner": "DeepSeek 探索高自主性 Agent 系統架構的原型開源專案。",
+     "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+     "fallback": false
+    },
+    {
+     "ref": "c69",
+     "source": "github_search",
+     "id": "chutingyean/Agent-Cockpit",
+     "metrics": {
+      "stars": 453,
+      "forks": 8,
+      "stars_delta": 59
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/chutingyean/Agent-Cockpit"
+      }
+     ],
+     "title": "chutingyean/Agent-Cockpit",
+     "one_liner": "支援研究 Agent 的證據鏈白板與 MCP，可追溯結論對應的程式碼。",
+     "url": "https://github.com/chutingyean/Agent-Cockpit",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c51",
+  "source": "github_search",
+  "id": "shanselman/gputaskman",
+  "metrics": {
+   "stars": 522,
+   "forks": 23,
+   "stars_delta": 251
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/shanselman/gputaskman"
+   }
+  ],
+  "title": "監控本機 Ollama 的 GPU 記憶體與 KV 快取佔用",
+  "why": "你在 Windows 跑本機 Ollama 時，它能像 htop 拆解 VRAM 是被模型權重還是 KV cache 吃掉，方便掌握資源。",
+  "steps": [
+   "在 PowerShell 執行 `uv tool install gputaskman` 安裝工具。",
+   "確認本機 Ollama 正在執行模型推理任務。",
+   "在終端機執行 `gputaskman` 啟動監控介面（或執行 `gputaskman --once` 查看即時快照）。"
+  ],
+  "success_check": "終端機顯示 TUI 介面，能列出 GPU 執行中程序，並看到 Ollama 模型的權重（weights）與 KV-cache 記憶體劃分。",
+  "fallback": false
+ },
+ "warnings": [
+  "enrich: c12 補充內容抓取失敗，改用原始摘要",
+  "try_one: 模型判斷 c20（NVIDIA/auto-ontology）不符合規則，跳過：該專案需要 Docker Compose 建置前後端與向量資料庫等多個容器，並依賴 NVIDIA NIM 端點與 NVIDIA API Key，無法在 15～30 分鐘內透過 pip install 快速體驗，也不支援讀者現有的 Gemini 或本機 Ollama。",
+  "try_one: 模型判斷 c56（zaxiu88888/issue-rag）不符合規則，跳過：專案快速上手指令於第 4 步截斷，且完整流程需先爬取 GitHub 12 個月資料並手動標註 CSV，無法在 15～30 分鐘內跑出成果。"
+ ]
+}
