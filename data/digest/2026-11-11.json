@@ -1,0 +1,597 @@
+{
+ "date": "2026-11-11",
+ "generated_at": "2026-11-11T00:45:42Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 30,
+ "tldr": [
+  "Google正式發布全新旗艦模型 Gemini 4 Carbon，主打強大代理叢集與推理能力，並全面登陸 GitHub Copilot。",
+  "Anthropic 推出全新辦公與協作工具套件 Claude Meetings，能即時將會議討論轉化為專案進度與白板時程。",
+  "LangChain 官方深入解析如何利用 Deep Agents 進行上下文工程，解決長會話中代理的記憶與上下文衰退問題。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c129",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout"
+      }
+     ],
+     "title": "Google 發布 Gemini 4 Carbon 與 Agent Swarm 功能",
+     "tags": [
+      "Gemini 4 Carbon",
+      "Google AI Studio",
+      "多 Agent 協作"
+     ],
+     "summary": "Google 正式推出新一代模型 Gemini 4 Carbon，官方宣稱其為最強模型，專門應對複雜的多步驟編碼與開放式科學研究等極限任務。同步在 Antigravity 平台預覽「swarm」功能，能將單一提示詞轉為協同合作的 Agent 團隊。Carbon 已透過 Google AI Studio 的 Gemini API 等管道向付費開發者與企業推出，並採定價競爭策略。",
+     "key_points": [
+      "Google 推出 Gemini 4 Carbon，主打複雜多步驟編碼與長文本任務",
+      "Antigravity 平台預覽 agent「swarm」功能，支援多 Agent 協同",
+      "已透過 Google AI Studio 的 Gemini API 推出，提供付費開發者使用"
+     ],
+     "how_to_use": "對你的開發環境來說，雖然目前 Carbon 主要針對付費開發者與企業，但你日常在 Google AI Studio 使用 Gemini 免費方案時，可以持續關注其 API 後續是否下放。若未來開放，其強化的多步驟編碼能力很適合用在 LangGraph 的複雜工作流中，作為多 Agent 協作的核心大腦。",
+     "fallback": false
+    },
+    {
+     "ref": "c122",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/"
+      }
+     ],
+     "title": "Anthropic 推出 Claude Meetings 將視訊會議轉為實際計畫",
+     "tags": [
+      "Anthropic",
+      "自動化",
+      "內部流程"
+     ],
+     "summary": "Anthropic 宣布推出一系列職場新功能，包含可在視訊會議中即時運作的 Claude Meetings，以及 Claude Whiteboards 與 Claude Sheets。Claude Meetings 能作為視訊會議中的可見參與者，在眾人討論時同步草擬計畫、繪製時間軸並回答問題。目前該功能處於 Team 與 Enterprise 方案的 Beta 測試階段。",
+     "key_points": [
+      "Claude Meetings 讓 Claude 以參與者身分加入 Google Meet 等視訊會議",
+      "可在通話中即時草擬計畫、整理會議記錄並串接工作應用程式",
+      "同步推出 Claude Whiteboards 與 Claude Sheets 支援團隊協作"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為這是針對 Team 與 Enterprise 付費方案、且主要綁定 Google Meet 等視訊軟體的辦公協作功能，你目前使用的 Windows 開發環境與 Gemini 免費方案無法直接串接，不過其將對話轉化為結構化任務的思路可作為內部流程自動化的參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c6",
+     "source": "hn",
+     "id": "50442303",
+     "metrics": {
+      "points": 272,
+      "comments": 147
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+      },
+      {
+       "label": "HN 討論（272 分）",
+       "url": "https://news.ycombinator.com/item?id=50442303"
+      }
+     ],
+     "title": "Gemini 4 Carbon 正式上線討論熱烈",
+     "one_liner": "社群討論焦點集中在 Google 最新發布的 Gemini 4 Carbon 模型及其效能表現。",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+     "fallback": false
+    },
+    {
+     "ref": "c10",
+     "source": "hn",
+     "id": "50433079",
+     "metrics": {
+      "points": 150,
+      "comments": 192
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/"
+      },
+      {
+       "label": "HN 討論（150 分）",
+       "url": "https://news.ycombinator.com/item?id=50433079"
+      }
+     ],
+     "title": "全面 AI 開發滿一年後的程式碼維護省思",
+     "one_liner": "Hacker News 討論指出，在全面導入 AI 且無人真正理解的情況下，一年後的程式碼庫維護面臨巨大挑戰。",
+     "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c5",
+     "source": "hn",
+     "id": "50429024",
+     "metrics": {
+      "points": 328,
+      "comments": 139
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://research.meta.ai/blog/muse-ember"
+      },
+      {
+       "label": "HN 討論（328 分）",
+       "url": "https://news.ycombinator.com/item?id=50429024"
+      }
+     ],
+     "title": "Muse Ember：專為 Agent 設計的小型高效模型",
+     "tags": [
+      "AI 模型",
+      "Agent 最佳化",
+      "工具呼叫"
+     ],
+     "summary": "官方宣稱推出體積最小、最高效的 Muse Ember 模型，專為複雜推理執行與 Agent 重複執行的任務（如工具呼叫、程式碼子任務、路由、萃取、長文件解析）所設計。根據官方數據，在 Artificial Analysis 評測中，其在成本與智慧表現的效率邊界上表現突出，能以較低成本達到競爭模型的表現。該模型已在 Meta Model API 上架。",
+     "key_points": [
+      "官方宣稱專為 Agent 的工具呼叫、路由與長文件解析等任務設計",
+      "在 Artificial Analysis 的智慧與成本比評測中表現位居效率邊界",
+      "在多項 Agent 與自動化評測（如 AutomationBench-AA）中取得領先分數",
+      "已在 Meta Model API 上架提供使用"
+     ],
+     "how_to_use": "由於你主要使用免費的 Gemini 與本機 Ollama，且沒有 OpenAI 或 Anthropic 付費 key，Meta Model API 上的 Muse Ember 對你而言需要付費，因此與你的工作環境關係不大。不過其針對 Agent 工具呼叫與長文件解析的架構設計思路，值得在設計自己的 LangGraph 流程時作為參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c79",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 19570,
+      "downloads": 7443748,
+      "trending_score": 317,
+      "likes_delta": 83
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen/Qwen3.8-27B",
+     "one_liner": "Qwen 推出 27B 參數的新開源模型，在 Hugging Face 上獲得高度關注與下載量。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+     "fallback": false
+    },
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 1867,
+      "downloads": 30721,
+      "trending_score": 616,
+      "likes_delta": 68
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      }
+     ],
+     "title": "moonshotai/Kimi-K3.1-Pro",
+     "one_liner": "Moonshot AI 發布 Kimi-K3.1-Pro 模型，在開源社群中累積一定數量的點讚與下載。",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "fallback": false
+    },
+    {
+     "ref": "c86",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5469,
+      "downloads": 329529,
+      "trending_score": 114,
+      "likes_delta": 36
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "one_liner": "DeepSeek 推出 V4.1-Flash-1017 輕量版本模型，吸引社群開發者關注與試用。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c111",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-deep-agents-remember",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-deep-agents-remember"
+      }
+     ],
+     "title": "深度代理的上下文工程：如何在不塞爆上下文的情況下記憶",
+     "tags": [
+      "Agent 架構",
+      "上下文工程",
+      "LangChain",
+      "記憶體管理"
+     ],
+     "summary": "隨著執行時間拉長，AI Agent 常因塞入過多指令、檔案與工具結果而面臨「上下文腐敗」，導致準確度下降。LangChain 推出的開源 Deep Agents 框架透過五種技術將上下文移出活動視窗：將大型結果卸載至檔案系統、自動濃縮舊訊息、僅在需要時載入技能，以及透過子代理處理嘈雜工作。記憶體存放在你控制的檔案中，方便隨時更換模型。",
+     "key_points": [
+      "長任務會導致上下文過載與準確度下降，稱為「上下文腐敗」。",
+      "Deep Agents 透過中介軟體（Middleware）將上下文移出活動視窗。",
+      "將大型工具結果與訊息存入檔案，主代理只看預覽。",
+      "記憶體儲存為純檔案，讓開發者能自由切換模型或供應商。"
+     ],
+     "how_to_use": "你的 LangGraph 專案若在處理長篇報表或大量資料時常遇到上下文溢出或成本暴增，可借鏡此概念。將大型 SQL 查詢結果或 CSV 內容寫入本機檔案，僅傳送檔案路徑與摘要給 LLM（例如本機 Ollama），需要細節時再讀取檔案，這對受限於免費 Gemini 或 Ollama 視窗大小的開發環境非常實用。",
+     "fallback": false
+    },
+    {
+     "ref": "c110",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval"
+      }
+     ],
+     "title": "AI Agent 的上下文工程與記憶體管理：從檢索開始",
+     "tags": [
+      "RAG",
+      "檢索優化",
+      "Agent 記憶",
+      "檔案系統"
+     ],
+     "summary": "代理在執行任務時常受限於有限的上下文視窗，而資訊檢索常遭遇三種瓶頸：搜尋沒效率、一次塞入過多上下文、以及帶入過期或不相關的資訊。Deep Agents 框架透過「先搜尋再閱讀」的檔案系統工具（如 glob、grep、read_file）來縮小搜尋範圍，並將過大的結果卸載至檔案中，確保主代理只看到與任務相關的內容。",
+     "key_points": [
+      "代理檢索的三大痛點：無效率搜尋、過多上下文、不相關或過期資料。",
+      "內建檔案系統工具強調先搜尋（glob、grep）再讀取，避免盲目開檔。",
+      "過大的工具結果會被卸載存入檔案，主代理只接收路徑與預覽。"
+     ],
+     "how_to_use": "這對你的 RAG 與知識庫專案很有幫助。當代理需要從大量內部文件或爬蟲資料中找答案時，不要直接將整篇內容塞進 Prompt。可以模仿這種設計：先用關鍵字檢索工具篩選出對應的檔案路徑，再讓 LangGraph 節點讀取指定片段，減少 Token 消耗並提升 Ollama 的準確度。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c98",
+     "source": "hf_papers",
+     "id": "2611.12762",
+     "metrics": {
+      "upvotes": 52,
+      "github_stars": 10
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.12762"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.12762"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Alpha-Innovator/Sage-Taiyi"
+      }
+     ],
+     "title": "Sage-Taiyi：用於科學發現的中繼認知架構",
+     "one_liner": "提出受中繼認知啟發的架構，利用累積的科學理解來指導後續研究方向與推理方法的選擇。",
+     "url": "https://huggingface.co/papers/2611.12762",
+     "fallback": false
+    },
+    {
+     "ref": "c100",
+     "source": "hf_papers",
+     "id": "2610.42148",
+     "metrics": {
+      "upvotes": 31,
+      "github_stars": 344
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.42148"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.42148"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/OmniJev/Flide"
+      }
+     ],
+     "title": "Flide：以精確狀態分支加速決策推理",
+     "one_liner": "針對 LLM 決策模型設計的高效推理引擎，解決前綴重複計算與輸出機率失真問題。",
+     "url": "https://huggingface.co/papers/2610.42148",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "ZhuLinsen/daily_stock_analysis",
+     "metrics": {
+      "stars": 69556,
+      "stars_today": 960,
+      "stars_delta": 716
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis"
+      }
+     ],
+     "title": "ZhuLinsen/daily_stock_analysis：多市場 AI 股票智能分析與自動化推送系統",
+     "tags": [
+      "Python",
+      "GitHub Actions",
+      "自動化",
+      "LLM 應用"
+     ],
+     "summary": "這是一個基於 AI 大模型的全球多市場（含台股、A 股、美股等）自选股智能分析系統，能每日自動生成決策儀表盤並推送至多種通訊軟體。專案內建 AkShare、YFinance 等免費行情源，支援 GitHub Actions、Docker 或本地定時任務，並相容 Gemini、Ollama 及各類 OpenAI 相容 API。",
+     "key_points": [
+      "支援台股、美股、A 股等多市場行情與新聞聚合分析",
+      "支援 GitHub Actions 零成本雲端定時執行，也支援本地部署",
+      "可透過 Web/Bot 進行多輪策略問股與歷史報告查閱",
+      "完整支援 Gemini API、Ollama 本地模型與多種通知渠道"
+     ],
+     "how_to_use": "你可以利用 GitHub Actions 或在 Windows 本地跑這個專案，將其設定為你的個人投資自動化助理。由於它支援 Gemini API 甚至是 Ollama 本地模型，你完全不需要付費的 OpenAI 帳號。你可以把這套自動化流程當作參考，學習如何將免費財經數據源與 LLM 串接，產出結構化的 Markdown 報告並自動發送到 Telegram 或 Email。",
+     "fallback": false
+    },
+    {
+     "ref": "c30",
+     "source": "github_trending",
+     "id": "homeassistant-ai/ha-mcp",
+     "metrics": {
+      "stars": 6653,
+      "stars_today": 790,
+      "stars_delta": 688
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/homeassistant-ai/ha-mcp"
+      }
+     ],
+     "title": "HA-MCP：用 AI 管理與自動化 Home Assistant",
+     "tags": [
+      "自動化",
+      "本地執行",
+      "智慧家庭"
+     ],
+     "summary": "HA-MCP 是一個能讓 Claude、ChatGPT 等 AI 助理直接管理與自動化 Home Assistant 的整合工具。透過 HACS 或 Home Assistant 2026.11+ 的 Marketplace 即可輕鬆安裝，在系統內部直接運行伺服器，支援所有安裝類型，並提供完整的指令與設定介面來操控智慧家庭裝置。",
+     "key_points": [
+      "支援 HACS 與 Home Assistant Marketplace 直接安裝，設定流程簡單",
+      "在系統內部完整運行，確保所有安裝類型（OS、Container、Core）皆有相同功能",
+      "允許透過長效存取權杖或專用管理員帳號進行安全連接",
+      "讓 AI 助理直接參與智慧家庭的狀態查詢與自動化設定"
+     ],
+     "how_to_use": "如果你有在家裡架設 Home Assistant 來做自動化或感測器資料收集，這專案能讓你用 AI 助理直接下指令控制裝置。雖然它不是直接寫程式的 Python 庫，但對於需要處理內部流程與自動化通知的開發者來說，它是打通 AI 與 IoT 裝置的實用工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "vercel-labs/agent-browser",
+     "metrics": {
+      "stars": 49207,
+      "stars_today": 780,
+      "stars_delta": 751
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/vercel-labs/agent-browser"
+      }
+     ],
+     "title": "vercel-labs/agent-browser：專為 AI Agent 設計的原生 Rust 瀏覽器自動化 CLI",
+     "tags": [
+      "Rust",
+      "瀏覽器 Agent",
+      "自動化",
+      "命令列工具"
+     ],
+     "summary": "agent-browser 是一個原生 Rust 開發的命令列工具，專門用來驅動瀏覽器供 AI Agent 操作。它每次透過簡單的 shell 指令開啟頁面，並傳回簡化的無障礙樹（Accessibility Tree）結構，讓 Agent 讀取如 `@e1` 的元素代碼並進行點擊、輸入等操作，在背景透過 CDP 保持瀏覽器狀態。",
+     "key_points": [
+      "透過命令列一步步驅動瀏覽器，將頁面轉化為帶有 ref 代碼的簡潔文字",
+      "背景執行 daemon 守護行程，透過 Chrome DevTools Protocol 控制瀏覽器",
+      "支援 CSS 選擇器、文字、XPath 以及語義定位器",
+      "內建 skills 系統，方便 AI Agent 呼叫核心工作迴圈與對應指令"
+     ],
+     "how_to_use": "這跟你的網頁自動化與瀏覽器 Agent 興趣高度吻合。由於它提供簡潔的 CLI 介面，你可以輕鬆用 Python 的 subprocess 或直接在 LangGraph 的節點中呼叫它，讓 Agent 執行網頁爬蟲、資料蒐集或表單填寫。它不依賴付費雲端瀏覽器服務，且在 Windows 的命令列環境也能直接操作，是打造本地電腦操作 Agent 的實用工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c68",
+     "source": "github_search",
+     "id": "bookleme/bookleme",
+     "metrics": {
+      "stars": 106,
+      "forks": 0,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/bookleme/bookleme"
+      }
+     ],
+     "title": "bookleme/bookleme：將書籍編譯成可安裝、可驗證的 Agent Skill",
+     "tags": [
+      "Python",
+      "Coding Agent",
+      "知識庫 RAG",
+      "開源專案"
+     ],
+     "summary": "BookLeme 是一個創新專案，旨在將一本書籍的知識架構與作者的工作方式「編譯」成結構化的 Agent Skill（包含知識包與行為 Skill）。它具備雙引擎自動路由、可插拔體裁插件、逐字忠實度回验等特色，核心僅使用 Python 標準庫，強調零第三方依賴與嚴格的版权工程化驗證。",
+     "key_points": [
+      "將書籍內容編譯成可運行的狀態機 Skill 與按需加載的知識路由表",
+      "內置 7 個可測量指標，嚴格控管引文忠實度與幻覺率",
+      "核心採用純 Python 標準庫實作，無複雜第三方依賴",
+      "支援 coach_dialogue 與 knowledge_reference 等可插拔體裁"
+     ],
+     "how_to_use": "這非常適合用來升級你的 RAG 與知識庫應用。比起傳統把整本書切片丟進向量資料庫的簡單做法，這個專案將書中的「工作方式與提問順序」編譯成有硬約束的 Agent Skill。你可以用 Python 在本機跑這個工具，把你有用的專業書籍編譯成結構化產出，然後直接掛載到你的 LangGraph Agent 中，讓 Agent 真正學會特定領域的決策邏輯。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c36",
+     "source": "github_trending",
+     "id": "opensandbox-group/OpenSandbox",
+     "metrics": {
+      "stars": 17151,
+      "stars_today": 323,
+      "stars_delta": 228
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/opensandbox-group/OpenSandbox"
+      }
+     ],
+     "title": "opensandbox-group/OpenSandbox",
+     "one_liner": "專為 AI Agent 設計的安全、快速且可擴充的 Sandbox 執行環境。",
+     "url": "https://github.com/opensandbox-group/OpenSandbox",
+     "fallback": false
+    },
+    {
+     "ref": "c61",
+     "source": "github_search",
+     "id": "KKKKhazix/agent-autoloop",
+     "metrics": {
+      "stars": 4427,
+      "forks": 804,
+      "stars_delta": 153
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/KKKKhazix/agent-autoloop"
+      }
+     ],
+     "title": "KKKKhazix/agent-autoloop",
+     "one_liner": "讓命令列 Agent 在背景自主接活與跟進，遇到拿不准的事才找人類拍板。",
+     "url": "https://github.com/KKKKhazix/agent-autoloop",
+     "fallback": false
+    },
+    {
+     "ref": "c69",
+     "source": "github_search",
+     "id": "akari-sora/synology-nas-cli",
+     "metrics": {
+      "stars": 99,
+      "forks": 11,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/akari-sora/synology-nas-cli"
+      }
+     ],
+     "title": "akari-sora/synology-nas-cli",
+     "one_liner": "零依賴的 Python CLI 與 MCP 伺服器，專為 Synology NAS 管理與資安稽核打造。",
+     "url": "https://github.com/akari-sora/synology-nas-cli",
+     "fallback": false
+    },
+    {
+     "ref": "c72",
+     "source": "github_search",
+     "id": "PisenAILab/china-patent-figure-skill",
+     "metrics": {
+      "stars": 94,
+      "forks": 8,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/PisenAILab/china-patent-figure-skill"
+      }
+     ],
+     "title": "PisenAILab/china-patent-figure-skill",
+     "one_liner": "將 3D STEP 模型自動轉換成符合國家標準的專利附圖與說明書的本地 Skill。",
+     "url": "https://github.com/PisenAILab/china-patent-figure-skill",
+     "fallback": false
+    },
+    {
+     "ref": "c74",
+     "source": "github_search",
+     "id": "SparkofSpike/Brain4Agent",
+     "metrics": {
+      "stars": 92,
+      "forks": 0,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/SparkofSpike/Brain4Agent"
+      }
+     ],
+     "title": "SparkofSpike/Brain4Agent",
+     "one_liner": "專為主流 Agent 打造的中文優先（CJK-first）尖端記憶模組開源專案。",
+     "url": "https://github.com/SparkofSpike/Brain4Agent",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c29",
+  "source": "github_trending",
+  "id": "ZhuLinsen/daily_stock_analysis",
+  "metrics": {
+   "stars": 69556,
+   "stars_today": 960,
+   "stars_delta": 716
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis"
+   }
+  ],
+  "title": "用 Gemini 跑 daily_stock_analysis 產出台股分析報告",
+  "why": "支援 Gemini 與 Ollama，內建免費行情源，能快速體驗金融資料聚合與 Agent 自動產出決策報告的流程。",
+  "steps": [
+   "下載專案並進入目錄：git clone https://github.com/ZhuLinsen/daily_stock_analysis.git && cd daily_stock_analysis",
+   "安裝所需套件：pip install -r requirements.txt",
+   "複製 .env.example 為 .env 並填入 GEMINI_API_KEY，接著執行：python main.py --stocks 2330.TW"
+  ],
+  "success_check": "終端機成功印出台積電（2330.TW）的決策儀表盤，包含評分、多空趨勢、利好催化與風險警報等摘要。",
+  "fallback": false
+ },
+ "warnings": []
+}
