@@ -1,0 +1,812 @@
+{
+ "date": "2026-11-12",
+ "generated_at": "2026-11-12T00:45:42Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.5-flash"
+ ],
+ "llm_calls": 26,
+ "tldr": [
+  "Google 推出 Gemini 4 Carbon 與 Decisions API，全面支援複雜代理與決策任務，並已在多個平台全面上架。",
+  "AWS 推出官方本機模擬器，讓開發者無須付費 API Key 即可在本機環境完整測試多雲與服務整合。",
+  "LangGraph 與多個開源專案聚焦 Context Engineering 與記憶體管理，解決長期運作 Agent 的上下文退化問題。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c7",
+     "source": "hn",
+     "id": "50442303",
+     "metrics": {
+      "points": 291,
+      "comments": 164
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+      },
+      {
+       "label": "HN 討論（291 分）",
+       "url": "https://news.ycombinator.com/item?id=50442303"
+      }
+     ],
+     "title": "Google 推出 Gemini 4 Carbon：主打高階推理與長跨度 Agent 工作流",
+     "tags": [
+      "Gemini 4 Carbon",
+      "Google AI Studio",
+      "多 Agent 協作"
+     ],
+     "summary": "Google 發表 Gemini 4 Carbon 模型，定位為高階推理與長跨度 Agent 工作的最強模型。官方宣稱其在複雜程式碼編修、除錯及科學研究表現突出，並在 CursorBench 4.0、WANDR 與 AutomationBench 取得領先。Google 同步在 Antigravity 預覽 /swarm 功能，支援將單一提示詞轉為多 Agent 協作團隊。定價與 Argon 相同（輸入每百萬 token 2 美元、輸出 10 美元），已在 Google AI Studio API 上線。",
+     "key_points": [
+      "專為複雜多步驟編修、除錯與開放式科學研究設計的旗艦模型",
+      "支援 Google Antigravity 中的 /swarm 功能，將提示詞轉為多 Agent 協作團隊",
+      "API 定價為每百萬輸入 token 2 美元、輸出 10 美元"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為你目前主要使用 Gemini 免費方案與本機 Ollama，無法直接負擔付費的 Gemini 4 Carbon API。不過若未來有機會使用，其 /swarm 多 Agent 協作特性很適合對接 LangGraph，用來處理大型自動化流程或內部文件拆解。",
+     "fallback": false
+    },
+    {
+     "ref": "c9",
+     "source": "hn",
+     "id": "50456791",
+     "metrics": {
+      "points": 242,
+      "comments": 76
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+      },
+      {
+       "label": "HN 討論（242 分）",
+       "url": "https://news.ycombinator.com/item?id=50456791"
+      }
+     ],
+     "title": "Gemini Decisions API：單次呼叫快速評估多達千題的分類與決策",
+     "tags": [
+      "Gemini Decisions API",
+      "多模態評估",
+      "資料分析"
+     ],
+     "summary": "Google 推出 Gemini Decisions API 與對應的 Gemini Decision 1 模型，專門用於處理文字、圖像、音訊、影片與 PDF 的快速封閉式決策。官方宣稱它能在單次前向傳遞中評估多達 1,000 個是否、選擇或評分問題，不進行逐字解碼，端到端延遲僅 150-250 毫秒，且不計收輸出 token 費用，定價為每百萬輸入 token 0.10 美元。",
+     "key_points": [
+      "單次前向傳遞即可評估高達 1,,000 個是／否或選擇題，不計算輸出 token 費用",
+      "支援文字、圖片、語音、影片與 PDF 等多模態輸入，延遲約 150-250 毫秒",
+      "定價極低，每百萬輸入 token 0.10 美元，透過 Google AI Studio 提供"
+     ],
+     "how_to_use": "你可以將這個 API 整合進 LangGraph 的工作流節點中，用來做資料分析的自動化評分、政策合規檢查、或是作為大批量文字與 PDF 文件的快速分類過濾器。由於計價便宜且不收輸出 token，非常適合拿來做結構化資料的自動審查與前置篩選。",
+     "fallback": false
+    },
+    {
+     "ref": "c22",
+     "source": "hn",
+     "id": "50455811",
+     "metrics": {
+      "points": 45,
+      "comments": 36
+     },
+     "sources": [
+      {
+       "label": "HN 討論（45 分）",
+       "url": "https://news.ycombinator.com/item?id=50455811"
+      }
+     ],
+     "title": "Pomerado：將任意網站轉為 Agent 專用確定性 MCP 的自助平台",
+     "tags": [
+      "MCP",
+      "瀏覽器自動化",
+      "自動化爬蟲"
+     ],
+     "summary": "YC 新創 Pomerado 推出自助平台，旨在將沒有 API 的各類網站（如電航、銀行、政府或老舊門戶網站）轉為確定性且可自癒的 MCP（Model Context Protocol）。開發者或 Coding Agent 透過自然語言描述與簡單互動，就能在短時間內建立網站專屬的 API，解決傳統瀏覽器自動化或 Computer Use 速度慢且不穩定的痛點。",
+     "key_points": [
+      "將無 API 的網頁轉換為可供 Agent 呼叫的確定性 MCP",
+      "透過範例執行與自然語言描述自動產生 Playwright 腳本或 HTTP 請求",
+      "內建獨立的守護模型（Guardian model）對 Agent 呼叫進行防護欄檢查"
+     ],
+     "how_to_use": "這跟你的網頁爬蟲與資料蒐集工作高度相關。當你遇到沒有開放 API 的內部流程網站或資料來源時，可以用它來產生穩定的 MCP，並直接掛載到你的 Python 專案或 LangGraph 工具鏈中，取代傳統脆弱的 Selenium 或純瀏覽器操作。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c6",
+     "source": "hn",
+     "id": "50458900",
+     "metrics": {
+      "points": 315,
+      "comments": 293
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+      },
+      {
+       "label": "HN 討論（315 分）",
+       "url": "https://news.ycombinator.com/item?id=50458900"
+      }
+     ],
+     "title": "聯合航空禁止 AI Agent 代客訂機票",
+     "one_liner": "聯合航空基於隱私與法規考量，宣佈禁止個人 AI Agent 代旅客預訂航班。",
+     "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+     "fallback": false
+    },
+    {
+     "ref": "c10",
+     "source": "hn",
+     "id": "50453637",
+     "metrics": {
+      "points": 189,
+      "comments": 69
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.atuin.sh/threads-agent-sessions/"
+      },
+      {
+       "label": "HN 討論（189 分）",
+       "url": "https://news.ycombinator.com/item?id=50453637"
+      }
+     ],
+     "title": "Atuin Threads 跨機同步 Agent 會話",
+     "one_liner": "推出跨機同步功能，方便開發者在不同機器上追蹤與管理所有 Agent 執行工作階段。",
+     "url": "https://blog.atuin.sh/threads-agent-sessions/",
+     "fallback": false
+    },
+    {
+     "ref": "c120",
+     "source": "rss",
+     "id": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents"
+      }
+     ],
+     "title": "聯合航空跟進限制 AI 代訂機票",
+     "one_liner": "外媒報導聯合航空跟進不允許個人 AI 助理代訂機票，主因是隱私與法規限制。",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c86",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 1935,
+      "downloads": 33617,
+      "trending_score": 400.5,
+      "likes_delta": 68
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      }
+     ],
+     "title": "Moonshot AI 發布 Kimi-K3.1-Pro 開源多模態模型",
+     "tags": [
+      "開源模型",
+      "多模態",
+      "長上下文"
+     ],
+     "summary": "Moonshot AI 推出開源多模態 Agent 模型 Kimi K3.1 Pro，採用 2.8T 參數的 Mixture-of-Experts（MoE）架構，具備 100 萬 token 的上下文視窗。官方宣稱其在程式碼編寫、金融研究與 Agent 任務的準確度上有顯著提升，並使用 Gated DeepSeek Sparse Attention 以優化長上下文建模。",
+     "key_points": [
+      "2.8T 總參數、104B 啟動參數的 MoE 架構",
+      "支援 100 萬 token 超長上下文",
+      "原生多模態（支援文字與圖像）"
+     ],
+     "how_to_use": "跟你的工作關係不大。雖然其評測表現亮眼，但 2.8T 總參數的規模無法在你的 Windows 本機環境或免費 Ollama 執行；且作為 Hugging Face 上的開源模型，你需要龐大硬體資源才能跑起來，無法直接作為輕量工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c88",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 6966,
+      "downloads": 3281210,
+      "trending_score": 152,
+      "likes_delta": 66
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen3.8-Flash-Next 預覽版釋出，改進混合注意力機制",
+     "tags": [
+      "模型架構",
+      "Qwen",
+      "開源模型"
+     ],
+     "summary": "阿里巴巴釋出 Qwen3.8-Flash-Next 實驗性預覽版，展示 Qwen4 的底層架構革新。引入了微區塊級別的 Qwen Sparse Attention（QSA）、Gated Residual 機制以及 N-gram 嵌入，旨在兼顧長上下文處理的低延遲與參數擴展的記憶體效率。",
+     "key_points": [
+      "以 QSA 取代部分傳統注意力機制以降低長上下文延遲",
+      "採用 Gated Residual 提升深層模型訓練穩定性",
+      "透過 N-gram 嵌入優化記憶體受限時的參數擴展效率"
+     ],
+     "how_to_use": "跟你的工作關係不大。這主要是架構層面的預覽版與底層研究，現階段沒有直接提供讓你改一行設定就能在 Windows 執行的簡單腳本或量化版本，對你的個人專案或資料分析工作幫助有限。",
+     "fallback": false
+    },
+    {
+     "ref": "c90",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 19634,
+      "downloads": 7232703,
+      "trending_score": 323,
+      "likes_delta": 64
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 登場，主打長跨度 Agent 任務與視覺理解",
+     "tags": [
+      "Qwen",
+      "視覺語言模型",
+      "Agent 執行"
+     ],
+     "summary": "Qwen 家族推出全新 3.8 世代的密集模型 Qwen3.8-27B。官方宣稱其在程式碼編寫、專業工作與長期 Agent 任務上有全面提升，具備自主規劃、彈性思考控制（Thinking mode），並原生支援圖文與長達數小時的影片理解。",
+     "key_points": [
+      "27B 參數規模的密集型視覺語言模型",
+      "內建彈性思考控制（可透過參數調整推理深度與保留思考過程）",
+      "強化的自主規劃與環境回饋處理能力，提升 Agent 任務完成率"
+     ],
+     "how_to_use": "跟你的工作關係不大。27B 的參數規模在你的 Windows 開發環境中，如果沒有獨立的高階顯示卡，很難順暢地透過本機 Ollama 跑起來；且目前缺乏直接串接 Gemini 免費方案的替代性，現階段不適合納入你的 LangGraph 專案。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+     "metrics": {
+      "likes": 3143,
+      "downloads": 16693,
+      "trending_score": 2109,
+      "likes_delta": 1945
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic"
+      }
+     ],
+     "title": "DeepSeek-V4-Pro-Qwen3.5-9B 社群微調模型",
+     "one_liner": "社群釋出基於 Qwen3.5-9B 的微調版本，獲得高度關注與下載量。",
+     "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+     "fallback": false
+    },
+    {
+     "ref": "c83",
+     "source": "hf_models",
+     "id": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+     "metrics": {
+      "likes": 2697,
+      "downloads": 1366370,
+      "trending_score": 117,
+      "likes_delta": 77
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF"
+      }
+     ],
+     "title": "Qwen3.8-27B GGUF 量化版本釋出",
+     "one_liner": "ISTA-DASLab 提供 Qwen3.8-27B 的 GGUF 格式，方便社群進行本地載入與測試。",
+     "url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+     "fallback": false
+    },
+    {
+     "ref": "c89",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-Omni-2B",
+     "metrics": {
+      "likes": 505,
+      "downloads": 18705,
+      "trending_score": 126,
+      "likes_delta": 66
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B"
+      }
+     ],
+     "title": "LiquidAI 推出 LFM3-Omni-2B 輕量模型",
+     "one_liner": "LiquidAI 發布 2B 參數的輕量多模態模型 LFM3-Omni-2B。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
+     "fallback": false
+    },
+    {
+     "ref": "c99",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5516,
+      "downloads": 348914,
+      "trending_score": 170,
+      "likes_delta": 47
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 釋出",
+     "one_liner": "DeepSeek 釋出 V4.1 Flash 系列的更新版本，維持一定的下載與社群熱度。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2611.14210",
+     "metrics": {
+      "upvotes": 74,
+      "github_stars": 0
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.14210"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.14210"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/TheQuantumGOAT/Tree-Ising"
+      }
+     ],
+     "title": "Tree-Ising：用位元級 Ising 優化直接修復模型推理死循環",
+     "tags": [
+      "模型修復",
+      "權重優化",
+      "離散優化",
+      "開源論文"
+     ],
+     "summary": "傳統使用 Agent 修改模型權重進行修復需要消耗大量 Token 與 API 請求。Tree-Ising 將模型修復轉化為稀疏離散優化問題（QUBO/Ising），直接在 GPU 上透過模擬退火或量子啟發模擬分歧演算法，針對模型 BF16 權重進行位元級的符號翻轉與指數偏移。實驗顯示，Tree-Ising 在修復 Qwen3.5-0.8B 和 2B 的推理迴圈問題時，僅需 4 次前向傳遞與 0 個 LLM Token，在 MATH-500 和 GSM8K 上的表現超越了 Agent 直接修改的成果，且修改的權重數量減少 13% 至 17%。",
+     "key_points": [
+      "將模型權重修復轉化為位元級 QUBO 離散優化問題，無需梯度訓練",
+      "零 LLM Token 消耗且僅需 4 次前向傳遞，退火演算法 GPU 成本約 0.9 美元",
+      "在 Qwen3.5-2B 上將 GSM8K 貪婪解準確率從 21.6% 提升至 69.4%"
+     ],
+     "how_to_use": "這項技術屬於底層的模型權重微調與修復，跟你的 LangGraph 流程或日常自動化沒有直接關係。不過，如果你在本地用 Ollama 執行 Qwen3.5 等小模型，並發現模型常卡在特定邏輯死循環（Reasoning Loops）時，這項研究提供了一種不必重新訓練、也不用靠 Prompt 硬擋的修復思路，值得關注後續是否有開源工具整合進模型轉檔流程。",
+     "fallback": false
+    },
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2611.14320",
+     "metrics": {
+      "upvotes": 48,
+      "github_stars": 7
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.14320"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.14320"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/yukyeongleee/wikitrace"
+      }
+     ],
+     "title": "WikiTrace：具備證據連結的 Agent 記憶機制，減少錯誤經驗干擾",
+     "tags": [
+      "Agent記憶",
+      "記憶退化",
+      "軌跡追溯",
+      "LangGraph設計模式"
+     ],
+     "summary": "LLM Agent 透過將過去經驗歸納為簡短教訓以改善表現，但常因誤用或汲取錯誤教訓而產生「記憶引發的退化」（Memory-Induced Degradation）。WikiTrace 提出一種證據連結記憶機制，將每個簡短洞見同時與其原始軌跡的成功/失敗摘要及原始 Trajectory 本身連結。當 Agent 執行新任務時，若遇到細節不足、洞見衝突或源自失敗任務的教訓，能透過工具向下一層追溯原始軌跡以補充資訊或修正洞見，大幅降低盲目信任錯誤記憶的機率。",
+     "key_points": [
+      "解決 Agent 因錯誤或模糊經驗導致在簡單任務上反而失敗的記憶退化問題",
+      "採用三層結構記憶：簡明洞見 -> 軌跡摘要 -> 原始執行 Trajectory",
+      "Agent 可以在執行期下鑽（Descend）驗證記憶背景，而非無條件信任洞見"
+     ],
+     "how_to_use": "這非常適合引入你的 LangGraph 架構中。當你建構長期運行的資料處理或爬蟲 Agent 時，若有引入記憶庫（Memory），常會因為汲取到舊的失敗經驗而導致新任務出錯。你可以在 LangGraph 中設計一個「記憶驗證」節點：記憶檢索時不只抓取教訓文字，還要帶上原本執行的 Log 連結。當 LLM 發現資訊不足或決策衝突時，呼叫工具回溯原始 Log，避免 Agent 被錯誤經驗帶偏。",
+     "fallback": false
+    },
+    {
+     "ref": "c108",
+     "source": "hf_papers",
+     "id": "2611.10649",
+     "metrics": {
+      "upvotes": 20,
+      "github_stars": 89
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.10649"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.10649"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/huawei-csl/MACaQ"
+      }
+     ],
+     "title": "MACaQ：低顯存且模型無關的高速 W4A4 激活量化技術",
+     "tags": [
+      "模型量化",
+      "MXFP4",
+      "顯存優化",
+      "推論加速"
+     ],
+     "summary": "權重與激活值量化（W4A4）能大幅降低模型推論成本，但現有方法通常需要昂貴的優化與跨層傳播。MACaQ 提出一種 MXFP4 Post-Training 量化方法，將每個線性層視為獨立單元處理。它在線上對每層激活值施加 Channel Scale 與 Block-Hadamard 變換，並將逆變換吸收進權重中，實現一次只需載入一層到記憶體中的流式量化。此外，MACaQ 導入 Flip-Refinement 貪婪座標下降法來改進 FP4 編碼精度。實驗顯示在 Qwen3-32B 上推論額外開銷僅 2.3%，且 122B 參數模型僅需 32.5GB GPU RAM 即可在 64 分鐘內完成量化。",
+     "key_points": [
+      "獨立處理每個線性層，實現一次僅需載入一層的高效流式量化",
+      "提出 Flip-Refinement 座標下降法，優化 FP4 鄰近代表值的編碼精度",
+      "量化 122B 模型僅需 32.5GB 顯存與 64 分鐘，vLLM 上推論開銷僅 2.3%"
+     ],
+     "how_to_use": "這項技術主要適用於底層模型部署與推論框架（如 vLLM 或 Ollama 的底層）。雖然你日常是在 Windows 上使用 Ollama 或 Gemini API，不需要親自實作 Post-Training 量化演算法，但這項技術能讓未來大參數模型（如 32B~120B）在消費級 GPU 上的 W4A4 量化推論變得更普及。你可以持續留意 Ollama 後續是否整合此類流式量化成果，讓你在本機環境能順暢執行更高參數量的模型。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2611.14309",
+     "metrics": {
+      "upvotes": 25,
+      "github_stars": 8
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.14309"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.14309"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mmdm-benchmark/mmdm"
+      }
+     ],
+     "title": "MMDM：針對單次前向傳遞決策模型的評測基準",
+     "one_liner": "提出評估 System-1 結構化決策模型的基準，測試模型在單次前向傳遞中處理長上下文與 complex 選項的能力。",
+     "url": "https://huggingface.co/papers/2611.14309",
+     "fallback": false
+    },
+    {
+     "ref": "c109",
+     "source": "hf_papers",
+     "id": "2611.07464",
+     "metrics": {
+      "upvotes": 20,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.07464"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.07464"
+      }
+     ],
+     "title": "FINCOSMOS：開放網路環境下的金融 Agent 評測框架",
+     "one_liner": "針對開放網路金融 Agent 推出評測框架，著重檢測無聲失敗、未驗證數據與未來數據洩漏等真實挑戰。",
+     "url": "https://huggingface.co/papers/2611.07464",
+     "fallback": false
+    },
+    {
+     "ref": "c113",
+     "source": "hf_papers",
+     "id": "2611.03142",
+     "metrics": {
+      "upvotes": 12,
+      "github_stars": 21
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.03142"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.03142"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/jianke0604/DepthGraft"
+      }
+     ],
+     "title": "DepthGraft：透過階層式跨層 KV 重建優化深層 LLM 結構",
+     "one_liner": "利用跨層 KV 重建創造直接梯度路徑，解決 Pre-LN 深層模型資訊稀釋問題並維持低記憶體開銷。",
+     "url": "https://huggingface.co/papers/2611.03142",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "anthropics/skills",
+     "metrics": {
+      "stars": 193130,
+      "stars_today": 1032,
+      "stars_delta": 808
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/anthropics/skills"
+      }
+     ],
+     "title": "Anthropic 官方 Agent 技能庫",
+     "tags": [
+      "Claude",
+      "Agent Skills",
+      "提示詞工程"
+     ],
+     "summary": "此專案包含 Anthropic 官方實作的 Claude 技能（Skills），是一組包含指令、腳本與資源的資料夾，能讓 Claude 動態載入以提升特定任務的表現。內容涵蓋創意設計、技術開發、企業通訊以及文件處理（如 docx、pdf、pptx、xlsx 的底層編輯技能），旨在展示 Agent 技能系統的各種可能性與設計模式。",
+     "key_points": [
+      "由 Anthropic 開發的官方 Agent 技能示範庫",
+      "包含各領域的自包含技能資料夾與 SKILL.md 說明",
+      "支援透過 Claude Code 外掛程式市場或直接指令安裝"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為你目前主要使用 Gemini 免費方案與本機 Ollama，沒有使用 Claude 系列模型或 Claude Code，因此無法直接執行此專案的插件。不過，你可以瀏覽這些開源的 SKILL.md 檔案與結構，作為自己用 Python 開發 LangGraph 時設計 Agent 提示詞與模組化任務指引的架構參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c37",
+     "source": "github_trending",
+     "id": "ZhuLinsen/daily_stock_analysis",
+     "metrics": {
+      "stars": 70237,
+      "stars_today": 278,
+      "stars_delta": 681
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis"
+      }
+     ],
+     "title": "股票智能分析系統：多市場 AI 決策與自動化推送",
+     "tags": [
+      "Python",
+      "自動化",
+      "股票分析",
+      "Gemini"
+     ],
+     "summary": "這是一個基於 AI 大模型的智能分析系統，支援 A 股、美股、台股等多市場的自選股分析，能每日自動生成並推播「決策仪表盘」到多種通訊軟體。專案內建多種免費行情源與 15 種內建策略，支援 GitHub Actions、Docker、本地定時任務與 FastAPI 服務，並相容 Gemini、Ollama 等多種 AI 模型。",
+     "key_points": [
+      "整合多市場行情與 AI 智能分析，產出買賣點位與風險警報",
+      "支援 GitHub Actions 與本地定時任務進行自動化推送",
+      "相容 Gemini API 與 Ollama 本地模型，提供彈性的 AI 選擇"
+     ],
+     "how_to_use": "你可以利用內建的 Python 環境與免費的 Gemini API Key，透過 GitHub Actions 或本地執行，自動蒐集並分析台股或美股的資料，將結果自動化產出。這非常適合用來練習結合排程、資料蒐集與 LLM 推論的自動化流程，並作為個人投資資料分析的日常輔助工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c39",
+     "source": "github_trending",
+     "id": "browser-use/browser-use",
+     "metrics": {
+      "stars": 120741,
+      "stars_today": 172,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/browser-use/browser-use"
+      }
+     ],
+     "title": "Browser Use：開源網頁操作 Agent 框架",
+     "tags": [
+      "Python",
+      "瀏覽器 Agent",
+      "自動化"
+     ],
+     "summary": "這是開源的瀏覽器自動化 Agent 專案，讓模型能透過寫 Python 程式碼、在常駐 REPL 與 Chrome DevTools Protocol（CDP）上直接操作真實瀏覽器。支援在本地或雲端執行，能處理複雜的網頁互動、尋找預約空檔、處理驗證碼等任務，並支援任意 LLM。",
+     "key_points": [
+      "透過模型寫 Python 與 CDP 協議直接控制真實瀏覽器",
+      "提供 Python 函式庫，可在本地開發環境中整合",
+      "官方建議明確鎖定版本（如 `==1.0.2`）以確保 API 穩定"
+     ],
+     "how_to_use": "非常適合用在你的自動化與爬蟲需求上。你可以在 Windows 環境下透過 pip 安裝，並將其與你的本地 Ollama 或 Gemini 串接，讓 Agent 幫你自動化處理需要點擊、填表的繁雜網頁蒐集工作。不過專案版本變動較快，建議嚴格依照官方建議鎖定版本安裝。",
+     "fallback": false
+    },
+    {
+     "ref": "c54",
+     "source": "github_search",
+     "id": "shanselman/gputaskman",
+     "metrics": {
+      "stars": 2016,
+      "forks": 99,
+      "stars_delta": 344
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/shanselman/gputaskman"
+      }
+     ],
+     "title": "gputaskman：專為 Windows 與 GPU 設計的 htop 終端監控工具",
+     "tags": [
+      "Windows",
+      "GPU 監控",
+      "Python",
+      "硬體工具"
+     ],
+     "summary": "gputaskman 是一套針對 Windows 與 Linux、macOS 的終端機監控工具，旨在深入查看 GPU 內部實際運作的負載，而不只是看整體 VRAM 佔用率。它能將每支程式的 GPU 記憶體與運算引擎活動，對應到載入中的執行階段、模型檔案及 LLM 緩衝區細項，協助釐清模型權重或 KV 快取實際消耗的狀況。專案支援 PyPI 安裝或 Windows 免安裝可攜版本，對本機執行 AI 模型與開發的開發者來說相當實用。",
+     "key_points": [
+      "專注於本機 GPU 負載與模型內部消耗細項，如模型權重與 KV 快取",
+      "支援 Windows、Linux/WSL 與 macOS，具備終端機 UI 介面",
+      "提供 PyPI 工具安裝或 Windows 獨立可攜 ZIP 封包，免 Python 環境也能直接執行"
+     ],
+     "how_to_use": "你可以直接透過 PowerShell 使用 `uv tool install gputaskman` 或下載 Windows 獨立版本來執行。當你在本機使用 Ollama 或執行 PyTorch 模型時，它能幫助你即時監控 Windows 上的 GPU 資源分配與記憶體佔用，非常適合用來排查本機 AI 開發環境的效能瓶頸。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c32",
+     "source": "github_trending",
+     "id": "homeassistant-ai/ha-mcp",
+     "metrics": {
+      "stars": 7365,
+      "stars_today": 645,
+      "stars_delta": 712
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/homeassistant-ai/ha-mcp"
+      }
+     ],
+     "title": "ha-mcp",
+     "one_liner": "透過 Claude 或 ChatGPT 等 AI 助理來設定與自動化 Home Assistant 智慧家庭。",
+     "url": "https://github.com/homeassistant-ai/ha-mcp",
+     "fallback": false
+    },
+    {
+     "ref": "c36",
+     "source": "github_trending",
+     "id": "shadcn/improve",
+     "metrics": {
+      "stars": 10873,
+      "stars_today": 361,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/shadcn/improve"
+      }
+     ],
+     "title": "improve",
+     "one_liner": "使用高階模型來審查程式碼庫，並為低階模型撰寫可執行的執行計畫。",
+     "url": "https://github.com/shadcn/improve",
+     "fallback": false
+    },
+    {
+     "ref": "c41",
+     "source": "github_trending",
+     "id": "opensandbox-group/OpenSandbox",
+     "metrics": {
+      "stars": 17205,
+      "stars_today": 97,
+      "stars_delta": 54
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/opensandbox-group/OpenSandbox"
+      }
+     ],
+     "title": "OpenSandbox",
+     "one_liner": "為 AI Agent 設計的安全、快速且具擴充性的 Sandbox 執行環境。",
+     "url": "https://github.com/opensandbox-group/OpenSandbox",
+     "fallback": false
+    },
+    {
+     "ref": "c42",
+     "source": "github_trending",
+     "id": "shy3130/tick-stock-panel",
+     "metrics": {
+      "stars": 7607,
+      "stars_today": 97,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/shy3130/tick-stock-panel"
+      }
+     ],
+     "title": "tick-stock-panel",
+     "one_liner": "自托管的 A 股量化工作台，支援 LLM 驅動策略定制、個股分析與回測。",
+     "url": "https://github.com/shy3130/tick-stock-panel",
+     "fallback": false
+    },
+    {
+     "ref": "c76",
+     "source": "github_search",
+     "id": "gogoymh/auto-ontology-mcp",
+     "metrics": {
+      "stars": 368,
+      "forks": 51,
+      "stars_delta": 62
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/gogoymh/auto-ontology-mcp"
+      }
+     ],
+     "title": "auto-ontology-mcp",
+     "one_liner": "將語意層與個人知識庫轉為 MCP 服務器，無需 LLM API key 即可使用。",
+     "url": "https://github.com/gogoymh/auto-ontology-mcp",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c54",
+  "source": "github_search",
+  "id": "shanselman/gputaskman",
+  "metrics": {
+   "stars": 2016,
+   "forks": 99,
+   "stars_delta": 344
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/shanselman/gputaskman"
+   }
+  ],
+  "title": "使用 gputaskman 監控 Windows 本機 LLM 與 GPU 記憶體分配",
+  "why": "你在 Windows 跑本機 Ollama 時，可用它像 htop 般查看 GPU 記憶體被模型權重或 KV cache 佔用狀況，優化本機 Agent 資源。",
+  "steps": [
+   "在 PowerShell 執行 `uv tool install gputaskman`（或 `pipx install gputaskman`）進行安裝。",
+   "輸入 `gputaskman` 啟動監控介面。"
+  ],
+  "success_check": "終端機成功顯示文字 UI 介面，並列出各程序的 GPU 記憶體與引擎活動狀況。",
+  "fallback": false
+ },
+ "warnings": []
+}
