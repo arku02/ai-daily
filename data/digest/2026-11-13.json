@@ -1,0 +1,776 @@
+{
+ "date": "2026-11-13",
+ "generated_at": "2026-11-13T00:45:45Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 22,
+ "tldr": [
+  "Google 推出全新 Gemini 4 Hydrogen 模型，主打低成本與強大的複雜問題拆解與多模組支援能力。",
+  "GitHub 爆紅開源專案與 Agent Skills 工具持續增長，強調自動化開發與安全防護機制的整合。",
+  "AI Agent 在各產業的應用與合規受到關注，開發者更聚焦於實用的開源工具與評測架構。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c6",
+     "source": "hn",
+     "id": "50456791",
+     "metrics": {
+      "points": 553,
+      "comments": 157
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+      },
+      {
+       "label": "HN 討論（553 分）",
+       "url": "https://news.ycombinator.com/item?id=50456791"
+      }
+     ],
+     "title": "Google 推出 Gemini Decisions API 與 Decision 1 模型",
+     "tags": [
+      "Gemini",
+      "API",
+      "多模態",
+      "Agent 路由"
+     ],
+     "summary": "Google DeepMind 推出了 Gemini Decisions API 與全新的 Gemini Decision 1 模型，專為快速的封閉式決策（closed-set decisions）設計。該 API 允許開發者在單次前向傳遞中評估最多 1,000 個是非題、選擇題或量規評分問題，支援文字、圖片、音訊、視訊和 PDF 等多模態輸入（最高 256K 內容）。根據官方宣稱，端到端延遲僅需 150-250 毫秒，計費方式為每 100 萬輸入 Token 0.10 美元且不收取輸出 Token 費用。",
+     "key_points": [
+      "採用全新 Gemini Decision 1 模型，針對工具選擇、政策檢查與模型路由等有界選擇設計。",
+      "單次輸入可處理多模態檔案並回答最多 1,000 個獨立問題，不進行逐 Token 解碼。",
+      "延遲表現優異（150-250 ms），官方宣稱比 Interactions API 更具成本效益。"
+     ],
+     "how_to_use": "你可以利用你目前擁有的 Gemini 免費 API Key 在 Google AI Studio 進行測試。在 LangGraph 架構中，若需要做快速的路由判斷（例如決定下一步要呼叫哪個工具、檢查資料品質或評估檢索結果），這支 API 非常適合用來取代傳統逐字生成的 LLM 呼叫，能有效降低延遲並省下 Token 成本。",
+     "fallback": false
+    },
+    {
+     "ref": "c3",
+     "source": "hn",
+     "id": "50458900",
+     "metrics": {
+      "points": 661,
+      "comments": 683
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+      },
+      {
+       "label": "HN 討論（661 分）",
+       "url": "https://news.ycombinator.com/item?id=50458900"
+      }
+     ],
+     "title": "聯合航空禁止 AI Agent 代客預訂機票",
+     "tags": [
+      "AI Agent",
+      "資安風險",
+      "產業動態"
+     ],
+     "summary": "聯合航空宣佈禁止第三方 AI Agent 代表旅客進行機票預訂與行程管理，官方指出這是基於資安風險以及聯邦法規考量。聯合航空表示，將帳號憑證（如付款資訊）交給第三方 AI 助理可能導致敏感資料外洩、非預期消費或哩程遭使用，且自動化簽到可能違反確認行李無違禁品的聯邦規定。航空分析師認為，此舉也反映航空公司希望掌控預訂流程並避免 AI 機器人搜尋帶來的額外成本。",
+     "key_points": [
+      "聯合航空禁止第三方 AI Agent 直接替旅客訂票及管理預訂。",
+      "官方理由包含資安風險、帳號憑證外洩疑慮以及聯邦法規限制。",
+      "其他部分航空業者對 AI 採取不同態度，例如西南航空允許 ChatGPT 用戶檢視航班庫存。"
+     ],
+     "how_to_use": "這則新聞跟你的直接開發工作關係不大，因為你主要在做資料分析與內部自動化。但它點出了目前企業對第三方 AI Agent 的防禦心態與資安顧慮，當你在設計內部自動化流程（如自動化簽核或串接外部 API 時），也必須考量帳號憑證授權與資安政策的邊界。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c125",
+     "source": "rss",
+     "id": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google DeepMind",
+       "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
+      }
+     ],
+     "title": "Gemini 4 Hydrogen 發表",
+     "one_liner": "來源資料未提供具體內容與功能細節。",
+     "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+     "fallback": false
+    },
+    {
+     "ref": "c130",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/"
+      }
+     ],
+     "title": "聯合航空封鎖 AI Agent 訂票",
+     "one_liner": "聯合航空基於資安風險，宣佈禁止客戶使用 AI Agent 預訂機票與管理預訂。",
+     "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+     "fallback": false
+    },
+    {
+     "ref": "c2",
+     "source": "hn",
+     "id": "50456631",
+     "metrics": {
+      "points": 965,
+      "comments": 263
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://github.com/aws/aws-emulator"
+      },
+      {
+       "label": "HN 討論（965 分）",
+       "url": "https://news.ycombinator.com/item?id=50456631"
+      }
+     ],
+     "title": "AWS 模擬器專案",
+     "one_liner": "來源資料僅有標題與討論指標，無詳細功能介紹。",
+     "url": "https://github.com/aws/aws-emulator",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c82",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 19744,
+      "downloads": 7094218,
+      "trending_score": 357,
+      "likes_delta": 110
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 開源視覺語言模型發布",
+     "tags": [
+      "Qwen",
+      "開源模型",
+      "視覺語言"
+     ],
+     "summary": "Qwen 團隊推出 Qwen3.8-27B，是 Qwen3.8 系列中的 27B 佈署友善密集模型。官方宣稱其在程式碼、專業工作、研究與長序列 Agent 任務上有全面提升，具備強化的自主規劃與環境回饋處理能力。此模型原生支援圖文與影片理解，預設開啟思考模式（Thinking mode），並可透過參數調整推理深度與保留歷史推理脈絡。",
+     "key_points": [
+      "具備 27B 參數的密集型架構，原生支援視覺語言理解（含圖表與長影片）。",
+      "官方宣稱強化 Agent 執行能力，能更穩定處理複雜的多步驟任務。",
+      "支援靈活的思考控制，可自訂推理深度或依需求關閉思考模式。"
+     ],
+     "how_to_use": "由於這是一顆 27B 的模型，對於只有本機 Ollama 且沒有高階 GPU 的 Windows 開發環境來說，直接在本機完整跑 27B 較為吃力。不過它支援 vLLM 等框架，若未來有機會透過 API 呼叫，其強化的 Agent 規劃與環境回饋處理能力，非常適合接在 LangGraph 中擔任複雜多步驟自動化或程式碼編寫的核心決策角色。",
+     "fallback": false
+    },
+    {
+     "ref": "c90",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 1696,
+      "downloads": 89946,
+      "trending_score": 149,
+      "likes_delta": 52
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI 推出 LFM3-1.7B 輕量邊緣模型",
+     "tags": [
+      "LiquidAI",
+      "邊緣運算",
+      "輕量模型"
+     ],
+     "summary": "LiquidAI 發布 LFM3-1.7B，這是一款基於全新三混合架構的 1.73B 參數文字模型，專為本機 Agent 與工具調用設計。官方宣稱其針對 Hermes Agent 等 Agent 框架進行後訓練，擁有 256K 的上下文窗口。由於僅有 1.7B 大小、4-bit 量化下僅需約 1GB 記憶體，非常適合在筆電或邊緣設備上執行。",
+     "key_points": [
+      "採用三混合架構，具備 256K 超長上下文窗口與多國語言能力。",
+      "針對本機 Agent、工具調用與結構化輸出進行優化，適合快速單 GPU 微調。",
+      "提供 GGUF 格式，支援 Ollama、llama.cpp 等本機執行工具。"
+     ],
+     "how_to_use": "這顆模型非常適合你的 Windows 開發環境！它有提供 GGUF 格式，能直接下載並透過本機 Ollama 運行。1.7B 的輕量特性對個人專案很友善，你可以將它接進 LangGraph 中，用來處理不需要過度複雜推理的內部流程自動化、輕量文件處理或結構化輸出解析，免付費且完全在本地執行。",
+     "fallback": false
+    },
+    {
+     "ref": "c100",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 1975,
+      "downloads": 37486,
+      "trending_score": 221,
+      "likes_delta": 40
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      }
+     ],
+     "title": "Moonshot AI 開發之 Kimi K3.1 Pro 旗艦模型",
+     "tags": [
+      "Kimi",
+      "多模態",
+      "開源權重"
+     ],
+     "summary": "Moonshot AI 發布 Kimi K3.1 Pro，這是一款開源權重的原生多模態 Agent 模型，也是 K3 系列中規模達 3T 級別的旗艦模型。透過大規模聯合強化學習訓練，具備 100 萬 token 上下文窗口，在程式碼編寫、金融研究與事實準確性等 Agent 能力上有顯著改進，採用混合專家模型（MoE）架構。",
+     "key_points": [
+      "總參數達 2.8T（啟用 104B），具備 100 萬 token 的超長上下文窗口。",
+      "原生多模態設計，支援文字與圖片輸入，採用 Gated DeepSeek Sparse Attention 架構以提升長上下文效率。",
+      "在多項程式碼與 Agent 評測基準上表現亮眼。"
+     ],
+     "how_to_use": "由於該模型規模極大（2.8T 參數），無法在你的 Windows 本機或免費環境中直接執行，跟你的現有硬體與工具鏈關係不大。但它在 Terminal-Bench 與各項 Agent 評測上的數據，適合作為評估當前高階 Agent 模型能力上限的產業趨勢參考。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+     "metrics": {
+      "likes": 4724,
+      "downloads": 18933,
+      "trending_score": 2912,
+      "likes_delta": 1581
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic"
+      }
+     ],
+     "title": "DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+     "one_liner": "社群釋出的混血未過濾模型，擁有 9B 參數與高社群熱度。",
+     "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+     "fallback": false
+    },
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5576,
+      "downloads": 374631,
+      "trending_score": 157,
+      "likes_delta": 60
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "one_liner": "DeepSeek 推出的 Flash 系列模型，維持高下載量與社群關注度。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "fallback": false
+    },
+    {
+     "ref": "c89",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 7021,
+      "downloads": 3193031,
+      "trending_score": 162,
+      "likes_delta": 55
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen/Qwen3.8-Flash-Next",
+     "one_liner": "Qwen3.8 系列的 Flash 快速版本，兼顧效能與下載量。",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+     "fallback": false
+    },
+    {
+     "ref": "c91",
+     "source": "hf_models",
+     "id": "NousResearch/Arete-27B",
+     "metrics": {
+      "likes": 485,
+      "downloads": 4669,
+      "trending_score": 456,
+      "likes_delta": 50
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/NousResearch/Arete-27B"
+      }
+     ],
+     "title": "NousResearch/Arete-27B",
+     "one_liner": "NousResearch 推出的 27B 規模開源模型，獲得社群關注。",
+     "url": "https://huggingface.co/NousResearch/Arete-27B",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c102",
+     "source": "hf_papers",
+     "id": "2611.13410",
+     "metrics": {
+      "upvotes": 31,
+      "github_stars": 7
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.13410"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.13410"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/air-embodied-brain/SteerDistill"
+      }
+     ],
+     "title": "SteerDistill：用閉環教師引導解決量化 Agent 決策偏差",
+     "tags": [
+      "模型量化",
+      "知識蒸餾",
+      "Agent 決策",
+      "本機推論"
+     ],
+     "summary": "低位元量化能降低 Agent 的推論成本，但量化後的模型常因忽略任務要求或環境條件而偏離正確路徑。SteerDistill 提出一種量化感知的蒸餾方法，透過全精度教師模型在學生出錯時提供引導，並結合學生執行後的反饋迭代修正，產生在地驗證過的行為修正。最後讓學生模型在修正輪次學習被引導後的預測，其餘輪次學習教師預測，完成無輔助推論。在 W4A16 測試下，平均分數比最強量化基準高出 1.67 至 2.18 分，與 BF16 差距在 1 分內，且在 τ^2-Bench 減少了 67% 的訓練 GPU 時間。",
+     "key_points": [
+      "發現量化 Agent 的失敗主因在於忽略條件導致環境轉移偏離基準",
+      "採用全精度教師閉環引導修正，並結合執行反饋進行迭代",
+      "W4A16 設定下各項評測分數逼近 BF16 全精度水準，且軌跡更短"
+     ],
+     "how_to_use": "若你在 Windows 本機使用 Ollama 跑 4-bit 量化小模型來驅動 LangGraph 流程，常會遇到工具調用格式錯誤或條件判斷失誤。這篇研究證實了量化模型偏離主要發生在特定決策輪次；雖然你目前無法直接重訓模型，但設計 LangGraph 時可以借鏡其概念：將複雜決策節點交給免費的 Gemini API 作為「教師」校正，一般節點走本機 Ollama，兼顧成本與穩定度。",
+     "fallback": false
+    },
+    {
+     "ref": "c104",
+     "source": "hf_papers",
+     "id": "2608.22237",
+     "metrics": {
+      "upvotes": 18,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2608.22237"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2608.22237"
+      }
+     ],
+     "title": "SparseRead：減少 Agent 外部內容過度讀取的稀疏讀取層",
+     "tags": [
+      "Token 優化",
+      "網路爬蟲",
+      "上下文管理",
+      "效能調校"
+     ],
+     "summary": "當 Agent 存取網頁、文件或工具回傳結果時，常直接載入完整內容，導致 Token 成本與延遲暴增，甚至稀釋關鍵資訊。SparseRead 提出一套可重複使用的讀取控制層，無需修改模型本身。它包含追蹤需求與來源覆蓋率的 Read Intent Protocol、動態決定如何定位與揭露資訊的 Adaptive Reader Backends，以及限制單一 episode 曝光量並具備完整檢視回退機制的 Budgeted Read Gate。實驗顯示最多可減少 92.9% 的 Token 消耗與 89.0% 的時間，在 97% 的設定中維持或提升了任務品質。",
+     "key_points": [
+      "免改模型架構即可插入的外部內容讀取控制層",
+      "在 Web 深度搜尋任務中減少 31% 至 43% 的 Token 與 23% 至 37% 的耗時",
+      "具備預算閘門與回退機制，避免過度讀取稀釋關鍵證據"
+     ],
+     "how_to_use": "非常適合用在你的自動化爬蟲與文件處理流程。當你在 LangGraph 中設計抓取外部網頁或 SQL 大量查詢結果的 Tool 節點時，不要直接把整包 HTML 或 raw data 丟回 State，而是參考 SparseRead 的架構：先建立一層過濾機制，僅抽取與意圖相關的片段，並設定 Token 上限，能大幅避免觸發免費 Gemini API 的配額上限。",
+     "fallback": false
+    },
+    {
+     "ref": "c108",
+     "source": "hf_papers",
+     "id": "2611.12304",
+     "metrics": {
+      "upvotes": 10,
+      "github_stars": 12
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.12304"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.12304"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mit-han-lab/EvolvingInfra"
+      }
+     ],
+     "title": "Evolving Infra：針對 Agent 特性動態調度的 LLM 推論架構",
+     "tags": [
+      "推論架構",
+      "KV Cache",
+      "系統優化",
+      "高併發"
+     ],
+     "summary": "既有的 Prefill-Decode（PD）分離推論系統難以因應 Agent 動態且多樣的負載，容易導致運算節點負載不均與重要 KV Cache 被提前置換。Evolving Infra 將計算配置與 KV 快取管理解耦，讓節點能在 prefill 與 decode 之間切換。系統利用線上規劃器根據工作負載動態調整 PD 節點比例，並透過感知 Agent 上下文管理訊號的分散式快取管理器來主導淘汰與傳輸。在 256 張 GB300 GPU 上針對 GLM-5.2 等模型測試，端到端平均延遲與 P95 TTFT 相比 NVIDIA Dynamo 分別降低最多 4.1 倍與 14 倍。",
+     "key_points": [
+      "運算配置與 KV 快取解耦，節點可靈活切換 prefill/decode 角色",
+      "利用 Agent 上下文訊號指導 KV 快取的保留與置換",
+      "P95 TTFT 延遲較 NVIDIA Dynamo 降低最高達 14 倍"
+     ],
+     "how_to_use": "這篇主要針對大規模叢集與服務底層架構，跟你在單機 Windows 環境開發個人專案的直接關係不大。但其背後的概念值得注意：Agent 在多輪對話與工具呼叫中會反覆重用 prefix context，在 LangGraph 設計多 Agent 或複雜流程時，盡量保持前面的 System Prompt 與固定架構不變，有助於本機 Ollama 命中 prompt cache，提升推論速度。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2610.40394",
+     "metrics": {
+      "upvotes": 39,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2610.40394"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2610.40394"
+      }
+     ],
+     "title": "結構化教材數學證明語料庫 TOME-Math",
+     "one_liner": "將 2,118 本大學教材轉化為保留章節結構與相依關係的 38 萬筆證明監督資料。",
+     "url": "https://huggingface.co/papers/2610.40394",
+     "fallback": false
+    },
+    {
+     "ref": "c105",
+     "source": "hf_papers",
+     "id": "2611.10193",
+     "metrics": {
+      "upvotes": 14,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.10193"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.10193"
+      }
+     ],
+     "title": "成本感知的 Prompt 自適應路由框架 PISA-E",
+     "one_liner": "利用軟分群與模型特定預測，依據提示詞動態調配單一或集成模型以平衡成本與品質。",
+     "url": "https://huggingface.co/papers/2611.10193",
+     "fallback": false
+    },
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2611.08286",
+     "metrics": {
+      "upvotes": 13,
+      "github_stars": 8
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.08286"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.08286"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/SalesforceAIResearch/Interactive-Visual-Gym"
+      }
+     ],
+     "title": "視覺互動評測環境 Interactive Visual Gym",
+     "one_liner": "透過聯合模擬可執行任務環境與人類使用者，評測即時視覺助理在閉環互動下的表現。",
+     "url": "https://huggingface.co/papers/2611.08286",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "ZhuLinsen/daily_stock_analysis",
+     "metrics": {
+      "stars": 71079,
+      "stars_today": 1294,
+      "stars_delta": 842
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis"
+      }
+     ],
+     "title": "ZhuLinsen/daily_stock_analysis：多市場股票智能分析與自動化推送系統",
+     "tags": [
+      "Python",
+      "自動化",
+      "資料分析",
+      "開源工具"
+     ],
+     "summary": "這是一個基於 AI 大模型的 A 股、港股、美股、日股、韓股及台股自選股智能分析系統。專案支援每日自動分析並推送決策儀表盤到企業微信、飛書、Telegram、Discord、Slack 或郵箱。它內建多種行情資料源與 15 種內建策略，提供 Web 與桌面工作台，並可透過 GitHub Actions 零成本、免伺服器進行快速部署。",
+     "key_points": [
+      "支援多市場數據聚合，包含台股、美股與 A 股等行情與基本面數據。",
+      "內建多種 AI 策略問股，提供買賣點位、風險警報與核心結論。",
+      "支援 GitHub Actions、Docker 及本地定時任務，配置簡單。",
+      "可對接 Gemini、Ollama 本地模型或各大主流 API。"
+     ],
+     "how_to_use": "跟你的工作關係不大，因為這是一個專注於股票市場的智能分析系統，而你的工作與資料分析和自動化流程較相關。不過，如果你對金融資料自動化蒐集與多管道推送（如整合 Telegram 或郵箱通知）感興趣，其架構與排程設計仍值得參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "addyosmani/agent-skills",
+     "metrics": {
+      "stars": 116668,
+      "stars_today": 816,
+      "stars_delta": 722
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/addyosmani/agent-skills"
+      }
+     ],
+     "title": "addyosmani/agent-skills：AI 程式碼 Agent 的生產級工程技能庫",
+     "tags": [
+      "Coding Agent",
+      "開發工具",
+      "工作流程",
+      "開源專案"
+     ],
+     "summary": "這是一個為 AI 程式碼 Agent 設計的生產級工程技能庫，將資深工程師的開發工作流程、品質閘道與最佳實踐封裝為 25 個技能與 9 個斜線指令。透過統一的 CLI 工具，它可以輕鬆安裝到 70 多種 AI Agent 中，透過自動化規格定義、程式碼編寫與測試驅動開發，確保 Agent 在整個開發生命週期中遵循嚴格的品質標準。",
+     "key_points": [
+      "封裝資深工程師的開發實踐，涵蓋規格定義、程式碼編寫、測試到審查。",
+      "提供 9 個斜線指令（如 /spec、/plan、/build、/review 等）對應開發生命週期。",
+      "支援單指令安裝到 70 多種不同的 AI Agent 當中。",
+      "提供自動化執行模式，在維持測試與驗證的前提下減少人工介入步驟。"
+     ],
+     "how_to_use": "你可以用它來規範你在 Windows 環境下使用的各類 Coding Agent。在日常編寫 Python 腳本或開發個人專案時，透過安裝如測試驅動開發（TDD）或程式碼審查等技能，讓 AI 嚴格遵循你的品質標準，提升自動產出程式碼的正確性與可維護性。",
+     "fallback": false
+    },
+    {
+     "ref": "c35",
+     "source": "github_trending",
+     "id": "NVIDIA/SkillSpector",
+     "metrics": {
+      "stars": 25702,
+      "stars_today": 297,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/SkillSpector"
+      }
+     ],
+     "title": "NVIDIA/SkillSpector：AI Agent 技能安全掃描工具",
+     "tags": [
+      "資安防護",
+      "Agent 評測",
+      "開源工具",
+      "Python"
+     ],
+     "summary": "由 NVIDIA 推出的 AI Agent 技能安全掃描器，用於在安裝前檢測 Agent 技能中的漏洞、惡意模式與安全風險。研究顯示高達 26% 的 Agent 技能包含漏洞。SkillSpector 提供兩階段分析（快速靜態分析與選配的 LLM 語意評估），支援 71 種漏洞模式與即時 CVE 查詢，協助開發者在安裝第三方技能前確保安全性。",
+     "key_points": [
+      "專門針對 AI Agent 技能進行漏洞與惡意程式碼檢測的資安工具。",
+      "支援掃描 Git 倉庫、URL、壓縮檔、目錄或單一檔案等多種格式。",
+      "具備 71 種漏洞模式與即時 CVE 資料查詢功能。",
+      "可安裝為命令列工具或整合至 MCP（Model Context Protocol）工具中。"
+     ],
+     "how_to_use": "當你在網路上收集各種 AI Agent 的外掛或 Skills 時，可以使用這套工具在 Windows 本機進行資安掃描。它能幫你擋下隱含的提示詞注入或資料外洩風險，確保引入的第三方自動化工具不會對你的本機環境或資料庫造成安全威脅。",
+     "fallback": false
+    },
+    {
+     "ref": "c41",
+     "source": "github_trending",
+     "id": "NVIDIA/SkillEvaluator",
+     "metrics": {
+      "stars": 868,
+      "stars_today": 108,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/NVIDIA/SkillEvaluator"
+      }
+     ],
+     "title": "NVIDIA/SkillEvaluator：AI Agent 技能品質與評測工具",
+     "tags": [
+      "Agent 評測",
+      "Python",
+      "自動化測試",
+      "開源專案"
+     ],
+     "summary": "NVIDIA 開源的 Agent 技能評測工具，專門用來檢查 AI 代理技能並衡量其對任務結果的影響。它結合了品質檢查、安全性掃描（搭配 SkillSpector）與即時執行比對。開發者無需引入複雜的評測程式碼，即可透過簡單的指令在本地或 CI/CD 流程中對技能進行靜態品質評分與模型輔助的 rubric 評估。",
+     "key_points": [
+      "提供無須 LLM 的決定論式品質評分與靜態檢查。",
+      "支援透過 NVIDIA Build 等 API 進行模型輔助的 rubric 深度評估。",
+      "可透過簡單指令初始化 CI 流程，自動化檢查 GitHub 或 GitLab 上的技能變更。",
+      "幫助開發者量化評估 AI Agent 技能的實際表現與有效性。"
+     ],
+     "how_to_use": "由於你對 Agent 評測與監控高度感興趣，你可以用它來評估自己開發的 LangGraph 代理工具或外掛。透過本機 Python 環境安裝後，不需花費昂貴成本即可對自製的 Agent 技能進行品質打分，作為優化提示詞或工作流程的客觀依據。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c26",
+     "source": "github_trending",
+     "id": "meta/astryx",
+     "metrics": {
+      "stars": 26529,
+      "stars_today": 1830,
+      "stars_delta": 1555
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/meta/astryx"
+      }
+     ],
+     "title": "meta/astryx",
+     "one_liner": "一個完全可自定義且專為 AI Agent 準備的開源設計系統。",
+     "url": "https://github.com/meta/astryx",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "homeassistant-ai/ha-mcp",
+     "metrics": {
+      "stars": 7687,
+      "stars_today": 714,
+      "stars_delta": 322
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/homeassistant-ai/ha-mcp"
+      }
+     ],
+     "title": "homeassistant-ai/ha-mcp",
+     "one_liner": "透過 Claude、ChatGPT 與其他 AI 助理來配置和自動化 Home Assistant。",
+     "url": "https://github.com/homeassistant-ai/ha-mcp",
+     "fallback": false
+    },
+    {
+     "ref": "c38",
+     "source": "github_trending",
+     "id": "QwenLM/qwen-code",
+     "metrics": {
+      "stars": 29808,
+      "stars_today": 151,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/QwenLM/qwen-code"
+      }
+     ],
+     "title": "QwenLM/qwen-code",
+     "one_liner": "直接在終端機中運行的開源 AI 程式碼 Agent。",
+     "url": "https://github.com/QwenLM/qwen-code",
+     "fallback": false
+    },
+    {
+     "ref": "c40",
+     "source": "github_trending",
+     "id": "mvanhorn/last30days-skill",
+     "metrics": {
+      "stars": 67444,
+      "stars_today": 112,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mvanhorn/last30days-skill"
+      }
+     ],
+     "title": "mvanhorn/last30days-skill",
+     "one_liner": "跨平台研究任何主題並綜合產出摘要的 AI Agent 技能工具。",
+     "url": "https://github.com/mvanhorn/last30days-skill",
+     "fallback": false
+    },
+    {
+     "ref": "c42",
+     "source": "github_trending",
+     "id": "davila7/claude-code-templates",
+     "metrics": {
+      "stars": 33430,
+      "stars_today": 102,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/davila7/claude-code-templates"
+      }
+     ],
+     "title": "davila7/claude-code-templates",
+     "one_liner": "Claude Code 元件的開源註冊表與 CLI，包含 Agent、指令、技能與 MCP。",
+     "url": "https://github.com/davila7/claude-code-templates",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c27",
+  "source": "github_trending",
+  "id": "ZhuLinsen/daily_stock_analysis",
+  "metrics": {
+   "stars": 71079,
+   "stars_today": 1294,
+   "stars_delta": 842
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis"
+   }
+  ],
+  "title": "用 Python 本地跑開源股票智能分析系統與 Web 介面",
+  "why": "支援 Gemini 或 Ollama，可直接用 Python 在 Windows 環境啟動並提供本地 Web 介面。",
+  "steps": [
+   "複製專案並安裝依賴：git clone https://github.com/ZhuLinsen/daily_stock_analysis.git && cd daily_stock_analysis 接著執行 pip install -r requirements.txt",
+   "複製環境變數範本並設定：將 .env.example 複製為 .env 並填入你的 Gemini 或 Ollama 相關設定",
+   "啟動本地 Web 介面：執行 python main.py --webui 並打開瀏覽器連線至 http://127.0.0.1:8000"
+  ],
+  "success_check": "順利在瀏覽器打開 Web 工作台畫面，並能看到介面與操作選項。",
+  "fallback": false
+ },
+ "warnings": []
+}
