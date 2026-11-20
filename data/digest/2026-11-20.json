@@ -1,0 +1,829 @@
+{
+ "date": "2026-11-20",
+ "generated_at": "2026-11-20T00:45:48Z",
+ "models_used": [
+  "gemini-3.8-flash",
+  "gemini-3.5-flash-lite",
+  "gemini-3.7-flash"
+ ],
+ "llm_calls": 11,
+ "tldr": [
+  "Google 正式發表 Gemini 4 Neon，並於 API 推出工具檢索功能以大幅降低 Agent 的 token 消耗。",
+  "LangChain 發布 LangSmith Tool Gateway，為 Agent 工具調用提供完善的權限驗證與追蹤稽核。",
+  "微軟開源 MarkItDown 文件轉換庫與百行迷你 Coding Agent，大幅降低資料處理與自動化落地門檻。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c1",
+     "source": "hn",
+     "id": "50552424",
+     "metrics": {
+      "points": 1013,
+      "comments": 761
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      },
+      {
+       "label": "HN 討論（1013 分）",
+       "url": "https://news.ycombinator.com/item?id=50552424"
+      }
+     ],
+     "title": "Google 發表 Gemini 4 Neon：主打長流程任務與試算表分析能力",
+     "tags": [
+      "Gemini",
+      "LLM",
+      "資料分析",
+      "基準測試"
+     ],
+     "summary": "Google 推出新模型 Gemini 4 Neon，具備 100 萬 token 上下文視窗，定價為每百萬輸入 token 3 美元（快取輸入 0.15 美元）、每百萬輸出 token 15 美元。官方宣稱該模型在內部測試中達到最低的捏造率，並在處理試算表、PDF、圖表等複雜商務與科學流程表現出色。第三方評測方面，Neon 在 Artificial Analysis 排名第 3，在評估真實 Agent 互動的 Agent Arena Index 排名第 2（評分 1336），且在 Zapier AutomationBench 等自動化評測中取得領先成績。目前已於 Google AI Studio 的 Gemini API 等管道推出。",
+     "key_points": [
+      "定價為百萬輸入 $3、百萬快取輸入 $0.15、百萬輸出 $15，支援 1M 上下文視窗。",
+      "在 Agent Arena Index 總榜排名第 2，任務中途修正能力（steerability）亦排名第 2。",
+      "針對試算表建模、金融會計及 dense 圖表閱讀（Chartography 73.5%）具備高精準度。",
+      "官方宣稱創下其內部 Antigravity 測試中最低的不實資訊生成率。"
+     ],
+     "how_to_use": "若你在 Google AI Studio 使用 Gemini API，可切換此模型來處理複雜的資料分析與報表解讀任務。例如在 LangGraph 中構建讀取大量 CSV、財務試算表或 PDF 說明的分析節點，或利用其快取優惠處理重複輸入的大型文件。",
+     "fallback": false
+    },
+    {
+     "ref": "c129",
+     "source": "rss",
+     "id": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google AI Blog",
+       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+      }
+     ],
+     "title": "Gemini API 推出 Tool Retrieval 預覽：依需求動態載入工具參數",
+     "tags": [
+      "Gemini API",
+      "Tool Calling",
+      "成本優化",
+      "LangGraph"
+     ],
+     "summary": "Google 在 Gemini Interactions API 中預覽推出 Tool Retrieval 功能，支援 Gemini 3.6 以上模型。當 Agent 連接數十或數百個工具時，傳統作法是在每次請求中傳送完整的參數結構描述（schema），導致 token 消耗飆高並增加延遲。透過這項功能，開發者只需在請求中加入 tool_search 並對工具設定 defer_loading 為 true，模型平時僅會讀取工具名稱與描述，直到需要執行該工具時才會動態拉取完整的參數結構，藉此降低成本與提升選取精確度。",
+     "key_points": [
+      "解決 Agent 工具庫膨脹時 token 消耗過高、延遲增加與選取準確率下降的問題。",
+      "設定方式為加入 tool_search 工具，並將特定工具標記 defer_loading: true。",
+      "模型預設僅保留工具名稱與簡介，觸發時才載入完整 parameter schema。",
+      "支援 Gemini 3.6 及更新版本，目前於 Interactions API 預覽發布。"
+     ],
+     "how_to_use": "當你在 LangGraph 建立掛載大量內部爬蟲、SQL 查詢或簽核 API 的工具節點時，可直接套用此模式。這能大幅壓低 Gemini API 的 input token 消耗，並避免模型因工具過多而挑錯 function。",
+     "fallback": false
+    },
+    {
+     "ref": "c136",
+     "source": "rss",
+     "id": "https://www.langchain.com/blog/langsmith-tool-gateway",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "LangChain Blog",
+       "url": "https://www.langchain.com/blog/langsmith-tool-gateway"
+      }
+     ],
+     "title": "LangSmith 發布 Tool Gateway：提供 Agent 工具調用的身分與權限控管",
+     "tags": [
+      "LangSmith",
+      "LangGraph",
+      "安全監控",
+      "Agent 治理"
+     ],
+     "summary": "LangSmith 推出 Tool Gateway 公開測試版，作為 Agent 調用外部工具的託管層。隨著 Agent 逐漸轉向事件驅動或排程觸發的長時間自動化運作，團隊需要控管工具權限與使用者身分，避免未受控的操作。Tool Gateway 與既有的 LLM Gateway 搭配，統一處理認證授權、降低開發者自建鑑權的負擔，並在 LangSmith 的 Trace 紀錄中詳細呈現每次工具呼叫的伺服器、使用者身分、執行結果與延遲，便於除錯與稽核。",
+     "key_points": [
+      "進入 Public Beta，專為無人值守或多步驟 Agent 設計的工具管理層。",
+      "統一處理每次工具調用的憑證、身分與存取控制，免除自行維護驗證邏輯。",
+      "與 LLM Gateway 整合，於 LangSmith 追蹤紀錄中完整留存工具調用狀態與稽核軌跡。"
+     ],
+     "how_to_use": "如果你在 LangGraph 開發涉及資料庫寫入或審核流程的內部自動化 Agent，可結合 LangSmith 監控工具的呼叫紀錄，不用自行在 Python 程式內硬寫複雜的存取稽核與權限紀錄邏輯。",
+     "fallback": false
+    },
+    {
+     "ref": "c149",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli"
+      }
+     ],
+     "title": "GitHub CLI 支援 Event Streams：一行指令事件驅動監聽 PR 狀態",
+     "tags": [
+      "GitHub CLI",
+      "Coding Agent",
+      "自動化",
+      "DevOps"
+     ],
+     "summary": "GitHub CLI 發布 v2.105.0，新增對 GitHub Event Streams 的預覽支援。開發者與 Agent 可以透過 gh event listen 搭配 PR 網址，以單一指令訂閱審查送出（submitted review）、狀態變更或 check suites 完成等事件，不再需要撰寫迴圈反覆輪詢（polling）。指令預設在接收到第一筆事件時輸出單行 JSON 並結束，亦可透過 --count、--follow、--timeout 及 --jq 調整監聽行為，非常容易整合至命令列腳本與自動化 Agent 中。",
+     "key_points": [
+      "gh v2.105.0 新增 gh event listen，取代傳統迴圈輪詢 PR 狀態的作法。",
+      "以單行 JSON 串流輸出事件，預設事件觸發即退出，易於嵌入自動化腳本。",
+      "支援監聽審查結果、分支變更、衝突與 CI 檢查狀態，需加入 Event Streams 預覽清單。"
+     ],
+     "how_to_use": "在 Windows 終端機或 Python 的 subprocess 中，寫 Coding Agent 時可用 gh event listen 取代 while 輪詢，當 PR 有新的 Review 或 CI 通過時立即觸發 LangGraph 下一個修正節點。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c18",
+     "source": "hn",
+     "id": "50551601",
+     "metrics": {
+      "points": 57,
+      "comments": 75
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+      },
+      {
+       "label": "HN 討論（57 分）",
+       "url": "https://news.ycombinator.com/item?id=50551601"
+      }
+     ],
+     "title": "Google Gemini 的 Tasks 個人助理功能轉為免費開放",
+     "one_liner": "Google 將 Gemini 的 Tasks 個人助理功能改為免費提供，降低個人自動化任務的門檻。",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+     "fallback": false
+    },
+    {
+     "ref": "c127",
+     "source": "rss",
+     "id": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "The Verge AI",
+       "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use"
+      }
+     ],
+     "title": "macOS 版 Gemini 應用程式支援電腦操作功能",
+     "one_liner": "Mac 版 Gemini 新增電腦操作功能，可跨本機檔案、桌面軟體與網頁執行多步驟任務。",
+     "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+     "fallback": false
+    },
+    {
+     "ref": "c160",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot"
+      }
+     ],
+     "title": "GitHub Copilot 新增 Supabase 等 8 款官方驗證 MCP 連接器",
+     "one_liner": "Copilot 預覽支援 Supabase、Box 等 8 款新 MCP 連接器，可直接串接資料庫與雲端服務。",
+     "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c85",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 20682,
+      "downloads": 6647301,
+      "trending_score": 242,
+      "likes_delta": 125
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B：兼顧視覺與長程任務的輕量開源模型",
+     "tags": [
+      "Qwen",
+      "開源模型",
+      "視覺語言模型",
+      "Agent 執行"
+     ],
+     "summary": "阿里推出 Qwen3.8 系列中的 Qwen3.8-27B，這是一款 27B 參數規模的原生視覺語言模型，支援圖片與影片理解。官方宣稱其在程式碼編寫、研究與長程 Agent 任務中有顯著提升，並具備彈性思考控制功能，思考模式預設開啟且可透過參數調整推理深度。",
+     "key_points": [
+      "27B 參數密集的原生視覺語言模型，支援圖影理解",
+      "強化的自主規劃與環境回饋處理，適合多步驟 Agent 任務",
+      "預設開啟思考模式，支援透過 reasoning_effort 與 preserve_thinking 調整",
+      "相容 Hugging Face Transformers、vLLM 與 SGLang 等常見工具堆疊"
+     ],
+     "how_to_use": "對你的 LangGraph 開發而言，這類開源模型若能在本機或遠端透過 vLLM 部署，可作為需要視覺與複雜推理的 Agent 後端。不過因 27B 規模在一般 Windows 開發環境本機執行較吃硬體，若無足夠 GPU 資源，現階段在你的環境中直接跑會比較吃力，建議關注未來是否有更小的 Quantized 版本或透過 Qwen Cloud API 使用。",
+     "fallback": false
+    },
+    {
+     "ref": "c88",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-Flash-Next",
+     "metrics": {
+      "likes": 7400,
+      "downloads": 2852539,
+      "trending_score": 50.5,
+      "likes_delta": 109
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      }
+     ],
+     "title": "Qwen3.8-Flash-Next：預覽 Qwen4 架構的混合注意力模型",
+     "tags": [
+      "Qwen",
+      "模型架構",
+      "長上下文",
+      "開源權重新聞"
+     ],
+     "summary": "Qwen 發布實驗性質的 Qwen3.8-Flash-Next，作為未來 Qwen4 架構的前導預覽。該模型引入混合注意力機制（Gated DeltaNet 與 Qwen Sparse Attention），改進長上下文延遲，並採用 Gated Residual 與 N-gram Embedding 等技術提升記憶體受限時的參數擴展效率。",
+     "key_points": [
+      "以 Qwen Sparse Attention（QSA）取代部分注意力機制，降低長上下文延遲",
+      "引入 Gated Residual 改善深層模型訓練穩定性並保持低推理開銷",
+      "採用 N-gram Embedding，讓記憶體受限的加速器能更有效率地進行參數擴展",
+      "搭配 Muon 與 AdamW 優化器調整訓練配方，省去傳統批次大小暖機"
+     ],
+     "how_to_use": "這是底層模型架構與訓練方法的技術預覽，對日常寫 LangGraph 程式或串接 API 的立即開發幫助有限，屬於值得持續追蹤的底層開源架構演進趨勢。",
+     "fallback": false
+    },
+    {
+     "ref": "c98",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 5982,
+      "downloads": 502094,
+      "trending_score": 89.5,
+      "likes_delta": 69
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017：強化推理與程式碼效能的更新",
+     "tags": [
+      "DeepSeek",
+      "開源模型",
+      "程式碼 Agent",
+      "視覺基準"
+     ],
+     "summary": "DeepSeek-V4.1-Flash-1017 是針對 DeepSeek-V4.1-Flash 的小型更新，官方宣稱在推理、程式碼編寫、Agent 任務與視覺基準上有明顯改進，同時縮短執行時間與輸出長度以降低成本。此版本未附帶 Jinja 格式對話模板，但提供 Python 參考實作與 Rust 函式庫（deepseek-recipe）供開發者解析提示詞。",
+     "key_points": [
+      "在 Terminal-Bench、DeepSWE 等程式與自動化基準上分數有所提升",
+      "降低任務執行時間與輸出長度，降低使用成本",
+      "提供包含 Python 實作（encoding.py）的 prompt encoding 資料夾，支援工具調用與思考模式",
+      "推薦採用的採樣參數包含 1M tokens 上下文視窗與大於等於 256K 的 max_tokens"
+     ],
+     "how_to_use": "若你的自動化專案或 Coding Agent 需要處理複雜的程式碼基準與工具調用，這類模型在效能與成本的權衡上很有吸引力。不過因為它沒有提供預設的對話模板，你需要參考其提供的 Python 實作來自行處理提示詞格式，才能順利接進你的 LangGraph 專案中。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c81",
+     "source": "hf_models",
+     "id": "LiquidAI/LFM3-1.7B",
+     "metrics": {
+      "likes": 2026,
+      "downloads": 119783,
+      "trending_score": 40,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      }
+     ],
+     "title": "LiquidAI/LFM3-1.7B",
+     "one_liner": "LiquidAI 推出的 1.7B 輕量開源模型。",
+     "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+     "fallback": false
+    },
+    {
+     "ref": "c86",
+     "source": "hf_models",
+     "id": "tencent/Hy4-flash",
+     "metrics": {
+      "likes": 346,
+      "downloads": 2053,
+      "trending_score": 288,
+      "likes_delta": 112
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/tencent/Hy4-flash"
+      }
+     ],
+     "title": "tencent/Hy4-flash",
+     "one_liner": "騰訊發布的 Hy4-flash 相關模型與權重檔案。",
+     "url": "https://huggingface.co/tencent/Hy4-flash",
+     "fallback": false
+    },
+    {
+     "ref": "c91",
+     "source": "hf_models",
+     "id": "moonshotai/Kimi-K3.1-Pro",
+     "metrics": {
+      "likes": 2334,
+      "downloads": 60920,
+      "trending_score": 64,
+      "likes_delta": 104
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      }
+     ],
+     "title": "moonshotai/Kimi-K3.1-Pro",
+     "one_liner": "Moonshot AI 釋出的 Kimi-K3.1-Pro 模型相關資源。",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "fallback": false
+    },
+    {
+     "ref": "c100",
+     "source": "hf_models",
+     "id": "microsoft/Aion-1.0-Instruct-2.3B",
+     "metrics": {
+      "likes": 67,
+      "downloads": 788,
+      "trending_score": 47,
+      "likes_delta": null
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B"
+      }
+     ],
+     "title": "microsoft/Aion-1.0-Instruct-2.3B",
+     "one_liner": "微軟發布的 2.3B 規模 Instruction 模型。",
+     "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c102",
+     "source": "hf_papers",
+     "id": "2611.23068",
+     "metrics": {
+      "upvotes": 35,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.23068"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.23068"
+      }
+     ],
+     "title": "Agent 自我演化卡關的真正元兇：評測解析度不足假說",
+     "tags": [
+      "Agent 評測",
+      "自我演化",
+      "架構洞察"
+     ],
+     "summary": "Agent 自我演化通常遵循「提議新工件（Prompt、技能、記憶）並挑選高分者」的循環，但在許多任務上容易停滯。本研究提出「解析度假說」（Resolution Hypothesis），指出瓶頸並非想不出更好的候選方案，而是評測雜訊過大，無法可靠分辨好壞。團隊測試了 7 種演化方法與 6 款模型（超過 1000 萬次 LLM 調用），發現在挑選工件時，現有評測辨識有用與有害工件的能力幾乎接近隨機猜測，導致錯誤代代累積；甚至不同方法間微小的勝率差距，常小於同方法重複執行的變異，許多榜單排序其實只是運氣。",
+     "key_points": [
+      "研究跨 7 種演化方法與 6 款模型，驗證演化瓶頸在於評測解析度低而非生成能力不足",
+      "挑選工件階段的評測能力接近隨機，使得有害工件在迭代中累積錯誤",
+      "方法評比中常見的數個百分點差距，往往小於相同方法跑兩次的實驗隨機誤差",
+      "呼籲未來研究重點應從產生更多候選項目，轉向建立可累積、高靈敏度的評測系統"
+     ],
+     "how_to_use": "若你在 LangGraph 中設計了「自我優化 Prompt」或「自動提煉工具記憶」的迴圈，這篇論文是個重要警訊。不要單靠一次或少數幾次回饋評分來自動替換節點的 Prompt 或邏輯，評測雜訊會讓系統越改越差。建議在 LangGraph 驗證節點導入更嚴格的多輪測試或多數決機制，確認提升顯著後才儲存新版本。",
+     "fallback": false
+    },
+    {
+     "ref": "c108",
+     "source": "hf_papers",
+     "id": "2611.17600",
+     "metrics": {
+      "upvotes": 20,
+      "github_stars": 3
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.17600"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.17600"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/eilamshapira/LightTAR"
+      }
+     ],
+     "title": "LightTAR：為多模態表格學習帶來輕量且具目標感知的降維方法",
+     "tags": [
+      "資料分析",
+      "特徵工程",
+      "多模態表格"
+     ],
+     "summary": "在結合數值、類別以及文字或圖片的多模態表格學習中，非結構化欄位通常使用預訓練編碼器抽取特徵再以 PCA 降維。然而 PCA 僅著眼於輸入特徵的變異數，容易忽略與預測目標相關的資訊。LightTAR 提出一種輕量且低成本的改進方式：利用正則化偏最小平方（PLS），同時從編碼器最後一層與中間層提取少數具目標感知的特徵，並附加到標準 PCA 特徵上。在 21 種表格模型（含樹狀集成與表格基礎模型）上的測試顯示，LightTAR 在僅增加極少運算時間的情況下，幾乎在所有 MulTaBench 資料集均提升了預測表現。",
+     "key_points": [
+      "改善非結構化特徵降維僅靠 PCA 忽略目標欄位的缺點",
+      "使用正則化 PLS 從編碼器終層與中層抽取目標感知特徵與 PCA 互補",
+      "在 21 種表格模型及幾乎所有 MulTaBench 資料集上均帶來預測準確度提升",
+      "無需修改底層編碼器或預測模型本體，可直接嵌入現有特徵處理流程"
+     ],
+     "how_to_use": "非常契合你的 pandas 資料分析工作。當你在處理包含文字描述欄位（如商品名稱、客服記錄）的 SQL 表格並準備建立分類或回歸模型時，可以在抽取文字 Embedding 後，改用 PLS 萃取幾組與 Target 相關的維度再餵給 XGBoost 等樹模型，能在不需重新微調大模型的情況下直接提升模型預測效果。",
+     "fallback": false
+    },
+    {
+     "ref": "c112",
+     "source": "hf_papers",
+     "id": "2611.24651",
+     "metrics": {
+      "upvotes": 11,
+      "github_stars": 58
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.24651"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.24651"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/agentscope-ai/Piccolo"
+      }
+     ],
+     "title": "Piccolo：透過遞迴自我改進與資料工程打造的多模態決策模型家族",
+     "tags": [
+      "多 Agent 協作",
+      "決策模型",
+      "本機模型應用"
+     ],
+     "summary": "Piccolo 是一個從 0.8B 到 27B 的多模態決策模型家族，專注於通用文字/視覺判斷、Agent 調度及資料工作流等任務。官方宣稱 Piccolo-27B 在 Decision Index Vision Full 基準以 75.59 分奪冠，Piccolo-9B 與 4B 也分別以 68.35 與 67.46 在同量級排行第一。該研究透過 Agent 進行資料分析、建構訓練資料與實驗回饋，實現遞迴自我改進。實驗發現：精準的資料策劃能讓 4B 到 9B 的模型在特定工作流抗衡 27B 模型，且訓練時連續損失下降有時會與實際離散決策準確率脫鉤。",
+     "key_points": [
+      "涵蓋 0.8B 到 27B 尺寸，在 Decision Index Vision Full 各自量級官方評測拿下第一",
+      "以多 Agent 進行資料工程與實驗驗證，構成遞迴自我改進（RSI）流程",
+      "針對特定任務精準微調資料，能讓 4B-9B 等輕量模型表現匹敵 27B 基線",
+      "發現損失函數持續降低可能反而損害離散決策準確率的現象"
+     ],
+     "how_to_use": "對習慣在 Windows 本機用 Ollama 跑中小型模型（如 4B、9B）的開發者是一大啟發。若你的 LangGraph 流程需要一個負責在多分支中做 Routing 的決策節點，這篇展示了不需要追求超大參數量模型，只要運用專屬格式的決策歷史資料進行 Targeted 微調或情境範例設計，輕量模型也能精準勝任分流決策。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c101",
+     "source": "hf_papers",
+     "id": "2611.24738",
+     "metrics": {
+      "upvotes": 112,
+      "github_stars": 41
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.24738"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.24738"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Carol-lyh/Jeveration"
+      }
+     ],
+     "title": "Jeveration：單次前向傳播的快思考決策模型圖像生成",
+     "one_liner": "將 System One 快速決策範式擴展至影像生成，透過凍結的 VLM 視覺語意於單次前向傳播中產出圖像。",
+     "url": "https://huggingface.co/papers/2611.24738",
+     "fallback": false
+    },
+    {
+     "ref": "c103",
+     "source": "hf_papers",
+     "id": "2611.21366",
+     "metrics": {
+      "upvotes": 32,
+      "github_stars": 15
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.21366"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.21366"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/lijinzhao30/ALIVE"
+      }
+     ],
+     "title": "ALIVE：支援主動監控與反饋互動的串流影片 LLM",
+     "one_liner": "透過專屬資料集與兩階段強化學習訓練，讓串流影片模型具備主動監控、任務協調與尋求反饋的互動能力。",
+     "url": "https://huggingface.co/papers/2611.21366",
+     "fallback": false
+    },
+    {
+     "ref": "c106",
+     "source": "hf_papers",
+     "id": "2611.24654",
+     "metrics": {
+      "upvotes": 22,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.24654"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.24654"
+      }
+     ],
+     "title": "CurvDelta：兼顧特定任務適應與通用能力保留的低曲率更新",
+     "one_liner": "藉由在低曲率空間限制參數更新幅度，讓 LLM 在微調或遺忘特定資料時不會破壞原有的通用能力。",
+     "url": "https://huggingface.co/papers/2611.24654",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c32",
+     "source": "github_trending",
+     "id": "microsoft/markitdown",
+     "metrics": {
+      "stars": 197033,
+      "stars_today": 434,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/microsoft/markitdown"
+      }
+     ],
+     "title": "微軟開源 MarkItDown：多格式檔案轉 Markdown 輕量工具",
+     "tags": [
+      "文件處理",
+      "RAG",
+      "Python"
+     ],
+     "summary": "微軟開源的 MarkItDown 是一款輕量級 Python 套件，專為大型語言模型與文字分析管線設計，能將多種格式檔案轉成結構化的 Markdown。支援 PDF、PowerPoint、Word、Excel、圖片、音訊、HTML、CSV/JSON/XML、ZIP 以及 YouTube 網址等格式。設計重點在於保留標題、清單、表格與連結等文件結構，提高 LLM 理解效率與 token 使用率。需注意其使用當前程序的權限執行 I/O，處理不受信任來源時需留意安全性。",
+     "key_points": [
+      "支援辦公室常見的 Word、Excel、PPT、PDF 與各類結構化資料檔案",
+      "以 Markdown 保留表格、標題與清單結構，適合作為 LLM 前置處理",
+      "支援 Python 3.10 至 3.14，可透過 pip 直接安裝使用"
+     ],
+     "how_to_use": "在你的 LangGraph RAG 或內部文件自動化流程中，可將 MarkItDown 作為預處理節點。當收到使用者的 Excel 報表或 PDF 簽核文件時，直接呼叫其 Python API 轉成乾淨的 Markdown，再餵給本機 Ollama 或 Gemini 分析，免去手動寫多套解析器與正規表達式的麻煩。",
+     "fallback": false
+    },
+    {
+     "ref": "c30",
+     "source": "github_trending",
+     "id": "HKUDS/CLI-Anything",
+     "metrics": {
+      "stars": 60555,
+      "stars_today": 898,
+      "stars_delta": 819
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/HKUDS/CLI-Anything"
+      }
+     ],
+     "title": "CLI-Anything：將現有軟體轉化為 Agent 命令列工具生態系",
+     "tags": [
+      "Agent 工具",
+      "CLI",
+      "自動化"
+     ],
+     "summary": "CLI-Anything 主張「今天的軟體服務人類，明天的使用者是 Agent」，致力於將各類應用程式包裝成 Agent 原生的命令列介面（CLI）。專案提供 CLI-Hub 管理社群建置的工具集，近期更新納入了支援 Windows/ArcPy 的 ArcGIS Pro CLI、具備持久記憶工作流的 Obsidian CLI、Joplin 筆記自動化，以及 Calibre、Rekordbox 等多種應用的 CLI harness，讓各類 Agent 能透過統一的命令列操作軟體。",
+     "key_points": [
+      "提供 cli-anything-hub 工具，可直接透過 pip 安裝並管理社群 CLI",
+      "社群持續擴充，包含 Obsidian、Joplin、ArcGIS Pro 等軟體 harness",
+      "主打不需重寫軟體 GUI，透過 CLI 讓 Agent 執行繪圖、資料庫修改與匯出"
+     ],
+     "how_to_use": "在規劃電腦操作或自動化流程時，如果你需要讓 LangGraph 代理人操作本機軟體（如 Obsidian 筆記庫或檔案整理），可先透過 CLI-Hub 尋找現成 harness，直接讓 Agent 透過命令列執行特定動作，避免直接撰寫複雜的 GUI 自動化腳本。",
+     "fallback": false
+    },
+    {
+     "ref": "c46",
+     "source": "github_trending",
+     "id": "SWE-agent/mini-swe-agent",
+     "metrics": {
+      "stars": 9860,
+      "stars_today": 84,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/SWE-agent/mini-swe-agent"
+      }
+     ],
+     "title": "mini-swe-agent v2：僅約百行 Python 的極簡 Coding Agent",
+     "tags": [
+      "Coding Agent",
+      "評測",
+      "架構設計"
+     ],
+     "summary": "由打造 SWE-bench 的 Princeton 與 Stanford 團隊所推出的 mini-swe-agent v2，反思了過往複雜架構，主張大型語言模型能力提升後不再需要龐大的工具層。其核心 Agent 類別僅約 100 行 Python 程式碼，完全不依賴模型本身的 Tool-calling 介面，僅透過 bash 與 subprocess.run 執行指令，歷史訊息採純線性追加。官方宣稱其在 SWE-bench verified 評測取得超過 74% 的成績，啟動速度優於 Claude Code。",
+     "key_points": [
+      "核心架構極簡，僅約 100 行 Python 程式碼，易於閱讀與除錯",
+      "除 bash 外無額外自訂工具，動作以 subprocess.run 獨立執行",
+      "支援 LiteLLM 與 OpenRouter，可自由抽換背後運行的語言模型"
+     ],
+     "how_to_use": "如果你想自製輕量 Coding Agent 或評測本機 Ollama 撰寫與修復程式碼的能力，mini-swe-agent 是絕佳的參考範本。你可以借用其「僅用命令列＋線性歷史」的設計思維，透過 LiteLLM 串接 Gemini 免費 API 或本機模型，快速搭建出不依賴複雜框架的自動除錯工具。",
+     "fallback": false
+    },
+    {
+     "ref": "c28",
+     "source": "github_trending",
+     "id": "google-research/paper-orchestra",
+     "metrics": {
+      "stars": 5030,
+      "stars_today": 1196,
+      "stars_delta": 749
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google-research/paper-orchestra"
+      }
+     ],
+     "title": "PaperOrchestra：Google 開源的多 Agent 論文自動化撰寫框架",
+     "tags": [
+      "多 Agent 協作",
+      "研究工具",
+      "Gemini"
+     ],
+     "summary": "PaperOrchestra 是 Google Cloud AI Research 團隊開源的多 Agent 自動化研究論文寫作框架。系統能將未結構化的前期材料（點子與實驗記錄）轉換為符合會議樣式的 LaTeX 論文。內部協調多個專屬 Agent，涵蓋大綱規劃、文獻探討檢索、章節撰寫、內容潤飾及圖表繪製等任務。專案原生支援 GEMINI_API_KEY 與 Vertex AI 配置，並提供 Python CLI 與執行腳本。",
+     "key_points": [
+      "拆解大綱、文獻檢索、內文撰寫、潤飾與繪圖等專職 Agent 協同運作",
+      "支援自動整合文獻並產生符合會議規範的 LaTeX 原始碼",
+      "環境設定原生支援 GEMINI_API_KEY，不強制綁定特定付費廠商"
+     ],
+     "how_to_use": "雖然產出學術論文與你的日常資料分析工作關係不大，但其多 Agent 協作拆解方式（大綱、撰寫、校閱、繪圖）非常適合作為 LangGraph 設計多角色管線的架構參考。加上它原生支援 Gemini API，你可以直接用手邊的免費金鑰跑跑看其 CLI 流程，觀察多步驟生成任務的 Prompt 切割技巧。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c29",
+     "source": "github_trending",
+     "id": "mvanhorn/last30days-skill",
+     "metrics": {
+      "stars": 70790,
+      "stars_today": 954,
+      "stars_delta": 790
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mvanhorn/last30days-skill"
+      }
+     ],
+     "title": "last30days-skill：跨多社群平台的網路研究技能",
+     "one_liner": "整合 Reddit、X、YouTube 與新聞網站，供 Agent 自動檢索近期話題並產生摘要。",
+     "url": "https://github.com/mvanhorn/last30days-skill",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "firecrawl/firecrawl",
+     "metrics": {
+      "stars": 204218,
+      "stars_today": 825,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/firecrawl/firecrawl"
+      }
+     ],
+     "title": "Firecrawl：整合多資料源的 Agent 爬蟲知識庫",
+     "one_liner": "提供單一 API 整合搜尋、網頁擷取與逾 550 家資料來源，作為 Agent 的資料擷取後盾。",
+     "url": "https://github.com/firecrawl/firecrawl",
+     "fallback": false
+    },
+    {
+     "ref": "c48",
+     "source": "github_trending",
+     "id": "superdesigndev/treg",
+     "metrics": {
+      "stars": 8535,
+      "stars_today": 69,
+      "stars_delta": null
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/superdesigndev/treg"
+      }
+     ],
+     "title": "treg：號稱 Agent 工具界的 OpenRouter",
+     "one_liner": "旨在為 AI Agent 提供統整各類第三方工具與 API 呼叫的集中介面。",
+     "url": "https://github.com/superdesigndev/treg",
+     "fallback": false
+    },
+    {
+     "ref": "c52",
+     "source": "github_search",
+     "id": "simplexai-labs/linger",
+     "metrics": {
+      "stars": 1452,
+      "forks": 110,
+      "stars_delta": 998
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/simplexai-labs/linger"
+      }
+     ],
+     "title": "Linger：主打完全於個人電腦執行的開源個人 Agent",
+     "one_liner": "著重模型與環境協同設計，讓本機硬體能直接順暢運作個人 AI 代理人。",
+     "url": "https://github.com/simplexai-labs/linger",
+     "fallback": false
+    },
+    {
+     "ref": "c58",
+     "source": "github_search",
+     "id": "sybil-solutions/inference-optimisation-skill",
+     "metrics": {
+      "stars": 1260,
+      "forks": 114,
+      "stars_delta": 148
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/sybil-solutions/inference-optimisation-skill"
+      }
+     ],
+     "title": "inference-optimisation-skill：本機 LLM 推論最佳化 Agent 技能",
+     "one_liner": "以爬山演算法自動微調解碼速度、KV 快取與 TTFT，提升本機模型服務效能。",
+     "url": "https://github.com/sybil-solutions/inference-optimisation-skill",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c32",
+  "source": "github_trending",
+  "id": "microsoft/markitdown",
+  "metrics": {
+   "stars": 197033,
+   "stars_today": 434,
+   "stars_delta": null
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/microsoft/markitdown"
+   }
+  ],
+  "title": "用 MarkItDown 將手邊文件一鍵轉成 LLM 友善的 Markdown",
+  "why": "微軟開源的文件轉換工具，內建轉換器完全本地運行免 API，很適合作為內部文件自動化流程或 RAG 的輸入前處理節點。",
+  "steps": [
+   "在終端機執行 pip install 'markitdown[all]' 安裝套件與所有支援格式的相依套件。",
+   "準備一份現有的 PDF、Word 或 Excel 檔案，在命令列執行 markitdown path-to-file.pdf -o document.md（路徑替換為你的檔案）。",
+   "打開產生的 document.md，檢視轉換出的文字內容。"
+  ],
+  "success_check": "成功產生 document.md 檔案，且原文件的標題、清單或表格結構已被保留並轉為對應的 Markdown 語法。",
+  "fallback": false
+ },
+ "warnings": []
+}

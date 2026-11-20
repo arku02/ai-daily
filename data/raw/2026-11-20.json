@@ -1,0 +1,5176 @@
+{
+ "date": "2026-11-20",
+ "fetched_at": "2026-11-20T00:45:36Z",
+ "sources": {
+  "github_trending": {
+   "status": "ok",
+   "count": 32,
+   "error": null
+  },
+  "github_search": {
+   "status": "ok",
+   "count": 74,
+   "error": null
+  },
+  "hf_models": {
+   "status": "ok",
+   "count": 28,
+   "error": null
+  },
+  "hf_papers": {
+   "status": "ok",
+   "count": 12,
+   "error": null
+  },
+  "hn": {
+   "status": "ok",
+   "count": 27,
+   "error": null
+  },
+  "rss": {
+   "status": "ok",
+   "count": 63,
+   "error": null
+  }
+ },
+ "warnings": [],
+ "items": [
+  {
+   "source": "github_trending",
+   "id": "obra/superpowers",
+   "title": "obra/superpowers",
+   "url": "https://github.com/obra/superpowers",
+   "summary": "An agentic skills framework & software development methodology that works.",
+   "published_at": null,
+   "metrics": {
+    "stars": 322076,
+    "stars_today": 2028,
+    "stars_delta": 762
+   },
+   "extra": {
+    "language": "Shell"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "elementalsouls/Claude-BugHunter",
+   "title": "elementalsouls/Claude-BugHunter",
+   "url": "https://github.com/elementalsouls/Claude-BugHunter",
+   "summary": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+   "published_at": null,
+   "metrics": {
+    "stars": 12519,
+    "stars_today": 1349,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "google-research/paper-orchestra",
+   "title": "google-research/paper-orchestra",
+   "url": "https://github.com/google-research/paper-orchestra",
+   "summary": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+   "published_at": null,
+   "metrics": {
+    "stars": 5030,
+    "stars_today": 1196,
+    "stars_delta": 749
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "mvanhorn/last30days-skill",
+   "title": "mvanhorn/last30days-skill",
+   "url": "https://github.com/mvanhorn/last30days-skill",
+   "summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+   "published_at": null,
+   "metrics": {
+    "stars": 70790,
+    "stars_today": 954,
+    "stars_delta": 790
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "HKUDS/CLI-Anything",
+   "title": "HKUDS/CLI-Anything",
+   "url": "https://github.com/HKUDS/CLI-Anything",
+   "summary": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+   "published_at": null,
+   "metrics": {
+    "stars": 60555,
+    "stars_today": 898,
+    "stars_delta": 819
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "firecrawl/firecrawl",
+   "title": "firecrawl/firecrawl",
+   "url": "https://github.com/firecrawl/firecrawl",
+   "summary": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
+   "published_at": null,
+   "metrics": {
+    "stars": 204218,
+    "stars_today": 825,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "microsoft/markitdown",
+   "title": "microsoft/markitdown",
+   "url": "https://github.com/microsoft/markitdown",
+   "summary": "Python tool for converting files and office documents to Markdown.",
+   "published_at": null,
+   "metrics": {
+    "stars": 197033,
+    "stars_today": 434,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "cursor/plugins",
+   "title": "cursor/plugins",
+   "url": "https://github.com/cursor/plugins",
+   "summary": "Cursor plugin specification and official plugins",
+   "published_at": null,
+   "metrics": {
+    "stars": 17558,
+    "stars_today": 384,
+    "stars_delta": 360
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "mjmirza/app-store-compliance",
+   "title": "mjmirza/app-store-compliance",
+   "url": "https://github.com/mjmirza/app-store-compliance",
+   "summary": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+   "published_at": null,
+   "metrics": {
+    "stars": 1835,
+    "stars_today": 377,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Shell"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "XiaoYouChR/Ghost-Downloader-3",
+   "title": "XiaoYouChR/Ghost-Downloader-3",
+   "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+   "summary": "The only downloader you need. 下载器的集大成者。",
+   "published_at": null,
+   "metrics": {
+    "stars": 12702,
+    "stars_today": 341,
+    "stars_delta": 553
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "google-labs-code/stitch-skills",
+   "title": "google-labs-code/stitch-skills",
+   "url": "https://github.com/google-labs-code/stitch-skills",
+   "summary": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+   "published_at": null,
+   "metrics": {
+    "stars": 10718,
+    "stars_today": 302,
+    "stars_delta": 316
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "cathrynlavery/diagram-design",
+   "title": "cathrynlavery/diagram-design",
+   "url": "https://github.com/cathrynlavery/diagram-design",
+   "summary": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+   "published_at": null,
+   "metrics": {
+    "stars": 68628,
+    "stars_today": 271,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "HTML"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "p-e-w/heretic",
+   "title": "p-e-w/heretic",
+   "url": "https://github.com/p-e-w/heretic",
+   "summary": "Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more",
+   "published_at": null,
+   "metrics": {
+    "stars": 42193,
+    "stars_today": 252,
+    "stars_delta": 218
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "openvinotoolkit/openvino",
+   "title": "openvinotoolkit/openvino",
+   "url": "https://github.com/openvinotoolkit/openvino",
+   "summary": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+   "published_at": null,
+   "metrics": {
+    "stars": 11560,
+    "stars_today": 246,
+    "stars_delta": 236
+   },
+   "extra": {
+    "language": "C++"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "Imbad0202/academic-research-skills",
+   "title": "Imbad0202/academic-research-skills",
+   "url": "https://github.com/Imbad0202/academic-research-skills",
+   "summary": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+   "published_at": null,
+   "metrics": {
+    "stars": 57761,
+    "stars_today": 244,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "jingyaogong/minimind",
+   "title": "jingyaogong/minimind",
+   "url": "https://github.com/jingyaogong/minimind",
+   "summary": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+   "published_at": null,
+   "metrics": {
+    "stars": 66856,
+    "stars_today": 238,
+    "stars_delta": 365
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "github/spec-kit",
+   "title": "github/spec-kit",
+   "url": "https://github.com/github/spec-kit",
+   "summary": "💫 Toolkit to help you get started with SDD or any other process!",
+   "published_at": null,
+   "metrics": {
+    "stars": 150698,
+    "stars_today": 221,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "toeverything/AFFiNE",
+   "title": "toeverything/AFFiNE",
+   "url": "https://github.com/toeverything/AFFiNE",
+   "summary": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+   "published_at": null,
+   "metrics": {
+    "stars": 75164,
+    "stars_today": 182,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "zhouxiaoka/autoclip",
+   "title": "zhouxiaoka/autoclip",
+   "url": "https://github.com/zhouxiaoka/autoclip",
+   "summary": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+   "published_at": null,
+   "metrics": {
+    "stars": 11216,
+    "stars_today": 126,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "FlashML-org/FreeVideo",
+   "title": "FlashML-org/FreeVideo",
+   "url": "https://github.com/FlashML-org/FreeVideo",
+   "summary": "Make videos on the computer you already own. FreeVideo runs MiniMax H3 in as little as 8 GB of VRAM and 16 GB of RAM, and adapts its acceleration path to your hardware.",
+   "published_at": null,
+   "metrics": {
+    "stars": 3430,
+    "stars_today": 118,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "SWE-agent/mini-swe-agent",
+   "title": "SWE-agent/mini-swe-agent",
+   "url": "https://github.com/SWE-agent/mini-swe-agent",
+   "summary": "The 100 line AI agent that solves GitHub issues or helps you in your command line. Radically simple, no huge configs, no giant monorepo—but scores >74% on SWE-bench verified!",
+   "published_at": null,
+   "metrics": {
+    "stars": 9860,
+    "stars_today": 84,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "nginx/nginx",
+   "title": "nginx/nginx",
+   "url": "https://github.com/nginx/nginx",
+   "summary": "The official NGINX Open Source repository.",
+   "published_at": null,
+   "metrics": {
+    "stars": 32331,
+    "stars_today": 73,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "C"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "superdesigndev/treg",
+   "title": "superdesigndev/treg",
+   "url": "https://github.com/superdesigndev/treg",
+   "summary": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+   "published_at": null,
+   "metrics": {
+    "stars": 8535,
+    "stars_today": 69,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "agentscope-ai/agentscope",
+   "title": "agentscope-ai/agentscope",
+   "url": "https://github.com/agentscope-ai/agentscope",
+   "summary": "Build and run agents you can see, understand and trust.",
+   "published_at": null,
+   "metrics": {
+    "stars": 36309,
+    "stars_today": 67,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "wshobson/agents",
+   "title": "wshobson/agents",
+   "url": "https://github.com/wshobson/agents",
+   "summary": "Plugins, agents, skills, and commands for Claude Code, Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot, and Pi, written once in Markdown and adapted to each tool by generators with validation and evals.",
+   "published_at": null,
+   "metrics": {
+    "stars": 42709,
+    "stars_today": 43,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "odoo/odoo",
+   "title": "odoo/odoo",
+   "url": "https://github.com/odoo/odoo",
+   "summary": "Odoo. Open Source Apps To Grow Your Business.",
+   "published_at": null,
+   "metrics": {
+    "stars": 55957,
+    "stars_today": 41,
+    "stars_delta": 43
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "Tracer-Cloud/opensre",
+   "title": "Tracer-Cloud/opensre",
+   "url": "https://github.com/Tracer-Cloud/opensre",
+   "summary": "The open-source agent for CI/CD reliability.",
+   "published_at": null,
+   "metrics": {
+    "stars": 13121,
+    "stars_today": 38,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "apache/airflow",
+   "title": "apache/airflow",
+   "url": "https://github.com/apache/airflow",
+   "summary": "Apache Airflow - A platform to programmatically author, schedule, and monitor workflows",
+   "published_at": null,
+   "metrics": {
+    "stars": 47562,
+    "stars_today": 23,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "phone-harness/phone-harness",
+   "title": "phone-harness/phone-harness",
+   "url": "https://github.com/phone-harness/phone-harness",
+   "summary": "let your agent control your phone",
+   "published_at": null,
+   "metrics": {
+    "stars": 5167,
+    "stars_today": 18,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "awslabs/cli-agent-orchestrator",
+   "title": "awslabs/cli-agent-orchestrator",
+   "url": "https://github.com/awslabs/cli-agent-orchestrator",
+   "summary": "Multi-agent orchestration for AI coding CLIs — Claude Code, Kiro, Codex, and more, coordinated in isolated tmux sessions",
+   "published_at": null,
+   "metrics": {
+    "stars": 1601,
+    "stars_today": 14,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "vllm-project/vllm-ascend",
+   "title": "vllm-project/vllm-ascend",
+   "url": "https://github.com/vllm-project/vllm-ascend",
+   "summary": "Community maintained hardware plugin for vLLM on Huawei Ascend",
+   "published_at": null,
+   "metrics": {
+    "stars": 3119,
+    "stars_today": 12,
+    "stars_delta": 11
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_trending",
+   "id": "pytorch/torchtitan",
+   "title": "pytorch/torchtitan",
+   "url": "https://github.com/pytorch/torchtitan",
+   "summary": "A PyTorch native platform for training generative AI models",
+   "published_at": null,
+   "metrics": {
+    "stars": 5926,
+    "stars_today": 0,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Python"
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "erkamyaman/rust-anything",
+   "title": "erkamyaman/rust-anything",
+   "url": "https://github.com/erkamyaman/rust-anything",
+   "summary": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+   "published_at": "2026-11-16T12:10:36Z",
+   "metrics": {
+    "stars": 5188,
+    "forks": 414,
+    "stars_delta": 1826
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "claude-code",
+     "cli",
+     "code-migration",
+     "codex",
+     "ffi",
+     "golang",
+     "java",
+     "javascript",
+     "mcp",
+     "migration",
+     "napi",
+     "performance",
+     "porting",
+     "pyo3",
+     "python",
+     "rewrite",
+     "ruby",
+     "rust",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "FrigadeHQ/yogurt",
+   "title": "FrigadeHQ/yogurt",
+   "url": "https://github.com/FrigadeHQ/yogurt",
+   "summary": "Private AI meeting notes that stay on your computer. A free, open-source alternative to Granola for Mac, Windows and Linux.",
+   "published_at": "2026-11-10T20:01:01Z",
+   "metrics": {
+    "stars": 2622,
+    "forks": 197,
+    "stars_delta": 230
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-meeting-assistant",
+     "ai-notetaker",
+     "electron",
+     "granola-alternative",
+     "linux",
+     "llama-cpp",
+     "local-ai",
+     "local-first",
+     "macos",
+     "mcp",
+     "meeting-minutes",
+     "meeting-notes",
+     "offline-first",
+     "open-source",
+     "privacy",
+     "speech-to-text",
+     "transcription",
+     "whisper",
+     "whisper-cpp",
+     "windows"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "agentes-chat/agentes-chat",
+   "title": "agentes-chat/agentes-chat",
+   "url": "https://github.com/agentes-chat/agentes-chat",
+   "summary": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
+   "published_at": "2026-11-09T00:50:28Z",
+   "metrics": {
+    "stars": 1758,
+    "forks": 329,
+    "stars_delta": 36
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "AGPL-3.0",
+    "topics": [
+     "agentic-ai",
+     "ai-agents",
+     "browser-automation",
+     "chat",
+     "claude",
+     "claude-code",
+     "codex",
+     "collaboration",
+     "computer-use",
+     "docker-compose",
+     "gemini",
+     "grok",
+     "human-in-the-loop",
+     "llm",
+     "mcp",
+     "multi-agent",
+     "openai",
+     "self-hosted",
+     "slack-alternative",
+     "team-chat"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "simplexai-labs/linger",
+   "title": "simplexai-labs/linger",
+   "url": "https://github.com/simplexai-labs/linger",
+   "summary": "Linger is An Open-Source Personal Agent That Runs Fully on Your PC.  We aim to break Big Tech’s grip on AI by bringing powerful local AI to everyday computers through efficient model–harness co-design, so everyone can run their own.",
+   "published_at": "2026-11-10T03:50:38Z",
+   "metrics": {
+    "stars": 1452,
+    "forks": 110,
+    "stars_delta": 998
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "topics": [
+     "agent-teams",
+     "local-llm",
+     "memory",
+     "personal-agent",
+     "proactive-agent",
+     "proactive-ai"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "sybil-solutions/inference-optimisation-skill",
+   "title": "sybil-solutions/inference-optimisation-skill",
+   "url": "https://github.com/sybil-solutions/inference-optimisation-skill",
+   "summary": "Agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, prefill, KV, startup, TTFT) on any hardware and quantization",
+   "published_at": "2026-11-16T18:40:04Z",
+   "metrics": {
+    "stars": 1260,
+    "forks": 114,
+    "stars_delta": 148
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skill",
+     "benchmarking",
+     "claude-code",
+     "inference",
+     "llm",
+     "speculative-decoding"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Dodaios/ste80-humanizer",
+   "title": "Dodaios/ste80-humanizer",
+   "url": "https://github.com/Dodaios/ste80-humanizer",
+   "summary": "STE80 Humanizer: agent skill that removes AI tells and rewrites text 80% of the way to ASD-STE100 (Simplified Technical English), the method Andrej Karpathy shared.",
+   "published_at": "2026-11-09T17:18:59Z",
+   "metrics": {
+    "stars": 981,
+    "forks": 68,
+    "stars_delta": 104
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-writing",
+     "asd-ste100",
+     "claude-code",
+     "claude-skills",
+     "codex",
+     "cursor",
+     "humanize-ai-text",
+     "humanizer",
+     "karpathy",
+     "llm",
+     "plain-language",
+     "simplified-technical-english",
+     "writing"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "huggingface/pybot",
+   "title": "huggingface/pybot",
+   "url": "https://github.com/huggingface/pybot",
+   "summary": "PyBot: a chatbot written in pure Python by a swarm of agents. No weights, no training, just rules.",
+   "published_at": "2026-11-12T11:35:13Z",
+   "metrics": {
+    "stars": 952,
+    "forks": 99,
+    "stars_delta": 113
+   },
+   "extra": {
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Moh4696/cinematic-skill",
+   "title": "Moh4696/cinematic-skill",
+   "url": "https://github.com/Moh4696/cinematic-skill",
+   "summary": "Agent skill for narrated cinematic films built entirely from code: one continuous camera over photos, maps and cards, timed to the voice. Claude Code, Codex, Cursor, Gemini CLI.",
+   "published_at": "2026-11-09T07:58:11Z",
+   "metrics": {
+    "stars": 810,
+    "forks": 127,
+    "stars_delta": 29
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "claude-code",
+     "codex",
+     "documentary",
+     "explainer-video",
+     "motion-graphics",
+     "skia",
+     "video"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "boringmarketer/boring-marketing-skills",
+   "title": "boringmarketer/boring-marketing-skills",
+   "url": "https://github.com/boringmarketer/boring-marketing-skills",
+   "summary": "32 free marketing skills for your AI agent: research, positioning, copy, pages, SEO, AI search, ads, email and content, plus a deep local-business pack. MIT.",
+   "published_at": "2026-11-16T15:09:46Z",
+   "metrics": {
+    "stars": 719,
+    "forks": 262,
+    "stars_delta": 57
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-skills",
+     "ai-agents",
+     "claude-code",
+     "codex",
+     "copywriting",
+     "local-seo",
+     "marketing",
+     "seo"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "lxe/phoneuse",
+   "title": "lxe/phoneuse",
+   "url": "https://github.com/lxe/phoneuse",
+   "summary": "See and operate an unmodified iPhone from a Linux PC: AirPlay mirror in, Bluetooth HID mouse/keyboard out, plus a CLI and skill for agents.",
+   "published_at": "2026-11-07T01:28:30Z",
+   "metrics": {
+    "stars": 689,
+    "forks": 66,
+    "stars_delta": 3
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "21stware/bowel",
+   "title": "21stware/bowel",
+   "url": "https://github.com/21stware/bowel",
+   "summary": "Bowel is a mihomo client for macOS, Windows, Linux and Android.",
+   "published_at": "2026-11-07T17:45:52Z",
+   "metrics": {
+    "stars": 598,
+    "forks": 32,
+    "stars_delta": 8
+   },
+   "extra": {
+    "language": "Go",
+    "license": "NOASSERTION",
+    "topics": [
+     "android",
+     "clash",
+     "clash-meta",
+     "linux",
+     "macos",
+     "mcp",
+     "mihomo",
+     "proxy-client",
+     "windows"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "berkantay/gpucanvas",
+   "title": "berkantay/gpucanvas",
+   "url": "https://github.com/berkantay/gpucanvas",
+   "summary": "Put thousands of live DOM nodes on an infinite canvas: the GPU draws them, an editor selects, moves and resizes them, shaders and transitions run on them, and an AI agent can read them and point at them.",
+   "published_at": "2026-11-12T23:19:42Z",
+   "metrics": {
+    "stars": 535,
+    "forks": 38,
+    "stars_delta": 9
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "canvas",
+     "design-tools",
+     "editor",
+     "html-in-canvas",
+     "infinite-canvas",
+     "react",
+     "shaders",
+     "transitions",
+     "typescript",
+     "webgpu",
+     "wgsl"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "bookwjitchieni1986/blender-ai-mcp-addon",
+   "title": "bookwjitchieni1986/blender-ai-mcp-addon",
+   "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+   "summary": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with ChatGPT/GPT, Claude, Gemini, Ollama, OpenCode. Blender AI addon, copilot for 3D, bpy Python scripting, MCP integration.",
+   "published_at": "2026-11-19T14:43:10Z",
+   "metrics": {
+    "stars": 526,
+    "forks": 1,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "ai-assistant",
+     "blender",
+     "blender-addon",
+     "blender-ai",
+     "blender-automation",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "bpy",
+     "chatgpt",
+     "claude",
+     "gemini",
+     "llm",
+     "mcp",
+     "mcp-for-blender",
+     "mcp-server",
+     "model-context-protocol",
+     "ollama",
+     "opencode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "racdeufindurch198812/Blender-AI-MCP-Studio",
+   "title": "racdeufindurch198812/Blender-AI-MCP-Studio",
+   "url": "https://github.com/racdeufindurch198812/Blender-AI-MCP-Studio",
+   "summary": "Blender AI MCP Studio is an AI assistant and built-in Model Context Protocol MCP server for Blender that turns plain-language briefs into inspected, approved and reversible 3D scene operations — with a visual chat workspace, multi-agent teams and your choice of AI models. · blender ai mcp studio · mcp-for-blender · mcp for blender pro",
+   "published_at": "2026-11-12T19:28:20Z",
+   "metrics": {
+    "stars": 517,
+    "forks": 13,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "credoksopho1984/blender-ai-copilot-studio",
+   "title": "credoksopho1984/blender-ai-copilot-studio",
+   "url": "https://github.com/credoksopho1984/blender-ai-copilot-studio",
+   "summary": "An AI copilot and MCP server for Blender that turns plain-language briefs into scene operations—inside a visual chat studio with multi-agent teams, your choice of AI models, and 27 built-in scene tools. · blender-ai-copilot-studio · blender ai · ai for blender · blender copilot · blender ai copilot · blender ai assistant · blender mcp server",
+   "published_at": "2026-11-12T19:30:32Z",
+   "metrics": {
+    "stars": 516,
+    "forks": 14,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "tiobeharxi1987/blender-ai-copilot-flow",
+   "title": "tiobeharxi1987/blender-ai-copilot-flow",
+   "url": "https://github.com/tiobeharxi1987/blender-ai-copilot-flow",
+   "summary": "A controlled AI workflow for Blender: every copilot edit is a supervised tool call—proposed, approved, executed in sequence, cancellable after the current step and undoable by name—inside a visual studio with a built-in MCP server. · blender-ai-copilot-flow · blender · blender 3d · blender addon · blender plugin · blender extension",
+   "published_at": "2026-11-12T19:38:53Z",
+   "metrics": {
+    "stars": 514,
+    "forks": 12,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "zovulrira1974/blender-ai-copilot-assets",
+   "title": "zovulrira1974/blender-ai-copilot-assets",
+   "url": "https://github.com/zovulrira1974/blender-ai-copilot-assets",
+   "summary": "An asset-savvy AI copilot for Blender—search Poly Haven, Sketchfab and Poly Pizza mid-conversation, check what fits, import after your confirmation, with 27 scene tools and a built-in MCP server alongside. · blender-ai-copilot-assets · blender · blender 3d · blender addon · blender plugin · blender extension · blender scripting · blender automation",
+   "published_at": "2026-11-12T19:39:54Z",
+   "metrics": {
+    "stars": 510,
+    "forks": 15,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Doug-218/blender-ai-copilot-forge",
+   "title": "Doug-218/blender-ai-copilot-forge",
+   "url": "https://github.com/Doug-218/blender-ai-copilot-forge",
+   "summary": "A scene-forging AI copilot for Blender—describe the layout and watch primitives, cameras, lights, materials and parenting assemble in ordered steps, with approvals, named undo and a built-in MCP server. · blender-ai-copilot-forge · blender · blender 3d · blender addon · blender plugin · blender extension · blender scripting · blender automation",
+   "published_at": "2026-11-12T19:35:10Z",
+   "metrics": {
+    "stars": 509,
+    "forks": 13,
+    "stars_delta": -2
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "precygtrucqui1981/blender-ai-copilot-lab",
+   "title": "precygtrucqui1981/blender-ai-copilot-lab",
+   "url": "https://github.com/precygtrucqui1981/blender-ai-copilot-lab",
+   "summary": "An AI lab for Blender where manager–worker–reviewer agent teams run multi-step scene briefs as supervised experiments—a live task board, review findings, one correction attempt per blocked task, named undo, and a built-in MCP server. · blender-ai-copilot-lab · blender · blender 3d · blender addon · blender plugin · blender extension",
+   "published_at": "2026-11-12T19:33:16Z",
+   "metrics": {
+    "stars": 507,
+    "forks": 13,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "fumbdendade19718/blender-ai-copilot-desk",
+   "title": "fumbdendade19718/blender-ai-copilot-desk",
+   "url": "https://github.com/fumbdendade19718/blender-ai-copilot-desk",
+   "summary": "A visual AI desk for Blender—chat, scene objects, viewport snapshots, approvals and a live task board in one companion window, backed by your choice of models and a built-in MCP server. · blender-ai-copilot-desk · blender · blender 3d · blender addon · blender plugin · blender extension · blender scripting · blender automation · blender mcp",
+   "published_at": "2026-11-12T19:37:25Z",
+   "metrics": {
+    "stars": 505,
+    "forks": 11,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "baiblinocun1986/blender-ai-copilot-hub",
+   "title": "baiblinocun1986/blender-ai-copilot-hub",
+   "url": "https://github.com/baiblinocun1986/blender-ai-copilot-hub",
+   "summary": "A multi-provider AI copilot hub for Blender—bring OpenAI, Anthropic Claude, Google Gemini, OpenRouter, OpenCode Zen, Ollama and custom endpoints into one hub of saved connections, with 27 supervised scene tools and a built-in MCP server. · blender-ai-copilot-hub · blender · blender 3d · blender addon · blender plugin · blender extension",
+   "published_at": "2026-11-12T19:32:22Z",
+   "metrics": {
+    "stars": 502,
+    "forks": 16,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "findavoulot1973/Blender-AI-MCP-Suite",
+   "title": "findavoulot1973/Blender-AI-MCP-Suite",
+   "url": "https://github.com/findavoulot1973/Blender-AI-MCP-Suite",
+   "summary": "Blender AI MCP Suite is an AI assistant and built-in Model Context Protocol MCP server for Blender that turns plain-language briefs into inspected, approved and reversible 3D scene operations — with a visual Studio workspace, multi-agent teams, 21+ scene tools and your choice of AI models. · blender ai mcp suite · blender ai mcp · ai for blender",
+   "published_at": "2026-11-12T19:26:22Z",
+   "metrics": {
+    "stars": 498,
+    "forks": 12,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "benzgasfuncring197110/blender-ai-copilot-bridge",
+   "title": "benzgasfuncring197110/blender-ai-copilot-bridge",
+   "url": "https://github.com/benzgasfuncring197110/blender-ai-copilot-bridge",
+   "summary": "An MCP bridge for Blender that exposes 27 supervised scene tools to OpenCode and any compatible client—authenticated Streamable HTTP on a local endpoint, with the visual chat studio and agent teams on the inside. · blender-ai-copilot-bridge · blender · blender 3d · blender addon · blender plugin · blender extension · blender scripting",
+   "published_at": "2026-11-12T19:36:26Z",
+   "metrics": {
+    "stars": 492,
+    "forks": 13,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": null,
+    "license": "MIT",
+    "topics": [
+     "3d-automation",
+     "3d-modeling",
+     "blender",
+     "blender-addon",
+     "blender-agents",
+     "blender-ai",
+     "blender-assistant",
+     "blender-automation",
+     "blender-chatgpt",
+     "blender-copilot",
+     "blender-extension",
+     "blender-llm",
+     "blender-mcp",
+     "blender-plugin",
+     "blender-scripting",
+     "blender3d",
+     "bpy",
+     "mcp",
+     "mcp-server",
+     "model-context-protocol"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "kociden/sakurai-skill",
+   "title": "kociden/sakurai-skill",
+   "url": "https://github.com/kociden/sakurai-skill",
+   "summary": "桜井政博のゲーム作るには 全本編257本の字幕から作ったゲーム制作の Agent Skill（非公式・日本語）",
+   "published_at": "2026-11-12T15:54:56Z",
+   "metrics": {
+    "stars": 481,
+    "forks": 41,
+    "stars_delta": 22
+   },
+   "extra": {
+    "language": "Python",
+    "license": null,
+    "topics": [
+     "agent-skills",
+     "claude-code",
+     "game-design",
+     "gamedev"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "YellowLaborerMarket/Gemini-Config-Checker-",
+   "title": "YellowLaborerMarket/Gemini-Config-Checker-",
+   "url": "https://github.com/YellowLaborerMarket/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:48:18Z",
+   "metrics": {
+    "stars": 474,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "weightcashiercupola/Gemini-Config-Checker-",
+   "title": "weightcashiercupola/Gemini-Config-Checker-",
+   "url": "https://github.com/weightcashiercupola/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:11Z",
+   "metrics": {
+    "stars": 473,
+    "forks": 0,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WinnerSpecialist/Gemini-Config-Checker-",
+   "title": "WinnerSpecialist/Gemini-Config-Checker-",
+   "url": "https://github.com/WinnerSpecialist/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:17Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Visionbeyondtrack/Gemini-Config-Checker-",
+   "title": "Visionbeyondtrack/Gemini-Config-Checker-",
+   "url": "https://github.com/Visionbeyondtrack/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:05Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "VortexHostFeel/Gemini-Config-Checker-",
+   "title": "VortexHostFeel/Gemini-Config-Checker-",
+   "url": "https://github.com/VortexHostFeel/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:07Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WyrmClimberManacle/Gemini-Config-Checker-",
+   "title": "WyrmClimberManacle/Gemini-Config-Checker-",
+   "url": "https://github.com/WyrmClimberManacle/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:48:18Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TurtleReside/Gemini-Config-Checker-",
+   "title": "TurtleReside/Gemini-Config-Checker-",
+   "url": "https://github.com/TurtleReside/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:04Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WingDataVacuum/Gemini-Config-Checker-",
+   "title": "WingDataVacuum/Gemini-Config-Checker-",
+   "url": "https://github.com/WingDataVacuum/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:17Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TypeTyrantScheme/Gemini-Config-Checker-",
+   "title": "TypeTyrantScheme/Gemini-Config-Checker-",
+   "url": "https://github.com/TypeTyrantScheme/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:04Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "wisemeadowlarkspike/Gemini-Config-Checker-",
+   "title": "wisemeadowlarkspike/Gemini-Config-Checker-",
+   "url": "https://github.com/wisemeadowlarkspike/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:48:18Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Watchlespeed/Gemini-Config-Checker-",
+   "title": "Watchlespeed/Gemini-Config-Checker-",
+   "url": "https://github.com/Watchlespeed/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:11Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "VisionWormStudio/Gemini-Config-Checker-",
+   "title": "VisionWormStudio/Gemini-Config-Checker-",
+   "url": "https://github.com/VisionWormStudio/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:04Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WestLocksmithSpout/Gemini-Config-Checker-",
+   "title": "WestLocksmithSpout/Gemini-Config-Checker-",
+   "url": "https://github.com/WestLocksmithSpout/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:12Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WireProvostPucker/Gemini-Config-Checker-",
+   "title": "WireProvostPucker/Gemini-Config-Checker-",
+   "url": "https://github.com/WireProvostPucker/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:48:15Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WindGatorRise37/Gemini-Config-Checker-",
+   "title": "WindGatorRise37/Gemini-Config-Checker-",
+   "url": "https://github.com/WindGatorRise37/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:17Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WharfBoulderColander/Gemini-Config-Checker-",
+   "title": "WharfBoulderColander/Gemini-Config-Checker-",
+   "url": "https://github.com/WharfBoulderColander/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:12Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Violetnyudress/Gemini-Config-Checker-",
+   "title": "Violetnyudress/Gemini-Config-Checker-",
+   "url": "https://github.com/Violetnyudress/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:04Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WerewolfEmuHub/Gemini-Config-Checker-",
+   "title": "WerewolfEmuHub/Gemini-Config-Checker-",
+   "url": "https://github.com/WerewolfEmuHub/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:11Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Go",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "WindowStaffGate11/Gemini-Config-Checker-",
+   "title": "WindowStaffGate11/Gemini-Config-Checker-",
+   "url": "https://github.com/WindowStaffGate11/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:18Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "weldbladesmithwharf/Gemini-Config-Checker-",
+   "title": "weldbladesmithwharf/Gemini-Config-Checker-",
+   "url": "https://github.com/weldbladesmithwharf/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:47:11Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TrooperFilter/Gemini-Config-Checker-",
+   "title": "TrooperFilter/Gemini-Config-Checker-",
+   "url": "https://github.com/TrooperFilter/Gemini-Config-Checker-",
+   "summary": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+   "published_at": "2026-11-15T16:46:04Z",
+   "metrics": {
+    "stars": 472,
+    "forks": 0,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": "Makefile",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-search",
+     "aichecker",
+     "chatgpt",
+     "cli",
+     "config-checker",
+     "gemeni",
+     "gemeni-checker",
+     "generative-ai",
+     "lim-seo",
+     "llm",
+     "mcp-server",
+     "nextjs",
+     "open-code",
+     "seo-checker",
+     "seo-tool",
+     "typescript"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "ysunyang4/Nexus",
+   "title": "ysunyang4/Nexus",
+   "url": "https://github.com/ysunyang4/Nexus",
+   "summary": "Connect web AI assistants to local files, terminals, Git, and desktop tools through MCP, with user-controlled permissions.",
+   "published_at": "2026-11-13T13:46:21Z",
+   "metrics": {
+    "stars": 431,
+    "forks": 76,
+    "stars_delta": 25
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "AGPL-3.0",
+    "topics": [
+     "ai-agent",
+     "browser-extension",
+     "chrome-extension",
+     "llm",
+     "local-ai",
+     "mcp",
+     "webagent"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "op7418/guizang-game-skill",
+   "title": "op7418/guizang-game-skill",
+   "url": "https://github.com/op7418/guizang-game-skill",
+   "summary": "歸藏 Game Skill：让 AI 从零做出能在浏览器里玩的 3D 动作游戏，附可玩演示《雾锁山门》。Agent skill for Claude Code / Codex that builds a playable browser 3D action game with AI-generated assets (three.js, single-HTML). Playable demo included.",
+   "published_at": "2026-11-11T16:28:54Z",
+   "metrics": {
+    "stars": 419,
+    "forks": 67,
+    "stars_delta": 9
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "AGPL-3.0",
+    "topics": [
+     "3d-game",
+     "action-game",
+     "agent-skills",
+     "ai-agents",
+     "ai-generated",
+     "browser-game",
+     "claude-code",
+     "claude-skills",
+     "codex",
+     "game-development",
+     "gamedev",
+     "html5-game",
+     "threejs",
+     "tripo",
+     "vibe-coding",
+     "webgl",
+     "wuxia"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "pmndre/pine",
+   "title": "pmndre/pine",
+   "url": "https://github.com/pmndre/pine",
+   "summary": "a reactive harness for agents",
+   "published_at": "2026-11-10T23:18:48Z",
+   "metrics": {
+    "stars": 390,
+    "forks": 16,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": []
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "trackersnailgrip/GitHub-Copilot-app",
+   "title": "trackersnailgrip/GitHub-Copilot-app",
+   "url": "https://github.com/trackersnailgrip/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:16:41Z",
+   "metrics": {
+    "stars": 383,
+    "forks": 10,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "fendouai/ViralForge",
+   "title": "fendouai/ViralForge",
+   "url": "https://github.com/fendouai/ViralForge",
+   "summary": "Agent-native viral video studio: one-click replicate viral short videos, deconstruct video hooks and scripts into a Viral DNA report, and ship 10 costed variants. Skill + MCP + CLI. Apache-2.0.",
+   "published_at": "2026-11-11T07:13:59Z",
+   "metrics": {
+    "stars": 381,
+    "forks": 13,
+    "stars_delta": 54
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "Apache-2.0",
+    "topics": [
+     "ai-agent",
+     "ai-agents",
+     "short-video",
+     "short-video-generator",
+     "video-editing",
+     "video-script-deconstruction",
+     "viral-video",
+     "viral-video-generator"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "toppatronweave/GitHub-Copilot-app",
+   "title": "toppatronweave/GitHub-Copilot-app",
+   "url": "https://github.com/toppatronweave/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:25:20Z",
+   "metrics": {
+    "stars": 379,
+    "forks": 175,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "topapothecarycanal/ai--manus2.0",
+   "title": "topapothecarycanal/ai--manus2.0",
+   "url": "https://github.com/topapothecarycanal/ai--manus2.0",
+   "summary": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+   "published_at": "2026-11-14T19:15:24Z",
+   "metrics": {
+    "stars": 379,
+    "forks": 10,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-agents",
+     "ai-sdk",
+     "anthropic",
+     "chatbot",
+     "function-calling",
+     "gemeni",
+     "generative-ai",
+     "llm",
+     "multimodal",
+     "openai",
+     "react",
+     "solidjs",
+     "streaming",
+     "svelte",
+     "tanstack",
+     "tool-calling",
+     "typescript",
+     "typescript-sdk",
+     "vue"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "huawei-csl/MACaQ",
+   "title": "huawei-csl/MACaQ",
+   "url": "https://github.com/huawei-csl/MACaQ",
+   "summary": "SOTA model-agnostic quantization for GGUF, local inference and beyond. Quantize and run text, image, video and audio models with llama.cpp, vLLM, Diffusers and PyTorch.",
+   "published_at": "2026-11-10T08:52:22Z",
+   "metrics": {
+    "stars": 378,
+    "forks": 22,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "C++",
+    "license": "Apache-2.0",
+    "topics": [
+     "ascend",
+     "audio",
+     "audio-generation",
+     "diffusers",
+     "gguf",
+     "gguf-quantization",
+     "image-generation",
+     "llama-cpp",
+     "llm",
+     "local-ai",
+     "local-inference",
+     "quantization",
+     "video-generation",
+     "vllm"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TrapBladesmith/GitHub-Copilot-app",
+   "title": "TrapBladesmith/GitHub-Copilot-app",
+   "url": "https://github.com/TrapBladesmith/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:16:50Z",
+   "metrics": {
+    "stars": 377,
+    "forks": 10,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "toppatronweave/ai--manus2.0",
+   "title": "toppatronweave/ai--manus2.0",
+   "url": "https://github.com/toppatronweave/ai--manus2.0",
+   "summary": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+   "published_at": "2026-11-14T19:15:25Z",
+   "metrics": {
+    "stars": 377,
+    "forks": 4,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-agents",
+     "ai-sdk",
+     "anthropic",
+     "chatbot",
+     "function-calling",
+     "gemeni",
+     "generative-ai",
+     "llm",
+     "multimodal",
+     "openai",
+     "react",
+     "solidjs",
+     "streaming",
+     "svelte",
+     "tanstack",
+     "tool-calling",
+     "typescript",
+     "typescript-sdk",
+     "vue"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TarantulaCorrect/GitHub-Copilot-app",
+   "title": "TarantulaCorrect/GitHub-Copilot-app",
+   "url": "https://github.com/TarantulaCorrect/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:25:19Z",
+   "metrics": {
+    "stars": 376,
+    "forks": 195,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "TurquoiseConsultant/GitHub-Copilot-app",
+   "title": "TurquoiseConsultant/GitHub-Copilot-app",
+   "url": "https://github.com/TurquoiseConsultant/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:25:20Z",
+   "metrics": {
+    "stars": 376,
+    "forks": 155,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "topconstableinlet67/ai--manus2.0",
+   "title": "topconstableinlet67/ai--manus2.0",
+   "url": "https://github.com/topconstableinlet67/ai--manus2.0",
+   "summary": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+   "published_at": "2026-11-14T19:15:24Z",
+   "metrics": {
+    "stars": 376,
+    "forks": 4,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-agents",
+     "ai-sdk",
+     "anthropic",
+     "chatbot",
+     "function-calling",
+     "gemeni",
+     "generative-ai",
+     "llm",
+     "multimodal",
+     "openai",
+     "react",
+     "solidjs",
+     "streaming",
+     "svelte",
+     "tanstack",
+     "tool-calling",
+     "typescript",
+     "typescript-sdk",
+     "vue"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "violetkomodolimit/ai--manus2.0",
+   "title": "violetkomodolimit/ai--manus2.0",
+   "url": "https://github.com/violetkomodolimit/ai--manus2.0",
+   "summary": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+   "published_at": "2026-11-14T19:25:22Z",
+   "metrics": {
+    "stars": 373,
+    "forks": 302,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "ai",
+     "ai-agents",
+     "ai-sdk",
+     "anthropic",
+     "chatbot",
+     "function-calling",
+     "gemeni",
+     "generative-ai",
+     "llm",
+     "multimodal",
+     "openai",
+     "react",
+     "solidjs",
+     "streaming",
+     "svelte",
+     "tanstack",
+     "tool-calling",
+     "typescript",
+     "typescript-sdk",
+     "vue"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "Trapkrostride/GitHub-Copilot-app",
+   "title": "Trapkrostride/GitHub-Copilot-app",
+   "url": "https://github.com/Trapkrostride/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:25:19Z",
+   "metrics": {
+    "stars": 373,
+    "forks": 196,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "topconstableinlet67/GitHub-Copilot-app",
+   "title": "topconstableinlet67/GitHub-Copilot-app",
+   "url": "https://github.com/topconstableinlet67/GitHub-Copilot-app",
+   "summary": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+   "published_at": "2026-11-14T19:25:19Z",
+   "metrics": {
+    "stars": 373,
+    "forks": 193,
+    "stars_delta": -1
+   },
+   "extra": {
+    "language": null,
+    "license": "Apache-2.0",
+    "topics": [
+     "adminlte",
+     "agent-skills",
+     "ai",
+     "awesome",
+     "chatgpt",
+     "copilot",
+     "github-copilot",
+     "hacktoberfest",
+     "microsoft-copilot",
+     "openai",
+     "prompts",
+     "vue",
+     "xcode",
+     "xtreamcode"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "DandanLLab/SnowCatQQ",
+   "title": "DandanLLab/SnowCatQQ",
+   "url": "https://github.com/DandanLLab/SnowCatQQ",
+   "summary": "SnowCat 雪猫：NapCat + SnowLuma 融合第三方 QQ 客户端，社区接力维护，V8 通道全功能适配 QQ 9.9.37，全工具全源码公开",
+   "published_at": "2026-11-11T22:23:10Z",
+   "metrics": {
+    "stars": 355,
+    "forks": 145,
+    "stars_delta": 1
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "NOASSERTION",
+    "topics": [
+     "chatbot",
+     "electron",
+     "mcp",
+     "napcat",
+     "onebot",
+     "onebot11",
+     "qq",
+     "qq-bot",
+     "reverse-engineering",
+     "snowcat"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "jackson-cmd/risk-aware-trading-agents",
+   "title": "jackson-cmd/risk-aware-trading-agents",
+   "url": "https://github.com/jackson-cmd/risk-aware-trading-agents",
+   "summary": "AI trading agents for US stocks with news backtesting that can't see the future: a public LLM trading agent leaderboard (rta-bench-1), frozen point-in-time 2020/2022/2026 markets (prices, VIX, news), a look-ahead check on every run, LLM agents over MCP, and paper/live trading on 10 brokers. 风险感知美股交易智能体 · 新闻回测 · LLM 榜单",
+   "published_at": "2026-11-12T02:29:31Z",
+   "metrics": {
+    "stars": 286,
+    "forks": 71,
+    "stars_delta": 39
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "ai-trading",
+     "algorithmic-trading",
+     "alpaca",
+     "backtesting",
+     "financial-news",
+     "interactive-brokers",
+     "llm",
+     "llm-agents",
+     "llm-benchmark",
+     "llm-evaluation",
+     "look-ahead-bias",
+     "mcp-server",
+     "news-backtesting",
+     "paper-trading",
+     "quantitative-finance",
+     "risk-management",
+     "sentiment-analysis",
+     "stock-trading",
+     "trading-agents",
+     "trading-bot"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "yanstd888/9routerx",
+   "title": "yanstd888/9routerx",
+   "url": "https://github.com/yanstd888/9routerx",
+   "summary": " 9RouterX (9R Next Go Generation): Single-binary Go AI router, LLM gateway & 20-40% token saver. Route Claude Code, Cursor & Codex across 155 providers, 28 OAuth & 248 free models (24 keyless) — OpenAI, Claude, Gemini, DeepSeek, Groq, Ollama & MCP.",
+   "published_at": "2026-11-07T11:54:33Z",
+   "metrics": {
+    "stars": 255,
+    "forks": 158,
+    "stars_delta": 6
+   },
+   "extra": {
+    "language": "Go",
+    "license": "NOASSERTION",
+    "topics": [
+     "9router",
+     "9routerx",
+     "ai-gateway",
+     "ai-proxy",
+     "ai-routing",
+     "api-gateway",
+     "claude-code",
+     "cursor",
+     "free-ai-apis",
+     "golang",
+     "litellm-alternative",
+     "llm-gateway",
+     "llm-router",
+     "llmops",
+     "mcp-server",
+     "openai-proxy",
+     "openrouter-alternative",
+     "prompt-compression",
+     "semantic-cache",
+     "token-saver"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "hridaya423/phonedriver",
+   "title": "hridaya423/phonedriver",
+   "url": "https://github.com/hridaya423/phonedriver",
+   "summary": "MCP server and CLI that lets AI agents (Claude Code, Codex, Cursor) see and control Android phones and iPhones. Reads the screen as text. Asks before it pays.",
+   "published_at": "2026-11-08T11:02:30Z",
+   "metrics": {
+    "stars": 209,
+    "forks": 22,
+    "stars_delta": 35
+   },
+   "extra": {
+    "language": "Rust",
+    "license": "AGPL-3.0",
+    "topics": [
+     "adb",
+     "agentic-ai",
+     "ai-agents",
+     "android",
+     "android-emulator",
+     "claude-code",
+     "codex",
+     "computer-use",
+     "cursor",
+     "gemini-cli-extension",
+     "ios",
+     "ios-simulator",
+     "iphone",
+     "mcp",
+     "mcp-server",
+     "mobile-automation",
+     "mobile-testing",
+     "model-context-protocol",
+     "rust",
+     "ui-automation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "mdexa-ai/mdexa-ai-native-database",
+   "title": "mdexa-ai/mdexa-ai-native-database",
+   "url": "https://github.com/mdexa-ai/mdexa-ai-native-database",
+   "summary": "Verified license and provenance records for datasets behind medical AI: information cards, JSON Schema, decision rules and evidence index (hashes only). Cards CC BY 4.0, scripts MIT.",
+   "published_at": "2026-11-15T12:20:17Z",
+   "metrics": {
+    "stars": 201,
+    "forks": 11,
+    "stars_delta": 0
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "MIT",
+    "topics": [
+     "biomedical",
+     "data-provenance",
+     "dataset-licenses",
+     "healthcare",
+     "json-schema",
+     "license-verification",
+     "mcp",
+     "medical-ai",
+     "open-data",
+     "traditional-chinese-medicine"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "SparkofSpike/Brain4Agent",
+   "title": "SparkofSpike/Brain4Agent",
+   "url": "https://github.com/SparkofSpike/Brain4Agent",
+   "summary": "Committed to building the world’s most cutting-edge, CJK-first memory module for all mainstream agents. Any issues and PRs are welcome.",
+   "published_at": "2026-11-08T01:38:31Z",
+   "metrics": {
+    "stars": 179,
+    "forks": 26,
+    "stars_delta": 4
+   },
+   "extra": {
+    "language": "Python",
+    "license": "Apache-2.0",
+    "topics": [
+     "agent-memory",
+     "agent-skills",
+     "agent-tools",
+     "bm25",
+     "chinese",
+     "cjk",
+     "japanese",
+     "korean",
+     "local-first",
+     "long-term-memory",
+     "mcp",
+     "memory",
+     "no-llm",
+     "python",
+     "retrieval",
+     "sqlite"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "ysunyang4/webagent",
+   "title": "ysunyang4/webagent",
+   "url": "https://github.com/ysunyang4/webagent",
+   "summary": "Browser extension that connects ChatGPT, Gemini, DeepSeek, and other web AI chats to local MCP tools through Nexus.",
+   "published_at": "2026-11-11T01:32:04Z",
+   "metrics": {
+    "stars": 167,
+    "forks": 42,
+    "stars_delta": 9
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "AGPL-3.0",
+    "topics": [
+     "ai-agent",
+     "browser-extension",
+     "chrome-extension",
+     "llm",
+     "local-ai",
+     "mcp",
+     "webagent"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "wanshuiyin/SuperARIS",
+   "title": "wanshuiyin/SuperARIS",
+   "url": "https://github.com/wanshuiyin/SuperARIS",
+   "summary": "SuperARIS — Your personal research agent with ARIS (Auto Research In Sleep), powered by a team of agents.",
+   "published_at": "2026-11-08T05:12:40Z",
+   "metrics": {
+    "stars": 164,
+    "forks": 11,
+    "stars_delta": 4
+   },
+   "extra": {
+    "language": "Python",
+    "license": "MIT",
+    "topics": [
+     "agent-orchestration",
+     "ai-research",
+     "aris",
+     "claude-code",
+     "codex",
+     "gemini",
+     "herdr",
+     "mcp",
+     "multi-agent",
+     "personal-agent",
+     "research-automation",
+     "research-workflow",
+     "superagent"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "jackson-cmd/zeus-options-terminal",
+   "title": "jackson-cmd/zeus-options-terminal",
+   "url": "https://github.com/jackson-cmd/zeus-options-terminal",
+   "summary": "Self-hosted, all-in-one options trading terminal: live positions & Greeks, P/L and risk, exit alerts, paper trading, stock screener, bilingual news (Finviz · WSJ · MarketWatch · Benzinga), SEC filings, trade journal, MCP for AI agents. tastytrade, Alpaca, Public or a CSV. 宙斯期权终端：本地部署的美股期权交易终端",
+   "published_at": "2026-11-12T07:16:02Z",
+   "metrics": {
+    "stars": 158,
+    "forks": 25,
+    "stars_delta": 15
+   },
+   "extra": {
+    "language": "Python",
+    "license": "NOASSERTION",
+    "topics": [
+     "alpaca",
+     "benzinga",
+     "fastapi",
+     "financial-news",
+     "finviz",
+     "greeks",
+     "implied-volatility",
+     "mcp-server",
+     "options",
+     "options-trading",
+     "paper-trading",
+     "portfolio-tracker",
+     "python",
+     "risk-management",
+     "self-hosted",
+     "stock-screener",
+     "tastytrade",
+     "trading",
+     "trading-journal",
+     "trading-terminal"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "kilolonion/agent-vscreen",
+   "title": "kilolonion/agent-vscreen",
+   "url": "https://github.com/kilolonion/agent-vscreen",
+   "summary": "A background virtual screen for any Android AI agent: it operates apps on an invisible display while you keep using your phone. CLI / MCP / HTTP, Shizuku, no root. 给任何手机 agent 用的后台副屏。",
+   "published_at": "2026-11-07T15:51:54Z",
+   "metrics": {
+    "stars": 152,
+    "forks": 20,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "Kotlin",
+    "license": "MIT",
+    "topics": [
+     "ai-agent",
+     "android",
+     "android-automation",
+     "kotlin",
+     "llm",
+     "mcp",
+     "mcp-server",
+     "no-root",
+     "phone-agent",
+     "shizuku",
+     "tailscale",
+     "virtual-display"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "lizi600jin/dsh-ensp",
+   "title": "lizi600jin/dsh-ensp",
+   "url": "https://github.com/lizi600jin/dsh-ensp",
+   "summary": "Automate Huawei eNSP labs: generate .topo files, start and stop devices, and push configuration one command at a time with per-command error reporting.",
+   "published_at": "2026-11-10T16:11:00Z",
+   "metrics": {
+    "stars": 148,
+    "forks": 0,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "JavaScript",
+    "license": "GPL-3.0",
+    "topics": [
+     "deepseek-harness",
+     "dsh-plugin",
+     "ensp",
+     "huawei",
+     "mcp",
+     "network-simulation",
+     "vrp"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "pktq/lasik",
+   "title": "pktq/lasik",
+   "url": "https://github.com/pktq/lasik",
+   "summary": "BLA blinds your agent. LASIK gives it its sight back. Static de-blinding CLI + MCP server that undoes BLA (Blind LLM Agents) hardening so coding agents and REA can read the real code again. Never executes the target.",
+   "published_at": "2026-11-09T16:35:56Z",
+   "metrics": {
+    "stars": 141,
+    "forks": 14,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-agents",
+     "anti-bla",
+     "bla",
+     "claude-code",
+     "deobfuscation",
+     "deobfuscator",
+     "electron",
+     "javascript",
+     "lasik",
+     "llm-security",
+     "malware-analysis",
+     "mcp",
+     "mcp-server",
+     "prompt-injection",
+     "rea",
+     "reverse-engineering",
+     "static-analysis",
+     "webassembly"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "github_search",
+   "id": "sirioberati/ai-filmmaking-camera-control-seedance-2-5",
+   "title": "sirioberati/ai-filmmaking-camera-control-seedance-2-5",
+   "url": "https://github.com/sirioberati/ai-filmmaking-camera-control-seedance-2-5",
+   "summary": "AI filmmaking camera control with Seedance 2.5 and three.js: direct the camera with a reference video. 137 cinematic camera moves and templates, prompts, Tein MCP and API setup. Get a Seedance 2.5 key: https://tein.ai",
+   "published_at": "2026-11-07T21:14:14Z",
+   "metrics": {
+    "stars": 140,
+    "forks": 33,
+    "stars_delta": null
+   },
+   "extra": {
+    "language": "TypeScript",
+    "license": "MIT",
+    "topics": [
+     "ai-filmmaking",
+     "ai-video",
+     "camera-control",
+     "camera-movement",
+     "cinematography",
+     "filmmaking",
+     "mcp",
+     "previs",
+     "prompt-engineering",
+     "reference-video",
+     "remotion",
+     "seedance",
+     "seedance-2-5",
+     "tein",
+     "threejs",
+     "video-generation"
+    ]
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "tencent/Hy4-flash",
+   "title": "tencent/Hy4-flash",
+   "url": "https://huggingface.co/tencent/Hy4-flash",
+   "summary": "",
+   "published_at": "2026-11-17T03:44:46Z",
+   "metrics": {
+    "likes": 346,
+    "downloads": 2053,
+    "trending_score": 288,
+    "likes_delta": 112
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+   "title": "harness-hub/Qwen3.8-27B-pi-adapted",
+   "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+   "summary": "",
+   "published_at": "2026-11-16T06:52:31Z",
+   "metrics": {
+    "likes": 738,
+    "downloads": 1320,
+    "trending_score": 253.5,
+    "likes_delta": 329
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "peft"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Qwen/Qwen3.8-27B",
+   "title": "Qwen/Qwen3.8-27B",
+   "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+   "summary": "",
+   "published_at": "2026-08-05T08:22:59Z",
+   "metrics": {
+    "likes": 20682,
+    "downloads": 6647301,
+    "trending_score": 242,
+    "likes_delta": 125
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "maxwell-model/Maxwell-V1-Flash",
+   "title": "maxwell-model/Maxwell-V1-Flash",
+   "url": "https://huggingface.co/maxwell-model/Maxwell-V1-Flash",
+   "summary": "",
+   "published_at": "2026-10-13T07:53:39Z",
+   "metrics": {
+    "likes": 287,
+    "downloads": 1703,
+    "trending_score": 202,
+    "likes_delta": 58
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "sensenova/SenseNova-Loop-9B",
+   "title": "sensenova/SenseNova-Loop-9B",
+   "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
+   "summary": "",
+   "published_at": "2026-11-17T10:16:41Z",
+   "metrics": {
+    "likes": 388,
+    "downloads": 1447,
+    "trending_score": 159.5,
+    "likes_delta": 61
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "thinkingmachines/Inkling-2-Small",
+   "title": "thinkingmachines/Inkling-2-Small",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+   "summary": "",
+   "published_at": "2026-11-04T19:51:05Z",
+   "metrics": {
+    "likes": 584,
+    "downloads": 37318,
+    "trending_score": 147.5,
+    "likes_delta": 92
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "summary": "",
+   "published_at": "2026-10-05T04:26:43Z",
+   "metrics": {
+    "likes": 620,
+    "downloads": 172088,
+    "trending_score": 136,
+    "likes_delta": 63
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Edge0/Edge0-145B-NVFP4",
+   "title": "Edge0/Edge0-145B-NVFP4",
+   "url": "https://huggingface.co/Edge0/Edge0-145B-NVFP4",
+   "summary": "",
+   "published_at": "2026-11-11T05:22:51Z",
+   "metrics": {
+    "likes": 594,
+    "downloads": 80481,
+    "trending_score": 115.5,
+    "likes_delta": 67
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "edge0"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "HuggingFaceTB/SmolVLM2-256M-Video-Instruct",
+   "title": "HuggingFaceTB/SmolVLM2-256M-Video-Instruct",
+   "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-256M-Video-Instruct",
+   "summary": "",
+   "published_at": "2025-02-11T07:06:01Z",
+   "metrics": {
+    "likes": 273,
+    "downloads": 44604,
+    "trending_score": 110,
+    "likes_delta": 61
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-09-01T07:01:09Z",
+   "metrics": {
+    "likes": 3405,
+    "downloads": 1788170,
+    "trending_score": 107.5,
+    "likes_delta": 55
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "summary": "",
+   "published_at": "2026-10-17T02:40:38Z",
+   "metrics": {
+    "likes": 5982,
+    "downloads": 502094,
+    "trending_score": 89.5,
+    "likes_delta": 69
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+   "title": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+   "url": "https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+   "summary": "",
+   "published_at": "2026-08-16T13:18:55Z",
+   "metrics": {
+    "likes": 2439,
+    "downloads": 4382996,
+    "trending_score": 73,
+    "likes_delta": 112
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Cactus-Compute/mirage",
+   "title": "Cactus-Compute/mirage",
+   "url": "https://huggingface.co/Cactus-Compute/mirage",
+   "summary": "",
+   "published_at": "2026-11-05T19:01:53Z",
+   "metrics": {
+    "likes": 498,
+    "downloads": 43736,
+    "trending_score": 72.5,
+    "likes_delta": 52
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "cactus-compute"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "moonshotai/Kimi-K3.1-Pro",
+   "title": "moonshotai/Kimi-K3.1-Pro",
+   "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+   "summary": "",
+   "published_at": "2026-11-02T04:13:51Z",
+   "metrics": {
+    "likes": 2334,
+    "downloads": 60920,
+    "trending_score": 64,
+    "likes_delta": 104
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "RadixArk/DaisyRose-27B",
+   "title": "RadixArk/DaisyRose-27B",
+   "url": "https://huggingface.co/RadixArk/DaisyRose-27B",
+   "summary": "",
+   "published_at": "2026-11-18T05:31:35Z",
+   "metrics": {
+    "likes": 184,
+    "downloads": 166,
+    "trending_score": 63.5,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "NousResearch/Arete-27B",
+   "title": "NousResearch/Arete-27B",
+   "url": "https://huggingface.co/NousResearch/Arete-27B",
+   "summary": "",
+   "published_at": "2026-11-06T19:31:28Z",
+   "metrics": {
+    "likes": 801,
+    "downloads": 13499,
+    "trending_score": 61,
+    "likes_delta": 91
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+   "title": "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+   "url": "https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic",
+   "summary": "",
+   "published_at": "2026-10-30T10:21:29Z",
+   "metrics": {
+    "likes": 9663,
+    "downloads": 38837,
+    "trending_score": 55.400000000000006,
+    "likes_delta": 72
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Cloudflare/clairic",
+   "title": "Cloudflare/clairic",
+   "url": "https://huggingface.co/Cloudflare/clairic",
+   "summary": "",
+   "published_at": "2026-10-16T15:07:01Z",
+   "metrics": {
+    "likes": 75,
+    "downloads": 34,
+    "trending_score": 55,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "meta-llama/Meta-Llama-3-8B-Instruct",
+   "title": "meta-llama/Meta-Llama-3-8B-Instruct",
+   "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
+   "summary": "",
+   "published_at": "2024-04-17T09:35:12Z",
+   "metrics": {
+    "likes": 6359,
+    "downloads": 423008,
+    "trending_score": 54.5,
+    "likes_delta": 133
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "Qwen/Qwen3.8-Flash-Next",
+   "title": "Qwen/Qwen3.8-Flash-Next",
+   "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+   "summary": "",
+   "published_at": "2026-08-24T08:24:59Z",
+   "metrics": {
+    "likes": 7400,
+    "downloads": 2852539,
+    "trending_score": 50.5,
+    "likes_delta": 109
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "title": "DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "url": "https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF",
+   "summary": "",
+   "published_at": "2026-07-19T04:33:55Z",
+   "metrics": {
+    "likes": 2023,
+    "downloads": 2195378,
+    "trending_score": 48.5,
+    "likes_delta": 107
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "microsoft/Aion-1.0-Instruct-2.3B",
+   "title": "microsoft/Aion-1.0-Instruct-2.3B",
+   "url": "https://huggingface.co/microsoft/Aion-1.0-Instruct-2.3B",
+   "summary": "",
+   "published_at": "2026-11-18T17:05:50Z",
+   "metrics": {
+    "likes": 67,
+    "downloads": 788,
+    "trending_score": 47,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "KORMo-VL/KORMo-Web-11B",
+   "title": "KORMo-VL/KORMo-Web-11B",
+   "url": "https://huggingface.co/KORMo-VL/KORMo-Web-11B",
+   "summary": "",
+   "published_at": "2026-11-14T11:23:13Z",
+   "metrics": {
+    "likes": 149,
+    "downloads": 554,
+    "trending_score": 46.5,
+    "likes_delta": 44
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
+   "title": "unsloth/Qwen3.8-Flash-Next-GGUF",
+   "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
+   "summary": "",
+   "published_at": "2026-08-26T12:29:32Z",
+   "metrics": {
+    "likes": 1970,
+    "downloads": 3003403,
+    "trending_score": 44,
+    "likes_delta": 103
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "LiquidAI/LFM3-1.7B",
+   "title": "LiquidAI/LFM3-1.7B",
+   "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+   "summary": "",
+   "published_at": "2026-10-23T21:35:42Z",
+   "metrics": {
+    "likes": 2026,
+    "downloads": 119783,
+    "trending_score": 40,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "OVHaiLLM/Olala-v1.0-mini-7A1B",
+   "title": "OVHaiLLM/Olala-v1.0-mini-7A1B",
+   "url": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+   "summary": "",
+   "published_at": "2026-10-30T10:35:01Z",
+   "metrics": {
+    "likes": 40,
+    "downloads": 181,
+    "trending_score": 40,
+    "likes_delta": null
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "transformers"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+   "title": "SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+   "url": "https://huggingface.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF",
+   "summary": "",
+   "published_at": "2026-10-02T03:42:33Z",
+   "metrics": {
+    "likes": 1238,
+    "downloads": 4283063,
+    "trending_score": 36.5,
+    "likes_delta": 108
+   },
+   "extra": {
+    "pipeline_tag": "image-text-to-text",
+    "library": "gguf"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_models",
+   "id": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+   "title": "nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+   "url": "https://huggingface.co/nvidia/Qwen3.5-4B-Qwen3.8-27B-Draft",
+   "summary": "",
+   "published_at": "2026-11-11T20:23:07Z",
+   "metrics": {
+    "likes": 146,
+    "downloads": 757,
+    "trending_score": 36.5,
+    "likes_delta": 80
+   },
+   "extra": {
+    "pipeline_tag": "text-generation",
+    "library": "Model Optimizer"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24738",
+   "title": "Jeveration: System One Models Now Generate",
+   "url": "https://huggingface.co/papers/2611.24738",
+   "summary": "System One models such as Jev return decisions through fast, parallel prediction. In this paper, we introduce Jeveration, showing that the same decision paradigm can also generate high-quality images in a single forward pass. Jeveration builds on a frozen vision-language model, repurposing its visual-semantic knowledge for holistic image generation. The key challenge is to maintain global consistency. A single prompt admits many valid images, yet parallel predictions must converge on a coherent whole. We therefore condition all positions on a shared random state to coordinate parallel predictions, so that each draw yields a different but coherent image. Since the model tends to ignore this state under direct image supervision, we first learn a distribution over discrete image codes to guide single-pass generation. Beyond text-to-image generation, we further unify image-to-image generation and dense prediction within the same architecture, so that one checkpoint supports all three tasks, each in one forward pass. Experiments show that Jeveration generates a 512x512 image in 78 ms, up to 122x faster than existing unified models, while maintaining competitive image quality and dense prediction performance.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 112,
+    "github_stars": 41
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24738",
+    "github": "https://github.com/Carol-lyh/Jeveration",
+    "organization": "National University of Singapore"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.23068",
+   "title": "The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements",
+   "url": "https://huggingface.co/papers/2611.23068",
+   "summary": "Agent evolution follows a simple loop: a proposer writes candidate artifacts (prompts, skills, memories) and selection accepts those that score higher. This loop has shown promise, yet practitioners face a puzzle: methods trade wins across papers, and evolution often fails to bootstrap on certain tasks. We trace this puzzle to the Resolution Hypothesis: agent evolution stalls not because methods fail to propose better artifacts, but because noisy evaluations cannot reliably identify them. Across seven evolution methods and six models (over 10M LLM calls), we find support for the hypothesis at both levels where evaluation scores are used. At the candidate level (choosing artifacts), helpful candidate artifacts exist, but selection is no better than random at telling them from harmful ones, so errors accumulate across rounds. At the method level (ranking methods), typical margins of a few percentage points are smaller than the difference between two independent runs of the same method, so published rankings often rest on luck. Together, these findings indicate that agent evolution is often bottlenecked by reliably identifying improvements. This calls for a shift in how we develop and evaluate self-improving agents, from designing ever more candidate improvement systems to making true improvements detectable and accumulable.",
+   "published_at": "2026-11-17T00:00:00Z",
+   "metrics": {
+    "upvotes": 35,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.23068",
+    "github": null,
+    "organization": "ShanghaiTech University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.21366",
+   "title": "ALIVE: Making Streaming Video Models Interactive",
+   "url": "https://huggingface.co/papers/2611.21366",
+   "summary": "Streaming video LLMs can continuously observe the world, yet often handle user requests in isolation. We introduce ALIVE, an interactive streaming video model supporting proactive monitoring, streaming task coordination, and feedback-seeking interaction. We construct ALIVE-SFT-288K and ALIVE-RL-3K for two-stage training. Contrastive supervised fine-tuning teaches when and how to respond, while reinforcement learning with Behavior-Aligned Credit Assignment (BACA) combines trajectory-level and local advantages to refine decisions, responses, and silence across multi-turn interactions. We also introduce FSI-Bench to evaluate feedback seeking and subsequent task completion. ALIVE achieves the highest overall scores among the compared models on four public benchmarks and FSI-Bench, demonstrating strong streaming understanding and interactive capabilities.",
+   "published_at": "2026-11-16T00:00:00Z",
+   "metrics": {
+    "upvotes": 32,
+    "github_stars": 15
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.21366",
+    "github": "https://github.com/lijinzhao30/ALIVE",
+    "organization": "Tsinghua University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.11318",
+   "title": "PROLA: Principal-Orthogonal Low-rank Adaptation for Predictive Spatiotemporal Weather Downscaling",
+   "url": "https://huggingface.co/papers/2611.11318",
+   "summary": "High-resolution weather prediction is important for resolving local atmospheric patterns missed by coarse global forecasts. Large pretrained weather backbones have improved global forecasting, but adapting them to produce future high-resolution fields from recent coarse states remains challenging and costly. We formulate this setting as Predictive Spatiotemporal Weather Downscaling (PSWD), a task that jointly refines spatial and temporal resolution while predicting future high-resolution trajectories. To this end, we propose a framework that decomposes prediction into spatial and temporal stages using a shared pretrained backbone, fixed numerical scaffolds, and lightweight residual heads. For backbone adaptation, we introduce PROLA (PRincipal-Orthogonal Low-rank Adaptation), which allocates a fixed low-rank budget between pretrained weights' principal directions and their orthogonal complement. PROLA further rescales rank-1 optimizer updates using gradient signals, improving adaptation without increasing trainable rank. Experiments in the PSWD setting show that PROLA outperforms representative low-rank adaptation baselines. Further experiments across diverse datasets and tasks support the broader applicability of PROLA, showing that its benefits extend beyond the primary weather downscaling setting.",
+   "published_at": "2026-11-08T00:00:00Z",
+   "metrics": {
+    "upvotes": 27,
+    "github_stars": 2
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.11318",
+    "github": "https://github.com/yms020615/PROLA",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24154",
+   "title": "Game2Player: Scaling Gameplay Experience for Visual Agents through Environment-Player Co-Development",
+   "url": "https://huggingface.co/papers/2611.24154",
+   "summary": "Games are a rich testbed for visual agents, demanding perception, long-horizon planning, and precise control. However, collecting human gameplay is costly, and learning from gameplay videos requires inferring missing actions. Existing datasets also cover a limited range of games, often without explicit tasks or verifiable outcomes. To address these gaps, we introduce Game2Player, a framework that co-develops game environments and players to collect diverse and verifiable gameplay experience at scale. In the Game2Player loop, a Builder agent adapts existing web games, exposes their internal state, and defines tasks with state-based progress measures and success checks. A Coding Player and a VLM Player then attempt the tasks and report problems to the Builder for repair, so that play serves as both environment validation and training data collection. With Game2Player, we build 568 verified web games with 3,436 tasks, collect 15.7K trajectories (307 hours of gameplay), and hold out 50 games as the benchmark PlayerBench. To evaluate the collected experience as training data, we train VLM agents with progress-weighted SFT, assigning greater weight to steps that advance task progress. Game2Player-9B improves progress from 14.3% to 31.2% on PlayerBench and from 30.0% to 53.1% on the external GameWorld benchmark. More broadly, our work suggests a path for visual agents to scale their gameplay experience by building, verifying, and learning from existing game worlds.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 25,
+    "github_stars": 22
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24154",
+    "github": "https://github.com/game2player/Game2Player",
+    "organization": "University of Illinois at Urbana-Champaign"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24654",
+   "title": "CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning",
+   "url": "https://huggingface.co/papers/2611.24654",
+   "summary": "A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable framework that incorporates the preservation constraint into the parameterization of the model update. By analyzing the local geometry of the preservation constraint around the pre-adaptation model, CurvDelta constructs a low-curvature space in which parameter updates leave the preservation loss nearly invariant. We make its construction practical for LLMs through Kronecker-factored approximate curvature (K-FAC) and a factorized projection. We also introduce CurvLoRA, a low-rank variant within the same preservation geometry, designed for more efficient adaptation. Both methods apply to preservation-constrained adaptation tasks such as capability learning and selective unlearning. We evaluate our methods on mathematical reasoning, code generation, and knowledge unlearning. For mathematical reasoning and code generation, our approaches achieve competitive downstream performance while better preserving general capabilities, offering a favorable acquisition--retention trade-off relative to the baselines. For knowledge unlearning, our main results on TOFU and MUSE show a better balance between targeted forgetting and knowledge retention than the baselines, with retention performance close to the from-scratch retraining reference.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 22,
+    "github_stars": null
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24654",
+    "github": null,
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24789",
+   "title": "HINT-WAM: Hindsight-Informed Training for World Action Models",
+   "url": "https://huggingface.co/papers/2611.24789",
+   "summary": "World action models (WAMs) have shown promising generalization and data efficiency in robot manipulation by coupling action generation with predictions of future visual dynamics. Translating these capabilities into reliable task execution, however, remains a challenge for existing post-training methods. Offline supervised fine-tuning provides dense supervision on expert trajectories, but its flow-matching action expert is trained only on noised demonstration actions and never on the intermediate states produced by its own sampler; task-specific adaptation can also compromise pretrained capabilities. On-policy reinforcement learning trains on the policy's own behavior, yet sparse task rewards make exploration and credit assignment difficult, while dense reward shaping still provides scalar evaluations rather than direct action targets. We introduce HINT-WAM, the first on-policy self-distillation framework that supervises the action expert on its own sampling trajectories using hindsight, the future video of the demonstration, as privileged information available to the WAM itself. For each demonstration observation, the student generates its action through its own denoising trajectory, and at the states along this trajectory the same model acts as a teacher conditioned additionally on this hindsight, providing a conditional action distribution as a dense training target, while the student sees only deployment-time inputs and needs no environmental rewards or simulator interaction. To transfer this supervision to a flow-matching action expert, HINT-WAM distills the teacher into the student with an energy score, a distribution-level objective that matches the teacher's action distribution from the student's own samples rather than regressing its velocity field. The project web is available in https://tuandattt.github.io/hintwam/.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 22,
+    "github_stars": 4
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24789",
+    "github": "https://github.com/tuandattt/hintwam_code",
+    "organization": null
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.17600",
+   "title": "LightTAR: Light and Fast Target-Aware Representations for Multimodal Tabular Learning",
+   "url": "https://huggingface.co/papers/2611.17600",
+   "summary": "Multimodal tabular learning involves classification and regression on tables combining structured numerical and categorical features with unstructured text and images. These unstructured fields are commonly represented by pretrained encoder embeddings reduced with principal component analysis (PCA). This reduction prioritizes input variance but may overlook information relevant to predicting the target. We introduce LightTAR, a simple, inexpensive method that adapts dimensionality reduction to the prediction task. LightTAR augments the standard PCA representation with a few target-aware features extracted jointly from the final and an intermediate encoder layer using regularized partial least squares (PLS). We evaluate LightTAR with 21 tabular models, including tree ensembles, neural networks, and tabular foundation models. LightTAR improves average predictive performance for all models and, averaged across models, improves prediction on almost every MulTaBench dataset. These gains come with a small increase in total runtime relative to PCA representations. LightTAR integrates directly into existing encoding pipelines, improving tabular learners' predictive performance without modifying the encoder or the learner.",
+   "published_at": "2026-11-12T00:00:00Z",
+   "metrics": {
+    "upvotes": 20,
+    "github_stars": 3
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.17600",
+    "github": "https://github.com/eilamshapira/LightTAR",
+    "organization": "Technion Israel institute of technology"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24869",
+   "title": "WorldRuler: Interactive World Modeling under Configurable Rules",
+   "url": "https://huggingface.co/papers/2611.24869",
+   "summary": "Rules govern how player actions change interactive worlds. Different rules create distinct gameplay experiences within similar scenes and action spaces. For customizable gameplay, generative world models must follow user-defined rules beyond real-world behaviors. However, realizing user-defined rules presents two challenges: Rule-State Persistence and Rule-to-Visual Realization. The former requires preserving rule definitions, dependencies, and world states across saving and loading, so that restored worlds follow the established rules. The latter requires accurately realizing rule-induced changes on designated objects and attributes, particularly when affected objects are unseen. In this paper, we propose WorldRuler, which organizes rule definitions, dependencies, and object states in an executable 3D rule graph and connects rule execution, video generation, and perceptual feedback in a closed loop. The graph supports joint saving and restoration of rules and world states, while dynamic object binding grounds rule-specified entities in visual instances and uses stored states to constrain generation from their first appearance. We further introduce object attribute state replacement and counterfactual reconstruction training, enabling accurate attribute control and compatible appearance and motion changes while limiting interference with unrelated content. We develop an automated data collection and annotation pipeline using GTA-V and Habitat to construct RuleVerse, a dataset of rule-driven interactions with detailed state and event annotations, including cases where rules take effect before affected objects become visible. Extensive experiments demonstrate the effectiveness of WorldRuler in preserving rule-state consistency across saving and loading and accurately realizing rule outcomes on designated objects and attributes.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 18,
+    "github_stars": 7
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24869",
+    "github": "https://github.com/AlayaLab/WorldRuler",
+    "organization": "Alaya Lab"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.22925",
+   "title": "Code World Model 2.0: Towards Infinite Controllable Video Generation",
+   "url": "https://huggingface.co/papers/2611.22925",
+   "summary": "Visual proxies decouple explicit world-state simulation from photorealistic video synthesis, offering a controllable interface for both offline clip creation and real-time interactive streaming. Yet a practical renderer must address two challenges. Upstream proxies vary from coarse layouts to fine articulated geometry depending on the interaction, and streaming inference must operate in a few causal steps without accumulating drift across self-generated history. We present Invoker-Render, pairing a bidirectional creation model with a causal four-step streaming model under a shared conditioning interface over structural proxies, an appearance reference, and language. Trained on an aligned approximately 200-hour multi-granularity corpus, Invoker-Render honors fine geometric constraints when supplied while synthesizing plausible local motion under coarse proxies, enabling runtime selection of input detail. To bridge bidirectional creation and real-time streaming without compounding step compression and rollout drift, we introduce Progressive Forcing (ProForcing). ProForcing first trains a causal predictor and distills it into a four-step renderer using histories derived from training videos. Training then shifts to continuous self-generated rollouts. A pipelined serving stack supports efficient streaming inference. Experiments show versatile control across proxy families, granularities, and camera paths, consistent gains over recent streaming baselines, and stable 30-minute racing rollouts that preserve scene and subject appearance.",
+   "published_at": "2026-11-17T00:00:00Z",
+   "metrics": {
+    "upvotes": 14,
+    "github_stars": 132
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.22925",
+    "github": "https://github.com/inclusionAI/CodeWorldModel",
+    "organization": "inclusionAI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24408",
+   "title": "StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model",
+   "url": "https://huggingface.co/papers/2611.24408",
+   "summary": "Interactive video world models turn user commands into the exploration of a generated scene, which requires the scene to keep its 3D structure as the camera moves and each action to keep a stable effect. Existing benchmarks mostly evaluate these properties against references fitted to the video under test, either a scene reconstructed from its own frames or a camera trajectory aligned to the command path with a free scale. Such references can absorb gradual scene deformation and changes in pace and route length, so these errors can pass undetected. We therefore introduce StrideWorld, a benchmark whose references are fixed before the motion they judge. It evaluates scene rigidity against the ground-truth geometry of the start view, and action consistency against the stride of each action, the camera motion of one command. The stride is measured on the model's first steps and then used to test the steps that follow, so each model is judged only against its own steps. Its measurements are validated on rendered videos with known camera motion, and its scores agree with human judgments. Across  videos generated by  open models from 140 start views, all models but one deform their scenes as the camera moves, with offsets up to 7.3 times those of a rigid rendering along the same camera path. Most models keep a steady pace when a single action is held. Along composed routes, several models often stall, and most completed routes end away from the positions predicted by each model's own strides. Only the two models that scale commands by the estimated scene depth bring most routes close to these positions. Fine-tuning two models on a few rendered clips removes most of their mid-route stalls. Code, data, and a leaderboard are publicly available at https://github.com/chuangwang123/strideworld.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 12,
+    "github_stars": 2
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24408",
+    "github": "https://github.com/chuangwang123/strideworld",
+    "organization": "Shanghai Jiao Tong University"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hf_papers",
+   "id": "2611.24651",
+   "title": "Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement",
+   "url": "https://huggingface.co/papers/2611.24651",
+   "summary": "We present Piccolo, a family of multimodal decision models (0.8B to 27B) that coevolves model capabilities and training data via Agentic Data Engineering and recursive self-improvement (RSI). The models predict probabilities over candidate answers for general-purpose text and visual judgments, agent harnesses, data workflows, and interactive games. Piccolo-27B tops the Decision Index Vision Full leaderboard with a score of 75.59, while Piccolo-9B and Piccolo-4B achieve 68.35 and 67.46, respectively. All three rank first on the Private benchmark in their respective model-size categories. Research agents analyze model behavior, construct training data, conduct experiments, and use the results to refine subsequent proposals. Semantic slices and a shared research memory connect these actions across the model family's development. With training recipes comprising hundreds of thousands of examples, data selection and feedback-driven refinement are central to the self-improvement process. Our large-scale RSI exploration yields three counter-intuitive insights for decision-model development: (1) Backbone-recipe co-adaptation outweighs raw model recency: earlier backbones can surpass newer generations on visual tasks under identical recipes; (2) Targeted data curation enables 4B-9B models to rival 27B baselines on specialized workflows; and (3) Continuous loss reduction can decouple from and even degrade discrete decision accuracy. Together with the released weights and tools from the Data-Juicer and AgentScope ecosystems, Piccolo provides an actionable blueprint for building frontier decision models and scaling data-driven RSI.",
+   "published_at": "2026-11-18T00:00:00Z",
+   "metrics": {
+    "upvotes": 11,
+    "github_stars": 58
+   },
+   "extra": {
+    "arxiv": "https://arxiv.org/abs/2611.24651",
+    "github": "https://github.com/agentscope-ai/Piccolo",
+    "organization": "agentscope-ai"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50552424",
+   "title": "Gemini 4 Neon",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+   "summary": "",
+   "published_at": "2026-11-18T21:34:07Z",
+   "metrics": {
+    "points": 1013,
+    "comments": 761
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50552424"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50548021",
+   "title": "Seven new models at scalable price-performance",
+   "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+   "summary": "",
+   "published_at": "2026-11-18T16:08:24Z",
+   "metrics": {
+    "points": 592,
+    "comments": 376
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50548021"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50547777",
+   "title": "AI agents ask better questions than KPMG accountants in audit trial",
+   "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+   "summary": "",
+   "published_at": "2026-11-18T15:49:34Z",
+   "metrics": {
+    "points": 482,
+    "comments": 249
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50547777"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50563148",
+   "title": "Claude solves two open problems in the physics of black holes",
+   "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+   "summary": "",
+   "published_at": "2026-11-19T17:30:44Z",
+   "metrics": {
+    "points": 363,
+    "comments": 165
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50563148"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50553225",
+   "title": "LLM assisted reverse engineering",
+   "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+   "summary": "",
+   "published_at": "2026-11-18T22:29:13Z",
+   "metrics": {
+    "points": 296,
+    "comments": 76
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50553225"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50550415",
+   "title": "Genie 4 is now available",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+   "summary": "",
+   "published_at": "2026-11-18T18:49:51Z",
+   "metrics": {
+    "points": 287,
+    "comments": 182
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50550415"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50554374",
+   "title": "Gemini 4 Neon looks like an Opus 5.5 competitor",
+   "url": "https://micjm.com/blog/gemini-4-neon-looks-like-a-top-model/",
+   "summary": "",
+   "published_at": "2026-11-19T00:29:45Z",
+   "metrics": {
+    "points": 250,
+    "comments": 78
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50554374"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50549493",
+   "title": "Advancing chip design with OpenAI models",
+   "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+   "summary": "",
+   "published_at": "2026-11-18T17:45:47Z",
+   "metrics": {
+    "points": 220,
+    "comments": 168
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50549493"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50561508",
+   "title": "Pete warden on local AI, open models, voice interfaces, the future of hardware",
+   "url": "https://thedataexchange.media/pete-warden-moonshine/",
+   "summary": "",
+   "published_at": "2026-11-19T15:38:12Z",
+   "metrics": {
+    "points": 210,
+    "comments": 193
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50561508"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50546967",
+   "title": "The x86 CPU: From 4004 to 486",
+   "url": "https://pikuma.com/blog/history-of-x86-4004-to-486",
+   "summary": "",
+   "published_at": "2026-11-18T14:47:53Z",
+   "metrics": {
+    "points": 178,
+    "comments": 66
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50546967"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50548660",
+   "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra",
+   "url": "https://news.ycombinator.com/item?id=50548660",
+   "summary": "",
+   "published_at": "2026-11-18T16:53:42Z",
+   "metrics": {
+    "points": 138,
+    "comments": 42
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50548660"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50558559",
+   "title": "Two stealth models just appeared on the leaderboard, both ahead of Fable 5.2",
+   "url": "https://contralabs.com/frontierdesign",
+   "summary": "",
+   "published_at": "2026-11-19T11:03:20Z",
+   "metrics": {
+    "points": 119,
+    "comments": 42
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50558559"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50559749",
+   "title": "Show HN: Foolscap – a writing app that reads your book and never writes for you",
+   "url": "https://foolscap.works/",
+   "summary": "",
+   "published_at": "2026-11-19T13:21:20Z",
+   "metrics": {
+    "points": 102,
+    "comments": 84
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50559749"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50560461",
+   "title": "OpenAI still has a WebRTC Problem",
+   "url": "https://moq.dev/blog/webrtc-is-still-the-problem/",
+   "summary": "",
+   "published_at": "2026-11-19T14:20:08Z",
+   "metrics": {
+    "points": 91,
+    "comments": 26
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50560461"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50562320",
+   "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+   "url": "https://github.com/onlook-dev/onlook/",
+   "summary": "",
+   "published_at": "2026-11-19T16:34:04Z",
+   "metrics": {
+    "points": 83,
+    "comments": 66
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50562320"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50554269",
+   "title": "Fable: Written, painted and directed by Claude Fable 5.2",
+   "url": "https://claudia.gallery/fable/",
+   "summary": "",
+   "published_at": "2026-11-19T00:18:18Z",
+   "metrics": {
+    "points": 61,
+    "comments": 63
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50554269"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50549188",
+   "title": "Launch HN: Maritime (YC F26) – A managed cloud for production AI agents",
+   "url": "https://news.ycombinator.com/item?id=50549188",
+   "summary": "",
+   "published_at": "2026-11-18T17:26:28Z",
+   "metrics": {
+    "points": 58,
+    "comments": 54
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50549188"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50551601",
+   "title": "Google Gemini's \"Tasks\" Personal Assistant Is Now Free",
+   "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+   "summary": "",
+   "published_at": "2026-11-18T20:20:17Z",
+   "metrics": {
+    "points": 57,
+    "comments": 75
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50551601"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50554908",
+   "title": "Previous-Token Prediction Based LLM Inversion for Prompt Reconstruction",
+   "url": "https://arxiv.org/abs/2607.29378",
+   "summary": "",
+   "published_at": "2026-11-19T01:27:02Z",
+   "metrics": {
+    "points": 47,
+    "comments": 9
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50554908"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50558191",
+   "title": "Air Force Maj. Jason Watson has been in solitary confinement for almost 100 days",
+   "url": "https://www.stripes.com/branches/air_force/2026-11-17/jason-watson-pretrial-hearing-uscmj-charges-23498480.html",
+   "summary": "",
+   "published_at": "2026-11-19T10:10:20Z",
+   "metrics": {
+    "points": 46,
+    "comments": 17
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50558191"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50547223",
+   "title": "Jensen Huang's fall hits 'open' models in boost to Anthropic and OpenAI",
+   "url": "https://www.ft.com/content/418ca885-fbcf-4b9f-a8b9-2bd60b543fc5",
+   "summary": "",
+   "published_at": "2026-11-18T15:08:21Z",
+   "metrics": {
+    "points": 46,
+    "comments": 24
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50547223"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50547122",
+   "title": "A 4.5M-parameter TTS model runs 70x real-time on CPU and cost just $10 to train",
+   "url": "https://huggingface.co/n4ze3m/tiny-voca",
+   "summary": "",
+   "published_at": "2026-11-18T15:01:14Z",
+   "metrics": {
+    "points": 43,
+    "comments": 4
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50547122"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50552140",
+   "title": "Show HN: Robotics needs better CAD, so I wrote a B-rep kernel and 3,487 tests",
+   "url": "https://springcraft-ai.github.io/springrep/",
+   "summary": "",
+   "published_at": "2026-11-18T21:08:47Z",
+   "metrics": {
+    "points": 33,
+    "comments": 9
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50552140"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50561436",
+   "title": "Show HN: Watch weight-space programming in action with WebGPU",
+   "url": "https://tabbyml.github.io/weight-space-playground/",
+   "summary": "",
+   "published_at": "2026-11-19T15:32:47Z",
+   "metrics": {
+    "points": 32,
+    "comments": 3
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50561436"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50558494",
+   "title": "AI Overworks People",
+   "url": "https://twitter.com/catalinmpit/status/2123061832781090948",
+   "summary": "",
+   "published_at": "2026-11-19T10:52:29Z",
+   "metrics": {
+    "points": 32,
+    "comments": 15
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50558494"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50568130",
+   "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+   "url": "https://git-aarvin.github.io/mei/",
+   "summary": "",
+   "published_at": "2026-11-19T23:35:35Z",
+   "metrics": {
+    "points": 31,
+    "comments": 13
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50568130"
+   },
+   "also_in": []
+  },
+  {
+   "source": "hn",
+   "id": "50551487",
+   "title": "SRE-1: 27B model for Production Investigations",
+   "url": "https://resolve.ai/labs/sre-1/paper",
+   "summary": "",
+   "published_at": "2026-11-18T20:10:26Z",
+   "metrics": {
+    "points": 30,
+    "comments": 1
+   },
+   "extra": {
+    "discussion": "https://news.ycombinator.com/item?id=50551487"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+   "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+   "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+   "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+   "published_at": "2026-11-20T00:43:50Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview",
+   "title": "Improvements on the pull request overview in public preview",
+   "url": "https://github.blog/changelog/2026-11-19-improvements-on-the-pull-request-overview-in-public-preview",
+   "summary": "Your feedback has helped improve the new pull request Overview page since its November 5, 2026 public preview. Here’s what’s new! Clearer merge status and next steps Failed optional checks… The post Improvements on the pull request overview in public preview appeared first on The GitHub Blog .",
+   "published_at": "2026-11-20T00:02:21Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+   "title": "Apple is hiring engineers to build its own AI agent",
+   "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+   "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. […]",
+   "published_at": "2026-11-19T22:31:41Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+   "title": "A brief history of Nvidia’s recent stock fluctuations",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+   "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief post-earnings […]",
+   "published_at": "2026-11-19T21:59:35Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+   "title": "Meta’s new Muse Charm device may cost $300",
+   "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+   "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+   "published_at": "2026-11-19T21:58:06Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+   "title": "These tech outages are giving Y2K, AI agent style",
+   "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+   "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+   "published_at": "2026-11-19T21:42:31Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "title": "PostgreSQL 19 Released",
+   "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+   "summary": "PostgreSQL 19 Released Most years PostgreSQL ships a new release in September, but this year's release came two months later thanks mainly to the flurry of issues that the PostgreSQL team needed to address as part of the ongoing AI-reported vulnerability apocalypse. This release was definitely worth the wait. My favorite new feature is this one: For applications that send reads to standbys, PostgreSQL 19 adds \"read-your-writes\" consistency with the new WAIT FOR LSN command. A session on a standby can use WAIT FOR LSN to wait until the standby has replayed the write-ahead log (WAL) up to a spec",
+   "published_at": "2026-11-19T20:43:57Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+   "title": "Meta’s Muse Charm might cost $300",
+   "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+   "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but […]",
+   "published_at": "2026-11-19T20:22:17Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+   "title": "The unfolding Jensen Huang scandal: a timeline",
+   "url": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+   "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+   "published_at": "2026-11-19T20:18:49Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+   "title": "Google is putting AI chats right on the homepage",
+   "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+   "summary": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats. Based on the GIF shared by Stein, it looks like you can open the sidebar by clicking the […]",
+   "published_at": "2026-11-19T20:05:06Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+   "title": "Anthropic’s IPO could deliver $156B to charity",
+   "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+   "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+   "published_at": "2026-11-19T19:10:45Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available",
+   "title": "Enterprise Live Migrations from Azure DevOps generally available",
+   "url": "https://github.blog/changelog/2026-11-19-enterprise-live-migrations-from-azure-devops-generally-available",
+   "summary": "Enterprise Live Migrations (ELM) from Azure DevOps Services to GitHub Enterprise Cloud with data residency is now generally available. You can move your repositories while your teams keep working, then… The post Enterprise Live Migrations from Azure DevOps generally available appeared first on The GitHub Blog .",
+   "published_at": "2026-11-19T18:50:57Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available",
+   "title": "Red Hat Enterprise Linux runner images now generally available",
+   "url": "https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available",
+   "summary": "Red Hat Enterprise Linux (RHEL) 9 and RHEL 10 images for GitHub-hosted larger runners are now generally available. Originally introduced in public preview in June 2026 in partnership with Red… The post Red Hat Enterprise Linux runner images now generally available appeared first on The GitHub Blog .",
+   "published_at": "2026-11-19T18:48:46Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.langchain.com/blog/series-c",
+   "title": "LangChain Raises $300M Series C at $3B Valuation",
+   "url": "https://www.langchain.com/blog/series-c",
+   "summary": "LangChain raises $300M Series C at a $3B valuation, led by CapitalG, to help every company own its intelligence with LangSmith, the agent engineering platform.",
+   "published_at": "2026-11-19T18:24:58Z",
+   "metrics": {},
+   "extra": {
+    "feed": "LangChain Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+   "title": "Gemini on Mac can now use your computer",
+   "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+   "summary": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files, desktop apps, and the web,\" the company says. Google suggests the feature might be useful for things like speeding up workflows, filling in forms, making presentations, and listing items for sale. Users will […]",
+   "published_at": "2026-11-19T18:21:13Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+   "title": "Google gives Gemini the ability to use your Mac for you",
+   "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+   "summary": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
+   "published_at": "2026-11-19T18:09:11Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+   "title": "Introducing Tool Retrieval in the Gemini API",
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+   "summary": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+   "published_at": "2026-11-19T18:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Google AI Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+   "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
+   "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+   "summary": "In some of these instances, employees said Muse surfaced messages about childcare requests they never made, career advice they never asked for, product orders they never placed, and bank account balances that didn't belong to them.",
+   "published_at": "2026-11-19T17:38:40Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+   "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+   "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+   "summary": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode.",
+   "published_at": "2026-11-19T17:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Google AI Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
+   "title": "Former Alibaba exec’s Everful raises $48.5M to connect retailers with Chinese factories",
+   "url": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
+   "summary": "Everful has raised $48.5 million to expand its factory-direct sourcing platform, helping retailers source products from overseas manufacturers.",
+   "published_at": "2026-11-19T17:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+   "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+   "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+   "summary": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised.",
+   "published_at": "2026-11-19T16:59:23Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+   "title": "Anthropic starts trading on Wall Street",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+   "summary": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share, up from its initial $83 per share price that put company's value at around $1.5 trillion. The listing comes nearly a month after Anthropic revealed its plans to go public. In its lengthy S-1 filing, […]",
+   "published_at": "2026-11-19T16:52:01Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+   "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
+   "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+   "summary": "In his Nasdaq opening bell speech, Dario Amodei reiterated Anthropic's commitment to pacing AI development, regardless of business or political pressure.",
+   "published_at": "2026-11-19T16:19:41Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.langchain.com/blog/langsmith-tool-gateway",
+   "title": "LangSmith Tool Gateway: Secure, governed tool use for agents",
+   "url": "https://www.langchain.com/blog/langsmith-tool-gateway",
+   "summary": "LangSmith Tool Gateway, now in Public Beta, handles credentials, identity, and access for every agent tool call, with policies, approvals, and traces.",
+   "published_at": "2026-11-19T15:51:28Z",
+   "metrics": {},
+   "extra": {
+    "feed": "LangChain Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
+   "title": "ChatGPT can transcribe as you speak now with Live Dictation",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
+   "summary": "ChatGPT can receive audio prompts from your microphone faster now with a Live Dictation feature that transcribes as you speak, rather than waiting until you finish recording. It's rolling out now globally on all ChatGPT plans on the web, desktop app, and iOS and Android apps. While using dictation in ChatGPT, you can tap or […]",
+   "published_at": "2026-11-19T15:16:45Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+   "title": "Anthropic’s IPO puts AI’s circular financing boom to the test",
+   "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+   "summary": "Anthropic faces enormous compute commitments as it goes public, but its biggest infrastructure partners, including Amazon and Google, could continue profiting from AI even if Anthropic loses its lead.",
+   "published_at": "2026-11-19T14:54:39Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
+   "title": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
+   "summary": "Today is a new beginning for Anthropic: a years-in-the-making IPO that beat out SpaceX for most valuable of all time, having raised $81.3 billion and set an important precedent for the other public AI lab debuts to come. But it's not simply a financial milestone. Anthropic was founded on the idea that it prioritized safety […]",
+   "published_at": "2026-11-19T14:25:37Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+   "title": "Superhuman pushes its Go assistant everywhere",
+   "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+   "summary": "Superhuman is making Go its central agent and making it available in Docs and Mail.",
+   "published_at": "2026-11-19T14:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.langchain.com/blog/fix-your-coding-agent-bill",
+   "title": "Your coding agent bill doubled. Here’s how to fix it.",
+   "url": "https://www.langchain.com/blog/fix-your-coding-agent-bill",
+   "summary": "Learn why coding agent bills spiral out of control — and how to trace, compare, and govern spend across Claude Code, Cursor, Copilot, and more in one place.",
+   "published_at": "2026-11-19T13:36:39Z",
+   "metrics": {},
+   "extra": {
+    "feed": "LangChain Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.langchain.com/blog/announcing-data-annotation-queue",
+   "title": "Announcing Data Annotation Queues",
+   "url": "https://www.langchain.com/blog/announcing-data-annotation-queue",
+   "summary": "Review logs, annotate data, and build datasets with LangSmith's Data Annotation Queues. Improve LLM app performance from prototype to production.",
+   "published_at": "2026-11-19T13:36:39Z",
+   "metrics": {},
+   "extra": {
+    "feed": "LangChain Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.langchain.com/blog/langsmith-alerts",
+   "title": "Catch production failures early with LangSmith Alerts",
+   "url": "https://www.langchain.com/blog/langsmith-alerts",
+   "summary": "Set up real‑time notifications on error rates, run latency & feedback scores to spot failures before your customers do.",
+   "published_at": "2026-11-19T13:36:39Z",
+   "metrics": {},
+   "extra": {
+    "feed": "LangChain Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
+   "title": "I let Apple’s always-listening AI summarize my life for two weeks",
+   "url": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
+   "summary": "Was it worth it? I've been asking myself this quite a bit over the last month or so while testing both the Amazon Bee Frontier and Siri Recap on the Apple Watch Ultra 4. Both enable a wearable to ambiently listen to your conversations and, using AI, summarize them for you. Why? So you can […]",
+   "published_at": "2026-11-19T13:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button",
+   "title": "Canva adds an AI ‘off’ button",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button",
+   "summary": "Canva will now allow you to turn off its generative AI features. With this change, you can disable the graphic design platform's array of AI tools, such as its AI photo-extending Magic Expand feature, as well as turn off the ability to generate images with its Canva chatbot. This toggle doesn't turn off every AI-powered […]",
+   "published_at": "2026-11-19T12:30:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "The Verge AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-19-s3-audit-log-streaming-with-openid-connect-expands-to-ghe-com",
+   "title": "S3 audit log streaming with OpenID Connect expands to GHE.com",
+   "url": "https://github.blog/changelog/2026-11-19-s3-audit-log-streaming-with-openid-connect-expands-to-ghe-com",
+   "summary": "You can now stream enterprise audit logs to Amazon S3 using OpenID Connect (OIDC) on GitHub Enterprise Cloud with data residency (GHE.com). This extends the existing github.com capability, letting you… The post S3 audit log streaming with OpenID Connect expands to GHE.com appeared first on The GitHub Blog .",
+   "published_at": "2026-11-19T08:27:16Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+   "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+   "published_at": "2026-11-19T08:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "OpenAI News"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+   "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+   "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+   "summary": "Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging them to voluntarily quit, rather than reducing the workforce via another massive layoff. The short answer is AI, but not in the way you might expect.",
+   "published_at": "2026-11-19T00:42:56Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli",
+   "title": "Wait for pull request events with GitHub CLI",
+   "url": "https://github.blog/changelog/2026-11-18-wait-for-pull-request-events-with-github-cli",
+   "summary": "GitHub CLI now supports GitHub Event Streams. With gh v2.105.0, you and your agents can wait for a pull request to change with a single command instead of polling it… The post Wait for pull request events with GitHub CLI appeared first on The GitHub Blog .",
+   "published_at": "2026-11-19T00:00:13Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://openai.com/business/learn/deploying-daybreak-red",
+   "title": "Deploying Daybreak Red",
+   "url": "https://openai.com/business/learn/deploying-daybreak-red",
+   "summary": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.",
+   "published_at": "2026-11-19T00:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "OpenAI News"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://openai.com/business/learn/pr-scans-demo",
+   "title": "See PR scans in action",
+   "url": "https://openai.com/business/learn/pr-scans-demo",
+   "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+   "published_at": "2026-11-19T00:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "OpenAI News"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://openai.com/business/learn/codex-security-plugin-demo",
+   "title": "Explore the Codex Security Plugin",
+   "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+   "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+   "published_at": "2026-11-19T00:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "OpenAI News"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+   "title": "Get started with Daybreak Blue",
+   "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+   "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
+   "published_at": "2026-11-19T00:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "OpenAI News"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+   "title": "llm-gemini 0.38",
+   "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+   "summary": "Release: llm-gemini 0.38 Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were the same price , and Hydrogen was 3/4 of that price now but will be 1/4 of that price when the other two double an 1st December once their initial discount pricing expires. The Neon announcement pretends that Argon doesn't exist. Here's their new image explaining the model line-up: So the lineup now, from most to least exp",
+   "published_at": "2026-11-18T23:59:20Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+   "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is ‘unpatchable’",
+   "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+   "summary": "The Microsoft CEO downplayed the recent Outlook outage while noting that AI was causing both opportunities and new challenges for securing much of the connected world.",
+   "published_at": "2026-11-18T23:45:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/",
+   "title": "Elon Musk says ousting Jensen Huang is like ‘kicking Michael Jordan off your team’",
+   "url": "https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/",
+   "summary": "“I don’t think [Huang is] disloyal to the United States,\" Musk said.",
+   "published_at": "2026-11-18T23:25:17Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/",
+   "title": "Microsoft CEO Satya Nadella remains confident in Nvidia after Huang’s exit",
+   "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/",
+   "summary": "Microsoft CEO Satya Nadella expressed confidence in Jensen Huang's successor Colette Kress, who is serving as Nvidia's interim CEO.",
+   "published_at": "2026-11-18T23:17:28Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/satya-nadella-predicts-ai-agents-will-reshuffle-the-economics-of-the-web/",
+   "title": "Satya Nadella predicts AI agents will reshuffle the economics of the web",
+   "url": "https://techcrunch.com/2026/11/18/satya-nadella-predicts-ai-agents-will-reshuffle-the-economics-of-the-web/",
+   "summary": "Microsoft's CEO says AI agents could disrupt advertising-driven business models, forcing companies like Amazon to rethink how they compete for customers.",
+   "published_at": "2026-11-18T22:58:11Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+   "title": "Anthropic prices IPO at $83 a share, above projected range",
+   "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+   "summary": "The long-awaited IPO reportedly values the company at $1.5 trillion on a fully diluted basis.",
+   "published_at": "2026-11-18T22:11:15Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+   "title": "Connect Supabase, Box, Calendly, and more to Copilot",
+   "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot",
+   "summary": "You can now connect eight more services to Copilot using GitHub-verified MCP servers, or connectors, available in public preview. They join more than 25 services you can already connect, like… The post Connect Supabase, Box, Calendly, and more to Copilot appeared first on The GitHub Blog .",
+   "published_at": "2026-11-18T22:04:50Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/nvidia-created-a-weird-bit-of-intrigue-by-not-filing-a-routine-sec-report/",
+   "title": "Nvidia created a weird bit of intrigue by not filing a routine SEC report",
+   "url": "https://techcrunch.com/2026/11/18/nvidia-created-a-weird-bit-of-intrigue-by-not-filing-a-routine-sec-report/",
+   "summary": "One Wall Street analyst got to the bottom of Nvidia's surprise announcement that it wouldn't be filing its formal quarterly results document, the 10-Q, for weeks.",
+   "published_at": "2026-11-18T21:57:40Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+   "title": "Gemini 4 Neon in GitHub Copilot",
+   "url": "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot",
+   "summary": "Gemini 4 Neon is now generally available in GitHub Copilot. It is designed for agentic coding, multistep tool use, and knowledge work. According to Google, Gemini 4 Neon delivers quality… The post Gemini 4 Neon in GitHub Copilot appeared first on The GitHub Blog .",
+   "published_at": "2026-11-18T21:49:21Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+   "title": "Introducing Gemini 4 Neon",
+   "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+   "summary": "",
+   "published_at": "2026-11-18T21:35:43Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Google DeepMind"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://techcrunch.com/2026/11/18/palmer-luckey-warns-ai-powered-cyberattacks-are-outpacing-defenses-its-time-to-start-running/",
+   "title": "Palmer Luckey warns AI-powered cyberattacks are outpacing defenses: ‘It’s time to start running’",
+   "url": "https://techcrunch.com/2026/11/18/palmer-luckey-warns-ai-powered-cyberattacks-are-outpacing-defenses-its-time-to-start-running/",
+   "summary": "The Anduril co-founder says outdated technology is leaving systems vulnerable to a new wave of AI-enabled attacks.",
+   "published_at": "2026-11-18T21:34:13Z",
+   "metrics": {},
+   "extra": {
+    "feed": "TechCrunch AI"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+   "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+   "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+   "summary": "",
+   "published_at": "2026-11-18T19:54:56Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Hugging Face Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+   "title": "Why your fine-tuning job takes longer than the FLOPs say",
+   "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+   "summary": "",
+   "published_at": "2026-11-18T18:53:43Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Hugging Face Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://deepmind.google/blog/genie-4-is-now-available/",
+   "title": "Genie 4 is now available",
+   "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+   "summary": "",
+   "published_at": "2026-11-18T18:13:42Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Google DeepMind"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+   "title": "datasette-arrows 0.1a0",
+   "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+   "summary": "Release: datasette-arrows 0.1a0 Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. I've learned never to release a new plugin feature without accompanying it with a plugin that uses it. Claude Fable 5.2 suggested the Apache Arrow streaming format",
+   "published_at": "2026-11-18T17:09:59Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+   "title": "The Gemini app is now available on lower-memory Android devices.",
+   "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+   "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+   "published_at": "2026-11-18T17:00:00Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Google AI Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-18-security-risk-assessments-run-automatically-on-github-team",
+   "title": "Security risk assessments run automatically on GitHub Team",
+   "url": "https://github.blog/changelog/2026-11-18-security-risk-assessments-run-automatically-on-github-team",
+   "summary": "GitHub security risk assessments now run automatically for organizations on GitHub Team. Organization admins and security managers can review findings from the free assessments to identify exposed credentials and code… The post Security risk assessments run automatically on GitHub Team appeared first on The GitHub Blog .",
+   "published_at": "2026-11-18T16:54:26Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://www.langchain.com/blog/langsmith-coding-agents-roi",
+   "title": "LangSmith for Coding Agents: Now track spend by outcome",
+   "url": "https://www.langchain.com/blog/langsmith-coding-agents-roi",
+   "summary": "LangSmith now offers reporting built for coding agents, along with new capabilities that tie their spend to the pull requests they produce.",
+   "published_at": "2026-11-18T16:27:01Z",
+   "metrics": {},
+   "extra": {
+    "feed": "LangChain Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team",
+   "title": "Customize GitHub Copilot for your team",
+   "url": "https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team",
+   "summary": "You can now share the GitHub Copilot plugins your team relies on without asking every member to repeat the same setup. Team customizations are generally available for organization teams. Team… The post Customize GitHub Copilot for your team appeared first on The GitHub Blog .",
+   "published_at": "2026-11-18T16:00:13Z",
+   "metrics": {},
+   "extra": {
+    "feed": "GitHub Changelog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+   "title": "Quoting Daniel Stenberg",
+   "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+   "summary": "During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust code (I counted), we merged over 300 commits in the actual curl project. We actually improved curl during these a little more than three weeks. A little over 200 bugfixes actually. 200 bugfixes that none of those rust rewrites have. We also fixed a few vulnerabilities. In another month we have done another 200 and maybe fixed a few more vulnerabilities. Will these clones keep up? — Daniel Stenberg , Actual curl rewrites in Rust Tags: daniel-stenberg , curl , rust , security , coding-agents , c , ai , llms",
+   "published_at": "2026-11-18T15:58:27Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+   "title": "Time-Series Models in the Streamhouse: A New Frontier and Use Cases",
+   "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+   "summary": "",
+   "published_at": "2026-11-18T15:00:23Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Hugging Face Blog"
+   },
+   "also_in": []
+  },
+  {
+   "source": "rss",
+   "id": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
+   "title": "The PSF end-of-year fundraiser",
+   "url": "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
+   "summary": "The PSF end-of-year fundraiser With my Python Software Foundation board director hat on: we've launched our end-of-year fundraiser for the non-profit that supports Python development and the Python community. If your company or your work benefits from Python, please consider donating this year! The PSF looks after the IP behind Python, operates PyPI, sponsors core developer sprints, supports community events (including running PyCon US every year), and employs a small and excellent staff team to keep everything running. We also operate the Developers in Residence program , which now includes t",
+   "published_at": "2026-11-18T14:44:48Z",
+   "metrics": {},
+   "extra": {
+    "feed": "Simon Willison"
+   },
+   "also_in": []
+  }
+ ]
+}
