@@ -1,0 +1,750 @@
+{
+ "date": "2026-11-24",
+ "generated_at": "2026-11-24T00:45:53Z",
+ "models_used": [
+  "gemini-3.5-flash-lite",
+  "gemini-3.5-flash",
+  "gemini-3.8-flash"
+ ],
+ "llm_calls": 23,
+ "tldr": [
+  "Anthropic 推出 Claude Ship，讓 AI 代理能夠自動審查、修正並批准程式碼變更。",
+  "Z.ai 發布 GLM-5.4，採用首創的迴圈 Transformer 架構，強化通用程式碼編寫能力。",
+  "Google DeepMind 結合代理團隊與形式化驗證，成功提升融合與化學等領域的量子演算法效率。"
+ ],
+ "sections": {
+  "news": {
+   "items": [
+    {
+     "ref": "c103",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+      }
+     ],
+     "title": "Anthropic 推出 Claude Ship：由 AI Agent 自動進行程式碼審核與 Merge 核准",
+     "tags": [
+      "Coding Agent",
+      "程式碼審查",
+      "多 Agent 協作"
+     ],
+     "summary": "Anthropic 發表 Claude Ship 套件，將 AI 從自動寫程式延伸至程式碼上線前的審查與核准流程。此套件包含已公開的 Code Review 以及兩款新測試版 Agent：PR Steward 與 Claude Approvals。PR Steward 能修正 CI 失敗、衝突與審查回饋；Claude Approvals 則能根據團隊寫在儲存庫的自然語言政策自動核准 PR。官方宣稱其內部 Claude Code 團隊大多數程式碼已由 Claude 撰寫，希望自動化 PR 後續所有流程。目前該功能於 GitHub 的 Claude Team 與 Enterprise 方案展開測試。",
+     "key_points": [
+      "提供 Code Review、PR Steward 與 Claude Approvals 三大 Agent 功能。",
+      "PR Steward 自動修復 CI 錯誤、衝突並留言紀錄變更與還原方式。",
+      "Claude Approvals 依據自然語言設定檔與政策自動進行審查並核准 PR。",
+      "目前開放 Claude Team 及 Enterprise 訂閱戶於 GitHub 儲存庫進行 Beta 測試。"
+     ],
+     "how_to_use": "跟你的工作關係不大。因為 Claude Ship 僅支援 GitHub 上的 Claude Team 與 Enterprise 付費方案，且綁定 Anthropic 服務，對於使用免費 Gemini API 或本機 Ollama 跑 LangGraph 的開發者無法直接整合。不過其架構值得借鏡：你可以在 LangGraph 中建立類似的「PR 簽核 Agent」流程，結合 Git Python API 與本機 LLM，在自動化爬蟲或資料處理腳本推送到 GitHub 前，先做自動化靜態檢查與自然語言政策審核。",
+     "fallback": false
+    },
+    {
+     "ref": "c122",
+     "source": "rss",
+     "id": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "Google DeepMind",
+       "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+      }
+     ],
+     "title": "Google DeepMind 利用 Gemini 4 Agent 團隊與 Lean 形式化驗證優化量子演算法",
+     "tags": [
+      "多 Agent 協作",
+      "科學運算",
+      "形式驗證"
+     ],
+     "summary": "Google DeepMind 發表最新研究，利用 Gemini 4 組成的獨立 Agent 團隊，結合 Lean 形式化定理證明器優化量子演算法。研究中各 Agent 團隊每 4 小時舉行虛擬會議交流與比對想法，並透過 Lean 進行數學驗證。官方宣稱此方法將慣性約束核融合量子電路的計算成本降低 11.8 倍，並將藥物開發關鍵酵素 Cytochrome P450 的量子模擬效率提升 2.5 倍。DeepMind 已將 Lean 函式庫與驗證解答開源於 GitHub。",
+     "key_points": [
+      "結合多 Agent 團隊腦力激盪與 Lean 數學形式化驗證，確保量子電路正確性。",
+      "Agent 團隊每 4 小時舉行虛擬會議交流想法，隨著時間推移持續優化演算法成本。",
+      "在慣性核融合模擬上將計算成本降低 11.8 倍，酵素 Cytochrome P450 模擬提升 2.5 倍。",
+      "已將 Lean 函式庫、問題規格與驗證解法開源於 GitHub。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這項研究專注於前沿量子演算法與物理化學模擬，離一般的 Python 資料處理與自動化較遠。但其「多 Agent 定期會議溝通 + 形式驗證工具」的架構極具參考價值。在 LangGraph 多 Agent 協作專案中，若需要讓 Agent 自動產生複雜 SQL 或爬蟲腳本，可借鏡這種讓多個 Agent 彼此質疑、比對，並透過單元測試或 SQL 語法檢查器進行嚴格驗證的機制。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c111",
+     "source": "rss",
+     "id": "https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "GitHub Changelog",
+       "url": "https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview"
+      }
+     ],
+     "title": "GitHub Issue 狀態與儲存庫看板開放公開預覽",
+     "one_liner": "GitHub 推出更細緻的 Issue 狀態設定，協助開發團隊與 Agent 共享更清晰的工作 context。",
+     "url": "https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview",
+     "fallback": false
+    },
+    {
+     "ref": "c114",
+     "source": "rss",
+     "id": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+     "metrics": {},
+     "sources": [
+      {
+       "label": "TechCrunch AI",
+       "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/"
+      }
+     ],
+     "title": "Google 搜尋 AI 模式整合雲端硬碟與電子錢包",
+     "one_liner": "Google 搜尋的 AI Mode 可串接 Drive 與 Wallet，運用用戶個人資料提供個人化回答。",
+     "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+     "fallback": false
+    }
+   ]
+  },
+  "models": {
+   "items": [
+    {
+     "ref": "c2",
+     "source": "hn",
+     "id": "50609685",
+     "metrics": {
+      "points": 1038,
+      "comments": 338
+     },
+     "sources": [
+      {
+       "label": "原文",
+       "url": "https://z.ai/blog/glm-5.4"
+      },
+      {
+       "label": "HN 討論（1038 分）",
+       "url": "https://news.ycombinator.com/item?id=50609685"
+      }
+     ],
+     "title": "GLM-5.4 發表：首款迴圈變壓器架構的通用程式碼模型",
+     "tags": [
+      "GLM-5.4",
+      "Coding Agent",
+      "開源模型"
+     ],
+     "summary": "GLM-5.4 推出名為 Toward generalized coding with our first loop transformer 的全新模型，獲得 HN 讀者超過千分關注與三多百則評論。官方宣稱其導入了首款 loop transformer（迴圈變壓器）架構，旨在強化模型的程式碼生成與通用處理能力，吸引許多開發者討論其在長任務與程式開發上的實際表現與架構突破。",
+     "key_points": [
+      "採用首款 loop transformer 迴圈變壓器架構",
+      "聚焦於 Generalized coding（通用程式編寫）能力的提升",
+      "在 Hacker News 引發熱烈討論（1038 積分、338 則評論）"
+     ],
+     "how_to_use": "跟你的工作關係不大，因為目前主要提供的是概念與模型架構發表，尚未看到直接的 pip 套件或適合本機 Windows 執行的量化版本。不過若你是 Coding Agent 的愛好者，值得關注迴圈架構未來如何改善模型在 LangGraph 中處理多步驟程式生成與環境互動的穩定度。",
+     "fallback": false
+    },
+    {
+     "ref": "c71",
+     "source": "hf_models",
+     "id": "Qwen/Qwen3.8-27B",
+     "metrics": {
+      "likes": 21677,
+      "downloads": 6185088,
+      "trending_score": 184.5,
+      "likes_delta": 790
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      }
+     ],
+     "title": "Qwen3.8-27B 旗艦開源視覺語言模型發布",
+     "tags": [
+      "Qwen3.8",
+      "多模態",
+      "開源模型"
+     ],
+     "summary": "阿里 Qwen 團隊推出 Qwen3.8 系列中體積適中、部署友善的 dense 模型 Qwen3.8-27B。這是一款原生視覺語言模型，支援圖像與影片理解，並具備彈性思考控制功能（thinking mode）。官方宣稱其在程式編寫、專業工作、研究及長視野 Agent 任務上有全面提升，並提供更強自主規劃與環境回饋處理能力，相容 vLLM 與 Hugging Face Transformers。",
+     "key_points": [
+      "27B 參數規模的密集模型，支援原生影像與影片理解",
+      "內建預設開啟且可調整深度的思考控制模式（Flexible Thinking Control）",
+      "官方宣稱強化長視野 Agent 任務的自主規劃與端到端任務完成度"
+     ],
+     "how_to_use": "對你的本機 Windows 開發環境來說，27B 模型直接完整載入比較吃力，且沒有 OpenAI/Anthropic 付費 key。不過若透過本機 Ollama 支援或未來有提供更小量化版時，你可以將其接入 LangGraph，用來處理內部自動化流程中的圖表、文件圖片解析，或是作為不需要付費 API 的本地 Agent 推理核心。",
+     "fallback": false
+    },
+    {
+     "ref": "c93",
+     "source": "hf_papers",
+     "id": "2611.24636",
+     "metrics": {
+      "upvotes": 36,
+      "github_stars": 162
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.24636"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.24636"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/DiffuSpace/Clover-35B-A3B-Preview"
+      }
+     ],
+     "title": "Clover-35B-A3B-Preview 技術報告：支援思考模式的擴散語言模型",
+     "tags": [
+      "擴散模型",
+      "Mixture-of-Experts",
+      "Agent 評測"
+     ],
+     "summary": "Clover-35B-A3B-Preview 是一款 35B 總參數、3B 啟動參數的 Mixture-of-Experts 擴散語言模型，支援思考模式生成。該模型結合了 Gated Delta Networks 與區塊擴散，在七項評測代理指標中領先，包含 SWE-bench Verified 達到 73.6、Terminal-Bench 2.1 達到 51.7。官方宣稱在單張 NVIDIA GB300 GPU 搭配 BF16 精度與批次大小一的情況下，可達到每秒 680 個 Token 的生成速度。",
+     "key_points": [
+      "MoE 結合擴散語言模型架構（35B 總參數，3B 啟動參數）",
+      "在 SWE-bench Verified 獲得 73.6、Terminal-Bench 2.1 獲得 51.7 的代理指標",
+      "具備決策模型變體，可在一次去噪傳遞中生成相關問題的答案"
+     ],
+     "how_to_use": "跟你的工作關係不大，因為該模型技術報告中強調的是基於高階硬體（如 NVIDIA GB300）的效能與特定評測數據，且目前沒有直接提供可在 Windows 本機免金鑰執行的簡便介面。但其在 SWE-bench 與 Terminal-Bench 的高分表現，適合作為未來評估 Coding Agent 能力的參考指標。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c72",
+     "source": "hf_models",
+     "id": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+     "metrics": {
+      "likes": 1483,
+      "downloads": 206652,
+      "trending_score": 78,
+      "likes_delta": 756
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB"
+      }
+     ],
+     "title": "NVIDIA 發布 Nemotron-3.5-Bolt-E4B-4GB 模型",
+     "one_liner": "NVIDIA 推出的輕量化開源模型，在 Hugging Face 上獲得一定關注與下載量。",
+     "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+     "fallback": false
+    },
+    {
+     "ref": "c75",
+     "source": "hf_models",
+     "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "metrics": {
+      "likes": 6617,
+      "downloads": 524232,
+      "trending_score": 85,
+      "likes_delta": 751
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      }
+     ],
+     "title": "DeepSeek-V4.1-Flash-1017 更新釋出",
+     "one_liner": "DeepSeek 釋出 Flash 版本的更新模型，吸引社群社群大量下載與點讚。",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "fallback": false
+    },
+    {
+     "ref": "c84",
+     "source": "hf_models",
+     "id": "inclusionAI/LingSante-3.1-flash",
+     "metrics": {
+      "likes": 113,
+      "downloads": 397,
+      "trending_score": 92,
+      "likes_delta": 68
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/inclusionAI/LingSante-3.1-flash"
+      }
+     ],
+     "title": "inclusionAI 推出 LingSante-3.1-flash",
+     "one_liner": "新興的開源模型選項，在社群中獲得初步的關注與評分。",
+     "url": "https://huggingface.co/inclusionAI/LingSante-3.1-flash",
+     "fallback": false
+    },
+    {
+     "ref": "c89",
+     "source": "hf_models",
+     "id": "meta-llama/Meta-Llama-3-8B-Instruct",
+     "metrics": {
+      "likes": 6590,
+      "downloads": 433087,
+      "trending_score": 51.5,
+      "likes_delta": 38
+     },
+     "sources": [
+      {
+       "label": "Hugging Face",
+       "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct"
+      }
+     ],
+     "title": "Meta Llama 3 8B Instruct 持續受到社群應用",
+     "one_liner": "經典的 Llama 3 8B 指令微調模型，依然是開發者進行本機實驗的常見選擇。",
+     "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
+     "fallback": false
+    }
+   ]
+  },
+  "arch": {
+   "items": [
+    {
+     "ref": "c91",
+     "source": "hf_papers",
+     "id": "2611.27193",
+     "metrics": {
+      "upvotes": 91,
+      "github_stars": 0
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.27193"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.27193"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Newiz430/cmHC"
+      }
+     ],
+     "title": "cmHC：透過幾何收縮平衡超連接中的殘差流混合機制",
+     "tags": [
+      "模型架構",
+      "超連接",
+      "梯度傳播",
+      "預訓練優化"
+     ],
+     "summary": "本論文研究流形約束超連接（mHC）在多殘差流之間的混合機制。研究指出，當殘差矩陣過度遠離或集中於雙隨機矩陣流形中心時，會引發殘差流過度獨立或無法區分的混合權衡問題。為此，作者提出 cmHC（Contraction for Manifold-Constrained Hyper-Connections），在無需引入額外參數的情況下，透過將幾何結構向內部收縮來促進深層探索，並在淺層實施適度收縮以避免過度混合，藉此穩定極大規模模型預訓練的梯度傳播。官方實驗顯示該演算法能有效應用於 Dense 與 MoE 模型，且在 Ascend NPU 上的融合算子可降低最高 44.8% 的執行延遲。",
+     "key_points": [
+      "揭示超連接中殘差矩陣過度混合與混合不足的關鍵權衡。",
+      "提出 cmHC 幾何收縮方法，不需額外參數即可穩定極大規模模型的預訓練梯度。",
+      "在 Ascend NPU 上開發專屬融合算子，將超連接執行延遲降低最高 44.8%。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這項研究屬於底層 Transformer 模型預訓練與 Ascend NPU 算子優化的範疇。對於使用 Python、LangGraph 串接 Gemini 或 Ollama 進行資料處理與自動化 Agent 開發的讀者而言，無法直接在應用層 API 或工作流中調用。但這代表了未來開源底層 LLM 在訓練穩定度與推論延遲上的結構性改善。",
+     "fallback": false
+    },
+    {
+     "ref": "c96",
+     "source": "hf_papers",
+     "id": "2611.27973",
+     "metrics": {
+      "upvotes": 18,
+      "github_stars": 18
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.27973"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.27973"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Clare-Nie/MemOnce"
+      }
+     ],
+     "title": "MemOnce：適用於超長文本 LLM 的可擴展記憶架構",
+     "tags": [
+      "記憶體架構",
+      "KV Cache",
+      "長文本推論",
+      "模型架構"
+     ],
+     "summary": "MemOnce 旨在解決標準 Transformer 在長對話與持續互動中因每一層累積 Token 級別 KV Cache 所導致的 GPU 記憶體線性成長與二次方計算複雜度問題。MemOnce 的核心設計包含：僅快取少量最終層隱藏狀態作為緊湊記憶表示並動態解碼回注意力層的「記憶編解碼器」，以及跨層僅計算一次檢索索引的「記憶稀疏注意力」。官方宣稱將 Qwen3.5-4B 適應改編為 MemOnce 後，在 1M 文本長度下可將記憶狀態快取減少 1313 倍、Prefill 延遲降低 6.9 倍、吞吐量提升 3.5 倍，並在下游任務表現出優異的 Zero-shot 能力。",
+     "key_points": [
+      "僅快取最終層隱藏狀態並動態解碼，擺脫每層累積 KV Cache 的記憶體負擔。",
+      "採用跨層僅計算一次索引的記憶稀疏注意力機制，達到線性時間複雜度。",
+      "官方宣稱在 1M 上下文下大幅降低記憶體佔用與 Prefill 延遲，並提高吞吐量。"
+     ],
+     "how_to_use": "跟你的工作關係不大。這屬於底層模型架構與推論引擎的創新，無法透過 pip 套件或 LangGraph 設定直接導入現有的應用層工作流程。不過如果你未來在本機 Ollama 執行長文本分析或處理大體積 SQL/文件時，這類技術有望被整合進新一代開源小模型中，從本機端解決長 context 造成的顯存不足與回應過慢問題。",
+     "fallback": false
+    },
+    {
+     "ref": "c97",
+     "source": "hf_papers",
+     "id": "2611.25773",
+     "metrics": {
+      "upvotes": 11,
+      "github_stars": 45
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.25773"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.25773"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/cyChen2003/duopra"
+      }
+     ],
+     "title": "Duopra：結合即時語音對話與任務執行代理的全雙工模型",
+     "tags": [
+      "全雙工對話",
+      "Agent工具調用",
+      "即時互動",
+      "強化學習"
+     ],
+     "summary": "現有全雙工（Full-duplex）對話模型雖能提供自然流暢的動態對話與中途打斷，但在及時調用工具與依據使用者修正更新參數等任務代理（Task Agency）能力上表現較弱。Duopra 提出將後端視為接受完整自然語言請求的工具，讓前端動態對話與後端任務執行解耦。透過協議 SFT、獎勵及時完整執行的全雙工 RL，以及修復 Talker/Thinker 條件變化的投影器修復三階段訓練，Duopra 讓模型能同時兼顧對話與任務執行。在 Full-Duplex-Bench 上 Pass@1 從 4.7% 提升至 44.7%，搭配 DeepSeek 後端更可達 49.3%。",
+     "key_points": [
+      "提出 Duopra 架構，讓全雙工模型在保持自然對話與打斷機制的同時獲得工具調用能力。",
+      "將後端解耦為獨立工具，透過三階段 SFT 與全雙工 RL 訓練優化請求傳達與執行成功率。",
+      "在 Full-Duplex-Bench 測試中將 Pass@1 成功率從 4.7% 顯著提升至 44.7%。"
+     ],
+     "how_to_use": "雖然這項研究主要針對語音全雙工情境，但其「前後端代理解耦與動態打斷/請求修復」的模式非常值得借鑒到 LangGraph 工作流程中。當你在 LangGraph 中開發自動化流程（例如爬蟲蒐集或內部簽核）時，若設計需與使用者互動的節點，可借用 Duopra 的邏輯：將使用者中途輸入的新指令視為動態參數修復，而非重新啟動整個 Agent 圖結構。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c92",
+     "source": "hf_papers",
+     "id": "2611.27963",
+     "metrics": {
+      "upvotes": 54,
+      "github_stars": 20
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.27963"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.27963"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/yuhangdai427/NoPeWorld"
+      }
+     ],
+     "title": "NoPeBench：評估影片世界模型防物體穿透能力的基準測試",
+     "one_liner": "提出 NoPeBench 評估世界模型對物理障礙的反應，發現現有開源模型雖具備相關隱藏資訊但仍頻繁發生穿透失敗。",
+     "url": "https://huggingface.co/papers/2611.27963",
+     "fallback": false
+    },
+    {
+     "ref": "c94",
+     "source": "hf_papers",
+     "id": "2611.26954",
+     "metrics": {
+      "upvotes": 25,
+      "github_stars": 8
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.26954"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.26954"
+      },
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Jingchensun/future-opsd"
+      }
+     ],
+     "title": "基於策略內自我蒸餾的影片前瞻推理學習",
+     "one_liner": "無需額外人工標註或 LLM 監督，透過策略內自我蒸餾將前後影片對轉為自監督訊號，提升視覺語言模型預測能力。",
+     "url": "https://huggingface.co/papers/2611.26954",
+     "fallback": false
+    },
+    {
+     "ref": "c98",
+     "source": "hf_papers",
+     "id": "2611.21485",
+     "metrics": {
+      "upvotes": 10,
+      "github_stars": null
+     },
+     "sources": [
+      {
+       "label": "HF Papers",
+       "url": "https://huggingface.co/papers/2611.21485"
+      },
+      {
+       "label": "arXiv",
+       "url": "https://arxiv.org/abs/2611.21485"
+      }
+     ],
+     "title": "ReSpaceBench：評估具身 Agent 持久空間記憶與地點辨識的基準測試",
+     "one_liner": "包含 3,244 個問題的基準，用以測試具身 Agent 在重複訪問與視角改變時識別地點與更新空間記憶的能力。",
+     "url": "https://huggingface.co/papers/2611.21485",
+     "fallback": false
+    }
+   ]
+  },
+  "github": {
+   "items": [
+    {
+     "ref": "c16",
+     "source": "github_trending",
+     "id": "elementalsouls/Claude-BugHunter",
+     "metrics": {
+      "stars": 19766,
+      "stars_today": 2029,
+      "stars_delta": 1963
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/elementalsouls/Claude-BugHunter"
+      }
+     ],
+     "title": "Claude-BugHunter：內建 83 個資安技能的 Claude Code 套件",
+     "tags": [
+      "資安",
+      "Claude Code",
+      "Red Team"
+     ],
+     "summary": "這是一個針對 Claude Code 開發的獨立資安技能包，內含 83 個技能、15 個斜線指令與 681 個已披露的漏洞報告模式。安裝後能讓 Claude 表現得像資深資安研究員或紅隊成員，自動化執行網頁應用程式漏洞挖掘與基礎設施攻擊矩陣分析，並在明確範圍內運作。",
+     "key_points": [
+      "內含 83 個網頁與基礎設施漏洞挖掘技能",
+      "支援 Claude Code 外掛市集安裝或 Windows PowerShell 指令部署",
+      "可選填 HackerOne API 讀取私人專案與報告，未填也能使用公開功能"
+     ],
+     "how_to_use": "跟你的資料分析與自動化工作關係不大，主要是針對資安滲透測試與漏洞挖掘。不過其模組化的 Agent 技能架構與提示詞設計，值得作為未來開發特定領域 LangGraph Agent 時的結構參考。",
+     "fallback": false
+    },
+    {
+     "ref": "c18",
+     "source": "github_trending",
+     "id": "firecrawl/firecrawl",
+     "metrics": {
+      "stars": 207923,
+      "stars_today": 924,
+      "stars_delta": 888
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/firecrawl/firecrawl"
+      }
+     ],
+     "title": "Firecrawl Local：將網站轉為 Markdown 的本地端工具與伺服器",
+     "tags": [
+      "網頁爬蟲",
+      "MCP",
+      "Markdown"
+     ],
+     "summary": "Firecrawl 推出的本地端版本，只需透過 Rust 的 cargo 或 npx 即可在本地執行，能將網站與各種文件（PDF、Office 檔案）快速轉成乾淨的 Markdown 格式。它支援自動尋找本機的 AI 工具並安裝為 MCP 伺服器，也能在 localhost 啟動相容 v2 API 的伺服器。",
+     "key_points": [
+      "支援指令直接將網頁爬取、抓取並轉換為 Markdown 格式",
+      "可用 init 指令自動將爬蟲工具掛載至 Cursor、Claude 等 AI 工具的 MCP 伺服器",
+      "提供本地 API 伺服器，讓現有程式碼能直接指向 localhost 使用"
+     ],
+     "how_to_use": "非常適合用在你的自動化爬蟲與資料蒐集需求。你可以用它在 Windows 本機快速抓取網站或文件並轉成結構化 Markdown，再餵給你的 Python 程式或 LangGraph 流程進行後續處理，省去自己寫 BeautifulSoup 或 Selenium 解析的麻煩。",
+     "fallback": false
+    },
+    {
+     "ref": "c22",
+     "source": "github_trending",
+     "id": "mvanhorn/last30days-skill",
+     "metrics": {
+      "stars": 73439,
+      "stars_today": 797,
+      "stars_delta": 726
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/mvanhorn/last30days-skill"
+      }
+     ],
+     "title": "last30days-skill：跨平台社群與趨勢搜尋引擎 Agent",
+     "tags": [
+      "AI 搜尋",
+      "社群輿情",
+      "Claude Code"
+     ],
+     "summary": "這是一個由 AI Agent 主導的搜尋引擎技能，能平行搜尋 Reddit、X、YouTube、TikTok、GitHub 與 Polymarket 等平台的即時互動數據與真實討論，並由 Agent 綜合整理成簡報。它打破了傳統搜尋引擎無法跨足多個封閉社群平台壁壘的限制。",
+     "key_points": [
+      "可透過 Claude Code 外掛或 skills 指令快速安裝",
+      "零設定即可搜尋 Reddit、HN、GitHub 等平台，並可解鎖 X 與 YouTube",
+      "透過 AI Agent 綜合真實用戶的互動與熱度來評分與總結"
+     ],
+     "how_to_use": "跟你的資料分析工作有間接幫助，當你需要蒐集特定技術主題、開源專案或市場輿情時，可以用它快速取得各大社群的最新真實討論，彌補傳統搜尋引擎資訊過時的缺點，並整合進你的資訊蒐集流程中。",
+     "fallback": false
+    },
+    {
+     "ref": "c27",
+     "source": "github_trending",
+     "id": "Tracer-Cloud/opensre",
+     "metrics": {
+      "stars": 14833,
+      "stars_today": 436,
+      "stars_delta": 417
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/Tracer-Cloud/opensre"
+      }
+     ],
+     "title": "OpenSRE：自動追查 CI/CD 失敗原因並推送修復的開源 Agent",
+     "tags": [
+      "CI/CD",
+      "自動化",
+      "開源 Agent"
+     ],
+     "summary": "這是一個專為 CI/CD 可靠性設計的開源 CLI Agent，能在建置失敗時自動讀取日誌、追查原因、測試假設並推送修復方案供工程師審查。旨在幫團隊縮短除錯時間，並釐清失敗是因 CI 本身還是程式碼引起。",
+     "key_points": [
+      "提供 Windows PowerShell 安裝指令與命令列操作介面",
+      "能在 CI 失敗的第一時間自動分析日誌並提出修復 PR",
+      "可於本機執行，並搭配你自己的 LLM 模型運作"
+     ],
+     "how_to_use": "雖然主要針對 CI/CD 維運，但其「讀取日誌、分析原因、提出修復並等待人工審查」的工作流程，非常適合用來借鏡你在設計內部簽核、文件處理等自動化 LangGraph Agent 時的錯誤處理與決策機制。",
+     "fallback": false
+    }
+   ],
+   "brief": [
+    {
+     "ref": "c19",
+     "source": "github_trending",
+     "id": "zhouxiaoka/autoclip",
+     "metrics": {
+      "stars": 14396,
+      "stars_today": 907,
+      "stars_delta": 967
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/zhouxiaoka/autoclip"
+      }
+     ],
+     "title": "AutoClip",
+     "one_liner": "開源 AI 影片剪輯桌面工具，一鍵將長訪談或課程自動剪成短影片並生成字幕與文案。",
+     "url": "https://github.com/zhouxiaoka/autoclip",
+     "fallback": false
+    },
+    {
+     "ref": "c21",
+     "source": "github_trending",
+     "id": "jingyaogong/minimind",
+     "metrics": {
+      "stars": 69454,
+      "stars_today": 828,
+      "stars_delta": 811
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/jingyaogong/minimind"
+      }
+     ],
+     "title": "MiniMind",
+     "one_liner": "讓開發者在兩小時內從零開始訓練出自己的 64M 大模型的教學與實作專案。",
+     "url": "https://github.com/jingyaogong/minimind",
+     "fallback": false
+    },
+    {
+     "ref": "c23",
+     "source": "github_trending",
+     "id": "HKUDS/CLI-Anything",
+     "metrics": {
+      "stars": 63632,
+      "stars_today": 790,
+      "stars_delta": 851
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/HKUDS/CLI-Anything"
+      }
+     ],
+     "title": "CLI-Anything",
+     "one_liner": "將所有傳統軟體轉換為 Agent 原生介面的開源專案與命令列中心。",
+     "url": "https://github.com/HKUDS/CLI-Anything",
+     "fallback": false
+    },
+    {
+     "ref": "c31",
+     "source": "github_trending",
+     "id": "microsoft/markitdown",
+     "metrics": {
+      "stars": 198098,
+      "stars_today": 246,
+      "stars_delta": 214
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/microsoft/markitdown"
+      }
+     ],
+     "title": "MarkItDown",
+     "one_liner": "微軟推出的 Python 工具，專門將各種檔案與 Office 文件轉換為 Markdown 格式。",
+     "url": "https://github.com/microsoft/markitdown",
+     "fallback": false
+    },
+    {
+     "ref": "c32",
+     "source": "github_trending",
+     "id": "google-research/paper-orchestra",
+     "metrics": {
+      "stars": 6150,
+      "stars_today": 241,
+      "stars_delta": 186
+     },
+     "sources": [
+      {
+       "label": "GitHub",
+       "url": "https://github.com/google-research/paper-orchestra"
+      }
+     ],
+     "title": "PaperOrchestra",
+     "one_liner": "用於自動化撰寫 AI 研究論文的多 Agent 協作框架。",
+     "url": "https://github.com/google-research/paper-orchestra",
+     "fallback": false
+    }
+   ]
+  }
+ },
+ "try_one": {
+  "ref": "c31",
+  "source": "github_trending",
+  "id": "microsoft/markitdown",
+  "metrics": {
+   "stars": 198098,
+   "stars_today": 246,
+   "stars_delta": 214
+  },
+  "sources": [
+   {
+    "label": "GitHub",
+    "url": "https://github.com/microsoft/markitdown"
+   }
+  ],
+  "title": "用 MarkItDown 把 Office 與 PDF 轉成 Markdown 文件",
+  "why": "微軟開源的文件轉檔工具，免 key 本地轉換 PDF、Word 與 Excel，適合作為 LangGraph 文件處理節點。",
+  "steps": [
+   "在終端機執行 pip install 'markitdown[all]' 安裝套件與完整格式支援。",
+   "準備一份本機的 PDF、Word 或 Excel 檔案，執行 markitdown path-to-file.pdf -o document.md 進行轉檔。"
+  ],
+  "success_check": "目錄下成功產出 document.md，打開後能看到原文件的標題、清單或表格已被保留為 Markdown 格式。",
+  "fallback": false
+ },
+ "warnings": [
+  "enrich: c2 補充內容抓取失敗，改用原始摘要"
+ ]
+}
